@@ -70,7 +70,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                 <div className="flex items-center justify-center mt-5">
                     <RequestAppointment
                         customStyle={
-                            "flex w-full items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 md:mx-10"
+                            "flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 md:mx-10"
                         }
                         name="Request an Appointment"
                     />

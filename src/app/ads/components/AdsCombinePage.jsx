@@ -20,7 +20,6 @@ const AdsCombinePage = ({condition, expertText, location}) => {
                             <TestimonialComponent condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} />
                         </section>
 
-
                     </div>
             </>
         )

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
-import { Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
+import { CircularProgress, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
 
 export default function TestimonialComponentSlide({
     location,
@@ -32,7 +32,7 @@ export default function TestimonialComponentSlide({
     }, [condition, location]);
 
     if (testimonials.length === 0) {
-        return <div>Loading testimonials...</div>;
+        return <div className="flex justify-center h-full items-center"><CircularProgress /></div>;
     }
     // Custom Next Button
     const NextArrow = (props) => {

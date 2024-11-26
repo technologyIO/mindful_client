@@ -1,10 +1,10 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import ImageGallary from './ImageGallary';
+// import ImageGallary from './ImageGallary';
 import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem, Select, FormControl, InputLabel, Button, RadioGroup, FormControlLabel, Radio } from '@mui/material';
-import PractoWidget from './PractoWidget';
+// import PractoWidget from './PractoWidget';
 import { usePathname } from 'next/navigation';
-
+import ZohoForm  from '@/app/component/ZohoForm'
 
 
 const locations = [
@@ -154,9 +154,9 @@ const RequestAppointment = ({ city, name, customStyle }) => {
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal}>
-                <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle>
-                <DialogContent>
-
+                {/* <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle> */}
+                <DialogContent className='w-[360px] md:w-[500px]'>
+{/* 
                     <TextField
                         autoFocus
                         margin="dense"
@@ -167,15 +167,7 @@ const RequestAppointment = ({ city, name, customStyle }) => {
                         value={formData.name}
                         onChange={handleChange}
                     />
-                    {/* <TextField
-                        margin="dense"
-                        name="email"
-                        label="Email"
-                        type="email"
-                        fullWidth
-                        value={formData.email}
-                        onChange={handleChange}
-                    /> */}
+
                     <TextField
                         margin="dense"
                         name="phone"
@@ -188,18 +180,17 @@ const RequestAppointment = ({ city, name, customStyle }) => {
                         helperText={phoneError} // Display error message
                     />
                     <FormControl fullWidth margin="dense">
-                        {/* <InputLabel id="location-label">Location</InputLabel> */}
                         <FormControl component="fieldset">
-    <RadioGroup
-        name="location"
-        value={formData.location}
-        onChange={handleChange}
-    >
-        <FormControlLabel value="Delhi" control={<Radio />} label="Delhi" />
-        <FormControlLabel value="Banglore Aster CMI" control={<Radio />} label="Banglore Aster CMI" />
-        <FormControlLabel value="Banglore Whitefield" control={<Radio />} label="Banglore Whitefield" />
-    </RadioGroup>
-</FormControl>
+                            <RadioGroup
+                                name="location"
+                                value={formData.location}
+                                onChange={handleChange}
+                            >
+                                <FormControlLabel value="Delhi" control={<Radio />} label="Delhi" />
+                                <FormControlLabel value="Banglore Aster CMI" control={<Radio />} label="Banglore Aster CMI" />
+                                <FormControlLabel value="Banglore Whitefield" control={<Radio />} label="Banglore Whitefield" />
+                            </RadioGroup>
+                        </FormControl>
                         <div className='py-4 flex flex-col justify-center items-center gap-5'>
                             <div className='w-full mb-3'>
                                 {!isBusinessHours &&
@@ -222,19 +213,7 @@ const RequestAppointment = ({ city, name, customStyle }) => {
                                 }
                             </div>
 
-                            {/* {isFormValid() ? <div>
-                                <PractoWidget />
-                            </div>
-                                : <div className='w-full'>
-                                    <button
-                                        className={`select-none flex gap-2 items-center w-full justify-center text-white rounded-lg  px-4 py-3 font-semibold text-center ${isFormValid() ? 'cursor-pointer active:shadow-xl active:bg-green-600 bg-green-500  ' : 'cursor-not-allowed bg-gray-300'}`}
-                                        disabled={!isFormValid()}
-
-                                    >
-                                        Request an Appointment
-                                    </button>
-                                </div>
-                            } */}
+                           
                             {isBusinessHours ? (
                                 <button
                                     className={`select-none flex gap-2 w-full items-center justify-center text-white rounded-lg px-4 py-2 font-semibold text-center ${isFormValid() ? 'cursor-pointer active:shadow-xl active:bg-green-600 bg-green-500' : 'cursor-not-allowed bg-gray-300'}`}
@@ -263,12 +242,20 @@ const RequestAppointment = ({ city, name, customStyle }) => {
                                 <p className='text-center text-red-600 font-semibold'>Please fill in the form below to request an appointment.</p>
                             </div>}
                         </div>
-                    </FormControl>
+                    </FormControl> */}
+                 <ZohoForm/>
                 </DialogContent>
 
             </Dialog>
+
+
+
+
         </>
     )
 }
+
+
+
 
 export default RequestAppointment

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import AdsExperts from '../../component/AdsExperts'
 import AdsExpertsMobile from '../../component/AdsExpertsMobile'
 import TestimonialComponent from '../../component/TestimonialComponent'
+import TestimonialComponentSlide from '@/app/component/TestimonialComponentSlide'
 const AdsCombinePage = ({condition, expertText, location}) => {
     const [disableSlide, setDisableSlide] = useState(false)
 
@@ -10,14 +11,14 @@ const AdsCombinePage = ({condition, expertText, location}) => {
         return (
             <>
                 <div className='grid grid-cols-1 
-           items-center gap-4 mx-10'>
+           items-center gap-4 mx-2'>
                         {/* Expert Team */}
                         <section>
                             <AdsExpertsMobile condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
                         </section>
                         {/* client speaks */}
                         <section className='py-8 '>
-                            <TestimonialComponent condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} />
+                            <TestimonialComponentSlide condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} smallDevice={true} />
                         </section>
 
                     </div>

@@ -251,12 +251,10 @@ const HomePage = ({ allSection }) => {
                     </div>
                 </section>
 
-
                 {/* wy tms */}
                 <section className='py-8 px-4 mb-3'>
                     <div className='mb-8'>
-                        <div dangerouslySetInnerHTML={{ __html: allSection?.section4?.header }} />
-
+                    <h1 class="text-[27px] whitespace-nowrap text-center ">Why choose <span class="font-semibold">MindfulTMS?</span></h1>
                         <div className='mt-2' dangerouslySetInnerHTML={{ __html: allSection?.section4?.para }} />
                     </div>
                     <div className='flex justify-center'>
@@ -276,10 +274,12 @@ const HomePage = ({ allSection }) => {
                 <hr className='border-1 border-gray-200' />
 
                 {/* client speaks */}
-                <section className='py-8 px-4'>
+                <section className='py-8 px-4 bg-primary-div'>
+                <h1 className='text-center text-3xl font-semibold'> Client Speaks</h1>
                     {/* <VideoComponent /> */}
                     {/* <NewComponent videos={videos} /> */}
-                    <TestimonialComponent />
+                    {/* <TestimonialComponent  /> */}
+                    <TestimonialComponentSlide smallDevice={true} />
                     {/* <TestimonialComponents2/> */}
 
                 </section>

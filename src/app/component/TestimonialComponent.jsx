@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import TestimonialComponents2 from "./TestimonialComponents2";
-import { Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
+import { CircularProgress, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 
 import axios from "axios";
@@ -135,9 +135,9 @@ export default function TestimonialComponent({ location, condition, disableSlide
             alt="Quote"
           />
         </div>
-        <div className={`px-5 mb-6  ${modalOpen?"":"h-[300px]"} overflow-hidden `}>
+        <div className={`px-5 mb-6  ${modalOpen?"":"max-h-[300px]"} overflow-hidden `}>
           <span className="text-gray-600 text-lg font-semibold ">
-            {showFullTestimonial ? fullTestimonial : truncatedTestimonial}
+            {modalOpen ? fullTestimonial : title}
           </span>
          
         </div>
@@ -154,9 +154,8 @@ export default function TestimonialComponent({ location, condition, disableSlide
   };
 
   if (testimonials.length === 0) {
-    return <div>Loading testimonials...</div>;
-  }
-
+    return <div className="flex justify-center h-full items-center"><CircularProgress/></div>;
+}
   return (
     <div className=" bg-white rounded-lg overflow-hidden w-full ">
 
@@ -169,9 +168,9 @@ export default function TestimonialComponent({ location, condition, disableSlide
         exit="exit"
         variants={variants}
       >
-        <div className="p-3 w-full text-center bg-primary-div">
+        {/* <div className="p-3 w-full text-center bg-primary-div">
           <h2 className="text-lg font-medium text-gray-800">{title || "No Title Available"}</h2>
-        </div>
+        </div> */}
         <div className="space-y-4 mb-3">
         {/* quote */}
             <QuoteComponent modalOpen={false}/>

@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+
 import { motion, AnimatePresence } from "framer-motion";
 import RequestAppointment from "../clinicLocation/[city]/RequestAppointment";
 import axios from "axios";
-const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDisableSlide  }) => {
+const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDisableSlide }) => {
     const [doctorsData, setDoctorsData] = useState([]); // To store doctors data
     const [currentIndex, setCurrentIndex] = useState(0); // To track the current doctor index
     const [direction, setDirection] = useState(1); // To track the animation direction
@@ -21,16 +23,16 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
         getDoctor();
     }, []);
 
-    useEffect(() => {
-       if(!disableSlide){
-        const interval = setInterval(() => {
-            setDirection(1); // Slide right
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % doctorsData.length);
-        }, 5000); // Change doctor every 3.5 seconds
+    // useEffect(() => {
+    //     if (!disableSlide) {
+    //         const interval = setInterval(() => {
+    //             setDirection(1); // Slide right
+    //             setCurrentIndex((prevIndex) => (prevIndex + 1) % doctorsData.length);
+    //         }, 5000); // Change doctor every 3.5 seconds
 
-        return () => clearInterval(interval);
-       } // Cleanup on unmount
-    }, [doctorsData, disableSlide]);
+    //         return () => clearInterval(interval);
+    //     } // Cleanup on unmount
+    // }, [doctorsData, disableSlide]);
 
     const variants = {
         enter: (direction) => ({
@@ -48,9 +50,34 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
             transition: { duration: 0.5 },
         }),
     };
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        autoplay: true, // Enable auto-slide
+        autoplaySpeed: 3000, // Slide every 5 seconds
+        slidesToScroll: 1,
+        // nextArrow: <NextArrow />, 
+        // prevArrow: <PrevArrow />, 
+        responsive: [
+            {
+                breakpoint: 1024, // Tablet
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768, // Mobile
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
 
-    const DoctorComponent = ({ data }) => {
-        if (!data) return null;
+    const DoctorComponent = () => {
+        // if (!data) return null;
         return (
             <>
                 {expertText ? (
@@ -62,32 +89,43 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
                         Our Expert
                     </h2>
                 )}
-                <motion.div
-                    className="mx-auto max-w-md text-center"
-                    key={data._id}
-                    custom={direction}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    variants={variants}
-                >
-                    <img
-                        src={data?.image}
-                        alt={data?.name}
-                        width={200}
-                        height={200}
-                        className="mx-auto mb-4 rounded-full"
-                    />
-                    <h3 className="text-xl font-bold text-blue-600">{data?.name}</h3>
-                    <p className="font-semibold text-pink-500 text-base">SERVICES</p>
-                    <p className="mb-2">{data?.designation}</p>
-                    <p className="text-pink-500 font-semibold text-base">SPECIALIZATION</p>
-                    <div className="h-[100px] overflow-y-hidden">
-                    <p className="mb-4 font-semibold text-sm">
-                        {data?.specialization?.join(", ")}
-                    </p>
-                    </div>
-                </motion.div>
+                <Slider {...settings}>
+                    {
+                        doctorsData.map((data, index) => {
+                            return (
+                                <>
+                                    <div
+                                        className="mx-auto max-w-md text-center"
+                                        key={data._id}
+                                    // custom={direction}
+                                    // initial="enter"
+                                    // animate="center"
+                                    // exit="exit"
+                                    // variants={variants}
+                                    >
+                                        <img
+                                            src={data?.image}
+                                            alt={data?.name}
+                                            width={200}
+                                            height={200}
+                                            className="mx-auto mb-4 rounded-full"
+                                        />
+                                        <h3 className="text-xl font-bold text-blue-600">{data?.name}</h3>
+                                        <p className="font-semibold text-pink-500 text-base">SERVICES</p>
+                                        <p className="mb-2">{data?.designation}</p>
+                                        <p className="text-pink-500 font-semibold text-base">SPECIALIZATION</p>
+                                        <div className="h-[100px] overflow-y-hidden">
+                                            <p className="mb-4 font-semibold text-sm">
+                                                {data?.specialization?.join(", ")}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        })
+                    }
+
+                </Slider>
             </>
         );
     };
@@ -95,7 +133,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
     return (
         <section className="mx-3 py-6">
             {doctorsData.length > 0 && (
-                <DoctorComponent data={doctorsData[currentIndex]} />
+                <DoctorComponent />
             )}
             <div className="flex items-center justify-center mt-5">
                 <RequestAppointment

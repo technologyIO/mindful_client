@@ -11,6 +11,7 @@ export default function TestimonialComponentSlide({
     disableSlide,
     setDisableSlide,
     mobileView,
+    smallDevice,
 }) {
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
@@ -40,7 +41,7 @@ export default function TestimonialComponentSlide({
         return (
             <button
                 onClick={onClick}
-                className="absolute z-[2] top-1/2 right-[-50px] transform -translate-y-1/2  justify-center "
+                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice?"top-[50%] right-[-25px]":"top-1/2 right-[-50px]"} `}
             >
                 <img
                     className="text-white cursor-pointer"
@@ -57,7 +58,9 @@ export default function TestimonialComponentSlide({
         return (
             <button
                 onClick={onClick}
-                className="absolute z-[2] top-1/2 left-[-50px] transform -translate-y-1/2  justify-center "
+                // className="absolute z-[2] top-1/2 left-[-50px] transform -translate-y-1/2  justify-center "
+                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice?"top-[50%] left-[-25px]":"top-1/2 left-[-50px]"} `}
+
             >
                 <img
                     className="text-white cursor-pointer"
@@ -105,7 +108,7 @@ export default function TestimonialComponentSlide({
         return (
             <>
 
-                <div className="">
+                <div className="    ">
                     <div className="text-3xl text-gray-400 mt-3 mb-3 leading-none ml-3">
                         <img
                             className="h-[24px] scale-x-[1] scale-y-[-1]"
@@ -113,29 +116,29 @@ export default function TestimonialComponentSlide({
                             alt="Quote"
                         />
                     </div>
-                    <div className={`px-5   ${modalOpen ? "" : "h-[115px] "} overflow-hidden `}>
-                        {isQuoteModal ? <span className="text-gray-600 text-base font-semibold ">
+                    <div className={`  ${modalOpen ? "" : "max-h-[115px] px-5"} overflow-hidden `}>
+                        {isQuoteModal ? <p className="text-gray-600  text-justify text-base font-semibold ">
                             {fullTestimonial}
-                        </span> :
-                            <span className="text-gray-600 text-base font-semibold ">
-                                <span>
+                        </p> :
+                            <span className="text-gray-600 text-justify text-base font-semibold ">
+                                <p>
                                         {`${title}... `}
-                                        {!isQuoteModal && <span onClick={() => {
+                                        {/* {!isQuoteModal && <span onClick={() => {
                                             setCurrentTestimonial(testimonial);
                                             setisQuoteModal(true)
-                                        }} className="text-base  text-orange-500 cursor-pointer">Read_More</span>}
-                                    </span>
+                                        }} className="text-base  text-orange-500 cursor-pointer">Read_More</span>} */}
+                                    </p>
                                   
                             </span>
                         }
 
                     </div>
-                    {/* {!isQuoteModal && <span onClick={() => {
+                    {!isQuoteModal && <span onClick={() => {
                         setCurrentTestimonial(testimonial);
                         setisQuoteModal(true)
-                    }} className="text-base ml-6 text-orange-500 cursor-pointer">Read More...</span>} */}
+                    }} className="text-base ml-6 text-orange-500 cursor-pointer">Read More</span>}
                     {/* patient name */}
-                    <div className="flex items-center ml-6 mb-4 mt-3">
+                    <div className={`flex items-center mb-4 mt-3 ${modalOpen?"":"ml-6 "}`}>
                         <div className="w-[2px] h-[30px] bg-primary-orange mr-3"></div>
                         <div>
                             <span className="text-[16px] font-semibold text-gray-700">{patientName}</span>
@@ -146,7 +149,7 @@ export default function TestimonialComponentSlide({
 
                 {/* condition and treatmen */}
 
-                <div className={`px-3 ${isQuoteModal ? "grid grid-cols-2 px-8" : ""}`}>
+                <div className={` ${isQuoteModal ? "grid grid-cols-2 " : "px-3"}`}>
                     {treatment && <div className="mb-5">
                         <h3 className={`text-base text-start font-semibold text-gray-900 `}>Treatment: </h3>
                         <div className="mt-3 flex gap-3">
@@ -184,7 +187,7 @@ export default function TestimonialComponentSlide({
 
     return (
         <div className={`${mobileView?"flex justify-center w-full":""}`}>
-            <div className={`bg-white rounded-lg   ${mobileView?"w-[80%]":"w-full"} p-4`}>
+            <div className={` rounded-lg   ${mobileView?"w-[80%]":"w-full"} p-4`}>
             <Slider {...settings}>
                 {testimonials.map((testimonial, index) => {
                     const {
@@ -233,7 +236,7 @@ export default function TestimonialComponentSlide({
                     }
                 }}
 
-                className="m-0"
+                className="m-0 px-0"
             >
                 {/* <DialogTitle
                     className="text-gray-800 font-semibold bg-primary-div text-lg rounded-t-xl p-2"
@@ -249,7 +252,7 @@ export default function TestimonialComponentSlide({
                         <img className="w-[30px]" src="/iconsNew/close.svg" />
                     </IconButton>
                 </DialogTitle> */}
-                <DialogContent className="px-0">
+                <DialogContent className="px-4 md:px-6">
                     <QuoteComponent modalOpen={true} index={1} testimonial={currentTestimonial} />
                 </DialogContent>
             </Dialog>

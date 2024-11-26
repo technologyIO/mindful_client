@@ -86,23 +86,45 @@ const Test = () => {
     window.history.back();
   };
 
+  const [formData, setFormData] = useState({
+    email: '',
+    phone: '',
+  });
+  
+  // Function to handle form data changes
+  const handleFormDataChange = (field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+  
+  // Function to handle email and phone submission
   const handleEmailSubmit = async () => {
     closeModal(); // Close the modal after email input
     try {
       const payload = {
-        email: userEmail,
+        ...formData,
         testId: testId,
         answers: Object.keys(answers).map((questionId) => ({
           questionId,
           selectedChoiceIndex: answers[questionId],
         })),
       };
-
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}tests/submitTest`, payload);
+  
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}tests/submitTest`,
+        payload
+      );
+  
       setTotalScore(response.data.totalScore);
-      router.push(`/assesment/${slugs}/result?score=${response.data.totalScore}&test=${test.condition}&email=${encodeURIComponent(userEmail)}`);
+      router.push(
+        `/assesment/${slugs}/result?score=${response.data.totalScore}&test=${test.condition}&email=${encodeURIComponent(
+          formData.email
+        )}&phone=${formData.phone}`
+      );
     } catch (error) {
-      console.error("Error submitting answers:", error);
+      console.error('Error submitting answers:', error);
     }
   };
 
@@ -186,40 +208,62 @@ const Test = () => {
 
         {/* Modal for Email Input */}
         {isModalOpen && (
-          <div
-            className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
-            onClick={closeModal} // Close modal when clicking on the overlay
-          >
-            <div
-              className="bg-white p-6 rounded-lg shadow-lg  mx-4 w-96"
-              onClick={(e) => e.stopPropagation()} // Prevent click from propagating to overlay
-            >
-              <h2 className="text-lg font-semibold mb-4">Enter your Email</h2>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={userEmail}
-                onChange={(e) => setUserEmail(e.target.value)}
-                className="border-2 border-gray-300 p-2 rounded-lg w-full mb-4"
-                required
-              />
-              <div className="flex justify-end">
-                <button
-                  onClick={closeModal}
-                  className="mr-2 text-gray-500"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleEmailSubmit}
-                  className="bg-primary-orange text-white py-2 px-4 rounded-lg"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+  <div
+    className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
+    onClick={closeModal} // Close modal when clicking on the overlay
+  >
+    <div
+      className="bg-white p-6 rounded-lg shadow-lg mx-4 w-96"
+      onClick={(e) => e.stopPropagation()} // Prevent click from propagating to overlay
+    >
+      <h2 className="text-lg font-semibold mb-4">Enter Your Details</h2>
+      <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    handleEmailSubmit();
+  }}
+>
+  <input
+    type="email"
+    placeholder="Enter your email"
+    value={formData.email}
+    onChange={(e) => handleFormDataChange('email', e.target.value)}
+    className={`border-2 ${
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) ? 'border-gray-300' : 'border-red-500'
+    } p-2 rounded-lg w-full mb-4`}
+    required
+  />
+  {formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) && (
+    <p className="text-red-500 text-sm mb-4">Please enter a valid email address.</p>
+  )}
+
+  <input
+    type="number"
+    placeholder="Enter your phone number"
+    value={formData.phone}
+    onChange={(e) => handleFormDataChange('phone', e.target.value)}
+    className={`border-2 ${
+      /^\d{10}$/.test(formData.phone) ? 'border-gray-300' : 'border-red-500'
+    } p-2 rounded-lg w-full mb-4`}
+    required
+  />
+  {formData.phone && !/^\d{10}$/.test(formData.phone) && (
+    <p className="text-red-500 text-sm mb-4">Please enter a valid 10-digit phone number.</p>
+  )}
+
+  <div className="flex justify-end">
+    <button type="button" onClick={closeModal} className="mr-2 text-gray-500">
+      Cancel
+    </button>
+    <button type="submit" className="bg-primary-orange text-white py-2 px-4 rounded-lg">
+      Submit
+    </button>
+  </div>
+</form>
+    </div>
+  </div>
+)}
+
       </div>
     </Container>
   );

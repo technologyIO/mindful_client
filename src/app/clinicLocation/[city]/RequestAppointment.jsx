@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import ImageGallary from './ImageGallary';
-import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem, Select, FormControl, InputLabel, Button } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem, Select, FormControl, InputLabel, Button, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 import PractoWidget from './PractoWidget';
 import { usePathname } from 'next/navigation';
 
@@ -9,36 +9,36 @@ import { usePathname } from 'next/navigation';
 
 const locations = [
     {
-      name: "Aster CMI",
-      area: "Bangalore North",
-      bgColor: "bg-primary-orange",
-      location: "Banglore Aster CMI",
-      whatsapp: +919663095632,
-      call: +919663095632,
-      params:"Bengaluru-Hebbal"
+        name: "Aster CMI",
+        area: "Bangalore North",
+        bgColor: "bg-primary-orange",
+        location: "Banglore Aster CMI",
+        whatsapp: +919663095632,
+        call: +919663095632,
+        params: "Bengaluru-Hebbal"
     },
     {
-      name: "Whitefield",
-      area: "Bangalore North",
-      bgColor: "bg-[#F8A51C]",
-      location: "Banglore Whitefield",
-      whatsapp: +919663095632,
-      call: +919663095632,
-      params:"Bengaluru-Whitefield"
+        name: "Whitefield",
+        area: "Bangalore North",
+        bgColor: "bg-[#F8A51C]",
+        location: "Banglore Whitefield",
+        whatsapp: +919663095632,
+        call: +919663095632,
+        params: "Bengaluru-Whitefield"
     },
     {
-      name: "Greater Kailash 1",
-      area: "Delhi",
-      bgColor: "bg-primary-orange",
-      location: "Delhi",
-      whatsapp: +919663095632,
-      call: +919663095632,
-      params:"New-Delhi"
+        name: "Greater Kailash 1",
+        area: "Delhi",
+        bgColor: "bg-primary-orange",
+        location: "Delhi",
+        whatsapp: +919663095632,
+        call: +919663095632,
+        params: "New-Delhi"
     }
-  ];
-const RequestAppointment = ({city, name, customStyle}) => {
+];
+const RequestAppointment = ({ city, name, customStyle }) => {
     const pathname = usePathname()
-   
+
     // console.log(city, pathname)
     const [requestModal, setRequestModal] = useState(false);
     const [formData, setFormData] = useState({
@@ -51,8 +51,8 @@ const RequestAppointment = ({city, name, customStyle}) => {
     });
     const [isValid, setIsValid] = useState(false);
     const [isBusinessHours, setIsBusinessHours] = useState(false);
-    const currentLocation = locations.find((location)=>{
-        if(city===location.params){
+    const currentLocation = locations.find((location) => {
+        if (city === location.params) {
             return location
         }
     })
@@ -77,7 +77,7 @@ const RequestAppointment = ({city, name, customStyle}) => {
         const checkBusinessHours = () => {
             const now = new Date();
             const hours = now.getHours();
-            if (hours >= 10 && hours < 18) {
+            if (hours >= 10 && hours < 16) {
                 setIsBusinessHours(true);
             } else {
                 setIsBusinessHours(false);
@@ -88,18 +88,29 @@ const RequestAppointment = ({city, name, customStyle}) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
+        // Validate phone number when the "phone" field changes
+        if (name === "phone") {
+            const phoneRegex = /^[0-9]{10}$/; // Regex for 10-digit number
+            if (!phoneRegex.test(value)) {
+                setPhoneError("Phone number must be 10 digits."); // Set error message
+            } else {
+                setPhoneError(""); // Clear error if valid
+            }
+        }
+
         setFormData(prev => ({
             ...prev,
             [name]: value
         }));
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(formData);
         toggleRequestModal();
     }
-
+    const [phoneError, setPhoneError] = useState("");
     const toggleRequestModal = () => {
         setRequestModal(prev => !prev);
         setFormData({
@@ -107,7 +118,7 @@ const RequestAppointment = ({city, name, customStyle}) => {
             email: '',
             phone: '',
             doctor: '',
-            location: currentLocation?.location||"",
+            location: currentLocation?.location || "",
             message: '',
             preferredTime: ''
         });
@@ -116,17 +127,17 @@ const RequestAppointment = ({city, name, customStyle}) => {
     const isFormValid = () => {
         return formData.name && formData.phone && formData.location;
     }
-    useEffect(()=>{
+    useEffect(() => {
         const isFormValidBool = isFormValid();
         setIsValid(isFormValidBool)
-        if(isFormValidBool){
+        if (isFormValidBool) {
             console.log('storedata', formData);
             console.log('isFormValid', isFormValidBool);
         }
-    },[formData])
+    }, [formData])
 
     useEffect(() => {
-        const newWhatsappNumber =locations?.find((location) => {
+        const newWhatsappNumber = locations?.find((location) => {
             return location.location === formData?.location
         })?.whatsapp
         setFormData((prev) => ({
@@ -134,18 +145,18 @@ const RequestAppointment = ({city, name, customStyle}) => {
             whatsapp: newWhatsappNumber,
         }))
         // console.log(newWhatsappNumber)
-    },[formData?.location])
+    }, [formData?.location])
     return (
         <>
             {
-                name?<button onClick={toggleRequestModal} className={`${customStyle?customStyle:"bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold"} `}>{name}</button>
-                :<button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>Request an Appointment</button>
+                name ? <button onClick={toggleRequestModal} className={`${customStyle ? customStyle : "bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold"} `}>{name}</button>
+                    : <button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>Request an Appointment</button>
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal}>
                 <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle>
                 <DialogContent>
-                    
+
                     <TextField
                         autoFocus
                         margin="dense"
@@ -169,23 +180,26 @@ const RequestAppointment = ({city, name, customStyle}) => {
                         margin="dense"
                         name="phone"
                         label="Phone Number"
-                        type="tel"
+                        type="number"
                         fullWidth
                         value={formData.phone}
                         onChange={handleChange}
+                        error={!!phoneError} // Show error state if error exists
+                        helperText={phoneError} // Display error message
                     />
                     <FormControl fullWidth margin="dense">
-                        <InputLabel id="location-label">Location</InputLabel>
-                        <Select
-                            labelId="location-label"
-                            name="location"
-                            value={formData.location }
-                            onChange={handleChange}
-                        >
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Banglore Aster CMI">Banglore Aster CMI</MenuItem>
-                            <MenuItem value="Banglore Whitefield">Banglore Whitefield</MenuItem>
-                        </Select>
+                        {/* <InputLabel id="location-label">Location</InputLabel> */}
+                        <FormControl component="fieldset">
+    <RadioGroup
+        name="location"
+        value={formData.location}
+        onChange={handleChange}
+    >
+        <FormControlLabel value="Delhi" control={<Radio />} label="Delhi" />
+        <FormControlLabel value="Banglore Aster CMI" control={<Radio />} label="Banglore Aster CMI" />
+        <FormControlLabel value="Banglore Whitefield" control={<Radio />} label="Banglore Whitefield" />
+    </RadioGroup>
+</FormControl>
                         <div className='py-4 flex flex-col justify-center items-center gap-5'>
                             <div className='w-full mb-3'>
                                 {!isBusinessHours &&
@@ -246,8 +260,8 @@ const RequestAppointment = ({city, name, customStyle}) => {
                             )}
 
                             {!isFormValid() && <div>
-                        <p className='text-center text-red-600 font-semibold'>Please fill in the form below to request an appointment.</p>
-                    </div>}
+                                <p className='text-center text-red-600 font-semibold'>Please fill in the form below to request an appointment.</p>
+                            </div>}
                         </div>
                     </FormControl>
                 </DialogContent>

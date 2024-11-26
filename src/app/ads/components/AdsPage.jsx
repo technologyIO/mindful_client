@@ -385,7 +385,7 @@ export default function AdsPage({ params, condition }) {
                                 <p className="mb-8 text-xl text-center text-gray-600">
                                     If Yes, you may benefit from talking to someone
                                 </p>
-                                <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-6">
+                                <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-5">
                                     {symptoms.map((symptom) => (
                                         <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow">
                                             {/* <span className="mb-2 text-3xl">{symptom.icon}</span> */}
@@ -446,8 +446,8 @@ export default function AdsPage({ params, condition }) {
                             Why Choose Us?
                         </h2>
                         <div className='flex justify-center'>
-                            <div className='flex items-center justify-between  gap-2 mx-10 w-[800px]'>
-                                <img src="/ads/why.jpg" className='h-[300px]' />
+                            <div className='flex items-center justify-between  gap-2 mx-10 w-[800px] '>
+                                <img src="/ads/why.jpg" className='h-[400px] rounded-lg' />
                                 <div className="mx-4 space-y-8 ">
                                     <div>
                                         <h3 className="mb-2 text-xl  text-orange-500 font-semibold">

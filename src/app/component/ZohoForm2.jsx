@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 
-const ZohoForm = ({ containerId, iframeSrc }) => {
+const ZohoForm2 = ({ containerId, iframeSrc }) => {
   useEffect(() => {
     try {
       const container = document.getElementById(containerId);
@@ -72,4 +72,4 @@ const ZohoForm = ({ containerId, iframeSrc }) => {
   );
 };
 
-export default ZohoForm;
+export default ZohoForm2;

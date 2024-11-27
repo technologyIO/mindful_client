@@ -11,6 +11,7 @@ import AdsExperts from '../../component/AdsExperts'
 import AdsCombinePage from '../components/AdsCombinePage'
 import { Container } from '@mui/material'
 import ZohoForm from '@/app/component/ZohoForm'
+import ContactForm from './ContactForm'
 
 const servicesIcon = [
     {
@@ -38,8 +39,12 @@ const servicesIcon = [
     },
 ]
 export default function AdsPage({ params, condition }) {
-
+    // for zoho
+    const iframeSrc =
+        "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
+    const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
     // console.log('location', params.location)
+
     const city = params.location;
     const expertCondition = params.general;
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
@@ -113,71 +118,31 @@ export default function AdsPage({ params, condition }) {
                                         </span>
                                     </div>
                                     <div className='w-1/2 text-end'>
-                                    {(location && expertText) ? <p className="text-sm md:text-lg text-white font-bold text-end">
-                                    Our Experienced {expertText} are here to help you at our {location}
-                                </p> :
-                                    (location) ? <p className="text-sm md:text-lg text-white font-bold text-end">
-                                        Our Expert are here to help you at our {location}
-                                    </p>
-                                        :
-                                        <p className="text-sm md:text-lg text-white font-bold text-end">
-                                            Our Experts are available to assist you at a center near your location.
-                                        </p>
-                                }
+                                        {(location && expertText) ? <p className="text-sm md:text-lg text-white font-bold text-end">
+                                            Our Experienced {expertText} are here to help you at our {location}
+                                        </p> :
+                                            (location) ? <p className="text-sm md:text-lg text-white font-bold text-end">
+                                                Our Expert are here to help you at our {location}
+                                            </p>
+                                                :
+                                                <p className="text-sm md:text-lg text-white font-bold text-end">
+                                                    Our Experts are available to assist you at a center near your location.
+                                                </p>
+                                        }
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </section>
 
                     {/* Contact Form */}
                     <section className="mx-auto max-w-md rounded-lg bg-white p-6 shadow-lg">
-                        {/* <form className="space-y-4">
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                className="w-full rounded border p-3 focus:outline-none "
-                                required
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email Id"
-                                className="w-full rounded border p-3 focus:outline-none "
-                                required
-                            />
-                            <input
-                                type="tel"
-                                placeholder="Contact No*"
-                                className="w-full rounded border p-3 focus:outline-none "
-                                required
-                            />
-                            <select className="w-full rounded border p-3 focus:outline-none text-gray-400">
-                                <option className='text-gray-400'>Select time slot to call back</option>
-                                <option className='text-gray-400'>10am-12pm</option>
-                                <option className='text-gray-400'>12pm-2pm</option>
-                                <option className='text-gray-400'>2pm-4pm</option>
-                                <option className='text-gray-400'>4pm-6pm</option>
-                            </select>
-                            <textarea
-                                placeholder="Comment"
-                                className="h-32 w-full rounded border p-3 focus:outline-none "
-                            ></textarea>
-                            <button
-                                type="submit"
-                                className="flex w-full items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500"
-                            >
-                                <img
-                                    src="/home/whatsapp2.svg"
-                                    alt="WhatsApp"
-                                    width={24}
-                                    height={24}
-                                    className="h-6 w-6"
-                                />
-                                Request an Appointment
-                            </button>
-                        </form> */}
-                        <ZohoForm/>
+
+                    <ZohoForm
+        containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
+        iframeSrc={iframeSrc}
+      />
                     </section>
 
                     {/* What We Treat */}
@@ -237,26 +202,7 @@ export default function AdsPage({ params, condition }) {
                         </div>
                     </section>
 
-                    {/* Expert Team */}
-
-
-
-
-                    {/* our experts */}
-
-                    {/* <AdsExperts condition={condition}  expertText={expertText} location={location}/> */}
-                    {/* our experts */}
-
-
-                    {/* client speaks */}
-                    {/* <section className='py-8 px-4'>
-                        <TestimonialComponent location={location} condition={condition}/>
-                    </section> */}
                     <AdsCombinePage condition={condition} expertText={expertText} location={location} />
-
-
-
-
 
                     {/* Why Choose Us */}
                     <section className="py-8 bg-primary-div">
@@ -328,59 +274,13 @@ export default function AdsPage({ params, condition }) {
                                 }
                             </div>
                         </div>
-                          {/* Contact Form */}
-                    <div className="w-[500px] h-[450px] overflow-y-scroll rounded-lg bg-white p-6 m-6 shadow-lg">
-                    <ZohoForm/>
-                            {/* <form className="space-y-1">
-                                <input
-                                    type="text"
-                                    placeholder="Full Name"
-                                    className="w-full rounded border p-3 focus:outline-none "
-                                    required
-                                />
-                                <input
-                                    type="email"
-                                    placeholder="Email Id"
-                                    className="w-full rounded border p-3 focus:outline-none "
-                                    required
-                                />
-                                <input
-                                    type="tel"
-                                    placeholder="Contact No*"
-                                    className="w-full rounded border p-3 focus:outline-none "
-                                    required
-                                />
-                                <select className="w-full rounded border p-3 focus:outline-none text-gray-400">
-                                    <option className='text-gray-400'>Select time slot to call back</option>
-                                    <option className='text-gray-400'>10am-12pm</option>
-                                    <option className='text-gray-400'>12pm-2pm</option>
-                                    <option className='text-gray-400'>2pm-4pm</option>
-                                    <option className='text-gray-400'>4pm-6pm</option>
-                                </select>
-                                <textarea
-                                    placeholder="Comment"
-                                    className="h-32 w-full rounded border p-3 focus:outline-none "
-                                ></textarea>
-                                <button
-                                    type="submit"
-                                    className="flex w-full items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500"
-                                >
-                                    <img
-                                        src="/home/whatsapp2.svg"
-                                        alt="WhatsApp"
-                                        width={24}
-                                        height={24}
-                                        className="h-6 w-6"
-                                    />
-                                    Request an Appointment
-                                </button>
-                            </form> */}
-                            {/* <ZohoForm/> */}
-                        </div>
-                        
+                        {/* Contact Form */}
+                        <ContactForm />
+
 
                     </section>
-                  
+
+
 
 
 

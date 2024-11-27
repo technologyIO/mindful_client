@@ -155,8 +155,8 @@ const RequestAppointment = ({ city, name, customStyle }) => {
 
             <Dialog open={requestModal} onClose={toggleRequestModal}>
                 {/* <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle> */}
-                <DialogContent className='w-[360px] md:w-[500px]'>
-{/* 
+                <DialogContent className='w-[310px] md:w-[500px] p-0 m-0'>
+{/*                 
                     <TextField
                         autoFocus
                         margin="dense"
@@ -243,6 +243,9 @@ const RequestAppointment = ({ city, name, customStyle }) => {
                             </div>}
                         </div>
                     </FormControl> */}
+                    <div className='flex justify-end pt-3 px-3'>
+                       <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='/iconsNew/closee.svg'/></p>
+                    </div>
                  <ZohoForm/>
                 </DialogContent>
 

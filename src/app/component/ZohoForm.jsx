@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 
 const ZohoForm = () => {
@@ -25,8 +26,10 @@ const ZohoForm = () => {
       const iframe = document.createElement("iframe");
       iframe.src = iframeSrc;
       iframe.style.border = "none";
-      iframe.style.height = "615px";
-      iframe.style.width = "90%";
+      iframe.style.height = "100vh"; // Full height for responsiveness
+      iframe.style.width = "100%"; // Edge-to-edge width
+      iframe.style.margin = "0"; // Remove margins
+      iframe.style.padding = "0"; // Remove padding
       iframe.style.transition = "all 0.5s ease";
       iframe.setAttribute("aria-label", "Request an Appointment");
 
@@ -68,7 +71,13 @@ const ZohoForm = () => {
   return (
     <div
       id="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
-      style={{ width: "100%", textAlign: "center" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        margin: "0", // Remove container margins
+        padding: "0", // Remove container padding
+        textAlign: "center",
+      }}
     ></div>
   );
 };

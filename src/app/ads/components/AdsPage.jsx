@@ -10,6 +10,7 @@ import Link from 'next/link'
 import AdsExperts from '../../component/AdsExperts'
 import AdsCombinePage from '../components/AdsCombinePage'
 import { Container } from '@mui/material'
+import ZohoForm from '@/app/component/ZohoForm'
 
 const servicesIcon = [
     {
@@ -105,14 +106,14 @@ export default function AdsPage({ params, condition }) {
                     >
                         <div className="bg-opacity-75 w-full h-full flex items-center">
                             <div className="w-full p-2">
-                                <div className='flex justify-end'>
+                                <div className='flex flex-col items-end'>
                                     <div className='w-1/2 text-end'>
                                         <span className="mb-4 text-[13px] md:text-2xl font-semibold">
                                             Are you or a loved one experiencing symptoms of depression, anxiety, ADHD, OCD or any other condition?
                                         </span>
                                     </div>
-                                </div>
-                                {(location && expertText) ? <p className="text-sm md:text-lg text-white font-bold text-end">
+                                    <div className='w-1/2 text-end'>
+                                    {(location && expertText) ? <p className="text-sm md:text-lg text-white font-bold text-end">
                                     Our Experienced {expertText} are here to help you at our {location}
                                 </p> :
                                     (location) ? <p className="text-sm md:text-lg text-white font-bold text-end">
@@ -123,13 +124,16 @@ export default function AdsPage({ params, condition }) {
                                             Our Experts are available to assist you at a center near your location.
                                         </p>
                                 }
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </section>
 
                     {/* Contact Form */}
                     <section className="mx-auto max-w-md rounded-lg bg-white p-6 shadow-lg">
-                        <form className="space-y-4">
+                        {/* <form className="space-y-4">
                             <input
                                 type="text"
                                 placeholder="Full Name"
@@ -172,7 +176,8 @@ export default function AdsPage({ params, condition }) {
                                 />
                                 Request an Appointment
                             </button>
-                        </form>
+                        </form> */}
+                        <ZohoForm/>
                     </section>
 
                     {/* What We Treat */}
@@ -323,9 +328,10 @@ export default function AdsPage({ params, condition }) {
                                 }
                             </div>
                         </div>
-                        {/* Contact Form */}
-                        <div className="max-w-[350px] rounded-lg bg-white p-6 m-6 shadow-lg">
-                            <form className="space-y-1">
+                          {/* Contact Form */}
+                    <div className="w-[500px] h-[450px] overflow-y-scroll rounded-lg bg-white p-6 m-6 shadow-lg">
+                    <ZohoForm/>
+                            {/* <form className="space-y-1">
                                 <input
                                     type="text"
                                     placeholder="Full Name"
@@ -368,10 +374,13 @@ export default function AdsPage({ params, condition }) {
                                     />
                                     Request an Appointment
                                 </button>
-                            </form>
+                            </form> */}
+                            {/* <ZohoForm/> */}
                         </div>
+                        
 
                     </section>
+                  
 
 
 
@@ -394,7 +403,7 @@ export default function AdsPage({ params, condition }) {
                                                 alt={symptom.name}
                                                 width={100}
                                                 height={100}
-                                                className="mb-4 h-[100px] w-full rounded object-cover"
+                                                className="mb-4 h-[123px] w-full rounded object-cover"
                                             />
                                             <span className="text-sm text-gray-600">{symptom.name}</span>
                                         </div>

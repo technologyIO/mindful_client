@@ -40,6 +40,7 @@ const servicesIcon = [
 ]
 export default function AdsPage({ params, condition }) {
     const cleanCondition = condition ?condition?.replace(/%20/g, ' ').replace(/,/g, ''):""
+
     const upperCaseCondition = ['ocd']
     // for zoho
     const iframeSrc =
@@ -108,6 +109,13 @@ export default function AdsPage({ params, condition }) {
         { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
     ]
 
+    
+    const addContent = {
+        header_general:`Are you looking for an experienced ${expertText} and a safe space?`,
+        header_condition:`Break Free from ${cleanCondition}. Your Journey to mental peace starts here.`,
+        subheader_general:`We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate ${expertText}s are here for you.`,
+        subheader_condition:`Our compassionate ${expertText} are here to support you on your journey to mental peace. Together, we can break free from ${cleanCondition}.`,
+    }
 
 
     const MobileView = () => {
@@ -123,22 +131,21 @@ export default function AdsPage({ params, condition }) {
                             <div className="w-full p-2">
                                 <div className='flex flex-col items-end'>
                                     <div className='w-1/2 text-end'>
-                                        <span className="mb-4 text-[13px] md:text-2xl font-semibold">
-                                            Are you or a loved one experiencing symptoms of depression, anxiety, ADHD, OCD or any other condition?
-                                        </span>
+                                    {cleanCondition ? <h1 className="mb-4 text-lg  text-black  font-bold ">
+                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition)?"uppercase":""}`}>{cleanCondition }</span>. Your Journey to mental peace starts here.
+                                    </h1> :
+                                        <h1 className="mb-4 text-lg  text-black  font-bold ">
+                                            Are you looking for an experienced {expertText} and a safe space?
+                                        </h1>}
                                     </div>
-                                    <div className='w-1/2 text-end'>
-                                        {(location && expertText) ? <p className="text-sm md:text-lg text-white font-bold text-end">
-                                            Our Experienced {expertText} are here to help you at our {location}
-                                        </p> :
-                                            (location) ? <p className="text-sm md:text-lg text-white font-bold text-end">
-                                                Our Expert are here to help you at our {location}
-                                            </p>
-                                                :
-                                                <p className="text-sm md:text-lg text-white font-bold text-end">
-                                                    Our Experts are available to assist you at a center near your location.
-                                                </p>
-                                        }
+                                    <div className=' text-end'>
+                                        {/* sub header */}
+                                {cleanCondition ? <p className="text-sm  text-white font-bold text-start">
+                                    Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
+                                </p> :
+                                    <p className="text-sm  text-white font-bold text-start">
+                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                    </p>}
                                     </div>
                                 </div>
 

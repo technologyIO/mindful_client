@@ -12,18 +12,29 @@ export default function TestimonialComponentSlide({
     setDisableSlide,
     mobileView,
     smallDevice,
+    doctor
 }) {
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
     const [isQuoteModal, setisQuoteModal] = useState(false);
+    const [loading , setLoading] = useState(false);
     // Fetch testimonials from the API
     const fetchTestimonials = async () => {
+        // if fetch on basis of doctors
+        setLoading(true);
+        let apiUrl  = '';
+        if(doctor){
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`
+        }
+        else{
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`;
+        }
         try {
-            const response = await axios.get(
-                `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`
-            );
+            const response = await axios.get(apiUrl);
+            setLoading(false);
             setTestimonials(response.data || []);
         } catch (error) {
+            setLoading(false);
             console.error("Error fetching testimonials:", error);
         }
     };
@@ -32,8 +43,14 @@ export default function TestimonialComponentSlide({
         fetchTestimonials();
     }, [condition, location]);
 
-    if (testimonials.length === 0) {
+    if (loading) {
         return <div className="flex justify-center h-full items-center"><CircularProgress /></div>;
+    }else if(testimonials.length === 0){
+        return (
+            <div className="flex justify-center h-full items-center">
+                <p>No testimonial found</p>
+            </div>
+        )
     }
     // Custom Next Button
     const NextArrow = (props) => {

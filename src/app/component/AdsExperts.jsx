@@ -60,7 +60,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                             </div>
                             {/* <TestimonialComponent condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} /> */}
                             <div className="col-span-2">
-                                <TestimonialComponentSlide  condition={condition} location={location} mobileView={true} disableSlide={disableSlide} setDisableSlide={setDisableSlide}/>
+                                <TestimonialComponentSlide doctor={doctor} condition={condition} location={location} mobileView={true} disableSlide={disableSlide} setDisableSlide={setDisableSlide}/>
                             </div>
 
 

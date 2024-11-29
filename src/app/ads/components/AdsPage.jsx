@@ -175,6 +175,9 @@ export default function AdsPage({ params, condition }) {
                             containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
                             iframeSrc={iframeSrc}
                         />
+                         {condition? <h3 className='text-gray-800 text-lg font-semibold text-center'>Embrace a healthier, happier life with personalized.<br/> Book a Session at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
+                         : <h3 className='text-gray-800 text-lg font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>}
+
                     </section>
 
                     {/* What We Treat */}
@@ -291,8 +294,9 @@ export default function AdsPage({ params, condition }) {
                             </div>
                         </div>
                         {/* Contact Form */}
-                     <div className=''>
-                     <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
+                     <div className='flex flex-col items-center'>
+                    {condition? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
+                        : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>}
                      <ContactForm />
                      </div>
 

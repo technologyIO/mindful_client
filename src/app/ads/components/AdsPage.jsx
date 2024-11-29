@@ -52,6 +52,21 @@ export default function AdsPage({ params, condition }) {
     const expertCondition = params.general;
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
 
+    const locationContent = {
+        "gk":{
+            city:'New Delhi',
+            area:"Greater Kailash 1"
+        },
+        "wf": {
+            city:'Bengaluru',
+            area:"Whitefield (Varthur Road)"
+        },
+        "hb": {
+            city:'Bengaluru',
+            area:"Hebbal (Aster CMI Hospital)"
+        }
+    }
+
     const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : 'Psychologist';
 
     const conditions = [
@@ -239,7 +254,7 @@ export default function AdsPage({ params, condition }) {
                 <div className=" bg-gray-50">
                     {/* Hero Section */}
                     <section
-                        className=" bg-cover h-[70vh] bg-center flex items-center justify-between md:px-[10px] lg:px-[50px] xl:px-[100px] "
+                        className=" bg-cover h-[80vh] bg-center flex items-center justify-between md:px-[10px] lg:px-[50px] xl:px-[100px] "
                         style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
                     >
                         <div className="bg-opacity-75 w-full h-full flex items-end px-6">
@@ -276,7 +291,10 @@ export default function AdsPage({ params, condition }) {
                             </div>
                         </div>
                         {/* Contact Form */}
-                        <ContactForm />
+                     <div className=''>
+                     <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
+                     <ContactForm />
+                     </div>
 
 
                     </section>

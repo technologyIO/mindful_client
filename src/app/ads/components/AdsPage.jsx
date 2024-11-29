@@ -55,7 +55,8 @@ export default function AdsPage({ params, condition }) {
     const locationContent = {
         "gk": {
             city: 'New Delhi',
-            area: "Greater Kailash 1"
+            area: "Greater Kailash 1", 
+            iframeSrc:"https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
         },
         "wf": {
             city: 'Bengaluru',
@@ -188,7 +189,7 @@ export default function AdsPage({ params, condition }) {
 
                         <ZohoForm
                             containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
-                            iframeSrc={iframeSrc}
+                            iframeSrc={locationContent[city].iframeSrc || iframeSrc }
                         />
                         {condition ? <h3 className='text-gray-600 text-lg  text-center'>Embrace a healthier, happier life with personalized.<br /> Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
                             : <h3 className='text-gray-600 text-lg  text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>}
@@ -307,7 +308,7 @@ export default function AdsPage({ params, condition }) {
                         <div className='flex flex-col items-center'>
                             {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
                                 : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>} */}
-                            <ContactForm />
+                            <ContactForm iframeSrc={locationContent[city].iframeSrc || iframeSrc}/>
                         </div>
 
 

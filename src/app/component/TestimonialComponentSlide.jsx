@@ -48,7 +48,7 @@ export default function TestimonialComponentSlide({
     }else if(testimonials.length === 0){
         return (
             <div className="flex justify-center h-full items-center">
-                <p>No testimonial found</p>
+                {/* <p>No testimonial found</p> */}
             </div>
         )
     }

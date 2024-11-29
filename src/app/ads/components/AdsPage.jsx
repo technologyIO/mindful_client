@@ -39,7 +39,7 @@ const servicesIcon = [
     },
 ]
 export default function AdsPage({ params, condition }) {
-    const cleanCondition = condition ?condition?.replace(/%20/g, ' ').replace(/,/g, ''):""
+    const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
 
     const upperCaseCondition = ['ocd']
     // for zoho
@@ -53,17 +53,17 @@ export default function AdsPage({ params, condition }) {
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
 
     const locationContent = {
-        "gk":{
-            city:'New Delhi',
-            area:"Greater Kailash 1"
+        "gk": {
+            city: 'New Delhi',
+            area: "Greater Kailash 1"
         },
         "wf": {
-            city:'Bengaluru',
-            area:"Whitefield (Varthur Road)"
+            city: 'Bengaluru',
+            area: "Whitefield (Varthur Road)"
         },
         "hb": {
-            city:'Bengaluru',
-            area:"Hebbal (Aster CMI Hospital)"
+            city: 'Bengaluru',
+            area: "Hebbal (Aster CMI Hospital)"
         }
     }
 
@@ -124,12 +124,12 @@ export default function AdsPage({ params, condition }) {
         { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
     ]
 
-    
+
     const addContent = {
-        header_general:`Are you looking for an experienced ${expertText} and a safe space?`,
-        header_condition:`Break Free from ${cleanCondition}. Your Journey to mental peace starts here.`,
-        subheader_general:`We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate ${expertText}s are here for you.`,
-        subheader_condition:`Our compassionate ${expertText} are here to support you on your journey to mental peace. Together, we can break free from ${cleanCondition}.`,
+        header_general: `Are you looking for an experienced ${expertText} and a safe space?`,
+        header_condition: `Break Free from ${cleanCondition}. Your Journey to mental peace starts here.`,
+        subheader_general: `We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate ${expertText}s are here for you.`,
+        subheader_condition: `Our compassionate ${expertText} are here to support you on your journey to mental peace. Together, we can break free from ${cleanCondition}.`,
     }
 
 
@@ -140,30 +140,45 @@ export default function AdsPage({ params, condition }) {
                     {/* Hero Section */}
                     <section
                         className="relative min-h-[200px] bg-cover bg-center flex items-center"
-                        style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 110%), url('/ads/ad1.png')" }}
+                        // style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/ad1.png')" }}
+                        style={{ backgroundImage: " url('/ads/ad1.png')" }}
+
                     >
                         <div className="bg-opacity-75 w-full h-full flex items-center">
                             <div className="w-full p-2">
                                 <div className='flex flex-col items-end'>
-                                    <div className='w-1/2 text-end'>
-                                    {cleanCondition ? <h1 className="mb-4 text-lg  text-black  font-bold ">
-                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition)?"uppercase":""}`}>{cleanCondition }</span>. Your Journey to mental peace starts here.
-                                    </h1> :
-                                        <h1 className="mb-4 text-lg  text-black  font-bold ">
-                                            Are you looking for an experienced {expertText} and a safe space?
-                                        </h1>}
-                                    </div>
-                                    <div className=' text-end'>
+
+                                    {/* <div className=' text-end'> */}
                                         {/* sub header */}
-                                {cleanCondition ? <p className="text-sm  text-white font-bold text-start">
-                                    Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
-                                </p> :
-                                    <p className="text-sm  text-white font-bold text-start">
-                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
-                                    </p>}
-                                    </div>
+                                        {/* {cleanCondition ? <p className="text-sm  text-white font-bold text-start">
+                                            Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
+                                        </p> :
+                                            <p className="text-sm  text-white font-bold text-start">
+                                                We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                            </p>} */}
+                                    {/* </div> */}
                                 </div>
 
+                            </div>
+                        </div>
+                    </section>
+                    <section className=' mx-4 mt-5'>
+                        <div className='text-center '>
+                            {cleanCondition ? <h1 className="mb-4 text-2xl  text-orange-500  font-bold ">
+                                Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : ""}`}>{cleanCondition}</span>. Your Journey to mental peace starts here.
+                            </h1> :
+                                <h1 className="mb-4 text-2xl  text-orange-500  font-bold ">
+                                    Are you looking for an experienced {expertText} and a safe space?
+                                </h1>}
+                        </div>
+                        <div className='mb-5'>
+                            <div className='text-lg text-center text-gray-600'>
+                            {cleanCondition ? <p className="">
+                                            Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
+                                        </p> :
+                                            <p className="">
+                                                We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                            </p>}
                             </div>
                         </div>
                     </section>
@@ -175,8 +190,8 @@ export default function AdsPage({ params, condition }) {
                             containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
                             iframeSrc={iframeSrc}
                         />
-                         {condition? <h3 className='text-gray-800 text-lg font-semibold text-center'>Embrace a healthier, happier life with personalized.<br/> Book a Session at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
-                         : <h3 className='text-gray-800 text-lg font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>}
+                        {condition ? <h3 className='text-gray-600 text-lg  text-center'>Embrace a healthier, happier life with personalized.<br /> Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
+                            : <h3 className='text-gray-600 text-lg  text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>}
 
                     </section>
 
@@ -206,7 +221,7 @@ export default function AdsPage({ params, condition }) {
                         </section>}
 
                     {/* Symptoms */}
-               { condition &&   <ShowSymptoms category={cleanCondition}/> }
+                    {condition && <ShowSymptoms category={cleanCondition} />}
 
                     <AdsCombinePage condition={cleanCondition} expertText={expertText} location={location} />
 
@@ -260,13 +275,17 @@ export default function AdsPage({ params, condition }) {
                         className=" bg-cover h-[80vh] bg-center flex items-center justify-between md:px-[10px] lg:px-[50px] xl:px-[100px] "
                         style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
                     >
-                        <div className="bg-opacity-75 w-full h-full flex items-end px-6">
-                            <div className="w-full p-2">
+                              {/* to-[#ffffff1a] */}
+                        <div className="bg-opacity-75 w-full h-full flex items-end px-6 py-5">
+                            <div className="
+                            w-full bg-gradient-to-r
+                             from-orange-400
+                               rounded-lg  px-3 py-3">
                                 <div className='mb-6'>
                                     {/* header */}
                                     {/* if condition then or not  */}
                                     {cleanCondition ? <h1 className="mb-4 text-5xl  text-white  font-bold ">
-                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition)?"uppercase":""}`}>{cleanCondition }</span>. Your Journey to mental peace starts here.
+                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. Your Journey to mental peace starts here.
                                     </h1> :
                                         <h1 className="mb-4 text-5xl  text-white  font-bold ">
                                             Are you looking for an experienced {expertText} and a safe space?
@@ -280,25 +299,15 @@ export default function AdsPage({ params, condition }) {
                                     <p className="text-2xl  text-white font-bold text-start">
                                         We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
                                     </p>}
-                                {/* {(location && expertText) ? <p className="text-sm  text-orange-400 font-bold text-start">
-                                    Our Experienced {expertText} are here to help you at our {location}
-                                </p> :
-                                    (location) ? <p className="text-sm  text-orange-400 font-bold text-start">
-                                        Our Expert are here to help you at our {location}
-                                    </p>
-                                        :
-                                        <p className="text-sm  text-orange-400 font-bold text-start">
-                                            Our Experts are available to assist you at a center near your location.
-                                        </p>
-                                } */}
+                               
                             </div>
                         </div>
                         {/* Contact Form */}
-                     <div className='flex flex-col items-center'>
-                    {condition? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>
-                        : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].city} clinic in {locationContent[city].area}</h3>}
-                     <ContactForm />
-                     </div>
+                        <div className='flex flex-col items-center'>
+                            {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
+                                : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>}
+                            <ContactForm />
+                        </div>
 
 
                     </section>
@@ -308,7 +317,7 @@ export default function AdsPage({ params, condition }) {
 
 
                     {/* Symptoms */}
-               {condition &&   <ShowSymptoms category={cleanCondition}/>}
+                    {condition && <ShowSymptoms category={cleanCondition} />}
                     {/* What We Treat */}
                     {!cleanCondition && <section className="bg-primary-div mx-auto py-6">
                         <Container maxWidth="lg">
@@ -379,7 +388,7 @@ export default function AdsPage({ params, condition }) {
         )
     }
 
-    const ShowSymptoms = ({category}) => {
+    const ShowSymptoms = ({ category }) => {
         const filteredSymptoms = symptomsDynamic?.filter((symptom) => symptom?.category.toLowerCase() === category?.toLowerCase());
         return (
             <>
@@ -387,10 +396,10 @@ export default function AdsPage({ params, condition }) {
                 <section className="bg-gray-100 py-8">
                     <Container maxWidth="lg">
                         <div className="mx-auto">
-                            <h2 className="mb-4 text-center text-3xl font-bold text-orange-500">
+                            <h2 className="mb-4 text-center text-2xl md:text-3xl font-bold text-orange-500">
                                 Are you experiencing any of the following symptoms?
                             </h2>
-                            <p className="mb-8 text-xl text-center text-gray-600">
+                            <p className="mb-8 text-lg text-center text-gray-600">
                                 If Yes, you may benefit from talking to someone
                             </p>
                             <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-5">
@@ -408,8 +417,8 @@ export default function AdsPage({ params, condition }) {
                                 ))}
                             </div>
                             <div className='flex items-center justify-center mt-6'>
-                            <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" />
-                        </div>
+                                <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" />
+                            </div>
                         </div>
                     </Container>
                 </section>

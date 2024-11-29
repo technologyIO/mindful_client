@@ -5,9 +5,9 @@ import React from 'react'
 const ThankYouPage = () => {
     return (
        <Container maxWidth="lg bg-primary-div h-screen">
-         <div className=" flex flex-col items-center   ">
-            <div className=" rounded-lg  p-8 w-full text-center">
-                <div className="mb-6">
+         <div className=" flex flex-col items-center  justify-center h-full ">
+            <div className=" rounded-lg pb-[50px]   p-8 w-full text-center">
+                <div className="mb-2">
                     <img
                         src="/home/footerLogo.svg"
                         alt="MindfulTMS Logo"
@@ -20,7 +20,7 @@ const ThankYouPage = () => {
                     We've received your details. Thank you for choosing MindfulTMS.
                 </h1>
 
-                <p className="text-gray-600 md:text-xl mb-4">
+                <p className="text-gray-600 md:text-xl mb-1">
                     Our Phone/Whatsapp lines are open from Monday-Saturday 10 AM to 6PM.
                 </p>
 

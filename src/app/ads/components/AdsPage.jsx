@@ -276,18 +276,19 @@ export default function AdsPage({ params, condition }) {
                         style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
                     >
                               {/* to-[#ffffff1a] */}
+                            {/* w-full bg-gradient-to-r */}
+                              
                         <div className="bg-opacity-75 w-full h-full flex items-end px-6 py-5">
                             <div className="
-                            w-full bg-gradient-to-r
-                             from-orange-400
+                             bg-[#fb923ca8] 
                                rounded-lg  px-3 py-3">
-                                <div className='mb-6'>
+                                <div className='mb-3'>
                                     {/* header */}
                                     {/* if condition then or not  */}
-                                    {cleanCondition ? <h1 className="mb-4 text-5xl  text-white  font-bold ">
-                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. Your Journey to mental peace starts here.
+                                    {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
+                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
                                     </h1> :
-                                        <h1 className="mb-4 text-5xl  text-white  font-bold ">
+                                        <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                             Are you looking for an experienced {expertText} and a safe space?
                                         </h1>}
                                 </div>
@@ -304,8 +305,8 @@ export default function AdsPage({ params, condition }) {
                         </div>
                         {/* Contact Form */}
                         <div className='flex flex-col items-center'>
-                            {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
-                                : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>}
+                            {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>
+                                : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city].area} clinic in {locationContent[city].city}</h3>} */}
                             <ContactForm />
                         </div>
 

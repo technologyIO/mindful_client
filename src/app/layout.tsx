@@ -19,11 +19,12 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname(); // Get the current route path
 
-  const noFooterPaths = ["/admin", "/assesment"];
-  const noNavbarPaths = ["/ads"];
+  const noFooterPaths = ["/admin", "/assesment", "/thankyou"];
+  const noNavbarPaths = ["/ads", ];
+  const zeroNav = ["/thankyou"];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
   const shouldHideNavbar = noNavbarPaths.some((path) => pathname.startsWith(path));
-
+  const hideZeroNavbar = zeroNav.some((path) => pathname.startsWith(path));
   // Set dynamic title based on the path or other conditions
   const getTitle = () => {
     if (pathname === "/admin") return "Admin Panel";
@@ -37,7 +38,7 @@ export default function RootLayout({
         <title>{getTitle()}</title>
       </Head>
       <body className={inter.className}>
-     {  shouldHideNavbar?<AdsNavbar/>: <Navbar />}
+     {  shouldHideNavbar?<AdsNavbar/>:  hideZeroNavbar ? null : <Navbar />}
         <Toaster position="top-right" />
         {children}
         {!shouldHideFooter && <Footer />}

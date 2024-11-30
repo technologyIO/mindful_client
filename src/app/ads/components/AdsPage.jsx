@@ -168,10 +168,10 @@ export default function AdsPage({ params, condition }) {
                     <section className=' mx-4 mt-5'>
                         <div className='text-center '>
                             {cleanCondition ? <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
-                                Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : ""}`}>{cleanCondition}</span>. Your Journey to mental peace starts here.
+                                Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
                             </h1> :
                                 <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
-                                    Are you looking for an experienced {expertText} and a safe space?
+                                    Are you looking for an experienced <span className='capitalize'>{expertText}</span>
                                 </h1>}
                         </div>
                         <div className='mb-3'>
@@ -258,8 +258,8 @@ export default function AdsPage({ params, condition }) {
                                 </div>
                                 <div className="mx-4 space-y-8 ">
                                     <div>
-                                        <h3 className="mb-2 text-xl  text-orange-500 font-semibold">
-                                            Experienced Clinical {expertText}:
+                                        <h3 className="mb-2 text-xl capitalize text-orange-500 font-semibold">
+                                            Experienced Clinical team:
                                         </h3>
                                         <p className="text-gray-600">
                                             They are trained to assess and diagnose and provide right therapy for you.
@@ -357,8 +357,8 @@ export default function AdsPage({ params, condition }) {
                         <div className="bg-opacity-75 w-full h-full flex items-end px-6 py-10">
                             <div className="
                              bg-[#fb923ca8] 
-                               rounded-lg  px-3 py-3">
-                                <div className='mb-3'>
+                               rounded-lg  px-7 py-7">
+                                <div className=''>
                                     {/* header */}
                                     {/* if condition then or not  */}
                                     {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
@@ -370,11 +370,11 @@ export default function AdsPage({ params, condition }) {
                                 </div>
 
                                 {/* sub header */}
-                                {cleanCondition ? <p className="text-2xl  text-white font-bold text-start">
+                                {cleanCondition ? <p className="text-xl  text-white font-bold text-start">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
-                                    <div className="text-2xl  text-white font-bold text-start">
-                                        <p className='mb-3'>We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </p>
+                                    <div className="text-xl  text-white font-bold text-start">
+                                        <p className=''>We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </p>
 
 
                                         Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate  {expertText}s are here for you.
@@ -382,17 +382,17 @@ export default function AdsPage({ params, condition }) {
 
 
                                 {condition ?
-                                    <h3 className=' text- text-lg text-white text-center mt-4'>
+                                    <h3 className=' text- text-lg text-white text-start mt-2'>
                                         Embrace a healthier, happier life with personalized care.
                                         <br />
                                         Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>
-                                    : <h3 className=' text-lg text-white text-center mt-4'>
+                                    : <h3 className=' text-lg text-white text-start mt-2'>
                                         Start your healing now.
                                         <br />
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>}
-                                <div className='flex items-center justify-center mt-3'>
+                                <div className='flex items-start justify-start mt-4'>
                                     <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
 
                                 </div>
@@ -458,8 +458,8 @@ export default function AdsPage({ params, condition }) {
                                 <img src="/ads/why.jpg" className='h-[400px] rounded-lg' />
                                 <div className="mx-4 space-y-8 ">
                                     <div>
-                                        <h3 className="mb-2 text-xl  text-orange-500 font-semibold">
-                                            Experienced Clinical {expertText}:
+                                        <h3 className="mb-2 text-xl capitalize text-orange-500 font-semibold">
+                                            Experienced Clinical team:
                                         </h3>
                                         <p className="text-gray-600">
                                             They are trained to assess and diagnose and provide right therapy for you.

@@ -32,13 +32,13 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
     return (
         <section className="mx-3 py-6">
             <Container maxWidth="lg">
-                {expertText ? (
+                {condition ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                    Our Expert Team of <span className="text-orange-500">{expertText}s</span>
+                    Our Experts
                     </h2>
                 ) : (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Experts
+                    Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
                 )}
                 <div className="grid grid-cols-1 gap-6">

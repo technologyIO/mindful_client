@@ -53,10 +53,10 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         autoplay: true, // Enable auto-slide
-        autoplaySpeed: 3000, // Slide every 5 seconds
+        autoplaySpeed: 5000, // Slide every 5 seconds
         slidesToScroll: 1,
         // nextArrow: <NextArrow />, 
         // prevArrow: <PrevArrow />, 
@@ -80,13 +80,13 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
         // if (!data) return null;
         return (
             <>
-                {expertText ? (
+                {condition ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Expert Team of <span className="text-orange-500">{expertText}s</span>
+                        Our Experts
                     </h2>
                 ) : (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Expert
+                    Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
                 )}
                 <Slider {...settings}>

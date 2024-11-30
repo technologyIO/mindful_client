@@ -91,10 +91,10 @@ export default function TestimonialComponentSlide({
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
-        slidesToShow: mobileView ? 2 : 3,
+        speed: 1000,
+        slidesToShow: mobileView ? 1 : 3,
         autoplay: true, // Enable auto-slide
-        autoplaySpeed: 3000, // Slide every 5 seconds
+        autoplaySpeed: 5000, // Slide every 5 seconds
         slidesToScroll: 1,
         nextArrow: <NextArrow />, // Use the custom Next button
         prevArrow: <PrevArrow />, // Use the custom Prev button
@@ -198,12 +198,18 @@ export default function TestimonialComponentSlide({
                         </div>
                     </div>}
                 </div>
+
+                {smallDevice && 
+                <div className="flex justify-center p-3">
+                <h3 className="text-xl font-bold text-blue-600 text-center">{testimonial?.doctor?.name}'s testimonial</h3>
+                </div>}
             </>
         )
     }
 
     return (
         <div className={`${mobileView?"flex justify-center w-full":""}`}>
+            {smallDevice &&  <div className="mb-7 text-center text-3xl font-bold text-teal-700">Testimonials</div>}
             <div className={` rounded-lg   ${mobileView?"w-[80%]":"w-full"} p-4`}>
             <Slider {...settings}>
                 {testimonials.map((testimonial, index) => {
@@ -218,7 +224,7 @@ export default function TestimonialComponentSlide({
                     return (
                         <>
                             <div key={index} className="px-2 ">
-                                <div className="bg-gray-100 rounded-lg h-[440px] py-2">
+                                <div className="bg-gray-100 rounded-lg min-h-[440px] py-4 px-4">
                                     {/* <div className="p-3 w-full text-center h-[75px] overflow-hidden rounded-t-md bg-primary-div">
                                         <h2 className="text-lg font-medium text-gray-800">
                                             {title || "No Title Available"}

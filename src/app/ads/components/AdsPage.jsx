@@ -55,18 +55,18 @@ export default function AdsPage({ params, condition }) {
     const locationContent = {
         "gk": {
             city: 'New Delhi',
-            area: "Greater Kailash 1", 
-            iframeSrc:"https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
+            area: "Greater Kailash 1",
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
         },
         "wf": {
             city: 'Bengaluru',
             area: "Whitefield (Varthur Road)",
-            iframeSrc:"https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ"
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ"
         },
         "hb": {
             city: 'Bengaluru',
             area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc:"https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc"
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc"
         }
     }
 
@@ -152,8 +152,8 @@ export default function AdsPage({ params, condition }) {
                                 <div className='flex flex-col items-end'>
 
                                     {/* <div className=' text-end'> */}
-                                        {/* sub header */}
-                                        {/* {cleanCondition ? <p className="text-sm  text-white font-bold text-start">
+                                    {/* sub header */}
+                                    {/* {cleanCondition ? <p className="text-sm  text-white font-bold text-start">
                                             Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                         </p> :
                                             <p className="text-sm  text-white font-bold text-start">
@@ -167,27 +167,27 @@ export default function AdsPage({ params, condition }) {
                     </section>
                     <section className=' mx-4 mt-5'>
                         <div className='text-center '>
-                            {cleanCondition ? <h1 className="mb-4 text-2xl  text-orange-500  font-bold ">
+                            {cleanCondition ? <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
                                 Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : ""}`}>{cleanCondition}</span>. Your Journey to mental peace starts here.
                             </h1> :
-                                <h1 className="mb-4 text-2xl  text-orange-500  font-bold ">
+                                <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
                                     Are you looking for an experienced {expertText} and a safe space?
                                 </h1>}
                         </div>
-                        <div className='mb-5'>
-                            <div className='text-lg text-center text-gray-600'>
-                            {cleanCondition ? <p className="">
-                                            Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
-                                        </p> :
-                                            <p className="">
-                                                We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
-                                            </p>}
+                        <div className='mb-3'>
+                            <div className='text-xl text-center text-gray-600'>
+                                {cleanCondition ? <p className="">
+                                    Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
+                                </p> :
+                                    <p className="">
+                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                    </p>}
                             </div>
                         </div>
                     </section>
 
                     {/* Contact Form */}
-                    <section className="mx-auto max-w-md rounded-lg bg-white p-6 shadow-lg">
+                    {/* <section className="mx-auto max-w-md rounded-lg bg-white p-6 shadow-lg">
 
                         <ZohoForm
                             containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
@@ -196,7 +196,25 @@ export default function AdsPage({ params, condition }) {
                         {condition ? <h3 className='text-gray-600 text-lg  text-center'>Embrace a healthier, happier life with personalized.<br /> Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
                             : <h3 className='text-gray-600 text-lg  text-center'>Start your healing by booking a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>}
 
+                    </section> */}
+                    <section className=' mx-4 mt-5 mb-6'>
+                        {condition ?
+                            <h3 className=' text- text-base text-gray-800 text-center'>
+                                Embrace a healthier, happier life with personalized care.
+                                <br />
+                                Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
+                            </h3>
+                            : <h3 className=' text-base text-gray-800 text-center'>
+                                Start your healing now.
+                                <br />
+                                Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
+                            </h3>}
+                        <div className='flex items-center justify-center mt-6'>
+                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
+                        </div>
                     </section>
+
+
 
                     {/* What We Treat */}
                     {!condition &&
@@ -225,7 +243,7 @@ export default function AdsPage({ params, condition }) {
 
                     {/* Symptoms */}
                     {condition && <ShowSymptoms category={cleanCondition} />}
-
+                    {/* expert */}
                     <AdsCombinePage iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} condition={cleanCondition} expertText={expertText} location={location} />
 
                     {/* Why Choose Us */}
@@ -267,58 +285,58 @@ export default function AdsPage({ params, condition }) {
         )
     }
 
-    const HeroSection2 = ()=>{
+    const HeroSection2 = () => {
         return (
             <>
-                 <section
-                        className=" bg-cover h-[80vh] bg-center flex items-center justify-between  "
-                        style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
-                    >
-                              {/* to-[#ffffff1a] */}
-                            {/* w-full bg-gradient-to-r */}
-                              
-                        <div className="bg-opacity-75  h-full  flex items-end px-6 py-5">
+                <section
+                    className=" bg-cover h-[80vh] bg-center flex items-center justify-between  "
+                    style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
+                >
+                    {/* to-[#ffffff1a] */}
+                    {/* w-full bg-gradient-to-r */}
+
+                    <div className="bg-opacity-75  h-full  flex items-end px-6 py-5">
                         <div className='w-1/2'></div>
-                            <div className=" w-1/2
+                        <div className=" w-1/2
                              bg-[#fb923ca8] 
                                rounded-lg  px-3 py-3">
-                                <div className='mb-3 text-end'>
-                                    {/* header */}
-                                    {/* if condition then or not  */}
-                                    {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
-                                    </h1> :
-                                        <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                            Are you looking for an experienced {expertText} and a safe space?
-                                        </h1>}
-                                </div>
+                            <div className='mb-3 text-end'>
+                                {/* header */}
+                                {/* if condition then or not  */}
+                                {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
+                                    Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
+                                </h1> :
+                                    <h1 className="mb-2 text-5xl  text-white  font-bold ">
+                                        Are you looking for an experienced {expertText} and a safe space?
+                                    </h1>}
+                            </div>
 
-                               <div className='flex ml-auto text-end '>
-                                 {/* sub header */}
-                                 {cleanCondition ? <p className="text-2xl  text-white font-bold ">
+                            <div className='flex ml-auto text-end '>
+                                {/* sub header */}
+                                {cleanCondition ? <p className="text-2xl  text-white font-bold ">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
                                     <p className="text-2xl  text-white font-bold ">
                                         We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
                                     </p>}
-                               </div>
-                                    <div className='flex items-center justify-center'>
-                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 mt-8 font-semibold outline-none border-none rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
-
-                                    </div>
-                               
                             </div>
-                        </div>
-                        {/* Contact Form */}
-                        <div className='flex flex-col items-center'>
-                            {/* <ContactForm iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}/> */}
-                            {/* <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" /> */}
-                        </div>
+                            <div className='flex items-center justify-center'>
+                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 mt-8 font-semibold outline-none border-none rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
 
-                            {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    {/* Contact Form */}
+                    <div className='flex flex-col items-center'>
+                        {/* <ContactForm iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}/> */}
+                        {/* <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" /> */}
+                    </div>
+
+                    {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
                                 : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>} */}
 
-                    </section>
+                </section>
             </>
         )
     }
@@ -333,10 +351,10 @@ export default function AdsPage({ params, condition }) {
                         className=" bg-cover h-[80vh] bg-center flex items-center justify-between md:px-[10px] lg:px-[50px] xl:px-[100px] "
                         style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
                     >
-                              {/* to-[#ffffff1a] */}
-                            {/* w-full bg-gradient-to-r */}
-                              
-                        <div className="bg-opacity-75 w-full h-full flex items-end px-6 py-5">
+                        {/* to-[#ffffff1a] */}
+                        {/* w-full bg-gradient-to-r */}
+
+                        <div className="bg-opacity-75 w-full h-full flex items-end px-6 py-10">
                             <div className="
                              bg-[#fb923ca8] 
                                rounded-lg  px-3 py-3">
@@ -344,7 +362,7 @@ export default function AdsPage({ params, condition }) {
                                     {/* header */}
                                     {/* if condition then or not  */}
                                     {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
+                                        Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
                                     </h1> :
                                         <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                             Are you looking for an experienced {expertText} and a safe space?
@@ -355,14 +373,30 @@ export default function AdsPage({ params, condition }) {
                                 {cleanCondition ? <p className="text-2xl  text-white font-bold text-start">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
-                                    <p className="text-2xl  text-white font-bold text-start">
-                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
-                                    </p>}
-                                    <div className='flex items-center justify-center'>
-                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 mt-8 font-semibold outline-none border-none rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
+                                    <div className="text-2xl  text-white font-bold text-start">
+                                        <p className='mb-3'>We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </p>
 
-                                    </div>
-                               
+
+                                        Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate  {expertText}s are here for you.
+                                    </div>}
+
+
+                                {condition ?
+                                    <h3 className=' text- text-lg text-white text-center mt-4'>
+                                        Embrace a healthier, happier life with personalized care.
+                                        <br />
+                                        Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
+                                    </h3>
+                                    : <h3 className=' text-lg text-white text-center mt-4'>
+                                        Start your healing now.
+                                        <br />
+                                        Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
+                                    </h3>}
+                                <div className='flex items-center justify-center mt-3'>
+                                    <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
+
+                                </div>
+
                             </div>
                         </div>
                         {/* Contact Form */}
@@ -371,7 +405,7 @@ export default function AdsPage({ params, condition }) {
                             {/* <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" /> */}
                         </div>
 
-                            {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
+                        {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
                                 : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>} */}
 
                     </section>

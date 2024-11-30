@@ -36,7 +36,7 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle, iframeSrc }) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize , icon}) => {
     const pathname = usePathname()
     const iframeSrcStatic =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
@@ -152,8 +152,16 @@ const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
     return (
         <>
             {
-                name ? <button onClick={toggleRequestModal} className={`${customStyle ? customStyle : "bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold"} `}>{name}</button>
-                    : <button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>Request an Appointment</button>
+                name ? <button onClick={toggleRequestModal} className={`${customStyle ? customStyle : "bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold"} `}>
+                {
+                    icon?<img src={icon} alt="icon" className={`${iconSize}`} />:""
+                }
+                {name}</button>
+                    : <button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>
+                    {
+                    icon?<img src={icon} alt="icon" className={`w-${iconSize}`} />:""
+                }
+                    Request an Appointment</button>
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal}>

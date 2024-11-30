@@ -10,8 +10,15 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
     const [doctorsData, setDoctorsData] = useState([]); // To store doctors data
 
     const getDoctor = () => {
+        let apiUrl = '';
+        if(expertText){
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText}`
+        }
+        if(condition){
+        apiUrl=`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}`
+        }
         axios
-            .get(`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&specialization=${condition || ""}`)
+            .get(apiUrl)
             .then((res) => {
                 console.log(location);
                 setDoctorsData(res.data);
@@ -27,11 +34,11 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
             <Container maxWidth="lg">
                 {expertText ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Expert Team of <span className="text-orange-500">{expertText}s</span>
+                        Our Experts
                     </h2>
                 ) : (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Expert
+                        Our Experts
                     </h2>
                 )}
                 <div className="grid grid-cols-1 gap-6">
@@ -49,10 +56,10 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                                     className="mx-auto mb-4 rounded-full"
                                 />
                                 <h3 className="text-xl font-bold text-blue-600">{doctor?.name}</h3>
-                                <p className="font-semibold text-pink-500 text-base">SERVICES</p>
+                                {/* <p className="font-semibold text-pink-500 text-base">SERVICES</p> */}
                                 <p className="mb-2">{doctor?.designation}</p>
                                 <p className="text-pink-500 font-semibold text-base">SPECIALIZATION</p>
-                                <div className="h-[100px] overflow-y-hidden">
+                                <div className="h-[123px] overflow-y-hidden">
                                     <p className="mb-4 font-semibold text-sm">
                                         {doctor?.specialization?.join(", ")}
                                     </p>

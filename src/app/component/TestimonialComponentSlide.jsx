@@ -201,7 +201,7 @@ export default function TestimonialComponentSlide({
 
                 {smallDevice && 
                 <div className="flex justify-center p-3">
-                <h3 className="text-xl font-bold text-blue-600 text-center">{testimonial?.doctor?.name}'s testimonial</h3>
+                <h3 className="text-xl font-bold text-blue-600 text-start">{testimonial?.doctor?.name}'s testimonial</h3>
                 </div>}
             </>
         )

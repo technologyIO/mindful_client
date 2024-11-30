@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem, Select, FormControl, InputLabel, Button, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 // import PractoWidget from './PractoWidget';
 import { usePathname } from 'next/navigation';
-import ZohoForm  from '@/app/component/ZohoForm'
+import ZohoForm from '@/app/component/ZohoForm'
 
 
 const locations = [
@@ -36,11 +36,11 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize , icon}) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon }) => {
     const pathname = usePathname()
     const iframeSrcStatic =
-    "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
-const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
+        "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
+    const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
 
     // console.log(city, pathname)
     const [requestModal, setRequestModal] = useState(false);
@@ -153,21 +153,21 @@ const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
         <>
             {
                 name ? <button onClick={toggleRequestModal} className={`${customStyle ? customStyle : "bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold"} `}>
-                {
-                    icon?<img src={icon} alt="icon" className={`${iconSize}`} />:""
-                }
-                {name}</button>
-                    : <button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>
                     {
-                    icon?<img src={icon} alt="icon" className={`w-${iconSize}`} />:""
-                }
-                    Request an Appointment</button>
+                        icon ? <img src={icon} alt="icon" className={`${iconSize}`} /> : ""
+                    }
+                    {name}</button>
+                    : <button onClick={toggleRequestModal} className='text-xl w-full active:bg-orange-400 active:shadow-lg bg-primary-orange text-white px-6 py-2 rounded-lg font-semibold text-center'>
+                        {
+                            icon ? <img src={icon} alt="icon" className={`w-${iconSize}`} /> : ""
+                        }
+                        Request an Appointment</button>
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal}>
                 {/* <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle> */}
                 <DialogContent className='w-[310px] md:w-[500px] p-0 m-0'>
-{/*                 
+                    {/*                 
                     <TextField
                         autoFocus
                         margin="dense"
@@ -255,11 +255,11 @@ const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
                         </div>
                     </FormControl> */}
                     <div className='flex justify-end pt-3 px-3'>
-                       <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='/iconsNew/closee.svg'/></p>
+                        <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='/iconsNew/closee.svg' /></p>
                     </div>
-                 <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
-        iframeSrc={iframeSrc || iframeSrcStatic}
-      />
+                    <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
+                        iframeSrc={iframeSrc || iframeSrcStatic}
+                    />
                 </DialogContent>
 
             </Dialog>

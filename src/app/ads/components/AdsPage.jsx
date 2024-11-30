@@ -251,7 +251,7 @@ export default function AdsPage({ params, condition }) {
                         <h2 className="mb-4 text-center text-3xl font-bold text-orange-500">
                             Why Choose Us?
                         </h2>
-                        <div className=''>
+                        <div className='text-center'>
                             <div className='grid grid-cols-1 justify-center gap-2 '>
                                 <div className='flex justify-center'>
                                     <img src="/ads/why.jpg" className='h-[300px]' />

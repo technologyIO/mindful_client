@@ -24,38 +24,64 @@ const conditions = [
 const conditionBubble = [
     {
         id: 1,
-        name: 'Depressed',
+        name: 'Depression',
         icon: '/services/depressed.jpg'
     },
     {
         id: 2,
-        name: 'Anxious',
+        name: 'Anxiety',
         icon: '/services/anxiety.jpg'
     },
 
     {
         id: 3,
-        name: 'Stressed',
+        name: 'OCD  ',
         icon: '/services/stressed.jpg'
     },
     {
         id: 2,
-        name: 'Anxious',
+        name: 'Stress',
         icon: '/services/anxiety.jpg'
     },
     {
         id: 3,
-        name: 'Stressed',
+        name: 'Trauma',
         icon: '/services/stressed.jpg'
     },
     {
         id: 1,
-        name: 'Depressed',
+        name: 'Substance',
         icon: '/services/depressed.jpg'
     },
     {
         id: 2,
-        name: 'Anxious',
+        name: 'Abuse',
+        icon: '/services/anxiety.jpg'
+    },
+    {
+        id: 2,
+        name: 'BPD',
+        icon: '/services/anxiety.jpg'
+    },
+    {
+        id: 2,
+        name: 'Eating Disorders',
+        icon: '/services/anxiety.jpg'
+    },
+    {
+        id: 2,
+        name: 'Grief and Loss',
+        icon: '/services/anxiety.jpg'
+    },
+
+    {
+        id: 2,
+        name: 'Self-Esteem Issues',
+        icon: '/services/anxiety.jpg'
+    },
+    {
+        id: 2,
+        name: 'ADHD',
         icon: '/services/anxiety.jpg'
     },
 ]
@@ -151,25 +177,27 @@ const DesktopView = ()=>{
 
            
 
+            <Container maxWidth="lg">
             <div className="py-8">
              
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
-                 {`   MindfulTMS's experts specialise in treating a variety of conditions`}
-                </h2>
-                <div className="flex flex-wrap justify-center gap-2">
-                    {conditionBubble.map((condition) => (
-                        <div
-                            key={condition.name}
-                            className="flex items-center bg-green-100 text-sm text-gray-700 px-4 py-2 rounded-full"
-                        >
-                            <span>{condition.name}</span>
-                        </div>
-                    ))}
-                    <div className="flex items-center text-sm bg-green-100 text-gray-700 px-4 py-2 rounded-full">
-                        <span>and more...</span>
-                    </div>
-                </div>
-            </div>
+             <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+              {`   MindfulTMS's experts specialise in treating a variety of conditions`}
+             </h2>
+             <div className="flex flex-wrap justify-center gap-4">
+                 {conditionBubble.map((condition) => (
+                     <div
+                         key={condition.name}
+                         className="flex items-center bg-green-100 text-base text-gray-700 px-4 py-2 rounded-full"
+                     >
+                         <span className=''>{condition.name}</span>
+                     </div>
+                 ))}
+                 {/* <div className="flex items-center text-sm bg-green-100 text-gray-700 px-4 py-2 rounded-full">
+                     <span>and more...</span>
+                 </div> */}
+             </div>
+         </div>
+            </Container>
 
             {/* Take Test */}
             <div className='md:hidden bg-primary-div'>

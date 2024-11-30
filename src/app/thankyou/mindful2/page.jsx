@@ -55,7 +55,7 @@ const ThankYouPage = () => {
                         </Link>
 
                     </div>
-                    <Link href="/" className='bg-primary-orange h-full hover:bg-orange-500 active:bg-orange-700 rounded-lg px-[45px] py-[13px] text-white text-base font-semibold'>
+                    <Link href="/" className='px-[45px] py-[13px] text-orange-600 underline text-lg font-semibold'>
                         Go to Home
                     </Link>
                 </div>

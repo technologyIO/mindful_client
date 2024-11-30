@@ -275,7 +275,7 @@ const HomePage = ({ allSection }) => {
 
                 {/* client speaks */}
                 <section className='py-8 px-4 bg-primary-div'>
-                <h1 className='text-center text-3xl font-semibold'> Client Speaks</h1>
+                {/* <h1 className='text-center text-3xl font-semibold'> Client Speaks</h1> */}
                     {/* <VideoComponent /> */}
                     {/* <NewComponent videos={videos} /> */}
                     {/* <TestimonialComponent  /> */}

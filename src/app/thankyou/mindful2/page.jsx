@@ -16,17 +16,18 @@ const ThankYouPage = () => {
                         />
                     </div>
 
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                        We've received your details. Thank you for choosing MindfulTMS.
-                        <br />
-                        Our team will contact you shortly.
+                    <h1 className="text-lg text-center  md:text-xl  text-gray-800 mb-6">
+                    Thank you for choosing MindfulTMS.
+                        <br/> 
+                        We've received your details.
                     </h1>
+                       <h1 className='text-2xl md:text-3xl font-bold mb-6'> Our team will contact you shortly.</h1>
 
-                    <p className="text-gray-600 md:text-xl mb-1">
+                    <p className="text-gray-800 text-base md:text-base font-semibold uppercase mb-1">
                         Want to Book Immediately?
                     </p>
 
-                    <p className="text-gray-600 md:text-xl mb-4 ">
+                    <p className="text-gray-700  text-base mb-6 ">
                         Click the WhatsApp Button below to get in touch with us right now!
                     </p>
 

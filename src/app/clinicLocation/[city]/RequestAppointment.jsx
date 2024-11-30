@@ -36,9 +36,9 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle }) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc }) => {
     const pathname = usePathname()
-    const iframeSrc =
+    const iframeSrcStatic =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
 const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
 
@@ -250,7 +250,7 @@ const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
                        <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='/iconsNew/closee.svg'/></p>
                     </div>
                  <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
-        iframeSrc={iframeSrc}
+        iframeSrc={iframeSrc || iframeSrcStatic}
       />
                 </DialogContent>
 

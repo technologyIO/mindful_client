@@ -4,7 +4,7 @@ import AdsExperts from '../../component/AdsExperts'
 import AdsExpertsMobile from '../../component/AdsExpertsMobile'
 import TestimonialComponent from '../../component/TestimonialComponent'
 import TestimonialComponentSlide from '@/app/component/TestimonialComponentSlide'
-const AdsCombinePage = ({condition, expertText, location}) => {
+const AdsCombinePage = ({condition, expertText, location , iframeSrc}) => {
     const [disableSlide, setDisableSlide] = useState(false)
 
     const MobileView = ()=>{
@@ -14,11 +14,11 @@ const AdsCombinePage = ({condition, expertText, location}) => {
            items-center gap-4 mx-2'>
                         {/* Expert Team */}
                         <section>
-                            <AdsExpertsMobile condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
+                            <AdsExpertsMobile iframeSrc={iframeSrc} condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
                         </section>
                         {/* client speaks */}
                         <section className='py-8 '>
-                            <TestimonialComponentSlide condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} smallDevice={true} />
+                            <TestimonialComponentSlide iframeSrc={iframeSrc} condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} smallDevice={true} />
                         </section>
 
                     </div>
@@ -33,7 +33,7 @@ const AdsCombinePage = ({condition, expertText, location}) => {
            items-center gap-4 mx-10'>
                         {/* Expert Team */}
                         <section>
-                            <AdsExperts condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
+                            <AdsExperts iframeSrc={iframeSrc} condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
                         </section>
                         {/* client speaks */}
                         {/* <section className='py-8 '>

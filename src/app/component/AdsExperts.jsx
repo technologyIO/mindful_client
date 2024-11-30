@@ -6,7 +6,7 @@ import TestimonialComponent from "./TestimonialComponent";
 import TestimonialComponentSlide from "./TestimonialComponentSlide";
 import { Container } from "@mui/material";
 
-const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableSlide }) => {
+const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableSlide, iframeSrc }) => {
     const [doctorsData, setDoctorsData] = useState([]); // To store doctors data
 
     const getDoctor = () => {
@@ -68,7 +68,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                     ))}
                 </div>
                 <div className="flex items-center justify-center mt-5">
-                    <RequestAppointment
+                    <RequestAppointment iframeSrc={iframeSrc}
                         customStyle={
                             "flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 md:mx-10"
                         }

@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { motion, AnimatePresence } from "framer-motion";
 import RequestAppointment from "../clinicLocation/[city]/RequestAppointment";
 import axios from "axios";
-const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDisableSlide }) => {
+const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDisableSlide, iframeSrc }) => {
     const [doctorsData, setDoctorsData] = useState([]); // To store doctors data
     const [currentIndex, setCurrentIndex] = useState(0); // To track the current doctor index
     const [direction, setDirection] = useState(1); // To track the animation direction
@@ -136,7 +136,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
                 <DoctorComponent />
             )}
             <div className="flex items-center justify-center mt-5">
-                <RequestAppointment
+                <RequestAppointment iframeSrc={iframeSrc}
                     customStyle={
                         "flex w-full items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 md:mx-10"
                     }

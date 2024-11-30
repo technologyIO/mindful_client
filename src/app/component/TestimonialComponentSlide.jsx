@@ -17,16 +17,16 @@ export default function TestimonialComponentSlide({
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
     const [isQuoteModal, setisQuoteModal] = useState(false);
-    const [loading , setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     // Fetch testimonials from the API
     const fetchTestimonials = async () => {
         // if fetch on basis of doctors
         setLoading(true);
-        let apiUrl  = '';
-        if(doctor){
+        let apiUrl = '';
+        if (doctor) {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`
         }
-        else{
+        else {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`;
         }
         try {
@@ -45,7 +45,7 @@ export default function TestimonialComponentSlide({
 
     if (loading) {
         return <div className="flex justify-center h-full items-center"><CircularProgress /></div>;
-    }else if(testimonials.length === 0){
+    } else if (testimonials.length === 0) {
         return (
             <div className="flex justify-center h-full items-center">
                 {/* <p>No testimonial found</p> */}
@@ -58,7 +58,7 @@ export default function TestimonialComponentSlide({
         return (
             <button
                 onClick={onClick}
-                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice?"top-[50%] right-[-25px]":"top-1/2 right-[-50px]"} `}
+                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] right-[-25px]" : "top-1/2 right-[-50px]"} `}
             >
                 <img
                     className="text-white cursor-pointer"
@@ -76,7 +76,7 @@ export default function TestimonialComponentSlide({
             <button
                 onClick={onClick}
                 // className="absolute z-[2] top-1/2 left-[-50px] transform -translate-y-1/2  justify-center "
-                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice?"top-[50%] left-[-25px]":"top-1/2 left-[-50px]"} `}
+                className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] left-[-25px]" : "top-1/2 left-[-50px]"} `}
 
             >
                 <img
@@ -139,13 +139,13 @@ export default function TestimonialComponentSlide({
                         </p> :
                             <span className="text-gray-600 text-justify text-base font-semibold ">
                                 <p>
-                                        {`${title}... `}
-                                        {/* {!isQuoteModal && <span onClick={() => {
+                                    {`${title}... `}
+                                    {/* {!isQuoteModal && <span onClick={() => {
                                             setCurrentTestimonial(testimonial);
                                             setisQuoteModal(true)
                                         }} className="text-base  text-orange-500 cursor-pointer">Read_More</span>} */}
-                                    </p>
-                                  
+                                </p>
+
                             </span>
                         }
 
@@ -155,7 +155,7 @@ export default function TestimonialComponentSlide({
                         setisQuoteModal(true)
                     }} className="text-base ml-6 text-orange-500 cursor-pointer">Read More</span>}
                     {/* patient name */}
-                    <div className={`flex items-center mb-4 mt-3 ${modalOpen?"":"ml-6 "}`}>
+                    <div className={`flex items-center mb-4 mt-3 ${modalOpen ? "" : "ml-6 "}`}>
                         <div className="w-[2px] h-[30px] bg-primary-orange mr-3"></div>
                         <div>
                             <span className="text-[16px] font-semibold text-gray-700">{patientName}</span>
@@ -197,71 +197,87 @@ export default function TestimonialComponentSlide({
                                 ))}
                         </div>
                     </div>}
+                    {smallDevice && <div className="mt-4">
+                        <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
+                        <div className="mt-3 flex gap-3">
+                                    <div
+                                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full"
+                                    >
+                                        <span className="text-sm">{testimonial?.doctor?.name}</span>
+                                    </div>
+                        </div>
+                    </div>}
                 </div>
+{/* 
+                {smallDevice &&
+                    <div>
+                    <h3 className="text-base text-start font-semibold text-gray-900">Condition: </h3>
+                    <div className=" flex mt-5">
 
-                {smallDevice && 
-                <div className="flex justify-center p-3">
-                <h3 className="text-xl font-bold text-blue-600 text-start">{testimonial?.doctor?.name}'s testimonial</h3>
-                </div>}
+                        <h3 className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-lg">{testimonial?.doctor?.name}</h3>
+                    </div>
+                    
+                    </div>
+                    } */}
             </>
         )
     }
 
     return (
-        <div className={`${mobileView?"flex justify-center w-full":""}`}>
-            {smallDevice &&  <div className="mb-7 text-center text-3xl font-bold text-teal-700">Testimonials</div>}
-            <div className={` rounded-lg   ${mobileView?"w-[80%]":"w-full"} p-4`}>
-            <Slider {...settings}>
-                {testimonials.map((testimonial, index) => {
-                    const {
-                        title,
-                        fullTestimonial,
-                        patientName,
-                        condition,
-                        treatment,
-                    } = testimonial;
+        <div className={`${mobileView ? "flex justify-center w-full" : ""}`}>
+            {smallDevice && <div className="mb-7 text-center text-3xl font-bold text-teal-700">Testimonials</div>}
+            <div className={` rounded-lg   ${mobileView ? "w-[80%]" : "w-full"} p-4`}>
+                <Slider {...settings}>
+                    {testimonials.map((testimonial, index) => {
+                        const {
+                            title,
+                            fullTestimonial,
+                            patientName,
+                            condition,
+                            treatment,
+                        } = testimonial;
 
-                    return (
-                        <>
-                            <div key={index} className="px-2 ">
-                                <div className="bg-gray-100 rounded-lg min-h-[440px] py-4 px-4">
-                                    {/* <div className="p-3 w-full text-center h-[75px] overflow-hidden rounded-t-md bg-primary-div">
+                        return (
+                            <>
+                                <div key={index} className="px-2 ">
+                                    <div className="bg-gray-100 rounded-lg min-h-[440px] py-4 px-4">
+                                        {/* <div className="p-3 w-full text-center h-[75px] overflow-hidden rounded-t-md bg-primary-div">
                                         <h2 className="text-lg font-medium text-gray-800">
                                             {title || "No Title Available"}
                                         </h2>
                                     </div> */}
-                                    <div className="">
-                                        <QuoteComponent key={index} testimonial={testimonial} modalOpen={isQuoteModal} index={index} />
+                                        <div className="">
+                                            <QuoteComponent key={index} testimonial={testimonial} modalOpen={isQuoteModal} index={index} />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </>
-                    );
-                })}
-            </Slider>
-            <Dialog
-                open={isQuoteModal}
-                onClose={() => {
-                    setisQuoteModal(false)
-                    //   setDisableSlide(false)
+                            </>
+                        );
+                    })}
+                </Slider>
+                <Dialog
+                    open={isQuoteModal}
+                    onClose={() => {
+                        setisQuoteModal(false)
+                        //   setDisableSlide(false)
 
-                }}
-                BackdropProps={{
-                    style: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.9)', // Darker backdrop
-                    },
-                }}
-                PaperProps={{
-                    style: {
-                        borderRadius: '16px',  // Set the dialog corners to be 30px rounded
-                        overflow: 'hidden' // Ensure content doesn't overflow the edges
-                    }
-                }}
+                    }}
+                    BackdropProps={{
+                        style: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)', // Darker backdrop
+                        },
+                    }}
+                    PaperProps={{
+                        style: {
+                            borderRadius: '16px',  // Set the dialog corners to be 30px rounded
+                            overflow: 'hidden' // Ensure content doesn't overflow the edges
+                        }
+                    }}
 
-                className="m-0 px-0"
-            >
-                {/* <DialogTitle
+                    className="m-0 px-0"
+                >
+                    {/* <DialogTitle
                     className="text-gray-800 font-semibold bg-primary-div text-lg rounded-t-xl p-2"
                     display="flex"
                     justifyContent="space-between"
@@ -275,11 +291,11 @@ export default function TestimonialComponentSlide({
                         <img className="w-[30px]" src="/iconsNew/close.svg" />
                     </IconButton>
                 </DialogTitle> */}
-                <DialogContent className="px-4 md:px-6">
-                    <QuoteComponent modalOpen={true} index={1} testimonial={currentTestimonial} />
-                </DialogContent>
-            </Dialog>
-        </div>
+                    <DialogContent className="px-4 md:px-6">
+                        <QuoteComponent modalOpen={true} index={1} testimonial={currentTestimonial} />
+                    </DialogContent>
+                </Dialog>
+            </div>
         </div>
     );
 }

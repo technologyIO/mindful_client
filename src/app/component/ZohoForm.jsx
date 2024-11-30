@@ -19,7 +19,7 @@ const ZohoForm = ({ containerId, iframeSrc }) => {
       const iframe = document.createElement("iframe");
       iframe.src = iframeSrc;
       iframe.style.border = "none";
-      iframe.style.height = "100vh";
+      // iframe.style.height = "100vh";
       iframe.style.width = "100%";
       iframe.style.margin = "0";
       iframe.style.padding = "0";
@@ -57,18 +57,17 @@ const ZohoForm = ({ containerId, iframeSrc }) => {
       console.error("Error loading Zoho form:", error);
     }
   }, [containerId, iframeSrc]);
+  
 
   return (
-    <div
-      id={containerId}
-      style={{
-        width: "100%",
-        height: "100%",
-        margin: "0",
-        padding: "0",
-        textAlign: "center",
-      }}
-    ></div>
+
+    
+    <iframe
+      aria-label="Select your Clinic"
+      frameBorder="0"
+      style={{ height: "500px", width: "99%", border: "none" }}
+      src={iframeSrc}
+    ></iframe>
   );
 };
 

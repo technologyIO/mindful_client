@@ -65,7 +65,7 @@ const ZohoForm = ({ containerId, iframeSrc }) => {
     <iframe
       aria-label="Select your Clinic"
       frameBorder="0"
-      style={{ height: "500px", width: "99%", border: "none" }}
+      style={{ height: "560px", width: "99%", border: "none" }}
       src={iframeSrc}
     ></iframe>
   );

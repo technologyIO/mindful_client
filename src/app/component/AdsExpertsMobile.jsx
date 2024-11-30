@@ -82,7 +82,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
             <>
                 {expertText ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Experts
+                        Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
                 ) : (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
@@ -111,7 +111,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
                                             className="mx-auto mb-4 rounded-full"
                                         />
                                         <h3 className="text-xl font-bold text-blue-600">{data?.name}</h3>
-                                        <p className="font-semibold text-pink-500 text-base">SERVICES</p>
+                                        {/* <p className="font-semibold text-pink-500 text-base">SERVICES</p> */}
                                         <p className="mb-2">{data?.designation}</p>
                                         <p className="text-pink-500 font-semibold text-base">SPECIALIZATION</p>
                                         <div className="h-[100px] overflow-y-hidden">

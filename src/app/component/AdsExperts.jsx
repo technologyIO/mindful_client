@@ -34,7 +34,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
             <Container maxWidth="lg">
                 {expertText ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
-                        Our Experts
+                    Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
                 ) : (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">

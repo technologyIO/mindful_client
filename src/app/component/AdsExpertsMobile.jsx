@@ -91,7 +91,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
                 )}
                 <Slider {...settings}>
                     {
-                        doctorsData.map((data, index) => {
+                        doctorsData?.map((data, index) => {
                             return (
                                 <>
                                     <div

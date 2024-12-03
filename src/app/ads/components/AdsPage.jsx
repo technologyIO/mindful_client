@@ -171,16 +171,21 @@ export default function AdsPage({ params, condition }) {
                                 Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
                             </h1> :
                                 <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
-                                    Are you looking for an experienced <span className='capitalize'>{expertText}</span>
+                                    Are you looking for an experienced <span className='capitalize'>{expertText}</span>?
                                 </h1>}
                         </div>
+                        {/* sub header */}
                         <div className='mb-3'>
                             <div className='text-xl text-center text-gray-600'>
-                                {cleanCondition ? <p className="">
+                                {cleanCondition ? 
+                                // for condition 
+                                <p className="">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
+                                // none condition 
                                     <p className="">
-                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                   <span className='block mb-2'> We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </span>
+                                    Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
                                     </p>}
                             </div>
                         </div>
@@ -365,7 +370,7 @@ export default function AdsPage({ params, condition }) {
                                         Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
                                     </h1> :
                                         <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                            Are you looking for an experienced {expertText} and a safe space?
+                                            Are you looking for an experienced {expertText}?
                                         </h1>}
                                 </div>
 

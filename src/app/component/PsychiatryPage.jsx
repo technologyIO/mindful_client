@@ -8,21 +8,21 @@ const PsychiatryPage = () => {
             id: 1,
             name: "Dr Shubham",
             img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029237361-Dr%20Subham%20%281%29.jpg",
-            location: "New Delhi",
+            location: "New Delhi - Greater Kailash 1",
             link:'/doctor/66ffa1856a3f2ccdb194b61d'
         },
         {
             id: 2,
             name: "Dr Sandeep Govil",
             img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029275117-Dr%20Sandeep%20Govil%20Pictures.jpg",
-            location: "Bangalore",
+            location: "New Delhi - Greater Kailash 1",
             link:"/doctor/66ffa28f6a3f2ccdb194b62a"
         },
         {
             id: 3,
             name: "Dr. Abhishek",
             img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029376714-Dr%20Abhishek%20.jpg",
-            location: "New Delhi", 
+            location: "Bengaluru - whitefield", 
             link:"/doctor/66ffa2e86a3f2ccdb194b632"
         },
     ]
@@ -189,7 +189,7 @@ const PsychiatryPage = () => {
                                         />
                                     </div>
                                     <div className='mt-4 text-center'>
-                                        <span className='text-sm font-semibold text-gray-800 truncate block w-[100px]'>
+                                        <span className='text-sm font-semibold text-gray-800 whitespace-nowrap block w-[100px]'>
                                             {item.name}
                                         </span>
                                         <p className='text-[12px] text-gray-500'>

@@ -1,18 +1,18 @@
 "use client";
 import { Inter } from "next/font/google";
-import { GoogleTagManager } from '@next/third-parties/google';
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import { usePathname } from "next/navigation";
-import Head from "next/head";
 import AdsNavbar from "@/components/AdsNavbar";
-const inter = Inter({ subsets: ["latin"] });
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { metadata } from "./layoutWithMetadata";  // Import the metadata file
 
-export default function RootLayout({ children }: { children: React.ReactNode })  {
+const inter = Inter({ subsets: ["latin"] });
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   const noFooterPaths = ["/admin", "/assesment", "/thankyou"];
@@ -25,18 +25,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const getTitle = () => {
     if (pathname === "/admin") return "Admin Panel";
     if (pathname === "/assesment") return "Assessment";
-    return "Mindful TMS"; // Default title
+    return metadata.title; // Default title from metadata
   };
 
   return (
     <html lang="en">
-      {/* Add GTM script to <head> */}
-      <Head>
+      <head>
         <title>{getTitle()}</title>
-        <GoogleTagManager gtmId="GTM-5HDDPXG" />
-      </Head>
+        <link rel="icon" href={metadata.icons.icon} />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtm.js?id=GTM-5HDDPXG`}
+        ></script>
+      </head>
       <body className={inter.className}>
-        {/* Add GTM noscript to <body> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5HDDPXG"

@@ -9,6 +9,19 @@ import ClinicLocationDoctors from '@/app/component/ClinicLocationDoctors';
 import { HomePageSections } from '@/example';
 import Link from 'next/link';
 const MobileComponent = ({ data, images, city }) => {
+    const content = {
+        "Bengaluru-Whitefield":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ"
+            
+        },
+        "New-Delhi":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
+        },
+        "Bengaluru-Hebbal":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc"
+
+        },
+    }
     const allSection = HomePageSections
     const servicesIcon = [
         {
@@ -75,7 +88,8 @@ const MobileComponent = ({ data, images, city }) => {
            </div>
 
             <div className='px-4 mb-11'>
-                <RequestAppointment city={city} />
+            <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} />
+
             </div>
             <div className='px-4 mb-11'>
                 <ClinicAddress images={images} data={data} />

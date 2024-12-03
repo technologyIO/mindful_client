@@ -9,6 +9,19 @@ import ClinicAddress from './ClinicAddress';
 import OurDoctorSection from './OurDoctorSection';
 import ClinicLocationDoctors from '@/app/component/ClinicLocationDoctors';
 const DesktopComponent = ({ images, data, city }) => {
+    const content = {
+        "Bengaluru-Whitefield":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ"
+            
+        },
+        "New-Delhi":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
+        },
+        "Bengaluru-Hebbal":{
+            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc"
+
+        },
+    }
     return (
         <>
             <div className="bg-primary-div md:p-5 select-none mb-8">
@@ -30,7 +43,7 @@ const DesktopComponent = ({ images, data, city }) => {
                     <div id='clinic-location' className="mb-10 col-span-2">
                         {/* clinic location here */}
                         <div className='mb-8'>
-                            <RequestAppointment city={city} />
+                            <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} />
                         </div>
                         <div>
                             <ClinicAddress images={images} data={data} />

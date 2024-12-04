@@ -9,13 +9,9 @@ import TestimonialComponent from './TestimonialComponent';
 import TestimonialComponentSlide from './TestimonialComponentSlide';
 import TestimonialComponents2 from './TestimonialComponents2';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+// import Image from 'next/image';
 // import Footer from '@/components/Footer'
-const videos = [
-    { id: 1, service: 'Therapy for Depression', speaker: 'Sanjana Mathur', src: '/home/random.mp4' },
-    { id: 2, service: 'Anxiety Management', speaker: 'John Doe', src: '/home/health.mp4' },
-    { id: 3, service: 'Stress Relief Techniques', speaker: 'Jane Smith', src: '/home/random.mp4' },
-    { id: 4, service: 'Anxiety Management', speaker: 'John Doe', src: '/home/health.mp4' },
-]
+
 
 const servicesIcon = [
     {
@@ -51,7 +47,7 @@ const HomePage = ({ allSection }) => {
                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
                         <div className='flex justify-center w-full  mb-7'>
-                            <img className='w-full object-cover' src='/iconsNew/hero2.png' />
+                            <img  className='w-full object-cover' src='/iconsNew/hero2.webp' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>
@@ -154,7 +150,7 @@ const HomePage = ({ allSection }) => {
                     <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
                         {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section2?.html1 }} /> */}
                         <div>
-                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/take_assessment_image_4__1_-removebg-preview.png' />
+                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp' />
                         </div>
 
                     </div>
@@ -204,7 +200,7 @@ const HomePage = ({ allSection }) => {
                         {/* hide this on medium and show alternate */}
                         <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                             <div className=''>
-                                <img className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1731475215316-TMS-Illustration-Square-logo-min.png"} />
+                                <img className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733290489084-tms-illustration.webp"} />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section3?.box?.para }} /> */}
@@ -297,7 +293,7 @@ const HomePage = ({ allSection }) => {
             <>
                 <section className='mb-5'>
                     <div className='grid grid-cols-2  w-full cover mb-4 h-[545px]  ' style={{
-                        backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(163,109,22,1) 84%), url('/iconsNew/hero2.png')`,
+                        backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(163,109,22,1) 84%), url('/iconsNew/hero2.webp')`,
 
                         backgroundSize: 'cover',  // This makes the background image cover the entire div
                         backgroundPosition: 'center', // This centers the background image
@@ -335,7 +331,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <img className='w-full  object-contain h-[500px]' src="https://mindfultms1.s3.us-east-1.amazonaws.com/take_assessment_image_4__1_-removebg-preview.png" alt="" />
+                                <img className='w-full  object-contain h-[500px]' src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp" alt="" />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -415,7 +411,7 @@ const HomePage = ({ allSection }) => {
                                 {/* left image */}
                                 <div className="md">
                                     <img
-                                        src="https://mindfultms1.s3.us-east-1.amazonaws.com/1731475215316-TMS-Illustration-Square-logo-min.png"
+                                        src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733290489084-tms-illustration.webp"
                                         alt="TMS Treatment"
                                         width={600}
                                         height={400}

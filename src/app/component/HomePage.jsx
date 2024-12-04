@@ -15,24 +15,24 @@ import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 
 const servicesIcon = [
     {
-        icon: '/iconsNew/therapy.png',
+        icon: '/iconsNew/therapy.webp',
         link: '/services/therapy',
         name: 'Therapy'
     },
     {
-        icon: '/iconsNew/psychiatry.png',
+        icon: '/iconsNew/psychiatry.webp',
         link: '/services/psychiatry',
         name: 'Psychiatry'
 
     },
     {
-        icon: '/iconsNew/assessment.png',
+        icon: '/iconsNew/assessment.webp',
         link: '/assesment',
         name: 'Professional Assessment'
 
     },
     {
-        icon: '/iconsNew/tms.png',
+        icon: '/iconsNew/tms.webp',
         link: '/services/tms-treatment-page',
         name: 'TMS'
 
@@ -73,19 +73,19 @@ const HomePage = ({ allSection }) => {
                                     <div className='mb-6'>
                                         <div className='flex gap-5 mb-2 items-center justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                <img className='w-6' src='/iconsNew/mindfulicon.webp' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                             </div>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                <img className='w-6' src='/iconsNew/mindfulicon.webp' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
                                             {/* <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
+                                                <img className='w-6' src='/iconsNew/mindfulicon.webp' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
                                             </div> */}
 
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <img className='w-6' src='/iconsNew/mindfulicon.webp' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>
@@ -97,21 +97,7 @@ const HomePage = ({ allSection }) => {
                                         <p className='  text-center text-[16px] text-black'>and various other conditions</p>
 
                                     </div>
-                                    {/* <div className='flex gap-3 justify-center mb-8'>
-                                        <div className='flex items-center gap-2'>
-                                            <img className='w-5' src='/home/Tick.png' /><span className='text-sm  text-gray-500 whitespace-nowrap font-semibold'>OCD</span>
-                                        </div>
-                                        <div className='flex items-center gap-2'>
-                                            <img className='w-5' src='/home/Tick.png' /><span className='text-sm  text-gray-500 whitespace-nowrap font-semibold'>Anxiety</span>
-                                        </div>
-                                        <div className='flex items-center gap-2'>
-                                            <img className='w-5' src='/home/Tick.png' /><span className='text-sm  text-gray-500 whitespace-nowrap font-semibold'>Depression</span>
-                                        </div>
-                                        <div className='flex items-center gap-2'>
-                                            <span className='text-sm  whitespace-nowrap text-gray-500 font-semibold'>{"& More..."}</span><img className='w-5 ' src='/home/mindfulIcon.png' />
-                                        </div>
-
-                                    </div> */}
+                                   
                                     <p className='mb-0 mt-5  text-[16px] px-6  text-center text-[#737373]'>With empathy and confidence,
                                         our professionals will guide you
                                         through every challenge. </p>
@@ -121,14 +107,7 @@ const HomePage = ({ allSection }) => {
                                 </div>
                             </div>
                             <div className='flex justify-center'>
-                                {/* <Link href={allSection?.heroSection?.button?.link}>
-                                    <button
-
-                                        className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 text-white text-sm font-semibold'
-                                    >
-                                        {allSection?.heroSection?.button?.text}
-                                    </button>
-                                </Link> */}
+                               
                                 <div className=''>
                                     <RequestAppointment name={"SCHEDULE CONSULTATION"} />
 

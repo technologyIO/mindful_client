@@ -73,19 +73,19 @@ const HomePage = ({ allSection }) => {
                                     <div className='mb-6'>
                                         <div className='flex gap-5 mb-2 items-center justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/iconsNew/mindfulicon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                <img className='w-6' src='/home/mindfulIcon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                             </div>
                                             <div className='flex'>
-                                                <img className='w-6' src='/iconsNew/mindfulicon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
                                             {/* <div className='flex'>
-                                                <img className='w-6' src='/iconsNew/mindfulicon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
+                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
                                             </div> */}
 
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/iconsNew/mindfulicon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>

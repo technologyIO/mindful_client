@@ -67,7 +67,7 @@ const HomePage = ({ allSection }) => {
                                 } */}
 
                                 {/* <div  dangerouslySetInnerHTML={{ __html: allSection?.heroSection?.para }}/> */}
-
+ 
                                 <div className='mb-5'>
                                     <p className='mb-2   text-[16px]  text-center text-[#545454]'>Get the best care from our experts. </p>
                                     <div className='mb-6'>

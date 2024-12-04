@@ -636,7 +636,334 @@ const allTest = [
     </p>
 </div>
 `
+    },
+    {
+        _id: 23,
+        name: "Does TMS help with Major Depressive Disorder (MDD)?",
+        icon: "/iconsNew/depression.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is an effective treatment for Major Depressive Disorder (MDD), especially in individuals who have not responded to traditional antidepressant medications. Clinical studies report response rates of approximately 50-60%, with remission rates around 30-40%.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 24,
+        name: "Does TMS help with Treatment-Resistant Depression?",
+        icon: "/iconsNew/resistance.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is particularly beneficial for treatment-resistant depression, offering relief to patients who have not found success with standard therapies. Approximately 50-60% of patients experience significant symptom improvement.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 25,
+        name: "Does TMS help with Obsessive-Compulsive Disorder (OCD)?",
+        icon: "/iconsNew/ocd.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS has been shown to reduce the severity of obsessive-compulsive symptoms by targeting brain regions involved in habit formation and impulse control. Clinical trials indicate symptom relief in 30-40% of patients.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 26,
+        name: "Does TMS help with Generalized Anxiety Disorder (GAD)?",
+        icon: "/iconsNew/anxiety.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, emerging research suggests that TMS can alleviate symptoms of Generalized Anxiety Disorder (GAD) by modulating neural circuits associated with stress responses. Around 40-50% of patients report symptom improvement.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 27,
+        name: "Does TMS help with PTSD?",
+        icon: "/iconsNew/ptsd.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                TMS may help reduce PTSD symptoms by targeting brain areas involved in fear and memory processing. Approximately 35-45% of patients experience a reduction in intrusive thoughts and hyperarousal symptoms.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 28,
+        name: "Does TMS help with Bipolar Disorder (Depressive Episodes)?",
+        icon: "/iconsNew/bipolar.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS can be effective in treating depressive episodes in individuals with Bipolar Disorder by enhancing mood-regulating brain activity. About 40-50% of patients experience symptom improvement.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 29,
+        name: "Does TMS help with Schizophrenia (Auditory Hallucinations)?",
+        icon: "/iconsNew/schizophrenia.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS has been shown to reduce auditory hallucinations in schizophrenia by targeting the temporoparietal cortex. Approximately 30-40% of patients report a significant decrease in hallucination frequency.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 30,
+        name: "Does TMS help with Attention-Deficit/Hyperactivity Disorder (ADHD)?",
+        icon: "/iconsNew/adhd.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, emerging studies suggest that TMS may improve attention and reduce hyperactivity symptoms in individuals with ADHD. Around 35-45% of patients experience noticeable improvements.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 31,
+        name: "Does TMS help with Social Anxiety Disorder?",
+        icon: "/iconsNew/social-anxiety.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS may alleviate symptoms of Social Anxiety Disorder by targeting brain regions involved in fear and social processing. Initial studies have shown that approximately 30-40% of individuals experience a reduction in anxiety symptoms following TMS treatment.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 32,
+        name: "Does TMS help with Anorexia Nervosa and Other Eating Disorders?",
+        icon: "/iconsNew/eating-disorders.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, preliminary research indicates that TMS can help reduce obsessive thoughts and improve mood in individuals with Anorexia Nervosa and other eating disorders by modulating neural circuits related to impulse control and body image. Response rates are promising but currently vary, with about 25-35% of patients showing significant improvement.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 33,
+        name: "Does TMS help with Addiction (Substance Use Disorders)?",
+        icon: "/iconsNew/addiction.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS has been explored as a treatment for various substance use disorders by targeting brain regions associated with cravings and impulse control. Studies report that roughly 30-40% of patients experience reduced cravings and improved abstinence rates following TMS therapy.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 34,
+        name: "Does TMS help with Autism Spectrum Disorder (ASD)?",
+        icon: "/iconsNew/asd.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, preliminary studies suggest that TMS may improve social, cognitive, and behavioral symptoms in individuals with Autism Spectrum Disorder (ASD) by enhancing neural connectivity and plasticity. However, evidence is still limited, with response rates around 20-30%, and further research is necessary.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 35,
+        name: "Does TMS help with Migraine with Aura?",
+        icon: "/iconsNew/migraine.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS can help reduce the frequency and intensity of migraine attacks with aura by targeting the occipital cortex to interrupt migraine pathways. Clinical trials have shown that up to 58% of patients experience relief from migraine symptoms following TMS treatment.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 36,
+        name: "Does TMS help with Chronic Pain?",
+        icon: "/iconsNew/chronic-pain.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is used to manage various chronic pain conditions, including fibromyalgia and neuropathic pain, by modulating pain-processing brain regions. Efficacy varies by condition, with approximately 30-50% of patients reporting significant pain relief. Outcomes can depend on the specific pain disorder and TMS protocol used.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 37,
+        name: "Does TMS help with Tinnitus?",
+        icon: "/iconsNew/tinnitus.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS has been investigated as a treatment for tinnitus by targeting the auditory cortex to reduce the perception of ringing in the ears. Studies show that around 25-35% of tinnitus patients experience a noticeable decrease in symptoms following TMS therapy.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 38,
+        name: "Does TMS help with Parkinson's Disease?",
+        icon: "/iconsNew/parkinsons.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, preliminary research suggests that TMS may improve motor symptoms and cognitive functions in Parkinson's Disease by stimulating motor and prefrontal regions. Response rates vary, with approximately 30-40% of patients experiencing improvement.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 39,
+        name: "Does TMS help with Stroke Rehabilitation?",
+        icon: "/iconsNew/stroke-rehabilitation.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is used in stroke rehabilitation to enhance neuroplasticity and improve motor and cognitive recovery by stimulating affected brain areas. Clinical studies report that about 35-45% of stroke patients show significant functional improvements following TMS therapy.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 40,
+        name: "Does TMS help with Alzheimer’s Disease and Other Dementias?",
+        icon: "/iconsNew/alzheimers-dementia.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, early research explores TMS for enhancing cognitive functions and slowing cognitive decline in Alzheimer’s Disease and other dementias by targeting memory-related brain regions. Preliminary studies indicate that up to 30% of patients may experience cognitive improvements, though evidence remains limited and more research is needed.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 41,
+        name: "Does TMS help with Traumatic Brain Injury (TBI)?",
+        icon: "/iconsNew/tbi.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is being investigated for improving cognitive and motor functions post-Traumatic Brain Injury (TBI) by promoting neural plasticity. Initial studies suggest that approximately 30-40% of TBI patients benefit from enhanced cognitive performance and motor recovery following TMS treatment.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 42,
+        name: "Does TMS help with Multiple Sclerosis (MS)?",
+        icon: "/iconsNew/ms.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS is explored as a treatment for managing symptoms of Multiple Sclerosis (MS), such as fatigue, pain, and spasticity, by modulating neural activity in affected brain regions. Response rates vary, with about 25-40% of MS patients experiencing symptom relief from TMS therapy.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 43,
+        name: "Does TMS help with Huntington’s Disease?",
+        icon: "/iconsNew/huntingtons-disease.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, investigational studies suggest that TMS may help manage motor symptoms and improve cognitive function in Huntington’s Disease by stimulating relevant brain areas. Early research indicates that around 20-30% of patients may experience symptom improvements, though more comprehensive trials are needed.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 44,
+        name: "Does TMS help with Tourette’s Syndrome?",
+        icon: "/iconsNew/tourettes.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, TMS has shown potential in reducing the frequency and severity of tics in individuals with Tourette’s Syndrome by targeting motor and prefrontal regions. Studies report that approximately 30-40% of patients experience a decrease in tic symptoms following TMS treatment.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 45,
+        name: "Does TMS help with Restless Legs Syndrome (RLS)?",
+        icon: "/iconsNew/rls.png",
+        detail: `
+        <div class="text-gray-700 text-sm space-y-4">
+            <p>
+                Yes, limited studies suggest that TMS may alleviate symptoms of Restless Legs Syndrome (RLS) by stimulating sensory and motor pathways in the brain. Preliminary findings indicate that around 25-35% of RLS patients experience symptom relief, though further research is necessary to confirm efficacy.
+            </p>
+        </div>
+        `
+    },
+    {
+        _id: 46,
+        name: "For which conditions does TMS help?",
+        icon: "/iconsNew/rls.png",
+        detail: `<div class="text-gray-700 text-sm space-y-6">
+  <!-- Psychological Conditions -->
+  <div>
+    <h2 class="font-semibold text-lg mb-2">Psychological Conditions</h2>
+    <ol class="list-decimal pl-6 space-y-1">
+      <li>Major Depressive Disorder (MDD)</li>
+      <li>Treatment-Resistant Depression</li>
+      <li>Obsessive-Compulsive Disorder (OCD)</li>
+      <li>Generalized Anxiety Disorder (GAD)</li>
+      <li>Post-Traumatic Stress Disorder (PTSD)</li>
+      <li>Bipolar Disorder (Depressive Episodes)</li>
+      <li>Schizophrenia (Auditory Hallucinations)</li>
+      <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
+      <li>Social Anxiety Disorder</li>
+      <li>Anorexia Nervosa and Other Eating Disorders</li>
+      <li>Addiction (Substance Use Disorders)</li>
+      <li>Autism Spectrum Disorder (ASD)</li>
+    </ol>
+  </div>
+
+  <!-- Neurological Conditions -->
+  <div>
+    <h2 class="font-semibold text-lg mb-2">Neurological Conditions</h2>
+    <ol class="list-decimal pl-6 space-y-1">
+      <li>Migraine with Aura</li>
+      <li>Chronic Pain</li>
+      <li>Tinnitus</li>
+      <li>Parkinson’s Disease</li>
+      <li>Stroke Rehabilitation</li>
+      <li>Alzheimer’s Disease and Other Dementias</li>
+      <li>Traumatic Brain Injury (TBI)</li>
+      <li>Multiple Sclerosis (MS)</li>
+      <li>Huntington’s Disease</li>
+      <li>Tourette’s Syndrome</li>
+      <li>Restless Legs Syndrome (RLS)</li>
+    </ol>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm italic">
+    While some treatments with specific machines are FDA approved, treatments for some conditions are still under investigation/clinical research. However, these have shown positive results.
+  </p>
+</div>
+
+        `
     }
+
 ];
 
 

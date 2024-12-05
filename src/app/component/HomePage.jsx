@@ -179,7 +179,7 @@ const HomePage = ({ allSection }) => {
                         {/* hide this on medium and show alternate */}
                         <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                             <div className=''>
-                                <img className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733290489084-tms-illustration.webp"} />
+                                <img className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"} />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section3?.box?.para }} /> */}
@@ -390,7 +390,7 @@ const HomePage = ({ allSection }) => {
                                 {/* left image */}
                                 <div className="md">
                                     <img
-                                        src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733290489084-tms-illustration.webp"
+                                        src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"
                                         alt="TMS Treatment"
                                         width={600}
                                         height={400}

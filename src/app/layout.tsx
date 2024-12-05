@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src={`https://www.googletagmanager.com/gtm.js?id=GTM-5HDDPXG`}
         ></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             gtag('config', 'AW-11458426933');
                         `,
                     }}
-                />
+                /> */}
       </head>
       <body className={inter.className}>
         <noscript>

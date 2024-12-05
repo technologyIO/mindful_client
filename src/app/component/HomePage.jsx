@@ -1,16 +1,24 @@
 import React from 'react'
 import Link from 'next/link';
 // import VideoComponent from './VideoComponent'
-import NewComponent from './newComponent';
-import CounterComponent from './CounterComponent';
-import { Container } from '@mui/material';
-import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
-import TestimonialComponent from './TestimonialComponent';
-import TestimonialComponentSlide from './TestimonialComponentSlide';
-import TestimonialComponents2 from './TestimonialComponents2';
-import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+// import NewComponent from './newComponent';
+import  Container  from '@mui/material/Container';
+import dynamic from 'next/dynamic';
+// import TestimonialComponent from './TestimonialComponent';
+// import TestimonialComponents2 from './TestimonialComponents2';
 // import Image from 'next/image';
 // import Footer from '@/components/Footer'
+import TestimonialComponentSlide from './TestimonialComponentSlide';
+import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
+import CounterComponent from './CounterComponent';
+import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+
+// Dynamically import non-critical components with SSR enabled
+// const CounterComponent = dynamic(() => import('./CounterComponent'));
+// const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'));
+// const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'));
+// const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'));
+
 
 
 const servicesIcon = [

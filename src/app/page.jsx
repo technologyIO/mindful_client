@@ -2,7 +2,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import HomePage from '@/app/component/HomePage'
+import dynamic from 'next/dynamic'
+const HomePage = dynamic(() => import('@/app/component/HomePage'))
 import axios from 'axios';
 import {HomePageSections} from "@/example"
 

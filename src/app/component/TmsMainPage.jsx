@@ -93,7 +93,7 @@ const TmsMainPage = () => {
                 <div className="min-h-screen">
                     <div className="">
                         <div>
-                            <img className='w-full' src='https://mindfultms1.s3.amazonaws.com/mindfultms1.jpg' />
+                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
@@ -261,7 +261,7 @@ const TmsMainPage = () => {
                 <div className="min-h-screen">
                     <div className="">
                         <div className='h-[550px]'>
-                            <img className='w-full h-full object-cover' src='https://mindfultms1.s3.amazonaws.com/mindfultms1.jpg' />
+                            <img className='w-full h-full object-cover' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
@@ -273,12 +273,12 @@ const TmsMainPage = () => {
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <p className='text-gray-600 text-xl w-2/3'>Transcranial Magnetic Stimulation (TMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions.  </p>
                                     <div className="py-5 md:h-[360px]">
-                                        <img src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-cover h-full" />
+                                        <img src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-contain h-full" />
                                     </div>
                                 </div>
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <img src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-cover h-full" />
+                                        <img src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
                                         <p className="text-gray-700 text-xl text-center mb-2">

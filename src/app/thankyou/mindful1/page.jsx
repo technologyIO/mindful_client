@@ -1,10 +1,25 @@
 import { Container } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
-
+import Head from 'next/head'
 const ThankYouPage = () => {
     return (
-       <Container maxWidth="lg bg-primary-div h-screen">
+      <>
+      <Head>
+ {/* Google Tag Manager */}
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'AW-11458426933');
+                        `,
+                    }}
+                />
+      </Head>
+         <Container maxWidth="lg bg-primary-div h-screen">
          <div className=" flex flex-col items-center  justify-center h-full ">
             <div className=" rounded-lg pb-[50px]    w-full text-center">
                 <div className="mb-2">
@@ -39,6 +54,7 @@ const ThankYouPage = () => {
             </div>
         </div>
        </Container>
+      </>
     )
 }
 

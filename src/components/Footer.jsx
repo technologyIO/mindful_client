@@ -5,39 +5,44 @@ import Image from 'next/image';
 import { Dialog, DialogContent, DialogTitle, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import axios from 'axios';
 import Link from 'next/link';
+import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment';
+import RequestAppointmentGeneral from '@/app/clinicLocation/[city]/RequestAppointmentGeneral';
 const locations = [
   {
-    name: "Aster CMI",
+    name: "Aster CMI",    
+    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc",
     area: "Bangalore North",
     bgColor: "bg-primary-orange",
     location: "Banglore Aster CMI",
     redirect: "Bengaluru-Hebbal",
     whatsapp: +919663095632,
     call: +919663095632,
-    officeOpen:10, 
-    officeClose:18,
+    officeOpen: 10,
+    officeClose: 18,
   },
   {
-    name: "Whitefield",
+    name: "Whitefield",    
+    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ",
     area: "Bangalore North",
     bgColor: "bg-[#F8A51C]",
     location: "Banglore Whitefield",
     redirect: "Bengaluru-Whitefield",
     whatsapp: +919663095632,
     call: +919663095632,
-    officeOpen:10, 
-    officeClose:18,
+    officeOpen: 10,
+    officeClose: 18,
   },
   {
-    name: "Greater Kailash 1",
+    name: "Greater Kailash 1",    
+    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4",
     area: "Delhi",
-    bgColor: "bg-primary-orange",    
+    bgColor: "bg-primary-orange",
     redirect: "New-Delhi",
     location: "Delhi",
     whatsapp: +919663095632,
     call: +919663095632,
-    officeOpen:10, 
-    officeClose:18,
+    officeOpen: 10,
+    officeClose: 18,
   }
 ];
 
@@ -69,7 +74,7 @@ function Footer() {
   //         return item.details;
   //       });
   //       setLocations(details)
-        
+
   //       console.log('details', res?.data)
   //     }).catch(err => console.log(err))
   // }
@@ -348,42 +353,45 @@ function Footer() {
           </Link>
 
           {/* Call Us Section */}
-       {!shouldHideFooter&&   <div className='mb-8'>
+          {!shouldHideFooter && <div className='mb-8'>
 
             <div className='p-4 flex items-center overflow-x-scroll gap-4 md:justify-center'>
               {locations.map((location, index) => (
                 <div key={index} style={{ backgroundColor: location.bgColor }} className={`${location?.bgColor} py-3 px-3 rounded-lg shadow-lg  select-none min-w-[270px]`}>
-                <div className='flex flex-col justify-center items-center text-white mb-2'>
+                  <div className='flex flex-col justify-center items-center text-white mb-2'>
                     <h1 className='text-2xl font-semibold'>{location.area}</h1>
                     <p className='font-semibold text-sm'>{location.name}</p>
                   </div>
                   <div className='flex justify-center gap-6 mb-5'>
-                    <div className='w-[48px] cursor-pointer' onClick={() => cardClick(location)}>
-                      <Image src='/home/whatsapp2.svg' width={100} height={100} alt="WhatsApp" />
-                      {/* <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="-0.61 -0.61 31.89 31.89" space="preserve" stroke="#00a313" stroke-width="0.00030667000000000004" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.368004"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"></path> </g> </g></svg> */}
-
-                    </div>
                     <div className='w-[48px] cursor-pointer'>
+                    <RequestAppointmentGeneral iframeSrc={location.iframeSrc}>
+
+                      <Image src='/home/whatsapp2.svg' width={100} height={100} alt="WhatsApp" />
+                    </RequestAppointmentGeneral>
+                      {/* <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="-0.61 -0.61 31.89 31.89" space="preserve" stroke="#00a313" stroke-width="0.00030667000000000004" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.368004"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"></path> </g> </g></svg> */}
+                      {/* <RequestAppointment  icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={`adasds`} name=""/> */}
+                    </div>
+                    {/* <div className='w-[48px] cursor-pointer'>
                       <a href={`tel:${location?.call}`}>
                         <img src='/home/call1.svg' width={100} height={100} alt='Call' />
                       </a>
-                    </div>
+                    </div> */}
 
                   </div>
-                
+
                   <div className='flex justify-center '>
-                   <button onClick={()=>router.push(`/clinicLocation/${location?.redirect}`)} className='text-orange-500 border-2 border-white bg-white flex gap-3 items-center px-4 py-2 rounded-lg hover:opacity-90 shadow-lg hover:shadow-none'>
-                   Learn More 
-                   <svg xmlns="http://www.w3.org/2000/svg" fill='orange' width="24" height="24" viewBox="0 0 24 24"><g data-name="Circle kanan"><path d="M12 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1-10 10zm0-18a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8z" /><path d="M11 16a1 1 0 0 1-.707-1.707L12.586 12l-2.293-2.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3A1 1 0 0 1 11 16z" /></g></svg>
-                   </button>
+                    <button onClick={() => router.push(`/clinicLocation/${location?.redirect}`)} className='text-orange-500 border-2 border-white bg-white flex gap-3 items-center px-4 py-2 rounded-lg hover:opacity-90 shadow-lg hover:shadow-none'>
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" fill='orange' width="24" height="24" viewBox="0 0 24 24"><g data-name="Circle kanan"><path d="M12 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1-10 10zm0-18a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8z" /><path d="M11 16a1 1 0 0 1-.707-1.707L12.586 12l-2.293-2.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3A1 1 0 0 1 11 16z" /></g></svg>
+                    </button>
                   </div>
                 </div>
-                
+
               ))}
             </div>
-            
+
           </div>}
-          
+
 
           {/* WhatsApp Us Section */}
 
@@ -505,7 +513,7 @@ function Footer() {
           </div>
 
           {/* Call Us Section */}
-       { !shouldHideFooter&&  <div className='mb-8'>
+          {!shouldHideFooter && <div className='mb-8'>
 
             <div className='p-4 flex items-center overflow-x-scroll gap-4 md:justify-center'>
               {locations.map((location, index) => (
@@ -516,23 +524,22 @@ function Footer() {
                     <p className='font-semibold text-sm'>{location.name}</p>
                   </div>
                   <div className='flex justify-center gap-6 mb-3'>
-                    <div className='w-[48px] cursor-pointer' onClick={() => cardClick(location)}>
+                    <div className='w-[48px] cursor-pointer' >
+                    <RequestAppointmentGeneral iframeSrc={location?.iframeSrc}>
+
                       <Image src='/home/whatsapp2.svg' width={100} height={100} alt="WhatsApp" />
+                    </RequestAppointmentGeneral>
                       {/* <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="-0.61 -0.61 31.89 31.89" space="preserve" stroke="#00a313" stroke-width="0.00030667000000000004" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.368004"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"></path> </g> </g></svg> */}
 
                     </div>
-                    <div className='w-[48px] cursor-pointer'>
-                      <a href={`tel:${location?.call}`}>
-                        <img src='/home/call1.svg' width={100} height={100} alt='Call' />
-                      </a>
-                    </div>
+                    
 
                   </div>
                   <div className='flex justify-center '>
-                   <button onClick={()=>router.push(`/clinicLocation/${location?.redirect}`)} className='text-white border-2 border-white flex gap-3 items-center px-4 py-2 rounded-lg hover:opacity-90 shadow-lg hover:shadow-none'>
-                   Learn More 
-                   <svg xmlns="http://www.w3.org/2000/svg" fill='white' width="24" height="24" viewBox="0 0 24 24"><g data-name="Circle kanan"><path d="M12 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1-10 10zm0-18a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8z" /><path d="M11 16a1 1 0 0 1-.707-1.707L12.586 12l-2.293-2.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3A1 1 0 0 1 11 16z" /></g></svg>
-                   </button>
+                    <button onClick={() => router.push(`/clinicLocation/${location?.redirect}`)} className='text-white border-2 border-white flex gap-3 items-center px-4 py-2 rounded-lg hover:opacity-90 shadow-lg hover:shadow-none'>
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" fill='white' width="24" height="24" viewBox="0 0 24 24"><g data-name="Circle kanan"><path d="M12 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1-10 10zm0-18a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8z" /><path d="M11 16a1 1 0 0 1-.707-1.707L12.586 12l-2.293-2.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3A1 1 0 0 1 11 16z" /></g></svg>
+                    </button>
                   </div>
                 </div>
               ))}
@@ -643,7 +650,7 @@ function Footer() {
       </>
     )
   }
-  return ( 
+  return (
     <footer className="py-6 footer-gradient">
       <div className='hidden md:block'>
         <DesktopFooter />

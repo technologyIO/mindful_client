@@ -15,9 +15,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  const noFooterPaths = ["/admin", "/assesment", "/thankyou"];
-  const noNavbarPaths = ["/ads"];
-  const zeroNav = ["/thankyou"];
+  const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth"];
+  const noNavbarPaths = ["/ads", "/auth"];
+  const zeroNav = ["/thankyou ,"];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
   const shouldHideNavbar = noNavbarPaths.some((path) => pathname.startsWith(path));
   const hideZeroNavbar = zeroNav.some((path) => pathname.startsWith(path));

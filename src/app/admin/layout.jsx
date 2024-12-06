@@ -1,12 +1,24 @@
 "use client";
 import { Breadcrumbs, Container } from "@mui/material";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function AdminLayout({ children }) {
     const pathname = usePathname();
     const pathnames = pathname.split("/").filter((x) => x);
-
+    const router = useRouter();
+    // const token = localStorage.getItem('token');
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const token = localStorage.getItem('token');
+            
+            // If no token is found, redirect the user to the login page
+            if (!token) {
+              router.push('/auth/login');
+            }
+          }
+      }, [pathname]);
     return (
 
         <div className="about-layout">

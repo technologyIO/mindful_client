@@ -26,8 +26,9 @@ const TakeAssessment = ({ allSection }) => {
     ]
     return (
         <>
-            <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8">
-                <div className="max-w-4xl mx-auto">
+          <Container maxWidth="xl">
+          <div className="min-h-screen  p-4 sm:p-6 h-screen lg:p-8">
+                <div className=" mx-auto h-full">
                     <div className="bg-primary-div rounded-t-lg p-6 mb-6">
                         <h1 className="text-3xl font-bold text-primary-orange mb-2">Take a Self-Assessment</h1>
                         <p className="text-primary-orange text-opacity-90">
@@ -36,11 +37,11 @@ const TakeAssessment = ({ allSection }) => {
                         </p>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div className="bg-white rounded-lg  p-6 mb-6">
                         <h2 className="text-2xl font-semibold mb-4">Available Tests</h2>
                         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {testsList.map((test, index) => (
-                                <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                                <div key={index} className="bg-white rounded-lg  shadow-lg hover:shadow-lg transition-shadow duration-300">
                                     <div className="p-6">
                                         <h3 className="text-lg font-semibold mb-2">{test.title}</h3>
                                         <p className="text-gray-600 mb-4">{test.description}</p>
@@ -73,6 +74,7 @@ const TakeAssessment = ({ allSection }) => {
                     </div> */}
                 </div>
             </div>
+          </Container>
         </>
     )
 }

@@ -173,17 +173,17 @@ const Test = () => {
         <h1 className="text-xl font-semibold ">{test.title}</h1>
       </div>
 
-      <div className="p-4 max-w-md mx-auto">
+      <div className="p-4  mx-auto">
         <h2 className="font-semibold mb-4 text-primary-orange">
           Please select the answer that is applicable to you
         </h2>
 
         {questions?.map((question, index) => (
           <div className="mb-6" key={question._id}>
-            <p className="mb-2">{index + 1}. {question.questionText}</p>
+            <p className="mb-2 md:text-2xl font-semibold">{index + 1}. {question.questionText}</p>
             <div className="ml-4">
               {question.choices.map((choice, choiceIndex) => (
-                <label className="flex items-center mb-2" key={choiceIndex}>
+                <label className="flex md:text-xl items-center mb-2" key={choiceIndex}>
                   <input
                     type="radio"
                     name={`question-${question._id}`}

@@ -57,20 +57,20 @@ const percentage = Math.min((score / maxScore) * 100, 100); // Clamp percentage 
 
   return (
     <Container maxWidth="lg">
-      <div className="flex flex-col items-center gap-6 mt-10">
+      <div className="flex flex-col items-center justify-center h-[60vh] gap-6 mt-10">
         {/* Animated Gauge Chart */}
         <AnimatedMeter value={percentage} />
 
         {/* Score Display */}
         <div className="text-center">
-          <p className="text-primary-orange text-lg font-semibold">Your score is</p>
+          <p className="text-primary-orange text-lg md:text-2xl font-semibold">Your score is</p>
           <p className="text-5xl font-bold mt-2">{score}</p>
-          <p className="text-lg text-gray-700 mt-4 font-semibold">{label}</p>
-          <p className="text-sm text-gray-500 mt-2">{message}</p>
+          <p className="text-lg text-gray-700 mt-4 font-semibold md:text-2xl">{label}</p>
+          <p className="text-sm text-gray-500 mt-2 md:text-xl">{message}</p>
         </div>
 
         {/* Additional Elements */}
-        <div className="flex flex-col items-center gap-4">
+        {/* <div className="flex flex-col items-center gap-4">
           <p className="font-semibold">Get a detailed report</p>
           <input
             type="text"
@@ -80,7 +80,7 @@ const percentage = Math.min((score / maxScore) * 100, 100); // Clamp percentage 
           <button className="bg-primary-orange text-white font-semibold px-6 py-2 rounded-lg">
             GET OTP
           </button>
-        </div>
+        </div> */}
       </div>
     </Container>
   );

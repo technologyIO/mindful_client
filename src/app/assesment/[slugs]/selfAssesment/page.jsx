@@ -49,28 +49,9 @@ const SelfAssesment = () => {
     const [isChecked, setChecked] = useState(false);
 
     return (
-        <div>
-            {/* <div className="flex p-6 items-center">
-        <div className="mr" onClick={() => router.back()}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="26"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </div>
-        <div>
-          <h1 className="text-2xl font-semibold">Self-Assessment</h1>
-        </div>
-      </div> */}
-            <div className=" flex items-center justify-center bg-gray-100 px-2 py-2">
+        <Container maxWidth="xl">
+          
+            <div className=" flex items-center justify-center 100 px-2 py-2">
                 <div className="bg-white p-2  rounded-lg w-full">
                     <h1 className="text-2xl font-bold mb-6">Test Instructions:</h1>
 
@@ -98,8 +79,8 @@ const SelfAssesment = () => {
                     </p>
                 </div>
             </div>
-            <div className=" flex items-center justify-center bg-gray-100 p-2">
-                <div className="bg-white p-2 md:p-8  rounded-lg max-w-xl w-full">
+            <div className=" flex items-center justify-center  p-2">
+                <div className="bg-white p-2 md:p-8  rounded-lg  w-full">
                     <h1 className="text-2xl font-bold mb-4 text-orange-500 md:mb-6">Disclaimer</h1>
 
                     <h2 className="text-lg font-semibold mb-3 md:mb-4">Important Notice</h2>
@@ -131,7 +112,7 @@ const SelfAssesment = () => {
             </div>
 
          
-        </div>
+        </Container>
     );
 };
 

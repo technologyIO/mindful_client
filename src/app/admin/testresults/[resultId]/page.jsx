@@ -37,6 +37,7 @@ const ViewResult = ({ params }) => {
                 <div className=" ">
             <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">{testResult?.testId?.testName} Test Result</h1>
             <div className="bg-white shadow-lg rounded-lg p-6 mb-8 mx-auto">
+                <p className="text-lg mb-3"><span className="font-semibold text-gray-700">Name:</span> <span className="text-gray-600 capitalize">{testResult?.name}</span></p>
                 <p className="text-lg mb-3"><span className="font-semibold text-gray-700">Email:</span> <span className="text-gray-600">{testResult?.email}</span></p>
                 <p className="text-lg mb-3"><span className="font-semibold text-gray-700">Total Score:</span> <span className="text-gray-600">{testResult?.totalScore}</span></p>
                 {/* <p className="text-lg mb-3"><span className="font-semibold text-gray-700">Interpretation:</span> <span className="text-blue-600 font-medium">{getInterpretation(testResult?.totalScore)}</span></p> */}

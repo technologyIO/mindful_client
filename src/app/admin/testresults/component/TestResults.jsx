@@ -99,7 +99,9 @@ const TestResults = () => {
             <table className="min-w-full bg-white border border-gray-300">
               <thead>
                 <tr className="bg-gray-100">
+                <th className="py-2 px-4 border-b text-left">Name</th>
                   <th className="py-2 px-4 border-b text-left">Email ID</th>
+                  <th className="py-2 px-4 border-b text-left">Phone</th>
                   <th className="py-2 px-4 border-b text-left">Test Name</th>
                   <th className="py-2 px-4 border-b text-left">Total Score</th>
                   <th className="py-2 px-4 border-b text-left">View Result</th>
@@ -108,7 +110,9 @@ const TestResults = () => {
               <tbody>
                 {filteredResults.map((result) => (
                   <tr key={result._id} className="hover:bg-gray-50">
+                  <td className="py-2 px-4 border-b">{result.name}</td>
                     <td className="py-2 px-4 border-b">{result.email}</td>
+                    <td className="py-2 px-4 border-b">{result.phone}</td>
                     <td className="py-2 px-4 border-b">{result.testId.testName}</td>
                     <td className="py-2 px-4 border-b">{result.totalScore}</td>
                     <td className="py-2 px-4 border-b">

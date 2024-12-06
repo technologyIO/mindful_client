@@ -223,6 +223,15 @@ const Test = () => {
     handleEmailSubmit();
   }}
 >
+
+<input
+    type="text"
+    placeholder="Enter your name"
+    value={formData.name}
+    onChange={(e) => handleFormDataChange('name', e.target.value)}
+    className={`border-2  p-2 rounded-lg w-full mb-4`}
+    required
+  />
   <input
     type="email"
     placeholder="Enter your email"

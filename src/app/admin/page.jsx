@@ -10,6 +10,11 @@ const pages = [
     // disable: true,
   },
   {
+    name: 'Test Results',
+    slug: 'testresults',
+    // disable: true,
+  },
+  {
     name: 'Doctors ',
     slug: 'doctors'
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from '@mui/material';
+import { CircularProgress, Container } from '@mui/material';
 import axios from 'axios';
 import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
@@ -55,6 +55,7 @@ const Test = () => {
   const [userEmail, setUserEmail] = useState('');
   const test = tests.find(t => t.id === slugs);
 
+  const [loader, setLoader] = useState(false);
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
@@ -101,7 +102,7 @@ const Test = () => {
   
   // Function to handle email and phone submission
   const handleEmailSubmit = async () => {
-    closeModal(); // Close the modal after email input
+    setLoader(true);
     try {
       const payload = {
         ...formData,
@@ -117,6 +118,9 @@ const Test = () => {
         payload
       );
   
+      // setLoader(false);
+      // closeModal(); // Close the modal after email input
+      // setIsModalOpen(false);
       setTotalScore(response.data.totalScore);
       router.push(
         `/assesment/${slugs}/result?score=${response.data.totalScore}&test=${test.condition}&email=${encodeURIComponent(
@@ -124,6 +128,7 @@ const Test = () => {
         )}&phone=${formData.phone}`
       );
     } catch (error) {
+      setLoader(false);
       console.error('Error submitting answers:', error);
     }
   };
@@ -180,10 +185,10 @@ const Test = () => {
 
         {questions?.map((question, index) => (
           <div className="mb-6" key={question._id}>
-            <p className="mb-2 md:text-2xl font-semibold">{index + 1}. {question.questionText}</p>
+            <p className="mb-2 md:text-xl font-semibold">{index + 1}. {question.questionText}</p>
             <div className="ml-4">
               {question.choices.map((choice, choiceIndex) => (
-                <label className="flex md:text-xl items-center mb-2" key={choiceIndex}>
+                <label className="flex md:text-lg items-center mb-2" key={choiceIndex}>
                   <input
                     type="radio"
                     name={`question-${question._id}`}
@@ -232,19 +237,7 @@ const Test = () => {
     className={`border-2  p-2 rounded-lg w-full mb-4`}
     required
   />
-  <input
-    type="email"
-    placeholder="Enter your email"
-    value={formData.email}
-    onChange={(e) => handleFormDataChange('email', e.target.value)}
-    className={`border-2 ${
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) ? 'border-gray-300' : 'border-red-500'
-    } p-2 rounded-lg w-full mb-4`}
-    required
-  />
-  {formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) && (
-    <p className="text-red-500 text-sm mb-4">Please enter a valid email address.</p>
-  )}
+  
 
   <input
     type="number"
@@ -265,7 +258,9 @@ const Test = () => {
       Cancel
     </button>
     <button type="submit" className="bg-primary-orange text-white py-2 px-4 rounded-lg">
-      Submit
+  {loader ? <div className='flex justify-center'>
+    <CircularProgress color="inherit" size={20} />
+  </div>: 'Submit'}
     </button>
   </div>
 </form>

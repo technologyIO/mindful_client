@@ -91,7 +91,7 @@ const Test = () => {
     email: '',
     phone: '',
   });
-  
+
   // Function to handle form data changes
   const handleFormDataChange = (field, value) => {
     setFormData((prev) => ({
@@ -99,7 +99,7 @@ const Test = () => {
       [field]: value,
     }));
   };
-  
+
   // Function to handle email and phone submission
   const handleEmailSubmit = async () => {
     setLoader(true);
@@ -112,21 +112,21 @@ const Test = () => {
           selectedChoiceIndex: answers[questionId],
         })),
       };
-  
+
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}tests/submitTest`,
         payload
       );
-  
+      openModal()
       // setLoader(false);
       // closeModal(); // Close the modal after email input
       // setIsModalOpen(false);
       setTotalScore(response.data.totalScore);
-      router.push(
-        `/assesment/${slugs}/result?score=${response.data.totalScore}&test=${test.condition}&email=${encodeURIComponent(
-          formData.email
-        )}&phone=${formData.phone}`
-      );
+      // router.push(
+      //   `/assesment/${slugs}/result?score=${response.data.totalScore}&test=${test.condition}&email=${encodeURIComponent(
+      //     formData.email
+      //   )}&phone=${formData.phone}`
+      // );
     } catch (error) {
       setLoader(false);
       console.error('Error submitting answers:', error);
@@ -204,7 +204,7 @@ const Test = () => {
 
         <div className="flex justify-center mb-6">
           <button
-            onClick={openModal}
+            onClick={handleEmailSubmit}
             className="bg-primary-orange text-white py-3 px-14 rounded-lg font-semibold"
           >
             SUBMIT
@@ -213,60 +213,77 @@ const Test = () => {
 
         {/* Modal for Email Input */}
         {isModalOpen && (
-  <div
-    className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
-    onClick={closeModal} // Close modal when clicking on the overlay
-  >
-    <div
-      className="bg-white p-6 rounded-lg shadow-lg mx-4 w-96"
-      onClick={(e) => e.stopPropagation()} // Prevent click from propagating to overlay
-    >
-      <h2 className="text-lg font-semibold mb-4">Enter Your Details</h2>
-      <form
-  onSubmit={(e) => {
-    e.preventDefault();
-    handleEmailSubmit();
-  }}
->
+          <>
+            <div
+            className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
+            onClick={closeModal} // Close modal when clicking on the overlay
+          >
+            <div
+              className="bg-white p-6 rounded-lg shadow-lg mx-4 w-96"
+              onClick={(e) => e.stopPropagation()} // Prevent click from propagating to overlay
+            >
+              {/* <h2 className="text-lg font-semibold mb-4">Enter Your Details</h2>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleEmailSubmit();
+                }}
+              >
 
-<input
-    type="text"
-    placeholder="Enter your name"
-    value={formData.name}
-    onChange={(e) => handleFormDataChange('name', e.target.value)}
-    className={`border-2  p-2 rounded-lg w-full mb-4`}
-    required
-  />
-  
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={(e) => handleFormDataChange('name', e.target.value)}
+                  className={`border-2  p-2 rounded-lg w-full mb-4`}
+                  required
+                />
 
-  <input
-    type="number"
-    placeholder="Enter your phone number"
-    value={formData.phone}
-    onChange={(e) => handleFormDataChange('phone', e.target.value)}
-    className={`border-2 ${
-      /^\d{10}$/.test(formData.phone) ? 'border-gray-300' : 'border-red-500'
-    } p-2 rounded-lg w-full mb-4`}
-    required
-  />
-  {formData.phone && !/^\d{10}$/.test(formData.phone) && (
-    <p className="text-red-500 text-sm mb-4">Please enter a valid 10-digit phone number.</p>
-  )}
 
-  <div className="flex justify-end">
-    <button type="button" onClick={closeModal} className="mr-2 text-gray-500">
-      Cancel
-    </button>
-    <button type="submit" className="bg-primary-orange text-white py-2 px-4 rounded-lg">
-  {loader ? <div className='flex justify-center'>
-    <CircularProgress color="inherit" size={20} />
-  </div>: 'Submit'}
-    </button>
-  </div>
-</form>
+                <input
+                  type="number"
+                  placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={(e) => handleFormDataChange('phone', e.target.value)}
+                  className={`border-2 ${/^\d{10}$/.test(formData.phone) ? 'border-gray-300' : 'border-red-500'
+                    } p-2 rounded-lg w-full mb-4`}
+                  required
+                />
+                {formData.phone && !/^\d{10}$/.test(formData.phone) && (
+                  <p className="text-red-500 text-sm mb-4">Please enter a valid 10-digit phone number.</p>
+                )}
+
+                <div className="flex justify-end">
+                  <button type="button" onClick={closeModal} className="mr-2 text-gray-500">
+                    Cancel
+                  </button>
+                  <button type="submit" className="bg-primary-orange text-white py-2 px-4 rounded-lg">
+                    {loader ? <div className='flex justify-center'>
+                      <CircularProgress color="inherit" size={20} />
+                    </div> : 'Submit'}
+                  </button>
+                </div>
+              </form> */}
+              <div style={{ width: "100%", height: "500px" }}>
+      <iframe
+        aria-label="Self-Assessment Test"
+        frameBorder="0"
+        style={{
+          height: "100%",
+          width: "100%",
+          border: "none",
+        }}
+        src={`https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTest/formperma/wQFLTUbc4MiqMDLoRnkr6NrkITyrOhdYn7ezRkLSFjk?source=Website%20(Self%20Assessment)&test=${test.condition}&score=${totalScore}`}
+      ></iframe>
     </div>
-  </div>
-)}
+            </div>
+          </div>
+          
+
+          </>
+       
+          
+        )}
 
       </div>
     </Container>

@@ -54,7 +54,7 @@ const Test = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const test = tests.find(t => t.id === slugs);
-
+console.log(test)
   const [loader, setLoader] = useState(false);
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -156,6 +156,14 @@ const Test = () => {
       window.removeEventListener("popstate", handleBackButton);
     };
   }, [isModalOpen]);
+  
+  
+
+  const conditionIframe = {
+    "Anxiety": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestAnxiety/formperma/Cv0aOlyHjS1THflfwBSEEEGidbLVKykg4btlwXwrp0k?source=Website%20(Self%20Assessment)&test=Anxiety&score=${totalScore}`,
+    "Depression": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTest/formperma/wQFLTUbc4MiqMDLoRnkr6NrkITyrOhdYn7ezRkLSFjk?source=Website%20(Self%20Assessment)&test=Depression&score=${totalScore}`,
+    "Stress": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestStress/formperma/nsBzSHgvrxjEHZOuNo0IfKGsc0AxG-I1R-C2yZzQxjA?source=Website%20(Self%20Assessment)&test=Stress&score=${totalScore}`,
+  }
 
   return (
     <Container maxWidth="lg">
@@ -273,7 +281,7 @@ const Test = () => {
           width: "100%",
           border: "none",
         }}
-        src={`https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTest/formperma/wQFLTUbc4MiqMDLoRnkr6NrkITyrOhdYn7ezRkLSFjk?source=Website%20(Self%20Assessment)&test=${test.condition}&score=${totalScore}`}
+        src={conditionIframe[test?.condition]}
       ></iframe>
     </div>
             </div>

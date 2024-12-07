@@ -245,7 +245,7 @@ const TmsMainPage = () => {
                         </div>
 
 
-                        <div className='flex justify-center '>
+                        <div className='flex pt-10 justify-center '>
                             <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
                         </div>
 
@@ -431,7 +431,7 @@ const TmsMainPage = () => {
                         </div>
 
 
-                        <div className='flex justify-center '>
+                        <div className='flex pt-10 justify-center '>
                             <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
                         </div>
 

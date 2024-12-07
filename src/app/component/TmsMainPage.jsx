@@ -123,14 +123,14 @@ const TmsMainPage = () => {
                         <div className="bg-primary-div pt-10 pb-10 px-4 ">
                             {/* FDA Approved Conditions */}
                             <div className='mb-10'>
-                                <h3 className="text-xl font-bold text-center text-gray-800 mb-4 leading-tight">
-                                    {`TMS is FDA approved for treating`}
+                                <h3 className="text-3xl font-bold text-center text-gray-800 mb-4 leading-tight">
+                                    {`TMS has been effective in treating`}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {fourConditions.map((condition) => (
                                         <div
                                             key={condition.name}
-                                            className="flex items-center bg-white text-sm font-bold text-black px-3 py-1.5 rounded-full "
+                                            className="flex items-center  bg-green-100  text-green-700 px-3 py-1.5 rounded-full "
                                         >
                                             <span className='font-semibold'>{condition.name}</span>
                                         </div>
@@ -141,7 +141,7 @@ const TmsMainPage = () => {
                             {/* Off-label Conditions */}
                             <div>
                                 <h3 className="text-xl font-medium text-center text-gray-800 mb-4 leading-tight">
-                                    {`Off-label TMS treatments with effective results for the following conditions`}
+                                    {``}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {allConditions.map((condition) => (
@@ -196,7 +196,7 @@ const TmsMainPage = () => {
                         </div>
 
                         {/* How TMS Works Section */}
-                        <div className=" p-6 lg:p-10  mb-4 bg-primary-div">
+                        <div className=" p-6 lg:p-10   bg-primary-div">
                             <h3 className="text-2xl font-semibold text-gray-800 mb-3 text-center">
                                 {`How TMS works?`}
                             </h3>
@@ -240,7 +240,7 @@ const TmsMainPage = () => {
 
                         {/* FAQ Section */}
 
-                        <div className='px-4  py-6'>
+                        <div className='px-4 bg-gray-200 py-6'>
                             <TmsPageFaqs />
                         </div>
 
@@ -303,15 +303,15 @@ const TmsMainPage = () => {
                                 {/* FDA Approved Conditions */}
                             <div className='mb-10'>
                                 <h3 className="text-4xl font-bold text-center text-gray-800 mb-6 leading-tight">
-                                    {`TMS is FDA approved for treating`}
+                                    {`TMS has been effective in treating`}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {fourConditions.map((condition) => (
                                         <div
                                             key={condition.name}
-                                            className="flex items-center bg-white text-base font-bold text-black px-3 py-1.5 rounded-full "
+                                            className="flex items-center bg-green-100 text-base text-green-700 px-4 py-2 rounded-full "
                                         >
-                                            <span className='font-semibold'>{condition.name}</span>
+                                            <span className='font-bold text-xl'>{condition.name}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -320,7 +320,7 @@ const TmsMainPage = () => {
                             {/* Off-label Conditions */}
                             <div>
                                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-6 leading-tight">
-                                    {`Off-label TMS treatments with effective results for the following conditions`}
+                                    {``}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {allConditions.map((condition) => (
@@ -378,7 +378,7 @@ const TmsMainPage = () => {
                         </div>
 
                         {/* How TMS Works Section */}
-                        <div className=" p-6 lg:p-10  mb-4 bg-primary-div">
+                        <div className=" p-6 lg:p-10   bg-primary-div">
                            <Container maxWidth="lg">
                            <h3 className="text-4xl font-bold text-gray-800 mb-6 text-center">
                                 {`How TMS works?`}
@@ -426,7 +426,7 @@ const TmsMainPage = () => {
 
                         {/* FAQ Section */}
 
-                        <div className=' py-6'>
+                        <div className=' py-6 bg-gray-200'>
                             <TmsPageFaqs />
                         </div>
 

@@ -14,6 +14,21 @@ export async function GET(request) {
     { loc: '/Bengaluru-Hebbal', lastmod: '2024-12-03' },
     { loc: '/clinicLocation/New-Delhi', lastmod: '2024-12-03' },
     { loc: '/pages/ourExpert', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/depression/gk', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/depression/wf', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/depression/hb', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/ocd/gk', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/ocd/wf', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/ocd/hb', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/anxiety/gk', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/anxiety/wf', lastmod: '2024-12-03' },
+    { loc: '/ads/condition/anxiety/hb', lastmod: '2024-12-03' },
+    { loc: '/ads/psychologist/gk', lastmod: '2024-12-03' },
+    { loc: '/ads/psychologist/wf', lastmod: '2024-12-03' },
+    { loc: '/ads/psychologist/hb', lastmod: '2024-12-03' },
+    { loc: '/ads/psychiatrist/gk', lastmod: '2024-12-03' },
+    { loc: '/ads/psychiatrist/wf', lastmod: '2024-12-03' },
+    { loc: '/ads/psychiatrist/hb', lastmod: '2024-12-03' },
   ];
 
   const sitemap = generateSitemap(baseURL, dynamicRoutes);

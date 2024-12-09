@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
 import { CircularProgress, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
+import Image from "next/image";
 
 export default function TestimonialComponentSlide({
     location,
@@ -60,7 +60,7 @@ export default function TestimonialComponentSlide({
                 onClick={onClick}
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] right-[-25px]" : "top-1/2 right-[-50px]"} `}
             >
-                <img
+                <Image height={100} width={100} 
                     className="text-white cursor-pointer"
                     src="/icons/right arrow.svg"
                     alt="Next"
@@ -79,7 +79,7 @@ export default function TestimonialComponentSlide({
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] left-[-25px]" : "top-1/2 left-[-50px]"} `}
 
             >
-                <img
+                <Image height={100} width={100} 
                     className="text-white cursor-pointer"
                     src="/icons/left arrow.svg"
                     alt="Previous"
@@ -127,7 +127,7 @@ export default function TestimonialComponentSlide({
 
                 <div className="    ">
                     <div className="text-3xl text-gray-400 mt-3 mb-3 leading-none ml-3">
-                        <img
+                        <Image height={100} width={100} 
                             className="h-[24px] scale-x-[1] scale-y-[-1]"
                             src="/iconsNew/quote.svg"
                             alt="Quote"
@@ -288,7 +288,7 @@ export default function TestimonialComponentSlide({
                         setisQuoteModal(false)
                         // setDisableSlide(false)
                     }}>
-                        <img className="w-[30px]" src="/iconsNew/close.svg" />
+                        <Image height={100} width={100}  className="w-[30px]" src="/iconsNew/close.svg" />
                     </IconButton>
                 </DialogTitle> */}
                     <DialogContent className="px-4 md:px-6">

@@ -6,7 +6,7 @@ import  Container  from '@mui/material/Container';
 import dynamic from 'next/dynamic';
 // import TestimonialComponent from './TestimonialComponent';
 // import TestimonialComponents2 from './TestimonialComponents2';
-// import Image from 'next/image';
+import Image from 'next/image';
 // import Footer from '@/components/Footer'
 import TestimonialComponentSlide from './TestimonialComponentSlide';
 import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
@@ -55,7 +55,7 @@ const HomePage = ({ allSection }) => {
                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
                         <div className='flex justify-center w-full  mb-7'>
-                            <img  className='w-full object-cover' src='/iconsNew/hero2.webp' />
+                            <Image height={100} width={100}   className='w-full object-cover' src='/iconsNew/hero2.webp' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>
@@ -81,19 +81,19 @@ const HomePage = ({ allSection }) => {
                                     <div className='mb-6'>
                                         <div className='flex gap-5 mb-2 items-center justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                <Image height={100} width={100}  className='w-6' src='/home/mindfulIcon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                             </div>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                <Image height={100} width={100}  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
                                             {/* <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
+                                                <Image height={100} width={100}  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
                                             </div> */}
 
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <img className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <Image height={100} width={100}  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@ const HomePage = ({ allSection }) => {
                     <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
                         {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section2?.html1 }} /> */}
                         <div>
-                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp' />
+                            <Image height={100} width={100}  className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp' />
                         </div>
 
                     </div>
@@ -162,7 +162,7 @@ const HomePage = ({ allSection }) => {
                                         {
                                             service?.array?.map((i, index) => (
                                                 <Link href={servicesIcon[index]?.link} key={index} className='flex flex-col cursor-pointer justify-center items-center mb-2'>
-                                                    <img src={servicesIcon[index]?.icon} className='w-[80px] h-[80px] mb-4' />
+                                                    <Image height={100} width={100}  src={servicesIcon[index]?.icon} className='w-[80px] h-[80px] mb-4' />
                                                     <p className='text- font-semibold text-center'>{servicesIcon[index]?.name}</p>
                                                 </Link>
                                             ))
@@ -187,7 +187,7 @@ const HomePage = ({ allSection }) => {
                         {/* hide this on medium and show alternate */}
                         <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                             <div className=''>
-                                <img className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"} />
+                                <Image height={100} width={100}  className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"} />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section3?.box?.para }} /> */}
@@ -245,7 +245,7 @@ const HomePage = ({ allSection }) => {
                             {
                                 allSection?.section4?.services?.map((service, index) => (
                                     <div key={index} className='flex flex-col justify-center  items-center'>
-                                        <img className='w-[64px] h-[64px] text-center' src={service?.icon} />
+                                        <Image height={100} width={100}  className='w-[64px] h-[64px] text-center' src={service?.icon} />
                                         <p className='text-md font-semibold mt-3'>{service?.text}</p>
                                     </div>
                                 ))
@@ -286,7 +286,7 @@ const HomePage = ({ allSection }) => {
                         backgroundPosition: 'center', // This centers the background image
                     }}>
                         <div></div>
-                        {/* <img className='w-full object-cover' src='/home/banner02.svg' /> */}
+                        {/* <Image height={100} width={100}  className='w-full object-cover' src='/home/banner02.svg' /> */}
                         <div className='flex flex-col justify-center items-end mr-[70px] lg:mr-[100px]'>
                             <div className='flex flex-col justify-center  items-end px-8'>
                                 <h1 className=' text-6xl mb-5 text-white  text-end font-sans font-semibold '>
@@ -318,7 +318,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <img className='w-full  object-contain h-[500px]' src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp" alt="" />
+                                <Image height={100} width={100}  className='w-full  object-contain h-[500px]' src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp" alt="" />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -367,7 +367,7 @@ const HomePage = ({ allSection }) => {
                                                     <Link href={servicesIcon[index]?.link} key={index} className='flex cursor-pointer flex-col justify-center  items-center text-center '>
                                                         {/* <div className='w-[164px] h-[164px] rounded-full bg-[#EF6623] mb-3 '></div> */}
                                                         <div className='w-[150px] h-[150px] flex justify-center'>
-                                                            <img src={servicesIcon[index]?.icon} className=' p-4 h-full w-full object-contain    mb-3 ' />
+                                                            <Image height={100} width={100}  src={servicesIcon[index]?.icon} className=' p-4 h-full w-full object-contain    mb-3 ' />
                                                         </div>
                                                         <p className='text-xl text-center font-semibold'>{i?.name}</p>
                                                     </Link>
@@ -397,7 +397,7 @@ const HomePage = ({ allSection }) => {
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* left image */}
                                 <div className="md">
-                                    <img
+                                    <Image 
                                         src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"
                                         alt="TMS Treatment"
                                         width={600}
@@ -476,7 +476,7 @@ const HomePage = ({ allSection }) => {
                                 {
                                     allSection?.section4?.services?.map((service, index) => (
                                         <div key={index} className='flex flex-col justify-center  items-center'>
-                                            <img className='w-[100px] h-[100px] text-center' src={service?.icon} />
+                                            <Image height={100} width={100}  className='w-[100px] h-[100px] text-center' src={service?.icon} />
                                             <p className='text-xl font-semibold mt-3'>{service?.text}</p>
                                         </div>
                                     ))

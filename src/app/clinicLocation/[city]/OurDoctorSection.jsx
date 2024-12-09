@@ -1,5 +1,6 @@
 "use client";
 import axios from 'axios';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -55,7 +56,7 @@ const OurDoctorSection = () => {
             {experts.map((expert, idx) => (
               <Link href={`/doctor/${expert?._id}`} key={idx} className="flex flex-col items-center mb-2">
                 <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex items-center">
-                  <img
+                  <Image height={100} width={100} 
                     className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
                     style={{ objectPosition: "top" }}
                     src={expert?.image}

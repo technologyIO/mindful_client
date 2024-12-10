@@ -23,25 +23,25 @@ import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 
 const servicesIcon = [
     {
-        icon: '/iconsNew/therapy.webp',
+        icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/therapy.webp?updatedAt=1733748349215',
         link: '/services/therapy',
         name: 'Therapy'
     },
     {
-        icon: '/iconsNew/psychiatry.webp',
+        icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/psychiatry.webp?updatedAt=1733748346328',
         link: '/services/psychiatry',
         name: 'Psychiatry'
 
     },
     {
-        icon: '/iconsNew/assessment.webp',
+        icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/assessment.webp?updatedAt=1733748342966',
         link: '/assesment',
         name: 'Professional Assessment'
 
     },
     {
-        icon: '/iconsNew/tms.webp',
-        link: '/services/tms-treatment-page',
+        icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/tms.webp?updatedAt=1733748349152',
+        link: '/pages/tms',
         name: 'TMS'
 
     },
@@ -55,7 +55,7 @@ const HomePage = ({ allSection }) => {
                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
                         <div className='flex justify-center w-full  mb-7'>
-                            <Image height={100} width={100}   className='w-full object-cover' src='/iconsNew/hero2.webp' alt='hero' />
+                            <Image height={100} width={100}   className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>
@@ -81,19 +81,19 @@ const HomePage = ({ allSection }) => {
                                     <div className='mb-6'>
                                         <div className='flex gap-5 mb-2 items-center justify-center'>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='/home/mindfulIcon.png' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                             </div>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
                                             {/* <div className='flex'>
-                                                <Image height={100} width={100}  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
+                                                <Image height={100} width={100}  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
                                             </div> */}
 
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='/home/mindfulIcon.png' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@ const HomePage = ({ allSection }) => {
                     <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
                         {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section2?.html1 }} /> */}
                         <div>
-                            <Image height={100} width={100}  alt='img' className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp' />
+                            <Image height={500} width={500}  alt='img' className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                         </div>
 
                     </div>
@@ -187,7 +187,7 @@ const HomePage = ({ allSection }) => {
                         {/* hide this on medium and show alternate */}
                         <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                             <div className=''>
-                                <Image height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"} />
+                                <Image height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section3?.box?.para }} /> */}
@@ -318,7 +318,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <Image height={100} width={100} alt='img' className='w-full  object-contain h-[500px]' src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733289803168-take_assessment.webp"  />
+                                <Image height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527"  />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -398,7 +398,7 @@ const HomePage = ({ allSection }) => {
                                 {/* left image */}
                                 <div className="md">
                                     <Image 
-                                        src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733372630195-illustration%20%281%29.webp"
+                                        src="https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"
                                         alt="TMS Treatment"
                                         width={600}
                                         height={400}
@@ -439,9 +439,9 @@ const HomePage = ({ allSection }) => {
                                         <strong>Is TMS for me?</strong> Learn how it works and if it is the right option for you.
                                     </p>
                                     <br />
-                                    <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg">
+                                    <Link href={"/pages/tms"} className="mt-4 px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg">
                                         MORE ABOUT TMS
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                             {/* numbers */}

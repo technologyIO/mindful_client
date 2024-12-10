@@ -116,7 +116,7 @@ const allTest = [
     {
         _id: 0,
         name: "What is Psychotherapy?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm">
         <span class="font-bold">Psychotherapy</span>, also known as 
         <span class="font-bold">talk therapy</span> or just 
@@ -127,7 +127,7 @@ const allTest = [
     {
         _id: 1,
         name: "How Does therapy Work?",
-        icon: "/iconsNew/psychiatry.png",
+        icon: "/psychiatry.png",
         detail: `<div>
         <p class="text-sm font-bold">Psychotherapy works</p>
 <p class="text-sm mb-2">by fostering a trusting relationship between you and your therapist.</p>
@@ -145,7 +145,7 @@ const allTest = [
     {
         _id: 2,
         name: "What Types of therapy Are Available?",
-        icon: "/iconsNew/assessment.png",
+        icon: "/assessment.png",
         detail: `<p class="text-sm mb-2">There are several approaches to psychotherapy, including:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -162,7 +162,7 @@ const allTest = [
     {
         _id: 3,
         name: "What Conditions Can therapy Help With?",
-        icon: "/iconsNew/tms.png",
+        icon: "/tms.png",
         detail: `<p class="text-sm mb-2">Psychotherapy is effective in treating a wide range of mental health conditions, including:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -182,7 +182,7 @@ const allTest = [
     {
         _id: 4,
         name: "How Long Does therapy Take?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">The duration of psychotherapy varies based on individual needs:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -194,7 +194,7 @@ const allTest = [
     {
         _id: 5,
         name: "How Many Therapy Sessions Will I Need?",
-        icon: "/iconsNew/tms.png",
+        icon: "/tms.png",
         detail: `<p class="text-sm mb-2">The number of sessions required depends on:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -207,7 +207,7 @@ const allTest = [
     {
         _id: 6,
         name: "How Do I Know if therapy is Right for Me?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Consider psychotherapy if you:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -222,7 +222,7 @@ const allTest = [
     {
         _id: 7,
         name: "What Should I Expect in My First Therapy Session?",
-        icon: "/iconsNew/tms.png",
+        icon: "/tms.png",
         detail: `<p class="text-sm mb-2">During your first session, you can expect to:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -236,7 +236,7 @@ const allTest = [
     {
         _id: 8,
         name: "Is therapy Confidential?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Yes, psychotherapy is confidential. This means:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -248,7 +248,7 @@ const allTest = [
     {
         _id: 9,
         name: "What is the Cost of Psychotherapy?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">The cost of psychotherapy varies based on:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -264,7 +264,7 @@ const allTest = [
     {
         _id: 10,
         name: "Do You Accept Insurance?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Yes, we do. However, as only select insurances offer mental health coverage, determine your coverage first:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -276,7 +276,7 @@ const allTest = [
     {
         _id: 11,
         name: "How Do I Choose the Right Therapist?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Consider the following when selecting a therapist:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1">
@@ -290,7 +290,7 @@ const allTest = [
     {
         _id: 12,
         name: "Can I Switch Therapists If I'm Not Comfortable?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Absolutely. It’s important to feel comfortable and supported in therapy.</p>
 
 <p class="text-sm mb-2">If you’re not satisfied with your current therapist:</p>
@@ -304,7 +304,7 @@ const allTest = [
     {
         _id: 13,
         name: "What Should I Do if I Miss a Session?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Life can be unpredictable. If you need to miss a session, call your centre and inform them as soon as possible.</p>
 
 <p class="text-sm">You may be taking a slot from someone that needs it. To help others, please notify in advance so that we can reschedule your appointment and offer your currently booked slot to another person in need.</p>
@@ -313,7 +313,7 @@ const allTest = [
     {
         _id: 14,
         name: "How Do I Get Started with therapy?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/therapy.png",
         detail: `<p class="text-sm mb-2">Starting therapy is simple:</p>
 
 <ul class="list-disc list-inside text-sm space-y-1 mb-4">

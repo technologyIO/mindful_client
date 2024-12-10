@@ -126,10 +126,10 @@ export default function TestimonialComponentSlide({
             <>
 
                 <div className="    ">
-                    <div className="text-3xl text-gray-400 mt-3 mb-3 leading-none ml-3">
-                        <Image height={100} width={100} 
+                    <div className="text-3xl text-gray-400 mt-3 mb-3  leading-none ">
+                        <Image height={50} width={50} 
                             className="h-[24px] scale-x-[1] scale-y-[-1]"
-                            src="/iconsNew/quote.svg"
+                            src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/quote.svg"
                             alt="Quote"
                         />
                     </div>
@@ -288,7 +288,7 @@ export default function TestimonialComponentSlide({
                         setisQuoteModal(false)
                         // setDisableSlide(false)
                     }}>
-                        <Image height={100} width={100}  className="w-[30px]" src="/iconsNew/close.svg" />
+                        <Image height={100} width={100}  className="w-[30px]" src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/close.svg?updatedAt=1733748343360" />
                     </IconButton>
                 </DialogTitle> */}
                     <DialogContent className="px-4 md:px-6">

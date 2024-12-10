@@ -131,7 +131,7 @@ export default function TestimonialComponent({ location, condition, disableSlide
         <div className="text-3xl text-gray-400 leading-none ml-3">
           <img
             className="h-[24px] scale-x-[1] scale-y-[-1]"
-            src="/iconsNew/quote.svg"
+            src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/quote.svg?updatedAt=1733748346867"
             alt="Quote"
           />
         </div>
@@ -267,7 +267,7 @@ export default function TestimonialComponent({ location, condition, disableSlide
                 setisQuoteModal(false)
                 setDisableSlide(false)
               }}>
-                <img className="w-[30px]" src="/iconsNew/close.svg" />
+                <img className="w-[30px]" src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/close.svg?updatedAt=1733748343360" />
               </IconButton>
             </DialogTitle>
             <DialogContent className="px-0">
@@ -308,7 +308,7 @@ export default function TestimonialComponent({ location, condition, disableSlide
                 setisQuoteModal(false)
                 setDisableSlide(false)
               }}>
-                <img className="w-[30px]" src="/iconsNew/close.svg" />
+                <img className="w-[30px]" src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/close.svg?updatedAt=1733748343360" />
               </IconButton>
             </DialogTitle>
             <DialogContent className="px-0">

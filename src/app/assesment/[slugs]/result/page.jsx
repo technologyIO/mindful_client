@@ -4,6 +4,7 @@ import React from "react";
 import { Container } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import AnimatedMeter from "@/app/component/AnimatedMeter";
+import RequestAppointment from "@/app/clinicLocation/[city]/RequestAppointment";
 
 const resultMessages = {
     Depression: [
@@ -67,6 +68,12 @@ const percentage = Math.min((score / maxScore) * 100, 100); // Clamp percentage 
           <p className="text-5xl font-bold mt-2">{score}</p>
           <p className="text-lg text-gray-700 mt-4 font-semibold md:text-2xl">{label}</p>
           <p className="text-sm text-gray-500 mt-2 md:text-xl">{message}</p>
+        </div>
+        <div>
+        <p className="text-lg text-gray-700 mt-4 font-semibold md:text-xl">If you need support to improve your emotional health, we're here to help:</p>
+        <div className="flex mt-4 justify-center items-center">
+        <RequestAppointment customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-base md:text-lg font-semibold"} name={"Book Consultation"}/>
+        </div>
         </div>
 
         {/* Additional Elements */}

@@ -149,7 +149,7 @@ const RequestAppointmentGeneral = ({ children, iframeSrc }) => {
                         </div>
                     </FormControl> */}
                     <div className='flex justify-end pt-3 px-3'>
-                        <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='/iconsNew/closee.svg' /></p>
+                        <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028' /></p>
                     </div>
                     <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
                         iframeSrc={iframeSrc || iframeSrcStatic}

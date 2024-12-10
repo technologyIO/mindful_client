@@ -13,31 +13,7 @@ import { Container } from '@mui/material'
 import ZohoForm from '@/app/component/ZohoForm'
 import ContactForm from './ContactForm'
 
-const servicesIcon = [
-    {
-        icon: '/iconsNew/therapy.png',
-        link: '/services/therapy',
-        name: 'Therapy'
-    },
-    {
-        icon: '/iconsNew/psychiatry.png',
-        link: '/services/psychiatry',
-        name: 'Psychiatry'
 
-    },
-    {
-        icon: '/iconsNew/assessment.png',
-        link: '/assesment',
-        name: 'Professional Assessment'
-
-    },
-    {
-        icon: '/iconsNew/tms.png',
-        link: '/services/tms-treatment-page',
-        name: 'TMS'
-
-    },
-]
 export default function AdsPage({ params, condition }) {
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
 

@@ -25,25 +25,25 @@ const MobileComponent = ({ data, images, city }) => {
     const allSection = HomePageSections
     const servicesIcon = [
         {
-            icon: '/iconsNew/therapy.png',
+            icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/therapy.webp?updatedAt=1733748349215',
             link: '/services/therapy',
             name: 'Therapy'
         },
         {
-            icon: '/iconsNew/psychiatry.png',
+            icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/psychiatry.webp?updatedAt=1733748346328',
             link: '/services/psychiatry',
             name: 'Psychiatry'
     
         },
         {
-            icon: '/iconsNew/assessment.png',
+            icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/assessment.webp?updatedAt=1733748342966',
             link: '/assesment',
             name: 'Professional Assessment'
     
         },
         {
-            icon: '/iconsNew/tms.png',
-            link: '/services/tms-treatment-page',
+            icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/tms.webp?updatedAt=1733748349152',
+            link: '/pages/tms',
             name: 'TMS'
     
         },

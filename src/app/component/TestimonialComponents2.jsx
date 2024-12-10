@@ -59,7 +59,7 @@ const TestimonialComponents2 = ({currentVideo}) => {
               onClick={togglePlay}
               className="absolute inset-0 flex items-center justify-center text-white"
             >
-            <img className="h-[66px]"  src="/iconsNew/newplay.svg"/>
+            <img className="h-[66px]"  src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/newplay.svg?updatedAt=1733748346137"/>
             </button>
           )}
           <div className="absolute bottom-0 left-0 right-0 text-white p-2">

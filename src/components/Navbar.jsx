@@ -439,7 +439,7 @@ function Navbar() {
                     <div>
                       <button
                         onClick={(event) => toggleDropdown(event, link.id)}
-                        className={`flex items-center space-x-1 text-black  px-3 py-2 rounded-md text-sm font-semibold ${location.pathname === link.active
+                        className={`flex items-center space-x-1 text-black  px-3 py-2 rounded-md text-base font-semibold ${location.pathname === link.active
                           ? "underline decoration-2"
                           : ""
                           }`}
@@ -474,7 +474,7 @@ function Navbar() {
                   ) : (
                     <Link
                       href={link.path}
-                      className={` px-3 py-2 rounded-md text-sm font-semibold ${location.pathname === link.active
+                      className={` px-3 py-2 rounded-md text-base font-semibold ${location.pathname === link.active
                         ? "underline decoration-2 text-orange-500 hover:text-orange-500"
                         : ""
                         }`}
@@ -489,7 +489,7 @@ function Navbar() {
             {/* Contact Button */}
             <div>
              
-              <RequestAppointment name={"CONTACT US"}  customStyle={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#F8A51C] hover:bg-[#e69919] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500`}/>
+              <RequestAppointment name={"CONTACT US"}  customStyle={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-500 font-semibold hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500`}/>
             </div>
           </div>
         </div>

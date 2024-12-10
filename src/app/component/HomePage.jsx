@@ -3,7 +3,7 @@ import Link from 'next/link';
 // import VideoComponent from './VideoComponent'
 // import NewComponent from './newComponent';
 import  Container  from '@mui/material/Container';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 // import TestimonialComponent from './TestimonialComponent';
 // import TestimonialComponents2 from './TestimonialComponents2';
 import Image from 'next/image';

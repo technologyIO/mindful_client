@@ -60,7 +60,7 @@ export default function TestimonialComponentSlide({
                 onClick={onClick}
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] right-[-25px]" : "top-1/2 right-[-50px]"} `}
             >
-                <Image height={100} width={100} 
+                <Image height={50} width={50} 
                     className="text-white cursor-pointer"
                     src="/icons/right arrow.svg"
                     alt="Next"
@@ -79,7 +79,7 @@ export default function TestimonialComponentSlide({
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] left-[-25px]" : "top-1/2 left-[-50px]"} `}
 
             >
-                <Image height={100} width={100} 
+                <Image height={50} width={50} 
                     className="text-white cursor-pointer"
                     src="/icons/left arrow.svg"
                     alt="Previous"

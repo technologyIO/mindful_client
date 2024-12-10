@@ -137,12 +137,12 @@ const MobileView = ()=>{
                 <TakeTest />
             </div>
 
-            <div className='px-4  py-12'>
+            <div className='px-4  py-12 bg-gray-200'>
                 <AllTherapyWithSearch />
             </div>
 
                     
-               <div className='flex justify-center '>
+               <div className='flex justify-center pt-9'>
                    <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"}/>
                    </div>
                
@@ -204,14 +204,14 @@ const DesktopView = ()=>{
                 <TakeTest />
             </div>
 
-            <div className=' py-6'>
+            <div className=' py-10 bg-gray-200'>
                <Container maxWidth="lg">
                <AllTherapyWithSearch />
                </Container>
             </div>
 
                     
-               <div className='flex justify-center '>
+               <div className='flex justify-center pt-10'>
                    <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"}/>
                    </div>
                

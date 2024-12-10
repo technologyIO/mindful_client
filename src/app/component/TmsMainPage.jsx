@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import React from 'react';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 import TmsPageFaqs from './TmsPageFaqs';
+import Image from 'next/image';
 
 const TmsMainPage = () => {
     const fourConditions = [
@@ -93,7 +94,7 @@ const TmsMainPage = () => {
                 <div className="min-h-screen">
                     <div className="">
                         <div>
-                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
+                            <Image alt="img"  width={500} height={500}  className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
@@ -102,7 +103,7 @@ const TmsMainPage = () => {
                             </h3>
                             <p className='text-gray-600 text-center'>Transcranial Magnetic Stimulation (TMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions.  </p>
                             <div className="py-5 md:h-[360px]">
-                                <img src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-cover h-full" />
                             </div>
                             <p className="text-gray-700 text-md text-center mb-2">
                                 {`TMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
@@ -113,7 +114,7 @@ const TmsMainPage = () => {
 
                             </p>
                             <div className="pt-5 md:h-[360px]">
-                                <img src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-cover h-full" />
                             </div>
                         </div>
 
@@ -201,7 +202,7 @@ const TmsMainPage = () => {
                                 {`How TMS works?`}
                             </h3>
                             <div className="mb-5 md:h-[360px]">
-                                <img src="/tmsPage/tms3.png" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
                             </div>
                             <div className="space-y-4 mb-6">
                                 {/* <p className="text-gray-700 text-lg font-bold">
@@ -211,20 +212,20 @@ const TmsMainPage = () => {
                                     <li className=''>
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the TMS coil on your head, targeting the specific brain area based on your condition. `}
                                         <div className='py-5'>
-                                            <img src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />
+                                            <Image alt="img"  width={500} height={500}  src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />
                                         </div>
                                     </li>
 
                                     <li className=''>
                                         <strong>{`Stimulate Brain Cells:`}</strong>{` The magnetic pulses help activate or regulate the brain cells (neurons) in those regions where the coil is targeted `}
                                         <div className='py-5'>
-                                            <img src='https://mindfultms1.s3.amazonaws.com/Stimulate+Brain+Cells+Img.png' />
+                                            <Image alt="img"  width={500} height={500}  src='https://mindfultms1.s3.amazonaws.com/Stimulate+Brain+Cells+Img.png' />
                                         </div>
                                     </li>
                                     <li className=''>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5'>
-                                            <img src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <Image alt="img"  width={500} height={500}  src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
                                         </div>
                                     </li>
                                     <li className='mb-5'>
@@ -261,7 +262,7 @@ const TmsMainPage = () => {
                 <div className="min-h-screen">
                     <div className="">
                         <div className='h-[550px]'>
-                            <img className='w-full h-full object-cover' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
+                            <Image alt="img"  width={900} height={900}  className='w-full h-full object-cover' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
@@ -273,12 +274,12 @@ const TmsMainPage = () => {
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <p className='text-gray-600 text-xl w-2/3'>Transcranial Magnetic Stimulation (TMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions.  </p>
                                     <div className="py-5 md:h-[360px]">
-                                        <img src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-contain h-full" />
                                     </div>
                                 </div>
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <img src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/new+tms.png" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
                                         <p className="text-gray-700 text-xl text-center mb-2">
@@ -384,7 +385,7 @@ const TmsMainPage = () => {
                                 {`How TMS works?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
-                                <img src="/tmsPage/tms3.png" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
                             </div>
                             <div className="space-y-4 mb-6">
                                 {/* <p className="text-gray-700 text-lg font-bold">
@@ -396,20 +397,20 @@ const TmsMainPage = () => {
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the TMS coil on your head, targeting the specific brain area based on your condition. `}
                                         
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img className='h-full' src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />
+                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />
                                         </div>
                                     </li>
 
                                     <li className=' text-2xl'>
                                         <strong>{`Stimulate Brain Cells:`}</strong>{` The magnetic pulses help activate or regulate the brain cells (neurons) in those regions where the coil is targeted `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img className='h-full' src='https://mindfultms1.s3.amazonaws.com/Stimulate+Brain+Cells+Img.png' />
+                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://mindfultms1.s3.amazonaws.com/Stimulate+Brain+Cells+Img.png' />
                                         </div>
                                     </li>
                                     <li className=' text-2xl'>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img className='h-full' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
                                         </div>
                                     </li>
                                     <li className='mb-5 text-2xl'>

@@ -7,7 +7,8 @@ const nextConfig = {
     },
     images: {
     domains: ['mindfultms1.s3.us-east-1.amazonaws.com',
-      'ik.imagekit.io'
+      'ik.imagekit.io',
+      "mindfultms1.s3.amazonaws.com"
     ],
   },
   };

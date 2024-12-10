@@ -55,9 +55,9 @@ const OurDoctorSection = () => {
           <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center justify-center ">
             {experts.map((expert, idx) => (
               <Link href={`/doctor/${expert?._id}`} key={idx} className="flex flex-col items-center mb-2">
-                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex items-center">
-                  <Image height={100} width={100} 
-                    className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
+                <div className="mb-2 h-[75px] w-[75px] md:h-[150px] md:w-[150px] lg:h-[150px] lg:w-[150px] xl:h-[200px] xl:w-[200px] flex items-center">
+                  <Image height={500} width={500} 
+                    className="h-[75px] w-[75px] md:h-[150px] md:w-[150px] lg:h-[150px] lg:w-[150px] xl:h-[200px] xl:w-[200px]  object-cover border-[3px] border-orange-400 rounded-full"
                     style={{ objectPosition: "top" }}
                     src={expert?.image}
                     alt={`${expert?.name}'s profile`}

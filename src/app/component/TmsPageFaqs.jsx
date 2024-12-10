@@ -121,7 +121,7 @@ const allTest = [
     {
         _id: 0,
         name: "What is TMS?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg">
             <p class="mb-4">
@@ -138,7 +138,7 @@ const allTest = [
     {
         _id: 1,
         name: "How does TMS work?",
-        icon: "/iconsNew/psychiatry.png",
+        icon: "/iconsNew2/psychiatry.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg">
             <p class="mb-4">
@@ -149,7 +149,7 @@ const allTest = [
     {
         _id: 2,
         name: "Will TMS help treatment-resistant depression?",
-        icon: "/iconsNew/assessment.png",
+        icon: "/iconsNew2/assessment.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg">
             <p class="mb-4">
@@ -160,7 +160,7 @@ const allTest = [
     {
         _id: 3,
         name: "Is TMS used only for treating depression?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg">
             <p class="mb-4">
@@ -170,7 +170,7 @@ const allTest = [
     {
         _id: 4,
         name: "Who responds the best to TMS treatment?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -194,7 +194,7 @@ const allTest = [
     {
         _id: 5,
         name: "Does TMS treatment have any side effects?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -221,7 +221,7 @@ const allTest = [
     {
         _id: 6,
         name: "Will TMS treatment lead to memory loss?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -236,7 +236,7 @@ const allTest = [
     {
         _id: 7,
         name: "What is the duration of TMS treatment?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg">
             <p class="mb-4">
@@ -247,7 +247,7 @@ const allTest = [
     {
         _id: 8,
         name: "What is the TMS Treatment Process?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -274,7 +274,7 @@ const allTest = [
     {
         _id: 9,
         name: "How long will the positive effect of TMS treatment last?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p class="font-bold">Immediate to Short-Term Benefits:</p>
@@ -303,7 +303,7 @@ const allTest = [
     {
         _id: 10,
         name: "What are the advantages of TMS treatment over medication?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -324,7 +324,7 @@ const allTest = [
     {
         _id: 11,
         name: "What are the benefits of TMS over Electroconvulsive Therapy (ECT)?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -354,7 +354,7 @@ const allTest = [
     {
         _id: 12,
         name: "Is TMS safe for those who are currently taking antidepressant medication?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -387,7 +387,7 @@ const allTest = [
     {
         _id: 13,
         name: "Who should not have TMS treatment?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -429,7 +429,7 @@ const allTest = [
     {
         _id: 14,
         name: "Will my insurance cover the TMS treatment?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -450,7 +450,7 @@ const allTest = [
     {
         _id: 15,
         name: "Is TMS for me?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -477,7 +477,7 @@ const allTest = [
     {
         _id: 16,
         name: "What are the results of TMS Therapy?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p class="font-bold text-base">Depression Relief</p>
@@ -514,7 +514,7 @@ const allTest = [
     {
         _id: 17,
         name: "What is rTMS? How is it different from TMS?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -532,7 +532,7 @@ const allTest = [
     {
         _id: 18,
         name: "What is DeepTMS? How is it different from rTMS?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
        <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -558,7 +558,7 @@ const allTest = [
     {
         _id: 19,
         name: "Why is it important to consider TMS with a provider that uses FDA-approved machines?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -576,7 +576,7 @@ const allTest = [
     {
         _id: 20,
         name: "Why is it important to complete a full TMS treatment plan?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -594,7 +594,7 @@ const allTest = [
     {
         _id: 21,
         name: "What happens if I take only 5 TMS sessions?",
-        icon: "/iconsNew/tms.png",
+        icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -615,7 +615,7 @@ const allTest = [
     {
         _id: 22,
         name: "Is there an age limit for TMS?",
-        icon: "/iconsNew/therapy.png",
+        icon: "/iconsNew2/therapy.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
@@ -643,7 +643,7 @@ const allTest = [
     {
         _id: 23,
         name: "Does TMS help with Major Depressive Disorder (MDD)?",
-        icon: "/iconsNew/depression.png",
+        icon: "/iconsNew2/depression.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -655,7 +655,7 @@ const allTest = [
     {
         _id: 24,
         name: "Does TMS help with Treatment-Resistant Depression?",
-        icon: "/iconsNew/resistance.png",
+        icon: "/iconsNew2/resistance.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -667,7 +667,7 @@ const allTest = [
     {
         _id: 25,
         name: "Does TMS help with Obsessive-Compulsive Disorder (OCD)?",
-        icon: "/iconsNew/ocd.png",
+        icon: "/iconsNew2/ocd.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -679,7 +679,7 @@ const allTest = [
     {
         _id: 26,
         name: "Does TMS help with Generalized Anxiety Disorder (GAD)?",
-        icon: "/iconsNew/anxiety.png",
+        icon: "/iconsNew2/anxiety.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -691,7 +691,7 @@ const allTest = [
     {
         _id: 27,
         name: "Does TMS help with PTSD?",
-        icon: "/iconsNew/ptsd.png",
+        icon: "/iconsNew2/ptsd.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -703,7 +703,7 @@ const allTest = [
     {
         _id: 28,
         name: "Does TMS help with Bipolar Disorder (Depressive Episodes)?",
-        icon: "/iconsNew/bipolar.png",
+        icon: "/iconsNew2/bipolar.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -715,7 +715,7 @@ const allTest = [
     {
         _id: 29,
         name: "Does TMS help with Schizophrenia (Auditory Hallucinations)?",
-        icon: "/iconsNew/schizophrenia.png",
+        icon: "/iconsNew2/schizophrenia.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -727,7 +727,7 @@ const allTest = [
     {
         _id: 30,
         name: "Does TMS help with Attention-Deficit/Hyperactivity Disorder (ADHD)?",
-        icon: "/iconsNew/adhd.png",
+        icon: "/iconsNew2/adhd.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -739,7 +739,7 @@ const allTest = [
     {
         _id: 31,
         name: "Does TMS help with Social Anxiety Disorder?",
-        icon: "/iconsNew/social-anxiety.png",
+        icon: "/iconsNew2/social-anxiety.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -751,7 +751,7 @@ const allTest = [
     {
         _id: 32,
         name: "Does TMS help with Anorexia Nervosa and Other Eating Disorders?",
-        icon: "/iconsNew/eating-disorders.png",
+        icon: "/iconsNew2/eating-disorders.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -763,7 +763,7 @@ const allTest = [
     {
         _id: 33,
         name: "Does TMS help with Addiction (Substance Use Disorders)?",
-        icon: "/iconsNew/addiction.png",
+        icon: "/iconsNew2/addiction.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -775,7 +775,7 @@ const allTest = [
     {
         _id: 34,
         name: "Does TMS help with Autism Spectrum Disorder (ASD)?",
-        icon: "/iconsNew/asd.png",
+        icon: "/iconsNew2/asd.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -787,7 +787,7 @@ const allTest = [
     {
         _id: 35,
         name: "Does TMS help with Migraine with Aura?",
-        icon: "/iconsNew/migraine.png",
+        icon: "/iconsNew2/migraine.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -799,7 +799,7 @@ const allTest = [
     {
         _id: 36,
         name: "Does TMS help with Chronic Pain?",
-        icon: "/iconsNew/chronic-pain.png",
+        icon: "/iconsNew2/chronic-pain.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -811,7 +811,7 @@ const allTest = [
     {
         _id: 37,
         name: "Does TMS help with Tinnitus?",
-        icon: "/iconsNew/tinnitus.png",
+        icon: "/iconsNew2/tinnitus.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -823,7 +823,7 @@ const allTest = [
     {
         _id: 38,
         name: "Does TMS help with Parkinson's Disease?",
-        icon: "/iconsNew/parkinsons.png",
+        icon: "/iconsNew2/parkinsons.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -835,7 +835,7 @@ const allTest = [
     {
         _id: 39,
         name: "Does TMS help with Stroke Rehabilitation?",
-        icon: "/iconsNew/stroke-rehabilitation.png",
+        icon: "/iconsNew2/stroke-rehabilitation.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -847,7 +847,7 @@ const allTest = [
     {
         _id: 40,
         name: "Does TMS help with Alzheimer’s Disease and Other Dementias?",
-        icon: "/iconsNew/alzheimers-dementia.png",
+        icon: "/iconsNew2/alzheimers-dementia.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -859,7 +859,7 @@ const allTest = [
     {
         _id: 41,
         name: "Does TMS help with Traumatic Brain Injury (TBI)?",
-        icon: "/iconsNew/tbi.png",
+        icon: "/iconsNew2/tbi.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -871,7 +871,7 @@ const allTest = [
     {
         _id: 42,
         name: "Does TMS help with Multiple Sclerosis (MS)?",
-        icon: "/iconsNew/ms.png",
+        icon: "/iconsNew2/ms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -883,7 +883,7 @@ const allTest = [
     {
         _id: 43,
         name: "Does TMS help with Huntington’s Disease?",
-        icon: "/iconsNew/huntingtons-disease.png",
+        icon: "/iconsNew2/huntingtons-disease.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -895,7 +895,7 @@ const allTest = [
     {
         _id: 44,
         name: "Does TMS help with Tourette’s Syndrome?",
-        icon: "/iconsNew/tourettes.png",
+        icon: "/iconsNew2/tourettes.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -907,7 +907,7 @@ const allTest = [
     {
         _id: 45,
         name: "Does TMS help with Restless Legs Syndrome (RLS)?",
-        icon: "/iconsNew/rls.png",
+        icon: "/iconsNew2/rls.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
@@ -919,7 +919,7 @@ const allTest = [
     {
         _id: 46,
         name: "For which conditions does TMS help?",
-        icon: "/iconsNew/rls.png",
+        icon: "/iconsNew2/rls.png",
         detail: `<div class="text-gray-700 text-sm md:text-lg space-y-6">
   <!-- Psychological Conditions -->
   <div>

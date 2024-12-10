@@ -189,7 +189,7 @@ const PsychiatryPage = () => {
                                         />
                                     </div>
                                     <div className='mt-4 text-center'>
-                                        <span className='text-sm font-semibold text-gray-800 whitespace-nowrap block w-[100px]'>
+                                        <span className='text-sm font-semibold text-gray-800  text-center block '>
                                             {item.name}
                                         </span>
                                         <p className='text-[12px] text-gray-500'>

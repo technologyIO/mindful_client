@@ -280,7 +280,7 @@ const HomePage = ({ allSection }) => {
             <>
                 <section className='mb-5'>
                     <div className='grid grid-cols-2  w-full cover mb-4 h-[545px]  ' style={{
-                        backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(163,109,22,1) 84%), url('/iconsNew/hero2.webp')`,
+                        backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(163,109,22,1) 84%), url('https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406')`,
 
                         backgroundSize: 'cover',  // This makes the background image cover the entire div
                         backgroundPosition: 'center', // This centers the background image

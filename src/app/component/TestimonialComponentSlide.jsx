@@ -134,7 +134,7 @@ export default function TestimonialComponentSlide({
                         />
                     </div>
                     <div className={`  ${modalOpen ? "" : "max-h-[115px] px-5"} overflow-hidden `}>
-                        {isQuoteModal ? <p className="text-gray-600  text-justify text-base font-semibold ">
+                        {isQuoteModal ? <p className="text-gray-600  mx-3 text-base font-semibold ">
                             {fullTestimonial}
                         </p> :
                             <span className="text-gray-600 text-justify text-base font-semibold ">
@@ -265,7 +265,7 @@ export default function TestimonialComponentSlide({
                     }}
                     BackdropProps={{
                         style: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.9)', // Darker backdrop
+                            backgroundColor: 'rgba(0, 0, 0, 0.94)', // Darker backdrop
                         },
                     }}
                     PaperProps={{

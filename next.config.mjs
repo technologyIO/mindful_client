@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    swcMinify: false,
+    swcMinify: true,
     webpack: (config) => {
       config.optimization.minimize = false;
       return config;

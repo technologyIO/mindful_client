@@ -410,7 +410,7 @@ const TmsMainPage = () => {
                                     <li className=' text-2xl'>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <Image alt="img"   width={400} height={100} className='h-full ' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
                                         </div>
                                     </li>
                                     <li className='mb-5 text-2xl'>

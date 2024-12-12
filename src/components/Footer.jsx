@@ -658,8 +658,11 @@ function Footer() {
       <div className='md:hidden'>
         <MobileFooter2 />
       </div>
+      <div className='flex justify-center mb-3 '>
+        <p className='text-primary-orange text-sm text-center'>For queries related to careers <Link className='underline' href='/careers'>Click Here</Link>.</p>
+      </div>
       <div className='flex justify-center '>
-        <p className='text-primary-orange text-sm text-center'>Copyright © 2024 MindfulTMS | All rights reserved. Developed and Maintained  by <Link className='' href='https://insideoutconsult.com/'>InsideOut</Link></p>
+        <p className='text-primary-orange text-sm text-center'>Copyright © 2024 MindfulTMS | All rights reserved. Developed and Maintained  by <Link className='underline' href='https://insideoutconsult.com/'>InsideOut</Link></p>
       </div>
     </footer>
   );

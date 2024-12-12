@@ -66,11 +66,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #EF6623;
+  ;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #EF6623;
+  ;
 }
 
 /* Other global styles */
@@ -224,3 +226,7 @@ body {
 .footer-grey-shades{
   background: rgb(175,175,175);background: linear-gradient(0deg, rgba(175,175,175,0.4515056022408963) 0%, rgba(210,210,210,0.3) 100%);
 }
+
+
+
+/* Define the 'thin-scroll' class */

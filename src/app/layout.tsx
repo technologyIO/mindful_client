@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>{getTitle()}</title>
         <link rel="icon" href={metadata.icons.icon} />
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
-    <script
+    <script defer
       dangerouslySetInnerHTML={{
         __html: `
           window.dataLayer = window.dataLayer || [];
@@ -53,9 +53,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src={`https://www.googletagmanager.com/gtm.js?id=GTM-5HDDPXG`}
         ></script>
-       <script src="https://cdn-in.pagesense.io/js/rangsonshealthcaresolutionspvtltd/67af7e7b39754527a4a1201d246c8524.js"></script>
+       <script defer src="https://cdn-in.pagesense.io/js/rangsonshealthcaresolutionspvtltd/67af7e7b39754527a4a1201d246c8524.js"></script>
        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QBSV5K5FL"></script>
     <script
+    defer
       dangerouslySetInnerHTML={{
         __html: `
           window.dataLayer = window.dataLayer || [];
@@ -64,6 +65,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-0QBSV5K5FL');
         `,
       }}
+    />
+    <link 
+      rel="preload" 
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" 
+      as="style" 
+      crossOrigin="anonymous" 
     />
       </head>
       <body >

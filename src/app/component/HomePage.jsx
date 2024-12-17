@@ -60,7 +60,7 @@ const HomePage = ({ allSection }) => {
                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
                         <div className='flex justify-center w-full  mb-7'>
-                            <Image layout="intrinsic" height={100} width={100}   className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
+                            <Image layout="intrinsic" height={100} width={100}   loading="eager"   className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>

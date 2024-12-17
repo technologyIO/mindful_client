@@ -83,22 +83,22 @@ export default function CounterComponent() {
         ))} */}
 
         <div className='flex flex-row justify-between gap-2'>
-          <div class="mb-5">
-            <div class="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">5+</div>
-            <p class="text-md font-semibold">Years of Experience</p>
+          <div className="mb-5">
+            <div className="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">5+</div>
+            <p className="text-md font-semibold">Years of Experience</p>
             </div>
             <div className='border-[1px] mb-4 border-orange-600'>
 
             </div>
             
-          <div class="mb-5">
-            <div class="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">10+</div>
-            <p class="text-md font-semibold">Clinics (India &amp; USA)</p>
+          <div className="mb-5">
+            <div className="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">10+</div>
+            <p className="text-md font-semibold">Clinics (India &amp; USA)</p>
           </div>
         </div>
-        <div class="mb-5">
-          <div class="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">400,000+</div>
-          <p class="text-md font-semibold">Treatments Administered</p></div></div>
+        <div className="mb-5">
+          <div className="text-4xl font-bold mb-1 tabular-nums text-orange-600" aria-live="polite">400,000+</div>
+          <p className="text-md font-semibold">Treatments Administered</p></div></div>
     </div>
   )
 }

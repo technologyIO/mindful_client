@@ -33,6 +33,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>{getTitle()}</title>
         <link rel="icon" href={metadata.icons.icon} />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-11458426933');
+        `,
+      }}
+    />
         <script
           async
           src={`https://www.googletagmanager.com/gtm.js?id=GTM-5HDDPXG`}

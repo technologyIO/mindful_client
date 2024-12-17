@@ -123,14 +123,14 @@ const allTest = [
         name: "What is TMS?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg">
-            <p class="mb-4">
-                <span class="font-bold">TMS</span> is a non-invasive form of neuromodulation, which stimulates neurons in the prefrontal cortex of your brain by delivering highly focused MRI-strength magnetic pulses.
+        <div className="text-gray-700 text-sm md:text-lg">
+            <p className="mb-4">
+                <span className="font-bold">TMS</span> is a non-invasive form of neuromodulation, which stimulates neurons in the prefrontal cortex of your brain by delivering highly focused MRI-strength magnetic pulses.
             </p>
-            <p class="mb-4">
+            <p className="mb-4">
                 TMS was FDA cleared in 2008 for the treatment of depression and in 2018 for the treatment of OCD in patients who have not benefited or had limited benefit from prior medication.
             </p>
-            <p class="mb-4">
+            <p className="mb-4">
                 Patients undergo treatment five times weekly for approximately six weeks, although it can vary on an individual basis. Patients remain awake and alert throughout the treatment, rendering TMS non-invasive and virtually free of adverse effects.
             </p>
         </div>`
@@ -140,8 +140,8 @@ const allTest = [
         name: "How does TMS work?",
         icon: "/iconsNew2/psychiatry.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg">
-            <p class="mb-4">
+        <div className="text-gray-700 text-sm md:text-lg">
+            <p className="mb-4">
                 The process is simple. The nerve cells that are responsible for mood are activated using electromagnetic stimulation using the TMS coil.  These magnetic fields are similar to those produced by a magnetic resonance imaging (MRI) machine. They do not affect the whole brain, as they only reach a few centimeters into the brain directly beneath the treatment coil. This provides an accurately focused and targeted treatment.
             </p>
         </div>`
@@ -151,8 +151,8 @@ const allTest = [
         name: "Will TMS help treatment-resistant depression?",
         icon: "/iconsNew2/assessment.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg">
-            <p class="mb-4">
+        <div className="text-gray-700 text-sm md:text-lg">
+            <p className="mb-4">
                 Yes. TMS is equally helpful for those with treatment-resistant depression, offering a new approach to manage depression.
             </p>
         </div>`
@@ -162,8 +162,8 @@ const allTest = [
         name: "Is TMS used only for treating depression?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg">
-            <p class="mb-4">
+        <div className="text-gray-700 text-sm md:text-lg">
+            <p className="mb-4">
                 No. This revolutionary technology is used to treat a variety of diseases and disorders. In addition to Depression, TMS is being used to treat Anxiety, OCD, ADHD, schizophrenia, PTSD, tinnitus, multiple sclerosis, ALS, motor disability after a stroke, Alzheimer’s and Parkinson’s and several other psychological and neurological conditions</p>
         </div>`
     },
@@ -172,21 +172,21 @@ const allTest = [
         name: "Who responds the best to TMS treatment?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        <span class="font-bold">Treatment-Resistant Depression:</span> Ideal for those who haven’t found relief with previous antidepressant medications.
+        <span className="font-bold">Treatment-Resistant Depression:</span> Ideal for those who haven’t found relief with previous antidepressant medications.
     </p>
     <p>
-        <span class="font-bold">Non-Invasive Preference:</span> Perfect for individuals seeking medication-free treatment options.
+        <span className="font-bold">Non-Invasive Preference:</span> Perfect for individuals seeking medication-free treatment options.
     </p>
     <p>
-        <span class="font-bold">Various Mental Health Conditions:</span> Effective for anxiety, OCD, PTSD, chronic pain, and addiction and several other conditions.
+        <span className="font-bold">Various Mental Health Conditions:</span> Effective for anxiety, OCD, PTSD, chronic pain, and addiction and several other conditions.
     </p>
     <p>
-        <span class="font-bold">Suitable Candidates:</span> Adults without metal implants or seizure disorders.
+        <span className="font-bold">Suitable Candidates:</span> Adults without metal implants or seizure disorders.
     </p>
     <p>
-        <span class="font-bold">Motivated Individuals:</span> Best for those committed to a consistent treatment schedule, and willing to put in the time to get good results.
+        <span className="font-bold">Motivated Individuals:</span> Best for those committed to a consistent treatment schedule, and willing to put in the time to get good results.
     </p>
 </div>
 `
@@ -196,7 +196,7 @@ const allTest = [
         name: "Does TMS treatment have any side effects?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         TMS treatments have been performed with virtually no complications or side effects.
     </p>
@@ -209,7 +209,7 @@ const allTest = [
     <p>
         In clinical trials, more than 10,000 TMS treatments demonstrated its safety with no occurrence of seizures. However, there is a small risk of a seizure occurring during treatment, estimated at 1 in 10,000. This risk is no greater than what has been observed with oral antidepressant medications.
     </p>
-    <p class="font-bold">
+    <p className="font-bold">
         Note:
     </p>
     <p>
@@ -223,7 +223,7 @@ const allTest = [
         name: "Will TMS treatment lead to memory loss?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         No. There has not been any memory loss reported to date with TMS.
     </p>
@@ -238,8 +238,8 @@ const allTest = [
         name: "What is the duration of TMS treatment?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg">
-            <p class="mb-4">
+        <div className="text-gray-700 text-sm md:text-lg">
+            <p className="mb-4">
                rTMS treatment lasts for 20-40 minutes a day, 5 days a week for 4-6 weeks 
             </p>
         </div>`
@@ -249,7 +249,7 @@ const allTest = [
         name: "What is the TMS Treatment Process?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         During a TMS treatment session, you will sit comfortably in a reclined treatment chair with your head supported in a relaxed position. The magnetic coil is typically placed on the left front side of your head, targeting an area of the brain known as the Left Dorsolateral Prefrontal Cortex (DLPFC).
     </p>
@@ -257,13 +257,13 @@ const allTest = [
         Here’s what happens during the session:
     </p>
     <p>
-        <span class="font-bold">Magnetic Pulses:</span> The treatment coil sends bursts of magnetic pulses through your scalp. These pulses create small electric currents in the targeted area of your brain. You won’t feel these currents, similar to how wireless charging works for your phone.
+        <span className="font-bold">Magnetic Pulses:</span> The treatment coil sends bursts of magnetic pulses through your scalp. These pulses create small electric currents in the targeted area of your brain. You won’t feel these currents, similar to how wireless charging works for your phone.
     </p>
     <p>
-        <span class="font-bold">Nerve Activation:</span> These electric currents activate nerve cells in the DLPFC. This activation helps stimulate neural pathways and promotes communication between different brain regions.
+        <span className="font-bold">Nerve Activation:</span> These electric currents activate nerve cells in the DLPFC. This activation helps stimulate neural pathways and promotes communication between different brain regions.
     </p>
     <p>
-        <span class="font-bold">Neuroplasticity:</span> With repeated treatments, rTMS encourages the brain to reorganize and form new neural connections, a process known as neuroplasticity. This helps normalize brain activity and restore it to its optimal functioning before the onset of your condition.
+        <span className="font-bold">Neuroplasticity:</span> With repeated treatments, rTMS encourages the brain to reorganize and form new neural connections, a process known as neuroplasticity. This helps normalize brain activity and restore it to its optimal functioning before the onset of your condition.
     </p>
     <p>
         Overall, rTMS is a non-invasive and comfortable procedure designed to support your brain's natural ability to heal and improve your mental well-being.
@@ -276,26 +276,26 @@ const allTest = [
         name: "How long will the positive effect of TMS treatment last?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
-    <p class="font-bold">Immediate to Short-Term Benefits:</p>
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
+    <p className="font-bold">Immediate to Short-Term Benefits:</p>
     <p>
-        <span class="font-bold">Initial Response:</span> Many patients begin to notice improvements in their symptoms within the first few weeks of starting TMS treatment. These early changes can include reduced feelings of depression, anxiety, or other targeted symptoms.
+        <span className="font-bold">Initial Response:</span> Many patients begin to notice improvements in their symptoms within the first few weeks of starting TMS treatment. These early changes can include reduced feelings of depression, anxiety, or other targeted symptoms.
     </p>
     <p>
-        <span class="font-bold">End of Treatment Course:</span> By the end of a typical 6-week TMS treatment course, most individuals experience significant symptom relief, with lasting effects that extend several weeks beyond the completion of therapy.
-    </p>
-    
-    <p class="font-bold">Long-Term Benefits:</p>
-    <p>
-        <span class="font-bold">Sustained Improvement:</span> Studies have shown that the positive effects of TMS can last anywhere from 6 months to a year post-treatment. Approximately 60% of patients maintain their symptom relief for several months after the initial treatment course.
-    </p>
-    <p>
-        <span class="font-bold">Extended Remission:</span> For some individuals, the benefits can extend even longer, especially when combined with other forms of therapy such as cognitive-behavioral therapy (CBT) or medication management.
+        <span className="font-bold">End of Treatment Course:</span> By the end of a typical 6-week TMS treatment course, most individuals experience significant symptom relief, with lasting effects that extend several weeks beyond the completion of therapy.
     </p>
     
-    <p class="font-bold">Maintenance Sessions:</p>
+    <p className="font-bold">Long-Term Benefits:</p>
     <p>
-        <span class="font-bold">Booster Treatments:</span> To sustain the benefits of TMS, some patients may opt for maintenance sessions after completing their initial treatment course. These booster sessions can be scheduled monthly or as needed based on individual response.
+        <span className="font-bold">Sustained Improvement:</span> Studies have shown that the positive effects of TMS can last anywhere from 6 months to a year post-treatment. Approximately 60% of patients maintain their symptom relief for several months after the initial treatment course.
+    </p>
+    <p>
+        <span className="font-bold">Extended Remission:</span> For some individuals, the benefits can extend even longer, especially when combined with other forms of therapy such as cognitive-behavioral therapy (CBT) or medication management.
+    </p>
+    
+    <p className="font-bold">Maintenance Sessions:</p>
+    <p>
+        <span className="font-bold">Booster Treatments:</span> To sustain the benefits of TMS, some patients may opt for maintenance sessions after completing their initial treatment course. These booster sessions can be scheduled monthly or as needed based on individual response.
     </p>
 </div>
 `
@@ -305,18 +305,18 @@ const allTest = [
         name: "What are the advantages of TMS treatment over medication?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         While medications are a cornerstone in treating many mental health conditions and can be highly effective for numerous individuals, TMS offers an additional option for those seeking a non-medication-based approach or who have not fully responded to traditional treatments.
     </p>
     <p>
-        <span class="font-bold">No Systemic Side Effects:</span> Unlike antidepressants, TMS does not introduce chemicals into your body, eliminating the risk of systemic side effects such as weight gain, fatigue, or gastrointestinal issues.
+        <span className="font-bold">No Systemic Side Effects:</span> Unlike antidepressants, TMS does not introduce chemicals into your body, eliminating the risk of systemic side effects such as weight gain, fatigue, or gastrointestinal issues.
     </p>
     <p>
-        <span class="font-bold">No Risk of Dependency:</span> Unlike some medications, TMS does not carry a risk of dependency or withdrawal symptoms.
+        <span className="font-bold">No Risk of Dependency:</span> Unlike some medications, TMS does not carry a risk of dependency or withdrawal symptoms.
     </p>
     <p>
-        <span class="font-bold">Natural Approach:</span> TMS utilizes magnetic pulses to stimulate brain activity, aligning with those who prefer a medication-free treatment option.
+        <span className="font-bold">Natural Approach:</span> TMS utilizes magnetic pulses to stimulate brain activity, aligning with those who prefer a medication-free treatment option.
     </p>
 </div>
 `
@@ -326,27 +326,27 @@ const allTest = [
         name: "What are the benefits of TMS over Electroconvulsive Therapy (ECT)?",
         icon: "/iconsNew2/tms.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        <span class="font-bold">No Anesthesia Required:</span> Unlike ECT, which necessitates general anesthesia, TMS is performed while the patient is fully awake and alert. This eliminates the risks associated with anesthesia and allows for a more comfortable treatment experience.
+        <span className="font-bold">No Anesthesia Required:</span> Unlike ECT, which necessitates general anesthesia, TMS is performed while the patient is fully awake and alert. This eliminates the risks associated with anesthesia and allows for a more comfortable treatment experience.
     </p>
     <p>
-        <span class="font-bold">No Need for Medication:</span> TMS does not require the use of sedatives or muscle relaxants, reducing the complexity and preparation involved in the procedure.
+        <span className="font-bold">No Need for Medication:</span> TMS does not require the use of sedatives or muscle relaxants, reducing the complexity and preparation involved in the procedure.
     </p>
     <p>
-        <span class="font-bold">Cognitive Function Preservation:</span> ECT is often associated with cognitive side effects, including memory loss and confusion. TMS, on the other hand, has a significantly lower risk of cognitive impairment, allowing patients to maintain their daily cognitive functions during and after treatment.
+        <span className="font-bold">Cognitive Function Preservation:</span> ECT is often associated with cognitive side effects, including memory loss and confusion. TMS, on the other hand, has a significantly lower risk of cognitive impairment, allowing patients to maintain their daily cognitive functions during and after treatment.
     </p>
     <p>
-        <span class="font-bold">Less Physical Discomfort:</span> TMS may cause mild scalp discomfort or headache during treatment sessions, but these side effects are typically transient and far less severe than the side effects associated with ECT.
+        <span className="font-bold">Less Physical Discomfort:</span> TMS may cause mild scalp discomfort or headache during treatment sessions, but these side effects are typically transient and far less severe than the side effects associated with ECT.
     </p>
     <p>
-        <span class="font-bold">Lower Risk of Physical Complications:</span> ECT carries risks such as cardiovascular complications and requires careful medical supervision. TMS has a much safer profile with fewer physical health risks, making it suitable for a broader range of patients.
+        <span className="font-bold">Lower Risk of Physical Complications:</span> ECT carries risks such as cardiovascular complications and requires careful medical supervision. TMS has a much safer profile with fewer physical health risks, making it suitable for a broader range of patients.
     </p>
     <p>
-        <span class="font-bold">No Induced Seizures:</span> While ECT deliberately induces seizures to achieve therapeutic effects, TMS does not induce seizures, further enhancing its safety and acceptability.
+        <span className="font-bold">No Induced Seizures:</span> While ECT deliberately induces seizures to achieve therapeutic effects, TMS does not induce seizures, further enhancing its safety and acceptability.
     </p>
     <p>
-        <span class="font-bold">Immediate Return to Activities:</span> After a TMS session, patients can immediately resume their normal activities without the grogginess or disorientation often experienced after ECT treatments.
+        <span className="font-bold">Immediate Return to Activities:</span> After a TMS session, patients can immediately resume their normal activities without the grogginess or disorientation often experienced after ECT treatments.
     </p>
 </div>
 `
@@ -356,7 +356,7 @@ const allTest = [
         name: "Is TMS safe for those who are currently taking antidepressant medication?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         Combining Transcranial Magnetic Stimulation (TMS) with antidepressant medications is safe. By addressing both the chemical and neural aspects of depression or other psychological conditions, this integrated strategy provides a more holistic pathway to mental wellness.
     </p>
@@ -364,19 +364,19 @@ const allTest = [
         Combining TMS with antidepressant medications is often beneficial in the following situations:
     </p>
     <p>
-        <span class="font-bold">Treatment-Resistant Depression:</span> When traditional medications haven't provided sufficient relief.
+        <span className="font-bold">Treatment-Resistant Depression:</span> When traditional medications haven't provided sufficient relief.
     </p>
     <p>
-        <span class="font-bold">Partial Response to Medications:</span> To address lingering symptoms that medications alone may not fully resolve.
+        <span className="font-bold">Partial Response to Medications:</span> To address lingering symptoms that medications alone may not fully resolve.
     </p>
     <p>
-        <span class="font-bold">Enhancing Treatment Efficacy:</span> For a more comprehensive approach targeting both chemical and neural aspects of depression.
+        <span className="font-bold">Enhancing Treatment Efficacy:</span> For a more comprehensive approach targeting both chemical and neural aspects of depression.
     </p>
     <p>
-        <span class="font-bold">Reducing Medication Dosage:</span> To minimize side effects while maintaining therapeutic benefits.
+        <span className="font-bold">Reducing Medication Dosage:</span> To minimize side effects while maintaining therapeutic benefits.
     </p>
     <p>
-        <span class="font-bold">Addressing Multiple Symptoms:</span> When dealing with co-occurring conditions like anxiety or OCD.
+        <span className="font-bold">Addressing Multiple Symptoms:</span> When dealing with co-occurring conditions like anxiety or OCD.
     </p>
     <p>
         At MindfulTMS, our experienced team is dedicated to creating personalized treatment plans that may include the combination of therapy, TMS, and medication. We prioritize your safety, well-being, and long-term mental health, ensuring you receive comprehensive care tailored to your unique needs.
@@ -389,39 +389,39 @@ const allTest = [
         name: "Who should not have TMS treatment?",
         icon: "/iconsNew2/tms.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         TMS is not for those with:
     </p>
     <p>
-        <span class="font-bold">Individuals with Metal Implants or Devices in the Head or Neck</span><br>
-        <span class="font-semibold">Examples:</span> Cochlear implants, deep brain stimulators, metallic buckles or pins from surgical procedures.<br>
-        <span class="font-semibold">Reason:</span> Strong magnetic fields used in TMS can interact with metal objects near the treatment area.
+        <span className="font-bold">Individuals with Metal Implants or Devices in the Head or Neck</span><br>
+        <span className="font-semibold">Examples:</span> Cochlear implants, deep brain stimulators, metallic buckles or pins from surgical procedures.<br>
+        <span className="font-semibold">Reason:</span> Strong magnetic fields used in TMS can interact with metal objects near the treatment area.
     </p>
     <p>
-        <span class="font-bold">History of Seizure Disorders</span><br>
-        <span class="font-semibold">Details:</span> Individuals with a history of seizures or epilepsy.<br>
-        <span class="font-semibold">Reason:</span> Although rare, TMS carries a slight risk of inducing seizures.
+        <span className="font-bold">History of Seizure Disorders</span><br>
+        <span className="font-semibold">Details:</span> Individuals with a history of seizures or epilepsy.<br>
+        <span className="font-semibold">Reason:</span> Although rare, TMS carries a slight risk of inducing seizures.
     </p>
     <p>
-        <span class="font-bold">Active Metallic Implants Like Pacemakers</span><br>
-        <span class="font-semibold">Examples:</span> Pacemakers, defibrillators, and other cardiac devices.<br>
-        <span class="font-semibold">Reason:</span> Magnetic fields can interfere with the functioning of these life-sustaining devices.
+        <span className="font-bold">Active Metallic Implants Like Pacemakers</span><br>
+        <span className="font-semibold">Examples:</span> Pacemakers, defibrillators, and other cardiac devices.<br>
+        <span className="font-semibold">Reason:</span> Magnetic fields can interfere with the functioning of these life-sustaining devices.
     </p>
     <p>
-        <span class="font-bold">Tattoos and Piercings in the Treatment Area</span><br>
-        <span class="font-semibold">Details:</span> Metallic elements in facial tattoos or piercings.<br>
-        <span class="font-semibold">Reason:</span> Metallic objects can interact with magnetic fields; removal or covering may be necessary.
+        <span className="font-bold">Tattoos and Piercings in the Treatment Area</span><br>
+        <span className="font-semibold">Details:</span> Metallic elements in facial tattoos or piercings.<br>
+        <span className="font-semibold">Reason:</span> Metallic objects can interact with magnetic fields; removal or covering may be necessary.
     </p>
     <p>
-        <span class="font-bold">Certain Neurological Conditions</span><br>
-        <span class="font-semibold">Examples:</span> Multiple Sclerosis (MS) with lesions in treated areas, active or untreated brain tumors near the stimulation site, recent unstable stroke.<br>
-        <span class="font-semibold">Reason:</span> These conditions may increase the risks associated with TMS.
+        <span className="font-bold">Certain Neurological Conditions</span><br>
+        <span className="font-semibold">Examples:</span> Multiple Sclerosis (MS) with lesions in treated areas, active or untreated brain tumors near the stimulation site, recent unstable stroke.<br>
+        <span className="font-semibold">Reason:</span> These conditions may increase the risks associated with TMS.
     </p>
     <p>
-        <span class="font-bold">Sensitivity to Magnetic Fields</span><br>
-        <span class="font-semibold">Details:</span> Known hypersensitivity or adverse reactions to magnetic stimulation.<br>
-        <span class="font-semibold">Reason:</span> Individuals may experience dizziness, discomfort, or other negative reactions.
+        <span className="font-bold">Sensitivity to Magnetic Fields</span><br>
+        <span className="font-semibold">Details:</span> Known hypersensitivity or adverse reactions to magnetic stimulation.<br>
+        <span className="font-semibold">Reason:</span> Individuals may experience dizziness, discomfort, or other negative reactions.
     </p>
 </div>
 `
@@ -431,7 +431,7 @@ const allTest = [
         name: "Will my insurance cover the TMS treatment?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         TMS is not covered by medical insurance in India for private clinics.
     </p>
@@ -452,14 +452,14 @@ const allTest = [
         name: "Is TMS for me?",
         icon: "/iconsNew2/tms.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         Currently, TMS therapy is FDA approved for the indication of Major Depressive Disorder, Obsessive Compulsive Disorder, Chronic Pain, Migraine, and Smoking Addiction. TMS should be strongly considered by patients who have failed to receive satisfactory improvement from prior antidepressant medications or have experienced intolerable side effects or choose to take a non-invasive option without medication.
     </p>
     <p>
         There is increasing evidence for the benefit of TMS in treating other off-label indications. Patients with the additional following conditions may benefit from TMS:
     </p>
-    <ul class="list-disc list-inside space-y-1">
+    <ul className="list-disc list-inside space-y-1">
         <li>Substance Addiction</li>
         <li>ADHD</li>
         <li>Anxiety</li>
@@ -479,34 +479,34 @@ const allTest = [
         name: "What are the results of TMS Therapy?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
-    <p class="font-bold text-base">Depression Relief</p>
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
+    <p className="font-bold text-base">Depression Relief</p>
     <p>
-        <span class="font-semibold">Response Rates:</span> About 70% of individuals with treatment-resistant depression (TRD) experience significant improvements in their symptoms after completing a TMS therapy course.
+        <span className="font-semibold">Response Rates:</span> About 70% of individuals with treatment-resistant depression (TRD) experience significant improvements in their symptoms after completing a TMS therapy course.
     </p>
     <p>
-        <span class="font-semibold">Remission Rates:</span> Approximately 40% of patients achieve full remission, meaning their depression symptoms are greatly reduced or no longer present.
-    </p>
-    
-    <p class="font-bold text-base">Anxiety Reduction</p>
-    <p>
-        <span class="font-semibold">Effectiveness:</span> Studies show that 60% of individuals with anxiety disorders report a noticeable decrease in anxiety symptoms following TMS treatment.
+        <span className="font-semibold">Remission Rates:</span> Approximately 40% of patients achieve full remission, meaning their depression symptoms are greatly reduced or no longer present.
     </p>
     
-    <p class="font-bold text-base">Obsessive-Compulsive Disorder (OCD) Improvement</p>
+    <p className="font-bold text-base">Anxiety Reduction</p>
     <p>
-        <span class="font-semibold">Symptom Reduction:</span> Around 50% of patients with OCD experience significant improvement in their symptoms after undergoing TMS therapy.
+        <span className="font-semibold">Effectiveness:</span> Studies show that 60% of individuals with anxiety disorders report a noticeable decrease in anxiety symptoms following TMS treatment.
     </p>
     
-    <p class="font-bold text-base">Key Outcomes:</p>
+    <p className="font-bold text-base">Obsessive-Compulsive Disorder (OCD) Improvement</p>
     <p>
-        <span class="font-semibold">High Success Rates:</span> 70% of patients see significant improvements.
+        <span className="font-semibold">Symptom Reduction:</span> Around 50% of patients with OCD experience significant improvement in their symptoms after undergoing TMS therapy.
+    </p>
+    
+    <p className="font-bold text-base">Key Outcomes:</p>
+    <p>
+        <span className="font-semibold">High Success Rates:</span> 70% of patients see significant improvements.
     </p>
     <p>
-        <span class="font-semibold">Long-Lasting Effects:</span> Benefits can last from six months to over a year, especially with maintenance sessions.
+        <span className="font-semibold">Long-Lasting Effects:</span> Benefits can last from six months to over a year, especially with maintenance sessions.
     </p>
     <p>
-        <span class="font-semibold">Improved Quality of Life:</span> Most patients experience better daily functioning and emotional well-being.
+        <span className="font-semibold">Improved Quality of Life:</span> Most patients experience better daily functioning and emotional well-being.
     </p>
 </div>
 `
@@ -516,15 +516,15 @@ const allTest = [
         name: "What is rTMS? How is it different from TMS?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         rTMS stands for repetitive Transcranial Magnetic Stimulation, which is a specific type of TMS therapy. Today, most TMS treatments use rTMS.
     </p>
     <p>
-        <span class="font-bold">Transcranial Magnetic Stimulation (TMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
+        <span className="font-bold">Transcranial Magnetic Stimulation (TMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
     </p>
     <p>
-        <span class="font-bold">Repetitive TMS (rTMS):</span> Involves delivering multiple magnetic pulses in <span class="font-semibold">rapid succession</span> to the targeted brain area.
+        <span className="font-bold">Repetitive TMS (rTMS):</span> Involves delivering multiple magnetic pulses in <span className="font-semibold">rapid succession</span> to the targeted brain area.
     </p>
 </div>
 `
@@ -534,23 +534,23 @@ const allTest = [
         name: "What is DeepTMS? How is it different from rTMS?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-       <div class="text-gray-700 text-sm md:text-lg space-y-4">
+       <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         DeepTMS is another type of Transcranial Magnetic Stimulation (TMS) that some clinics promote as reaching deeper parts of the brain for enhanced treatment. However, our repetitive TMS (rTMS) using MagVenture equipment is just as effective without the extra marketing buzz.
     </p>
-    <p class="font-bold">Think of it like this:</p>
+    <p className="font-bold">Think of it like this:</p>
     <p>
         Imagine two smartphones that both allow you to make calls, send texts, and browse the internet reliably. One phone is called the "Standard Model," and the other is branded as the "SuperSmart." While the "SuperSmart" sounds more advanced, both phones perform the essential functions you need every day.
     </p>
-    <p class="font-bold">Key Points to Note:</p>
+    <p className="font-bold">Key Points to Note:</p>
     <p>
-        <span class="font-bold">Same Effectiveness:</span> Our rTMS treatments with MagVenture coils effectively target the key areas of the brain to reduce symptoms of depression and anxiety, just like DeepTMS.
+        <span className="font-bold">Same Effectiveness:</span> Our rTMS treatments with MagVenture coils effectively target the key areas of the brain to reduce symptoms of depression and anxiety, just like DeepTMS.
     </p>
     <p>
-        <span class="font-bold">Quality and Safety:</span> Both rTMS and DeepTMS use FDA-approved machines, ensuring that you receive safe and consistent treatment without the risks associated with lesser-quality equipment.
+        <span className="font-bold">Quality and Safety:</span> Both rTMS and DeepTMS use FDA-approved machines, ensuring that you receive safe and consistent treatment without the risks associated with lesser-quality equipment.
     </p>
     <p>
-        <span class="font-bold">Cost-Effective:</span> Without the additional branding for "Deep" features, our rTMS remains more affordable while still providing top-notch care.
+        <span className="font-bold">Cost-Effective:</span> Without the additional branding for "Deep" features, our rTMS remains more affordable while still providing top-notch care.
     </p>
 </div>
 `
@@ -560,15 +560,15 @@ const allTest = [
         name: "Why is it important to consider TMS with a provider that uses FDA-approved machines?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         Choosing a provider that uses FDA-approved TMS machines is crucial for several reasons:
     </p>
     <p>
-        <span class="font-bold">Safety and Quality:</span> FDA approval ensures that the TMS device has been rigorously tested for safety and effectiveness. Approved machines are designed to prevent issues like scalp burns and ensure consistent performance.
+        <span className="font-bold">Safety and Quality:</span> FDA approval ensures that the TMS device has been rigorously tested for safety and effectiveness. Approved machines are designed to prevent issues like scalp burns and ensure consistent performance.
     </p>
     <p>
-        <span class="font-bold">Risk Prevention:</span> Unapproved machines may be poorly designed, leading to potential risks such as <span class="font-semibold">scalp burns, ineffective treatment, or other adverse effects</span> that can compromise your well-being.
+        <span className="font-bold">Risk Prevention:</span> Unapproved machines may be poorly designed, leading to potential risks such as <span className="font-semibold">scalp burns, ineffective treatment, or other adverse effects</span> that can compromise your well-being.
     </p>
 </div>
 `
@@ -578,15 +578,15 @@ const allTest = [
         name: "Why is it important to complete a full TMS treatment plan?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        <span class="font-bold">Maximized Effectiveness:</span> TMS therapy typically involves a series of sessions (often 25-30) to ensure consistent stimulation and optimal therapeutic benefits.
+        <span className="font-bold">Maximized Effectiveness:</span> TMS therapy typically involves a series of sessions (often 25-30) to ensure consistent stimulation and optimal therapeutic benefits.
     </p>
     <p>
-        <span class="font-bold">Neuroplasticity:</span> Repeated stimulation promotes neuroplasticity—the brain's ability to reorganize and form new neural connections—leading to lasting improvements in mood and cognitive function.
+        <span className="font-bold">Neuroplasticity:</span> Repeated stimulation promotes neuroplasticity—the brain's ability to reorganize and form new neural connections—leading to lasting improvements in mood and cognitive function.
     </p>
     <p>
-        <span class="font-bold">Sustained Relief:</span> Completing the full course helps maintain symptom relief and reduces the likelihood of relapse.
+        <span className="font-bold">Sustained Relief:</span> Completing the full course helps maintain symptom relief and reduces the likelihood of relapse.
     </p>
 </div>
 `
@@ -596,18 +596,18 @@ const allTest = [
         name: "What happens if I take only 5 TMS sessions?",
         icon: "/iconsNew2/tms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         Undergoing only 5 TMS sessions may not provide the full therapeutic benefits of the treatment:
     </p>
     <p>
-        <span class="font-bold">Limited Effectiveness:</span> TMS therapy generally requires multiple sessions (usually 20-30) to achieve significant symptom relief. Five sessions are typically insufficient to induce the necessary neuroplastic changes in the brain that are needed for long-term benefits.
+        <span className="font-bold">Limited Effectiveness:</span> TMS therapy generally requires multiple sessions (usually 20-30) to achieve significant symptom relief. Five sessions are typically insufficient to induce the necessary neuroplastic changes in the brain that are needed for long-term benefits.
     </p>
     <p>
-        <span class="font-bold">Partial Symptom Improvement:</span> You might experience minimal or temporary relief, but the long-term benefits are unlikely to materialize without completing the full treatment course.
+        <span className="font-bold">Partial Symptom Improvement:</span> You might experience minimal or temporary relief, but the long-term benefits are unlikely to materialize without completing the full treatment course.
     </p>
     <p>
-        <span class="font-bold">Increased Risk of Relapse:</span> Incomplete treatment may lead to a higher chance of symptoms returning, as the brain may not have fully responded to the therapy.
+        <span className="font-bold">Increased Risk of Relapse:</span> Incomplete treatment may lead to a higher chance of symptoms returning, as the brain may not have fully responded to the therapy.
     </p>
 </div>
 `
@@ -617,24 +617,24 @@ const allTest = [
         name: "Is there an age limit for TMS?",
         icon: "/iconsNew2/therapy.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
         The US FDA has approved TMS for adolescents aged 15 and over for treating depression (MDD). For some conditions, TMS can be given to children aged 12 and over.
     </p>
     <p>
         Transcranial Magnetic Stimulation (TMS) is increasingly used in pediatric neurology and psychiatry and has been showing promise in treating conditions like cerebral palsy, ADHD, autism spectrum disorder (ASD).
     </p>
-    <p class="font-bold">Off Label Applications:</p>
+    <p className="font-bold">Off Label Applications:</p>
     <p>
-        <span class="font-bold">Cerebral Palsy (CP):</span> TMS improves motor function, reduces spasms, and helps with speech by enhancing brain plasticity.
+        <span className="font-bold">Cerebral Palsy (CP):</span> TMS improves motor function, reduces spasms, and helps with speech by enhancing brain plasticity.
     </p>
     <p>
-        <span class="font-bold">ADHD:</span> TMS enhances attention and executive function, offering an alternative to traditional treatments.
+        <span className="font-bold">ADHD:</span> TMS enhances attention and executive function, offering an alternative to traditional treatments.
     </p>
     <p>
-        <span class="font-bold">ASD:</span> TMS targets brain regions related to social and sensory processing, potentially improving social interaction and reducing repetitive behaviors.
+        <span className="font-bold">ASD:</span> TMS targets brain regions related to social and sensory processing, potentially improving social interaction and reducing repetitive behaviors.
     </p>
-    <p class="font-semibold">
+    <p className="font-semibold">
         Talk to a medical professional before considering rTMS for your child.
     </p>
 </div>
@@ -645,7 +645,7 @@ const allTest = [
         name: "Does TMS help with Major Depressive Disorder (MDD)?",
         icon: "/iconsNew2/depression.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is an effective treatment for Major Depressive Disorder (MDD), especially in individuals who have not responded to traditional antidepressant medications. Clinical studies report response rates of approximately 50-60%, with remission rates around 30-40%.
             </p>
@@ -657,7 +657,7 @@ const allTest = [
         name: "Does TMS help with Treatment-Resistant Depression?",
         icon: "/iconsNew2/resistance.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is particularly beneficial for treatment-resistant depression, offering relief to patients who have not found success with standard therapies. Approximately 50-60% of patients experience significant symptom improvement.
             </p>
@@ -669,7 +669,7 @@ const allTest = [
         name: "Does TMS help with Obsessive-Compulsive Disorder (OCD)?",
         icon: "/iconsNew2/ocd.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS has been shown to reduce the severity of obsessive-compulsive symptoms by targeting brain regions involved in habit formation and impulse control. Clinical trials indicate symptom relief in 30-40% of patients.
             </p>
@@ -681,7 +681,7 @@ const allTest = [
         name: "Does TMS help with Generalized Anxiety Disorder (GAD)?",
         icon: "/iconsNew2/anxiety.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, emerging research suggests that TMS can alleviate symptoms of Generalized Anxiety Disorder (GAD) by modulating neural circuits associated with stress responses. Around 40-50% of patients report symptom improvement.
             </p>
@@ -693,7 +693,7 @@ const allTest = [
         name: "Does TMS help with PTSD?",
         icon: "/iconsNew2/ptsd.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 TMS may help reduce PTSD symptoms by targeting brain areas involved in fear and memory processing. Approximately 35-45% of patients experience a reduction in intrusive thoughts and hyperarousal symptoms.
             </p>
@@ -705,7 +705,7 @@ const allTest = [
         name: "Does TMS help with Bipolar Disorder (Depressive Episodes)?",
         icon: "/iconsNew2/bipolar.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS can be effective in treating depressive episodes in individuals with Bipolar Disorder by enhancing mood-regulating brain activity. About 40-50% of patients experience symptom improvement.
             </p>
@@ -717,7 +717,7 @@ const allTest = [
         name: "Does TMS help with Schizophrenia (Auditory Hallucinations)?",
         icon: "/iconsNew2/schizophrenia.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS has been shown to reduce auditory hallucinations in schizophrenia by targeting the temporoparietal cortex. Approximately 30-40% of patients report a significant decrease in hallucination frequency.
             </p>
@@ -729,7 +729,7 @@ const allTest = [
         name: "Does TMS help with Attention-Deficit/Hyperactivity Disorder (ADHD)?",
         icon: "/iconsNew2/adhd.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, emerging studies suggest that TMS may improve attention and reduce hyperactivity symptoms in individuals with ADHD. Around 35-45% of patients experience noticeable improvements.
             </p>
@@ -741,7 +741,7 @@ const allTest = [
         name: "Does TMS help with Social Anxiety Disorder?",
         icon: "/iconsNew2/social-anxiety.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS may alleviate symptoms of Social Anxiety Disorder by targeting brain regions involved in fear and social processing. Initial studies have shown that approximately 30-40% of individuals experience a reduction in anxiety symptoms following TMS treatment.
             </p>
@@ -753,7 +753,7 @@ const allTest = [
         name: "Does TMS help with Anorexia Nervosa and Other Eating Disorders?",
         icon: "/iconsNew2/eating-disorders.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, preliminary research indicates that TMS can help reduce obsessive thoughts and improve mood in individuals with Anorexia Nervosa and other eating disorders by modulating neural circuits related to impulse control and body image. Response rates are promising but currently vary, with about 25-35% of patients showing significant improvement.
             </p>
@@ -765,7 +765,7 @@ const allTest = [
         name: "Does TMS help with Addiction (Substance Use Disorders)?",
         icon: "/iconsNew2/addiction.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS has been explored as a treatment for various substance use disorders by targeting brain regions associated with cravings and impulse control. Studies report that roughly 30-40% of patients experience reduced cravings and improved abstinence rates following TMS therapy.
             </p>
@@ -777,7 +777,7 @@ const allTest = [
         name: "Does TMS help with Autism Spectrum Disorder (ASD)?",
         icon: "/iconsNew2/asd.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, preliminary studies suggest that TMS may improve social, cognitive, and behavioral symptoms in individuals with Autism Spectrum Disorder (ASD) by enhancing neural connectivity and plasticity. However, evidence is still limited, with response rates around 20-30%, and further research is necessary.
             </p>
@@ -789,7 +789,7 @@ const allTest = [
         name: "Does TMS help with Migraine with Aura?",
         icon: "/iconsNew2/migraine.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS can help reduce the frequency and intensity of migraine attacks with aura by targeting the occipital cortex to interrupt migraine pathways. Clinical trials have shown that up to 58% of patients experience relief from migraine symptoms following TMS treatment.
             </p>
@@ -801,7 +801,7 @@ const allTest = [
         name: "Does TMS help with Chronic Pain?",
         icon: "/iconsNew2/chronic-pain.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is used to manage various chronic pain conditions, including fibromyalgia and neuropathic pain, by modulating pain-processing brain regions. Efficacy varies by condition, with approximately 30-50% of patients reporting significant pain relief. Outcomes can depend on the specific pain disorder and TMS protocol used.
             </p>
@@ -813,7 +813,7 @@ const allTest = [
         name: "Does TMS help with Tinnitus?",
         icon: "/iconsNew2/tinnitus.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS has been investigated as a treatment for tinnitus by targeting the auditory cortex to reduce the perception of ringing in the ears. Studies show that around 25-35% of tinnitus patients experience a noticeable decrease in symptoms following TMS therapy.
             </p>
@@ -825,7 +825,7 @@ const allTest = [
         name: "Does TMS help with Parkinson's Disease?",
         icon: "/iconsNew2/parkinsons.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, preliminary research suggests that TMS may improve motor symptoms and cognitive functions in Parkinson's Disease by stimulating motor and prefrontal regions. Response rates vary, with approximately 30-40% of patients experiencing improvement.
             </p>
@@ -837,7 +837,7 @@ const allTest = [
         name: "Does TMS help with Stroke Rehabilitation?",
         icon: "/iconsNew2/stroke-rehabilitation.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is used in stroke rehabilitation to enhance neuroplasticity and improve motor and cognitive recovery by stimulating affected brain areas. Clinical studies report that about 35-45% of stroke patients show significant functional improvements following TMS therapy.
             </p>
@@ -849,7 +849,7 @@ const allTest = [
         name: "Does TMS help with Alzheimer’s Disease and Other Dementias?",
         icon: "/iconsNew2/alzheimers-dementia.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, early research explores TMS for enhancing cognitive functions and slowing cognitive decline in Alzheimer’s Disease and other dementias by targeting memory-related brain regions. Preliminary studies indicate that up to 30% of patients may experience cognitive improvements, though evidence remains limited and more research is needed.
             </p>
@@ -861,7 +861,7 @@ const allTest = [
         name: "Does TMS help with Traumatic Brain Injury (TBI)?",
         icon: "/iconsNew2/tbi.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is being investigated for improving cognitive and motor functions post-Traumatic Brain Injury (TBI) by promoting neural plasticity. Initial studies suggest that approximately 30-40% of TBI patients benefit from enhanced cognitive performance and motor recovery following TMS treatment.
             </p>
@@ -873,7 +873,7 @@ const allTest = [
         name: "Does TMS help with Multiple Sclerosis (MS)?",
         icon: "/iconsNew2/ms.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS is explored as a treatment for managing symptoms of Multiple Sclerosis (MS), such as fatigue, pain, and spasticity, by modulating neural activity in affected brain regions. Response rates vary, with about 25-40% of MS patients experiencing symptom relief from TMS therapy.
             </p>
@@ -885,7 +885,7 @@ const allTest = [
         name: "Does TMS help with Huntington’s Disease?",
         icon: "/iconsNew2/huntingtons-disease.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, investigational studies suggest that TMS may help manage motor symptoms and improve cognitive function in Huntington’s Disease by stimulating relevant brain areas. Early research indicates that around 20-30% of patients may experience symptom improvements, though more comprehensive trials are needed.
             </p>
@@ -897,7 +897,7 @@ const allTest = [
         name: "Does TMS help with Tourette’s Syndrome?",
         icon: "/iconsNew2/tourettes.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, TMS has shown potential in reducing the frequency and severity of tics in individuals with Tourette’s Syndrome by targeting motor and prefrontal regions. Studies report that approximately 30-40% of patients experience a decrease in tic symptoms following TMS treatment.
             </p>
@@ -909,7 +909,7 @@ const allTest = [
         name: "Does TMS help with Restless Legs Syndrome (RLS)?",
         icon: "/iconsNew2/rls.png",
         detail: `
-        <div class="text-gray-700 text-sm md:text-lg space-y-4">
+        <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
                 Yes, limited studies suggest that TMS may alleviate symptoms of Restless Legs Syndrome (RLS) by stimulating sensory and motor pathways in the brain. Preliminary findings indicate that around 25-35% of RLS patients experience symptom relief, though further research is necessary to confirm efficacy.
             </p>
@@ -920,11 +920,11 @@ const allTest = [
         _id: 46,
         name: "For which conditions does TMS help?",
         icon: "/iconsNew2/rls.png",
-        detail: `<div class="text-gray-700 text-sm md:text-lg space-y-6">
+        detail: `<div className="text-gray-700 text-sm md:text-lg space-y-6">
   <!-- Psychological Conditions -->
   <div>
-    <h2 class="font-semibold text-lg mb-2">Psychological Conditions</h2>
-    <ol class="list-decimal pl-6 space-y-1">
+    <h2 className="font-semibold text-lg mb-2">Psychological Conditions</h2>
+    <ol className="list-decimal pl-6 space-y-1">
       <li>Major Depressive Disorder (MDD)</li>
       <li>Treatment-Resistant Depression</li>
       <li>Obsessive-Compulsive Disorder (OCD)</li>
@@ -942,8 +942,8 @@ const allTest = [
 
   <!-- Neurological Conditions -->
   <div>
-    <h2 class="font-semibold text-lg mb-2">Neurological Conditions</h2>
-    <ol class="list-decimal pl-6 space-y-1">
+    <h2 className="font-semibold text-lg mb-2">Neurological Conditions</h2>
+    <ol className="list-decimal pl-6 space-y-1">
       <li>Migraine with Aura</li>
       <li>Chronic Pain</li>
       <li>Tinnitus</li>
@@ -959,7 +959,7 @@ const allTest = [
   </div>
 
   <!-- Note -->
-  <p class="text-sm md:text-lg italic">
+  <p className="text-sm md:text-lg italic">
     While some treatments with specific machines are FDA approved, treatments for some conditions are still under investigation/clinical research. However, these have shown positive results.
   </p>
 </div>

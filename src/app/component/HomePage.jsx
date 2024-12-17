@@ -237,7 +237,7 @@ const HomePage = ({ allSection }) => {
                 {/* wy tms */}
                 <section className='py-8 px-4 mb-3'>
                     <div className='mb-8'>
-                    <h1 class="text-[27px] whitespace-nowrap text-center ">Why choose <span class="font-semibold">MindfulTMS?</span></h1>
+                    <h1 className="text-[27px] whitespace-nowrap text-center ">Why choose <span className="font-semibold">MindfulTMS?</span></h1>
                         <div className='mt-2' dangerouslySetInnerHTML={{ __html: allSection?.section4?.para }} />
                     </div>
                     <div className='flex justify-center'>

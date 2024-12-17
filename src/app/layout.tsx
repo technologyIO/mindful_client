@@ -1,16 +1,20 @@
 "use client";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('@/components/Navbar'));
+const Footer = dynamic(() => import('@/components/Footer'));
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/components/Footer";
 import { usePathname } from "next/navigation";
 import AdsNavbar from "@/components/AdsNavbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { metadata } from "./layoutWithMetadata";  // Import the metadata file
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -31,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        
         <title>{getTitle()}</title>
         <link rel="icon" href={metadata.icons.icon} />
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
@@ -61,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       }}
     />
       </head>
-      <body className={inter.className}>
+      <body >
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5HDDPXG"

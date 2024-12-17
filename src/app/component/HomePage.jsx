@@ -8,10 +8,15 @@ import  Container  from '@mui/material/Container';
 // import TestimonialComponents2 from './TestimonialComponents2';
 import Image from 'next/image';
 // import Footer from '@/components/Footer'
-import TestimonialComponentSlide from './TestimonialComponentSlide';
-import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
-import CounterComponent from './CounterComponent';
-import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
+const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
+const OurDoctorSection = React.lazy(() => import('../clinicLocation/[city]/OurDoctorSection'));
+const CounterComponent = React.lazy(() => import('./CounterComponent'));
+
+// import TestimonialComponentSlide from './TestimonialComponentSlide';
+// import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+// import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
+// import CounterComponent from './CounterComponent';
 
 // Dynamically import non-critical components with SSR enabled
 // const CounterComponent = dynamic(() => import('./CounterComponent'));
@@ -55,7 +60,7 @@ const HomePage = ({ allSection }) => {
                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
                         <div className='flex justify-center w-full  mb-7'>
-                            <Image height={100} width={100}   className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
+                            <Image layout="intrinsic" height={100} width={100}   className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>
@@ -81,19 +86,19 @@ const HomePage = ({ allSection }) => {
                                     <div className='mb-6'>
                                         <div className='flex gap-5 mb-2 items-center justify-center'>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                <Image layout="intrinsic" height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                             </div>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                <Image layout="intrinsic" height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
                                             {/* <div className='flex'>
-                                                <Image height={100} width={100}  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
+                                                <Image layout="intrinsic" height={100} width={100}  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
                                             </div> */}
 
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <Image height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <Image layout="intrinsic" height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>
@@ -137,7 +142,7 @@ const HomePage = ({ allSection }) => {
                     <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
                         {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section2?.html1 }} /> */}
                         <div>
-                            <Image height={500} width={500}  alt='img' className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
+                            <Image layout="intrinsic" height={500} width={500}  alt='img' className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                         </div>
 
                     </div>
@@ -162,7 +167,7 @@ const HomePage = ({ allSection }) => {
                                         {
                                             service?.array?.map((i, index) => (
                                                 <Link href={servicesIcon[index]?.link} key={index} className='flex flex-col cursor-pointer justify-center items-center mb-2'>
-                                                    <Image height={100} width={100} alt='img' src={servicesIcon[index]?.icon} className='w-[80px] h-[80px] mb-4' />
+                                                    <Image layout="intrinsic" height={100} width={100} alt='img' src={servicesIcon[index]?.icon} className='w-[80px] h-[80px] mb-4' />
                                                     <p className='text- font-semibold text-center'>{servicesIcon[index]?.name}</p>
                                                 </Link>
                                             ))
@@ -187,7 +192,7 @@ const HomePage = ({ allSection }) => {
                         {/* hide this on medium and show alternate */}
                         <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                             <div className=''>
-                                <Image height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
+                                <Image layout="intrinsic" height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section3?.box?.para }} /> */}
@@ -245,7 +250,7 @@ const HomePage = ({ allSection }) => {
                             {
                                 allSection?.section4?.services?.map((service, index) => (
                                     <div key={index} className='flex flex-col justify-center  items-center'>
-                                        <Image height={100} width={100} alt='img' className='w-[64px] h-[64px] text-center' src={service?.icon} />
+                                        <Image layout="intrinsic" height={100} width={100} alt='img' className='w-[64px] h-[64px] text-center' src={service?.icon} />
                                         <p className='text-md font-semibold mt-3'>{service?.text}</p>
                                     </div>
                                 ))
@@ -286,7 +291,7 @@ const HomePage = ({ allSection }) => {
                         backgroundPosition: 'center', // This centers the background image
                     }}>
                         <div></div>
-                        {/* <Image height={100} width={100}  className='w-full object-cover' src='/home/banner02.svg' /> */}
+                        {/* <Image layout="intrinsic" height={100} width={100}  className='w-full object-cover' src='/home/banner02.svg' /> */}
                         <div className='flex flex-col justify-center items-end mr-[70px] lg:mr-[100px]'>
                             <div className='flex flex-col justify-center  items-end px-8'>
                                 <h1 className=' text-6xl mb-5 text-white  text-end font-sans font-semibold '>
@@ -318,7 +323,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <Image height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527"  />
+                                <Image layout="intrinsic" height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527"  />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -367,7 +372,7 @@ const HomePage = ({ allSection }) => {
                                                     <Link href={servicesIcon[index]?.link} key={index} className='flex cursor-pointer flex-col justify-center  items-center text-center '>
                                                         {/* <div className='w-[164px] h-[164px] rounded-full bg-[#EF6623] mb-3 '></div> */}
                                                         <div className='w-[150px] h-[150px] flex justify-center'>
-                                                            <Image height={100} width={100} alt='img'  src={servicesIcon[index]?.icon} className=' p-4 h-full w-full object-contain    mb-3 ' />
+                                                            <Image layout="intrinsic" height={100} width={100} alt='img'  src={servicesIcon[index]?.icon} className=' p-4 h-full w-full object-contain    mb-3 ' />
                                                         </div>
                                                         <p className='text-xl text-center font-semibold'>{i?.name}</p>
                                                     </Link>
@@ -397,7 +402,7 @@ const HomePage = ({ allSection }) => {
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* left image */}
                                 <div className="md">
-                                    <Image 
+                                    <Image layout="intrinsic" 
                                         src="https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"
                                         alt="TMS Treatment"
                                         width={600}
@@ -476,7 +481,7 @@ const HomePage = ({ allSection }) => {
                                 {
                                     allSection?.section4?.services?.map((service, index) => (
                                         <div key={index} className='flex flex-col justify-center  items-center'>
-                                            <Image height={100} width={100}  className='w-[100px] h-[100px] text-center' src={service?.icon} />
+                                            <Image layout="intrinsic" height={100} width={100}  className='w-[100px] h-[100px] text-center' src={service?.icon} />
                                             <p className='text-xl font-semibold mt-3'>{service?.text}</p>
                                         </div>
                                     ))

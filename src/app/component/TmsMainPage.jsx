@@ -101,7 +101,7 @@ const TmsMainPage = () => {
                             <h3 className="text-3xl font-bold text-gray-800 mb-4 text-center">
                                 {`Repetitive Transcranial Magnetic Stimulation (rTMS)`}
                             </h3>
-                            <p className='text-gray-600 text-center'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS .We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
+                            <p className='text-gray-600 text-center'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                             <div className="py-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-cover h-full" />
                             </div>
@@ -272,7 +272,7 @@ const TmsMainPage = () => {
                             {/* here */}
                             <Container maxWidth="lg">
                                 <div className='flex flex-row justify-between items-center gap-4'>
-                                    <p className='text-gray-600 text-xl w-2/3'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS .We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
+                                    <p className='text-gray-600 text-xl w-2/3'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                                     <div className="py-5 md:h-[360px]">
                                         <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-contain h-full" />
                                     </div>

@@ -24,7 +24,7 @@ const links = [
   // },
   {
     id: 2,
-    title: 'TMS',
+    title: 'rTMS',
     path: '/pages/tms',
     active: '/pages/tms',
   },

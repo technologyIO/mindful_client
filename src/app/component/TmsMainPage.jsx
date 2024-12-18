@@ -99,18 +99,18 @@ const TmsMainPage = () => {
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
                             <h3 className="text-3xl font-bold text-gray-800 mb-4 text-center">
-                                {`Transcranial Magnetic Stimulation (TMS)`}
+                                {`Repetitive Transcranial Magnetic Stimulation (rTMS)`}
                             </h3>
-                            <p className='text-gray-600 text-center'>Transcranial Magnetic Stimulation (TMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions.  </p>
+                            <p className='text-gray-600 text-center'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS .We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                             <div className="py-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-cover h-full" />
                             </div>
                             <p className="text-gray-700 text-md text-center mb-2">
-                                {`TMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
+                                {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
 
                             </p>
                             <p className="text-gray-700 text-md text-center mb-4">
-                                {`For example, in the case of depression, the brain activity is decreased. With targeted TMS, the activity in these areas increases.  `}
+                                {`For example, in the case of depression, the brain activity is decreased. With targeted rTMS, the activity in these areas increases.  `}
 
                             </p>
                             <div className="pt-5 md:h-[360px]">
@@ -125,7 +125,7 @@ const TmsMainPage = () => {
                             {/* FDA Approved Conditions */}
                             <div className='mb-10'>
                                 <h3 className="text-3xl font-bold text-center text-gray-800 mb-4 leading-tight">
-                                    {`TMS has been effective in treating`}
+                                    {`rTMS has been effective in treating`}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {fourConditions.map((condition) => (
@@ -164,10 +164,10 @@ const TmsMainPage = () => {
                         {/* Is TMS for me Section */}
                         <div className="bg-white   px-4 py-8 lg:p-10 ">
                             <h3 className="text-3xl text-center mb-6 font-bold text-[#f6881f] sm:text-xl">
-                                {`Is TMS for me?`}
+                                {`Is rTMS for me?`}
                             </h3>
                             <p className="text-start  text-gray-700 mb-5">
-                                Consider TMS if you
+                                Consider rTMS if you
                             </p>
                             <ul className=" list-disc text-gray-700 text-md px-5">
                                 <li className='mb-5'>
@@ -186,7 +186,7 @@ const TmsMainPage = () => {
                                     <strong>{`Open to Innovative Methods:`}</strong> {` You are open to innovative treatment methods. `}
                                 </li>
                                 <li className='mb-5'>
-                                    <strong>{`Complement Current Treatment`}</strong> {` You are looking to supplement TMS to your current therapy and/or medication treatment plan  `}
+                                    <strong>{`Complement Current Treatment`}</strong> {` You are looking to supplement rTMS to your current therapy and/or medication treatment plan  `}
                                 </li>
                             </ul>
 
@@ -199,7 +199,7 @@ const TmsMainPage = () => {
                         {/* How TMS Works Section */}
                         <div className=" p-6 lg:p-10   bg-primary-div">
                             <h3 className="text-2xl font-semibold text-gray-800 mb-3 text-center">
-                                {`How TMS works?`}
+                                {`How rTMS works?`}
                             </h3>
                             <div className="mb-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
@@ -210,7 +210,7 @@ const TmsMainPage = () => {
                         </p> */}
                                 <ul className="list-decimal list-inside  text-gray-700 text-md">
                                     <li className=''>
-                                        <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the TMS coil on your head, targeting the specific brain area based on your condition. `}
+                                        <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         <div className='py-5'>
                                             <Image alt="img"  width={500} height={500}  src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />
                                         </div>
@@ -267,12 +267,12 @@ const TmsMainPage = () => {
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
                             <h3 className="text-4xl font-bold text-gray-800 mb-4 text-center">
-                                {`Transcranial Magnetic Stimulation (TMS)`}
+                                {`Repetitive Transcranial Magnetic Stimulation (rTMS)`}
                             </h3>
                             {/* here */}
                             <Container maxWidth="lg">
                                 <div className='flex flex-row justify-between items-center gap-4'>
-                                    <p className='text-gray-600 text-xl w-2/3'>Transcranial Magnetic Stimulation (TMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions.  </p>
+                                    <p className='text-gray-600 text-xl w-2/3'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS .We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                                     <div className="py-5 md:h-[360px]">
                                         <Image alt="img"  width={500} height={500}  src="https://mindfultms1.s3.amazonaws.com/What+is+TMS+(1).png" className="object-contain h-full" />
                                     </div>
@@ -283,11 +283,11 @@ const TmsMainPage = () => {
                                     </div>
                                     <div className='w-2/3'>
                                         <p className="text-gray-700 text-xl text-center mb-2">
-                                            {`TMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
+                                            {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
 
                                         </p>
                                         <p className="text-gray-700 text-xl text-center mb-4">
-                                            {`For example, in the case of depression, the brain activity is decreased. With targeted TMS, the activity in these areas increases.  `}
+                                            {`For example, in the case of depression, the brain activity is decreased. With targeted rTMS, the activity in these areas increases.  `}
 
                                         </p>
                                     </div>
@@ -304,7 +304,7 @@ const TmsMainPage = () => {
                                 {/* FDA Approved Conditions */}
                             <div className='mb-10'>
                                 <h3 className="text-4xl font-bold text-center text-gray-800 mb-6 leading-tight">
-                                    {`TMS has been effective in treating`}
+                                    {`rTMS has been effective in treating`}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-2 ">
                                     {fourConditions.map((condition) => (
@@ -341,14 +341,14 @@ const TmsMainPage = () => {
                             </div>
                             </Container>
                         </div>
-                        {/* Is TMS for me Section */}
+                        {/* Is rTMS for me Section */}
                         <div className="bg-white   px-4 py-8 lg:p-10 ">
                            <Container maxWidth="lg">
                            <h3 className="text-4xl text-center mb-6 font-bold text-[#f6881f] ">
-                                {`Is TMS for me?`}
+                                {`Is rTMS for me?`}
                             </h3>
                             <p className="text-start  text-gray-700 mb-5">
-                                Consider TMS if you
+                                Consider rTMS if you
                             </p>
                             <ul className=" list-disc text-gray-700 text-md px-5">
                                 <li className='mb-5'>
@@ -367,7 +367,7 @@ const TmsMainPage = () => {
                                     <strong>{`Open to Innovative Methods:`}</strong> {` You are open to innovative treatment methods. `}
                                 </li>
                                 <li className='mb-5'>
-                                    <strong>{`Complement Current Treatment`}</strong> {` You are looking to supplement TMS to your current therapy and/or medication treatment plan  `}
+                                    <strong>{`Complement Current Treatment`}</strong> {` You are looking to supplement rTMS to your current therapy and/or medication treatment plan  `}
                                 </li>
                             </ul>
 
@@ -382,7 +382,7 @@ const TmsMainPage = () => {
                         <div className=" p-6 lg:p-10   bg-primary-div">
                            <Container maxWidth="lg">
                            <h3 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-                                {`How TMS works?`}
+                                {`How rTMS works?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
                                 <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
@@ -394,7 +394,7 @@ const TmsMainPage = () => {
                                 <ul className="list-decimal list-inside  text-gray-700 text-md">
                                     <li className='text-2xl'>
                                         
-                                        <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the TMS coil on your head, targeting the specific brain area based on your condition. `}
+                                        <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         
                                         <div className='py-5 h-[400px] flex justify-center'>
                                             <Image alt="img"  width={500} height={500}  className='h-full' src='https://mindfultms1.s3.amazonaws.com/Targets+Specific+Brain+Areas+img.png' />

@@ -120,56 +120,56 @@ export default TmsPageFaqs;
 const allTest = [
     {
         _id: 0,
-        name: "What is TMS?",
+        name: "What is rTMS?",
         icon: "/iconsNew2/therapy.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg">
             <p className="mb-4">
-                <span className="font-bold">TMS</span> is a non-invasive form of neuromodulation, which stimulates neurons in the prefrontal cortex of your brain by delivering highly focused MRI-strength magnetic pulses.
+                <span className="font-bold">rTMS</span> is a non-invasive form of neuromodulation, which stimulates neurons in the prefrontal cortex of your brain by delivering highly focused MRI-strength magnetic pulses.
             </p>
             <p className="mb-4">
-                TMS was FDA cleared in 2008 for the treatment of depression and in 2018 for the treatment of OCD in patients who have not benefited or had limited benefit from prior medication.
+                rTMS was FDA cleared in 2008 for the treatment of depression and in 2018 for the treatment of OCD in patients who have not benefited or had limited benefit from prior medication.
             </p>
             <p className="mb-4">
-                Patients undergo treatment five times weekly for approximately six weeks, although it can vary on an individual basis. Patients remain awake and alert throughout the treatment, rendering TMS non-invasive and virtually free of adverse effects.
+                Patients undergo treatment five times weekly for approximately six weeks, although it can vary on an individual basis. Patients remain awake and alert throughout the treatment, rendering rTMS non-invasive and virtually free of adverse effects.
             </p>
         </div>`
     },
     {
         _id: 1,
-        name: "How does TMS work?",
+        name: "How does rTMS work?",
         icon: "/iconsNew2/psychiatry.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg">
             <p className="mb-4">
-                The process is simple. The nerve cells that are responsible for mood are activated using electromagnetic stimulation using the TMS coil.  These magnetic fields are similar to those produced by a magnetic resonance imaging (MRI) machine. They do not affect the whole brain, as they only reach a few centimeters into the brain directly beneath the treatment coil. This provides an accurately focused and targeted treatment.
+                The process is simple. The nerve cells that are responsible for mood are activated using electromagnetic stimulation using the rTMS coil.  These magnetic fields are similar to those produced by a magnetic resonance imaging (MRI) machine. They do not affect the whole brain, as they only reach a few centimeters into the brain directly beneath the treatment coil. This provides an accurately focused and targeted treatment.
             </p>
         </div>`
     },
     {
         _id: 2,
-        name: "Will TMS help treatment-resistant depression?",
+        name: "Will rTMS help treatment-resistant depression?",
         icon: "/iconsNew2/assessment.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg">
             <p className="mb-4">
-                Yes. TMS is equally helpful for those with treatment-resistant depression, offering a new approach to manage depression.
+                Yes. rTMS is equally helpful for those with treatment-resistant depression, offering a new approach to manage depression.
             </p>
         </div>`
     },
     {
         _id: 3,
-        name: "Is TMS used only for treating depression?",
+        name: "Is rTMS used only for treating depression?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg">
             <p className="mb-4">
-                No. This revolutionary technology is used to treat a variety of diseases and disorders. In addition to Depression, TMS is being used to treat Anxiety, OCD, ADHD, schizophrenia, PTSD, tinnitus, multiple sclerosis, ALS, motor disability after a stroke, Alzheimer’s and Parkinson’s and several other psychological and neurological conditions</p>
+                No. This revolutionary technology is used to treat a variety of diseases and disorders. In addition to Depression, rTMS is being used to treat Anxiety, OCD, ADHD, schizophrenia, PTSD, tinnitus, multiple sclerosis, ALS, motor disability after a stroke, Alzheimer’s and Parkinson’s and several other psychological and neurological conditions</p>
         </div>`
     },
     {
         _id: 4,
-        name: "Who responds the best to TMS treatment?",
+        name: "Who responds the best to rTMS treatment?",
         icon: "/iconsNew2/therapy.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
@@ -193,49 +193,49 @@ const allTest = [
     },
     {
         _id: 5,
-        name: "Does TMS treatment have any side effects?",
+        name: "Does rTMS treatment have any side effects?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        TMS treatments have been performed with virtually no complications or side effects.
+        rTMS treatments have been performed with virtually no complications or side effects.
     </p>
     <p>
         The most commonly reported side effect related to treatment was mild to moderate scalp discomfort during treatment sessions. Scalp discomfort occurs less frequently after the first week of treatment.
     </p>
     <p>
-        TMS therapy also produces a clicking sound, so earplugs are provided for each treatment.
+        rTMS therapy also produces a clicking sound, so earplugs are provided for each treatment.
     </p>
     <p>
-        In clinical trials, more than 10,000 TMS treatments demonstrated its safety with no occurrence of seizures. However, there is a small risk of a seizure occurring during treatment, estimated at 1 in 10,000. This risk is no greater than what has been observed with oral antidepressant medications.
+        In clinical trials, more than 10,000 rTMS treatments demonstrated its safety with no occurrence of seizures. However, there is a small risk of a seizure occurring during treatment, estimated at 1 in 10,000. This risk is no greater than what has been observed with oral antidepressant medications.
     </p>
     <p className="font-bold">
         Note:
     </p>
     <p>
-        No side effects such as weight gain, sexual problems, stomach problems, sleepiness, or dry mouth were seen during clinical trials. TMS does not impair memory or the ability to concentrate. Like any treatment option, you and our doctor will discuss the risks and success of TMS therapy and work together to find the most appropriate treatment option for you.
+        No side effects such as weight gain, sexual problems, stomach problems, sleepiness, or dry mouth were seen during clinical trials. rTMS does not impair memory or the ability to concentrate. Like any treatment option, you and our doctor will discuss the risks and success of rTMS therapy and work together to find the most appropriate treatment option for you.
     </p>
 </div>
 `
     },
     {
         _id: 6,
-        name: "Will TMS treatment lead to memory loss?",
+        name: "Will rTMS treatment lead to memory loss?",
         icon: "/iconsNew2/therapy.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        No. There has not been any memory loss reported to date with TMS.
+        No. There has not been any memory loss reported to date with rTMS.
     </p>
     <p>
-        Memory loss typically occurs with Electroconvulsive Therapy (ECT), while TMS is non-invasive and doesn’t require the usage of sedatives.
+        Memory loss typically occurs with Electroconvulsive Therapy (ECT), while rTMS is non-invasive and doesn’t require the usage of sedatives.
     </p>
 </div>
 `
     },
     {
         _id: 7,
-        name: "What is the duration of TMS treatment?",
+        name: "What is the duration of rTMS treatment?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg">
@@ -246,12 +246,12 @@ const allTest = [
     },
     {
         _id: 8,
-        name: "What is the TMS Treatment Process?",
+        name: "What is the rTMS Treatment Process?",
         icon: "/iconsNew2/therapy.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        During a TMS treatment session, you will sit comfortably in a reclined treatment chair with your head supported in a relaxed position. The magnetic coil is typically placed on the left front side of your head, targeting an area of the brain known as the Left Dorsolateral Prefrontal Cortex (DLPFC).
+        During a rTMS treatment session, you will sit comfortably in a reclined treatment chair with your head supported in a relaxed position. The magnetic coil is typically placed on the left front side of your head, targeting an area of the brain known as the Left Dorsolateral Prefrontal Cortex (DLPFC).
     </p>
     <p>
         Here’s what happens during the session:
@@ -273,21 +273,21 @@ const allTest = [
     },
     {
         _id: 9,
-        name: "How long will the positive effect of TMS treatment last?",
+        name: "How long will the positive effect of rTMS treatment last?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p className="font-bold">Immediate to Short-Term Benefits:</p>
     <p>
-        <span className="font-bold">Initial Response:</span> Many patients begin to notice improvements in their symptoms within the first few weeks of starting TMS treatment. These early changes can include reduced feelings of depression, anxiety, or other targeted symptoms.
+        <span className="font-bold">Initial Response:</span> Many patients begin to notice improvements in their symptoms within the first few weeks of starting rTMS treatment. These early changes can include reduced feelings of depression, anxiety, or other targeted symptoms.
     </p>
     <p>
-        <span className="font-bold">End of Treatment Course:</span> By the end of a typical 6-week TMS treatment course, most individuals experience significant symptom relief, with lasting effects that extend several weeks beyond the completion of therapy.
+        <span className="font-bold">End of Treatment Course:</span> By the end of a typical 6-week rTMS treatment course, most individuals experience significant symptom relief, with lasting effects that extend several weeks beyond the completion of therapy.
     </p>
     
     <p className="font-bold">Long-Term Benefits:</p>
     <p>
-        <span className="font-bold">Sustained Improvement:</span> Studies have shown that the positive effects of TMS can last anywhere from 6 months to a year post-treatment. Approximately 60% of patients maintain their symptom relief for several months after the initial treatment course.
+        <span className="font-bold">Sustained Improvement:</span> Studies have shown that the positive effects of rTMS can last anywhere from 6 months to a year post-treatment. Approximately 60% of patients maintain their symptom relief for several months after the initial treatment course.
     </p>
     <p>
         <span className="font-bold">Extended Remission:</span> For some individuals, the benefits can extend even longer, especially when combined with other forms of therapy such as cognitive-behavioral therapy (CBT) or medication management.
@@ -295,73 +295,73 @@ const allTest = [
     
     <p className="font-bold">Maintenance Sessions:</p>
     <p>
-        <span className="font-bold">Booster Treatments:</span> To sustain the benefits of TMS, some patients may opt for maintenance sessions after completing their initial treatment course. These booster sessions can be scheduled monthly or as needed based on individual response.
+        <span className="font-bold">Booster Treatments:</span> To sustain the benefits of rTMS, some patients may opt for maintenance sessions after completing their initial treatment course. These booster sessions can be scheduled monthly or as needed based on individual response.
     </p>
 </div>
 `
     },
     {
         _id: 10,
-        name: "What are the advantages of TMS treatment over medication?",
+        name: "What are the advantages of rTMS treatment over medication?",
         icon: "/iconsNew2/therapy.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        While medications are a cornerstone in treating many mental health conditions and can be highly effective for numerous individuals, TMS offers an additional option for those seeking a non-medication-based approach or who have not fully responded to traditional treatments.
+        While medications are a cornerstone in treating many mental health conditions and can be highly effective for numerous individuals, rTMS offers an additional option for those seeking a non-medication-based approach or who have not fully responded to traditional treatments.
     </p>
     <p>
-        <span className="font-bold">No Systemic Side Effects:</span> Unlike antidepressants, TMS does not introduce chemicals into your body, eliminating the risk of systemic side effects such as weight gain, fatigue, or gastrointestinal issues.
+        <span className="font-bold">No Systemic Side Effects:</span> Unlike antidepressants, rTMS does not introduce chemicals into your body, eliminating the risk of systemic side effects such as weight gain, fatigue, or gastrointestinal issues.
     </p>
     <p>
-        <span className="font-bold">No Risk of Dependency:</span> Unlike some medications, TMS does not carry a risk of dependency or withdrawal symptoms.
+        <span className="font-bold">No Risk of Dependency:</span> Unlike some medications, rTMS does not carry a risk of dependency or withdrawal symptoms.
     </p>
     <p>
-        <span className="font-bold">Natural Approach:</span> TMS utilizes magnetic pulses to stimulate brain activity, aligning with those who prefer a medication-free treatment option.
+        <span className="font-bold">Natural Approach:</span> rTMS utilizes magnetic pulses to stimulate brain activity, aligning with those who prefer a medication-free treatment option.
     </p>
 </div>
 `
     },
     {
         _id: 11,
-        name: "What are the benefits of TMS over Electroconvulsive Therapy (ECT)?",
+        name: "What are the benefits of rTMS over Electroconvulsive Therapy (ECT)?",
         icon: "/iconsNew2/tms.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        <span className="font-bold">No Anesthesia Required:</span> Unlike ECT, which necessitates general anesthesia, TMS is performed while the patient is fully awake and alert. This eliminates the risks associated with anesthesia and allows for a more comfortable treatment experience.
+        <span className="font-bold">No Anesthesia Required:</span> Unlike ECT, which necessitates general anesthesia, rTMS is performed while the patient is fully awake and alert. This eliminates the risks associated with anesthesia and allows for a more comfortable treatment experience.
     </p>
     <p>
-        <span className="font-bold">No Need for Medication:</span> TMS does not require the use of sedatives or muscle relaxants, reducing the complexity and preparation involved in the procedure.
+        <span className="font-bold">No Need for Medication:</span> rTMS does not require the use of sedatives or muscle relaxants, reducing the complexity and preparation involved in the procedure.
     </p>
     <p>
-        <span className="font-bold">Cognitive Function Preservation:</span> ECT is often associated with cognitive side effects, including memory loss and confusion. TMS, on the other hand, has a significantly lower risk of cognitive impairment, allowing patients to maintain their daily cognitive functions during and after treatment.
+        <span className="font-bold">Cognitive Function Preservation:</span> ECT is often associated with cognitive side effects, including memory loss and confusion. rTMS, on the other hand, has a significantly lower risk of cognitive impairment, allowing patients to maintain their daily cognitive functions during and after treatment.
     </p>
     <p>
-        <span className="font-bold">Less Physical Discomfort:</span> TMS may cause mild scalp discomfort or headache during treatment sessions, but these side effects are typically transient and far less severe than the side effects associated with ECT.
+        <span className="font-bold">Less Physical Discomfort:</span> rTMS may cause mild scalp discomfort or headache during treatment sessions, but these side effects are typically transient and far less severe than the side effects associated with ECT.
     </p>
     <p>
-        <span className="font-bold">Lower Risk of Physical Complications:</span> ECT carries risks such as cardiovascular complications and requires careful medical supervision. TMS has a much safer profile with fewer physical health risks, making it suitable for a broader range of patients.
+        <span className="font-bold">Lower Risk of Physical Complications:</span> ECT carries risks such as cardiovascular complications and requires careful medical supervision. rTMS has a much safer profile with fewer physical health risks, making it suitable for a broader range of patients.
     </p>
     <p>
-        <span className="font-bold">No Induced Seizures:</span> While ECT deliberately induces seizures to achieve therapeutic effects, TMS does not induce seizures, further enhancing its safety and acceptability.
+        <span className="font-bold">No Induced Seizures:</span> While ECT deliberately induces seizures to achieve therapeutic effects, rTMS does not induce seizures, further enhancing its safety and acceptability.
     </p>
     <p>
-        <span className="font-bold">Immediate Return to Activities:</span> After a TMS session, patients can immediately resume their normal activities without the grogginess or disorientation often experienced after ECT treatments.
+        <span className="font-bold">Immediate Return to Activities:</span> After a rTMS session, patients can immediately resume their normal activities without the grogginess or disorientation often experienced after ECT treatments.
     </p>
 </div>
 `
     },
     {
         _id: 12,
-        name: "Is TMS safe for those who are currently taking antidepressant medication?",
+        name: "Is rTMS safe for those who are currently taking antidepressant medication?",
         icon: "/iconsNew2/therapy.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        Combining Transcranial Magnetic Stimulation (TMS) with antidepressant medications is safe. By addressing both the chemical and neural aspects of depression or other psychological conditions, this integrated strategy provides a more holistic pathway to mental wellness.
+        Combining Transcranial Magnetic Stimulation (rTMS) with antidepressant medications is safe. By addressing both the chemical and neural aspects of depression or other psychological conditions, this integrated strategy provides a more holistic pathway to mental wellness.
     </p>
     <p>
-        Combining TMS with antidepressant medications is often beneficial in the following situations:
+        Combining rTMS with antidepressant medications is often beneficial in the following situations:
     </p>
     <p>
         <span className="font-bold">Treatment-Resistant Depression:</span> When traditional medications haven't provided sufficient relief.
@@ -379,29 +379,29 @@ const allTest = [
         <span className="font-bold">Addressing Multiple Symptoms:</span> When dealing with co-occurring conditions like anxiety or OCD.
     </p>
     <p>
-        At MindfulTMS, our experienced team is dedicated to creating personalized treatment plans that may include the combination of therapy, TMS, and medication. We prioritize your safety, well-being, and long-term mental health, ensuring you receive comprehensive care tailored to your unique needs.
+        At MindfulTMS, our experienced team is dedicated to creating personalized treatment plans that may include the combination of therapy, rTMS, and medication. We prioritize your safety, well-being, and long-term mental health, ensuring you receive comprehensive care tailored to your unique needs.
     </p>
 </div>
 `
     },
     {
         _id: 13,
-        name: "Who should not have TMS treatment?",
+        name: "Who should not have rTMS treatment?",
         icon: "/iconsNew2/tms.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        TMS is not for those with:
+        rTMS is not for those with:
     </p>
     <p>
         <span className="font-bold">Individuals with Metal Implants or Devices in the Head or Neck</span><br>
         <span className="font-semibold">Examples:</span> Cochlear implants, deep brain stimulators, metallic buckles or pins from surgical procedures.<br>
-        <span className="font-semibold">Reason:</span> Strong magnetic fields used in TMS can interact with metal objects near the treatment area.
+        <span className="font-semibold">Reason:</span> Strong magnetic fields used in rTMS can interact with metal objects near the treatment area.
     </p>
     <p>
         <span className="font-bold">History of Seizure Disorders</span><br>
         <span className="font-semibold">Details:</span> Individuals with a history of seizures or epilepsy.<br>
-        <span className="font-semibold">Reason:</span> Although rare, TMS carries a slight risk of inducing seizures.
+        <span className="font-semibold">Reason:</span> Although rare, rTMS carries a slight risk of inducing seizures.
     </p>
     <p>
         <span className="font-bold">Active Metallic Implants Like Pacemakers</span><br>
@@ -416,7 +416,7 @@ const allTest = [
     <p>
         <span className="font-bold">Certain Neurological Conditions</span><br>
         <span className="font-semibold">Examples:</span> Multiple Sclerosis (MS) with lesions in treated areas, active or untreated brain tumors near the stimulation site, recent unstable stroke.<br>
-        <span className="font-semibold">Reason:</span> These conditions may increase the risks associated with TMS.
+        <span className="font-semibold">Reason:</span> These conditions may increase the risks associated with rTMS.
     </p>
     <p>
         <span className="font-bold">Sensitivity to Magnetic Fields</span><br>
@@ -428,12 +428,12 @@ const allTest = [
     },
     {
         _id: 14,
-        name: "Will my insurance cover the TMS treatment?",
+        name: "Will my insurance cover the rTMS treatment?",
         icon: "/iconsNew2/therapy.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        TMS is not covered by medical insurance in India for private clinics.
+        rTMS is not covered by medical insurance in India for private clinics.
     </p>
     <p>
         Recently, the Government of India has directed the medical insurance companies to cover the treatment of mental illness under health insurance. This step has been taken considering the surge in the number of people who are suffering from depression.
@@ -449,15 +449,15 @@ const allTest = [
     },
     {
         _id: 15,
-        name: "Is TMS for me?",
+        name: "Is rTMS for me?",
         icon: "/iconsNew2/tms.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        Currently, TMS therapy is FDA approved for the indication of Major Depressive Disorder, Obsessive Compulsive Disorder, Chronic Pain, Migraine, and Smoking Addiction. TMS should be strongly considered by patients who have failed to receive satisfactory improvement from prior antidepressant medications or have experienced intolerable side effects or choose to take a non-invasive option without medication.
+        Currently, rTMS therapy is FDA approved for the indication of Major Depressive Disorder, Obsessive Compulsive Disorder, Chronic Pain, Migraine, and Smoking Addiction. rTMS should be strongly considered by patients who have failed to receive satisfactory improvement from prior antidepressant medications or have experienced intolerable side effects or choose to take a non-invasive option without medication.
     </p>
     <p>
-        There is increasing evidence for the benefit of TMS in treating other off-label indications. Patients with the additional following conditions may benefit from TMS:
+        There is increasing evidence for the benefit of rTMS in treating other off-label indications. Patients with the additional following conditions may benefit from rTMS:
     </p>
     <ul className="list-disc list-inside space-y-1">
         <li>Substance Addiction</li>
@@ -476,13 +476,13 @@ const allTest = [
     },
     {
         _id: 16,
-        name: "What are the results of TMS Therapy?",
+        name: "What are the results of rTMS Therapy?",
         icon: "/iconsNew2/therapy.png",
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p className="font-bold text-base">Depression Relief</p>
     <p>
-        <span className="font-semibold">Response Rates:</span> About 70% of individuals with treatment-resistant depression (TRD) experience significant improvements in their symptoms after completing a TMS therapy course.
+        <span className="font-semibold">Response Rates:</span> About 70% of individuals with treatment-resistant depression (TRD) experience significant improvements in their symptoms after completing a rTMS therapy course.
     </p>
     <p>
         <span className="font-semibold">Remission Rates:</span> Approximately 40% of patients achieve full remission, meaning their depression symptoms are greatly reduced or no longer present.
@@ -490,12 +490,12 @@ const allTest = [
     
     <p className="font-bold text-base">Anxiety Reduction</p>
     <p>
-        <span className="font-semibold">Effectiveness:</span> Studies show that 60% of individuals with anxiety disorders report a noticeable decrease in anxiety symptoms following TMS treatment.
+        <span className="font-semibold">Effectiveness:</span> Studies show that 60% of individuals with anxiety disorders report a noticeable decrease in anxiety symptoms following rTMS treatment.
     </p>
     
     <p className="font-bold text-base">Obsessive-Compulsive Disorder (OCD) Improvement</p>
     <p>
-        <span className="font-semibold">Symptom Reduction:</span> Around 50% of patients with OCD experience significant improvement in their symptoms after undergoing TMS therapy.
+        <span className="font-semibold">Symptom Reduction:</span> Around 50% of patients with OCD experience significant improvement in their symptoms after undergoing rTMS therapy.
     </p>
     
     <p className="font-bold text-base">Key Outcomes:</p>
@@ -513,18 +513,18 @@ const allTest = [
     },
     {
         _id: 17,
-        name: "What is rTMS? How is it different from TMS?",
+        name: "What is rTMS? How is it different from rTMS?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        rTMS stands for repetitive Transcranial Magnetic Stimulation, which is a specific type of TMS therapy. Today, most TMS treatments use rTMS.
+        rTMS stands for repetitive Transcranial Magnetic Stimulation, which is a specific type of rTMS therapy. Today, most rTMS treatments use rTMS.
     </p>
     <p>
-        <span className="font-bold">Transcranial Magnetic Stimulation (TMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
+        <span className="font-bold">Transcranial Magnetic Stimulation (rTMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
     </p>
     <p>
-        <span className="font-bold">Repetitive TMS (rTMS):</span> Involves delivering multiple magnetic pulses in <span className="font-semibold">rapid succession</span> to the targeted brain area.
+        <span className="font-bold">Repetitive rTMS (rTMS):</span> Involves delivering multiple magnetic pulses in <span className="font-semibold">rapid succession</span> to the targeted brain area.
     </p>
 </div>
 `
@@ -536,7 +536,7 @@ const allTest = [
         detail: `
        <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        DeepTMS is another type of Transcranial Magnetic Stimulation (TMS) that some clinics promote as reaching deeper parts of the brain for enhanced treatment. However, our repetitive TMS (rTMS) using MagVenture equipment is just as effective without the extra marketing buzz.
+        DeepTMS is another type of Transcranial Magnetic Stimulation (rTMS) that some clinics promote as reaching deeper parts of the brain for enhanced treatment. However, our repetitive rTMS (rTMS) using MagVenture equipment is just as effective without the extra marketing buzz.
     </p>
     <p className="font-bold">Think of it like this:</p>
     <p>
@@ -557,15 +557,15 @@ const allTest = [
     },
     {
         _id: 19,
-        name: "Why is it important to consider TMS with a provider that uses FDA-approved machines?",
+        name: "Why is it important to consider rTMS with a provider that uses FDA-approved machines?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        Choosing a provider that uses FDA-approved TMS machines is crucial for several reasons:
+        Choosing a provider that uses FDA-approved rTMS machines is crucial for several reasons:
     </p>
     <p>
-        <span className="font-bold">Safety and Quality:</span> FDA approval ensures that the TMS device has been rigorously tested for safety and effectiveness. Approved machines are designed to prevent issues like scalp burns and ensure consistent performance.
+        <span className="font-bold">Safety and Quality:</span> FDA approval ensures that the rTMS device has been rigorously tested for safety and effectiveness. Approved machines are designed to prevent issues like scalp burns and ensure consistent performance.
     </p>
     <p>
         <span className="font-bold">Risk Prevention:</span> Unapproved machines may be poorly designed, leading to potential risks such as <span className="font-semibold">scalp burns, ineffective treatment, or other adverse effects</span> that can compromise your well-being.
@@ -575,12 +575,12 @@ const allTest = [
     },
     {
         _id: 20,
-        name: "Why is it important to complete a full TMS treatment plan?",
+        name: "Why is it important to complete a full rTMS treatment plan?",
         icon: "/iconsNew2/therapy.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        <span className="font-bold">Maximized Effectiveness:</span> TMS therapy typically involves a series of sessions (often 25-30) to ensure consistent stimulation and optimal therapeutic benefits.
+        <span className="font-bold">Maximized Effectiveness:</span> rTMS therapy typically involves a series of sessions (often 25-30) to ensure consistent stimulation and optimal therapeutic benefits.
     </p>
     <p>
         <span className="font-bold">Neuroplasticity:</span> Repeated stimulation promotes neuroplasticity—the brain's ability to reorganize and form new neural connections—leading to lasting improvements in mood and cognitive function.
@@ -593,15 +593,15 @@ const allTest = [
     },
     {
         _id: 21,
-        name: "What happens if I take only 5 TMS sessions?",
+        name: "What happens if I take only 5 rTMS sessions?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        Undergoing only 5 TMS sessions may not provide the full therapeutic benefits of the treatment:
+        Undergoing only 5 rTMS sessions may not provide the full therapeutic benefits of the treatment:
     </p>
     <p>
-        <span className="font-bold">Limited Effectiveness:</span> TMS therapy generally requires multiple sessions (usually 20-30) to achieve significant symptom relief. Five sessions are typically insufficient to induce the necessary neuroplastic changes in the brain that are needed for long-term benefits.
+        <span className="font-bold">Limited Effectiveness:</span> rTMS therapy generally requires multiple sessions (usually 20-30) to achieve significant symptom relief. Five sessions are typically insufficient to induce the necessary neuroplastic changes in the brain that are needed for long-term benefits.
     </p>
     <p>
         <span className="font-bold">Partial Symptom Improvement:</span> You might experience minimal or temporary relief, but the long-term benefits are unlikely to materialize without completing the full treatment course.
@@ -614,25 +614,25 @@ const allTest = [
     },
     {
         _id: 22,
-        name: "Is there an age limit for TMS?",
+        name: "Is there an age limit for rTMS?",
         icon: "/iconsNew2/therapy.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
     <p>
-        The US FDA has approved TMS for adolescents aged 15 and over for treating depression (MDD). For some conditions, TMS can be given to children aged 12 and over.
+        The US FDA has approved rTMS for adolescents aged 15 and over for treating depression (MDD). For some conditions, rTMS can be given to children aged 12 and over.
     </p>
     <p>
-        Transcranial Magnetic Stimulation (TMS) is increasingly used in pediatric neurology and psychiatry and has been showing promise in treating conditions like cerebral palsy, ADHD, autism spectrum disorder (ASD).
+        Transcranial Magnetic Stimulation (rTMS) is increasingly used in pediatric neurology and psychiatry and has been showing promise in treating conditions like cerebral palsy, ADHD, autism spectrum disorder (ASD).
     </p>
     <p className="font-bold">Off Label Applications:</p>
     <p>
-        <span className="font-bold">Cerebral Palsy (CP):</span> TMS improves motor function, reduces spasms, and helps with speech by enhancing brain plasticity.
+        <span className="font-bold">Cerebral Palsy (CP):</span> rTMS improves motor function, reduces spasms, and helps with speech by enhancing brain plasticity.
     </p>
     <p>
-        <span className="font-bold">ADHD:</span> TMS enhances attention and executive function, offering an alternative to traditional treatments.
+        <span className="font-bold">ADHD:</span> rTMS enhances attention and executive function, offering an alternative to traditional treatments.
     </p>
     <p>
-        <span className="font-bold">ASD:</span> TMS targets brain regions related to social and sensory processing, potentially improving social interaction and reducing repetitive behaviors.
+        <span className="font-bold">ASD:</span> rTMS targets brain regions related to social and sensory processing, potentially improving social interaction and reducing repetitive behaviors.
     </p>
     <p className="font-semibold">
         Talk to a medical professional before considering rTMS for your child.
@@ -642,283 +642,283 @@ const allTest = [
     },
     {
         _id: 23,
-        name: "Does TMS help with Major Depressive Disorder (MDD)?",
+        name: "Does rTMS help with Major Depressive Disorder (MDD)?",
         icon: "/iconsNew2/depression.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is an effective treatment for Major Depressive Disorder (MDD), especially in individuals who have not responded to traditional antidepressant medications. Clinical studies report response rates of approximately 50-60%, with remission rates around 30-40%.
+                Yes, rTMS is an effective treatment for Major Depressive Disorder (MDD), especially in individuals who have not responded to traditional antidepressant medications. Clinical studies report response rates of approximately 50-60%, with remission rates around 30-40%.
             </p>
         </div>
         `
     },
     {
         _id: 24,
-        name: "Does TMS help with Treatment-Resistant Depression?",
+        name: "Does rTMS help with Treatment-Resistant Depression?",
         icon: "/iconsNew2/resistance.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is particularly beneficial for treatment-resistant depression, offering relief to patients who have not found success with standard therapies. Approximately 50-60% of patients experience significant symptom improvement.
+                Yes, rTMS is particularly beneficial for treatment-resistant depression, offering relief to patients who have not found success with standard therapies. Approximately 50-60% of patients experience significant symptom improvement.
             </p>
         </div>
         `
     },
     {
         _id: 25,
-        name: "Does TMS help with Obsessive-Compulsive Disorder (OCD)?",
+        name: "Does rTMS help with Obsessive-Compulsive Disorder (OCD)?",
         icon: "/iconsNew2/ocd.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS has been shown to reduce the severity of obsessive-compulsive symptoms by targeting brain regions involved in habit formation and impulse control. Clinical trials indicate symptom relief in 30-40% of patients.
+                Yes, rTMS has been shown to reduce the severity of obsessive-compulsive symptoms by targeting brain regions involved in habit formation and impulse control. Clinical trials indicate symptom relief in 30-40% of patients.
             </p>
         </div>
         `
     },
     {
         _id: 26,
-        name: "Does TMS help with Generalized Anxiety Disorder (GAD)?",
+        name: "Does rTMS help with Generalized Anxiety Disorder (GAD)?",
         icon: "/iconsNew2/anxiety.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, emerging research suggests that TMS can alleviate symptoms of Generalized Anxiety Disorder (GAD) by modulating neural circuits associated with stress responses. Around 40-50% of patients report symptom improvement.
+                Yes, emerging research suggests that rTMS can alleviate symptoms of Generalized Anxiety Disorder (GAD) by modulating neural circuits associated with stress responses. Around 40-50% of patients report symptom improvement.
             </p>
         </div>
         `
     },
     {
         _id: 27,
-        name: "Does TMS help with PTSD?",
+        name: "Does rTMS help with PTSD?",
         icon: "/iconsNew2/ptsd.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                TMS may help reduce PTSD symptoms by targeting brain areas involved in fear and memory processing. Approximately 35-45% of patients experience a reduction in intrusive thoughts and hyperarousal symptoms.
+                rTMS may help reduce PTSD symptoms by targeting brain areas involved in fear and memory processing. Approximately 35-45% of patients experience a reduction in intrusive thoughts and hyperarousal symptoms.
             </p>
         </div>
         `
     },
     {
         _id: 28,
-        name: "Does TMS help with Bipolar Disorder (Depressive Episodes)?",
+        name: "Does rTMS help with Bipolar Disorder (Depressive Episodes)?",
         icon: "/iconsNew2/bipolar.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS can be effective in treating depressive episodes in individuals with Bipolar Disorder by enhancing mood-regulating brain activity. About 40-50% of patients experience symptom improvement.
+                Yes, rTMS can be effective in treating depressive episodes in individuals with Bipolar Disorder by enhancing mood-regulating brain activity. About 40-50% of patients experience symptom improvement.
             </p>
         </div>
         `
     },
     {
         _id: 29,
-        name: "Does TMS help with Schizophrenia (Auditory Hallucinations)?",
+        name: "Does rTMS help with Schizophrenia (Auditory Hallucinations)?",
         icon: "/iconsNew2/schizophrenia.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS has been shown to reduce auditory hallucinations in schizophrenia by targeting the temporoparietal cortex. Approximately 30-40% of patients report a significant decrease in hallucination frequency.
+                Yes, rTMS has been shown to reduce auditory hallucinations in schizophrenia by targeting the temporoparietal cortex. Approximately 30-40% of patients report a significant decrease in hallucination frequency.
             </p>
         </div>
         `
     },
     {
         _id: 30,
-        name: "Does TMS help with Attention-Deficit/Hyperactivity Disorder (ADHD)?",
+        name: "Does rTMS help with Attention-Deficit/Hyperactivity Disorder (ADHD)?",
         icon: "/iconsNew2/adhd.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, emerging studies suggest that TMS may improve attention and reduce hyperactivity symptoms in individuals with ADHD. Around 35-45% of patients experience noticeable improvements.
+                Yes, emerging studies suggest that rTMS may improve attention and reduce hyperactivity symptoms in individuals with ADHD. Around 35-45% of patients experience noticeable improvements.
             </p>
         </div>
         `
     },
     {
         _id: 31,
-        name: "Does TMS help with Social Anxiety Disorder?",
+        name: "Does rTMS help with Social Anxiety Disorder?",
         icon: "/iconsNew2/social-anxiety.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS may alleviate symptoms of Social Anxiety Disorder by targeting brain regions involved in fear and social processing. Initial studies have shown that approximately 30-40% of individuals experience a reduction in anxiety symptoms following TMS treatment.
+                Yes, rTMS may alleviate symptoms of Social Anxiety Disorder by targeting brain regions involved in fear and social processing. Initial studies have shown that approximately 30-40% of individuals experience a reduction in anxiety symptoms following rTMS treatment.
             </p>
         </div>
         `
     },
     {
         _id: 32,
-        name: "Does TMS help with Anorexia Nervosa and Other Eating Disorders?",
+        name: "Does rTMS help with Anorexia Nervosa and Other Eating Disorders?",
         icon: "/iconsNew2/eating-disorders.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, preliminary research indicates that TMS can help reduce obsessive thoughts and improve mood in individuals with Anorexia Nervosa and other eating disorders by modulating neural circuits related to impulse control and body image. Response rates are promising but currently vary, with about 25-35% of patients showing significant improvement.
+                Yes, preliminary research indicates that rTMS can help reduce obsessive thoughts and improve mood in individuals with Anorexia Nervosa and other eating disorders by modulating neural circuits related to impulse control and body image. Response rates are promising but currently vary, with about 25-35% of patients showing significant improvement.
             </p>
         </div>
         `
     },
     {
         _id: 33,
-        name: "Does TMS help with Addiction (Substance Use Disorders)?",
+        name: "Does rTMS help with Addiction (Substance Use Disorders)?",
         icon: "/iconsNew2/addiction.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS has been explored as a treatment for various substance use disorders by targeting brain regions associated with cravings and impulse control. Studies report that roughly 30-40% of patients experience reduced cravings and improved abstinence rates following TMS therapy.
+                Yes, rTMS has been explored as a treatment for various substance use disorders by targeting brain regions associated with cravings and impulse control. Studies report that roughly 30-40% of patients experience reduced cravings and improved abstinence rates following rTMS therapy.
             </p>
         </div>
         `
     },
     {
         _id: 34,
-        name: "Does TMS help with Autism Spectrum Disorder (ASD)?",
+        name: "Does rTMS help with Autism Spectrum Disorder (ASD)?",
         icon: "/iconsNew2/asd.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, preliminary studies suggest that TMS may improve social, cognitive, and behavioral symptoms in individuals with Autism Spectrum Disorder (ASD) by enhancing neural connectivity and plasticity. However, evidence is still limited, with response rates around 20-30%, and further research is necessary.
+                Yes, preliminary studies suggest that rTMS may improve social, cognitive, and behavioral symptoms in individuals with Autism Spectrum Disorder (ASD) by enhancing neural connectivity and plasticity. However, evidence is still limited, with response rates around 20-30%, and further research is necessary.
             </p>
         </div>
         `
     },
     {
         _id: 35,
-        name: "Does TMS help with Migraine with Aura?",
+        name: "Does rTMS help with Migraine with Aura?",
         icon: "/iconsNew2/migraine.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS can help reduce the frequency and intensity of migraine attacks with aura by targeting the occipital cortex to interrupt migraine pathways. Clinical trials have shown that up to 58% of patients experience relief from migraine symptoms following TMS treatment.
+                Yes, rTMS can help reduce the frequency and intensity of migraine attacks with aura by targeting the occipital cortex to interrupt migraine pathways. Clinical trials have shown that up to 58% of patients experience relief from migraine symptoms following rTMS treatment.
             </p>
         </div>
         `
     },
     {
         _id: 36,
-        name: "Does TMS help with Chronic Pain?",
+        name: "Does rTMS help with Chronic Pain?",
         icon: "/iconsNew2/chronic-pain.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is used to manage various chronic pain conditions, including fibromyalgia and neuropathic pain, by modulating pain-processing brain regions. Efficacy varies by condition, with approximately 30-50% of patients reporting significant pain relief. Outcomes can depend on the specific pain disorder and TMS protocol used.
+                Yes, rTMS is used to manage various chronic pain conditions, including fibromyalgia and neuropathic pain, by modulating pain-processing brain regions. Efficacy varies by condition, with approximately 30-50% of patients reporting significant pain relief. Outcomes can depend on the specific pain disorder and rTMS protocol used.
             </p>
         </div>
         `
     },
     {
         _id: 37,
-        name: "Does TMS help with Tinnitus?",
+        name: "Does rTMS help with Tinnitus?",
         icon: "/iconsNew2/tinnitus.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS has been investigated as a treatment for tinnitus by targeting the auditory cortex to reduce the perception of ringing in the ears. Studies show that around 25-35% of tinnitus patients experience a noticeable decrease in symptoms following TMS therapy.
+                Yes, rTMS has been investigated as a treatment for tinnitus by targeting the auditory cortex to reduce the perception of ringing in the ears. Studies show that around 25-35% of tinnitus patients experience a noticeable decrease in symptoms following rTMS therapy.
             </p>
         </div>
         `
     },
     {
         _id: 38,
-        name: "Does TMS help with Parkinson's Disease?",
+        name: "Does rTMS help with Parkinson's Disease?",
         icon: "/iconsNew2/parkinsons.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, preliminary research suggests that TMS may improve motor symptoms and cognitive functions in Parkinson's Disease by stimulating motor and prefrontal regions. Response rates vary, with approximately 30-40% of patients experiencing improvement.
+                Yes, preliminary research suggests that rTMS may improve motor symptoms and cognitive functions in Parkinson's Disease by stimulating motor and prefrontal regions. Response rates vary, with approximately 30-40% of patients experiencing improvement.
             </p>
         </div>
         `
     },
     {
         _id: 39,
-        name: "Does TMS help with Stroke Rehabilitation?",
+        name: "Does rTMS help with Stroke Rehabilitation?",
         icon: "/iconsNew2/stroke-rehabilitation.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is used in stroke rehabilitation to enhance neuroplasticity and improve motor and cognitive recovery by stimulating affected brain areas. Clinical studies report that about 35-45% of stroke patients show significant functional improvements following TMS therapy.
+                Yes, rTMS is used in stroke rehabilitation to enhance neuroplasticity and improve motor and cognitive recovery by stimulating affected brain areas. Clinical studies report that about 35-45% of stroke patients show significant functional improvements following rTMS therapy.
             </p>
         </div>
         `
     },
     {
         _id: 40,
-        name: "Does TMS help with Alzheimer’s Disease and Other Dementias?",
+        name: "Does rTMS help with Alzheimer’s Disease and Other Dementias?",
         icon: "/iconsNew2/alzheimers-dementia.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, early research explores TMS for enhancing cognitive functions and slowing cognitive decline in Alzheimer’s Disease and other dementias by targeting memory-related brain regions. Preliminary studies indicate that up to 30% of patients may experience cognitive improvements, though evidence remains limited and more research is needed.
+                Yes, early research explores rTMS for enhancing cognitive functions and slowing cognitive decline in Alzheimer’s Disease and other dementias by targeting memory-related brain regions. Preliminary studies indicate that up to 30% of patients may experience cognitive improvements, though evidence remains limited and more research is needed.
             </p>
         </div>
         `
     },
     {
         _id: 41,
-        name: "Does TMS help with Traumatic Brain Injury (TBI)?",
+        name: "Does rTMS help with Traumatic Brain Injury (TBI)?",
         icon: "/iconsNew2/tbi.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is being investigated for improving cognitive and motor functions post-Traumatic Brain Injury (TBI) by promoting neural plasticity. Initial studies suggest that approximately 30-40% of TBI patients benefit from enhanced cognitive performance and motor recovery following TMS treatment.
+                Yes, rTMS is being investigated for improving cognitive and motor functions post-Traumatic Brain Injury (TBI) by promoting neural plasticity. Initial studies suggest that approximately 30-40% of TBI patients benefit from enhanced cognitive performance and motor recovery following rTMS treatment.
             </p>
         </div>
         `
     },
     {
         _id: 42,
-        name: "Does TMS help with Multiple Sclerosis (MS)?",
+        name: "Does rTMS help with Multiple Sclerosis (MS)?",
         icon: "/iconsNew2/ms.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS is explored as a treatment for managing symptoms of Multiple Sclerosis (MS), such as fatigue, pain, and spasticity, by modulating neural activity in affected brain regions. Response rates vary, with about 25-40% of MS patients experiencing symptom relief from TMS therapy.
+                Yes, rTMS is explored as a treatment for managing symptoms of Multiple Sclerosis (MS), such as fatigue, pain, and spasticity, by modulating neural activity in affected brain regions. Response rates vary, with about 25-40% of MS patients experiencing symptom relief from rTMS therapy.
             </p>
         </div>
         `
     },
     {
         _id: 43,
-        name: "Does TMS help with Huntington’s Disease?",
+        name: "Does rTMS help with Huntington’s Disease?",
         icon: "/iconsNew2/huntingtons-disease.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, investigational studies suggest that TMS may help manage motor symptoms and improve cognitive function in Huntington’s Disease by stimulating relevant brain areas. Early research indicates that around 20-30% of patients may experience symptom improvements, though more comprehensive trials are needed.
+                Yes, investigational studies suggest that rTMS may help manage motor symptoms and improve cognitive function in Huntington’s Disease by stimulating relevant brain areas. Early research indicates that around 20-30% of patients may experience symptom improvements, though more comprehensive trials are needed.
             </p>
         </div>
         `
     },
     {
         _id: 44,
-        name: "Does TMS help with Tourette’s Syndrome?",
+        name: "Does rTMS help with Tourette’s Syndrome?",
         icon: "/iconsNew2/tourettes.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, TMS has shown potential in reducing the frequency and severity of tics in individuals with Tourette’s Syndrome by targeting motor and prefrontal regions. Studies report that approximately 30-40% of patients experience a decrease in tic symptoms following TMS treatment.
+                Yes, rTMS has shown potential in reducing the frequency and severity of tics in individuals with Tourette’s Syndrome by targeting motor and prefrontal regions. Studies report that approximately 30-40% of patients experience a decrease in tic symptoms following rTMS treatment.
             </p>
         </div>
         `
     },
     {
         _id: 45,
-        name: "Does TMS help with Restless Legs Syndrome (RLS)?",
+        name: "Does rTMS help with Restless Legs Syndrome (RLS)?",
         icon: "/iconsNew2/rls.png",
         detail: `
         <div className="text-gray-700 text-sm md:text-lg space-y-4">
             <p>
-                Yes, limited studies suggest that TMS may alleviate symptoms of Restless Legs Syndrome (RLS) by stimulating sensory and motor pathways in the brain. Preliminary findings indicate that around 25-35% of RLS patients experience symptom relief, though further research is necessary to confirm efficacy.
+                Yes, limited studies suggest that rTMS may alleviate symptoms of Restless Legs Syndrome (RLS) by stimulating sensory and motor pathways in the brain. Preliminary findings indicate that around 25-35% of RLS patients experience symptom relief, though further research is necessary to confirm efficacy.
             </p>
         </div>
         `
     },
     {
         _id: 46,
-        name: "For which conditions does TMS help?",
+        name: "For which conditions does rTMS help?",
         icon: "/iconsNew2/rls.png",
         detail: `<div className="text-gray-700 text-sm md:text-lg space-y-6">
   <!-- Psychological Conditions -->

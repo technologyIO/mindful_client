@@ -47,7 +47,7 @@ const servicesIcon = [
     {
         icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/tms.webp?updatedAt=1733748349152',
         link: '/pages/tms',
-        name: 'TMS'
+        name: 'rTMS'
 
     },
 ]
@@ -98,7 +98,7 @@ const HomePage = ({ allSection }) => {
                                         </div>
                                         <div className='flex justify-center'>
                                             <div className='flex'>
-                                                <Image layout="intrinsic" height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>TMS Specialists</span>
+                                                <Image layout="intrinsic" height={100} width={100} alt='img'  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>rTMS Specialists</span>
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +227,7 @@ const HomePage = ({ allSection }) => {
                                 <CounterComponent />
                             </div>
                             <div>
-                                <p className='text-center mb-8 text-gray-700 text-lg font-semibold'><strong>Is TMS for me?</strong> <br />Learn how it works and
+                                <p className='text-center mb-8 text-gray-700 text-lg font-semibold'><strong>Is rTMS for me?</strong> <br />Learn how it works and
                                     if it is the right option for you.</p>
                             </div>
                             <div className='flex justify-center'>
@@ -394,7 +394,7 @@ const HomePage = ({ allSection }) => {
                 <section className='py-7'>
                     <Container maxWidth="lg">
                         <div className=" p-6 bg-white  rounded-lg">
-                            <h2 className="text-4xl font-semibold text-center mb-5">TMS Treatment</h2>
+                            <h2 className="text-4xl font-semibold text-center mb-5">rTMS Treatment</h2>
                             <p className=" text-xl mt-2 text-center">
                                 A safe approach using magnets to treat Depression, Anxiety, OCD and more.
                             </p>
@@ -404,7 +404,7 @@ const HomePage = ({ allSection }) => {
                                 <div className="md">
                                     <Image layout="intrinsic" 
                                         src="https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"
-                                        alt="TMS Treatment"
+                                        alt="rTMS Treatment"
                                         width={600}
                                         height={400}
                                         className="rounded-lg h-[420px] object-contain "
@@ -437,15 +437,15 @@ const HomePage = ({ allSection }) => {
                                     </div>
                                     <br />
                                     <p className="text-gray-600 mt-4 text-xl">
-                                        At MindfulTMS, we bring 5+ years of TMS experience with 10+ clinics in India and USA.
+                                        At MindfulTMS, we bring 5+ years of rTMS experience with 10+ clinics in India and USA.
                                     </p>
                                     <br />
                                     <p className="text-gray-600 mt-2 text-xl">
-                                        <strong>Is TMS for me?</strong> Learn how it works and if it is the right option for you.
+                                        <strong>Is rTMS for me?</strong> Learn how it works and if it is the right option for you.
                                     </p>
                                     <br />
                                     <Link href={"/pages/tms"} className="mt-4 px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg">
-                                        MORE ABOUT TMS
+                                        MORE ABOUT rTMS
                                     </Link>
                                 </div>
                             </div>
@@ -503,7 +503,7 @@ const HomePage = ({ allSection }) => {
 
                 </section>
 
-                \
+                
                 {/* our experts */}
                 <div className='bg-primary-div'>
                     <Container maxWidth="lg">

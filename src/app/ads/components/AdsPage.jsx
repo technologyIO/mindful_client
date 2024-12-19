@@ -1,4 +1,5 @@
 
+"use client"
 import OurDoctorSection from '@/app/clinicLocation/[city]/OurDoctorSection'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import ClinicLocationDoctors from '@/app/component/ClinicLocationDoctors'
@@ -12,17 +13,30 @@ import AdsCombinePage from '../components/AdsCombinePage'
 import { Container } from '@mui/material'
 import ZohoForm from '@/app/component/ZohoForm'
 import ContactForm from './ContactForm'
-
+import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+// import { useSearchParams } from 'next/navigation'
 
 export default function AdsPage({ params, condition }) {
+    const [queryString, setQueryString] = useState("");
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
-
+    // const router = useRouter(); // Get the router object
+    // const { query } = router;  // Access the query parameters from the URL
+    
+    // const utm = query.utm_term;
     const upperCaseCondition = ['ocd']
     // for zoho
     const iframeSrc =
         "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
     const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
     // console.log('location', params.location)
+    useEffect(() => {
+        // Check if running in the browser
+        if (typeof window !== 'undefined') {
+            setQueryString(window.location.search); // Get the query string
+            console.log(window.location.search) 
+        }
+    }, []);
 
     const city = params.location;
     const expertCondition = params.general;
@@ -32,17 +46,17 @@ export default function AdsPage({ params, condition }) {
         "gk": {
             city: 'New Delhi',
             area: "Greater Kailash 1",
-            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4"
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`
         },
         "wf": {
             city: 'Bengaluru',
             area: "Whitefield (Varthur Road)",
-            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ"
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`
         },
         "hb": {
             city: 'Bengaluru',
             area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc"
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`
         }
     }
 

@@ -183,7 +183,8 @@ const HomePage = ({ allSection }) => {
                 <section className=' py-10 px-4  bg-primary-div'>
                     <div className='mb-5'>
                         <h1 className='text-3xl text-center font-sans font-semibold'>
-                            {allSection?.section3?.title}
+                            {/* {allSection?.section3?.title} */}
+                            rTMS Treatment
                         </h1>
                         <p className='text-center mt-2 mb-2 text-[16px] text-[#545454] font-semibold'>A safe approach using magnets to treat <strong>Depression, Anxiety, OCD and more.</strong></p>
                     </div>

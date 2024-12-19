@@ -44,7 +44,7 @@ const MobileComponent = ({ data, images, city }) => {
         {
             icon: 'https://ik.imagekit.io/mwpcmpi5v/iconsNew/tms.webp?updatedAt=1733748349152',
             link: '/pages/tms',
-            name: 'TMS'
+            name: 'rTMS'
     
         },
     ]

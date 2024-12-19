@@ -114,11 +114,9 @@ const TmsMainPage = () => {
 
                             </p>
                             <div className="pt-5 md:h-[360px]">
-                                <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms5.png?updatedAt=1734526214914" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-cover h-full" />
                             </div>
                         </div>
-
-
 
                         {/* Conditions Section */}
                         <div className="bg-primary-div pt-10 pb-10 px-4 ">
@@ -212,7 +210,7 @@ const TmsMainPage = () => {
                                     <li className=''>
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         <div className='py-5'>
-                                            <Image alt="img"  width={500} height={500}  src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
+                                            <Image alt="img"  width={500} height={500} className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
                                         </div>
                                     </li>
 
@@ -279,7 +277,7 @@ const TmsMainPage = () => {
                                 </div>
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms5.png?updatedAt=1734526214914" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
                                         <p className="text-gray-700 text-xl text-center mb-2">
@@ -385,7 +383,7 @@ const TmsMainPage = () => {
                                 {`How rTMS works?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
-                                <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
+                                <img alt="img"    src="/tmsPage/tms3.png" className="object-cover h-full" />
                             </div>
                             <div className="space-y-4 mb-6">
                                 {/* <p className="text-gray-700 text-lg font-bold">
@@ -397,20 +395,20 @@ const TmsMainPage = () => {
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
+                                            <img alt="img"    className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
                                         </div>
                                     </li>
 
                                     <li className=' text-2xl'>
                                         <strong>{`Stimulate Brain Cells:`}</strong>{` The magnetic pulses help activate or regulate the brain cells (neurons) in those regions where the coil is targeted `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <Image alt="img"  width={500} height={500}  className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new3.png?updatedAt=1734526214919' />
+                                            <img alt="img"    className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new3.png?updatedAt=1734526214919' />
                                         </div>
                                     </li>
                                     <li className=' text-2xl'>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <Image alt="img"   width={400} height={100} className='h-full ' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <img alt="img"    className='h-full ' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
                                         </div>
                                     </li>
                                     <li className='mb-5 text-2xl'>

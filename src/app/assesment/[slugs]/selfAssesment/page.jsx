@@ -49,7 +49,7 @@ const SelfAssesment = () => {
     const [isChecked, setChecked] = useState(false);
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           
             <div className=" flex items-center justify-center 100 px-2 py-2">
                 <div className="bg-white p-2  rounded-lg w-full">
@@ -80,7 +80,7 @@ const SelfAssesment = () => {
                 </div>
             </div>
             <div className=" flex items-center justify-center  p-2">
-                <div className="bg-white p-2 md:p-8  rounded-lg  w-full">
+                <div className="bg-white p-2   rounded-lg  w-full">
                     <h1 className="text-2xl font-bold mb-4 text-orange-500 md:mb-6">Disclaimer</h1>
 
                     <h2 className="text-lg font-semibold mb-3 md:mb-4">Important Notice</h2>

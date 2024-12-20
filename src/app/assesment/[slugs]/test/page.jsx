@@ -167,8 +167,8 @@ console.log(test)
     "Stress": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestStress/formperma/nsBzSHgvrxjEHZOuNo0IfKGsc0AxG-I1R-C2yZzQxjA?source=Website%20(Self%20Assessment)&test=Stress&score=${totalScore}`,
   }
   const TestPageconditionIframe = {
-    "Anxiety": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestAnxiety/formperma/Cv0aOlyHjS1THflfwBSEEEGidbLVKykg4btlwXwrp0k?source=Website%20(Self%20Assessment)&test=Anxiety&score=${totalScore}`,
-    "Depression": `https://forms.zohopublic.in/nikhilmindf1/form/TestDepression/formperma/GdNH4q2FAzrNJvfOdC5j7ZLZ9Rq_Hc0O2ut7JV6oeCI?source=Website%20(%20Assessment)&test=Depression&score=${totalScore}`,
+    "Anxiety": `https://forms.zohopublic.in/nikhilmindf1/form/TestAnxiety/formperma/Es1-KWvfDKTU6WuI3HICeG4ufcf_ok47JrsnRTMu_U4?source=Website%20(Self%20Assessment)&test=Anxiety&score=${totalScore}`,
+    "Depression": `https://forms.zohopublic.in/nikhilmindf1/form/TestDepression/formperma/GdNH4q2FAzrNJvfOdC5j7ZLZ9Rq_Hc0O2ut7JV6oeCI?source=Website%20(Self%20Assessment)&test=Depression&score=${totalScore}`,
     "Stress": `https://forms.zohopublic.in/nikhilmindf1/form/TestStress/formperma/lDDSNZId2A7wQzYn_T1pR4INI-ragCkW8lQsq13KOgc?source=Website%20(%20Assessment)&test=Stress&score=${totalScore}`,
   }
 

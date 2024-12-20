@@ -1,15 +1,14 @@
 "use client";
 
 import { Container } from "@mui/material";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
-
 const tests = [
     {
         title: "PHQ-9 Depression Test",
         link: "/assesment/phq9/test",
         id: "phq9",
-        condition:"Depression",
+        condition: "Depression",
         paragraph: `The PHQ-9 consists of 9 questions that ask about feelings of sadness, hopelessness, and loss of interest in activities, among other symptoms.
 
 By answering these questions, you can gain insights into your depressive symptoms and determine if you might benefit from further support or professional help.`,
@@ -18,7 +17,7 @@ By answering these questions, you can gain insights into your depressive symptom
         title: "PSS-10 Stress Assessment",
         link: "/assesment/pss10/test",
         id: "pss10",
-        condition:"Stress",
+        condition: "Stress",
         paragraph: `This test measures your perception of stress and how you handle life's challenges.
 
 The PSS-10 consists of 10 questions that ask about your feelings and thoughts during the last month, including how often you felt nervous, stressed, or unable to control important things in your life.`,
@@ -27,7 +26,7 @@ The PSS-10 consists of 10 questions that ask about your feelings and thoughts du
         title: "GAD-7 Anxiety Test",
         link: "/assesment/gad7/test",
         id: "gad7",
-        condition:"Anxiety",
+        condition: "Anxiety",
         paragraph: `This questionnaire helps you evaluate the severity of your anxiety symptoms over the past two weeks.
 
 The GAD-7 consists of 7 questions that ask about feelings of nervousness, worry, and restlessness, among other symptoms. By answering these questions honestly, you can get a clearer picture of your anxiety levels and determine if you might benefit from further support or professional help.`,
@@ -44,13 +43,16 @@ The K10 consists of 10 questions that ask about feelings of nervousness, hopeles
 
 const SelfAssesment = () => {
     const { slugs } = useParams();
+    const searchParams = useSearchParams();
+    const testPage = searchParams.get("testPage") || false;
+    // console.log("testpage", testPage);
     const router = useRouter();
     const test = tests.find((t) => t.id === slugs);
     const [isChecked, setChecked] = useState(false);
 
     return (
         <Container maxWidth="lg">
-          
+
             <div className=" flex items-center justify-center 100 px-2 py-2">
                 <div className="bg-white p-2  rounded-lg w-full">
                     <h1 className="text-2xl font-bold mb-6">Test Instructions:</h1>
@@ -95,23 +97,27 @@ const SelfAssesment = () => {
                         <input
                             type="checkbox"
                             checked={isChecked}
-                            onChange={()=>setChecked(!isChecked)}
+                            onChange={() => setChecked(!isChecked)}
                             className="w-4 h-4 md:w-5 md:h-5 mr-2"
                         />
                         <label className="text-gray-800 text-sm md:text-base">I agree</label>
                     </div>
 
                     <button
-                          onClick={() => router.push(test.link)}
+                        onClick={() => {
+                            if (test?.link) {
+                                router.push(`${test.link}?testPage=${testPage}`);
+                            }
+                        }}
                         className={`w-full md:w-auto px-4 py-2 font-semibold text-white rounded ${isChecked ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 cursor-not-allowed'}`}
-                      disabled={!isChecked}
+                        disabled={!isChecked}
                     >
                         Take Test
                     </button>
                 </div>
             </div>
 
-         
+
         </Container>
     );
 };

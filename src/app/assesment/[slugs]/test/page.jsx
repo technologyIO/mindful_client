@@ -2,7 +2,7 @@
 
 import { CircularProgress, Container } from '@mui/material';
 import axios from 'axios';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 // Define test data
@@ -45,6 +45,8 @@ The K10 consists of 10 questions that ask about feelings of nervousness, hopeles
 ];
 
 const Test = () => {
+ const searchParams = useSearchParams();
+  const testPage  = searchParams.get("testPage") || false;
   const { slugs } = useParams();
   const router = useRouter();
   const [questions, setQuestions] = useState([]);
@@ -164,7 +166,15 @@ console.log(test)
     "Depression": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTest/formperma/wQFLTUbc4MiqMDLoRnkr6NrkITyrOhdYn7ezRkLSFjk?source=Website%20(Self%20Assessment)&test=Depression&score=${totalScore}`,
     "Stress": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestStress/formperma/nsBzSHgvrxjEHZOuNo0IfKGsc0AxG-I1R-C2yZzQxjA?source=Website%20(Self%20Assessment)&test=Stress&score=${totalScore}`,
   }
+  const TestPageconditionIframe = {
+    "Anxiety": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTestAnxiety/formperma/Cv0aOlyHjS1THflfwBSEEEGidbLVKykg4btlwXwrp0k?source=Website%20(Self%20Assessment)&test=Anxiety&score=${totalScore}`,
+    "Depression": `https://forms.zohopublic.in/nikhilmindf1/form/SelfAssessmentTest/formperma/wQFLTUbc4MiqMDLoRnkr6NrkITyrOhdYn7ezRkLSFjk?source=Website%20(Self%20Assessment)&test=Depression&score=${totalScore}`,
+    "Stress": `https://forms.zohopublic.in/nikhilmindf1/form/TestStress/formperma/lDDSNZId2A7wQzYn_T1pR4INI-ragCkW8lQsq13KOgc?source=Website%20(Self%20Assessment)&test=Stress&score=${totalScore}`,
+  }
 
+  console.log(testPage==="true"?TestPageconditionIframe[test?.condition]:conditionIframe[test?.condition])
+  // https://forms.zohopublic.in/nikhilmindf1/form/TestStress/formperma/lDDSNZId2A7wQzYn_T1pR4INI-ragCkW8lQsq13KOgc
+  // https://forms.zohopublic.in/nikhilmindf1/form/TestStress/formperma/lDDSNZId2A7wQzYn_T1pR4INI-ragCkW8lQsq13KOgc
   return (
     <Container maxWidth="lg">
       <div className="flex p-6 items-center">
@@ -240,7 +250,7 @@ console.log(test)
           width: "100%",
           border: "none",
         }}
-        src={conditionIframe[test?.condition]}
+        src={testPage?TestPageconditionIframe[test?.condition]:conditionIframe[test?.condition]}
       ></iframe>
     </div>
             </div>

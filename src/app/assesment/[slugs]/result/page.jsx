@@ -43,7 +43,7 @@ const Result = () => {
   const searchParams = useSearchParams();
   const score = parseInt(searchParams.get("score"), 10) || 0;
   const testType = searchParams.get("test") || "Depression";
-
+  const testPage = searchParams.get("testPage") || false;
   const { label, message } = getMessageForScore(score, testType);
 
   const maxScores = {

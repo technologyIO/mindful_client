@@ -60,13 +60,13 @@ const TestCom = ({ condition }) => {
 
     const conditionContent = {
         "depression": {
-            link: "/assesment/phq9/selfAssesment",
+            link: "/assesment/phq9/selfAssesment?testPage=true",
         },
         "anxiety": {
-            link: "/assesment/gad7/selfAssesment",
+            link: "/assesment/gad7/selfAssesment?testPage=true",
         },
         "stress": {
-            link: "/assesment/pss10/selfAssesment",
+            link: "/assesment/pss10/selfAssesment?testPage=true",
         }
     }
 
@@ -132,7 +132,7 @@ const TestCom = ({ condition }) => {
 
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
-            <div className=' w-full'>
+            {/* <div className=' w-full'>
 
                 <div className='flex justify-center'>
                     <RequestAppointmentGeneral>
@@ -143,7 +143,7 @@ const TestCom = ({ condition }) => {
                         </button>
                     </RequestAppointmentGeneral>
                 </div>
-            </div>
+            </div> */}
 
             <section className='py-8 px-4 mb-3 bg-primary-div mt-10'>
                 <div className='mb-8'>

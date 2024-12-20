@@ -132,18 +132,19 @@ const TestCom = ({ condition }) => {
 
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
-            {/* <div className=' w-full'>
+            <div className='flex justify-center'>
+            <div className='flex justify-start items-center sm:w-[300px]'>
 
-                <div className='flex justify-center'>
-                    <RequestAppointmentGeneral>
-                        <button
-                            className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
-                        >
-                            Book an Appointment
-                        </button>
-                    </RequestAppointmentGeneral>
-                </div>
-            </div> */}
+<Link
+    href={conditionContent[condition]?.link}
+
+    className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+>
+    Take  <span className='capitalize '> {condition}</span> Test
+</Link>
+</div>
+            </div>
+           
 
             <section className='py-8 px-4 mb-3 bg-primary-div mt-10'>
                 <div className='mb-8'>
@@ -205,6 +206,19 @@ const TestCom = ({ condition }) => {
                         </div>
                     </div>
                 </div>
+
+                 <div className=' w-full mt-10'>
+
+                <div className='flex justify-center'>
+                    <RequestAppointmentGeneral>
+                        <button
+                            className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+                        >
+                            Book an Appointment
+                        </button>
+                    </RequestAppointmentGeneral>
+                </div>
+            </div>
 
             </section>
         </div>

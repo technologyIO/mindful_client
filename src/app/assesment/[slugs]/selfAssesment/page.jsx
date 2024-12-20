@@ -60,7 +60,7 @@ const SelfAssesment = () => {
                     <h2 className="text-xl font-semibold mb-4 text-orange-500 underline">{test?.condition} Screener:</h2>
 
                     <p className="mb-4 text-gray-700">
-                        This quiz is designed to help you assess your current levels of {condition}
+                        This quiz is designed to help you assess your current levels of {test?.condition}
                     </p>
 
                     <ul className="list-disc list-inside mb-4 text-gray-700">

@@ -54,21 +54,21 @@ const TestCom = ({ condition }) => {
         { id: 4, symptom: "Self-Consciousness", description: "Being overly concerned about how others perceive you.", category: "Social Anxiety", icons: "Self-Consciousness.png" },
         { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
     ]
-//  /assesment/phq9/selfAssesment
-// /assesment/gad7/selfAssesment
-// /assesment/pss10/selfAssesment
+    //  /assesment/phq9/selfAssesment
+    // /assesment/gad7/selfAssesment
+    // /assesment/pss10/selfAssesment
 
-const conditionContent ={
-    "depression":{
-        link:"/assesment/phq9/selfAssesment",
-    }, 
-    "anxiety":{
-        link:"/assesment/gad7/selfAssesment",
-    },
-    "stress":{
-        link:"/assesment/pss10/selfAssesment",
+    const conditionContent = {
+        "depression": {
+            link: "/assesment/phq9/selfAssesment",
+        },
+        "anxiety": {
+            link: "/assesment/gad7/selfAssesment",
+        },
+        "stress": {
+            link: "/assesment/pss10/selfAssesment",
+        }
     }
-}
 
     const ShowSymptoms = ({ category }) => {
         const filteredSymptoms = symptomsDynamic?.filter((symptom) => symptom?.category.toLowerCase() === category?.toLowerCase());
@@ -116,13 +116,13 @@ const conditionContent ={
                         </p>
                         <div className='flex justify-start items-center sm:w-[300px]'>
 
-                                <Link
-                                    href={conditionContent[condition]?.link}
-                                
-                                    className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
-                                >
-                                    Take  <span className='capitalize '> {condition}</span> Test
-                                </Link>
+                            <Link
+                                href={conditionContent[condition]?.link}
+
+                                className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+                            >
+                                Take  <span className='capitalize '> {condition}</span> Test
+                            </Link>
                         </div>
                     </div>
                 </Container>
@@ -134,16 +134,79 @@ const conditionContent ={
             {condition && <ShowSymptoms category={cleanCondition} />}
             <div className=' w-full'>
 
-               <div className='flex justify-center'>
-               <RequestAppointmentGeneral>
-                    <button
-                        className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
-                    >
-                        Book an Appointment
-                    </button>
-                </RequestAppointmentGeneral>
-               </div>
+                <div className='flex justify-center'>
+                    <RequestAppointmentGeneral>
+                        <button
+                            className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+                        >
+                            Book an Appointment
+                        </button>
+                    </RequestAppointmentGeneral>
+                </div>
             </div>
+
+            <section className='py-8 px-4 mb-3 bg-primary-div mt-10'>
+                <div className='mb-8'>
+                    <h1 class="text-[27px] md:text-4xl text-center font-sans font-semibold mb-5">Why Choose <span class="font-bold"> MindfulTMS?</span></h1>
+                </div>
+                <div className="flex justify-center">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-[70px] items-center justify-center">
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px] text-center"
+                                src="/home/medical.svg"
+                                alt="Personalized care"
+                                style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
+                            />
+                            <p className="text-base md:text-xl font-semibold mt-3">Personalized care</p>
+                        </div>
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                src="/home/handshake.svg"
+                                alt="Trust"
+                                style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
+                            />
+                            <p className="text-base md:text-xl font-semibold mt-3">Trust</p>
+                        </div>
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                src="/home/group.svg"
+                                alt="Safe"
+                                style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
+                            />
+                            <p className="text-base md:text-xl font-semibold mt-3">Safe</p>
+                        </div>
+                        <div className="flex flex-col justify-center items-center">
+                            <img
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                src="/home/heart.svg"
+                                alt="Holistic"
+                                style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
+                            />
+                            <p className="text-base md:text-xl font-semibold mt-3">Holistic</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
     )
 }

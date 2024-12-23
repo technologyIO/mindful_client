@@ -138,7 +138,7 @@ const TestCom = ({ condition }) => {
 
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
-            <div className='flex justify-center'>
+            <div className='flex justify-center pt-6'>
                 <div className='flex justify-start items-center '>
 
                     <Link
@@ -152,7 +152,7 @@ const TestCom = ({ condition }) => {
             </div>
 
 
-            <section className='py-8 px-4 mb-3 bg-primary-div mt-10'>
+            <section className='mt-8 py-8 px-4 mb-3 bg-primary-div '>
                 <div className='mb-8'>
                     <h1 class="text-[27px] md:text-4xl text-center font-sans font-semibold mb-5">Why Choose <span class="font-bold"> MindfulTMS?</span></h1>
                 </div>

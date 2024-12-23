@@ -50,7 +50,7 @@ const locations = [
 function Footer() {
   const router = useRouter();
   const pathname = usePathname();
-  const noFooterPaths = ["/ads"];
+  const noFooterPaths = ["/ads", '/tests'];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
 
   const [requestModal, setRequestModal] = useState(false);

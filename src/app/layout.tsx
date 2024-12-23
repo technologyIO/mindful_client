@@ -19,8 +19,8 @@ import { metadata } from "./layoutWithMetadata";  // Import the metadata file
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth"];
-  const noNavbarPaths = ["/ads", "/auth"];
+  const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth", ];
+  const noNavbarPaths = ["/ads", "/auth", "/tests"];
   const zeroNav = ["/thankyou ,"];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
   const shouldHideNavbar = noNavbarPaths.some((path) => pathname.startsWith(path));

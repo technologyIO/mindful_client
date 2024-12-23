@@ -85,18 +85,24 @@ const TestCom = ({ condition }) => {
                                 If Yes, you may benefit from talking to someone
                             </p>
                             <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-5">
-                                {filteredSymptoms.map((symptom) => (
-                                    <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow">
-                                        <img
-                                            src={`/Symptom Icons/${symptom.icons}`}
-                                            alt={symptom.symptom}
-                                            width={100}
-                                            height={100}
-                                            className="mb-4 h-[123px] w-full rounded object-contain"
-                                        />
-                                        <span className="text-sm text-gray-600">{symptom.symptom}</span>
-                                    </div>
-                                ))}
+                            {filteredSymptoms.map((symptom) => (
+    <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow">
+        <img
+            src={`/Symptom Icons/${symptom.icons}`}
+            alt={symptom.symptom}
+            width={100}
+            height={100}
+            className="mb-4 h-[123px] w-full rounded object-contain"
+            style={{
+                filter: "invert(46%) sepia(83%) saturate(4000%) hue-rotate(5deg) brightness(105%) contrast(90%)",
+            }}
+        />
+        <span className="text-sm text-gray-600">{symptom.symptom}</span>
+    </div>
+))}
+
+
+
                             </div>
                         </div>
                     </Container>
@@ -109,12 +115,12 @@ const TestCom = ({ condition }) => {
             {/* Hero Section */}
             <section className="bg-primary-div text-gray-800 py-20">
                 <Container maxWidth="lg">
-                    <div className=" mx-auto px-4">
+                    <div className="flex items-center flex-col px-4">
                         <h1 className="text-3xl md:text-4xl font-bold mb-4">Test For <span className='capitalize '> {condition}</span> </h1>
                         <p className="text-xl mb-8">
                             Take our quick assessment to understand your mental health better.
                         </p>
-                        <div className='flex justify-start items-center sm:w-[300px]'>
+                        <div className='flex justify-start items-center '>
 
                             <Link
                                 href={conditionContent[condition]?.link}
@@ -133,7 +139,7 @@ const TestCom = ({ condition }) => {
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
             <div className='flex justify-center'>
-            <div className='flex justify-start items-center sm:w-[300px]'>
+            <div className='flex justify-start items-center '>
 
 <Link
     href={conditionContent[condition]?.link}

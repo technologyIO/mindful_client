@@ -75,31 +75,31 @@ const TestCom = ({ condition }) => {
         return (
             <>
                 {/* Symptoms */}
-                <section className=" py-8">
+                <section className=" pt-4">
                     <Container maxWidth="lg">
                         <div className="mx-auto">
-                            <h2 className="mb-4 text-center text-2xl md:text-3xl font-bold text-orange-500">
+                            <h2 className="mb-4 text-center text-2xl md:text-4xl font-bold text-orange-500">
                                 Are you experiencing any of the following symptoms?
                             </h2>
-                            <p className="mb-8 text-lg text-center text-gray-600">
+                            <p className="mb-4 text-lg md:text-xl text-center text-gray-600">
                                 If Yes, you may benefit from talking to someone
                             </p>
-                            <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-5">
-                            {filteredSymptoms.map((symptom) => (
-    <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow">
-        <img
-            src={`/Symptom Icons/${symptom.icons}`}
-            alt={symptom.symptom}
-            width={100}
-            height={100}
-            className="mb-4 h-[123px] w-full rounded object-contain"
-            style={{
-                filter: "invert(46%) sepia(83%) saturate(4000%) hue-rotate(5deg) brightness(105%) contrast(90%)",
-            }}
-        />
-        <span className="text-sm text-gray-600">{symptom.symptom}</span>
-    </div>
-))}
+                            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 px-4 lg:grid-cols-5">
+                                {filteredSymptoms.map((symptom) => (
+                                    <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-3 text-center shadow">
+                                        <img
+                                            src={`/Symptom Icons/${symptom.icons}`}
+                                            alt={symptom.symptom}
+                                            width={100}
+                                            height={100}
+                                            className="mb-4 h-[70px] w-full rounded object-contain"
+                                            style={{
+                                                filter: "invert(46%) sepia(83%) saturate(4000%) hue-rotate(5deg) brightness(105%) contrast(90%)",
+                                            }}
+                                        />
+                                        <span className="text-base md:text-lg text-gray-800 font-semibold">{symptom.symptom}</span>
+                                    </div>
+                                ))}
 
 
 
@@ -111,9 +111,9 @@ const TestCom = ({ condition }) => {
         )
     }
     return (
-        <div className="min-h-screen ">
+        <div className=" ">
             {/* Hero Section */}
-            <section className="bg-primary-div text-gray-800 py-20">
+            <section className="bg-primary-div text-gray-800 py-8">
                 <Container maxWidth="lg">
                     <div className="flex items-center flex-col px-4">
                         <h1 className="text-3xl md:text-4xl font-bold mb-4">Test For <span className='capitalize '> {condition}</span> </h1>
@@ -139,18 +139,18 @@ const TestCom = ({ condition }) => {
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
             <div className='flex justify-center'>
-            <div className='flex justify-start items-center '>
+                <div className='flex justify-start items-center '>
 
-<Link
-    href={conditionContent[condition]?.link}
+                    <Link
+                        href={conditionContent[condition]?.link}
 
-    className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
->
-    Take  <span className='capitalize '> {condition}</span> Test
-</Link>
-</div>
+                        className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+                    >
+                        Take  <span className='capitalize '> {condition}</span> Test
+                    </Link>
+                </div>
             </div>
-           
+
 
             <section className='py-8 px-4 mb-3 bg-primary-div mt-10'>
                 <div className='mb-8'>
@@ -164,12 +164,12 @@ const TestCom = ({ condition }) => {
                                 width="100"
                                 height="100"
                                 decoding="async"
-                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px] text-center"
+                                className=" w-[64px] h-[64px] md:w-[80px] md:h-[80px] text-center"
                                 src="/home/medical.svg"
                                 alt="Personalized care"
                                 style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
                             />
-                            <p className="text-base md:text-xl font-semibold mt-3">Personalized care</p>
+                            <p className="text-base md:text-lg font-semibold mt-3">Personalized care</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <img
@@ -177,12 +177,12 @@ const TestCom = ({ condition }) => {
                                 width="100"
                                 height="100"
                                 decoding="async"
-                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                className=" w-[64px] h-[64px] md:w-[80px] md:h-[80px]  text-center"
                                 src="/home/handshake.svg"
                                 alt="Trust"
                                 style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
                             />
-                            <p className="text-base md:text-xl font-semibold mt-3">Trust</p>
+                            <p className="text-base md:text-lg font-semibold mt-3">Trust</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <img
@@ -190,12 +190,12 @@ const TestCom = ({ condition }) => {
                                 width="100"
                                 height="100"
                                 decoding="async"
-                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                className=" w-[64px] h-[64px] md:w-[80px] md:h-[80px]  text-center"
                                 src="/home/group.svg"
                                 alt="Safe"
                                 style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
                             />
-                            <p className="text-base md:text-xl font-semibold mt-3">Safe</p>
+                            <p className="text-base md:text-lg font-semibold mt-3">Safe</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <img
@@ -203,28 +203,28 @@ const TestCom = ({ condition }) => {
                                 width="100"
                                 height="100"
                                 decoding="async"
-                                className=" w-[64px] h-[64px] md:w-[100px] md:h-[100px]  text-center"
+                                className=" w-[64px] h-[64px] md:w-[80px] md:h-[80px]  text-center"
                                 src="/home/heart.svg"
                                 alt="Holistic"
                                 style={{ color: "transparent", maxWidth: "100%", height: "auto" }}
                             />
-                            <p className="text-base md:text-xl font-semibold mt-3">Holistic</p>
+                            <p className="text-base md:text-lg font-semibold mt-3">Holistic</p>
                         </div>
                     </div>
                 </div>
 
-                 <div className=' w-full mt-10'>
+                <div className=' w-full mt-10'>
 
-                <div className='flex justify-center'>
-                    <RequestAppointmentGeneral>
-                        <button
-                            className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
-                        >
-                            Book an Appointment
-                        </button>
-                    </RequestAppointmentGeneral>
+                    <div className='flex justify-center'>
+                        <RequestAppointmentGeneral>
+                            <button
+                                className="inline-block bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300"
+                            >
+                                Book an Appointment
+                            </button>
+                        </RequestAppointmentGeneral>
+                    </div>
                 </div>
-            </div>
 
             </section>
         </div>

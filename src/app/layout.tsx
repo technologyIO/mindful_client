@@ -10,6 +10,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
 import AdsNavbar from "@/components/AdsNavbar";
+import CenterNav from "@/components/CenterNav";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { metadata } from "./layoutWithMetadata";  // Import the metadata file
@@ -20,11 +21,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
 
   const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth", ];
-  const noNavbarPaths = ["/ads", "/auth", "/tests"];
-  const zeroNav = ["/thankyou ,"];
+  const noNavbarPaths = ["/ads", "/auth", ];
+  const centerNav = ["/tests"];
+  const zeroNav = ["/thankyou"];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
   const shouldHideNavbar = noNavbarPaths.some((path) => pathname.startsWith(path));
   const hideZeroNavbar = zeroNav.some((path) => pathname.startsWith(path));
+  const hideCenterNavbar = centerNav.some((path) => pathname.startsWith(path));
 
   const getTitle = () => {
     if (pathname === "/admin") return "Admin Panel";
@@ -82,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        {shouldHideNavbar ? <AdsNavbar /> : hideZeroNavbar ? null : <Navbar />}
+        {hideCenterNavbar?<CenterNav/>:shouldHideNavbar ? <AdsNavbar /> : hideZeroNavbar ? null : <Navbar />}
         <Toaster position="top-right" />
         {children}
         {!shouldHideFooter && <Footer />}

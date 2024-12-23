@@ -56,7 +56,7 @@ export default function AdsPage({ params, condition }) {
         "hb": {
             city: 'Bengaluru',
             area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`
         }
     }
 

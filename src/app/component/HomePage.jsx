@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 // import VideoComponent from './VideoComponent'
 // import NewComponent from './newComponent';
@@ -55,6 +55,13 @@ const servicesIcon = [
 ]
 const HomePage = ({ allSection }) => {
     const isMobile = useMediaQuery('(max-width:768px)');
+    const [isMounted, setIsMounted] = useState(false); //
+    useEffect(() => {
+        setIsMounted(true); // Component is now mounted on the client
+    }, []);
+
+    if (!isMounted) return null; // Avoid rendering on the server
+
     const MobileScreen = () => {
         return (
             <>
@@ -518,6 +525,7 @@ const HomePage = ({ allSection }) => {
             </>
         )
     }
+  
 
     return (
         <div className="">

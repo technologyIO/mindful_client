@@ -1,17 +1,34 @@
-import React from 'react'
+// import React from 'react'
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import Container from '@mui/material/Container';
+// const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
+// const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
+// const OurDoctorSection = React.lazy(() => import('../clinicLocation/[city]/OurDoctorSection'));
+// const CounterComponent = React.lazy(() => import('./CounterComponent'));
+
+
+
+
+"use client";
+import React, { Suspense } from 'react';
 import Link from 'next/link';
+import Container from '@mui/material/Container';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+// Dynamically import non-critical components with SSR enabled for lazy loading
+const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'), { ssr: false });
+const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'), { ssr: false });
+const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'), { ssr: false });
+const CounterComponent = dynamic(() => import('./CounterComponent'), { ssr: false });
+
 // import VideoComponent from './VideoComponent'
 // import NewComponent from './newComponent';
-import Container from '@mui/material/Container';
 // import dynamic from 'next/dynamic';
 // import TestimonialComponent from './TestimonialComponent';
 // import TestimonialComponents2 from './TestimonialComponents2';
-import Image from 'next/image';
 // import Footer from '@/components/Footer'
-const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
-const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
-const OurDoctorSection = React.lazy(() => import('../clinicLocation/[city]/OurDoctorSection'));
-const CounterComponent = React.lazy(() => import('./CounterComponent'));
 
 // import TestimonialComponentSlide from './TestimonialComponentSlide';
 // import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';

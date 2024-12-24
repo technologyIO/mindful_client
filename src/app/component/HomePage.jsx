@@ -145,7 +145,7 @@ const HomePage = ({ allSection }) => {
                     </div>
                 </section>
                 {/* services */}
-
+              
                 <section className="py-5 px-4">
                     <div>
                         <div className="mb-5">
@@ -273,7 +273,7 @@ const HomePage = ({ allSection }) => {
                 </section>
 
                 {/* wy tms */}
-
+              
                 <section className="py-8 px-4 mb-3">
                     <div className="mb-8">
                         <h1 className="text-[27px] whitespace-nowrap text-center">
@@ -345,20 +345,20 @@ const HomePage = ({ allSection }) => {
                 <hr className='border-1 border-gray-200' />
 
                 {/* client speaks */}
-                {/* <section className='py-8 px-4 bg-primary-div'>
-                   
+                <section className='py-8 px-4 bg-primary-div'>
+                    {/* <h1 className='text-center text-3xl font-semibold'> Client Speaks</h1> */}
+                    {/* <VideoComponent /> */}
+                    {/* <NewComponent videos={videos} /> */}
+                    {/* <TestimonialComponent  /> */}
                     <TestimonialComponentSlide smallDevice={true} />
+                    {/* <TestimonialComponents2/> */}
 
-                </section> */}
+                </section>
 
                 {/* our experts */}
-                {/* <div className=''>
+                <div className=''>
                     <OurDoctorSection />
-                </div> */}
-                
-
-
-
+                </div>
             </>
         )
     }
@@ -667,19 +667,20 @@ const HomePage = ({ allSection }) => {
 
 
                 {/* client speaks */}
-                {/* <section className='py-10 px-4 md:px-[100px] '>
+                <section className='py-10 px-4 md:px-[100px] '>
+                    {/* <VideoComponent /> */}
                     <h1 className='text-4xl text-gray-800 font-semibold  text-center  mb-6'>Clients Speak</h1>
                     <TestimonialComponentSlide />
 
-                </section> */}
+                </section>
 
 
                 {/* our experts */}
-                {/* <div className='bg-primary-div'>
+                <div className='bg-primary-div'>
                     <Container maxWidth="lg">
                         <OurDoctorSection />
                     </Container>
-                </div> */}
+                </div>
 
 
             </>
@@ -695,265 +696,6 @@ const HomePage = ({ allSection }) => {
                 </div>
                 <div className='md:block hidden'>
                     <DesktopHeroSection />
-                </div>
-                    {/* our experts */}
-                <div>
-                    <div className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root">
-                        <section className="pt-8 pb-4 px-1">
-                            <div className="mb-11 flex flex-col justify-center items-center">
-                                <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 text-center">Our Experts</h1>
-                            </div>
-                            <div className="mb-5 md:mx-[80px] lg:mx-[120px]">
-                                <h2 className="text-xl md:text-xl font-semibold text-center text-gray-600 mb-4">Bengaluru - Whitefield</h2>
-                                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center justify-center">
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66fbeb587d61644c9bde4c12">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Ayana Sunil Variar's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301941614-ayana.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301941614-ayana.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301941614-ayana.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Ayana Sunil Variar
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66fbe61e7d61644c9bde4bd3">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Navya Shree's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301957224-navya.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301957224-navya.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301957224-navya.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Navya Shree
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66fe27b11941768d6b3e9fc3">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Kavya K's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301974170-kavya.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301974170-kavya.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301974170-kavya.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Kavya K
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66ffa2e86a3f2ccdb194b632">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Dr. Abhishek's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302052754-abhishek.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302052754-abhishek.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302052754-abhishek.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Dr. Abhishek
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Psychiatrist
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            {/* Bengaluru - Hebbal Section */}
-                            <div className="mb-5 md:mx-[80px] lg:mx-[120px]">
-                                <h2 className="text-xl md:text-xl font-semibold text-center text-gray-600 mb-4">Bengaluru - Hebbal</h2>
-                                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center justify-center">
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66fe2dffd3d7faee0fe9c1bf">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Sradha P's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301992146-sradha.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301992146-sradha.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733301992146-sradha.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Sradha P
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/670e566cc8d65e9d976b745a">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Geetha. S Patel's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302091489-geetha.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302091489-geetha.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302091489-geetha.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Geetha. S Patel
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            {/* New Delhi - GK 1 Section */}
-                            <div className="mb-5 md:mx-[80px] lg:mx-[120px]">
-                                <h2 className="text-xl md:text-xl font-semibold text-center text-gray-600 mb-4">New Delhi - GK 1</h2>
-                                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center justify-center">
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66fe4d3a6a3f2ccdb194af4b">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Shilpi Sharma's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302013130-shilpi.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302013130-shilpi.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302013130-shilpi.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Shilpi Sharma
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Counselling Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66ffa1856a3f2ccdb194b61d">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Dr. Shubham Narnoli's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302025490-shubham.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302025490-shubham.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302025490-shubham.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Dr. Shubham Narnoli
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Psychiatrist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/66ffa28f6a3f2ccdb194b62a">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Dr. Sandeep Govil's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302040781-sandeep.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302040781-sandeep.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302040781-sandeep.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Dr. Sandeep Govil
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Psychiatrist
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a className="flex flex-col items-center mb-2" href="/doctor/6720e7e38de82da2acfe7a98">
-                                        <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] flex items-center">
-                                            <img
-                                                alt="Ms. Sonali Das's profile"
-                                                loading="lazy"
-                                                width="500"
-                                                height="500"
-                                                decoding="async"
-                                                className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[130px] lg:w-[130px] object-cover border-[3px] border-orange-400 rounded-full"
-                                                srcSet="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302104083-sonali.webp&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302104083-sonali.webp&amp;w=1080&amp;q=75 2x"
-                                                src="/_next/image?url=https%3A%2F%2Fmindfultms1.s3.us-east-1.amazonaws.com%2F1733302104083-sonali.webp&amp;w=1080&amp;q=75"
-                                                style={{ color: 'transparent', objectPosition: 'center top' }}
-                                            />
-                                        </div>
-                                        <div className="mb-1 text-center">
-                                            <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Ms. Sonali Das
-                                            </p>
-                                            <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                                                Clinical Psychologist
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
                 </div>
 
 

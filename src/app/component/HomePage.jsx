@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Link from 'next/link';
 // import VideoComponent from './VideoComponent'
 // import NewComponent from './newComponent';
@@ -8,7 +8,8 @@ import  Container  from '@mui/material/Container';
 // import TestimonialComponent from './TestimonialComponent';
 // import TestimonialComponents2 from './TestimonialComponents2';
 import Image from 'next/image';
-import { useMediaQuery } from '@mui/material';
+// import { useMediaQuery } from '@mui/material';
+import  useMediaQuery  from '@/app/component/useMediaQuery';
 // import Footer from '@/components/Footer'
 const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
 const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
@@ -55,13 +56,6 @@ const servicesIcon = [
 ]
 const HomePage = ({ allSection }) => {
     const isMobile = useMediaQuery('(max-width:768px)');
-    const [isMounted, setIsMounted] = useState(false); //
-    useEffect(() => {
-        setIsMounted(true); // Component is now mounted on the client
-    }, []);
-
-    if (!isMounted) return null; // Avoid rendering on the server
-
     const MobileScreen = () => {
         return (
             <>
@@ -525,7 +519,7 @@ const HomePage = ({ allSection }) => {
             </>
         )
     }
-  
+    
 
     return (
         <div className="">

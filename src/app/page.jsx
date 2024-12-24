@@ -1,3 +1,4 @@
+"use client"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -6,7 +7,6 @@ import dynamic from 'next/dynamic'
 const HomePage = dynamic(() => import('@/app/component/HomePage'))
 import axios from 'axios';
 import {HomePageSections} from "@/example"
-
 const currentSection = HomePageSections;
 export default async function Home() {
 

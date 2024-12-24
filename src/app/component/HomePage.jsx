@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import Link from 'next/link';
 // import VideoComponent from './VideoComponent'
@@ -8,8 +7,6 @@ import  Container  from '@mui/material/Container';
 // import TestimonialComponent from './TestimonialComponent';
 // import TestimonialComponents2 from './TestimonialComponents2';
 import Image from 'next/image';
-// import { useMediaQuery } from '@mui/material';
-import  useMediaQuery  from '@/app/component/useMediaQuery';
 // import Footer from '@/components/Footer'
 const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
 const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
@@ -55,7 +52,7 @@ const servicesIcon = [
     },
 ]
 const HomePage = ({ allSection }) => {
-    const isMobile = useMediaQuery('(max-width:768px)');
+
     const MobileScreen = () => {
         return (
             <>
@@ -519,19 +516,22 @@ const HomePage = ({ allSection }) => {
             </>
         )
     }
-    
 
     return (
         <div className="">
-             {allSection && (
-                <div className="select-none">
-                    {isMobile ? (
+            {allSection &&
+                <div className=" select-none">
+                    {/* hero section */}
+                    <div className='md:hidden'>
                         <MobileScreen />
-                    ) : (
+                    </div>
+                    <div className='md:block hidden'>
                         <DesktopHeroSection />
-                    )}
+                    </div>
+
+
                 </div>
-            )}
+            }
         </div>
     )
 }

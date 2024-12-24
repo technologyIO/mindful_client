@@ -1,11 +1,10 @@
 "use client";
-import { Inter } from "next/font/google";
 import dynamic from 'next/dynamic';
 
-const Navbar = dynamic(() => import('@/components/Navbar'));
-const Footer = dynamic(() => import('@/components/Footer'));
-// import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
+// const Navbar = dynamic(() => import('@/components/Navbar'));
+// const Footer = dynamic(() => import('@/components/Footer'));
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";

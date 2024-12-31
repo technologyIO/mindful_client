@@ -61,12 +61,18 @@ const TestCom = ({ condition }) => {
     const conditionContent = {
         "depression": {
             link: "/assesment/phq9/selfAssesment?testPage=true",
+            title:"Are You Feeling Depressed?",
+            subHeader:"Discover if you're experiencing depression with our simple, science-based test."
         },
         "anxiety": {
             link: "/assesment/gad7/selfAssesment?testPage=true",
+            title:"Is Anxiety Holding You Back?",
+            subHeader:"Discover if you're experiencing anxiety with our simple, science-based test."
         },
         "stress": {
             link: "/assesment/pss10/selfAssesment?testPage=true",
+            title:"Feeling Very Stressed?",
+            subHeader:"Evaluate your stress levels with our simple test and get insights to see if you need more support."
         }
     }
 
@@ -75,7 +81,7 @@ const TestCom = ({ condition }) => {
         return (
             <>
                 {/* Symptoms */}
-                <section className=" pt-4">
+                <section className=" pt-8">
                     <Container maxWidth="lg">
                         <div className="mx-auto">
                             <h2 className="mb-4 text-center text-2xl md:text-4xl font-bold text-orange-500">
@@ -116,9 +122,9 @@ const TestCom = ({ condition }) => {
             <section className="bg-primary-div text-gray-800 py-8">
                 <Container maxWidth="lg">
                     <div className="flex items-center flex-col px-4">
-                        <h1 className="text-3xl md:text-4xl font-bold mb-4">Test For <span className='capitalize '> {condition}</span> </h1>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4"> {conditionContent[condition]?.title}</h1>
                         <p className="text-xl mb-8">
-                            Take our quick assessment to understand your mental health better.
+                            {conditionContent[condition]?.subHeader}
                         </p>
                         <div className='flex justify-start items-center '>
 
@@ -138,7 +144,7 @@ const TestCom = ({ condition }) => {
 
             {/* Symptoms */}
             {condition && <ShowSymptoms category={cleanCondition} />}
-            <div className='flex justify-center pt-6'>
+            <div className='flex justify-center pt-8'>
                 <div className='flex justify-start items-center '>
 
                     <Link

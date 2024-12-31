@@ -398,7 +398,7 @@ const HomePage = ({ allSection }) => {
                                     {`You Deserve to Feel Better `}
                                 </h1>
                                 <p className=" mb-5 font-[400] text-[18px] text-white text-end">Get the best care from our experienced psychologists, rTMS experts and psychiatrists for help with depression, OCD and more.</p>
-                                <p class=" mb-5 font-[400] text-[18px] text-white text-end"> With empathy and confidence, our professionals will guide you through every challenge.</p>
+                                <p className=" mb-5 font-[400] text-[18px] text-white text-end"> With empathy and confidence, our professionals will guide you through every challenge.</p>
                                 {/* {
                                     allSection?.heroSection?.para?.split("\n").map((para, index) => <p key={index} className=' mb-5 font-[400] text-[18px] text-white text-end'>{para}</p>
 

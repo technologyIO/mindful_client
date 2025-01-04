@@ -40,7 +40,7 @@ const getMessageForScore = (score, testType) => {
   return { label: "Unknown", message: "No message available for this score.", emoji: "🤔" };
 };
 
-const TestThankyou = () => {
+const TestThankyouPage = () => {
   const searchParams = useSearchParams();
   const score = parseInt(searchParams.get("score"), 10) || 0;
   const testType = searchParams.get("test") || "Depression";
@@ -84,8 +84,9 @@ const TestThankyou = () => {
   );
 };
 
-export default () => (
+const TestThankyou=() => (
   <Suspense fallback={<div>Loading...</div>}>
-    <TestThankyou />
+    <TestThankyouPage />
   </Suspense>
 );
+export default TestThankyou;

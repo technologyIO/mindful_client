@@ -10,7 +10,7 @@ export default function CounterComponent() {
   ]
 
   // Static display of counts without animation
-  const [counts, setCounts] = useState(counters.map((counter) => counter.targetNumber))
+  // const [counts, setCounts] = useState(counters.map((counter) => counter.targetNumber))
 
   /*
   // Commenting out the animation logic

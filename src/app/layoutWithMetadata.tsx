@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 export default function LayoutWithMetadata({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <title>{metadata.title}</title>
         <link rel="icon" href={metadata.icons.icon} />
       </head>
       <body>
         {children}
-      </body>
+      </body> */}
     </html>
   );
 }

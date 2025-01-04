@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { Container } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import AnimatedMeter from "@/app/component/AnimatedMeter";
@@ -84,4 +84,8 @@ const TestThankyou = () => {
   );
 };
 
-export default TestThankyou;
+export default () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <TestThankyou />
+  </Suspense>
+);

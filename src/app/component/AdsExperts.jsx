@@ -42,8 +42,8 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                     </h2>
                 )}
                 <div className="grid grid-cols-1 gap-6">
-                    {doctorsData?.map((doctor) => (
-                        <div className="grid grid-cols-3">
+                    {doctorsData?.map((doctor,i) => (
+                        <div key={i} className="grid grid-cols-3">
                             <div
                                 key={doctor._id}
                                 className="bg-white rounded-lg col-span-1  p-6 text-center"

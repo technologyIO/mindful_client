@@ -175,7 +175,7 @@ export default function AdsPage({ params, condition }) {
                                 // none condition 
                                     <p className="">
                                    <span className='block mb-2'> We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </span>
-                                    Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                    {`Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `}{expertText}s are here for you.
                                     </p>}
                             </div>
                         </div>
@@ -312,7 +312,7 @@ export default function AdsPage({ params, condition }) {
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
                                     <p className="text-2xl  text-white font-bold ">
-                                        We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate {expertText}s are here for you.
+                                       {` We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `}{expertText}s are here for you.
                                     </p>}
                             </div>
                             <div className='flex items-center justify-center'>
@@ -372,7 +372,7 @@ export default function AdsPage({ params, condition }) {
                                         <p className=''>We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </p>
 
 
-                                        Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate  {expertText}s are here for you.
+                                      {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
                                     </div>}
 
 

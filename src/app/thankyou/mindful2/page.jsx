@@ -19,7 +19,7 @@ const ThankYouPage = () => {
                     <h1 className="text-lg text-center  md:text-xl  text-gray-800 mb-6">
                         Thank you for choosing MindfulTMS.
                         <br />
-                        We've received your details.
+                       {` We've received your details.`}
                     </h1>
                     <h1 className='text-2xl md:text-3xl font-bold mb-6'> Our team will contact you shortly.</h1>
 

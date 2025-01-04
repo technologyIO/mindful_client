@@ -9,7 +9,7 @@ import AdsNavbar from "@/components/AdsNavbar";
 import CenterNav from "@/components/CenterNav";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { metadata } from "./layoutWithMetadata";
+// import { metadata } from "./layoutWithMetadata";
 
 // Dynamically load components that are not required on every page
 const DynamicNavbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
@@ -28,11 +28,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const hideZeroNavbar = zeroNav.some((path) => pathname.startsWith(path));
   const hideCenterNavbar = centerNav.some((path) => pathname.startsWith(path));
 
-  const getTitle = () => {
-    if (pathname === "/admin") return "Admin Panel";
-    if (pathname === "/assesment") return "Assessment";
-    return metadata.title || "Mindful TMS"; // Default title from metadata
-  };
+  // const getTitle = () => {
+  //   if (pathname === "/admin") return "Admin Panel";
+  //   if (pathname === "/assesment") return "Assessment";
+  //   return metadata.title || "Mindful TMS"; // Default title from metadata
+  // };
 
   return (
     <html lang="en">

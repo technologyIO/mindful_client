@@ -4,7 +4,84 @@ import axios from "axios";
 import Slider from "react-slick";
 import { CircularProgress, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
+const staticTestimonials =[
+    {
+        "_id": "673bfab2226472f401712148",
+        "type": "text",
+        "patientName": "Anonymous",
+        "doctor": {
+            "_id": "66fe4d3a6a3f2ccdb194af4b",
+            "name": "Ms. Shilpi Sharma"
+        },
+        "condition": "OCD",
+        "treatment": "rTMS",
+        "location": "New Delhi - Greater Kailash 1",
+        "title": "I started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues.",
+        "shortQuote": "I started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues.",
+        "fullTestimonial": "I was suffering from OCD and visited so many Doctors due to this but it wasn't helpful, Then I got referred to Dr Shilpi Sharma at MindfulTMS Neurocare for the Consultation and my life changed. She is a very humble lady, she educated me regarding TMS therapy sessions and I went ahead for 30 sessions of TMS.\n\nI started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues. Today I can say my life changed so highly recommended. Also, the clinic's ambience is very homely. Also, all the staff members are very cooperative and friendly, The center admin helped me in the entire process from managing time to scheduling sessions.",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.364Z",
+        "updatedAt": "2024-11-19T02:40:50.364Z"
+    },
+    {
+        "_id": "673bfab2226472f401712154",
+        "type": "text",
+        "patientName": "Mr Ravinder",
+        "doctor": {
+            "_id": "66fe4d3a6a3f2ccdb194af4b",
+            "name": "Ms. Shilpi Sharma"
+        },
+        "condition": "OCD",
+        "treatment": "rTMS,Psychiatrist",
+        "location": "New Delhi - Greater Kailash 1",
+        "title": "My OCD was very old. I used to hear songs. Now after taking 1 month sessions of TMS, I'm out of devil OCD.",
+        "shortQuote": "My OCD was very old. I used to hear songs. Now after taking 1 month sessions of TMS, I'm out of devil OCD.",
+        "fullTestimonial": "I consult Mam For OCD. My OCD was very old. I used to hear songs. Now after taking 1 month sessions of TMS, I'm out of devil OCD. \n\nThank you Mam and Doctors there. I'm still taking medicine but thoughts are invisible now. My respect for TMS has been increased.\n\nAll because of Doctor Shipi",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.365Z",
+        "updatedAt": "2024-11-19T02:40:50.365Z"
+    },
+    {
+        "_id": "673bfab2226472f401712155",
+        "type": "text",
+        "patientName": "Himanshu Pandey",
+        "doctor": {
+            "_id": "66fe4d3a6a3f2ccdb194af4b",
+            "name": "Ms. Shilpi Sharma"
+        },
+        "condition": "Anxiety",
+        "treatment": "Therapy",
+        "location": "New Delhi - Greater Kailash 1",
+        "title": "I visited Dr Shilpi Sharma for treatment of my son age 18.",
+        "shortQuote": "I visited Dr Shilpi Sharma for treatment of my son age 18.",
+        "fullTestimonial": "I visited Dr Shilpi Sharma for treatment of my son age 18. \n\nDr Shilpi is very friendly in nature and listens patient and parents with passions so patient can easily share his problem which is most important when you visit a psychologist. \n\nShe guided my son, good in his studies who is preparing for a reputed exam but lost his rhythm and confidence due to some unfortunate circumstances, to see life and career in a broader aspect and focus on his strength and remember what he has achieved in past to regain lost confidence. She advised us to not discuss bad memories of past that helped my son to come out of the situation and regain his confidence. \n\nDue to guidance of Dr Shilpi my son appeared for various competitive exams and qualified for a reputed University. He is still under guidance of Dr Shilpi. \n\nI have no words to express my gratitude towards her. Thank you so much mam.",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.365Z",
+        "updatedAt": "2024-11-19T02:40:50.365Z"
+    },
+    {
+        "_id": "673bfab2226472f401712158",
+        "type": "text",
+        "patientName": "Sherlin",
+        "doctor": {
+            "_id": "66fe4d3a6a3f2ccdb194af4b",
+            "name": "Ms. Shilpi Sharma"
+        },
+        "condition": "Depression",
+        "treatment": "Therapy",
+        "location": "New Delhi - Greater Kailash 1",
+        "title": "I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder.",
+        "shortQuote": "I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder.",
+        "fullTestimonial": "I joined therapy at one of my lowest points in life. I was lost, more depressed and suicidal than ever and had 0 confidence in myself. I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder. \n\nShilpi Ma’am helped me overcome this tough point in my life. In less than a month, I have seen a vast difference. She is super friendly, and she gives the best advices. I have formed a positive attitude towards everything and I’ve started considering her a big part of my life with how much she has helped me. She helped me cope up with all my symptoms and strengthen my relationships. She has helped me in feeling more confident and independent and I’ve learnt to be more self aware. \n\nI’m glad I found such an amazing therapist. Don’t give it a second thought!! Go for it , you can’t get a better therapist.",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.365Z",
+        "updatedAt": "2024-11-19T02:40:50.365Z"
+    },
+    
+   
+]
 export default function TestimonialComponentSlide({
     location,
     condition,
@@ -14,6 +91,8 @@ export default function TestimonialComponentSlide({
     smallDevice,
     doctor
 }) {
+
+    const pathname = usePathname(); 
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
     const [isQuoteModal, setisQuoteModal] = useState(false);
@@ -40,8 +119,27 @@ export default function TestimonialComponentSlide({
     };
 
     useEffect(() => {
-        fetchTestimonials();
-    }, [condition, location]);
+        // Check the current route and decide whether to use static testimonials or fetch from the API
+        if (pathname === "/") {
+          setTestimonials(staticTestimonials);
+        //   console.log(pathname)
+
+        //   console.log("hehe")
+        } else {
+          fetchTestimonials();
+        //   console.log(pathname)
+        //   console.log("hehesjdkfjs")
+
+        }
+      }, [pathname, condition, location]);
+
+
+      useEffect(() => {
+        // Check the current route and decide whether to use static testimonials or fetch from the API
+        if (pathname === "/") {
+          setTestimonials(staticTestimonials);
+        } 
+      }, []);
 
     if (loading) {
         return <div className="flex justify-center h-full items-center"><CircularProgress /></div>;

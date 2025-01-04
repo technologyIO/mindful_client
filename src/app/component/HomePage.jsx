@@ -374,7 +374,7 @@ const HomePage = ({ allSection }) => {
 
                 {/* our experts */}
                 <div className=''>
-                    <OurDoctorSection />
+                    {/* <OurDoctorSection /> */}
                 </div>
             </>
         )
@@ -695,7 +695,7 @@ const HomePage = ({ allSection }) => {
                 {/* our experts */}
                 <div className='bg-primary-div'>
                     <Container maxWidth="lg">
-                        <OurDoctorSection />
+                        {/* <OurDoctorSection /> */}
                     </Container>
                 </div>
 

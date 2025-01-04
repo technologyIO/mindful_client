@@ -31,14 +31,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const getTitle = () => {
     if (pathname === "/admin") return "Admin Panel";
     if (pathname === "/assesment") return "Assessment";
-    return metadata.title; // Default title from metadata
+    return metadata.title || "Mindful TMS"; // Default title from metadata
   };
 
   return (
     <html lang="en">
       <head>
-        <title>{getTitle()}</title>
-        <link rel="icon" href={metadata.icons.icon} />
+        <title>Mindful TMS</title>
+        <link rel="icon" href={`/icons/mindLogo.png`} />
         
         {/* Preload important font for better performance */}
         <link 

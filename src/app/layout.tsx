@@ -7,13 +7,15 @@ import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
 import AdsNavbar from "@/components/AdsNavbar";
 import CenterNav from "@/components/CenterNav";
+import DynamicNavbar from "@/components/Navbar";
+import DynamicFooter from "@/components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import { metadata } from "./layoutWithMetadata";
 
 // Dynamically load components that are not required on every page
-const DynamicNavbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
-const DynamicFooter = dynamic(() => import('@/components/Footer'), { ssr: false });
+// const DynamicNavbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
+// const DynamicFooter = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

@@ -62,7 +62,7 @@ function Navbar() {
     <>
       <header className="flex items-center flex-row-reverse md:flex-row justify-between px-6 md:px-16 py-0">
         <div onClick={() => setOpen(true)} className="cursor-pointer">
-          <img src="/home/menu.svg" alt="Menu" />
+          <img className="cursor-pointer w-[40px] h-[40px]" src="/home/menu.svg" alt="Menu" />
         </div>
         <div onClick={() => router.push("/")} className="cursor-pointer w-[129px] h-[90px]">
           <img className="cursor-pointer w-full h-full" src="/home/logoMain.svg" alt="Logo" />

@@ -18,10 +18,10 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 // Dynamically import non-critical components with SSR enabled for lazy loading
-const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'), { ssr: false });
-const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'), { ssr: false });
-const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'), { ssr: false });
-const CounterComponent = dynamic(() => import('./CounterComponent'), { ssr: false });
+// const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'), { ssr: false });
+// const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'), { ssr: false });
+// const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'), { ssr: false });
+// const CounterComponent = dynamic(() => import('./CounterComponent'), { ssr: false });
 
 // import VideoComponent from './VideoComponent'
 // import NewComponent from './newComponent';
@@ -30,10 +30,10 @@ const CounterComponent = dynamic(() => import('./CounterComponent'), { ssr: fals
 // import TestimonialComponents2 from './TestimonialComponents2';
 // import Footer from '@/components/Footer'
 
-// import TestimonialComponentSlide from './TestimonialComponentSlide';
-// import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
-// import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
-// import CounterComponent from './CounterComponent';
+import TestimonialComponentSlide from './TestimonialComponentSlide';
+import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
+import CounterComponent from './CounterComponent';
 
 // Dynamically import non-critical components with SSR enabled
 // const CounterComponent = dynamic(() => import('./CounterComponent'));
@@ -73,11 +73,12 @@ const HomePage = ({ allSection }) => {
     const MobileScreen = () => {
         return (
             <>
-                {/* hero section */}
-                <section className='mb-5'>
+               <div className='min-h-screen'>
+                 {/* hero section */}
+                 <section className='mb-5'>
                     <div className='md:grid grid-cols-2 items-center'>
-                        <div className='flex justify-center w-full  mb-7'>
-                            <Image layout="intrinsic" height={100} width={100} loading="eager" className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
+                        <div className='flex justify-center w-full h-[300px] mb-7'>
+                            <Image width={500} height={500} className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
                         </div>
                         <div>
                             <div className='flex flex-col justify-center'>
@@ -100,9 +101,7 @@ const HomePage = ({ allSection }) => {
                                             <div className='flex'>
                                                 <Image layout="intrinsic" height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                             </div>
-                                            {/* <div className='flex'>
-                                                <Image layout="intrinsic" height={100} width={100}  className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatry</span>
-                                            </div> */}
+                                        
 
                                         </div>
                                         <div className='flex justify-center'>
@@ -146,16 +145,15 @@ const HomePage = ({ allSection }) => {
                         </h1>
                     </div>
 
-                    <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
+                    <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)] '>
                         <div>
-                            <Image layout="intrinsic" height={500} width={500} alt='img' className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
+                            <Image layout="intrinsic" height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                         </div>
 
                     </div>
                     <div className='flex justify-center'>
                         <Link href={"/assesment"}>
                             <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 font-semibold text-sm text-white'>
-                                {/* {allSection?.section2?.button?.text} */}
                                 {"TAKE OUR FREE TEST"}
                             </button>
                         </Link>
@@ -373,9 +371,10 @@ const HomePage = ({ allSection }) => {
                 </section>
 
                 {/* our experts */}
-                <div className=''>
+                <div className='bg-primary-div'>
                     <OurDoctorSection />
                 </div>
+               </div>
             </>
         )
     }

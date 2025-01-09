@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
    <>
-    <HomePage allSection={allSection} />z
+    <HomePage allSection={allSection} />
     {/* <HomePage allSection={currentSection} /> */}
    </>
   );

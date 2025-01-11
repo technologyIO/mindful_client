@@ -98,18 +98,18 @@ const HomePage = ({ allSection }) => {
                                         <p className='mb-2   text-[16px]  text-center text-[#545454]'>Get the best care from our experts. </p>
                                         <div className='mb-6'>
                                             <div className='flex gap-5 mb-2 items-center justify-center'>
+                                                    <div className='flex'>
+                                                        <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                    </div>
                                                 <div className='flex'>
-                                                    <Image layout="intrinsic" height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
-                                                </div>
-                                                <div className='flex'>
-                                                    <Image layout="intrinsic" height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                    <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                                 </div>
 
 
                                             </div>
                                             <div className='flex justify-center'>
                                                 <div className='flex'>
-                                                    <Image layout="intrinsic" height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>rTMS Specialists</span>
+                                                    <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>rTMS Specialists</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@ const HomePage = ({ allSection }) => {
 
                         <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)] '>
                             <div>
-                                <Image layout="intrinsic" height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
+                                <Image  height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                             </div>
 
                         </div>
@@ -245,7 +245,7 @@ const HomePage = ({ allSection }) => {
                         <div className='md:grid grid-cols-6 items-center justify-center md:bg-primary-div'>
                             <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                                 <div className=''>
-                                    <Image layout="intrinsic" height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
+                                    <Image  height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
                                 </div>
                                 <div className='grid grid-cols-2 gap-2'>
                                     <div className='flex  items-center gap-1'>
@@ -393,7 +393,7 @@ const HomePage = ({ allSection }) => {
                         backgroundPosition: 'center', // This centers the background image
                     }}>
                         <div></div>
-                        {/* <Image layout="intrinsic" height={100} width={100}  className='w-full object-cover' src='/home/banner02.svg' /> */}
+                        {/* <Image  height={100} width={100}  className='w-full object-cover' src='/home/banner02.svg' /> */}
                         <div className='flex flex-col justify-center items-end mr-[70px] lg:mr-[100px]'>
                             <div className='flex flex-col justify-center  items-end px-8'>
                                 <h1 className=' text-6xl mb-5 text-white  text-end font-sans font-semibold '>
@@ -426,7 +426,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <Image layout="intrinsic" height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527" />
+                                <Image  height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527" />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -549,7 +549,7 @@ const HomePage = ({ allSection }) => {
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* left image */}
                                 <div className="md">
-                                    <Image layout="intrinsic"
+                                    <Image 
                                         src="https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"
                                         alt="rTMS Treatment"
                                         width={600}

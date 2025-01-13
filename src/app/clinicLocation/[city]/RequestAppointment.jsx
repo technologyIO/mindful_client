@@ -5,7 +5,7 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem,
 // import PractoWidget from './PractoWidget';
 import { usePathname } from 'next/navigation';
 import ZohoForm from '@/app/component/ZohoForm'
-
+import CustomRequestForm from '@/components/CustomRequestForm'
 
 const locations = [
     {
@@ -177,15 +177,15 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal} className=''>
-                {/* <DialogTitle className='text-center font-semibold'>Request an Appointment</DialogTitle> */}
                 <DialogContent className='w-[310px] md:w-[500px] p-0 m-0 '>
                     
                     <div className='flex justify-end pt-3 px-3'>
                         <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028' /></p>
                     </div>
-                    <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
+                    {/* <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
                         iframeSrc={iframeSrc || iframeSrcStatic}
-                    />
+                    /> */}
+                    <CustomRequestForm/>
                 </DialogContent>
 
             </Dialog>

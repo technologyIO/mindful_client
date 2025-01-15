@@ -514,7 +514,7 @@ const allTest = [
     },
     {
         _id: 17,
-        name: "What is rTMS? How is it different from rTMS?",
+        name: "What is rTMS? How is it different from TMS?",
         icon: "/iconsNew2/tms.png",
         detail: `
         <div class="text-gray-700 text-sm md:text-lg space-y-4">
@@ -522,7 +522,7 @@ const allTest = [
         rTMS stands for repetitive Transcranial Magnetic Stimulation, which is a specific type of rTMS therapy. Today, most rTMS treatments use rTMS.
     </p>
     <p>
-        <span class="font-bold">Transcranial Magnetic Stimulation (rTMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
+        <span class="font-bold">Transcranial Magnetic Stimulation (TMS):</span> A non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain to improve symptoms of depression and other mental health conditions.
     </p>
     <p>
         <span class="font-bold">Repetitive rTMS (rTMS):</span> Involves delivering multiple magnetic pulses in <span class="font-semibold">rapid succession</span> to the targeted brain area.

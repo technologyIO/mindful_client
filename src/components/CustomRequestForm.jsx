@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -75,7 +76,11 @@ export default function CustomRequestForm() {
     const nextStep = () => {
       const validationErrors = validateForm();
       if (Object.keys(validationErrors).length === 0) {
-        setStep((prev) => prev + 1);
+        if(step === 3){
+          handleSubmit();
+        }else{
+          setStep((prev) => prev + 1);
+        }
       } else {
         setErrors(validationErrors);
       }
@@ -87,20 +92,50 @@ export default function CustomRequestForm() {
     const validateForm = () => {
       const validationErrors = {};
       if (step === 1) {
-        if (!formData.firstName || /\d/.test(formData.firstName)) {
-          validationErrors.firstName = 'First name must be a string and cannot contain numbers';
+        if (!formData.Name_First || /\d/.test(formData.Name_First)) {
+          validationErrors.Name_First = 'First name must be a string and cannot contain numbers';
         }
-        if (!formData.lastName || /\d/.test(formData.lastName)) {
-          validationErrors.lastName = 'Last name must be a string and cannot contain numbers';
+        if (!formData.Name_Last || /\d/.test(formData.Name_Last)) {
+          validationErrors.Name_Last = 'Last name must be a string and cannot contain numbers';
         }
       }
       if (step === 2) {
-        if (!formData.phone || !/^\d{10}$/.test(formData.phone)) {
-          validationErrors.phone = 'Phone number must be 10 digits';
+        if (!formData.PhoneNumber_countrycode || !/^\d{10}$/.test(formData.PhoneNumber_countrycode)) {
+          validationErrors.PhoneNumber_countrycode = 'Phone number must be 10 digits';
         }
       }
       return validationErrors;
     };
+
+    const handleSubmit = () => {
+      const formDataObj = new FormData();
+    
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value);
+      });
+    
+      formDataObj.append('SingleLine', locationWiseContent[city]?.area);
+      axios
+        .post(
+          `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`, 
+          formDataObj, 
+          {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response);
+          // Handle the response here
+          setStep(4);
+        })
+        .catch((error) => {
+          console.error(error);
+          // Handle the error here
+        });
+    };
+    
     return (
       <div className="">
         {/* Progress bar */}
@@ -135,8 +170,8 @@ export default function CustomRequestForm() {
                   <div>
                     <input
                       type="text"
-                      name="firstName"
-                      value={formData.firstName}
+                      name="Name_First"
+                      value={formData.Name_First}
                       onChange={handleInputChange}
                       placeholder="First Name"
                       className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
@@ -144,13 +179,13 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       First Name
                     </label>
-                    {errors.firstName && <p className="text-red-500 text-xs">{errors.firstName}</p>}
+                    {errors.Name_First && <p className="text-red-500 text-xs">{errors.Name_First}</p>}
                   </div>
                   <div>
                     <input
                       type="text"
-                      name="lastName"
-                      value={formData.lastName}
+                      name="Name_Last"
+                      value={formData.Name_Last}
                       onChange={handleInputChange}
                       placeholder="Last Name"
                       className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
@@ -158,7 +193,7 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       Last Name
                     </label>
-                    {errors.lastName && <p className="text-red-500 text-xs">{errors.lastName}</p>}
+                    {errors.Name_Last && <p className="text-red-500 text-xs">{errors.Name_Last}</p>}
                   </div>
                 </div>
               </>
@@ -172,13 +207,13 @@ export default function CustomRequestForm() {
                 <div>
                   <input
                     type="number"
-                    name="phone"
-                    value={formData.phone}
+                    name="PhoneNumber_countrycode"
+                    value={formData.PhoneNumber_countrycode}
                     onChange={handleInputChange}
                     placeholder="Enter your phone number"
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                   />
-                   {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+                   {errors.PhoneNumber_countrycode && <p className="text-red-500 text-xs">{errors.PhoneNumber_countrycode}</p>}
                 </div>
               </>
             )}
@@ -193,8 +228,8 @@ export default function CustomRequestForm() {
                 </div>
                 <div>
                   <textarea
-                   name="message"
-                   value={formData.message}
+                   name="MultiLine"
+                   value={formData.MultiLine}
                    onChange={handleInputChange}
                     placeholder="Message..."
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500 h-24"

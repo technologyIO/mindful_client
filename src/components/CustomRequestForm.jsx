@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function CustomRequestForm() {
+  const router = useRouter();
   const params = useParams();
   // console.log("params", params);
   const [city, setCity] = useState("");
@@ -18,7 +19,6 @@ export default function CustomRequestForm() {
       params.location === "hb"
     ) {
       setmainStep(true);
-
     }
   }, [params]);
   const handleSelectLocation = (location) => {
@@ -31,34 +31,33 @@ export default function CustomRequestForm() {
   };
 
   const totalSteps = 4;
-  
-  // lcoation component 
+
+  // lcoation component
   const LocationWiseForm = () => {
-    
     const locationWiseContent = {
       gk: {
         city: "New Delhi",
         area: "Greater Kailash 1",
         formHeader: "Schedule a Consultation @ Greater Kailash 1, Delhi",
         formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
+          "Share your basic details to get started on your mental wellness journey with our expert",
       },
       wf: {
         city: "Bengaluru",
         area: "Whitefield (Varthur Road)",
         formHeader: "Schedule a Consultation @ Whitefield, Bangalore",
         formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
+          "Share your basic details to get started on your mental wellness journey with our expert",
       },
       hb: {
         city: "Bengaluru",
         area: "Hebbal (Aster CMI Hospital)",
         formHeader: "Schedule a Consultation @ Hebbal, Bangalore",
         formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
+          "Share your basic details to get started on your mental wellness journey with our expert",
       },
     };
-    
+
     const [step, setStep] = useState(1);
     const [errors, setErrors] = useState({});
     const [formData, setFormData] = useState({});
@@ -76,16 +75,16 @@ export default function CustomRequestForm() {
     const nextStep = () => {
       const validationErrors = validateForm();
       if (Object.keys(validationErrors).length === 0) {
-        if(step === 3){
+        if (step === 3) {
           handleSubmit();
-        }else{
+        } else {
           setStep((prev) => prev + 1);
         }
       } else {
         setErrors(validationErrors);
       }
     };
-    
+
     const prevStep = () => {
       setStep((prev) => prev - 1);
     };
@@ -93,37 +92,87 @@ export default function CustomRequestForm() {
       const validationErrors = {};
       if (step === 1) {
         if (!formData.Name_First || /\d/.test(formData.Name_First)) {
-          validationErrors.Name_First = 'First name must be a string and cannot contain numbers';
+          validationErrors.Name_First =
+            "First name must be a string and cannot contain numbers";
         }
         if (!formData.Name_Last || /\d/.test(formData.Name_Last)) {
-          validationErrors.Name_Last = 'Last name must be a string and cannot contain numbers';
+          validationErrors.Name_Last =
+            "Last name must be a string and cannot contain numbers";
         }
       }
       if (step === 2) {
-        if (!formData.PhoneNumber_countrycode || !/^\d{10}$/.test(formData.PhoneNumber_countrycode)) {
-          validationErrors.PhoneNumber_countrycode = 'Phone number must be 10 digits';
+        if (
+          !formData.PhoneNumber_countrycode ||
+          !/^\d{10}$/.test(formData.PhoneNumber_countrycode)
+        ) {
+          validationErrors.PhoneNumber_countrycode =
+            "Phone number must be 10 digits";
         }
       }
       return validationErrors;
     };
 
+    // const handleSubmit = () => {
+    //   const formDataObj = new FormData();
+
+    //   Object.entries(formData).forEach(([key, value]) => {
+    //     formDataObj.append(key, value);
+    //   });
+
+    //   formDataObj.append('SingleLine', locationWiseContent[city]?.area);
+    //   axios
+    //     .post(
+    //       `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`,
+    //       formDataObj,
+    //       {
+    //         headers: {
+    //           'Content-Type': 'multipart/form-data',
+    //         },
+    //       }
+    //     )
+    //     .then((response) => {
+    //       console.log(response);
+    //       // Handle the response here
+    //       setStep(4);
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //       // Handle the error here
+    //     });
+    // };
+
     const handleSubmit = () => {
-      const formDataObj = new FormData();
-    
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataObj.append(key, value);
-      });
-    
-      formDataObj.append('SingleLine', locationWiseContent[city]?.area);
+      // const formDataObj = new FormData();
+
+      // Object.entries(formData).forEach(([key, value]) => {
+      //   formDataObj.append(key, value);
+      // });
+
+      // formDataObj.append('SingleLine', locationWiseContent[city]?.area);
+
+      const data = {
+        Name: { Name_First: "Sahil", Name_Last: "Vk" },
+        PhoneNumber: "9663095632",
+        SingleLine: "gk test",
+        MultiLine: "Test",
+        SingleLine1: "Test",
+        DateTime: "15-Jan-2025 06:16 PM",
+        REFERRER_NAME: "Test",
+        GOOGLE_CLICK_ID: "Test",
+        UTM_PARAM: {
+          utm_source: "Test",
+          utm_medium: "Test",
+          utm_campaign: "Test",
+          utm_term: "Test",
+          utm_content: "Test",
+          gclid: "Test",
+          referrername: "Test",
+        },
+      };
       axios
         .post(
-          `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`, 
-          formDataObj, 
-          {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          }
+          `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/a5tPpJr-Ue0uRODkI4D7hT31a3TdQl6zRm1A7Kwpomo/records`,
+          data
         )
         .then((response) => {
           console.log(response);
@@ -133,9 +182,14 @@ export default function CustomRequestForm() {
         .catch((error) => {
           console.error(error);
           // Handle the error here
+        })
+        .finally(() => {
+          // Handle the final state here
+          router.push("/thankyou/mindful2");
+
         });
     };
-    
+
     return (
       <div className="">
         {/* Progress bar */}
@@ -159,8 +213,6 @@ export default function CustomRequestForm() {
         {/* Form content */}
         <div className="p-6">
           <div className="mb-6">
-         
-
             {step === 1 && (
               <>
                 <div className="flex items-center justify-between mb-4">
@@ -179,7 +231,11 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       First Name
                     </label>
-                    {errors.Name_First && <p className="text-red-500 text-xs">{errors.Name_First}</p>}
+                    {errors.Name_First && (
+                      <p className="text-red-500 text-xs">
+                        {errors.Name_First}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <input
@@ -193,7 +249,9 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       Last Name
                     </label>
-                    {errors.Name_Last && <p className="text-red-500 text-xs">{errors.Name_Last}</p>}
+                    {errors.Name_Last && (
+                      <p className="text-red-500 text-xs">{errors.Name_Last}</p>
+                    )}
                   </div>
                 </div>
               </>
@@ -213,7 +271,11 @@ export default function CustomRequestForm() {
                     placeholder="Enter your phone number"
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                   />
-                   {errors.PhoneNumber_countrycode && <p className="text-red-500 text-xs">{errors.PhoneNumber_countrycode}</p>}
+                  {errors.PhoneNumber_countrycode && (
+                    <p className="text-red-500 text-xs">
+                      {errors.PhoneNumber_countrycode}
+                    </p>
+                  )}
                 </div>
               </>
             )}
@@ -228,9 +290,9 @@ export default function CustomRequestForm() {
                 </div>
                 <div>
                   <textarea
-                   name="MultiLine"
-                   value={formData.MultiLine}
-                   onChange={handleInputChange}
+                    name="MultiLine"
+                    value={formData.MultiLine}
+                    onChange={handleInputChange}
                     placeholder="Message..."
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500 h-24"
                   />
@@ -238,17 +300,16 @@ export default function CustomRequestForm() {
               </>
             )}
 
-            {step === 4 && (
-              <>
-              
-                
-              </>
-            )}
+            {step === 4 && <></>}
           </div>
 
           {/* Navigation */}
-          <div className={`flex mt-8 ${step===totalSteps ? 'justify-end' : 'justify-between'}`}>
-            {(step > 1 && step < totalSteps) && (
+          <div
+            className={`flex mt-8 ${
+              step === totalSteps ? "justify-end" : "justify-between"
+            }`}
+          >
+            {step > 1 && step < totalSteps && (
               <button
                 onClick={prevStep}
                 className="p-2 flex items-center rotate-180 justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50"

@@ -70,7 +70,7 @@ const RequestAppointmentGeneral = ({ children, iframeSrc }) => {
                         iframeSrc={iframeSrc || iframeSrcStatic}
                     /> */}
 
-                    <CustomRequestForm/>
+                    <CustomRequestForm toggleRequestModal={toggleRequestModal}/>
 
                     
                 </DialogContent>

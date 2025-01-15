@@ -6,19 +6,10 @@ import { useEffect, useState } from "react";
 export default function CustomRequestForm() {
   const params = useParams();
   // console.log("params", params);
-  const [selectLocation, setSelectLocation] = useState("");
   const [step, setStep] = useState(1);
-  const [mainStep, setmainStep] = useState(false);
   const [city, setCity] = useState("");
-  const [formData, setFormData] = useState({
- 
-  });
 
-  const handleSelectLocation = (location)=>{
-    // setmainStep(true);
-    setCity(location);
-  }
-
+  const [mainStep, setmainStep] = useState(false);
   useEffect(() => {
     setCity(params.location);
     if (
@@ -27,61 +18,73 @@ export default function CustomRequestForm() {
       params.location === "hb"
     ) {
       setmainStep(true);
+
     }
   }, [params]);
-
-  const locationWiseContent = {
-    gk: {
-      city: "New Delhi",
-      area: "Greater Kailash 1",
-      formHeader: "Schedule a Consultation @ Greater Kailash 1, Delhi",
-      formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
-    },
-    wf: {
-      city: "Bengaluru",
-      area: "Whitefield (Varthur Road)",
-      formHeader: "Schedule a Consultation @ Whitefield, Bangalore",
-      formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
-    },
-    hb: {
-      city: "Bengaluru",
-      area: "Hebbal (Aster CMI Hospital)",
-      formHeader: "Schedule a Consultation @ Hebbal, Bangalore",
-      formPara:
-        "Share your basic details to get started on your mental wellness journey with our expert",
-    },
+  const handleSelectLocation = (location) => {
+    // setmainStep(true);
+    setCity(location);
   };
 
-  const totalSteps = 3;
-  const progress = (step / totalSteps) * 100;
-
-
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-  
-    // Update the form data without causing re-renders on every keystroke
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const nextStep = () => {
-    setStep((prev) => prev + 1);
-  };
   const nextStepMain = () => {
     setmainStep(true);
-
   };
 
-  const prevStep = () => {
-    setStep((prev) => prev - 1);
-  };
 
+  // lcoation component 
   const LocationWiseForm = () => {
+
+    const locationWiseContent = {
+      gk: {
+        city: "New Delhi",
+        area: "Greater Kailash 1",
+        formHeader: "Schedule a Consultation @ Greater Kailash 1, Delhi",
+        formPara:
+          "Share your basic details to get started on your mental wellness journey with our expert",
+      },
+      wf: {
+        city: "Bengaluru",
+        area: "Whitefield (Varthur Road)",
+        formHeader: "Schedule a Consultation @ Whitefield, Bangalore",
+        formPara:
+          "Share your basic details to get started on your mental wellness journey with our expert",
+      },
+      hb: {
+        city: "Bengaluru",
+        area: "Hebbal (Aster CMI Hospital)",
+        formHeader: "Schedule a Consultation @ Hebbal, Bangalore",
+        formPara:
+          "Share your basic details to get started on your mental wellness journey with our expert",
+      },
+    };
+  
+  const params = useParams();
+  const [step, setStep] = useState(1);
+
+    const [formData, setFormData] = useState({});
+    const handleInputChange = (event) => {
+      const { name, value } = event.target;
+
+      // Update the form data without causing re-renders on every keystroke
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+
+
+
+
+    const totalSteps = 4;
+    const progress = (step / totalSteps) * 100;
+  
+    const nextStep = () => {
+      setStep((prev) => prev + 1);
+    };
+    
+    const prevStep = () => {
+      setStep((prev) => prev - 1);
+    };
     return (
       <div className="">
         {/* Progress bar */}
@@ -105,12 +108,7 @@ export default function CustomRequestForm() {
         {/* Form content */}
         <div className="p-6">
           <div className="mb-6">
-            {/* <div className="flex items-center justify-between mb-4">
-            <p className="font-medium">
-              {step}. {step === 1 ? "Name" : "Phone"} *
-            </p>
-           
-          </div> */}
+         
 
             {step === 1 && (
               <>
@@ -183,11 +181,18 @@ export default function CustomRequestForm() {
                 </div>
               </>
             )}
+
+            {step === 4 && (
+              <>
+              
+                
+              </>
+            )}
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-between mt-8">
-            {step > 1  && (
+          <div className={`flex mt-8 ${step===totalSteps ? 'justify-end' : 'justify-between'}`}>
+            {(step > 1 && step < totalSteps) && (
               <button
                 onClick={prevStep}
                 className="p-2 flex items-center rotate-180 justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50"
@@ -199,11 +204,9 @@ export default function CustomRequestForm() {
             <button
               onClick={nextStep}
               disabled={step === totalSteps}
-              className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50${
-                step === totalSteps ? "opacity-50 cursor-not-allowed" : ""
-              }`}
+              className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50`}
             >
-              ➜
+              {step === 3 ? "Submit" : step === totalSteps ? "Done" : "➜"}
             </button>
           </div>
         </div>
@@ -217,13 +220,13 @@ export default function CustomRequestForm() {
         <div className=" bg-gradient-to-br  ">
           <div className="">
             <div className="bg-[#f6dccc] p-6">
-            <h2 className="text-2xl font-semibold text-orange-800 mb-2">
-              Schedule a Consultation
-            </h2>
-            <p className="text-orange-700 mb-6 text-sm">
-              Select your preferred location to get started on your mental
-              wellness journey with our expert
-            </p>
+              <h2 className="text-2xl font-semibold text-orange-800 mb-2">
+                Schedule a Consultation
+              </h2>
+              <p className="text-orange-700 mb-6 text-sm">
+                Select your preferred location to get started on your mental
+                wellness journey with our expert
+              </p>
             </div>
 
             <form className=" p-5">
@@ -233,25 +236,31 @@ export default function CustomRequestForm() {
                 </label>
                 <div className="grid gap-3">
                   <button
-                  onClick={()=>handleSelectLocation("gk")}
+                    onClick={() => handleSelectLocation("gk")}
                     type="button"
-                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${city==="gk"?"outline-none ring-2 ring-orange-500":""}`}
+                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${
+                      city === "gk" ? "outline-none ring-2 ring-orange-500" : ""
+                    }`}
                   >
                     Greater Kailash 1, Delhi
                   </button>
 
                   <button
-                   onClick={()=>handleSelectLocation("wf")}
+                    onClick={() => handleSelectLocation("wf")}
                     type="button"
-                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${city==="wf"?"outline-none ring-2 ring-orange-500":""}`}
+                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${
+                      city === "wf" ? "outline-none ring-2 ring-orange-500" : ""
+                    }`}
                   >
                     Whitefield (Varthur Road), Bangalore
                   </button>
 
                   <button
-                   onClick={()=>handleSelectLocation("hb")}
+                    onClick={() => handleSelectLocation("hb")}
                     type="button"
-                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${city==="hb"?"outline-none ring-2 ring-orange-500":""}`}
+                    className={`w-full text-left px-4 py-3 rounded-md border border-orange-200 hover:border-orange-500  bg-white transition-colors ${
+                      city === "hb" ? "outline-none ring-2 ring-orange-500" : ""
+                    }`}
                   >
                     Hebbal (Aster CMI Hospital), Bangalore
                   </button>
@@ -259,18 +268,19 @@ export default function CustomRequestForm() {
               </div>
 
               {/* Navigation */}
-          {!mainStep && city &&<div className="flex justify-end mt-8">
-            
-            <button
-              onClick={nextStepMain}
-              disabled={step === totalSteps}
-              className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50${
-                step === totalSteps ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-            >
-              ➜
-            </button>
-          </div>}
+              {!mainStep && city && (
+                <div className="flex justify-end mt-8">
+                  <button
+                    onClick={nextStepMain}
+                    disabled={step === totalSteps}
+                    className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50${
+                      step === totalSteps ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    ➜
+                  </button>
+                </div>
+              )}
             </form>
           </div>
         </div>

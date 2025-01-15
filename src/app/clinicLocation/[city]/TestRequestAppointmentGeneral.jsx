@@ -5,10 +5,11 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem,
 // import PractoWidget from './PractoWidget';
 // import { usePathname } from 'next/navigation';
 import ZohoForm from '@/app/component/ZohoForm'
+import CustomRequestForm from '@/components/CustomRequestForm';
 
 
 
-const TestRequestAppointmentGeneral = ({ children, iframeSrc }) => {
+const RequestAppointmentGeneral = ({ children, iframeSrc }) => {
     const iframeSrcStatic =
         // "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
         "https://forms.zohopublic.in/nikhilmindf1/form/SelectyourClinic/formperma/Byg-b2YLIH7SjrLKNMIaghP6fUKY1JxPihr6O1YvkXk"
@@ -65,9 +66,13 @@ const TestRequestAppointmentGeneral = ({ children, iframeSrc }) => {
                     <div className='flex justify-end pt-3 px-3'>
                         <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028' /></p>
                     </div>
-                    <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
+                    {/* <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
                         iframeSrc={iframeSrc || iframeSrcStatic}
-                    />
+                    /> */}
+
+                    <CustomRequestForm/>
+
+                    
                 </DialogContent>
 
             </Dialog>
@@ -82,4 +87,4 @@ const TestRequestAppointmentGeneral = ({ children, iframeSrc }) => {
 
 
 
-export default TestRequestAppointmentGeneral
+export default RequestAppointmentGeneral

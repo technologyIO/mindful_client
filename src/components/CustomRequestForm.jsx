@@ -185,7 +185,7 @@ export default function CustomRequestForm() {
         })
         .finally(() => {
           // Handle the final state here
-          router.push("/thankyou/mindful2");
+          // router.push("/thankyou/mindful2");
 
         });
     };

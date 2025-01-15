@@ -30,6 +30,9 @@ export default function CustomRequestForm() {
     setmainStep(true);
   };
 
+  const totalSteps = 4;
+  const progress = (step / totalSteps) * 100;
+
 
   // lcoation component 
   const LocationWiseForm = () => {
@@ -75,9 +78,7 @@ export default function CustomRequestForm() {
 
 
 
-    const totalSteps = 4;
-    const progress = (step / totalSteps) * 100;
-  
+
     const nextStep = () => {
       setStep((prev) => prev + 1);
     };

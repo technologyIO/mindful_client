@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 export default function CustomRequestForm() {
   const params = useParams();
   // console.log("params", params);
-  const [step, setStep] = useState(1);
   const [city, setCity] = useState("");
 
   const [mainStep, setmainStep] = useState(false);
@@ -31,40 +30,38 @@ export default function CustomRequestForm() {
   };
 
   const totalSteps = 4;
-  const progress = (step / totalSteps) * 100;
-
-
+  
   // lcoation component 
   const LocationWiseForm = () => {
-
+    
     const locationWiseContent = {
       gk: {
         city: "New Delhi",
         area: "Greater Kailash 1",
         formHeader: "Schedule a Consultation @ Greater Kailash 1, Delhi",
         formPara:
-          "Share your basic details to get started on your mental wellness journey with our expert",
+        "Share your basic details to get started on your mental wellness journey with our expert",
       },
       wf: {
         city: "Bengaluru",
         area: "Whitefield (Varthur Road)",
         formHeader: "Schedule a Consultation @ Whitefield, Bangalore",
         formPara:
-          "Share your basic details to get started on your mental wellness journey with our expert",
+        "Share your basic details to get started on your mental wellness journey with our expert",
       },
       hb: {
         city: "Bengaluru",
         area: "Hebbal (Aster CMI Hospital)",
         formHeader: "Schedule a Consultation @ Hebbal, Bangalore",
         formPara:
-          "Share your basic details to get started on your mental wellness journey with our expert",
+        "Share your basic details to get started on your mental wellness journey with our expert",
       },
     };
-  
-  const params = useParams();
-  const [step, setStep] = useState(1);
-
+    
+    const [step, setStep] = useState(1);
+    const [errors, setErrors] = useState({});
     const [formData, setFormData] = useState({});
+    const progress = (step / totalSteps) * 100;
     const handleInputChange = (event) => {
       const { name, value } = event.target;
 
@@ -75,16 +72,34 @@ export default function CustomRequestForm() {
       }));
     };
 
-
-
-
-
     const nextStep = () => {
-      setStep((prev) => prev + 1);
+      const validationErrors = validateForm();
+      if (Object.keys(validationErrors).length === 0) {
+        setStep((prev) => prev + 1);
+      } else {
+        setErrors(validationErrors);
+      }
     };
     
     const prevStep = () => {
       setStep((prev) => prev - 1);
+    };
+    const validateForm = () => {
+      const validationErrors = {};
+      if (step === 1) {
+        if (!formData.firstName || /\d/.test(formData.firstName)) {
+          validationErrors.firstName = 'First name must be a string and cannot contain numbers';
+        }
+        if (!formData.lastName || /\d/.test(formData.lastName)) {
+          validationErrors.lastName = 'Last name must be a string and cannot contain numbers';
+        }
+      }
+      if (step === 2) {
+        if (!formData.phone || !/^\d{10}$/.test(formData.phone)) {
+          validationErrors.phone = 'Phone number must be 10 digits';
+        }
+      }
+      return validationErrors;
     };
     return (
       <div className="">
@@ -129,6 +144,7 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       First Name
                     </label>
+                    {errors.firstName && <p className="text-red-500 text-xs">{errors.firstName}</p>}
                   </div>
                   <div>
                     <input
@@ -142,6 +158,7 @@ export default function CustomRequestForm() {
                     <label className="text-xs text-gray-500 mt-1">
                       Last Name
                     </label>
+                    {errors.lastName && <p className="text-red-500 text-xs">{errors.lastName}</p>}
                   </div>
                 </div>
               </>
@@ -154,13 +171,14 @@ export default function CustomRequestForm() {
                 </div>
                 <div>
                   <input
-                    type="tel"
+                    type="number"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="Enter your phone number"
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500"
                   />
+                   {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
                 </div>
               </>
             )}
@@ -175,7 +193,9 @@ export default function CustomRequestForm() {
                 </div>
                 <div>
                   <textarea
-                    name="message"
+                   name="message"
+                   value={formData.message}
+                   onChange={handleInputChange}
                     placeholder="Message..."
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-orange-500 h-24"
                   />
@@ -273,10 +293,7 @@ export default function CustomRequestForm() {
                 <div className="flex justify-end mt-8">
                   <button
                     onClick={nextStepMain}
-                    disabled={step === totalSteps}
-                    className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50${
-                      step === totalSteps ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                    className={`p-2 flex items-center  justify-center font-bold border border-orange-700 text-orange-700 rounded-xl hover:bg-orange-50$`}
                   >
                     ➜
                   </button>

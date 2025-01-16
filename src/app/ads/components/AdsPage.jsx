@@ -280,62 +280,7 @@ export default function AdsPage({ params, condition }) {
         )
     }
 
-    const HeroSection2 = () => {
-        return (
-            <>
-                <section
-                    className=" bg-cover h-[80vh] bg-center flex items-center justify-between  "
-                    style={{ backgroundImage: "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,188,77,1) 200%), url('/ads/banner.png')" }}
-                >
-                    {/* to-[#ffffff1a] */}
-                    {/* w-full bg-gradient-to-r */}
-
-                    <div className="bg-opacity-75  h-full  flex items-end px-6 py-5">
-                        <div className='w-1/2'></div>
-                        <div className=" w-1/2
-                             bg-[#fb923ca8] 
-                               rounded-lg  px-3 py-3">
-                            <div className='mb-3 text-end'>
-                                {/* header */}
-                                {/* if condition then or not  */}
-                                {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                    Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
-                                </h1> :
-                                    <h1 className="mb-2 text-5xl  text-white  font-bold ">
-                                        Are you looking for an experienced {expertText} and a safe space?
-                                    </h1>}
-                            </div>
-
-                            <div className='flex ml-auto text-end '>
-                                {/* sub header */}
-                                {cleanCondition ? <p className="text-2xl  text-white font-bold ">
-                                    Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
-                                </p> :
-                                    <p className="text-2xl  text-white font-bold ">
-                                       {` We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `}{expertText}s are here for you.
-                                    </p>}
-                            </div>
-                            <div className='flex items-center justify-center'>
-                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 mt-8 font-semibold outline-none border-none rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
-
-                            </div>
-
-                        </div>
-                    </div>
-                    {/* Contact Form */}
-                    <div className='flex flex-col items-center'>
-                        {/* <ContactForm iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}/> */}
-                        {/* <RequestAppointment customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" /> */}
-                    </div>
-
-                    {/* {condition ? <h3 className='text-white text-xl font-semibold text-center'>Embrace a healthier, happier life with personalized. Book a Session at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>
-                                : <h3 className='text-white text-xl font-semibold text-center'>Start your healing by booking a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}</h3>} */}
-
-                </section>
-            </>
-        )
-    }
-
+ 
 
     const DesktopView = () => {
         return (

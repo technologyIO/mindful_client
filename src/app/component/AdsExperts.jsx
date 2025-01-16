@@ -32,7 +32,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
     return (
         <section className="mx-3 py-6">
             <Container maxWidth="lg">
-                {condition ? (
+                {/* {condition ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
                     Our Experts
                     </h2>
@@ -40,7 +40,10 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
                     Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
-                )}
+                )} */}
+                <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
+                Our Team of Experts
+                    </h2>
                 <div className="grid grid-cols-1 gap-6">
                     {doctorsData?.map((doctor,i) => (
                         <div key={i} className="grid grid-cols-3">

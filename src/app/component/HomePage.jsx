@@ -140,101 +140,8 @@ const HomePage = ({ allSection }) => {
                             </div>
                         </div>
                     </section>
-                    {/* free test */}
-                    <section className='bg-primary-div py-5'>
-                        <div>
-                            <h1 className='text-2xl  text-center font-sans font-semibold'>
-                                Not sure where to begin?
-                            </h1>
-                        </div>
-
-                        <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)] '>
-                            <div>
-                                <Image  height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
-                            </div>
-
-                        </div>
-                        <div className='flex justify-center'>
-                            <Link href={"/assesment"}>
-                                <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 font-semibold text-sm text-white'>
-                                    {"TAKE OUR FREE TEST"}
-                                </button>
-                            </Link>
-                        </div>
-                    </section>
-                    {/* services */}
-
-                    <section className="py-5 px-4">
-                        <div>
-                            <div className="mb-5">
-                                <h1 className="text-3xl font-semibold text-gray-800 text-center">Services We Offer</h1>
-                            </div>
-                            <div>
-                                <div className="grid grid-cols-2 items-center gap-6 justify-center">
-                                    <a className="flex flex-col cursor-pointer justify-center items-center mb-2" href="/services/therapy">
-                                        <img
-                                            alt="Therapy"
-                                            loading="lazy"
-                                            width="100"
-                                            height="100"
-                                            decoding="async"
-                                            className="w-[80px] h-[80px] mb-4"
-                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=256&q=75 2x"
-                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=256&q=75"
-                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
-                                        />
-                                        <p className="text- font-semibold text-center">Therapy</p>
-                                    </a>
-                                    <a className="flex flex-col cursor-pointer justify-center items-center mb-2" href="/services/psychiatry">
-                                        <img
-                                            alt="Psychiatry"
-                                            loading="lazy"
-                                            width="100"
-                                            height="100"
-                                            decoding="async"
-                                            className="w-[80px] h-[80px] mb-4"
-                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=256&q=75 2x"
-                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=256&q=75"
-                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
-                                        />
-                                        <p className="text- font-semibold text-center">Psychiatry</p>
-                                    </a>
-                                    <a className="flex flex-col cursor-pointer justify-center items-center mb-2" href="/assesment">
-                                        <img
-                                            alt="Professional Assessment"
-                                            loading="lazy"
-                                            width="100"
-                                            height="100"
-                                            decoding="async"
-                                            className="w-[80px] h-[80px] mb-4"
-                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75 2x"
-                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75"
-                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
-                                        />
-                                        <p className="text- font-semibold text-center">Professional Assessment</p>
-                                    </a>
-                                    <a className="flex flex-col cursor-pointer justify-center items-center mb-2" href="/pages/tms">
-                                        <img
-                                            alt="rTMS"
-                                            loading="lazy"
-                                            width="100"
-                                            height="100"
-                                            decoding="async"
-                                            className="w-[80px] h-[80px] mb-4"
-                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=256&q=75 2x"
-                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=256&q=75"
-                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
-                                        />
-                                        <p className="text- font-semibold text-center">rTMS</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    {/* More about tms */}
-                    <section className=' py-10 px-4  bg-primary-div'>
+                     {/* More about tms */}
+                     <section className=' py-10 px-4  bg-primary-div'>
                         <div className='mb-5'>
                             <h1 className='text-3xl text-center font-sans font-semibold'>
                                 rTMS Treatment
@@ -289,6 +196,101 @@ const HomePage = ({ allSection }) => {
                             </div>
                         </div>
                     </section>
+                    
+                    {/* services */}
+
+                    <section className="py-5 px-4">
+                        <div>
+                            <div className="mb-5">
+                                <h1 className="text-3xl font-semibold text-gray-800 text-center">Services We Offer</h1>
+                            </div>
+                            <div>
+                                <div className="grid grid-cols-2 items-center gap-6 justify-center">
+                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/services/therapy">
+                                        <img
+                                            alt="Therapy"
+                                            loading="lazy"
+                                            width="100"
+                                            height="100"
+                                            decoding="async"
+                                            className="w-[80px] h-[80px] mb-4"
+                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=256&q=75 2x"
+                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftherapy.webp%3FupdatedAt%3D1733748349215&w=256&q=75"
+                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
+                                        />
+                                        <p className="text- font-semibold text-center">Therapy</p>
+                                    </a>
+                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/services/psychiatry">
+                                        <img
+                                            alt="Psychiatry"
+                                            loading="lazy"
+                                            width="100"
+                                            height="100"
+                                            decoding="async"
+                                            className="w-[80px] h-[80px] mb-4"
+                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=256&q=75 2x"
+                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fpsychiatry.webp%3FupdatedAt%3D1733748346328&w=256&q=75"
+                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
+                                        />
+                                        <p className="text- font-semibold text-center">Psychiatry</p>
+                                    </a>
+                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/assesment">
+                                        <img
+                                            alt="Professional Assessment"
+                                            loading="lazy"
+                                            width="100"
+                                            height="100"
+                                            decoding="async"
+                                            className="w-[80px] h-[80px] mb-4"
+                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75 2x"
+                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75"
+                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
+                                        />
+                                        <p className="text- font-semibold text-center">Professional Assessment</p>
+                                    </a>
+                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/pages/tms">
+                                        <img
+                                            alt="rTMS"
+                                            loading="lazy"
+                                            width="100"
+                                            height="100"
+                                            decoding="async"
+                                            className="w-[80px] h-[80px] mb-4"
+                                            srcSet="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=256&q=75 2x"
+                                            src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Ftms.webp%3FupdatedAt%3D1733748349152&w=256&q=75"
+                                            style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
+                                        />
+                                        <p className="text- font-semibold text-center">rTMS</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {/* free test */}
+                    <section className='bg-primary-div py-5'>
+                        <div>
+                            <h1 className='text-2xl  text-center font-sans font-semibold'>
+                                Not sure where to begin?
+                            </h1>
+                        </div>
+
+                        <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)] '>
+                            <div>
+                                <Image  height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
+                            </div>
+
+                        </div>
+                        <div className='flex justify-center'>
+                            <Link href={"/assesment"}>
+                                <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 font-semibold text-sm text-white'>
+                                    {"TAKE OUR FREE TEST"}
+                                </button>
+                            </Link>
+                        </div>
+                    </section>
+
+
+                   
 
                     {/* wy tms */}
 

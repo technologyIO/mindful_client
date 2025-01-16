@@ -8,22 +8,22 @@ import { usePathname, useRouter } from "next/navigation";
 
 const staticTestimonials =[
     {
-        "_id": "673bfab2226472f401712148",
+        "_id": "673bfab2226472f40171216d",
         "type": "text",
-        "patientName": "Anonymous",
+        "patientName": "Priyanka Sharma",
         "doctor": {
-            "_id": "66fe4d3a6a3f2ccdb194af4b",
-            "name": "Ms. Shilpi Sharma"
+            "_id": "66ffa1856a3f2ccdb194b61d",
+            "name": "Dr. Shubham Narnoli"
         },
-        "condition": "OCD",
+        "condition": "Stroke Rehabilitation",
         "treatment": "rTMS",
         "location": "New Delhi - Greater Kailash 1",
-        "title": "I started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues.",
-        "shortQuote": "I started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues.",
-        "fullTestimonial": "I was suffering from OCD and visited so many Doctors due to this but it wasn't helpful, Then I got referred to Dr Shilpi Sharma at MindfulTMS Neurocare for the Consultation and my life changed. She is a very humble lady, she educated me regarding TMS therapy sessions and I went ahead for 30 sessions of TMS.\n\nI started feeling much better within 15 days, after completing all 30 sessions and her counselling sessions also helped me in coping with different issues. Today I can say my life changed so highly recommended. Also, the clinic's ambience is very homely. Also, all the staff members are very cooperative and friendly, The center admin helped me in the entire process from managing time to scheduling sessions.",
+        "title": "My husband suffered from stroke and lost his speech and motor functions...  After rTMS he significantly improved under the expert guidance of Dr. Shubham",
+        "shortQuote": "My husband suffered from stroke and lost his speech and motor functions...  After rTMS he significantly improved under the expert guidance of Dr. Shubham",
+        "fullTestimonial": "My husband suffered from stroke and lost his speech and motor functions in the right side of the body. With Physiotherapy there was only some improvement. But after rTMS he significantly improved under the expert guidance of Dr. Shubham who has an extensive knowledge in rTMS and uses unique protocols which are totally safe and specific for the patient condition. Dr. Shubham guided us very accurately and educated us about the effect of TMS at each step of treatment. Before rTMS my husband could speak only a set of few unclear words. Now he can speak almost most of the words and many words clearly. We are very thankful to him. Totally recommend rTMS under Dr. Shubham.",
         "__v": 0,
-        "createdAt": "2024-11-19T02:40:50.364Z",
-        "updatedAt": "2024-11-19T02:40:50.364Z"
+        "createdAt": "2024-11-19T02:40:50.366Z",
+        "updatedAt": "2024-11-19T02:40:50.366Z"
     },
     {
         "_id": "673bfab2226472f401712154",
@@ -44,40 +44,40 @@ const staticTestimonials =[
         "updatedAt": "2024-11-19T02:40:50.365Z"
     },
     {
-        "_id": "673bfab2226472f401712155",
+        "_id": "673bfab2226472f401712167",
         "type": "text",
-        "patientName": "Himanshu Pandey",
+        "patientName": "Amita Bakshi",
         "doctor": {
-            "_id": "66fe4d3a6a3f2ccdb194af4b",
-            "name": "Ms. Shilpi Sharma"
+            "_id": "66ffa28f6a3f2ccdb194b62a",
+            "name": "Dr. Sandeep Govil"
         },
-        "condition": "Anxiety",
-        "treatment": "Therapy",
+        "condition": "",
+        "treatment": "Psychiatrist",
         "location": "New Delhi - Greater Kailash 1",
-        "title": "I visited Dr Shilpi Sharma for treatment of my son age 18.",
-        "shortQuote": "I visited Dr Shilpi Sharma for treatment of my son age 18.",
-        "fullTestimonial": "I visited Dr Shilpi Sharma for treatment of my son age 18. \n\nDr Shilpi is very friendly in nature and listens patient and parents with passions so patient can easily share his problem which is most important when you visit a psychologist. \n\nShe guided my son, good in his studies who is preparing for a reputed exam but lost his rhythm and confidence due to some unfortunate circumstances, to see life and career in a broader aspect and focus on his strength and remember what he has achieved in past to regain lost confidence. She advised us to not discuss bad memories of past that helped my son to come out of the situation and regain his confidence. \n\nDue to guidance of Dr Shilpi my son appeared for various competitive exams and qualified for a reputed University. He is still under guidance of Dr Shilpi. \n\nI have no words to express my gratitude towards her. Thank you so much mam.",
+        "title": "my mother of 65 year old has been saved with his understanding of the problem.",
+        "shortQuote": "my mother of 65 year old has been saved with his understanding of the problem.",
+        "fullTestimonial": "Dr Govil is one of the most courteous doctors in recent times and an expert. His understanding of the problem is so accurate and my mother of 65 year old has been saved with his understanding of the problem.",
         "__v": 0,
-        "createdAt": "2024-11-19T02:40:50.365Z",
-        "updatedAt": "2024-11-19T02:40:50.365Z"
+        "createdAt": "2024-11-19T02:40:50.366Z",
+        "updatedAt": "2024-11-19T02:40:50.366Z"
     },
     {
-        "_id": "673bfab2226472f401712158",
+        "_id": "673bfab2226472f40171217a",
         "type": "text",
-        "patientName": "Sherlin",
+        "patientName": "Aishwarya Mylar",
         "doctor": {
-            "_id": "66fe4d3a6a3f2ccdb194af4b",
-            "name": "Ms. Shilpi Sharma"
+            "_id": "66ffa2e86a3f2ccdb194b632",
+            "name": "Dr. Abhishek"
         },
-        "condition": "Depression",
-        "treatment": "Therapy",
-        "location": "New Delhi - Greater Kailash 1",
-        "title": "I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder.",
-        "shortQuote": "I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder.",
-        "fullTestimonial": "I joined therapy at one of my lowest points in life. I was lost, more depressed and suicidal than ever and had 0 confidence in myself. I was experiencing relationship issues, self esteem issues, severe depression and anxiety disorder. \n\nShilpi Ma’am helped me overcome this tough point in my life. In less than a month, I have seen a vast difference. She is super friendly, and she gives the best advices. I have formed a positive attitude towards everything and I’ve started considering her a big part of my life with how much she has helped me. She helped me cope up with all my symptoms and strengthen my relationships. She has helped me in feeling more confident and independent and I’ve learnt to be more self aware. \n\nI’m glad I found such an amazing therapist. Don’t give it a second thought!! Go for it , you can’t get a better therapist.",
+        "condition": "",
+        "treatment": "Psychiatrist",
+        "location": "Bengaluru -  Whitefield",
+        "title": "Dr Abhishek was very nice and patient and understanding of all my concerns.",
+        "shortQuote": "Dr Abhishek was very nice and patient and understanding of all my concerns.",
+        "fullTestimonial": "Dr Abhishek was very nice and patient and understanding of all my concerns. He thoroughly asked me what symptoms I am facing and gave me some exercises to do which would help me calm my anxiety and he stayed up late night and took up a call and helped me by talking me through the situation",
         "__v": 0,
-        "createdAt": "2024-11-19T02:40:50.365Z",
-        "updatedAt": "2024-11-19T02:40:50.365Z"
+        "createdAt": "2024-11-19T02:40:50.366Z",
+        "updatedAt": "2024-11-19T02:40:50.366Z"
     },
     
    
@@ -295,7 +295,7 @@ export default function TestimonialComponentSlide({
                                 ))}
                         </div>
                     </div>}
-                    {smallDevice && <div className="mt-4">
+                    {/* {smallDevice && <div className="mt-4">
                         <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
                         <div className="mt-3 flex gap-3">
                                     <div
@@ -304,7 +304,17 @@ export default function TestimonialComponentSlide({
                                         <span className="text-sm">{testimonial?.doctor?.name}</span>
                                     </div>
                         </div>
-                    </div>}
+                    </div>} */}
+                    <div className="mt-4">
+                        <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
+                        <div className="mt-3 flex gap-3">
+                                    <div
+                                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full"
+                                    >
+                                        <span className="text-sm">{testimonial?.doctor?.name}</span>
+                                    </div>
+                        </div>
+                    </div>
                 </div>
 {/* 
                 {smallDevice &&

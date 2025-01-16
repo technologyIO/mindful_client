@@ -139,9 +139,9 @@ export default function CustomRequestForm() {
         .replace(',', '') // Remove comma after the day if present
         .replace(/\//g, '-'); // Replace slashes with dashes
       // const currentDateTime = new Date().toISOString(); // Example: "2025-01-16T07:01:57Z"
-      formDataObj.append("DateTime_date", formattedDateTime);
+      // formDataObj.append("DateTime_date", formattedDateTime);
 
-      console.log("formattedDateTime", formattedDateTime)
+      // console.log("formattedDateTime", formattedDateTime)
       axios
         .post(
           `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`,

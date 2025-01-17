@@ -12,7 +12,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
 
     const getDoctor = () => {
         axios
-            .get(`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&specialization=${condition || ""}`)
+            .get(`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText==='Therapist'?'Psychologist':expertText}`)
             .then((res) => {
                 console.log(location);
                 setDoctorsData(res.data);
@@ -80,7 +80,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
         // if (!data) return null;
         return (
             <>
-                {condition ? (
+                {/* {condition ? (
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
                         Our Experts
                     </h2>
@@ -88,7 +88,10 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
                     <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
                     Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
-                )}
+                )} */}
+                  <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
+                  Our Team of Experts
+                    </h2>
                 <Slider {...settings}>
                     {
                         doctorsData?.map((data, index) => {

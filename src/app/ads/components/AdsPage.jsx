@@ -60,7 +60,7 @@ export default function AdsPage({ params, condition }) {
         }
     }
 
-    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : 'Psychologist';
+    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"Therapist":'Psychologist';
 
     const conditions = [
         { name: 'Depression', image: '/ads/depression1.png' },

@@ -60,7 +60,7 @@ export default function AdsPage({ params, condition }) {
         }
     }
 
-    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"Therapist":'Psychologist';
+    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"therapist":'Psychologist';
 
     const conditions = [
         { name: 'Depression', image: '/ads/depression1.png' },
@@ -161,7 +161,7 @@ export default function AdsPage({ params, condition }) {
                                 Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
                             </h1> :
                                 <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
-                                    Are you looking for an experienced <span className='capitalize'>{expertText}</span>?
+                                    Are you looking for an experienced <span className=''>{expertText}</span>?
                                 </h1>}
                         </div>
                         {/* sub header */}

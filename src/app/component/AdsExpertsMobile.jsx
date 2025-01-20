@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { motion, AnimatePresence } from "framer-motion";
 import RequestAppointment from "../clinicLocation/[city]/RequestAppointment";
 import axios from "axios";
+import Image from "next/image";
 const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDisableSlide, iframeSrc }) => {
     const [doctorsData, setDoctorsData] = useState([]); // To store doctors data
     const [currentIndex, setCurrentIndex] = useState(0); // To track the current doctor index
@@ -12,7 +13,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
 
     const getDoctor = () => {
         axios
-            .get(`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText==='Therapist'?'Psychologist':expertText}`)
+            .get(`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText==='therapist'?'Psychologist':expertText}`)
             .then((res) => {
                 console.log(location);
                 setDoctorsData(res.data);
@@ -50,6 +51,41 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
             transition: { duration: 0.5 },
         }),
     };
+        // Custom Next Button
+        const NextArrow = (props) => {
+            const { onClick } = props;
+            return (
+                <button
+                    onClick={onClick}
+                    className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${"top-[50%] right-[-20px]" } `}
+                >
+                    <Image height={50} width={50} 
+                        className="text-white cursor-pointer"
+                        src="/icons/right arrow.svg"
+                        alt="Next"
+                    />
+                </button>
+            );
+        };
+    
+        // Custom Prev Button
+        const PrevArrow = (props) => {
+            const { onClick } = props;
+            return (
+                <button
+                    onClick={onClick}
+                    // className="absolute z-[2] top-1/2 left-[-50px] transform -translate-y-1/2  justify-center "
+                    className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${"top-[50%] left-[-20px]" } `}
+    
+                >
+                    <Image height={50} width={50} 
+                        className="text-white cursor-pointer"
+                        src="/icons/left arrow.svg"
+                        alt="Previous"
+                    />
+                </button>
+            );
+        };
     const settings = {
         dots: false,
         infinite: true,
@@ -58,8 +94,8 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
         autoplay: true, // Enable auto-slide
         autoplaySpeed: 5000, // Slide every 5 seconds
         slidesToScroll: 1,
-        // nextArrow: <NextArrow />, 
-        // prevArrow: <PrevArrow />, 
+        nextArrow: <NextArrow />, 
+        prevArrow: <PrevArrow />, 
         responsive: [
             {
                 breakpoint: 1024, // Tablet
@@ -75,6 +111,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
             },
         ],
     };
+  
 
     const DoctorComponent = () => {
         // if (!data) return null;

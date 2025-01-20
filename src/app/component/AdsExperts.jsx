@@ -12,7 +12,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
     const getDoctor = () => {
         let apiUrl = '';
         if(expertText){
-            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText==='Therapist'?'Psychologist':expertText}`
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}&designation=${expertText==='therapist'?'Psychologist':expertText}`
         }
         if(condition){
         apiUrl=`${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location || ""}`

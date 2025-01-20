@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AdsExperts from '../../component/AdsExperts'
 import AdsExpertsMobile from '../../component/AdsExpertsMobile'
 import TestimonialComponent from '../../component/TestimonialComponent'
@@ -8,18 +8,19 @@ const AdsCombinePage = ({condition, expertText, location , iframeSrc}) => {
     const [disableSlide, setDisableSlide] = useState(false)
 
     const MobileView = ()=>{
+       
         return (
             <>
                 <div className='grid grid-cols-1 
            items-center gap-4 mx-2'>
                         {/* Expert Team */}
-                        <section>
+                        <section className='min-h-[440px]'>
                             <AdsExpertsMobile iframeSrc={iframeSrc} condition={condition} disableSlide={disableSlide} setDisableSlide={setDisableSlide}  expertText={expertText} location={location}/>
                         </section>
                         {/* client speaks */}
-                        <section className='py-8 '>
-                            <TestimonialComponentSlide iframeSrc={iframeSrc} condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} smallDevice={true} />
-                        </section>
+                        {/* <section className='py-8 '>
+                            <TestimonialComponentSlide doctor={doctor} iframeSrc={iframeSrc} condition={condition} location={location} disableSlide={disableSlide} setDisableSlide={setDisableSlide} smallDevice={true} />
+                        </section> */}
 
                     </div>
             </>

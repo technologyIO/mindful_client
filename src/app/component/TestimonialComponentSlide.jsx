@@ -131,7 +131,7 @@ export default function TestimonialComponentSlide({
         //   console.log("hehesjdkfjs")
 
         }
-      }, [pathname, condition, location]);
+      }, [pathname, condition, location, doctor]);
 
 
       useEffect(() => {
@@ -142,7 +142,7 @@ export default function TestimonialComponentSlide({
       }, []);
 
     if (loading) {
-        return <div className="flex justify-center h-full items-center"><CircularProgress /></div>;
+        return <div className="flex justify-center h-full items-center min-h-[440px]"><CircularProgress /></div>;
     } else if (testimonials.length === 0) {
         return (
             <div className="flex justify-center h-full items-center">

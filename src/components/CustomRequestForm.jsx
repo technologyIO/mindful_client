@@ -112,90 +112,45 @@ export default function CustomRequestForm() {
       return validationErrors;
     };
 
-    const handleSubmit = () => {
-      const formDataObj = new FormData();
-
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataObj.append(key, value);
-      });
-
-      formDataObj.append("SingleLine", locationWiseContent[city]?.area);
-      formDataObj.append("SingleLine1", "Website API");
-
-      const now = new Date();
-
-      const options = {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true,
-      };
-    
-      // Format the date
-      const formattedDateTime = now
-        .toLocaleDateString('en-US', options)
-        .replace(',', '') // Remove comma after the day if present
-        .replace(/\//g, '-'); // Replace slashes with dashes
-      // const currentDateTime = new Date().toISOString(); // Example: "2025-01-16T07:01:57Z"
-      // formDataObj.append("DateTime_date", formattedDateTime);
-
-      // console.log("formattedDateTime", formattedDateTime)
-      axios
-        .post(
-          `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`,
-          formDataObj,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        )
-        .then((response) => {
-          console.log(response);
-          // Handle the response here
-          setStep(4);
-        })
-        .catch((error) => {
-          console.error(error);
-          // Handle the error here
-        });
-    };
-
-    // method 3
     // const handleSubmit = () => {
-    //   // const formDataObj = new FormData();
+    //   const formDataObj = new FormData();
 
-    //   // Object.entries(formData).forEach(([key, value]) => {
-    //   //   formDataObj.append(key, value);
-    //   // });
+    //   Object.entries(formData).forEach(([key, value]) => {
+    //     formDataObj.append(key, value);
+    //   });
 
-    //   // formDataObj.append('SingleLine', locationWiseContent[city]?.area);
+    //   formDataObj.append("SingleLine", locationWiseContent[city]?.area);
+    //   formDataObj.append("SingleLine1", "Website API");
 
-    //   const data = {
-    //     Name: { Name_First: "Sahil", Name_Last: "sssss" },
-    //     PhoneNumber: "9663095632",
-    //     SingleLine: "gk test",
-    //     MultiLine: "Test",
-    //     SingleLine1: "Test",
-    //     DateTime: "15-Jan-2025 06:16 PM",
-    //     REFERRER_NAME: "Test",
-    //     GOOGLE_CLICK_ID: "Test",
-    //     UTM_PARAM: {
-    //       utm_source: "Test",
-    //       utm_medium: "Test",
-    //       utm_campaign: "Test",
-    //       utm_term: "Test",
-    //       utm_content: "Test",
-    //       gclid: "Test",
-    //       referrername: "Test",
-    //     },
+    //   const now = new Date();
+
+    //   const options = {
+    //     day: '2-digit',
+    //     month: 'short',
+    //     year: 'numeric',
+    //     hour: '2-digit',
+    //     minute: '2-digit',
+    //     hour12: true,
     //   };
+    
+    //   // Format the date
+    //   const formattedDateTime = now
+    //     .toLocaleDateString('en-US', options)
+    //     .replace(',', '') // Remove comma after the day if present
+    //     .replace(/\//g, '-'); // Replace slashes with dashes
+    //   // const currentDateTime = new Date().toISOString(); // Example: "2025-01-16T07:01:57Z"
+    //   // formDataObj.append("DateTime_date", formattedDateTime);
+
+    //   // console.log("formattedDateTime", formattedDateTime)
     //   axios
     //     .post(
-    //       `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/a5tPpJr-Ue0uRODkI4D7hT31a3TdQl6zRm1A7Kwpomo/records`,
-    //       data
+    //       `https://forms.zohopublic.in/nikhilmindf1/form/BookAnAppointment/formperma/Uq93G4qa5TH5tt-fhqy7GRrag0ttrrIj56ob9mELPXA/htmlRecords/submit`,
+    //       formDataObj,
+    //       {
+    //         headers: {
+    //           "Content-Type": "multipart/form-data",
+    //         },
+    //       }
     //     )
     //     .then((response) => {
     //       console.log(response);
@@ -205,13 +160,52 @@ export default function CustomRequestForm() {
     //     .catch((error) => {
     //       console.error(error);
     //       // Handle the error here
-    //     })
-    //     .finally(() => {
-    //       // Handle the final state here
-    //       // router.push("/thankyou/mindful2");
-
     //     });
     // };
+
+    // method 3
+    const handleSubmit = () => {
+     
+
+      const data = {
+        Name: { Name_First: "Sahil", Name_Last: "updated" },
+        PhoneNumber: "1212121212",
+        SingleLine: "gk test",
+        MultiLine: "Test",
+        SingleLine1: "Test",
+        // DateTime: "15-Jan-2025 06:16 PM",
+        REFERRER_NAME: "Test",
+        GOOGLE_CLICK_ID: "Test",
+        UTM_PARAM: {
+          utm_source: "Test",
+          utm_medium: "Test",
+          utm_campaign: "Test",
+          utm_term: "Test",
+          utm_content: "Test",
+          gclid: "Test",
+          referrername: "Test",
+        },
+      };
+      axios
+        .post(
+          `https://flow.zoho.in/60031053169/flow/webhook/incoming?zapikey=1001.a02dc432de7f7b04d260802e806ab11e.0cbda7eed401e3cfee5040c5fc5eb377&isdebug=false`,
+          data
+        )
+        .then((response) => {
+          console.log(response);
+          // Handle the response here
+          setStep(4);
+        })
+        .catch((error) => {
+          console.error(error);
+          // Handle the error here
+        })
+        .finally(() => {
+          // Handle the final state here
+          // router.push("/thankyou/mindful2");
+
+        });
+    };
 
     return (
       <div className="">

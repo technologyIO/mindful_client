@@ -1,8 +1,13 @@
 import React from 'react'
 import TestRequestAppointmentGeneral from '../../clinicLocation/[city]/TestRequestAppointmentGeneral'
+import Head from 'next/head'
 
 const page = () => {
   return (
+   <>
+     <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
     <div className='flex justify-center'>
                             <TestRequestAppointmentGeneral>
                                 <button
@@ -12,6 +17,7 @@ const page = () => {
                                 </button>
                             </TestRequestAppointmentGeneral>
                         </div>
+   </>
   )
 }
 

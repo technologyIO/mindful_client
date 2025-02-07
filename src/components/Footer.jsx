@@ -59,10 +59,10 @@ function Footer() {
       <div className='flex justify-center gap-6 mb-2'>
         <div className='cursor-pointer'>
           <RequestAppointmentGeneral iframeSrc={location.iframeSrc}>
-            <Image 
+            <img 
               src="https://ik.imagekit.io/mwpcmpi5v/wassup.jpeg?updatedAt=1734072263762"
-              width={500} 
-              height={500} 
+              // width={500} 
+              // height={500} 
               className="h-[60px] w-full" 
               alt="WhatsApp Icon"
               loading="lazy"

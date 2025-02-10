@@ -41,26 +41,29 @@ export default function AdsPage({ params, condition }) {
     const city = params.location;
     const expertCondition = params.general;
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
+    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"therapist":'Psychologist';
 
     const locationContent = {
         "gk": {
             city: 'New Delhi',
             area: "Greater Kailash 1",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
+            price:expertText==="therapist"?"Therapy from Rs. 1800 to Rs. 2500 per session":"",
         },
         "wf": {
             city: 'Bengaluru',
             area: "Whitefield (Varthur Road)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
+            price:expertText==="therapist"?"Therapy at Rs. 1750 per session":"",
         },
         "hb": {
             city: 'Bengaluru',
             area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`
+            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
+            price:expertText==="therapist"?"First therapy session at Rs. 1500!":"",
         }
     }
 
-    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"therapist":'Psychologist';
 
     const conditions = [
         { name: 'Depression', image: '/ads/depression1.png' },
@@ -207,6 +210,12 @@ export default function AdsPage({ params, condition }) {
                         <div className='flex items-center justify-center mt-6'>
                             <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
                         </div>
+                        {
+                                            locationContent[city]?.price &&
+                                            <div className="text-base  text-center font-semibold mt-2 text-gray-700">
+                                                    {locationContent[city]?.price}
+                                            </div>
+                                        }
                     </section>
 
 
@@ -332,10 +341,18 @@ export default function AdsPage({ params, condition }) {
                                         <br />
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>}
+
+                                       
                                 <div className='flex items-start justify-start mt-4'>
                                     <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
 
                                 </div>
+                                {
+                                            locationContent[city]?.price &&
+                                            <div className="text-lg text-white font-semibold mt-1 text-start">
+                                                    {locationContent[city]?.price}
+                                            </div>
+                                        }
 
                             </div>
                         </div>

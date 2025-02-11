@@ -210,12 +210,12 @@ export default function AdsPage({ params, condition }) {
                         <div className='flex items-center justify-center mt-6'>
                             <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
                         </div>
-                        {
+                        {/* {
                                             locationContent[city]?.price &&
                                             <div className="text-base  text-center font-semibold mt-2 text-gray-700">
                                                     {locationContent[city]?.price}
                                             </div>
-                                        }
+                                        } */}
                     </section>
 
 
@@ -347,12 +347,7 @@ export default function AdsPage({ params, condition }) {
                                     <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
 
                                 </div>
-                                {
-                                            locationContent[city]?.price &&
-                                            <div className="text-lg text-white font-semibold mt-1 text-start">
-                                                    {locationContent[city]?.price}
-                                            </div>
-                                        }
+                             
 
                             </div>
                         </div>

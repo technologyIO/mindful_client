@@ -22,7 +22,7 @@ export default function AdsPage({ params, condition }) {
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
     // const router = useRouter(); // Get the router object
     // const { query } = router;  // Access the query parameters from the URL
-    
+
     // const utm = query.utm_term;
     const upperCaseCondition = ['ocd']
     // for zoho
@@ -34,33 +34,33 @@ export default function AdsPage({ params, condition }) {
         // Check if running in the browser
         if (typeof window !== 'undefined') {
             setQueryString(window.location.search); // Get the query string
-            console.log(window.location.search) 
+            console.log(window.location.search)
         }
     }, []);
 
     const city = params.location;
     const expertCondition = params.general;
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
-    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition ==='therapist'?"therapist":'Psychologist';
+    const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition === 'therapist' ? "therapist" : 'Psychologist';
 
     const locationContent = {
         "gk": {
             city: 'New Delhi',
             area: "Greater Kailash 1",
             iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
-            price:expertText==="therapist"?"Therapy from Rs. 1800 to Rs. 2500 per session":"",
+            price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
         },
         "wf": {
             city: 'Bengaluru',
             area: "Whitefield (Varthur Road)",
             iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
-            price:expertText==="therapist"?"Therapy at Rs. 1750 per session":"",
+            price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
         },
         "hb": {
             city: 'Bengaluru',
             area: "Hebbal (Aster CMI Hospital)",
             iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
-            price:expertText==="therapist"?"First therapy session at Rs. 1500!":"",
+            price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
         }
     }
 
@@ -161,7 +161,7 @@ export default function AdsPage({ params, condition }) {
                     <section className=' mx-4 mt-5'>
                         <div className='text-center '>
                             {cleanCondition ? <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
-                                Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>. 
+                                Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
                             </h1> :
                                 <h1 className="mb-4 text-3xl  text-orange-500  font-bold ">
                                     Are you looking for an experienced <span className=''>{expertText}</span>?
@@ -170,15 +170,15 @@ export default function AdsPage({ params, condition }) {
                         {/* sub header */}
                         <div className='mb-3'>
                             <div className='text-xl text-center text-gray-600'>
-                                {cleanCondition ? 
-                                // for condition 
-                                <p className="">
-                                    Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
-                                </p> :
-                                // none condition 
+                                {cleanCondition ?
+                                    // for condition 
                                     <p className="">
-                                   <span className='block mb-2'> We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </span>
-                                    {`Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `}{expertText}s are here for you.
+                                        Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
+                                    </p> :
+                                    // none condition 
+                                    <p className="">
+                                        <span className='block mb-2'> We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </span>
+                                        {`Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `}{expertText}s are here for you.
                                     </p>}
                             </div>
                         </div>
@@ -210,12 +210,13 @@ export default function AdsPage({ params, condition }) {
                         <div className='flex items-center justify-center mt-6'>
                             <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
                         </div>
-                        {/* {
-                                            locationContent[city]?.price &&
-                                            <div className="text-base  text-center font-semibold mt-2 text-gray-700">
-                                                    {locationContent[city]?.price}
-                                            </div>
-                                        } */}
+                        {
+                            locationContent[city]?.price &&
+                            <div className="text-base  text-center text-orange-500 mt-2  font-bold mx-0 px-0 ">
+                                {locationContent[city]?.price}
+                            </div>
+                        }
+                        
                     </section>
 
 
@@ -289,7 +290,7 @@ export default function AdsPage({ params, condition }) {
         )
     }
 
- 
+
 
     const DesktopView = () => {
         return (
@@ -326,7 +327,7 @@ export default function AdsPage({ params, condition }) {
                                         <p className=''>We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space. </p>
 
 
-                                      {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
+                                        {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
                                     </div>}
 
 
@@ -342,12 +343,12 @@ export default function AdsPage({ params, condition }) {
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>}
 
-                                       
+
                                 <div className='flex items-start justify-start mt-4'>
-                                    <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`}  customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
+                                    <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" />
 
                                 </div>
-                             
+
 
                             </div>
                         </div>

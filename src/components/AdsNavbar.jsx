@@ -4,7 +4,7 @@ import React from 'react'
 const AdsNavbar = () => {
   // const city = params.location;
   const params = useParams()
-  console.log("nav params", params)
+  // console.log("nav params", params)
   const city = params.location;
   const expertCondition = params.general;
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
@@ -34,7 +34,7 @@ const AdsNavbar = () => {
       </div>
       {
         locationContent[city]?.price &&
-        <div className="text-xs md:text-lg text-orange-500 font-semibold mt-1 text-start whitespace-nowrap">
+        <div className="text-xs md:text-lg hidden md:block  text-orange-500 font-semibold mt-1 text-start whitespace-nowrap">
           {locationContent[city]?.price}
         </div>
       }

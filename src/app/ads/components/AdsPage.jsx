@@ -207,15 +207,16 @@ export default function AdsPage({ params, condition }) {
                                 <br />
                                 Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                             </h3>}
-                        <div className='flex items-center justify-center mt-6'>
-                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
-                        </div>
-                        {
+                            {
                             locationContent[city]?.price &&
                             <div className="text-base  text-center text-orange-500 mt-2  font-bold mx-0 px-0 ">
                                 {locationContent[city]?.price}
                             </div>
                         }
+                        <div className='flex items-center justify-center mt-1'>
+                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
+                        </div>
+                        
                         
                     </section>
 

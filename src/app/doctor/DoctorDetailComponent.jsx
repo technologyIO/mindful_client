@@ -18,8 +18,8 @@ const DoctorDetailComponent = async ({ doctorId }) => {
 
   return (
     <div className="p-5 md:p-10">
-    <BackButton />
       <Container maxWidth="lg">
+    <BackButton />
       <div className=" bg-white shadow-md rounded-lg overflow-hidden">
         {/* Doctor's Basic Info */}
 
@@ -37,6 +37,12 @@ const DoctorDetailComponent = async ({ doctorId }) => {
             <p className="mt-3 text-gray-600">
               <span className="font-semibold">Experience:</span> {doctorDetail?.experience} years
             </p>
+         {doctorDetail?.name=="Dr. Sandeep Govil" &&    
+          <div className="bg-gray-100 mt-4 text-gray-800 rounded-lg p-1 shadow-sm">
+          <span className="text-gray-600 block font-medium">Monday from 2 pm to 4 pm</span>
+          <span className="text-gray-600 block font-medium">Wednesday and Friday from 11 am to 4 pm</span>
+        </div>
+         }
           </div>
         </div>
         <div className='flex justify-center mb-6'>
@@ -115,24 +121,34 @@ const DoctorDetailComponent = async ({ doctorId }) => {
             </p>
           </div> */}
           <div className="mt-6 lg:mt-0">
-            <h3 className="text-base font-medium text-primary-orange">Availability</h3>
-            <div className="mt-2 text-gray-700">
-              {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <span className="text-sm">{day}</span>
-                  {doctorDetail?.availability.includes(day) ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  )}
-                </div>
-              ))}
-            </div>
+            <h3 className="text-xl font-bold text-primary-orange">Availability</h3>
+            
+            {doctorDetail?.name=="Dr. Sandeep Govil" ?    
+          <div className="bg-gray-100 mt-4 text-gray-800 rounded-lg p-2 shadow-sm">
+          <span className="text-gray-600 block font-medium">Monday from 2 pm to 4 pm</span>
+          <span className="text-gray-600 block font-medium">Wednesday and Friday from 11 am to 4 pm</span>
+        </div>
+        :
+        <div className="mt-2 text-gray-700">
+        {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day, index) => (
+          <div key={index} className="flex items-center space-x-2">
+            <span className="text-sm">{day}</span>
+            {doctorDetail?.availability.includes(day) ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            )}
           </div>
+        ))}
+      </div>
+}
+          </div>
+
+          
         </div>
 
 

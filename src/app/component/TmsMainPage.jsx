@@ -197,7 +197,7 @@ const TmsMainPage = () => {
                         {/* How TMS Works Section */}
                         <div className=" p-6 lg:p-10   bg-primary-div">
                             <h3 className="text-2xl font-semibold text-gray-800 mb-3 text-center">
-                                {`How rTMS works?`}
+                                {`How does rTMS works?`}
                             </h3>
                             <div className="mb-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />

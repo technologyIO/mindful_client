@@ -21,7 +21,7 @@ const locations = [
   {
     name: "Whitefield",    
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ",
-    area: "Bangalore North",
+    area: "Bangalore East ",
     bgColor: "bg-[#F8A51C]",
     location: "Banglore Whitefield",
     redirect: "Bengaluru-Whitefield",

@@ -380,7 +380,7 @@ const TmsMainPage = () => {
                         <div className=" p-6 lg:p-10   bg-primary-div">
                            <Container maxWidth="lg">
                            <h3 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-                                {`How rTMS works?`}
+                                {`How does rTMS works?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
                                 <img alt="img"    src="/tmsPage/tms3.png" className="object-cover h-full" />

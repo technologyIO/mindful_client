@@ -197,7 +197,7 @@ const TmsMainPage = () => {
                         {/* How TMS Works Section */}
                         <div className=" p-6 lg:p-10   bg-primary-div">
                             <h3 className="text-2xl font-semibold text-gray-800 mb-3 text-center">
-                                {`How does rTMS works?`}
+                                {`How does rTMS work?`}
                             </h3>
                             <div className="mb-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="/tmsPage/tms3.png" className="object-cover h-full" />
@@ -380,7 +380,7 @@ const TmsMainPage = () => {
                         <div className=" p-6 lg:p-10   bg-primary-div">
                            <Container maxWidth="lg">
                            <h3 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-                                {`How does rTMS works?`}
+                                {`How does rTMS work?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
                                 <img alt="img"    src="/tmsPage/tms3.png" className="object-cover h-full" />

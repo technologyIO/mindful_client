@@ -51,7 +51,7 @@ const AdsExpertsMobile = ({ expertText, location, condition, disableSlide, setDi
     const DoctorComponent = useMemo(() => {
         return (
             <div>
-                <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">Our Team of Experts</h2>
+                <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">Our Team of Experts</h2>
                 <Slider {...settings}>
                     {doctorsData?.map((data) => (
                         <div className="mx-auto max-w-md text-center" key={data._id}>

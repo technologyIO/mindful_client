@@ -41,7 +41,8 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
                     Our Expert Team of <span className="text-orange-500">{expertText}s</span>
                     </h2>
                 )} */}
-                <h2 className="mb-12 text-center text-3xl font-bold text-teal-700">
+                <h2 className="mb-12 text-center text-3xl font-bold text-orange-500
+                ">
                 Our Team of Experts
                     </h2>
                 <div className="grid grid-cols-1 gap-6">

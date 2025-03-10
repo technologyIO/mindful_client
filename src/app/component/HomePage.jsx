@@ -11,36 +11,18 @@
 
 
 "use client";
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import Link from 'next/link';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-// Dynamically import non-critical components with SSR enabled for lazy loading
-// const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'), { ssr: false });
-// const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'), { ssr: false });
-// const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'), { ssr: false });
-// const CounterComponent = dynamic(() => import('./CounterComponent'), { ssr: false });
-
-// import VideoComponent from './VideoComponent'
-// import NewComponent from './newComponent';
-// import dynamic from 'next/dynamic';
-// import TestimonialComponent from './TestimonialComponent';
-// import TestimonialComponents2 from './TestimonialComponents2';
-// import Footer from '@/components/Footer'
+import SeoHomepage from './SeoHomepage'
 
 import TestimonialComponentSlide from './TestimonialComponentSlide';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 import OurDoctorSection from '../clinicLocation/[city]/OurDoctorSection';
 import CounterComponent from './CounterComponent';
-
-// Dynamically import non-critical components with SSR enabled
-// const CounterComponent = dynamic(() => import('./CounterComponent'));
-// const OurDoctorSection = dynamic(() => import('../clinicLocation/[city]/OurDoctorSection'));
-// const TestimonialComponentSlide = dynamic(() => import('./TestimonialComponentSlide'));
-// const RequestAppointment = dynamic(() => import('../clinicLocation/[city]/RequestAppointment'));
-
 
 
 const servicesIcon = [
@@ -70,6 +52,9 @@ const servicesIcon = [
 ]
 const HomePage = ({ allSection }) => {
 
+
+
+
     const MobileScreen = () => {
         return (
             <>
@@ -78,10 +63,10 @@ const HomePage = ({ allSection }) => {
                     <section className='mb-5'>
                         <div className='md:grid grid-cols-2 items-center'>
                             <div className='flex justify-center w-full h-[300px] mb-7'>
-                                <Image width={500} height={500} priority  className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' />
-                                {/* <Image width={500} height={500} className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='hero' /> */}
+                                <Image width={500} height={500} priority  className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='MindfulTMS - Advanced rTMS Therapy hero' />
+                                {/* <Image width={500} height={500} className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='MindfulTMS - Advanced rTMS Therapy hero' /> */}
                                 
-                                {/* <Image width={500} height={500}  className='w-full object-cover' src='/hero21svg.svg' alt='hero' /> */}
+                                {/* <Image width={500} height={500}  className='w-full object-cover' src='/hero21svg.svg' alt='MindfulTMS - Advanced rTMS Therapy hero' /> */}
                             </div>
                             <div>
                                 <div className='flex flex-col justify-center'>
@@ -99,17 +84,17 @@ const HomePage = ({ allSection }) => {
                                         <div className='mb-6'>
                                             <div className='flex gap-5 mb-2 items-center justify-center'>
                                                     <div className='flex'>
-                                                        <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
+                                                        <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
                                                     </div>
                                                 <div className='flex'>
-                                                    <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
+                                                    <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
                                                 </div>
 
 
                                             </div>
                                             <div className='flex justify-center'>
                                                 <div className='flex'>
-                                                    <Image  height={100} width={100} alt='img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>rTMS Specialists</span>
+                                                    <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>rTMS Specialists</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,7 +137,7 @@ const HomePage = ({ allSection }) => {
                         <div className='md:grid grid-cols-6 items-center justify-center md:bg-primary-div'>
                             <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                                 <div className=''>
-                                    <Image  height={100} width={100} alt='img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
+                                    <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
                                 </div>
                                 <div className='grid grid-cols-2 gap-2'>
                                     <div className='flex  items-center gap-1'>
@@ -208,7 +193,7 @@ const HomePage = ({ allSection }) => {
                                 <div className="grid grid-cols-2 items-center gap-6 justify-center">
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/services/therapy">
                                         <img
-                                            alt="Therapy"
+                                            alt="MindfulTMS - Advanced rTMS Therapy Therapy"
                                             loading="lazy"
                                             width="100"
                                             height="100"
@@ -222,7 +207,7 @@ const HomePage = ({ allSection }) => {
                                     </a>
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/services/psychiatry">
                                         <img
-                                            alt="Psychiatry"
+                                            alt="MindfulTMS - Advanced rTMS Therapy Psychiatry"
                                             loading="lazy"
                                             width="100"
                                             height="100"
@@ -236,7 +221,7 @@ const HomePage = ({ allSection }) => {
                                     </a>
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/assesment">
                                         <img
-                                            alt="Professional Assessment"
+                                            alt="MindfulTMS - Advanced rTMS Therapy Professional Assessment"
                                             loading="lazy"
                                             width="100"
                                             height="100"
@@ -250,7 +235,7 @@ const HomePage = ({ allSection }) => {
                                     </a>
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/pages/tms">
                                         <img
-                                            alt="rTMS"
+                                            alt="MindfulTMS - Advanced rTMS Therapy rTMS"
                                             loading="lazy"
                                             width="100"
                                             height="100"
@@ -276,7 +261,7 @@ const HomePage = ({ allSection }) => {
 
                         <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)] '>
                             <div>
-                                <Image  height={500} width={500} alt='img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
+                                <Image  height={500} width={500} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-full h-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                             </div>
 
                         </div>
@@ -307,7 +292,7 @@ const HomePage = ({ allSection }) => {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-0 items-center justify-center">
                                 <div className="flex flex-col justify-center items-center">
                                     <img
-                                        alt="Personalized care"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Personalized care"
                                         loading="lazy"
                                         width="100"
                                         height="100"
@@ -320,7 +305,7 @@ const HomePage = ({ allSection }) => {
                                 </div>
                                 <div className="flex flex-col justify-center items-center">
                                     <img
-                                        alt="Trust"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Trust"
                                         loading="lazy"
                                         width="100"
                                         height="100"
@@ -333,7 +318,7 @@ const HomePage = ({ allSection }) => {
                                 </div>
                                 <div className="flex flex-col justify-center items-center">
                                     <img
-                                        alt="Safe"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Safe"
                                         loading="lazy"
                                         width="100"
                                         height="100"
@@ -346,7 +331,7 @@ const HomePage = ({ allSection }) => {
                                 </div>
                                 <div className="flex flex-col justify-center items-center">
                                     <img
-                                        alt="Holistic"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Holistic"
                                         loading="lazy"
                                         width="100"
                                         height="100"
@@ -428,7 +413,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex justify-center   items-center h-full'>
                             {/* left image */}
                             <div className='h-full'>
-                                <Image  height={500} width={500} alt='img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527" />
+                                <Image  height={500} width={500} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-full  object-contain h-[500px]' src="https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527" />
                             </div>
                             {/* right section */}
                             <div className='flex flex-col justify-center items-center  h-full'>
@@ -470,7 +455,7 @@ const HomePage = ({ allSection }) => {
                                     <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/services/therapy">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
-                                                alt="Psychologists"
+                                                alt="MindfulTMS - Advanced rTMS Therapy Psychologists"
                                                 loading="lazy"
                                                 width="100"
                                                 height="100"
@@ -486,7 +471,7 @@ const HomePage = ({ allSection }) => {
                                     <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/services/psychiatry">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
-                                                alt="Psychiatrists"
+                                                alt="MindfulTMS - Advanced rTMS Therapy Psychiatrists"
                                                 loading="lazy"
                                                 width="100"
                                                 height="100"
@@ -502,7 +487,7 @@ const HomePage = ({ allSection }) => {
                                     <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/assesment">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
-                                                alt="Assessments"
+                                                alt="MindfulTMS - Advanced rTMS Therapy Assessments"
                                                 loading="lazy"
                                                 width="100"
                                                 height="100"
@@ -518,7 +503,7 @@ const HomePage = ({ allSection }) => {
                                     <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/pages/tms">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
-                                                alt="rTMS"
+                                                alt="MindfulTMS - Advanced rTMS Therapy rTMS"
                                                 loading="lazy"
                                                 width="100"
                                                 height="100"
@@ -553,7 +538,7 @@ const HomePage = ({ allSection }) => {
                                 <div className="md">
                                     <Image 
                                         src="https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"
-                                        alt="rTMS Treatment"
+                                        alt="MindfulTMS - Advanced rTMS Therapy rTMS Treatment"
                                         width={600}
                                         height={400}
                                         className="rounded-lg h-[420px] object-contain "
@@ -636,7 +621,7 @@ const HomePage = ({ allSection }) => {
                                         className="w-[100px] h-[100px] text-center"
                                         style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         src="/home/medical.svg"
-                                        alt="Personalized care"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Personalized care"
                                     />
                                     <p className="text-xl font-semibold mt-3">Personalized care</p>
                                 </div>
@@ -649,7 +634,7 @@ const HomePage = ({ allSection }) => {
                                         className="w-[100px] h-[100px] text-center"
                                         style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         src="/home/handshake.svg"
-                                        alt="Trust"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Trust"
                                     />
                                     <p className="text-xl font-semibold mt-3">Trust</p>
                                 </div>
@@ -662,7 +647,7 @@ const HomePage = ({ allSection }) => {
                                         className="w-[100px] h-[100px] text-center"
                                         style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         src="/home/group.svg"
-                                        alt="Safe"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Safe"
                                     />
                                     <p className="text-xl font-semibold mt-3">Safe</p>
                                 </div>
@@ -675,7 +660,7 @@ const HomePage = ({ allSection }) => {
                                         className="w-[100px] h-[100px] text-center"
                                         style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         src="/home/heart.svg"
-                                        alt="Holistic"
+                                        alt="MindfulTMS - Advanced rTMS Therapy Holistic"
                                     />
                                     <p className="text-xl font-semibold mt-3">Holistic</p>
                                 </div>
@@ -709,7 +694,8 @@ const HomePage = ({ allSection }) => {
     }
 
     return (
-        <div className="">
+       <>
+       <div className="">
             <div className=" select-none">
                 {/* hero section */}
                 <div className='md:hidden'>
@@ -722,6 +708,7 @@ const HomePage = ({ allSection }) => {
 
             </div>
         </div>
+       </>
     )
 }
 

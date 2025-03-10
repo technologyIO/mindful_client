@@ -41,13 +41,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>Mindful TMS</title>
         <link rel="icon" href={`/icons/mindLogo.png`} />
-        
+
         {/* Preload important font for better performance */}
-        <link 
-          rel="preload" 
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" 
-          as="style" 
-          crossOrigin="anonymous" 
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+          as="style"
+          crossOrigin="anonymous"
         />
 
         {/* Load necessary scripts in async or defer mode */}
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        
+
         <script async src={`https://www.googletagmanager.com/gtm.js?id=GTM-5HDDPXG`}></script>
         <script defer src="https://cdn-in.pagesense.io/js/rangsonshealthcaresolutionspvtltd/67af7e7b39754527a4a1201d246c8524.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QBSV5K5FL"></script>
@@ -76,6 +76,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+
+        {/* Primary Meta Tags */}
+
+        {/* seo started here */}
+        <title>Mindful TMS: Advanced rTMS Treatment for Depression, Anxiety, and OCD</title>
+        <meta
+          name="description"
+          content="Experience non-invasive, medication-free rTMS therapy at Mindful TMS. Our experts provide personalized care for depression, anxiety, OCD, and more across multiple locations in India and the USA."
+        />
+        <meta
+          name="keywords"
+          content="rTMS, depression treatment, anxiety treatment, OCD treatment, non-invasive therapy, mental health, Mindful TMS"
+        />
+        <meta name="author" content="Mindful TMS" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="MindfulTMS - Advanced rTMS Therapy" />
+        <meta property="og:description" content="Experience safe and effective transcranial magnetic stimulation (rTMS) therapy for mental health." />
+        <meta property="og:image" content="/home/logoMain.svg" />
+        <meta property="og:url" content="https://mindfultms.in/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:title" content="MindfulTMS - Advanced rTMS Therapy" />
+        <meta name="twitter:description" content="Get advanced rTMS treatment for depression and anxiety. Safe, non-invasive therapy at MindfulTMS." />
+        <meta name="twitter:image" content="/home/logoMain.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+
+
       </head>
       <body>
         <noscript>
@@ -86,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        
+
         {/* Conditionally render Navbar based on the pathname */}
         {hideCenterNavbar ? (
           <CenterNav />

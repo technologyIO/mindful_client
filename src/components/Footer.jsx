@@ -7,7 +7,7 @@ import RequestAppointmentGeneral from '@/app/clinicLocation/[city]/RequestAppoin
 
 const locations = [
   {
-    name: "Aster CMI",    
+    name: "Aster CMI",
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc",
     area: "Bangalore North",
     bgColor: "bg-primary-orange",
@@ -19,7 +19,7 @@ const locations = [
     officeClose: 18,
   },
   {
-    name: "Whitefield",    
+    name: "Whitefield",
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ",
     area: "Bangalore East ",
     bgColor: "bg-[#F8A51C]",
@@ -31,7 +31,7 @@ const locations = [
     officeClose: 18,
   },
   {
-    name: "Greater Kailash 1",    
+    name: "Greater Kailash 1",
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4",
     area: "Delhi",
     bgColor: "bg-primary-orange",
@@ -59,18 +59,18 @@ function Footer() {
       <div className='flex justify-center gap-6 mb-2'>
         <div className='cursor-pointer'>
           <RequestAppointmentGeneral iframeSrc={location.iframeSrc}>
-          <img 
-  src="https://ik.imagekit.io/mwpcmpi5v/wassup.jpeg?updatedAt=1734072263762"
-  className="w-[60px] h-[60px] object-contain" 
-  alt="WhatsApp Icon"
-  loading="lazy"
-/>
+            <img
+              src="https://ik.imagekit.io/mwpcmpi5v/wassup.jpeg?updatedAt=1734072263762"
+              className="w-[60px] h-[60px] object-contain"
+              alt="WhatsApp Icon"
+              loading="lazy"
+            />
           </RequestAppointmentGeneral>
         </div>
       </div>
       <div className='flex justify-center '>
-        <button 
-          onClick={() => router.push(`/clinicLocation/${location.redirect}`)} 
+        <button
+          onClick={() => router.push(`/clinicLocation/${location.redirect}`)}
           className='text-orange-500 border-2 border-orange-500 bg-white flex gap-3 items-center px-4 py-2 rounded-lg hover:opacity-90 shadow-lg'>
           Learn More
           <svg xmlns="http://www.w3.org/2000/svg" fill='orange' width="24" height="24" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ function Footer() {
 
   return (
     <footer className="py-6 footer-gradient">
-      
+
 
       <div className="hidden md:block">
         <div className="flex justify-center">
@@ -127,7 +127,10 @@ function Footer() {
       </div>
       <div className="flex justify-center mb-3">
         <p className="text-primary-orange text-sm text-center">
-          For queries related to careers <Link className="underline" href="/careers">Click Here</Link>.
+          For queries related to careers <Link href="/careers">
+            < span className="underline"> Click here </span> to  Explore Career Opportunities
+          </Link>
+
         </p>
       </div>
 

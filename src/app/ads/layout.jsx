@@ -1,17 +1,17 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-const layout = ({ children }) => {
 
+const Layout = ({ children }) => {
     const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-  if (!mounted) return null;
+    if (!mounted) return null;
+
     return (
         <>
-
             <head>
                 {/* <title>Find the Best Psychologists Near You | Mindful TMS</title> */}
                 <meta name="robots" content="noindex, nofollow" />
@@ -33,4 +33,4 @@ const layout = ({ children }) => {
     )
 }
 
-export default layout
+export default Layout;

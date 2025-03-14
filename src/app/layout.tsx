@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <title>Mindful TMS</title>
+        {/* <title>Mindful TMS</title> */}
         <link rel="icon" href={`/icons/mindLogo.png`} />
 
         {/* Preload important font for better performance */}
@@ -77,35 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* Primary Meta Tags */}
-
-        {/* seo started here */}
-        <title>Mindful TMS: Advanced rTMS Treatment for Depression, Anxiety, and OCD</title>
-        <meta
-          name="description"
-          content="Experience non-invasive, medication-free rTMS therapy at Mindful TMS. Our experts provide personalized care for depression, anxiety, OCD, and more across multiple locations in India and the USA."
-        />
-        <meta
-          name="keywords"
-          content="rTMS, depression treatment, anxiety treatment, OCD treatment, non-invasive therapy, mental health, Mindful TMS"
-        />
-        <meta name="author" content="Mindful TMS" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="MindfulTMS - Advanced rTMS Therapy" />
-        <meta property="og:description" content="Experience safe and effective transcranial magnetic stimulation (rTMS) therapy for mental health." />
-        <meta property="og:image" content="/home/logoMain.svg" />
-        <meta property="og:url" content="https://mindfultms.in/" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:title" content="MindfulTMS - Advanced rTMS Therapy" />
-        <meta name="twitter:description" content="Get advanced rTMS treatment for depression and anxiety. Safe, non-invasive therapy at MindfulTMS." />
-        <meta name="twitter:image" content="/home/logoMain.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-
-
-
+ 
       </head>
       <body>
         <noscript>

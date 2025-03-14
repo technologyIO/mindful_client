@@ -2,7 +2,7 @@
 const nextConfig = {
   swcMinify: true,
   webpack: (config) => {
-    config.optimization.minimize = false;
+    config.optimization.minimize = true;
     return config;
   },
   images: {

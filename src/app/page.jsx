@@ -7,6 +7,18 @@ const HomePage = dynamic(() => import('@/app/component/HomePage'))
 import axios from 'axios';
 import {HomePageSections} from "@/example"
 const currentSection = HomePageSections;
+
+export async function generateMetadata() {
+
+
+  return {
+   title: 'Mindful TMS: Advanced rTMS Treatment for Depression, Anxiety, and OCD',
+   description:`Experience non-invasive, medication-free rTMS therapy at Mindful TMS. Our experts provide personalized care for depression, anxiety, OCD, and more across multiple locations in India and the USA.`,
+ };
+
+}
+
+
 export default async function Home() {
 
     let allSection = {};

@@ -79,7 +79,96 @@ const staticTestimonials =[
         "createdAt": "2024-11-19T02:40:50.366Z",
         "updatedAt": "2024-11-19T02:40:50.366Z"
     },
-    
+    {
+        "_id": "673bfab2226472f401712197",
+        "type": "text",
+        "patientName": "Inder malviya",
+        "doctor": {
+            "_id": "66fbe61e7d61644c9bde4bd3",
+            "name": "Ms. Navya Shree"
+        },
+        "condition": "Anxiety,Depression",
+        "treatment": "Therapy",
+        "location": "Bengaluru -  Whitefield",
+        "title": "It was very calming experience",
+        "shortQuote": "It was very calming experience",
+        "fullTestimonial": "It was very calming experience, got to know something new about me. Felt very light after the discussion.",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.367Z",
+        "updatedAt": "2024-11-19T02:40:50.367Z"
+    },
+    {
+        "_id": "673bfab2226472f40171218e",
+        "type": "text",
+        "patientName": "Anonymous",
+        "doctor": {
+            "_id": "66fe27b11941768d6b3e9fc3",
+            "name": "Ms. Kavya K"
+        },
+        "condition": "",
+        "treatment": "Therapy",
+        "location": "Bengaluru -  Whitefield",
+        "title": "She is very professional. Helped me a lot in realising my problem and create awareness.",
+        "shortQuote": "She is very professional. Helped me a lot in realising my problem and create awareness.",
+        "fullTestimonial": "She is very professional. Helped me a lot in realising my problem and create awareness . Conducted in depth discussions with written, verbal and books to go through to cope oneself; She handled me smoothly and effectively . Would recommend anyone to go for her sessions.",
+        "__v": 0,
+        "createdAt": "2024-11-19T02:40:50.367Z",
+        "updatedAt": "2024-11-19T02:40:50.367Z"
+    },
+    {
+        "_id": "6749abf2b79f03dabd462229",
+        "type": "text",
+        "patientName": "Anonymous",
+        "doctor": {
+            "_id": "6720e7e38de82da2acfe7a98",
+            "name": "Ms. Sonali Das"
+        },
+        "condition": "Stress",
+        "treatment": "Therapy",
+        "location": "New Delhi - Greater Kailash 1",
+        "title": "Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
+        "shortQuote": "Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
+        "fullTestimonial": "The session was good and comforting. Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
+        "__v": 0,
+        "createdAt": "2024-11-29T11:56:34.450Z",
+        "updatedAt": "2024-11-29T11:56:34.450Z"
+    },
+    {
+        "_id": "674a8aefb79f03dabd4631d7",
+        "type": "text",
+        "patientName": "Anonymous",
+        "doctor": {
+            "_id": "670e566cc8d65e9d976b745a",
+            "name": "Ms. Geetha. S Patel"
+        },
+        "condition": "Anxiety,Depression",
+        "treatment": "Therapy",
+        "location": "Bengaluru - Hebbal",
+        "title": "Geeta has a very kind, understanding, and simple way of helping you work through emotional struggles.I feel much more confident. ",
+        "shortQuote": "Geeta has a very kind, understanding, and simple way of helping you work through emotional struggles.I feel much more confident. ",
+        "fullTestimonial": "I was struggling with anxiety and panic attacks for the past few years and was diagnosed with clinical depression earlier this year.\n\nThat’s when I decided to start counseling with Geeta, and I stuck with it for three months.\n\nGeeta has a very kind, understanding, and simple way of helping you work through emotional struggles. What I really liked was how she focused on practical ways to manage my emotions instead of just digging into the root cause of everything.\n\nNow, I feel much more confident about taking care of my emotional and mental well-being. I’ve learned how to handle my anxiety and panic much better than before.\n\nIf you’re looking for someone who’s friendly, approachable, and easy to talk to, I’d definitely recommend Geeta!\"",
+        "__v": 0,
+        "createdAt": "2024-11-30T03:47:59.138Z",
+        "updatedAt": "2024-11-30T03:47:59.138Z"
+    },
+    {
+        "_id": "6797843828890b7ab6603b2f",
+        "type": "text",
+        "patientName": "Anonymous",
+        "doctor": {
+            "_id": "679762f728890b7ab66034ed",
+            "name": "Ms. Maneena James"
+        },
+        "condition": "Child Psychology",
+        "treatment": "Therapy",
+        "location": "Bengaluru -  Whitefield",
+        "title": "As a parent, I was worried about my child's behavior. MindfulTMS and Ms. Maneena James were lifesavers!",
+        "shortQuote": "As a parent, I was worried about my child's behavior. MindfulTMS and Ms. Maneena James were lifesavers!",
+        "fullTestimonial": "As a parent, I was worried about my child's behavior. MindfulTMS and Ms. Maneena James were lifesavers! The child psychology assessment helped us understand what was going on. Therapy sessions made a world of difference. The clinic's kid-friendly atmosphere was perfect. We're so thankful for the positive changes. MindfulTMS is a godsend for families!",
+        "__v": 0,
+        "createdAt": "2025-01-27T13:03:52.715Z",
+        "updatedAt": "2025-01-27T13:03:52.715Z"
+    },
    
 ]
 export default function TestimonialComponentSlide({
@@ -186,14 +275,46 @@ export default function TestimonialComponentSlide({
         );
     };
 
+   
+
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 1000,
         slidesToShow: mobileView ? 1 : 3,
         autoplay: true, // Enable auto-slide
         autoplaySpeed: 5000, // Slide every 5 seconds
-        slidesToScroll: 1,
+        slidesToScroll:  smallDevice ? 1 : 3,
+        customPaging: (i) => (
+            <div
+              style={{
+                width: "10px",
+                height: "10px",
+                borderRadius: "50%",
+                background: "#c0c0c0", // default dot color
+              }}
+            ></div>
+          ),
+          appendDots: (dots) => (
+            <div
+              style={{
+                marginTop: "20px",
+              }}
+            >
+              <ul
+                style={{
+                  margin: "0px",
+                  padding: "0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "10px",
+                  listStyle: "none",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
         nextArrow: <NextArrow />, // Use the custom Next button
         prevArrow: <PrevArrow />, // Use the custom Prev button
         responsive: [
@@ -332,6 +453,7 @@ export default function TestimonialComponentSlide({
     }
 
     return (
+        
         <div className={`${mobileView ? "flex justify-center w-full" : ""}`}>
             {smallDevice && <div className="mb-7 text-center text-3xl font-bold text-teal-700">Testimonials</div>}
             <div className={` rounded-lg   ${mobileView ? "w-[80%]" : "w-full"} p-4`}>

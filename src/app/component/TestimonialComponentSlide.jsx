@@ -288,10 +288,10 @@ export default function TestimonialComponentSlide({
         customPaging: (i) => (
             <div
               style={{
-                width: "10px",
-                height: "10px",
+                width: "12px",
+                height: "12px",
                 borderRadius: "50%",
-                background: "#c0c0c0", // default dot color
+                background: "#FBA21B", // default dot color
               }}
             ></div>
           ),
@@ -307,7 +307,8 @@ export default function TestimonialComponentSlide({
                   padding: "0px",
                   display: "flex",
                   justifyContent: "center",
-                  gap: "10px",
+                  alignItems: "center",
+                //   gap: "10px",
                   listStyle: "none",
                 }}
               >

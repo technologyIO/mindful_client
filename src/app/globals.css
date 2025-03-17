@@ -227,8 +227,15 @@ body {
   background: rgb(175,175,175);background: linear-gradient(0deg, rgba(175,175,175,0.4515056022408963) 0%, rgba(210,210,210,0.3) 100%);
 }
 
+.slick-dots li {
+  display: flex !important;
+  justify-content: center !important;;
+  align-items: center !important;;
+  
+}
 .slick-dots li.slick-active div {
   background: #ff5722 !important; /* active dot color */
+  padding:10px;
 }
 
 /* Define the 'thin-scroll' class */

@@ -288,8 +288,8 @@ export default function TestimonialComponentSlide({
         customPaging: (i) => (
             <div
               style={{
-                width: "12px",
-                height: "12px",
+                width: "10px",
+                height: "10px",
                 borderRadius: "50%",
                 background: "#FBA21B", // default dot color
               }}

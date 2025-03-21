@@ -19,6 +19,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'mindfultms1.s3.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'mindfultms.in',
+        pathname: '/**',
+      },
     ],
   },
 };

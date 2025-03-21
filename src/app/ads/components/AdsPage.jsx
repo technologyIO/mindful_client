@@ -16,9 +16,11 @@ import ContactForm from './ContactForm'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 // import { useSearchParams } from 'next/navigation'
-
-export default function AdsPage({ params, condition }) {
+import { adsPageContent } from '@/adsPageContent'
+export default function AdsPage({ params }) {
     const [queryString, setQueryString] = useState("");
+    const condition = params.condition == "general" ? "" : params.condition || ""
+    const current_condition = params.condition
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
     // const router = useRouter(); // Get the router object
     // const { query } = router;  // Access the query parameters from the URL
@@ -39,7 +41,7 @@ export default function AdsPage({ params, condition }) {
     }, []);
 
     const city = params.location;
-    const expertCondition = params.general;
+    const expertCondition = params.service;
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
     const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition === 'therapist' ? "therapist" : 'Psychologist';
 
@@ -63,6 +65,8 @@ export default function AdsPage({ params, condition }) {
             price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
         }
     }
+
+    const currentPageContent = adsPageContent[city]?.[expertCondition]?.[current_condition];
 
 
     const conditions = [
@@ -121,12 +125,6 @@ export default function AdsPage({ params, condition }) {
     ]
 
 
-    const addContent = {
-        header_general: `Are you looking for an experienced ${expertText} and a safe space?`,
-        header_condition: `Break Free from ${cleanCondition}. Your Journey to mental peace starts here.`,
-        subheader_general: `We help people with anxiety, depression, OCD, grief, trauma, and more. Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate ${expertText}s are here for you.`,
-        subheader_condition: `Our compassionate ${expertText} are here to support you on your journey to mental peace. Together, we can break free from ${cleanCondition}.`,
-    }
 
 
     const MobileView = () => {
@@ -207,7 +205,7 @@ export default function AdsPage({ params, condition }) {
                                 <br />
                                 Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                             </h3>}
-                            {
+                        {
                             locationContent[city]?.price &&
                             <div className="text-base  text-center text-orange-500 mt-2  font-bold mx-0 px-0 ">
                                 {locationContent[city]?.price}
@@ -216,8 +214,8 @@ export default function AdsPage({ params, condition }) {
                         <div className='flex items-center justify-center mt-1'>
                             <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full  items-center justify-center gap-2 font-semibold rounded bg-orange-500 py-2 text-base text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-2"} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} name={`Request an Appointment`} />
                         </div>
-                        
-                        
+
+
                     </section>
 
 
@@ -292,7 +290,6 @@ export default function AdsPage({ params, condition }) {
     }
 
 
-
     const DesktopView = () => {
         return (
             <>
@@ -309,19 +306,21 @@ export default function AdsPage({ params, condition }) {
                             <div className="
                              bg-[#fb923ca8] 
                                rounded-lg  px-7 py-7">
-                                <div className=''>
-                                    {/* header */}
-                                    {/* if condition then or not  */}
+                                {/* <div className=''>
+                                 
                                     {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                         Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
                                     </h1> :
                                         <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                             Are you looking for an experienced {expertText}?
                                         </h1>}
-                                </div>
+                                </div> */}
+                                <h1 className="mb-2 text-5xl  text-white  font-bold ">
+                                    {currentPageContent?.lp_hero_title}
+                                </h1>
 
                                 {/* sub header */}
-                                {cleanCondition ? <p className="text-xl  text-white font-bold text-start">
+                                {/* {cleanCondition ? <p className="text-xl  text-white font-bold text-start">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
                                     <div className="text-xl  text-white font-bold text-start">
@@ -329,10 +328,19 @@ export default function AdsPage({ params, condition }) {
 
 
                                         {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
-                                    </div>}
+                                    </div>} */}
+
+                                <div className="text-3xl  text-white font-semibold text-start">
+                                    <p className=''>{currentPageContent?.lp_hero_subtitle}</p>
+
+                                    <p className='text-lg mt-3'>
+
+                                        {currentPageContent?.hero_description_2}
+                                    </p>
+                                </div>
 
 
-                                {condition ?
+                                {/* {condition ?
                                     <h3 className=' text- text-lg text-white text-start mt-2'>
                                         Embrace a healthier, happier life with personalized care.
                                         <br />
@@ -342,7 +350,13 @@ export default function AdsPage({ params, condition }) {
                                         Start your healing now.
                                         <br />
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
-                                    </h3>}
+                                    </h3>} */}
+
+                                <h3 className=' text- text-base text-white text-start mt-2'>
+                                    {
+                                        currentPageContent?.hero_description_what_we_offer
+                                    }
+                                </h3>
 
 
                                 <div className='flex items-start justify-start mt-4'>

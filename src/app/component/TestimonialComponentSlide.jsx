@@ -275,10 +275,11 @@ export default function TestimonialComponentSlide({
         );
     };
 
-   
+   console.log('small device ', smallDevice)
+   console.log('mobile view ', mobileView)
 
     const settings = {
-        dots: true,
+        dots: smallDevice ? false : true,
         infinite: true,
         speed: 1000,
         slidesToShow: mobileView ? 1 : 3,

@@ -457,7 +457,7 @@ export default function TestimonialComponentSlide({
     return (
         
         <div className={`${mobileView ? "flex justify-center w-full" : ""}`}>
-            {smallDevice && <div className="mb-7 text-center text-3xl font-bold text-teal-700">Testimonials</div>}
+            {smallDevice && <div className="mb-7 text-center text-3xl font-bold text-orange-500">Testimonials</div>}
             <div className={` rounded-lg   ${mobileView ? "w-[80%]" : "w-full"} p-4`}>
                 <Slider {...settings}>
                     {testimonials.map((testimonial, index) => {

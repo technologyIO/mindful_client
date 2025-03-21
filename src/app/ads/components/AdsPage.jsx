@@ -70,11 +70,23 @@ export default function AdsPage({ params }) {
 
 
     const conditions = [
-        { name: 'Depression', image: '/ads/depression1.png' },
-        { name: 'Anxiety', image: '/ads/anxiety.png' },
-        { name: 'Obsessive Compulsive Disorder (OCD)', image: '/ads/ocd1.png' },
-        { name: 'Adult ADHD', image: '/ads/adhd1.png' }
+        { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
+        { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
+        { name: 'OCD', image: '/ads/what_we_treat/ocd.png' },
+        { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' },
+        { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
+        { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
+        { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
+     
+        
     ]
+
+    // const conditions = [
+    //     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
+    //     { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
+    //     { name: 'Obsessive Compulsive Disorder (OCD)', image: '/ads/what_we_treat/ocd.png' },
+    //     { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' }
+    // ]
 
     const symptomsDynamic = [
         { id: 1, symptom: "Excessive Worrying", description: "Constant and overwhelming worry about various aspects of life.", category: "Anxiety", icons: "Excessive Worrying.png" },
@@ -221,29 +233,8 @@ export default function AdsPage({ params }) {
 
 
                     {/* What We Treat */}
-                    {!condition &&
-                        <section className="bg-primary-div mx-auto py-6">
-                            <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
-                            <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4 px-2">
-                                {conditions.map((condition) => (
-                                    <div key={condition.name} className="rounded-lg p-4 ">
-                                        <div>
-                                            <img
-                                                src={condition.image}
-                                                alt={condition.name}
-                                                width={100}
-                                                height={100}
-                                                className="mb-4 h-[150px] w-full rounded object-cover"
-                                            />
-                                            <p className="text-center text-orange-500">{condition.name}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className='flex items-center justify-center'>
-                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex w-full items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" />
-                            </div>
-                        </section>}
+                    {!condition &&<div className='bg-primary-div'>
+                        <Show_what_we_treat/></div>}
 
                     {/* Symptoms */}
                     {condition && <ShowSymptoms category={cleanCondition} />}
@@ -293,7 +284,7 @@ export default function AdsPage({ params }) {
     const DesktopView = () => {
         return (
             <>
-                <div className=" bg-gray-50">
+                <div className=" ">
                     {/* Hero Section */}
                     <section
                         className=" bg-cover h-[80vh] bg-center flex items-center justify-between md:px-[10px] lg:px-[50px] xl:px-[100px] "
@@ -330,8 +321,8 @@ export default function AdsPage({ params }) {
                                         {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
                                     </div>} */}
 
-                                <div className="text-3xl  text-white font-semibold text-start">
-                                    <p className=''>{currentPageContent?.lp_hero_subtitle}</p>
+                                <div className="text-xl  text-white  text-start">
+                                    <p className='font-bold'>{currentPageContent?.lp_hero_subtitle}</p>
 
                                     <p className='text-lg mt-3'>
 
@@ -352,7 +343,7 @@ export default function AdsPage({ params }) {
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>} */}
 
-                                <h3 className=' text- text-base text-white text-start mt-2'>
+                                <h3 className=' text-lg text-white text-start '>
                                     {
                                         currentPageContent?.hero_description_what_we_offer
                                     }
@@ -385,39 +376,19 @@ export default function AdsPage({ params }) {
                     {/* Symptoms */}
                     {condition && <ShowSymptoms category={cleanCondition} />}
                     {/* What We Treat */}
-                    {!cleanCondition && <section className="bg-primary-div mx-auto py-6">
-                        <Container maxWidth="lg">
-                            <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
-                            <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4 px-2">
-                                {conditions.map((condition) => (
-                                    <div key={condition.name} className="rounded-lg p-4 ">
-                                        <div>
-                                            <img
-                                                src={condition.image}
-                                                alt={condition.name}
-                                                width={100}
-                                                height={100}
-                                                className="mb-4 h-[280px] w-full rounded object-cover"
-                                            />
-                                            <p className="text-center text-lg font-semibold text-orange-500">{condition.name}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className='flex items-center justify-center'>
-                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" />
-                            </div>
-                        </Container>
-                    </section>}
+                    {!cleanCondition && <Show_what_we_treat/>}
 
-                    <AdsCombinePage iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} condition={cleanCondition} expertText={expertText} location={location} />
+                    <div className='bg-primary-div py-5'>
+                        <AdsCombinePage iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} condition={cleanCondition} expertText={expertText} location={location} />
+
+                    </div>
                     {/* our experts */}
                     {/* <div className='bg-primary-div'>
                         <ClinicLocationDoctors city={city} />
                     </div> */}
 
                     {/* Why Choose Us */}
-                    <section className="py-8 bg-primary-div">
+                    <section className="py-8 ">
                         <h2 className="mb-4 text-center text-3xl font-bold text-orange-500">
                             Why Choose Us?
                         </h2>
@@ -445,9 +416,12 @@ export default function AdsPage({ params }) {
                             </div>
                         </div>
                         <div className='flex items-center justify-center mt-6'>
-                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" />
+                            {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Request an Appointment" /> */}
+                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" />
+
                         </div>
                     </section>
+                    <hr />
 
                 </div>
             </>
@@ -488,6 +462,47 @@ export default function AdsPage({ params }) {
                         </div>
                     </Container>
                 </section>
+            </>
+        )
+    }
+
+    const Show_what_we_treat= ()=>{
+        return (
+            <>
+                <section className=" mx-auto py-6 flex justify-center items-center min-h-[250px]">
+                        <Container maxWidth="lg">
+                            <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
+                            <div className="flex flex-wrap justify-center gap-6 px-4">
+                                {conditions.map((condition) => (
+                                    <div
+                                        key={condition.name}
+                                        className="rounded-xl  transition-all duration-300 "
+                                    >
+                                        <div className="flex items-center gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-2 rounded-full bg-orange-500">
+                                        {/* <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200"> */}
+                                            <img
+                                                src={condition.image}
+                                                alt={condition.name}
+                                                width={40}
+                                                height={40}
+                                                className=" h-[25px] w-[25px] md:h-[30px] md:w-[30px] object-contain"
+                                            />
+                                            <p className=" text-sm md:text-base  font-semibold text-white">{condition.name}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className='flex items-center justify-center mt-11'>
+                                {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" /> */}
+                                {/* new button below */}
+                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white font-bold rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200 focus:ring focus:ring-orange-500 mx-10 hover:scale-105 hover:shadow-lg"} name="Book a Consultation" />
+
+                                {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" /> */}
+
+                            </div>
+                        </Container>
+                    </section>
             </>
         )
     }

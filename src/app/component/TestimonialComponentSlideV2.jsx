@@ -13,7 +13,9 @@ const staticTestimonials =[
         "patientName": "Priyanka Sharma",
         "doctor": {
             "_id": "66ffa1856a3f2ccdb194b61d",
-            "name": "Dr. Shubham Narnoli"
+            "name": "Dr. Shubham Narnoli",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp"
+       
         },
         "condition": "Stroke Rehabilitation",
         "treatment": "rTMS",
@@ -31,7 +33,9 @@ const staticTestimonials =[
         "patientName": "Mr Ravinder",
         "doctor": {
             "_id": "66fe4d3a6a3f2ccdb194af4b",
-            "name": "Ms. Shilpi Sharma"
+            "name": "Ms. Shilpi Sharma",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png"
+        
         },
         "condition": "OCD",
         "treatment": "rTMS,Psychiatrist",
@@ -49,7 +53,9 @@ const staticTestimonials =[
         "patientName": "Amita Bakshi",
         "doctor": {
             "_id": "66ffa28f6a3f2ccdb194b62a",
-            "name": "Dr. Sandeep Govil"
+            "name": "Dr. Sandeep Govil",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp"
+        
         },
         "condition": "",
         "treatment": "Psychiatrist",
@@ -67,7 +73,9 @@ const staticTestimonials =[
         "patientName": "Aishwarya Mylar",
         "doctor": {
             "_id": "66ffa2e86a3f2ccdb194b632",
-            "name": "Dr. Abhishek"
+            "name": "Dr. Abhishek",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302052754-abhishek.webp"
+       
         },
         "condition": "",
         "treatment": "Psychiatrist",
@@ -85,7 +93,9 @@ const staticTestimonials =[
         "patientName": "Inder malviya",
         "doctor": {
             "_id": "66fbe61e7d61644c9bde4bd3",
-            "name": "Ms. Navya Shree"
+            "name": "Ms. Navya Shree",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733301957224-navya.webp"
+       
         },
         "condition": "Anxiety,Depression",
         "treatment": "Therapy",
@@ -103,7 +113,9 @@ const staticTestimonials =[
         "patientName": "Anonymous",
         "doctor": {
             "_id": "66fe27b11941768d6b3e9fc3",
-            "name": "Ms. Kavya K"
+            "name": "Ms. Kavya K",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733301974170-kavya.webp"
+       
         },
         "condition": "",
         "treatment": "Therapy",
@@ -121,7 +133,9 @@ const staticTestimonials =[
         "patientName": "Anonymous",
         "doctor": {
             "_id": "6720e7e38de82da2acfe7a98",
-            "name": "Ms. Sonali Das"
+            "name": "Ms. Sonali Das",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
+        
         },
         "condition": "Stress",
         "treatment": "Therapy",
@@ -139,7 +153,9 @@ const staticTestimonials =[
         "patientName": "Anonymous",
         "doctor": {
             "_id": "670e566cc8d65e9d976b745a",
-            "name": "Ms. Geetha. S Patel"
+            "name": "Ms. Geetha. S Patel",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302091489-geetha.webp"
+        
         },
         "condition": "Anxiety,Depression",
         "treatment": "Therapy",
@@ -157,7 +173,9 @@ const staticTestimonials =[
         "patientName": "Anonymous",
         "doctor": {
             "_id": "679762f728890b7ab66034ed",
-            "name": "Ms. Maneena James"
+            "name": "Ms. Maneena James",
+            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1737974501521-Dr.maneena%20%281%29.png"
+        
         },
         "condition": "Child Psychology",
         "treatment": "Therapy",
@@ -171,14 +189,15 @@ const staticTestimonials =[
     },
    
 ]
-export default function TestimonialComponentSlide({
+export default function TestimonialComponentSlideV2({
     location,
     condition,
     disableSlide,
     setDisableSlide,
     mobileView,
     smallDevice,
-    doctor
+    doctor, 
+    experts
 }) {
 
     const pathname = usePathname(); 
@@ -431,11 +450,13 @@ export default function TestimonialComponentSlide({
                     <div className="mt-4">
                         <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
                         <div className="mt-3 flex gap-3">
+                            <Image src={testimonial?.doctor?.image} height={100} width={100} className="h-[44px] w-[44px] rounded-full " />
                                     <div
-                                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full"
+                                        className="px-2 py-1 flex gap-3 items-center bg-blue-100 text-blue-800 rounded-full"
                                     >
                                         <span className="text-sm">{testimonial?.doctor?.name}</span>
                                     </div>
+                                    
                         </div>
                     </div>
                 </div>
@@ -457,7 +478,7 @@ export default function TestimonialComponentSlide({
     return (
         
         <div className={`${mobileView ? "flex justify-center w-full" : ""}`}>
-            {smallDevice && <div className="mb-7 text-center text-3xl font-bold text-orange-500">Testimonials</div>}
+            {smallDevice && <div className="mb-7 text-center text-3xl font-bold ">Testimonials</div>}
             <div className={` rounded-lg   ${mobileView ? "w-[80%]" : "w-full"} p-4`}>
                 <Slider {...settings}>
                     {testimonials.map((testimonial, index) => {

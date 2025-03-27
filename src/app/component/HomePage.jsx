@@ -673,7 +673,7 @@ const HomePage = ({ allSection }) => {
 
 
                 {/* client speaks */}
-                <section className='py-10 px-4 md:px-[100px] '>
+                <section className='py-10 px-8 md:px-[100px] '>
                     {/* <VideoComponent /> */}
                     <h1 className='text-4xl text-gray-800 font-semibold  text-center  mb-6'>Clients Speak</h1>
                     <TestimonialComponentSlide />

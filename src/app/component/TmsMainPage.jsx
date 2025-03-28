@@ -114,7 +114,7 @@ const TmsMainPage = () => {
 
                             </p>
                             <div className="pt-5 md:h-[360px]">
-                                <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="/tmsPage/mindfulTMS_rtms before after.webp" className="object-cover h-full" />
                             </div>
                         </div>
 
@@ -259,8 +259,8 @@ const TmsMainPage = () => {
             <>
                 <div className="min-h-screen">
                     <div className="">
-                        <div className='h-[550px]'>
-                            <Image alt="img"  width={900} height={900}  className='w-full h-full object-cover' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
+                        <div className='h-[78vh] w-full'>
+                            <Image alt="img"  width={900} height={900}  className='w-full h-full object-cover' src='/tmsPage/banner.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
@@ -272,19 +272,19 @@ const TmsMainPage = () => {
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <p className='text-gray-600 text-xl w-2/3'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                                     <div className="py-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms4.png?updatedAt=1734526214526" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms.webp" className="object-contain h-full" />
                                     </div>
                                 </div>
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindfulTMS_rtms before after.webp" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
-                                        <p className="text-gray-700 text-xl text-center mb-2">
+                                        <p className="text-gray-700 text-xl text-start mb-2">
                                             {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
 
                                         </p>
-                                        <p className="text-gray-700 text-xl text-center mb-4">
+                                        <p className="text-gray-700 text-xl text-start mb-4">
                                             {`For example, in the case of depression, the brain activity is decreased. With targeted rTMS, the activity in these areas increases.  `}
 
                                         </p>
@@ -383,7 +383,7 @@ const TmsMainPage = () => {
                                 {`How does rTMS work?`}
                             </h3>
                             <div className="mb-6 flex justify-center ">
-                                <img alt="img"    src="/tmsPage/tms3.png" className="object-cover h-full" />
+                                <img alt="img"    src="/tmsPage/tms3.png" className="object-cover w-[650px] h-full" />
                             </div>
                             <div className="space-y-4 mb-6">
                                 {/* <p className="text-gray-700 text-lg font-bold">
@@ -395,20 +395,20 @@ const TmsMainPage = () => {
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img alt="img"    className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
+                                            <img alt="img"    className='h-full' src='/tmsPage/mindful_Coil Placement.webp' />
                                         </div>
                                     </li>
 
                                     <li className=' text-2xl'>
                                         <strong>{`Stimulate Brain Cells:`}</strong>{` The magnetic pulses help activate or regulate the brain cells (neurons) in those regions where the coil is targeted `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img alt="img"    className='h-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new3.png?updatedAt=1734526214919' />
+                                            <img alt="img"    className='h-full ' src='/tmsPage/mindful_Stimulate Brain Cells.webp' />
                                         </div>
                                     </li>
                                     <li className=' text-2xl'>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img alt="img"    className='h-full ' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <img alt="img"    className='h-full  object-cover ' src='/tmsPage/mindful_Boost Brain Activity.webp' />
                                         </div>
                                     </li>
                                     <li className='mb-5 text-2xl'>

@@ -114,7 +114,7 @@ const TmsMainPage = () => {
 
                             </p>
                             <div className="pt-5 md:h-[360px]">
-                                <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="/tmsPage/mindfulTMS_rtms before after.webp" className="object-cover h-full" />
                             </div>
                         </div>
 
@@ -277,7 +277,7 @@ const TmsMainPage = () => {
                                 </div>
                                 <div className='flex flex-row justify-between items-start gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms before after.webp" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindfulTMS_rtms before after.webp" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
                                         <p className="text-gray-700 text-xl text-start mb-2">

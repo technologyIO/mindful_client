@@ -275,7 +275,7 @@ const TmsMainPage = () => {
                                         <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms.webp" className="object-contain h-full" />
                                     </div>
                                 </div>
-                                <div className='flex flex-row justify-between items-start gap-4'>
+                                <div className='flex flex-row justify-between items-center gap-4'>
                                     <div className="pt-5 md:h-[360px]">
                                         <Image alt="img"  width={500} height={500}  src="/tmsPage/mindfulTMS_rtms before after.webp" className="object-contain h-full" />
                                     </div>

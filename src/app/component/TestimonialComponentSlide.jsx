@@ -178,7 +178,8 @@ export default function TestimonialComponentSlide({
     setDisableSlide,
     mobileView,
     smallDevice,
-    doctor
+    doctor,
+    oneSlide
 }) {
 
     const pathname = usePathname(); 
@@ -284,7 +285,7 @@ export default function TestimonialComponentSlide({
         slidesToShow: mobileView ? 1 : 3,
         autoplay: true, // Enable auto-slide
         autoplaySpeed: 5000, // Slide every 5 seconds
-        slidesToScroll:  smallDevice ? 1 : 3,
+        slidesToScroll:  (smallDevice || oneSlide) ? 1 : 3,
         customPaging: (i) => (
             <div
               style={{

@@ -11,6 +11,7 @@ import {
   UserGroupIcon,
 } from '@heroicons/react/outline'
 import TestimonialComponentSlideV2 from '@/app/component/TestimonialComponentSlideV2'
+import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 
 const NewAdsLandingPage = () => {
 
@@ -150,6 +151,19 @@ const NewAdsLandingPage = () => {
     },
   ]
 
+  
+  const WhatWeTreat = [
+    { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
+    { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
+    { name: 'OCD', image: '/ads/what_we_treat/ocd.png' },
+    { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' },
+    { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
+    { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
+    // { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
+ 
+    
+]
+
   const groupedExperts = experts.reduce((acc, expert) => {
     const category = expert.title.includes("Psychologist") ? "Clinical Psychologists" : "Psychiatrists";
     if (!acc[category]) acc[category] = [];
@@ -157,6 +171,55 @@ const NewAdsLandingPage = () => {
     return acc;
   }, {});
 
+
+  const Show_what_we_treat = () => {
+    return (
+      <section className="bg-primary-div py-5">
+        <Container maxWidth="lg">
+          {/* Heading */}
+          <h2 className="mb-7 text-center text-3xl font-bold  text-gray-800">
+            What We Treat
+          </h2>
+          {/* Subheading */}
+          {/* <p className="mb-8 text-center text-gray-600 max-w-xl mx-auto">
+            Our platform is built by psychiatrists, therapists, and mental
+            health experts with immense global experience.
+          </p> */}
+  
+          {/* Grid of conditions */}
+          <div className="grid grid-cols-3 gap-8 px-4 sm:grid-cols-2 md:grid-cols-4">
+            {WhatWeTreat.map((condition) => (
+              <div
+                key={condition.name}
+                className="flex flex-col items-center text-center"
+              >
+                {/* Icon wrapper */}
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500">
+                  <img
+                    src={condition.image}
+                    alt={condition.name}
+                    className="h-8 w-8 object-contain"
+                  />
+                </div>
+                {/* Title */}
+                <p className="text-base md:text-lg font-semibold text-orange-500">
+                  {condition.name}
+                </p>
+              </div>
+            ))}
+          </div>
+  
+          {/* Button at the bottom */}
+          <div className="mt-10 flex items-center justify-center">
+            <RequestAppointment
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
+        </Container>
+      </section>
+    );
+  };
 
   return (
     <>
@@ -187,11 +250,12 @@ const NewAdsLandingPage = () => {
                 <span className="font-semibold">We help with:</span> <br />
                 Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia | and more.
               </p>
-              <div className='flex justify-center'>
-                <button className="bg-[#EA7C5B] hover:bg-orange-600 text-white  font-semibold py-3 px-6 rounded-full transition-colors duration-300 shadow-md">
-                  Learn More
-                </button>
-              </div>
+              <div className="mt-10 flex items-center justify-center">
+            <RequestAppointment
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
             </div>
           </div>
         </section>
@@ -202,76 +266,108 @@ const NewAdsLandingPage = () => {
         <div className="mb-3 flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold text-gray-800 text-center">Our Experts</h1>
         </div>
-        {Object.entries(groupedExperts).map(([category, experts]) => (
-          <div key={category}>
-            <h2 className="text-xl font-semibold text-gray-700 text-center my-4">
-              {category}
-            </h2>
-            <div
-              className={`grid grid-cols-2 md:grid-cols-${experts.length < 4 ? experts.length : 4} gap-4 md:gap-6 lg:gap-x-10 text-center ${experts.length < 4 ? "md:flex md:justify-center" : ""
-                }`}
-            >
-              {experts.map((expert) => (
-                <a key={expert.id} className="flex flex-col items-center" href={`/doctor/${expert.id}`}>
-                  <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
-                    <img
-                      className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
-                      src={expert.image}
-                      alt={expert.name}
-                      style={{ objectPosition: "center top" }}
-                    />
-                  </div>
-                  <div className="mb-1">
-                    <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                      {expert.name}
-                    </p>
-                    <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                      {expert.title}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
+        <div>
+          <h2 className="text-xl font-semibold text-gray-700 text-center my-4">Psychiatrists</h2>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 text-center md:flex md:justify-center">
+            <a className="flex flex-col items-center" href="/doctor/66ffa28f6a3f2ccdb194b62a">
+              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
+                <img
+                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
+                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp"
+                  alt="Dr. Sandeep Govil"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+              <div className="mb-1">
+                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Dr. Sandeep Govil
+                </p>
+                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Psychiatrist
+                </p>
+              </div>
+            </a>
+            <a className="flex flex-col items-center" href="/doctor/66ffa1856a3f2ccdb194b61d">
+              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
+                <img
+                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
+                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp"
+                  alt="Dr. Shubham Narnoli"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+              <div className="mb-1">
+                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Dr. Shubham Narnoli
+                </p>
+                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Psychiatrist
+                </p>
+              </div>
+            </a>
           </div>
-        ))}
+        </div>
+        <div>
+          <h2 className="text-xl font-semibold text-gray-700 text-center my-4">Clinical Psychologists</h2>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 text-center md:flex md:justify-center">
+            <a className="flex flex-col items-center" href="/doctor/6720e7e38de82da2acfe7a98">
+              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
+                <img
+                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
+                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
+                  alt="Ms. Sonali Das"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+              <div className="mb-1">
+                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Ms. Sonali Das
+                </p>
+                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Clinical Psychologist
+                </p>
+              </div>
+            </a>
+            <a className="flex flex-col items-center" href="/doctor/66fe4d3a6a3f2ccdb194af4b">
+              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
+                <img
+                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
+                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png"
+                  alt="Ms. Shilpi Sharma"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+              <div className="mb-1">
+                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Ms. Shilpi Sharma
+                </p>
+                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                  Counselling Psychologist
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className="mt-10 flex items-center justify-center">
+            <RequestAppointment
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
       </section>
+
 
       {/* client speaks */}
-      <section className='py-8 px-4 '>
-        {/* <h1 className='text-center text-3xl font-semibold'> Client Speaks</h1> */}
-        {/* <VideoComponent /> */}
-        {/* <NewComponent videos={videos} /> */}
-        {/* <TestimonialComponent  /> */}
-        <TestimonialComponentSlideV2 smallDevice={true}  experts={experts} />
-        {/* <TestimonialComponents2/> */}
+      <section className='py-5 px-4 '>
+    
+        <TestimonialComponentSlideV2 smallDevice={true} experts={experts} />
 
       </section>
-      <section className=" py-16 sm:py-24 text-gray-800">
-        <Container maxWidth="lg">
-          <div className=" mx-auto px-4">
-            {/* Section Heading */}
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
-              Why Mindful TMS?
-            </h2>
-            <p className="text-center max-w-2xl mx-auto text-gray-600 mb-12">
-              Our platform is built by psychiatrists, therapists, and mental health experts
-              with immense global experience.
-            </p>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* 2. Map over the features array to render each item */}
-              {features.map((feature) => (
-                <div key={feature.id} className="flex flex-col items-center rounded-xl px-2 py-2 text-center">
-                  <feature.icon className="w-12 h-12 mb-4 text-orange-500" />
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
+      <div>
+      <Show_what_we_treat/>
+      </div>
+    
 
 
 

@@ -272,19 +272,19 @@ const TmsMainPage = () => {
                                 <div className='flex flex-row justify-between items-center gap-4'>
                                     <p className='text-gray-600 text-xl w-2/3'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                                     <div className="py-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms4.png?updatedAt=1734526214526" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms.webp" className="object-contain h-full" />
                                     </div>
                                 </div>
-                                <div className='flex flex-row justify-between items-center gap-4'>
+                                <div className='flex flex-row justify-between items-start gap-4'>
                                     <div className="pt-5 md:h-[360px]">
-                                        <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/tms5a.png?updatedAt=1734588069673" className="object-contain h-full" />
+                                        <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms before after.webp" className="object-contain h-full" />
                                     </div>
                                     <div className='w-2/3'>
-                                        <p className="text-gray-700 text-xl text-center mb-2">
+                                        <p className="text-gray-700 text-xl text-start mb-2">
                                             {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
 
                                         </p>
-                                        <p className="text-gray-700 text-xl text-center mb-4">
+                                        <p className="text-gray-700 text-xl text-start mb-4">
                                             {`For example, in the case of depression, the brain activity is decreased. With targeted rTMS, the activity in these areas increases.  `}
 
                                         </p>
@@ -408,7 +408,7 @@ const TmsMainPage = () => {
                                     <li className=' text-2xl'>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5 h-[400px] flex justify-center'>
-                                            <img alt="img"    className='h-full  object-cover ' src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <img alt="img"    className='h-full  object-cover ' src='/tmsPage/mindful_Boost Brain Activity.webp' />
                                         </div>
                                     </li>
                                     <li className='mb-5 text-2xl'>

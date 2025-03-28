@@ -103,7 +103,7 @@ const TmsMainPage = () => {
                             </h3>
                             <p className='text-gray-600 text-center'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                             <div className="py-5 md:h-[360px]">
-                                <Image alt="img"  width={500} height={500}  src="https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms4.png?updatedAt=1734526214526" className="object-cover h-full" />
+                                <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms.webp" className="object-cover h-full" />
                             </div>
                             <p className="text-gray-700 text-md text-center mb-2">
                                 {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
@@ -210,20 +210,20 @@ const TmsMainPage = () => {
                                     <li className=''>
                                         <strong>{`Coil Placement:`}</strong> {` A healthcare professional places the rTMS coil on your head, targeting the specific brain area based on your condition. `}
                                         <div className='py-5'>
-                                            <Image alt="img"  width={500} height={500} className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new10.png?updatedAt=1734526215048' />
+                                            <Image alt="img"  width={500} height={500} className='w-full' src='/tmsPage/mindful_Coil Placement.webp' />
                                         </div>
                                     </li>
 
                                     <li className=''>
                                         <strong>{`Stimulate Brain Cells:`}</strong>{` The magnetic pulses help activate or regulate the brain cells (neurons) in those regions where the coil is targeted `}
                                         <div className='py-5'>
-                                            <Image alt="img"  width={500} height={500}  src='https://ik.imagekit.io/mwpcmpi5v/rTMS%20Images/tms_new3.png?updatedAt=1734526214919' />
+                                            <Image alt="img"  width={500} height={500}  src='/tmsPage/mindful_Stimulate Brain Cells.webp' />
                                         </div>
                                     </li>
                                     <li className=''>
                                         <strong>{`Boost Brain Activity:`}</strong> {` For conditions like Major Depressive Disorder (MDD), some brain areas may be less active. The pulses help increase activity in these areas, improving your mood. `}
                                         <div className='py-5'>
-                                            <Image alt="img"  width={500} height={500}  src='https://mindfultms1.s3.amazonaws.com/Boost+Brain+Activity.png' />
+                                            <Image alt="img"  width={500} height={500}  src='/tmsPage/mindful_Boost Brain Activity.webp' />
                                         </div>
                                     </li>
                                     <li className='mb-5'>

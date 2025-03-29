@@ -7,7 +7,7 @@ const tests = [
     {
         title: "PHQ-9 Depression Test",
         link: "/assesment/phq9/test",
-        id: "phq9",
+        id: "depression",
         condition: "Depression",
         paragraph: `The PHQ-9 consists of 9 questions that ask about feelings of sadness, hopelessness, and loss of interest in activities, among other symptoms.
 
@@ -16,7 +16,7 @@ By answering these questions, you can gain insights into your depressive symptom
     {
         title: "PSS-10 Stress Assessment",
         link: "/assesment/pss10/test",
-        id: "pss10",
+        id: "stress",
         condition: "Stress",
         paragraph: `This test measures your perception of stress and how you handle life's challenges.
 
@@ -25,7 +25,7 @@ The PSS-10 consists of 10 questions that ask about your feelings and thoughts du
     {
         title: "GAD-7 Anxiety Test",
         link: "/assesment/gad7/test",
-        id: "gad7",
+        id: "anxiety",
         condition: "Anxiety",
         paragraph: `This questionnaire helps you evaluate the severity of your anxiety symptoms over the past two weeks.
 

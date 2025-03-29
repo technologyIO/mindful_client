@@ -9,19 +9,19 @@ const TakeAssessment = ({ allSection }) => {
             title: "Test for Depression",
             description: "This test helps evaluate the severity of depression symptoms.",
             action: "Take the PHQ-9 Test",
-            link:'/assesment/phq9/selfAssesment'
+            link:'/assesment/depression/selfAssesment'
         },
         {
             title: "Test for Anxiety",
             description: "This test helps evaluate the severity of anxiety symptoms.",
             action: "Take the GAD-7 Test",
-            link:'/assesment/gad7/selfAssesment'
+            link:'/assesment/anxiety/selfAssesment'
         },
         {
             title: "Test for Stress",
             description: "This test assesses how stressful you find your life situations.",
             action: "Take the PSS-10 Test",
-            link:'/assesment/pss10/selfAssesment'
+            link:'/assesment/stress/selfAssesment'
         }
     ]
     return (

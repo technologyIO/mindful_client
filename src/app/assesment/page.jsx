@@ -13,7 +13,7 @@ const AvailableTest = [
         title2: "Am I Depressed?",
         para: `This test helps evaluate the severity of depression symptoms.`,
         img: '/home/positive2.svg',
-        link:'/assesment/phq9/selfAssesment'
+        link:'/assesment/depression/selfAssesment'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const AvailableTest = [
         title2: "Do I have Anxiety?",
         para: `This test helps evaluate the severity of anxiety symptoms.`,
         img: '/home/positive3.svg',
-        link:'/assesment/gad7/selfAssesment'
+        link:'/assesment/anxiety/selfAssesment'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const AvailableTest = [
         title2: "How stressed am I?",
         para: `This test assesses how stressful you find your life situations.`,
         img: '/home/positive4.svg',
-        link:'/assesment/pss10/selfAssesment'
+        link:'/assesment/stress/selfAssesment'
     },
 
 ]

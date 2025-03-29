@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Slider from "react-slick";
-import { CircularProgress, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
+import { CircularProgress, Dialog, DialogContent, IconButton } from "@mui/material";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
-const staticTestimonials =[
+const staticTestimonials = [
     {
         "_id": "673bfab2226472f40171216d",
         "type": "text",
@@ -15,7 +15,6 @@ const staticTestimonials =[
             "_id": "66ffa1856a3f2ccdb194b61d",
             "name": "Dr. Shubham Narnoli",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp"
-       
         },
         "condition": "Stroke Rehabilitation",
         "treatment": "rTMS",
@@ -35,7 +34,6 @@ const staticTestimonials =[
             "_id": "66fe4d3a6a3f2ccdb194af4b",
             "name": "Ms. Shilpi Sharma",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png"
-        
         },
         "condition": "OCD",
         "treatment": "rTMS,Psychiatrist",
@@ -55,7 +53,6 @@ const staticTestimonials =[
             "_id": "66ffa28f6a3f2ccdb194b62a",
             "name": "Dr. Sandeep Govil",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp"
-        
         },
         "condition": "",
         "treatment": "Psychiatrist",
@@ -75,7 +72,6 @@ const staticTestimonials =[
             "_id": "66ffa2e86a3f2ccdb194b632",
             "name": "Dr. Abhishek",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302052754-abhishek.webp"
-       
         },
         "condition": "",
         "treatment": "Psychiatrist",
@@ -95,7 +91,6 @@ const staticTestimonials =[
             "_id": "66fbe61e7d61644c9bde4bd3",
             "name": "Ms. Navya Shree",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733301957224-navya.webp"
-       
         },
         "condition": "Anxiety,Depression",
         "treatment": "Therapy",
@@ -115,7 +110,6 @@ const staticTestimonials =[
             "_id": "66fe27b11941768d6b3e9fc3",
             "name": "Ms. Kavya K",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733301974170-kavya.webp"
-       
         },
         "condition": "",
         "treatment": "Therapy",
@@ -135,7 +129,6 @@ const staticTestimonials =[
             "_id": "6720e7e38de82da2acfe7a98",
             "name": "Ms. Sonali Das",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
-        
         },
         "condition": "Stress",
         "treatment": "Therapy",
@@ -155,7 +148,6 @@ const staticTestimonials =[
             "_id": "670e566cc8d65e9d976b745a",
             "name": "Ms. Geetha. S Patel",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302091489-geetha.webp"
-        
         },
         "condition": "Anxiety,Depression",
         "treatment": "Therapy",
@@ -175,7 +167,6 @@ const staticTestimonials =[
             "_id": "679762f728890b7ab66034ed",
             "name": "Ms. Maneena James",
             "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1737974501521-Dr.maneena%20%281%29.png"
-        
         },
         "condition": "Child Psychology",
         "treatment": "Therapy",
@@ -186,9 +177,9 @@ const staticTestimonials =[
         "__v": 0,
         "createdAt": "2025-01-27T13:03:52.715Z",
         "updatedAt": "2025-01-27T13:03:52.715Z"
-    },
-   
-]
+    }
+];
+
 export default function TestimonialComponentSlideV2({
     location,
     condition,
@@ -196,24 +187,62 @@ export default function TestimonialComponentSlideV2({
     setDisableSlide,
     mobileView,
     smallDevice,
-    doctor, 
+    doctor,
     experts
 }) {
-
-    const pathname = usePathname(); 
+    const pathname = usePathname();
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
     const [isQuoteModal, setisQuoteModal] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const sliderRef = useRef(null);
+
+    // Handle Escape key and mobile back button
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                setisQuoteModal(false);
+            }
+        };
+
+        const handlePopState = () => {
+            setisQuoteModal(false);
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("popstate", handlePopState);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("popstate", handlePopState);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isQuoteModal) {
+            // Push a new history state when the modal opens so that pressing back will close it.
+            window.history.pushState(null, "", window.location.href);
+        }
+    }, [isQuoteModal]);
+    useEffect(() => {
+        if (isQuoteModal) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+        // Clean up on unmount in case modal is still open
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [isQuoteModal]);
     // Fetch testimonials from the API
     const fetchTestimonials = async () => {
-        // if fetch on basis of doctors
         setLoading(true);
         let apiUrl = '';
         if (doctor) {
-            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`
-        }
-        else {
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`;
+        } else {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`;
         }
         try {
@@ -227,37 +256,57 @@ export default function TestimonialComponentSlideV2({
     };
 
     useEffect(() => {
-        // Check the current route and decide whether to use static testimonials or fetch from the API
-        if (["/","/testingpage/temppage"].includes(pathname) ) {
-          setTestimonials(staticTestimonials);
-        //   console.log(pathname)
-
-        //   console.log("hehe")
+        if (["/", "/testingpage/temppage"].includes(pathname)) {
+            setTestimonials(staticTestimonials);
         } else {
-          fetchTestimonials();
-        //   console.log(pathname)
-        //   console.log("hehesjdkfjs")
-
+            fetchTestimonials();
         }
-      }, [pathname, condition, location, doctor]);
+    }, [pathname, condition, location, doctor]);
 
-
-      useEffect(() => {
-        // Check the current route and decide whether to use static testimonials or fetch from the API
+    useEffect(() => {
         if (pathname === "/") {
-          setTestimonials(staticTestimonials);
-        } 
-      }, []);
+            setTestimonials(staticTestimonials);
+        }
+    }, []);
 
     if (loading) {
-        return <div className="flex justify-center h-full items-center min-h-[440px]"><CircularProgress /></div>;
+        return (
+            <div className="flex justify-center items-center min-h-[440px]">
+                <CircularProgress />
+            </div>
+        );
     } else if (testimonials.length === 0) {
         return (
-            <div className="flex justify-center h-full items-center">
+            <div className="flex justify-center items-center">
                 {/* <p>No testimonial found</p> */}
             </div>
-        )
+        );
     }
+
+    // Updated slider settings without autoplay and dots
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: mobileView ? 1 : 3,
+        slidesToScroll: smallDevice ? 1 : 3,
+        afterChange: (current) => setCurrentSlide(current),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
     // Custom Next Button
     const NextArrow = (props) => {
         const { onClick } = props;
@@ -266,7 +315,7 @@ export default function TestimonialComponentSlideV2({
                 onClick={onClick}
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] right-[-25px]" : "top-1/2 right-[-50px]"} `}
             >
-                <Image height={50} width={50} 
+                <Image height={50} width={50}
                     className="text-white cursor-pointer"
                     src="/icons/right arrow.svg"
                     alt="Next"
@@ -285,7 +334,7 @@ export default function TestimonialComponentSlideV2({
                 className={`absolute z-[2]  transform -translate-y-1/2  justify-center ${smallDevice ? "top-[50%] left-[-25px]" : "top-1/2 left-[-50px]"} `}
 
             >
-                <Image height={50} width={50} 
+                <Image height={50} width={50}
                     className="text-white cursor-pointer"
                     src="/icons/left arrow.svg"
                     alt="Previous"
@@ -294,260 +343,240 @@ export default function TestimonialComponentSlideV2({
         );
     };
 
-   console.log('small device ', smallDevice)
-   console.log('mobile view ', mobileView)
-
-    const settings = {
-        dots: smallDevice ? false : true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: mobileView ? 1 : 3,
-        autoplay: true, // Enable auto-slide
-        autoplaySpeed: 5000, // Slide every 5 seconds
-        slidesToScroll:  smallDevice ? 1 : 3,
-        customPaging: (i) => (
-            <div
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                background: "#FBA21B", // default dot color
-              }}
-            ></div>
-          ),
-          appendDots: (dots) => (
-            <div
-              style={{
-                marginTop: "20px",
-              }}
-            >
-              <ul
-                style={{
-                  margin: "0px",
-                  padding: "0px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                //   gap: "10px",
-                  listStyle: "none",
-                }}
-              >
-                {dots}
-              </ul>
-            </div>
-          ),
-        nextArrow: <NextArrow />, // Use the custom Next button
-        prevArrow: <PrevArrow />, // Use the custom Prev button
-        responsive: [
-            {
-                breakpoint: 1024, // Tablet
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 768, // Mobile
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    };
-
     const QuoteComponent = ({ testimonial, modalOpen, index }) => {
-        const {
-            title,
-            fullTestimonial,
-            patientName,
-            condition,
-            treatment,
-        } = testimonial;
+        const { title, fullTestimonial, patientName, condition, treatment } = testimonial;
         return (
             <>
-
-                <div className="    ">
-                    <div className="text-3xl text-gray-400 mt-3 mb-3  leading-none ">
-                        <Image height={50} width={50} 
-                            className="h-[24px] scale-x-[1] scale-y-[-1]"
-                            src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/quote.svg"
-                            alt="Quote"
-                        />
+                {/* Testimonial Card */}
+                <div className="bg-white shadow-md rounded-lg p-6 ">
+                    <div className="flex items-center mb-4">
+                        <div className="w-1 h-10 bg-orange-500 mr-4"></div>
+                        <span className="text-xl font-bold text-gray-800">{patientName}</span>
                     </div>
-                    <div className={`  ${modalOpen ? "" : "max-h-[115px] px-5"} overflow-hidden `}>
-                        {isQuoteModal ? <p className="text-gray-600  mx-3 text-base font-semibold ">
-                            {fullTestimonial}
-                        </p> :
-                            <span className="text-gray-600 text-justify text-base font-semibold ">
-                                <p>
-                                    {`${title}... `}
-                                    {/* {!isQuoteModal && <span onClick={() => {
-                                            setCurrentTestimonial(testimonial);
-                                            setisQuoteModal(true)
-                                        }} className="text-base  text-orange-500 cursor-pointer">Read_More</span>} */}
-                                </p>
+                    <div className="mb-5">
+                        <p className="text-gray-700 text-base font-medium line-clamp-3">
+                            {title}
+                        </p>
+                    </div>
+                    <div className="flex justify-center">
+                        <button
+                            onClick={() => {
+                                setCurrentTestimonial(testimonial);
+                                setisQuoteModal(true);
+                            }}
+                            className="text-sm font-semibold text-orange-500 uppercase hover:underline focus:outline-none"
+                        >
+                            Read More &#709;
+                        </button>
+                    </div>
 
+                    <div className="mt-4 bg-white p-6   ">
+                        <h3 className="text-sm font-semibold text-gray-900 mb-3">Treated By:</h3>
+                        <div className="flex items-center gap-4 mb-6">
+                            <Image
+                                src={testimonial?.doctor?.image}
+                                height={100}
+                                width={100}
+                                className="h-12 w-12 rounded-full object-cover"
+                                alt={testimonial?.doctor?.name}
+                            />
+                            <span className="text-sm font-semibold text-blue-700">
+                                {testimonial?.doctor?.name}
                             </span>
-                        }
-
-                    </div>
-                    {!isQuoteModal && <span onClick={() => {
-                        setCurrentTestimonial(testimonial);
-                        setisQuoteModal(true)
-                    }} className="text-base ml-6 text-orange-500 cursor-pointer">Read More</span>}
-                    {/* patient name */}
-                    <div className={`flex items-center mb-4 mt-3 ${modalOpen ? "" : "ml-6 "}`}>
-                        <div className="w-[2px] h-[30px] bg-primary-orange mr-3"></div>
-                        <div>
-                            <span className="text-[16px] font-semibold text-gray-700">{patientName}</span>
-                            {/* <p className="text-[12px] text-gray-500">Review on Google</p> */}
                         </div>
-                    </div>
-                </div>
-
-                {/* condition and treatmen */}
-
-                <div className={` ${isQuoteModal ? "grid grid-cols-2 " : "px-3"}`}>
-                    {treatment && <div className="mb-5">
-                        <h3 className={`text-base text-start font-semibold text-gray-900 `}>Treatment: </h3>
-                        <div className="mt-3 flex gap-3">
-                            {treatment
-                                ?.split(",") // Split the string into an array (use space, comma, or any delimiter)
-                                .map((treatment, index) => (
-                                    <div
-                                        key={index}
-                                        className="px-2 py-1 bg-green-100 text-green-800 rounded-full"
-                                    >
-                                        <span className="text-sm">{treatment}</span>
-                                    </div>
-                                ))}
-                        </div>
-                    </div>}
-                    {condition && <div className="">
-                        <h3 className="text-base text-start font-semibold text-gray-900">Condition: </h3>
-                        <div className="mt-3 flex gap-3">
-                            {condition
-                                ?.split(",") // Split the string into an array (use space, comma, or any delimiter)
-                                .map((condition, index) => (
-                                    <div
-                                        key={index}
-                                        className="px-2 py-1 bg-green-100 text-green-800 rounded-full"
-                                    >
-                                        <span className="text-sm">{condition}</span>
-                                    </div>
-                                ))}
-                        </div>
-                    </div>}
-                    {/* {smallDevice && <div className="mt-4">
-                        <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
-                        <div className="mt-3 flex gap-3">
-                                    <div
-                                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full"
-                                    >
-                                        <span className="text-sm">{testimonial?.doctor?.name}</span>
-                                    </div>
-                        </div>
-                    </div>} */}
-                    <div className="mt-4">
-                        <h3 className="text-base text-start font-semibold text-gray-900">Treated By: </h3>
-                        <div className="mt-3 flex gap-3">
-                            <Image src={testimonial?.doctor?.image} height={100} width={100} className="h-[44px] w-[44px] rounded-full " />
-                                    <div
-                                        className="px-2 py-1 flex gap-3 items-center bg-blue-100 text-blue-800 rounded-full"
-                                    >
-                                        <span className="text-sm">{testimonial?.doctor?.name}</span>
-                                    </div>
-                                    
-                        </div>
-                    </div>
-                </div>
-{/* 
-                {smallDevice &&
-                    <div>
-                    <h3 className="text-base text-start font-semibold text-gray-900">Condition: </h3>
-                    <div className=" flex mt-5">
-
-                        <h3 className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-lg">{testimonial?.doctor?.name}</h3>
-                    </div>
-                    
-                    </div>
-                    } */}
-            </>
-        )
-    }
-
-    return (
-        
-        <div className={`${mobileView ? "flex justify-center w-full" : ""}`}>
-            {smallDevice && <div className="mb-7 text-center text-3xl font-bold ">Testimonials</div>}
-            <div className={` rounded-lg   ${mobileView ? "w-[80%]" : "w-full"} p-4`}>
-                <Slider {...settings}>
-                    {testimonials.map((testimonial, index) => {
-                        const {
-                            title,
-                            fullTestimonial,
-                            patientName,
-                            condition,
-                            treatment,
-                        } = testimonial;
-
-                        return (
-                            <>
-                                <div key={index} className="px-2 ">
-                                    <div className="bg-gray-100 rounded-lg min-h-[440px] py-4 px-4">
-                                        {/* <div className="p-3 w-full text-center h-[75px] overflow-hidden rounded-t-md bg-primary-div">
-                                        <h2 className="text-lg font-medium text-gray-800">
-                                            {title || "No Title Available"}
-                                        </h2>
-                                    </div> */}
-                                        <div className="">
-                                            <QuoteComponent key={index} testimonial={testimonial} modalOpen={isQuoteModal} index={index} />
+                        {treatment && (
+                            <div className="mb-4">
+                                <h3 className="text-sm font-semibold text-gray-900">Treatment:</h3>
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                    {treatment.split(",").map((treat, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs"
+                                        >
+                                            {treat.trim()}
                                         </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        {condition && (
+                            <div>
+                                <h3 className="text-sm font-semibold text-gray-900">Condition:</h3>
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                    {condition.split(",").map((cond, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs"
+                                        >
+                                            {cond.trim()}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                {/* Expanded Modal Content */}
+
+
+            </>
+        );
+    };
+
+    const QuoteComponentModal = ({ testimonial, modalOpen, index }) => {
+        const { title, fullTestimonial, patientName, condition, treatment } = testimonial;
+        return (
+            <>
+                <div className="px-6 py-4">
+                    <div className="flex items-center mb-2">
+                        <div className="w-1 h-10 bg-orange-500 mr-4"></div>
+                        <span className="text-xl font-bold text-gray-800">{patientName}</span>
+                    </div>
+                    <div className="h-[500px] overflow-y-scroll no-scrollbar">
+                        <div className="mb-5">
+                            <p className="text-gray-700 text-sm font-medium">
+                                {fullTestimonial}
+                            </p>
+                        </div>
+                        <div className="mt-4 bg-white p-6">
+                            <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                                Treated By:
+                            </h3>
+                            <div className="flex items-center gap-4 mb-6">
+                                <Image
+                                    src={testimonial?.doctor?.image}
+                                    height={100}
+                                    width={100}
+                                    className="h-12 w-12 rounded-full object-cover"
+                                    alt={testimonial?.doctor?.name}
+                                />
+                                <span className="text-sm whitespace-nowrap font-semibold text-blue-700">
+                                    {testimonial?.doctor?.name}
+                                </span>
+                            </div>
+                            {treatment && (
+                                <div className="mb-4">
+                                    <h3 className="text-sm font-semibold text-gray-900">Treatment:</h3>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        {treatment.split(",").map((treat, idx) => (
+                                            <div
+                                                key={idx}
+                                                className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs"
+                                            >
+                                                {treat.trim()}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
+                            )}
+                            {condition && (
+                                <div>
+                                    <h3 className="text-sm font-semibold text-gray-900">Condition:</h3>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        {condition.split(",").map((cond, idx) => (
+                                            <div
+                                                key={idx}
+                                                className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs"
+                                            >
+                                                {cond.trim()}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    };
 
-                            </>
-                        );
-                    })}
+    return (
+        <div className={`${mobileView ? "flex justify-center " : ""}`}>
+            {smallDevice && <div className="mb-5 text-center text-3xl font-bold">Testimonials</div>}
+            {/* Added "overflow-hidden" here to prevent slider overflow */}
+            <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"} md:bg-white overflow-hidden`}>
+                <Slider ref={sliderRef} {...settings}>
+                    {testimonials.map((testimonial, index) => (
+                        <div key={index} className="px-2">
+                            <div className="rounded-lg md:min-h-[440px] px-4">
+                                <QuoteComponent key={index} testimonial={testimonial} modalOpen={false} index={index} />
+                            </div>
+                        </div>
+                    ))}
                 </Slider>
-                <Dialog
-                    open={isQuoteModal}
-                    onClose={() => {
-                        setisQuoteModal(false)
-                        //   setDisableSlide(false)
+                {/* Custom Navigation Controls */}
+                <div className="flex justify-center items-center">
+                    <button
+                        onClick={() => sliderRef.current.slickPrev()}
+                        className="px-4 py-2 transition"
+                    >
+                        <Image
+                            height={50}
+                            width={50}
+                            className="text-white cursor-pointer"
+                            src="/icons/left arrow.svg"
+                            alt="Previous"
+                        />
+                    </button>
+                    <span className="mx-4 text-sm font-semibold text-gray-700">
+                        {currentSlide + 1}/{testimonials.length}
+                    </span>
+                    <button
+                        onClick={() => sliderRef.current.slickNext()}
+                        className="px-4 py-2 transition"
+                    >
+                        <Image
+                            height={50}
+                            width={50}
+                            className="text-white cursor-pointer"
+                            src="/icons/right arrow.svg"
+                            alt="Next"
+                        />
+                    </button>
+                </div>
 
-                    }}
-                    BackdropProps={{
-                        style: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.94)', // Darker backdrop
-                        },
-                    }}
-                    PaperProps={{
-                        style: {
-                            borderRadius: '16px',  // Set the dialog corners to be 30px rounded
-                            overflow: 'hidden' // Ensure content doesn't overflow the edges
-                        }
-                    }}
-
-                    className="m-0 px-0"
-                >
-                    {/* <DialogTitle
-                    className="text-gray-800 font-semibold bg-primary-div text-lg rounded-t-xl p-2"
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                >
-                    <span className="px-8 max-w-[405px] truncate">{currentTestimonial?.title}</span>
-                    <IconButton onClick={() => {
-                        setisQuoteModal(false)
-                        // setDisableSlide(false)
-                    }}>
-                        <Image height={100} width={100}  className="w-[30px]" src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/close.svg?updatedAt=1733748343360" />
-                    </IconButton>
-                </DialogTitle> */}
-                    <DialogContent className="px-4 md:px-6">
-                        <QuoteComponent modalOpen={true} index={1} testimonial={currentTestimonial} />
-                    </DialogContent>
-                </Dialog>
+                {isQuoteModal && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50">
+                        {/* Backdrop */}
+                        <div
+                            className="absolute inset-0 bg-black opacity-75"
+                            onClick={() => setisQuoteModal(false)}
+                        ></div>
+                        {/* Modal Container with max height and scrolling */}
+                        <div className="relative bg-white rounded-lg shadow-xl mx-4 md:mx-0 overflow-hidden max-h-[90vh] overflow-y-auto">
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setisQuoteModal(false)}
+                                className="absolute top-6 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </button>
+                            {/* Modal Content */}
+                            <div className="p-4 md:p-6">
+                                <QuoteComponentModal
+                                    modalOpen={true}
+                                    index={1}
+                                    testimonial={currentTestimonial}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

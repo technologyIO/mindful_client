@@ -75,6 +75,15 @@ body {
   ;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 /* Other global styles */
 .martel-extralight { font-family: "Martel", serif; font-weight: 200; }
 .martel-light { font-family: "Martel", serif; font-weight: 300; }

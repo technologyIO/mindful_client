@@ -151,7 +151,19 @@ const NewAdsLandingPage = () => {
     },
   ]
 
-  
+  const symptoms = [
+    { src: "/Symptom Icons/Intrusive Thoughts.png", alt: "Intrusive Thoughts" },
+    { src: "/Symptom Icons/Repetitive Behaviors.png", alt: "Repetitive Behaviors (Compulsions)" },
+    { src: "/Symptom Icons/Need for Order and Symmetry.png", alt: "Need for Order and Symmetry" },
+    { src: "/Symptom Icons/Excessive Cleaning or Washing.png", alt: "Excessive Cleaning or Washing" },
+    { src: "/Symptom Icons/Checking Rituals.png", alt: "Checking Rituals" },
+    { src: "/Symptom Icons/Counting or Repeating.png", alt: "Counting or Repeating" },
+    { src: "/Symptom Icons/Arranging Items.png", alt: "Arranging Items" },
+    { src: "/Symptom Icons/Mental Compulsions.png", alt: "Mental Compulsions" },
+    { src: "/Symptom Icons/Avoidance of Triggers.png", alt: "Avoidance of Triggers" },
+  ];
+
+
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
     { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
@@ -160,9 +172,9 @@ const NewAdsLandingPage = () => {
     { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
     { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
     // { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
- 
-    
-]
+
+
+  ]
 
   const groupedExperts = experts.reduce((acc, expert) => {
     const category = expert.title.includes("Psychologist") ? "Clinical Psychologists" : "Psychiatrists";
@@ -174,7 +186,7 @@ const NewAdsLandingPage = () => {
 
   const Show_what_we_treat = () => {
     return (
-      <section className="bg-primary-div py-5">
+      <section className="bg-[#FDE4BB] py-5">
         <Container maxWidth="lg">
           {/* Heading */}
           <h2 className="mb-7 text-center text-3xl font-bold  text-gray-800">
@@ -185,7 +197,7 @@ const NewAdsLandingPage = () => {
             Our platform is built by psychiatrists, therapists, and mental
             health experts with immense global experience.
           </p> */}
-  
+
           {/* Grid of conditions */}
           <div className="grid grid-cols-3 gap-8 px-4 sm:grid-cols-2 md:grid-cols-4">
             {WhatWeTreat.map((condition) => (
@@ -208,7 +220,7 @@ const NewAdsLandingPage = () => {
               </div>
             ))}
           </div>
-  
+
           {/* Button at the bottom */}
           <div className="mt-10 flex items-center justify-center">
             <RequestAppointment
@@ -217,6 +229,66 @@ const NewAdsLandingPage = () => {
             />
           </div>
         </Container>
+      </section>
+    );
+  };
+
+
+  const SymptomsSection = () => {
+    const symptoms = [
+      { src: "/Symptom Icons/Intrusive Thoughts.png", alt: "Intrusive Thoughts" },
+      {
+        src: "/Symptom Icons/Repetitive Behaviors.png",
+        alt: "Repetitive Behaviors (Compulsions)",
+      },
+      { src: "/Symptom Icons/Need for Order and Symmetry.png", alt: "Need for Order and Symmetry" },
+      { src: "/Symptom Icons/Excessive Cleaning or Washing.png", alt: "Excessive Cleaning or Washing" },
+      { src: "/Symptom Icons/Checking Rituals.png", alt: "Checking Rituals" },
+      { src: "/Symptom Icons/Counting or Repeating.png", alt: "Counting or Repeating" },
+      { src: "/Symptom Icons/Arranging Items.png", alt: "Arranging Items" },
+      { src: "/Symptom Icons/Mental Compulsions.png", alt: "Mental Compulsions" },
+      { src: "/Symptom Icons/Avoidance of Triggers.png", alt: "Avoidance of Triggers" },
+    ];
+
+    return (
+      <section className=" py-12">
+        <div className="mx-auto max-w-7xl px-4">
+          {/* Heading */}
+          <h2 className="mb-4 text-center text-3xl font-bold ">
+            Are you experiencing any of the following symptoms?
+          </h2>
+
+
+          {/* Grid of Symptoms */}
+          <div className="grid grid-cols-3  md:gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {symptoms.map((symptom, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center rounded-lg bg-white p-3 text-center  transition-transform duration-200  "
+              >
+                <Image
+                  src={symptom.src}
+                  alt={symptom.alt}
+                  width={100}
+                  height={100}
+                  className="mb-4 h-[80px] w-auto object-contain"
+                />
+                <span className="text-sm font-medium text-gray-700">{symptom.alt}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="mb-4 mt-8 text-center text-base font-semibold text-gray-600">
+            If you are feeling any of these symptoms, you may benefit from talking to someone.
+          </p>
+          {/* Call-to-action Button */}
+          <div className=" flex items-center justify-center">
+            <RequestAppointment
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
+        </div>
       </section>
     );
   };
@@ -250,19 +322,19 @@ const NewAdsLandingPage = () => {
                 <span className="font-semibold">We help with:</span> <br />
                 Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia | and more.
               </p>
-              <div className="mt-10 flex items-center justify-center">
-            <RequestAppointment
-              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-              name="Book a Consultation"
-            />
-          </div>
+              <div className="mt-6 flex items-center justify-center">
+                <RequestAppointment
+                  customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+                  name="Book a Consultation"
+                />
+              </div>
             </div>
           </div>
         </section>
       </Container>
 
       {/* expert */}
-      <section className="py-8 px-4 bg-primary-div">
+      <section className="py-8 px-4 bg-[#FDE4BB]">
         <div className="mb-3 flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold text-gray-800 text-center">Our Experts</h1>
         </div>
@@ -349,142 +421,34 @@ const NewAdsLandingPage = () => {
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center">
-            <RequestAppointment
-              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-              name="Book a Consultation"
-            />
-          </div>
+          <RequestAppointment
+            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+            name="Book a Consultation"
+          />
+        </div>
       </section>
 
 
       {/* client speaks */}
-      <section className='py-5 px-4 '>
-    
+      <section className='py-5 px-1 bg-gray-100 '>
+
         <TestimonialComponentSlideV2 smallDevice={true} experts={experts} />
 
       </section>
 
       <div>
-      <Show_what_we_treat/>
+        <Show_what_we_treat />
       </div>
-    
+
+      <div>
+        <SymptomsSection />
+      </div>
 
 
 
-      <section className="bg-white py-16">
-        <Container maxWidth="lg">
-          <div className=" mx-auto px-4">
-            {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2">
-              What are you struggling with?
-            </h2>
-            <p className="text-center text-gray-600 mb-8">
-              Amaha is here to support you with your mental health needs.
-            </p>
 
-            {/* Conditions Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {conditions.map((condition) => (
-                <div
-                  key={condition.id}
-                  className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"
-                >
-                  <div className="mb-4">
-                    <condition.icon className="w-10 h-10 text-orange-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    {condition.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{condition.description}</p>
-                  <a
-                    href="#"
-                    className="text-orange-600 font-medium hover:underline"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              ))}
-            </div>
 
-            {/* View More Conditions */}
-            <div className="text-center mt-8">
-              <a
-                href="#"
-                className="text-orange-600 font-medium hover:underline uppercase text-sm"
-              >
-                View More Conditions
-              </a>
-            </div>
 
-            {/* Additional Info */}
-            <p className="text-center text-gray-600 mt-10 max-w-2xl mx-auto">
-              We specialize in treating a wide range of mental health concerns.
-              Get in touch to know more.
-            </p>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4 mt-6">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded">
-                Consult a Coach for Free
-              </button>
-              <button className="bg-white border border-orange-500 hover:bg-orange-50 text-orange-500 font-semibold py-2 px-4 rounded">
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 bg-primary">
-        <Container maxWidth="lg">
-          <div className=" mx-auto px-4">
-            {/* Section Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-              Our mental healthcare offerings
-            </h2>
-            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-              We are a mental health ecosystem that brings together multiple treatment solutions
-              to create an experience that makes getting help easy and accessible.
-              From assessments to treatments, we’ll stay with you every step of the way.
-            </p>
-
-            {/* Offerings List */}
-            <div className="space-y-12">
-              {offerings.map((offering, index) => (
-                <div
-                  key={offering.id}
-                  className={`
-                flex flex-col md:flex-row items-center justify-center md:items-start gap-6
-                ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}
-              `}
-                  style={{ alignItems: "center" }}
-                >
-                  {/* Image */}
-                  <div className="md:w-1/2">
-                    <img
-                      src={offering.imageUrl}
-                      alt={offering.title}
-                      className="w-full h-[300px] rounded "
-                    />
-                  </div>
-
-                  {/* Text */}
-                  <div className="md:w-1/2">
-                    <h3 className="text-2xl font-semibold mb-2">{offering.title}</h3>
-                    <p className="text-gray-600 mb-4">{offering.description}</p>
-                    <a
-                      href={offering.linkUrl}
-                      className="text-orange-600 font-medium hover:underline"
-                    >
-                      {offering.linkText}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
     </>
   )
 }

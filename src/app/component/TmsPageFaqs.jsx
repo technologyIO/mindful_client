@@ -147,6 +147,56 @@ const allTest = [
         </div>`
     },
     {
+        _id: 46,
+        name: "For which conditions does rTMS help?",
+        icon: "/iconsNew2/rls.png",
+        detail: `<div class="text-gray-700 text-sm md:text-lg space-y-6">
+  <!-- Psychological Conditions -->
+  <div>
+    <h2 class="font-semibold text-lg mb-2">Psychological Conditions</h2>
+    <ol class="list-decimal pl-6 space-y-1">
+      <li>Major Depressive Disorder (MDD)</li>
+      <li>Treatment-Resistant Depression</li>
+      <li>Obsessive-Compulsive Disorder (OCD)</li>
+      <li>Generalized Anxiety Disorder (GAD)</li>
+      <li>Post-Traumatic Stress Disorder (PTSD)</li>
+      <li>Bipolar Disorder (Depressive Episodes)</li>
+      <li>Schizophrenia (Auditory Hallucinations)</li>
+      <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
+      <li>Social Anxiety Disorder</li>
+      <li>Anorexia Nervosa and Other Eating Disorders</li>
+      <li>Addiction (Substance Use Disorders)</li>
+      <li>Autism Spectrum Disorder (ASD)</li>
+    </ol>
+  </div>
+
+  <!-- Neurological Conditions -->
+  <div>
+    <h2 class="font-semibold text-lg mb-2">Neurological Conditions</h2>
+    <ol class="list-decimal pl-6 space-y-1">
+      <li>Migraine with Aura</li>
+      <li>Chronic Pain</li>
+      <li>Tinnitus</li>
+      <li>Parkinson’s Disease</li>
+      <li>Stroke Rehabilitation</li>
+      <li>Alzheimer’s Disease and Other Dementias</li>
+      <li>Traumatic Brain Injury (TBI)</li>
+      <li>Multiple Sclerosis (MS)</li>
+      <li>Huntington’s Disease</li>
+      <li>Tourette’s Syndrome</li>
+      <li>Restless Legs Syndrome (RLS)</li>
+    </ol>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm md:text-lg italic">
+    While some treatments with specific machines are FDA approved, treatments for some conditions are still under investigation/clinical research. However, these have shown positive results.
+  </p>
+</div>
+
+        `
+    },
+    {
         _id: 2,
         name: "Will rTMS help treatment-resistant depression?",
         icon: "/iconsNew2/assessment.png",
@@ -157,6 +207,7 @@ const allTest = [
             </p>
         </div>`
     },
+    
     {
         _id: 3,
         name: "Is rTMS used only for treating depression?",
@@ -917,56 +968,7 @@ const allTest = [
         </div>
         `
     },
-    {
-        _id: 46,
-        name: "For which conditions does rTMS help?",
-        icon: "/iconsNew2/rls.png",
-        detail: `<div class="text-gray-700 text-sm md:text-lg space-y-6">
-  <!-- Psychological Conditions -->
-  <div>
-    <h2 class="font-semibold text-lg mb-2">Psychological Conditions</h2>
-    <ol class="list-decimal pl-6 space-y-1">
-      <li>Major Depressive Disorder (MDD)</li>
-      <li>Treatment-Resistant Depression</li>
-      <li>Obsessive-Compulsive Disorder (OCD)</li>
-      <li>Generalized Anxiety Disorder (GAD)</li>
-      <li>Post-Traumatic Stress Disorder (PTSD)</li>
-      <li>Bipolar Disorder (Depressive Episodes)</li>
-      <li>Schizophrenia (Auditory Hallucinations)</li>
-      <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
-      <li>Social Anxiety Disorder</li>
-      <li>Anorexia Nervosa and Other Eating Disorders</li>
-      <li>Addiction (Substance Use Disorders)</li>
-      <li>Autism Spectrum Disorder (ASD)</li>
-    </ol>
-  </div>
-
-  <!-- Neurological Conditions -->
-  <div>
-    <h2 class="font-semibold text-lg mb-2">Neurological Conditions</h2>
-    <ol class="list-decimal pl-6 space-y-1">
-      <li>Migraine with Aura</li>
-      <li>Chronic Pain</li>
-      <li>Tinnitus</li>
-      <li>Parkinson’s Disease</li>
-      <li>Stroke Rehabilitation</li>
-      <li>Alzheimer’s Disease and Other Dementias</li>
-      <li>Traumatic Brain Injury (TBI)</li>
-      <li>Multiple Sclerosis (MS)</li>
-      <li>Huntington’s Disease</li>
-      <li>Tourette’s Syndrome</li>
-      <li>Restless Legs Syndrome (RLS)</li>
-    </ol>
-  </div>
-
-  <!-- Note -->
-  <p class="text-sm md:text-lg italic">
-    While some treatments with specific machines are FDA approved, treatments for some conditions are still under investigation/clinical research. However, these have shown positive results.
-  </p>
-</div>
-
-        `
-    }
+   
 
 ];
 

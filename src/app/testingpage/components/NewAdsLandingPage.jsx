@@ -296,11 +296,11 @@ const NewAdsLandingPage = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <section className="bg-white py-6 sm:py-24">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+        <section className="bg-white py-8 sm:py-24">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-              <div className="relative w-full h-[180px] md:h-[500px] md:w-[500px] overflow-hidden rounded-xl md:rounded-full shadow-lg">
+              <div className="relative w-[250px] sm:w-[300px] md:w-[500px] h-[250px] sm:h-[300px] md:h-[500px] overflow-hidden rounded-xl md:rounded-full shadow-lg">
                 <Image
                   src="https://mindfultms.in/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2F1733372630195-illustration_20_281_29.webp%3FupdatedAt%3D1733819155146&w=1200&q=75"
                   alt="Illustration of a woman looking upwards, symbolizing hope and guidance"
@@ -311,18 +311,19 @@ const NewAdsLandingPage = () => {
             </div>
 
             {/* Text Section */}
-            <div className="w-full md:w-1/2 text-left mt-8 md:mt-0 order-2 md:order-1">
-              <h1 className="text-2xl md:text-5xl font-bold mb-4 tracking-wide">
+            <div className="w-full md:w-1/2 text-left order-2 md:order-1">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4 tracking-wide">
                 Looking for an Experienced Psychiatrist?
               </h1>
-              <p className="text-gray-700 md:text-lg mb-4">
+              <p className="text-gray-700 text-base md:text-lg mb-4">
                 Get individualized care from dedicated psychiatrists committed to improving your quality of life.
               </p>
               <p className="text-gray-700 mb-6">
-                <span className="font-semibold">We help with:</span> <br />
+                <span className="font-semibold">We help with:</span>
+                <br />
                 Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia | and more.
               </p>
-              <div className="mt-6 flex items-center justify-center">
+              <div className="mt-6 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
                   name="Book a Consultation"
@@ -333,93 +334,107 @@ const NewAdsLandingPage = () => {
         </section>
       </Container>
 
+
       {/* expert */}
       <section className="py-8 px-4 bg-[#FDE4BB]">
-        <div className="mb-3 flex flex-col justify-center items-center">
-          <h1 className="text-3xl font-bold text-gray-800 text-center">Our Experts</h1>
+        <div className="mb-6 flex flex-col justify-center items-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center">Our Experts</h1>
         </div>
-        <div>
-          <h2 className="text-xl font-semibold text-gray-700 text-center my-4">Psychiatrists</h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 text-center md:flex md:justify-center">
-            <a className="flex flex-col items-center" href="/doctor/66ffa28f6a3f2ccdb194b62a">
-              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
-                <img
-                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
-                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp"
-                  alt="Dr. Sandeep Govil"
-                  style={{ objectPosition: "center top" }}
-                />
-              </div>
-              <div className="mb-1">
-                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Dr. Sandeep Govil
-                </p>
-                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Psychiatrist
-                </p>
-              </div>
-            </a>
-            <a className="flex flex-col items-center" href="/doctor/66ffa1856a3f2ccdb194b61d">
-              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
-                <img
-                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
-                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp"
-                  alt="Dr. Shubham Narnoli"
-                  style={{ objectPosition: "center top" }}
-                />
-              </div>
-              <div className="mb-1">
-                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Dr. Shubham Narnoli
-                </p>
-                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Psychiatrist
-                </p>
-              </div>
-            </a>
+
+        {/* On mobile, sections stack; on md+ they appear side-by-side */}
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Left Column: Psychologists */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-700 text-center my-4">
+              Psychologists
+            </h2>
+            <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 justify-items-center">
+              <a className="flex flex-col items-center" href="/doctor/6720e7e38de82da2acfe7a98">
+                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
+                  <img
+                    className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                    src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
+                    alt="Ms. Sonali Das"
+                    style={{ objectPosition: "center top" }}
+                  />
+                </div>
+                <div className="mb-1 text-center">
+                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Ms. Sonali Das
+                  </p>
+                  <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Clinical Psychologist
+                  </p>
+                </div>
+              </a>
+              <a className="flex flex-col items-center" href="/doctor/66fe4d3a6a3f2ccdb194af4b">
+                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
+                  <img
+                    className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                    src="https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png"
+                    alt="Ms. Shilpi Sharma"
+                    style={{ objectPosition: "center top" }}
+                  />
+                </div>
+                <div className="mb-1 text-center">
+                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Ms. Shilpi Sharma
+                  </p>
+                  <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Counselling Psychologist
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column: Psychiatrists */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-700 text-center my-4">
+              Psychiatrists
+            </h2>
+            <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 justify-items-center">
+              <a className="flex flex-col items-center" href="/doctor/66ffa28f6a3f2ccdb194b62a">
+                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
+                  <img
+                    className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                    src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp"
+                    alt="Dr. Sandeep Govil"
+                    style={{ objectPosition: "center top" }}
+                  />
+                </div>
+                <div className="mb-1 text-center">
+                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Dr. Sandeep Govil
+                  </p>
+                  <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Psychiatrist
+                  </p>
+                </div>
+              </a>
+              <a className="flex flex-col items-center" href="/doctor/66ffa1856a3f2ccdb194b61d">
+                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
+                  <img
+                    className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                    src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp"
+                    alt="Dr. Shubham Narnoli"
+                    style={{ objectPosition: "center top" }}
+                  />
+                </div>
+                <div className="mb-1 text-center">
+                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Dr. Shubham Narnoli
+                  </p>
+                  <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
+                    Psychiatrist
+                  </p>
+                </div>
+              </a>
+
+            </div>
           </div>
         </div>
-        <div>
-          <h2 className="text-xl font-semibold text-gray-700 text-center my-4">Clinical Psychologists</h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-x-10 text-center md:flex md:justify-center">
-            <a className="flex flex-col items-center" href="/doctor/6720e7e38de82da2acfe7a98">
-              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
-                <img
-                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
-                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
-                  alt="Ms. Sonali Das"
-                  style={{ objectPosition: "center top" }}
-                />
-              </div>
-              <div className="mb-1">
-                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Ms. Sonali Das
-                </p>
-                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Clinical Psychologist
-                </p>
-              </div>
-            </a>
-            <a className="flex flex-col items-center" href="/doctor/66fe4d3a6a3f2ccdb194af4b">
-              <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] flex flex-col items-center">
-                <img
-                  className="h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px] object-cover border-[3px] border-orange-400 rounded-full"
-                  src="https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png"
-                  alt="Ms. Shilpi Sharma"
-                  style={{ objectPosition: "center top" }}
-                />
-              </div>
-              <div className="mb-1">
-                <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Ms. Shilpi Sharma
-                </p>
-                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                  Counselling Psychologist
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
+
         <div className="mt-10 flex items-center justify-center">
           <RequestAppointment
             customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
@@ -427,6 +442,7 @@ const NewAdsLandingPage = () => {
           />
         </div>
       </section>
+
 
 
       {/* client speaks */}
@@ -443,6 +459,75 @@ const NewAdsLandingPage = () => {
       <div>
         <SymptomsSection />
       </div>
+
+      {/* why mindfultms section */}
+      <section className="py-8 bg-primary-div">
+        <Container maxWidth="lg">
+          <h2 className="mb-6 text-center text-3xl md:text-3xl font-bold text-orange-500">
+            Why MindfulTMS?
+          </h2>
+          <div className=" mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Image Section */}
+              <div className="flex justify-center">
+                <img
+                  src="/ads/ads2/Delhi3.webp"
+                  alt="MindfulTMS clinic"
+                  className="h-[300px] md:h-[350px] w-full object-cover rounded-xl"
+                />
+              </div>
+              {/* Content Section */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    A  safe and supportive space
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    Confidential and Supportive Environment:
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    Experienced Clinical Team:
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Our clinicians are trained to assess, diagnose, and provide the right therapy for you.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div className="flex items-center justify-center mt-8">
+              {/* Uncomment and adjust the RequestAppointment component as needed */}
+              {/*
+      <RequestAppointment 
+        iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} 
+        customStyle="flex items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10" 
+        name="Request an Appointment" 
+      />
+      */}
+            </div>
+
+            <div className=" flex items-center justify-center">
+              <RequestAppointment
+                customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+                name="Book a Consultation"
+              />
+            </div>
+          </div>
+        </Container>
+
+
+      </section>
+
 
 
 

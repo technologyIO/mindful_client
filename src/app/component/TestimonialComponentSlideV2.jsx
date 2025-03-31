@@ -496,7 +496,7 @@ export default function TestimonialComponentSlideV2({
         <div className={`${mobileView ? "flex justify-center " : ""}`}>
             {smallDevice && <div className="mb-5 text-center text-3xl font-bold">Testimonials</div>}
             {/* Added "overflow-hidden" here to prevent slider overflow */}
-            <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"} md:bg-white overflow-hidden`}>
+            <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"}  overflow-hidden`}>
                 <Slider ref={sliderRef} {...settings}>
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="px-2">

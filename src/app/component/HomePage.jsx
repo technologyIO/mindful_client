@@ -445,6 +445,7 @@ const HomePage = ({ allSection }) => {
                 </section>
                 {/* services */}
                 <section className="py-8 bg-primary-div rounded-lg">
+                    <Container maxWidth="lg">
                     <div className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root">
                         <div className="mb-3">
                             <div className="mb-3 py-3">
@@ -484,7 +485,7 @@ const HomePage = ({ allSection }) => {
                                         </div>
                                         <p className="text-xl text-center font-semibold">Psychiatrists</p>
                                     </a>
-                                    <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/assesment">
+                                    <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/clinicalAssessment">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
                                                 alt="MindfulTMS - Advanced rTMS Therapy Assessments"
@@ -520,6 +521,7 @@ const HomePage = ({ allSection }) => {
                             </div>
                         </div>
                     </div>
+                    </Container>
                 </section>
 
 

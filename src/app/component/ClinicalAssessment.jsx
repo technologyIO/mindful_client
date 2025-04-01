@@ -15,7 +15,7 @@ const ClinicalAssessment = () => {
                     </div>
 
                     <div className="flex justify-center md:justify-start mb-5">
-                        <RequestAppointment name="Get in Touch" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                        <RequestAppointment name="Get a Professional Assessment" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                     </div>
 
                     {/* Image Section */}
@@ -74,7 +74,7 @@ const ClinicalAssessment = () => {
                     </div>
 
                     <div className="flex justify-center  mb-6">
-                        <RequestAppointment name="Get in Touch" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                        <RequestAppointment name="Get a Professional Assessment" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                     </div>
 
                     {/* Image Section */}

@@ -300,7 +300,7 @@ const NewAdsLandingPage = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-              <div className="relative w-[250px] sm:w-[300px] md:w-[500px] h-[250px] sm:h-[300px] md:h-[500px] overflow-hidden rounded-xl md:rounded-full shadow-lg">
+              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[500px] overflow-hidden rounded-xl md:rounded-full shadow-lg">
                 <Image
                   src="https://mindfultms.in/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2F1733372630195-illustration_20_281_29.webp%3FupdatedAt%3D1733819155146&w=1200&q=75"
                   alt="Illustration of a woman looking upwards, symbolizing hope and guidance"
@@ -333,7 +333,6 @@ const NewAdsLandingPage = () => {
           </div>
         </section>
       </Container>
-
 
       {/* expert */}
       <section className="py-8 px-4 bg-[#FDE4BB]">
@@ -443,8 +442,6 @@ const NewAdsLandingPage = () => {
         </div>
       </section>
 
-
-
       {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
 
@@ -528,6 +525,74 @@ const NewAdsLandingPage = () => {
 
       </section>
 
+
+      {/* why mindfultms section */}
+      <section className="py-8 ">
+        <Container maxWidth="lg">
+          <h2 className="mb-6 text-center text-3xl md:text-3xl font-bold text-orange-500">
+            Our Location 
+          </h2>
+          <div className=" mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Image Section */}
+              <div className="flex justify-center">
+                <img
+                  src="/ads/ads2/Delhi3.webp"
+                  alt="MindfulTMS clinic"
+                  className="h-[300px] md:h-[350px] w-full object-cover rounded-xl"
+                />
+              </div>
+              {/* Content Section */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    A  safe and supportive space
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    Confidential and Supportive Environment:
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
+                    Experienced Clinical Team:
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Our clinicians are trained to assess, diagnose, and provide the right therapy for you.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div className="flex items-center justify-center mt-8">
+              {/* Uncomment and adjust the RequestAppointment component as needed */}
+              {/*
+      <RequestAppointment 
+        iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} 
+        customStyle="flex items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10" 
+        name="Request an Appointment" 
+      />
+      */}
+            </div>
+
+            <div className=" flex items-center justify-center">
+              <RequestAppointment
+                customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+                name="Book a Consultation"
+              />
+            </div>
+          </div>
+        </Container>
+
+
+      </section>
 
 
 

@@ -166,7 +166,7 @@ const Test = () => {
 
   return (
     <Container maxWidth="lg">
-      <div className="flex items-center p-6">
+      <div className="flex items-center py-6">
         <div className="mr-4 cursor-pointer" onClick={() => router.back()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -185,8 +185,8 @@ const Test = () => {
         <h1 className="text-2xl font-bold">{test.title}</h1>
       </div>
 
-      <div className="p-4 mx-auto space-y-8">
-        <h2 className="font-semibold mb-4 text-primary-orange text-xl text-center">
+      <div className="p-4 space-y-4 ">
+        <h2 className="font-semibold mb-4 text-black text-xl text-center">
           Please select the answer that is applicable to you
         </h2>
 
@@ -195,8 +195,8 @@ const Test = () => {
             key={question._id}
             className="bg-white rounded-lg shadow p-6 space-y-4 border border-gray-100"
           >
-            <p className="text-lg font-semibold">
-              {index + 1}. {question.questionText}
+            <p className="text-xl font-semibold">
+              {index + 1}. {question.questionText} ?
             </p>
             <div className="flex flex-col md:flex-row gap-4">
               {question.choices.map((choice, choiceIndex) => {
@@ -206,10 +206,10 @@ const Test = () => {
                     type="button"
                     key={choiceIndex}
                     onClick={() => handleAnswerChange(question._id, choiceIndex)}
-                    className={`w-full md:w-auto py-2 px-4 rounded border transition duration-200 whitespace-normal ${
+                    className={`w-full md:w-auto py-2 px-4 rounded border-2 font-bold text-base transition duration-200 whitespace-normal ${
                       isSelected
-                        ? "bg-primary-orange border-primary-orange text-white"
-                        : "bg-gray-100 border-gray-300 text-gray-800 hover:bg-gray-200"
+                        ? "bg-primary-orange border-primary-orange text-white hover:bg-orange-600 active:bg-orange-700"
+                        : "bg-white border-orange-500 text-orange-500 hover:bg-orange-200"
                     }`}
                   >
                     {choice}
@@ -239,12 +239,12 @@ const Test = () => {
               className="bg-white p-6 rounded-lg shadow-lg mx-4 w-full max-w-lg"
               onClick={(e) => e.stopPropagation()}
             >
-              <div style={{ width: "100%", height: "500px" }}>
+              <div style={{ width: "100%", minHeight: "80vh" }}>
                 <iframe
                   aria-label="Self-Assessment Test"
                   frameBorder="0"
                   style={{
-                    height: "100%",
+                    height: "80vh",
                     width: "100%",
                     border: "none",
                   }}

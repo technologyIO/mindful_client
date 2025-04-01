@@ -122,25 +122,6 @@ const staticTestimonials = [
         "updatedAt": "2024-11-19T02:40:50.367Z"
     },
     {
-        "_id": "6749abf2b79f03dabd462229",
-        "type": "text",
-        "patientName": "Anonymous",
-        "doctor": {
-            "_id": "6720e7e38de82da2acfe7a98",
-            "name": "Ms. Sonali Das",
-            "image": "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp"
-        },
-        "condition": "Stress",
-        "treatment": "Therapy",
-        "location": "New Delhi - Greater Kailash 1",
-        "title": "Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
-        "shortQuote": "Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
-        "fullTestimonial": "The session was good and comforting. Dr. Sonali listened to me peacefully and discussed about all the possible root causes. It was a good session.",
-        "__v": 0,
-        "createdAt": "2024-11-29T11:56:34.450Z",
-        "updatedAt": "2024-11-29T11:56:34.450Z"
-    },
-    {
         "_id": "674a8aefb79f03dabd4631d7",
         "type": "text",
         "patientName": "Anonymous",

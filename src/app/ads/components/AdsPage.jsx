@@ -1,31 +1,18 @@
 
 "use client"
-import OurDoctorSection from '@/app/clinicLocation/[city]/OurDoctorSection'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
-import ClinicLocationDoctors from '@/app/component/ClinicLocationDoctors'
-import CounterComponent from '@/app/component/CounterComponent'
-import TestimonialComponent from '@/app/component/TestimonialComponent'
-import { HomePageSections as allSection } from '@/example'
-import Image from 'next/image'
-import Link from 'next/link'
-import AdsExperts from '../../component/AdsExperts'
+
 import AdsCombinePage from '../components/AdsCombinePage'
 import { Container } from '@mui/material'
-import ZohoForm from '@/app/component/ZohoForm'
-import ContactForm from './ContactForm'
-import { useRouter } from 'next/navigation'
+
 import { useEffect, useState } from 'react'
-// import { useSearchParams } from 'next/navigation'
 import { adsPageContent } from '@/adsPageContent'
 export default function AdsPage({ params }) {
     const [queryString, setQueryString] = useState("");
     const condition = params.condition == "general" ? "" : params.condition || ""
     const current_condition = params.condition
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
-    // const router = useRouter(); // Get the router object
-    // const { query } = router;  // Access the query parameters from the URL
 
-    // const utm = query.utm_term;
     const upperCaseCondition = ['ocd']
     // for zoho
     const iframeSrc =
@@ -77,8 +64,8 @@ export default function AdsPage({ params }) {
         { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
         { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
         { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
-     
-        
+
+
     ]
 
     // const conditions = [
@@ -233,8 +220,8 @@ export default function AdsPage({ params }) {
 
 
                     {/* What We Treat */}
-                    {!condition &&<div className='bg-primary-div'>
-                        <Show_what_we_treat/></div>}
+                    {!condition && <div className='bg-primary-div'>
+                        <Show_what_we_treat /></div>}
 
                     {/* Symptoms */}
                     {condition && <ShowSymptoms category={cleanCondition} />}
@@ -376,7 +363,7 @@ export default function AdsPage({ params }) {
                     {/* Symptoms */}
                     {condition && <ShowSymptoms category={cleanCondition} />}
                     {/* What We Treat */}
-                    {!cleanCondition && <Show_what_we_treat/>}
+                    {!cleanCondition && <Show_what_we_treat />}
 
                     <div className='bg-primary-div py-5'>
                         <AdsCombinePage iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} condition={cleanCondition} expertText={expertText} location={location} />
@@ -466,43 +453,43 @@ export default function AdsPage({ params }) {
         )
     }
 
-    const Show_what_we_treat= ()=>{
+    const Show_what_we_treat = () => {
         return (
             <>
                 <section className=" mx-auto py-6 flex justify-center items-center min-h-[250px]">
-                        <Container maxWidth="lg">
-                            <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
-                            <div className="flex flex-wrap justify-center gap-6 px-4">
-                                {conditions.map((condition) => (
-                                    <div
-                                        key={condition.name}
-                                        className="rounded-xl  transition-all duration-300 "
-                                    >
-                                        <div className="flex items-center gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-2 rounded-full bg-orange-500">
+                    <Container maxWidth="lg">
+                        <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
+                        <div className="flex flex-wrap justify-center gap-6 px-4">
+                            {conditions.map((condition) => (
+                                <div
+                                    key={condition.name}
+                                    className="rounded-xl  transition-all duration-300 "
+                                >
+                                    <div className="flex items-center gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-2 rounded-full bg-orange-500">
                                         {/* <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200"> */}
-                                            <img
-                                                src={condition.image}
-                                                alt={condition.name}
-                                                width={40}
-                                                height={40}
-                                                className=" h-[25px] w-[25px] md:h-[30px] md:w-[30px] object-contain"
-                                            />
-                                            <p className=" text-sm md:text-base  font-semibold text-white">{condition.name}</p>
-                                        </div>
+                                        <img
+                                            src={condition.image}
+                                            alt={condition.name}
+                                            width={40}
+                                            height={40}
+                                            className=" h-[25px] w-[25px] md:h-[30px] md:w-[30px] object-contain"
+                                        />
+                                        <p className=" text-sm md:text-base  font-semibold text-white">{condition.name}</p>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
+                        </div>
 
-                            <div className='flex items-center justify-center mt-11'>
-                                {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" /> */}
-                                {/* new button below */}
-                                <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white font-bold rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200 focus:ring focus:ring-orange-500 mx-10 hover:scale-105 hover:shadow-lg"} name="Book a Consultation" />
+                        <div className='flex items-center justify-center mt-11'>
+                            {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" /> */}
+                            {/* new button below */}
+                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white font-bold rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200 focus:ring focus:ring-orange-500 mx-10 hover:scale-105 hover:shadow-lg"} name="Book a Consultation" />
 
-                                {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" /> */}
+                            {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" /> */}
 
-                            </div>
-                        </Container>
-                    </section>
+                        </div>
+                    </Container>
+                </section>
             </>
         )
     }

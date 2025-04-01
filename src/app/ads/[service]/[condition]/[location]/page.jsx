@@ -1,5 +1,6 @@
 import React from 'react'
 import AdsPage from '../../../components/AdsPage'
+import AdsPage2 from '../../../components/AdsPage2';
 
 export async function generateMetadata({params}) {
 
@@ -16,7 +17,10 @@ Whether you're facing stress, seeking personal growth, or need someone to talk t
 
 const page = ({params}) => {
   return (
-    <AdsPage params={params} />
+    <>
+      <AdsPage2 params={params} />
+      {/* <AdsPage params={params} /> */}
+    </>
   )
 }
 

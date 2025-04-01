@@ -219,7 +219,7 @@ const HomePage = ({ allSection }) => {
                                         />
                                         <p className="text- font-semibold text-center">Psychiatry</p>
                                     </a>
-                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/assesment">
+                                    <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/clinicalAssessment">
                                         <img
                                             alt="MindfulTMS - Advanced rTMS Therapy Professional Assessment"
                                             loading="lazy"
@@ -231,7 +231,7 @@ const HomePage = ({ allSection }) => {
                                             src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75"
                                             style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         />
-                                        <p className="text- font-semibold text-center">Professional Assessment</p>
+                                        <p className="text- font-semibold text-center">Assessment</p>
                                     </a>
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/pages/tms">
                                         <img
@@ -445,6 +445,7 @@ const HomePage = ({ allSection }) => {
                 </section>
                 {/* services */}
                 <section className="py-8 bg-primary-div rounded-lg">
+                    <Container maxWidth="lg">
                     <div className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root">
                         <div className="mb-3">
                             <div className="mb-3 py-3">
@@ -484,7 +485,7 @@ const HomePage = ({ allSection }) => {
                                         </div>
                                         <p className="text-xl text-center font-semibold">Psychiatrists</p>
                                     </a>
-                                    <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/assesment">
+                                    <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/clinicalAssessment">
                                         <div className="w-[150px] h-[150px] flex justify-center">
                                             <img
                                                 alt="MindfulTMS - Advanced rTMS Therapy Assessments"
@@ -520,6 +521,7 @@ const HomePage = ({ allSection }) => {
                             </div>
                         </div>
                     </div>
+                    </Container>
                 </section>
 
 

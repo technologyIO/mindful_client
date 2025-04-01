@@ -58,7 +58,7 @@ const TestThankyouPage = () => {
 
   return (
     <Container maxWidth="lg">
-      <section className="bg-gray-50 flex flex-col items-center justify-center px-6 pt-12">
+      <section className=" flex flex-col items-center justify-center px-6 pt-12">
         <div className="bg-white">
           <h1 className="text-5xl font-bold text-center text-gray-800 mb-4">Thank You</h1>
         </div>

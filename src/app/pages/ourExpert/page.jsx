@@ -197,8 +197,8 @@ export async function generateMetadata() {
 
 
     return {
-     title: 'Our Experts | Leading Psychiatrists & Clinical Psychologists',
-     description:`Meet our dedicated team of mental health professionals—psychiatrists, clinical psychologists, and counselors—committed to providing specialized care and guidance. Explore their expertise, learn about their qualifications, and discover how they can help you achieve better mental well-being at our clinics.`,
+     title: 'Meet Our Mental Health & rTMS Experts | MindfulTMS Clinics',
+     description:`Meet the expert team at Mindful TMS—rTMS specialists, neurofeedback professionals, therapists, psychologists, and psychiatrists focused on your wellbeing.`,
    };
   
   }

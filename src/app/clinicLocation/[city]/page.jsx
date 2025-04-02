@@ -15,7 +15,7 @@ export async function generateMetadata({params}) {
 }
 const page = ({params}) => {
     const {city} = params
-    // console.log('city', city)
+    console.log('city', city)
 
   return (
     <div>

@@ -1,14 +1,3 @@
-// import React from 'react'
-// import Link from 'next/link';
-// import Image from 'next/image';
-// import Container from '@mui/material/Container';
-// const TestimonialComponentSlide = React.lazy(() => import('./TestimonialComponentSlide'));
-// const RequestAppointment = React.lazy(() => import('../clinicLocation/[city]/RequestAppointment'));
-// const OurDoctorSection = React.lazy(() => import('../clinicLocation/[city]/OurDoctorSection'));
-// const CounterComponent = React.lazy(() => import('./CounterComponent'));
-
-
-
 
 "use client";
 import React, { Suspense, useEffect } from 'react';
@@ -63,7 +52,7 @@ const HomePage = ({ allSection }) => {
                     <section className='mb-5'>
                         <div className='md:grid grid-cols-2 items-center'>
                             <div className='flex justify-center w-full h-[300px] mb-7'>
-                                <Image width={500} height={500} priority  className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='MindfulTMS - Advanced rTMS Therapy hero' />
+                                <Image width={500} height={500} priority  className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='Get expert care from rTMS experts and psychiatrists at Mindful TMS for support with depression, OCD, and more.' />
                                 {/* <Image width={500} height={500} className='w-full object-cover' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/hero2.webp?updatedAt=1733748343406' alt='MindfulTMS - Advanced rTMS Therapy hero' /> */}
                                 
                                 {/* <Image width={500} height={500}  className='w-full object-cover' src='/hero21svg.svg' alt='MindfulTMS - Advanced rTMS Therapy hero' /> */}
@@ -137,7 +126,7 @@ const HomePage = ({ allSection }) => {
                         <div className='md:grid grid-cols-6 items-center justify-center md:bg-primary-div'>
                             <div className='flex flex-col justify-between mb-10 items-center pb-4  md:px-8 rounded-lg gap-6 col-span-2 bg-orange-100  '>
                                 <div className=''>
-                                    <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
+                                    <Image  height={100} width={100} alt='TMS coil positioned near a person’s head, demonstrating the application of US FDA-approved rTMS therapy for mental health treatment at Mindful TMS.' className='w-full h-full border-2 border-white  rounded-lg' src={"https://ik.imagekit.io/mwpcmpi5v/1733372630195-illustration_20_281_29.webp?updatedAt=1733819155146"} />
                                 </div>
                                 <div className='grid grid-cols-2 gap-2'>
                                     <div className='flex  items-center gap-1'>
@@ -384,7 +373,7 @@ const HomePage = ({ allSection }) => {
                         <div className='flex flex-col justify-center items-end mr-[70px] lg:mr-[100px]'>
                             <div className='flex flex-col justify-center  items-end px-8'>
                                 <h1 className=' text-6xl mb-5 text-white  text-end font-sans font-semibold '>
-                                    {`You Deserve to Feel Better `}
+                                    {`You Deserve to Feel Better `}
                                 </h1>
                                 <p className=" mb-5 font-[400] text-[18px] text-white text-end">Get the best care from our experienced psychologists, rTMS experts and psychiatrists for help with depression, OCD and more.</p>
                                 <p className=" mb-5 font-[400] text-[18px] text-white text-end"> With empathy and confidence, our professionals will guide you through every challenge.</p>

@@ -4,8 +4,8 @@ export async function generateMetadata() {
 
 
   return {
-   title: 'Clinical Assessments | Mindful TMS',
-   description:`Whether for a diagnosis or progress tracking, our therapists and RCI-certified Clinical Psychologists will provide you with evidence-based, effective care that is customized to meet your needs.`,
+   title: 'Clinical Assessments by Clinical Psychologists | Mindful TMS',
+   description:`We offer over 90 clinical assessments (BDI, BAI, WAIS, MMPI, TAT, RORSCHACH & more) by RCI-certified psychologists in Bengaluru & Delhi for various conditions. `,
  };
 
 }

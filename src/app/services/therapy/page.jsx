@@ -5,8 +5,8 @@ export async function generateMetadata() {
 
 
   return {
-   title: 'Personalised Therapy | Mindful TMS',
-   description:`Discover a safe space with our experienced therapists. We offer tailored support to help you overcome challenges with confidence.`,
+   title: 'Experienced Therapists & Psychologists | Mindful TMS',
+   description:`We offer a safe space for therapy with psychologists experienced in CBT, DBT, ACT, ERT & more. We treat Adults & Children with anxiety, depression, trauma, ADHD...`,
  };
 
 }

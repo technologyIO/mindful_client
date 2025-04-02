@@ -1,5 +1,5 @@
 import React from 'react'
-import AdsPage from '../../../components/AdsPage'
+// import AdsPage from '../../../components/AdsPage'
 import AdsPage2 from '../../../components/AdsPage2';
 
 export async function generateMetadata({params}) {

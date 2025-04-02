@@ -49,11 +49,12 @@ const OurDoctorSection = () => {
       </div>
 
       {Object.entries(filteredExperts).map(([location, experts], index) => (
-        <div key={index} className="mb-5 md:mx-[80px] lg:mx-[120px]">
+        <div key={index} className="mb-5 md:mb-8 md:mx-[80px] lg:mx-[120px]">
           {/* Location Header */}
-          <h2 className="text-xl md:text-xl font-semibold text-center text-gray-600 mb-4">{location}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-600 mb-4 md:mb-6">{location}</h2>
 
           {/* Experts Grid */}
+          {/* <div className="flex flex-wrap  gap-4 md:gap-[80px] text-center justify-center "> */}
           <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center justify-center ">
             {experts.map((expert, idx) => (
               <Link href={`/doctor/${expert?._id}`} key={idx} className="flex flex-col items-center mb-2">

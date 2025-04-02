@@ -37,7 +37,6 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
       } else if (expertService === "psychiatrist") {
         designation = "Psychiatrist";
       } else {
-        // fallback based on expertText (if therapist then psychologist)
         designation = expertText === "therapist" ? "Psychologist" : expertText;
       }
       setLoading(true);
@@ -61,8 +60,6 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
   }
 
   return (
-    <section className="py-8 px-4 bg-[#FDE4BB]">
-      {/* A container to center content on desktop */}
       <div className="mx-auto max-w-6xl">
         {/* Main header always */}
         <div className="mb-6 flex flex-col justify-center items-center">
@@ -72,119 +69,204 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
         </div>
 
         {expertService === "general" ? (
-          <div className="flex flex-col gap-8">
-            {/* Psychologists Section */}
-            {psychologists.length > 0 && (
-              <div className="w-full">
-                <h2 className="text-xl md:text-2xl font-semibold text-gray-700 text-center my-4">
-                  Psychologists
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-10 justify-items-center">
-                  {psychologists.map((doctor) => (
-                    <a
-                      key={doctor.id}
-                      className="flex flex-col items-center"
-                      href={`/doctor/${doctor.id}`}
-                    >
-                      <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
-                        <img
-                          className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
-                          src={doctor.image}
-                          alt={doctor.name}
-                          style={{ objectPosition: "center top" }}
-                        />
-                      </div>
-                      <div className="mb-1 text-center">
-                        <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                          {doctor.name}
-                        </p>
-                        <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                          {doctor.title}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
+          <>
+            {/* MOBILE VERSION (< md): Two sections with sub-headers */}
+            <div className="block md:hidden">
+              {/* Psychologists Section */}
+              {psychologists.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="text-xl font-semibold text-gray-700 text-center my-4">
+                    Psychologists
+                  </h2>
+                  <div className={`grid grid-cols-2 gap-4 justify-items-center `}>
+                    {psychologists.map((doctor) => (
+                      <a
+                        key={doctor._id}
+                        className="flex flex-col items-center"
+                        href={`/doctor/${doctor._id}`}
+                      >
+                        <div className="mb-2 h-[75px] w-[75px]">
+                          <img
+                            className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                            src={doctor.image}
+                            alt={doctor.name}
+                            style={{ objectPosition: "center top" }}
+                          />
+                        </div>
+                        <div className="mb-1 text-center">
+                          <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                            {doctor.name}
+                          </p>
+                          <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
+                      {`(${doctor.designation})`}
+                    </label>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {/* Psychiatrists Section */}
-            {psychiatrists.length > 0 && (
-              <div className="w-full">
-                <h2 className="text-xl md:text-2xl font-semibold text-gray-700 text-center my-4">
-                  Psychiatrists
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-10 justify-items-center">
-                  {psychiatrists.map((doctor) => (
-                    <a
-                      key={doctor.id}
-                      className="flex flex-col items-center"
-                      href={`/doctor/${doctor.id}`}
-                    >
-                      <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
-                        <img
-                          className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
-                          src={doctor.image}
-                          alt={doctor.name}
-                          style={{ objectPosition: "center top" }}
-                        />
-                      </div>
-                      <div className="mb-1 text-center">
-                        <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                          {doctor.name}
-                        </p>
-                        <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                          {doctor.title}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
+              {/* Psychiatrists Section */}
+              {psychiatrists.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-700 text-center my-4">
+                    Psychiatrists
+                  </h2>
+                  <div className="grid grid-cols-2 gap-4 justify-items-center">
+                    {psychiatrists.map((doctor) => (
+                      <a
+                        key={doctor._id}
+                        className="flex flex-col items-center"
+                        href={`/doctor/${doctor._id}`}
+                      >
+                        <div className="mb-2 h-[75px] w-[75px]">
+                          <img
+                            className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                            src={doctor.image}
+                            alt={doctor.name}
+                            style={{ objectPosition: "center top" }}
+                          />
+                        </div>
+                        <div className="mb-1 text-center">
+                          <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                            {doctor.name}
+                          </p>
+                          <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
+                      {`(${doctor.designation})`}
+                    </label>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {psychologists.length === 0 && psychiatrists.length === 0 && (
-              <p className="text-center mt-6">
-                No doctors available at this time.
-              </p>
-            )}
-          </div>
+              {psychologists.length === 0 && psychiatrists.length === 0 && (
+                <p className="text-center mt-6">
+                  No doctors available at this time.
+                </p>
+              )}
+            </div>
+
+            {/* DESKTOP VERSION (≥ md): All experts in one flex-wrapped container */}
+            <div className="hidden md:flex flex-wrap justify-center gap-[90px]">
+              {(() => {
+                const allDoctors = [...psychologists, ...psychiatrists];
+                if (allDoctors.length === 0) {
+                  return (
+                    <p className="text-center mt-6">
+                      No doctors available at this time.
+                    </p>
+                  );
+                }
+                return allDoctors.map((doctor) => (
+                  <a
+                    key={doctor._id}
+                    className="flex flex-col items-center"
+                    href={`/doctor/${doctor._id}`}
+                  >
+                    <div className="mb-2 h-[100px] w-[100px] lg:h-[110px] lg:w-[110px]">
+                      <img
+                        className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                        src={doctor.image}
+                        alt={doctor.name}
+                        style={{ objectPosition: "center top" }}
+                      />
+                    </div>
+                    <div className="mb-1 text-center">
+                      <p className="font-semibold text-[16px] lg:text-[18px] text-gray-800 max-w-[200px]">
+                        {doctor.name}
+                      </p>
+                      {/* Designation below name */}
+                      <p className="text-[13px] lg:text-[15px] text-gray-900 max-w-[200px]">
+                        {doctor.title}
+                      </p>
+                      <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
+                      {`(${doctor.designation})`}
+                    </label>
+                    </div>
+                  </a>
+                ));
+              })()}
+            </div>
+          </>
         ) : (
           // For specific expertService ("psychiatrist" or "psychologist")
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-10 justify-items-center">
-            {doctors.map((doctor) => (
-              <a
-                key={doctor._id}
-                className="flex flex-col items-center"
-                href={`/doctor/${doctor._id}`}
-              >
-                <div className="mb-2 h-[75px] w-[75px] md:h-[100px] md:w-[100px] lg:h-[110px] lg:w-[110px]">
-                  <img
-                    className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
-                    src={doctor.image}
-                    alt={doctor.name}
-                    style={{ objectPosition: "center top" }}
-                  />
-                </div>
-                <div className="mb-1 text-center">
-                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px] text-gray-800 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                    {doctor.name}
+          <>
+            {/* MOBILE VERSION (< md) remains as grid */}
+            <div className="block md:hidden">
+              <div className="grid grid-cols-2 gap-4 justify-items-center">
+                {doctors.map((doctor) => (
+                  <a
+                    key={doctor._id}
+                    className="flex flex-col items-center"
+                    href={`/doctor/${doctor._id}`}
+                  >
+                    <div className="mb-2 h-[75px] w-[75px]">
+                      <img
+                        className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                        src={doctor.image}
+                        alt={doctor.name}
+                        style={{ objectPosition: "center top" }}
+                      />
+                    </div>
+                    <div className="mb-1 text-center">
+                      <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                        {doctor.name}
+                      </p>
+                      <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
+                      {`(${doctor.designation})`}
+                    </label>
+                    </div>
+                  </a>
+                ))}
+                {doctors.length === 0 && (
+                  <p className="text-center w-full mt-6">
+                    No doctors available at this time.
                   </p>
-                  <p className="text-[11px] md:text-[13px] lg:text-[15px] text-gray-900 max-w-[150px] md:max-w-[180px] lg:max-w-[200px]">
-                    {doctor.title}
-                  </p>
-                </div>
-              </a>
-            ))}
-            {doctors.length === 0 && (
-              <p className="text-center w-full mt-6">
-                No doctors available at this time.
-              </p>
-            )}
-          </div>
+                )}
+              </div>
+            </div>
+
+            {/* DESKTOP VERSION (≥ md): Use flex-wrap for centering */}
+            <div className="hidden md:flex flex-wrap justify-center gap-[90px] ">
+              {doctors.map((doctor) => (
+                <a
+                  key={doctor._id}
+                  className="flex flex-col items-center"
+                  href={`/doctor/${doctor._id}`}
+                >
+                  <div className="mb-2 h-[100px] w-[100px] lg:h-[110px] lg:w-[110px]">
+                    <img
+                      className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
+                      src={doctor.image}
+                      alt={doctor.name}
+                      style={{ objectPosition: "center top" }}
+                    />
+                  </div>
+                  <div className="mb-1 text-center">
+                    <p className="font-semibold text-[16px] lg:text-[18px] text-gray-800 max-w-[200px]">
+                      {doctor.name}
+                    </p>
+                    <p className="text-[13px] lg:text-[15px] text-gray-900 max-w-[200px]">
+                      {doctor.title}
+                    </p>
+                    <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
+                      {`(${doctor.designation})`}
+                    </label>
+                  </div>
+                </a>
+              ))}
+              {doctors.length === 0 && (
+                <p className="text-center w-full mt-6">
+                  No doctors available at this time.
+                </p>
+              )}
+            </div>
+          </>
         )}
       </div>
-    </section>
   );
 };
 

@@ -169,7 +169,7 @@ export default function TestimonialComponentSlideV2({
     mobileView,
     smallDevice,
     doctor,
-    experts
+    // experts
 }) {
     const pathname = usePathname();
     const [testimonials, setTestimonials] = useState([]);

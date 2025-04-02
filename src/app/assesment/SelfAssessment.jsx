@@ -39,6 +39,41 @@ The GAD-7 consists of 7 questions that ask about feelings of nervousness, worry,
 
 The K10 consists of 10 questions that ask about feelings of nervousness, hopelessness, restlessness, and fatigue, among other symptoms. By answering these questions, you can get a better understanding of your current emotional state and whether you might benefit from further support or professional help.`,
     },
+    {
+        title: "PHQ-9 Depression Test",
+        link: "/assesment/phq9/test",
+        id: "phq9",
+        condition: "Depression",
+        paragraph: `The PHQ-9 consists of 9 questions that ask about feelings of sadness, hopelessness, and loss of interest in activities, among other symptoms.
+
+By answering these questions, you can gain insights into your depressive symptoms and determine if you might benefit from further support or professional help.`,
+    },
+    {
+        title: "PSS-10 Stress Assessment",
+        link: "/assesment/pss10/test",
+        id: "pss10",
+        condition: "Stress",
+        paragraph: `This test measures your perception of stress and how you handle life's challenges.
+
+The PSS-10 consists of 10 questions that ask about your feelings and thoughts during the last month, including how often you felt nervous, stressed, or unable to control important things in your life.`,
+    },
+    {
+        title: "GAD-7 Anxiety Test",
+        link: "/assesment/gad7/test",
+        id: "gad7",
+        condition: "Anxiety",
+        paragraph: `This questionnaire helps you evaluate the severity of your anxiety symptoms over the past two weeks.
+
+The GAD-7 consists of 7 questions that ask about feelings of nervousness, worry, and restlessness, among other symptoms. By answering these questions honestly, you can get a clearer picture of your anxiety levels and determine if you might benefit from further support or professional help.`,
+    },
+    {
+        title: "K10 (Kessler Psychological Distress Scale)",
+        link: "/assesment/k10/test",
+        id: "k10",
+        paragraph: `The K10 is a simple and effective tool designed to measure your level of psychological distress over the past month. This test can help you gain insights into your mental health, especially if you're feeling anxious, depressed, or generally overwhelmed.
+
+The K10 consists of 10 questions that ask about feelings of nervousness, hopelessness, restlessness, and fatigue, among other symptoms. By answering these questions, you can get a better understanding of your current emotional state and whether you might benefit from further support or professional help.`,
+    },
 ];
 
 const SelfAssesment = () => {
@@ -55,7 +90,9 @@ const SelfAssesment = () => {
 
             <div className=" flex items-center justify-center 100 px-2 py-2">
                 <div className="bg-white p-2  rounded-lg w-full">
-                    <h1 className="text-2xl font-bold mb-6">Test Instructions:</h1>
+                <h1 className="text-3xl font-bold mb-8 text-orange-500 underline">{test?.condition} Screener:</h1>
+
+                    <h2 className="text-2xl font-bold mb-4">Test Instructions:</h2>
 
                     {/* <h2 className="text-xl font-semibold mb-4 text-orange-500 underline">{test?.condition} Screener:</h2> */}
 
@@ -83,7 +120,7 @@ const SelfAssesment = () => {
             </div>
             <div className=" flex items-center justify-center  p-2">
                 <div className="bg-white p-2   rounded-lg  w-full">
-                    <h1 className="text-2xl font-bold mb-3 text-black ">Disclaimer</h1>
+                    <h1 className="text-2xl font-bold mb-3 text-orange-500 ">Disclaimer</h1>
 
                     <h2 className="text-lg font-semibold mb-1 ">Important Notice</h2>
 

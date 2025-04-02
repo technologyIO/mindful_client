@@ -16,6 +16,7 @@ import TestimonialComponentSlideV2 from '@/app/component/TestimonialComponentSli
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import { adsPageContent } from '@/adsPageContent'
 import DoctorsSection from './DoctorsSection'
+import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 const AdsPage2 = ({ params }) => {
 
   const experts = [
@@ -217,12 +218,12 @@ const AdsPage2 = ({ params }) => {
 
           {/* Button at the bottom */}
           <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-            name="Book a Consultation"
-          />
-        </div>
+            <RequestAppointment
+              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
         </Container>
       </section>
     );
@@ -278,12 +279,12 @@ const AdsPage2 = ({ params }) => {
           </p>
           {/* Call-to-action Button */}
           <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-            name="Book a Consultation"
-          />
-        </div>
+            <RequestAppointment
+              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+              name="Book a Consultation"
+            />
+          </div>
         </div>
       </section>
     );
@@ -359,12 +360,12 @@ const AdsPage2 = ({ params }) => {
 
       </section>
 
-   {!condition &&   <div>
+      {!condition && <div>
         <Show_what_we_treat />
-        
+
       </div>}
 
-    {condition &&  <div>
+      {condition && <div>
         <SymptomsSection />
       </div>}
 
@@ -414,90 +415,78 @@ const AdsPage2 = ({ params }) => {
               </div>
             </div>
             <div className="flex items-center justify-center mt-8">
-              {/* Uncomment and adjust the RequestAppointment component as needed */}
-              {/*
-      <RequestAppointment 
-        iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} 
-        customStyle="flex items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10" 
-        name="Request an Appointment" 
-      />
-      */}
+             
             </div>
 
-            <div className=" flex items-center justify-center">
-              <RequestAppointment
-                customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-                name="Book a Consultation"
-              />
-            </div>
+            <div className="mt-6 flex items-center justify-center ">
+          <RequestAppointment
+            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+            name="Book a Consultation"
+          />
+        </div>
           </div>
         </Container>
 
 
       </section>
 
-      {/* why mindfultms section */}
-      <section className="py-8 ">
+      {/* Our Location */}
+      <section className="py-8 bg-[#FDE4BB]">
         <Container maxWidth="lg">
-          <h2 className="mb-6 text-center text-3xl md:text-3xl font-bold text-orange-500">
-            Our Location
-          </h2>
-          <div className=" mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              {/* Image Section */}
-              <div className="flex justify-center">
-                <img
-                  src="/ads/ads2/Delhi3.webp"
-                  alt="MindfulTMS clinic"
-                  className="h-[300px] md:h-[350px] w-full object-cover rounded-xl"
-                />
-              </div>
-              {/* Content Section */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
-                    A  safe and supportive space
-                  </h3>
-                  <p className="text-gray-600 text-base md:text-lg">
-                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
-                    Confidential and Supportive Environment:
-                  </h3>
-                  <p className="text-gray-600 text-base md:text-lg">
-                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
-                    Experienced Clinical Team:
-                  </h3>
-                  <p className="text-gray-600 text-base md:text-lg">
-                    Our clinicians are trained to assess, diagnose, and provide the right therapy for you.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <div className="flex items-center justify-center mt-8">
-              {/* Uncomment and adjust the RequestAppointment component as needed */}
-              {/*
-      <RequestAppointment 
-        iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} 
-        customStyle="flex items-center justify-center gap-2 rounded bg-orange-500 p-3 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10" 
-        name="Request an Appointment" 
-      />
-      */}
+          <div className=' py-3'>
+            <div className='px-4 mb-6'>
+              <h1 className='text-3xl md:text-4xl text-primary-orange text-center font-[700]'>Our Location</h1>
             </div>
 
-            <div className=" flex items-center justify-center">
-              <RequestAppointment
-                customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-                name="Book a Consultation"
-              />
+            {/* <div className='px-4 mb-8'>
+            <ImageCarousel images={locationDataArray[city]?.images} small={true} />
+          </div> */}
+
+
+
+
+            <div className='px-4 mb-11'>
+              <div className="grid grid-cols-1 justify-center">
+                <div className="mb-4">
+
+                  <div className="flex h-full flex-col justify-start items-start">
+                    <p className="font-semibold mb-4 md:text-2xl"> {locationDataArray[city]?.addressTitle}</p>
+                    <span className='md:text-xl'>{locationDataArray[city]?.address}</span>
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl text-center md:text-3xl font-semibold text-primary-orange mb-4">
+                    Location Map
+                  </h2>
+                  <div className="flex items-center justify-center relative">
+                    <div className="   w-[500px] h-[400px] relative">
+                      <iframe
+                        title="Google Map"
+                        src={locationDataArray[city]?.googleMapLink}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, pointerEvents: "none" }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                      {/* Transparent Overlay to block interactions */}
+                      <div className="absolute inset-0 bg-transparent"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             </div>
+            <div className="mt-6 flex items-center justify-center ">
+          <RequestAppointment
+            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
+            name="Book a Consultation"
+          />
+        </div>
+
           </div>
         </Container>
 
@@ -507,5 +496,75 @@ const AdsPage2 = ({ params }) => {
     </>
   )
 }
+
+
+const locationDataArray = {
+  "gk": {
+    addressTitle: 'MindfulTMS @ Greater Kailash 1, New Delhi',
+    city: 'New-Delhi',
+    address: 'S-35 first floor, Greater Kailash-1, Masjid Moth, Greater Kailash, New Delhi, Delhi 110048',
+    googleMapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14018.749635826523!2d77.2155231871582!3d28.549114000000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1da20c0c681%3A0x4bb15098e31edc9c!2smindful%20TMS%20Neurocare%20-%20Best%20Psychiatrist%20%7C%20Clinical%20Psychologist%20%7C%20(TMS)%20%7C%20Anxiety%20%7C%20Depression%20%7C%20OCD%20%7C%20in%20Delhi!5e0!3m2!1sen!2sin!4v1724673517475!5m2!1sen!2sin',
+    call: '011 – 415 000 11 / +91 96060 67372',
+    slug: 'new-delhi',
+    images: [
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1', className: "col-span-2" },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2', className: "col-span-2 row-span-2" },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+    ]
+  },
+  "wf": {
+    addressTitle: 'MindfulTMS @ Whitefield, Bengaluru ',
+    city: 'Bengaluru-Whitefield',
+    address: '704, 2nd Floor, ASN Signature, Varthur Road, near Laughing Waters Siddapura, Ramagondanahalli, Bengaluru, Karnataka 560066',
+    googleMapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.231653179486!2d77.73074949678954!3d12.95702330000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae132558211f3b%3A0x5a7282022d462888!2sMindful%20TMS%20Whitefield%20Clinic%20-%20Psychiatrist%20%7C%20Clinical%20Psychologist%20%7C%20(TMS)%20%7C%20Anxiety%20%7C%20Depression%20%7C%20OCD%20%7C%20Bengaluru!5e0!3m2!1sen!2sin!4v1724673750137!5m2!1sen!2sin',
+    call: '080- 41500055 / +91 81973 41114',
+    slug: 'bangluru-whitefield',
+    images: [
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1', className: "col-span-2" },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2', className: "col-span-2 row-span-2" },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+    ]
+  },
+  "hb": {
+    addressTitle: 'MindfulTMS @ Hebbal, Bengaluru ',
+    city: 'Bengaluru-Hebbal',
+    address: '#43/2, New Airport Road, NH-7, Outer Ring Rd, Sahakar Nagar, Bengaluru, Karnataka 560092',
+    googleMapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7041049286468!2d77.58899097470847!3d13.054496987268534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15250dbbd083%3A0x4e8aba2a52fa8613!2sMindful%20TMS%20Aster%20CMI%20Clinic%20-%20Best%20Psychiatrist%20%7C%20Clinical%20Psychologist%20%7C%20(TMS)%20%7C%20Anxiety%20%7C%20Depression%20%7C%20OCD%20%7C%20Sahakar%20Nagar!5e0!3m2!1sen!2sin!4v1724673904955!5m2!1sen!2sin',
+    call: '080 – 415 000 11 / +91 96069 69296',
+    slug: 'bangluru-hebbal',
+    images: [
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1', className: "col-span-2" },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2', className: "col-span-2 row-span-2" },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
+      { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
+      { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
+    ]
+  }
+};
 
 export default AdsPage2

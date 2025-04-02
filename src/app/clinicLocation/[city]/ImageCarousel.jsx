@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-const ImageCarousel = ({images}) => {
+const ImageCarousel = ({images, small}) => {
     // const images = [
     //     { src: '/home/clinicImg2.jpg', alt: 'Company Image 1' },
     //     { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
@@ -46,7 +46,7 @@ const ImageCarousel = ({images}) => {
     }, [currentIndex]);
 
     return (
-        <div className="relative w-full h-[580px]">
+        <div className={`relative w-full  ${small ? 'h-[300px] md:h-[500px] w-[50%]': 'h-[350px] md:h-[580px]'}`}>
             <div className="overflow-hidden rounded-lg h-full relative">
                 {images.map((image, index) => (
                     <div

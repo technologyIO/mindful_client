@@ -500,7 +500,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/anxiety/wf",
         "lp_hero_title": "Is Anxiety Disrupting Your Peace of Mind?",
         "lp_hero_subtitle": "Regain control and find lasting relief from anxiety with our expert clinical team.",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed\n",
         "block_to_show": "Anxiety Symptoms",
         "hero_image": ""
@@ -518,7 +518,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/depression/wf",
         "lp_hero_title": "Is Depression Making Life Harder Than It Should Be?",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life from depression with our expert clinical team.",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "Depression Symptoms",
         "hero_image": ""
@@ -536,7 +536,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/ocd/wf",
         "lp_hero_title": "Is OCD Controlling Your Life?",
         "lp_hero_subtitle": "Experience personalized care to beat OCD with our dedicated clinical team.",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized OCD diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
@@ -556,7 +556,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/anxiety/wf",
         "lp_hero_title": "Is Anxiety Disrupting Your Peace of Mind?",
         "lp_hero_subtitle": "Regain control and find lasting relief from anxiety with our expert psychiatrists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our experienced psychiatrists provide:\nPersonalized anxiety diagnosis\nCustomized treatment plans including medication if needed\nSafe and confidential consultations",
         "block_to_show": "Anxiety Symptoms",
         "hero_image": ""
@@ -574,7 +574,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/depression/wf",
         "lp_hero_title": "Is Depression Making Life Harder Than It Should Be?",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life from depression with our experienced psychiatrists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "Depression Symptoms",
         "hero_image": ""
@@ -592,7 +592,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/general/wf",
         "lp_hero_title": "Are you looking for an experienced psychiatrist?",
         "lp_hero_subtitle": "Experience individualized care from experienced psychiatrists committed to improving your quality of life.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia |<br>and more. ",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
         "block_to_show": "What We Treat",
         "hero_image": ""
@@ -610,7 +610,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/ocd/wf",
         "lp_hero_title": "Is OCD Controlling Your Life?",
         "lp_hero_subtitle": "Experience personalized care to beat OCD with our expert psychiatrists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized OCD diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
@@ -630,7 +630,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/anxiety/wf",
         "lp_hero_title": "Is Anxiety Disrupting Your Peace of Mind?",
         "lp_hero_subtitle": "Regain control and find lasting relief from anxiety with our expert psychiatrists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized anxiety diagnosis\nClinical Assessments\nCBT, relaxation training and various forms of therpy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "Anxiety Symptoms",
         "hero_image": ""
@@ -648,7 +648,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression/wf",
         "lp_hero_title": "Is Depression Making Life Harder Than It Should Be?",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life from depression with our experienced psychologists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "Depression Symptoms",
         "hero_image": ""
@@ -666,7 +666,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/general/wf",
         "lp_hero_title": "Are you looking for an experienced psychologist?",
         "lp_hero_subtitle": "Experience personalized care from our expert psychologists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more. ",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
@@ -684,7 +684,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/ocd/wf",
         "lp_hero_title": "Is OCD Controlling Your Life?",
         "lp_hero_subtitle": "Experience personalized care to beat OCD with our expert psychologists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized OCD diagnosis\nClinical Assessments\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
@@ -704,7 +704,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/anxiety/wf",
         "lp_hero_title": "Is Anxiety Disrupting Your Peace of Mind?",
         "lp_hero_subtitle": "Regain control and find lasting relief from anxiety with our experienced therapists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized anxiety diagnosis\nCBT, relaxation training and various forms of therpy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "Anxiety Symptoms",
         "hero_image": ""
@@ -722,7 +722,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression/wf",
         "lp_hero_title": "Is Depression Making Life Harder Than It Should Be?",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life from depression with our expert therapists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "Depression Symptoms",
         "hero_image": ""
@@ -740,7 +740,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/general/wf",
         "lp_hero_title": "Are you looking for an experienced therapist?",
         "lp_hero_subtitle": "Experience personalized care from our compassionate therapists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more.",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
@@ -758,7 +758,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/ocd/wf",
         "lp_hero_title": "Is OCD Controlling Your Life?",
         "lp_hero_subtitle": "Experience personalized care to beat OCD with our dedicated therapists.<br>",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.<br>",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized OCD diagnosis\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""

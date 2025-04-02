@@ -78,7 +78,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   <h2 className="text-xl font-semibold text-gray-700 text-center my-4">
                     Psychologists
                   </h2>
-                  <div className={`grid grid-cols-2 gap-4 justify-items-center `}>
+                  <div className={`flex flex-wrap gap-4 justify-center `}>
                     {psychologists.map((doctor) => (
                       <a
                         key={doctor._id}
@@ -113,7 +113,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   <h2 className="text-xl font-semibold text-gray-700 text-center my-4">
                     Psychiatrists
                   </h2>
-                  <div className="grid grid-cols-2 gap-4 justify-items-center">
+                  <div className="flex flex-wrap gap-4 justify-center">
                     {psychiatrists.map((doctor) => (
                       <a
                         key={doctor._id}
@@ -196,7 +196,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
           <>
             {/* MOBILE VERSION (< md) remains as grid */}
             <div className="block md:hidden">
-              <div className="grid grid-cols-2 gap-4 justify-items-center">
+              <div className="flex flex-wrap gap-4 justify-center">
                 {doctors.map((doctor) => (
                   <a
                     key={doctor._id}

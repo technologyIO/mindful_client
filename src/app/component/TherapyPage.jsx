@@ -5,6 +5,7 @@ import TakeTest from './TakeTest'
 import AllTherapyWithSearch from './AllTherapyWithSearch'
 import Link from 'next/link'
 import Image from 'next/image'
+import OurDoctorSectionTherapyPage from './OurDoctorTherapyPage'
 const conditions = [
     {
         id: 1,
@@ -93,6 +94,10 @@ const MobileView = () => {
         <>
             <div maxWidth="lg" className="mt-8 px-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
+                     {/* Image Section */}
+                     <div className="flex justify-center">
+                        <img className="w-full md:w-[400px] lg:w-[450px] transition-transform duration-300 transform hover:scale-105" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
+                    </div>
                     {/* Text Section */}
                     <div className="text-start md:text-left mx-2">
                         <h1 className="text-3xl md:text-[38px] font-bold leading-snug text-primary mb-6">
@@ -107,14 +112,16 @@ const MobileView = () => {
                         </div>
                     </div>
 
-                    {/* Image Section */}
-                    <div className="flex justify-center">
-                        <img className="w-full md:w-[400px] lg:w-[450px] transition-transform duration-300 transform hover:scale-105" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
-                    </div>
+                   
                 </div>
             </div>
 
-
+{/* our experts */}
+<div className='bg-primary-div'>
+                    <Container maxWidth="lg">
+                        <OurDoctorSectionTherapyPage designation={"psychologist"} />
+                    </Container>
+                </div>
 
             <div className="max-w-4xl mx-auto px-4 pt-4 pb-[50px]">
 
@@ -158,7 +165,8 @@ const MobileView = () => {
 const DesktopView = () => {
     return (
         <>
-            <Container maxWidth="lg" className="mt-8 mb-10">
+          <div className='bg-primary-div p-6'>
+          <Container maxWidth="lg" className="mt-8 mb-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
                     {/* Text Section */}
                     <div className="text-center md:text-left mx-2">
@@ -182,8 +190,14 @@ const DesktopView = () => {
                     </div>
                 </div>
             </Container>
+          </div>
 
-
+           {/* our experts */}
+           <div className=''>
+                    <Container maxWidth="lg">
+                        <OurDoctorSectionTherapyPage designation={"psychologist"} />
+                    </Container>
+                </div>
 
             <div className='bg-primary-div'>
                 <Container maxWidth="lg" >

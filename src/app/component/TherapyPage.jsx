@@ -91,17 +91,19 @@ const conditionBubble = [
 const MobileView = () => {
     return (
         <>
-            <div maxWidth="lg" className="mt-8">
+            <div maxWidth="lg" className="mt-8 px-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
                     {/* Text Section */}
-                    <div className="text-center md:text-left mx-2">
-                        <h1 className="text-3xl md:text-[38px] font-semibold leading-snug text-primary mb-6">
+                    <div className="text-start md:text-left mx-2">
+                        <h1 className="text-3xl md:text-[38px] font-bold leading-snug text-primary mb-6">
                             Personalised Therapy for a Healthier You
                         </h1>
+                        <p className="text-lg md:text-xl text-gray-600 mb-4">
+                        Discover a safe space with our experienced therapists and psychologists.</p>
                         <p className="text-lg md:text-xl text-gray-600 mb-8">
-                            Discover a safe space with our experienced therapists. We offer tailored support to help you overcome challenges with confidence. </p>
+                        We provide a safe space to talk our experts and overcome your challenges with confidence.</p>
                         <div className="flex justify-center md:justify-start">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>
 
@@ -163,10 +165,14 @@ const DesktopView = () => {
                         <h1 className="text-4xl md:text-[38px] font-bold leading-snug text-primary mb-6">
                             Personalised Therapy for a Healthier You
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-600 mb-8">
-                            Discover a safe space with our experienced therapists. We offer tailored support to help you overcome challenges with confidence. </p>
+                        <p className="text-lg md:text-xl text-gray-600 mb-3">
+                            Discover a safe space with our experienced therapists and psychologists.</p>
+                            <p className='text-lg md:text-xl text-gray-600 mb-8'>
+                                We provide a safe space to talk our experts and overcome your challenges with confidence.
+                            </p>
+
                         <div className="flex justify-center md:justify-start">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
                         </div>
                     </div>
 
@@ -218,10 +224,10 @@ const DesktopView = () => {
                         <div className='flex flex-col justify-center items-center  h-full'>
                             <div className='mb-8'>
                                 <h1 className='text-4xl  text-center font-sans mb-4 font-semibold'>
-                                    Want a bit more clarity?
+                                    Not sure what you need?
                                 </h1>
                                 <br />
-                                <p className='text-xl text-center'>These tests can help identify what you may have and need.</p>
+                                <p className='text-xl text-center'>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
                             </div>
                             {/* right section box */}
                             {/* right section box is under that is under underline ant */}
@@ -233,7 +239,7 @@ const DesktopView = () => {
                                 <div className='flex justify-center mt-5'>
                                     <Link href={"/assesment"}>
                                         <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-12 py-3 font-semibold text-lg text-white'>
-                                            Start Test
+                                           Start Self Test
                                         </button>
                                     </Link>
                                 </div>

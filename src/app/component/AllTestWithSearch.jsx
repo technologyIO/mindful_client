@@ -1,144 +1,170 @@
 "use client"
-import React , { useState } from 'react'
-import { IconButton } from '@mui/material';
+import React, { useState } from 'react';
+import { IconButton, useMediaQuery } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 
 const AllTestWithSearch = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [expanded, setExpanded] = useState({});
-    const [testsToShow, setTestsToShow] = useState(4); // State to manage how many tests to show
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expanded, setExpanded] = useState({});
+  const [testsToShow, setTestsToShow] = useState(4);
 
-    const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
+  // Use media query to determine if it's a mobile device.
+  const isMobile = useMediaQuery('(max-width:768px)');
 
-    const toggleExpand = (id) => {
-        setExpanded((prevExpanded) => ({
-            ...prevExpanded,
-            [id]: !prevExpanded[id],
-        }));
-    };
-    const loadMoreTests = () => {
-        setTestsToShow((prev) => prev + 4); // Increase tests shown by 4
-    };
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
-    const filteredTests = allTest.filter((test) =>
-        test.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    const testsToDisplay = filteredTests.slice(0, testsToShow); // Show only the specified number of tests
+  const toggleExpand = (id) => {
+    setExpanded((prevExpanded) => ({
+      ...prevExpanded,
+      [id]: !prevExpanded[id],
+    }));
+  };
 
+  const loadMoreTests = () => {
+    setTestsToShow((prev) => prev + 4);
+  };
 
-    return (
-        <div className=' flex flex-col justify-center items-center'>
-          <div className=' md:w-full'>
-              {/* Search Bar */}
-              <div className="mb-6">
-                <div className="relative flex items-center">
-                    <input
-                        type="text"
-                        className="w-full pr-10 pl-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Search by assessment name..."
-                        value={searchTerm}
-                        onChange={handleSearchChange}
-                    />
-                    <div className="absolute right-3">
-                        {/* Search Icon */}
-                        <img src="/home/search.svg" alt="search" className="w-5 h-5" />
-                    </div>
-                </div>
+  // Use the full filtered list on desktop; on mobile, show a limited list.
+  const filteredTests = allTest.filter((test) =>
+    test.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    test.detail.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const testsToDisplay = isMobile
+    ? filteredTests.slice(0, testsToShow)
+    : filteredTests;
+
+  return (
+    <div className="min-h-screen  py-8">
+      <div className=" mx-auto px-4">
+        {/* Search Bar */}
+        <div className="mb-8">
+          <div className="relative">
+            <input
+              type="text"
+              className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Search by assessment name..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+            <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+              <img src="/home/search.svg" alt="search" className="w-5 h-5" />
             </div>
-
-            {/* Search Results */}
-            <div className="grid grid-cols-1 gap-6 h-[400px] overflow-y-scroll mb-6">
-                {testsToDisplay.length > 0 ? (
-                    testsToDisplay.map((test) => (
-                        <div
-                            key={test._id}
-                            className="bg-white shadow-md max-w-[320px] md:max-w-full rounded-lg px-2 flex"
-                        >
-                            {/* <div className="mb-4 w-[80px] md:min-w-[120px] mr-2">
-                                <img
-                                    src={test.icon}
-                                    alt={test.name}
-                                    className="w-full object-cover mr-4"
-                                />
-                            </div> */}
-
-                            {/* for small device */}
-                            <div className="w-full md:hidden">
-                                <h3 className="text-[14px] md:text-lg font-semibold text-gray-800 capitalize">
-                                    {test.name}
-                                </h3>
-                                <p className="text-gray-600 text-[12px] md:text-sm">
-                                    {expanded[test._id]
-                                        ? test.detail
-                                        : test.detail.substring(0, 50) + '...'}
-                                </p>
-                                
-                                {/* Read More Button */}
-                                <div className="flex justify-end items-center">
-                                    <IconButton
-                                        onClick={() => toggleExpand(test._id)}
-                                        className="text-blue-500 text-[12px]"
-                                    >
-                                           {expanded[test._id]? <ExpandLessIcon />:<ExpandMoreIcon />}
-                                           {expanded[test._id] ? 'Read less' : 'Read more'}
-                                    </IconButton>
-                                   
-                                </div>
-                            </div>
-
-                            {/* for large device only */}
-                            <div className="w-full hidden md:block">
-                                <h3 className="text-[14px] md:text-lg font-semibold text-gray-800 capitalize">
-                                    {test.name}
-                                </h3>
-                                <p className="text-gray-600 text-[12px] md:text-sm">
-                                {    test.detail}
-                                </p>
-                                
-                                
-                            </div>
-                        </div>
-                    ))
-                ) : (
-                    <div className="flex flex-col items-center  bg-white shadow-lg rounded-lg p-4">
-                        <h3 className="text-lg font-semibold text-gray-800">No Assessment found</h3>
-                        <p className="text-gray-600 text-center mb-4">{`We couldn't find any Assessment tests matching your search.`}</p>
-                        <RequestAppointment
-                            name={"Contact Us"}
-                            customStyle={" bg-[#EF6623] hover:bg-orange-500 text-lg font-semibold active:bg-orange-700 rounded-lg text-white py-2 px-4"}
-                        />
-                    </div>
-                )}
-                        {/* Load More Button */}
-                        {testsToDisplay.length < filteredTests.length && (
-                    <div className="flex justify-center mb-6">
-                        <button
-                            onClick={loadMoreTests}
-                            className="bg-white  text-black py-2 px-4 rounded-lg border-2 border-gray-200 "
-                        >
-                            Load More...
-                        </button>
-                    </div>
-                )}
-            </div>
-            {/* <div className="flex justify-center">
-                    <RequestAppointment
-                        name={"Contact Us"}
-                        customStyle={" bg-[#EF6623] hover:bg-orange-500 text-xl active:bg-orange-700 rounded-lg text-white py-1 px-2"}
-                    />
-                </div> */}
           </div>
         </div>
-    );
+
+        {/* Search Results */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-h-[500px] thin-scroller overflow-y-auto">
+          {testsToDisplay.length > 0 ? (
+            testsToDisplay.map((test) => (
+              <div
+                key={test._id}
+                className="bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 capitalize mb-2">
+                    {test.name}
+                  </h3>
+                  {/* Small devices */}
+                  <p className="text-gray-600 text-sm md:hidden">
+                    {expanded[test._id]
+                      ? test.detail
+                      : test.detail.substring(0, 50) + '...'}
+                  </p>
+                  {/* Large devices */}
+                  <p className="text-gray-600 text-sm hidden md:block">
+                    {test.detail}
+                  </p>
+                </div>
+                <div className="mt-4 flex justify-end">
+                  <IconButton
+                    onClick={() => toggleExpand(test._id)}
+                    className="text-blue-500"
+                  >
+                    {(expanded[test._id] && isMobile)? (
+                      <>
+                        <ExpandLessIcon /> <span className="ml-1 text-xs">Read less</span>
+                      </>
+                    ) : isMobile ?(
+                      <>
+                        <ExpandMoreIcon /> <span className="ml-1 text-xs">Read more</span>
+                      </>
+                    ):null}
+                  </IconButton>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="col-span-full bg-white rounded-xl shadow-md p-6 flex flex-col items-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                No Assessment Found
+              </h3>
+              <p className="text-gray-600 text-center mb-4">
+                We couldn't find any Assessment tests matching your search.
+              </p>
+              <RequestAppointment
+                name={"Contact Us"}
+                customStyle={
+                  "bg-orange-500 hover:bg-orange-600 text-lg font-semibold rounded-lg text-white py-2 px-6"
+                }
+              />
+            </div>
+          )}
+        </div>
+
+        {/* Load More Button - only visible on mobile */}
+        {isMobile && testsToDisplay.length < filteredTests.length && (
+          <div className="flex justify-center">
+            <button
+              onClick={loadMoreTests}
+              className="bg-white border border-gray-300 text-gray-800 py-2 px-6 rounded-lg shadow hover:bg-gray-100 transition-colors duration-300"
+            >
+              Load More...
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 
 
 const allTest  = [
+    {
+        "_id": 14,
+        "name": "BDI",
+        "detail": "Beck Depression Inventory - Used to assess Depression Severity."
+    },
+    
+    {
+        "_id": 37,
+        "name": "HAM-D",
+        "detail": "Hamilton Depression Rating Scale - Used to assess Depression Severity."
+    },
+    {
+        "_id": 47,
+        "name": "MMSE",
+        "detail": "Mini Mental State Examination - Used to evaluate Cognitive Impairment."
+    },
+    {
+        "_id": 48,
+        "name": "MOCA",
+        "detail": "Montreal Cognitive Assessment - Used to measure Cognitive Abilities."
+    },
+    {
+        "_id": 36,
+        "name": "HAM-A",
+        "detail": "Hamilton Anxiety Rating Scale - Used to measure Anxiety Levels."
+    },
+    {
+        "_id": 28,
+        "name": "DASS",
+        "detail": "Depression Anxiety Stress Scale - Used to assess Depression, Anxiety, and Stress Levels."
+    },
     {
         "_id": 1,
         "name": "16PF",
@@ -204,11 +230,7 @@ const allTest  = [
         "name": "BAI",
         "detail": "Beck Anxiety Inventory - Used to measure Anxiety Levels."
     },
-    {
-        "_id": 14,
-        "name": "BDI",
-        "detail": "Beck Depression Inventory - Used to assess Depression Severity."
-    },
+    
     {
         "_id": 15,
         "name": "BDRS",
@@ -274,11 +296,7 @@ const allTest  = [
         "name": "DAPT",
         "detail": "Draw A Person Test - Used to evaluate Intelligence and Personality."
     },
-    {
-        "_id": 28,
-        "name": "DASS",
-        "detail": "Depression Anxiety Stress Scale - Used to assess Depression, Anxiety, and Stress Levels."
-    },
+    
     {
         "_id": 29,
         "name": "DDST",
@@ -314,16 +332,7 @@ const allTest  = [
         "name": "GIDYQ-AA",
         "detail": "Gender Identity Dysphoria Questionnaire for Adolescents and Adults - Used to identify Gender Identity Dysphoria."
     },
-    {
-        "_id": 36,
-        "name": "HAM-A",
-        "detail": "Hamilton Anxiety Rating Scale - Used to measure Anxiety Levels."
-    },
-    {
-        "_id": 37,
-        "name": "HAM-D",
-        "detail": "Hamilton Depression Rating Scale - Used to assess Depression Severity."
-    },
+   
     {
         "_id": 38,
         "name": "ICMR-NCTB",
@@ -369,16 +378,7 @@ const allTest  = [
         "name": "MMPI",
         "detail": "Minnesota Multiphasic Personality Inventory - Used to assess Psychopathology and Personality."
     },
-    {
-        "_id": 47,
-        "name": "MMSE",
-        "detail": "Mini Mental State Examination - Used to evaluate Cognitive Impairment."
-    },
-    {
-        "_id": 48,
-        "name": "MOCA",
-        "detail": "Montreal Cognitive Assessment - Used to measure Cognitive Abilities."
-    },
+    
     {
         "_id": 49,
         "name": "mPCQ",

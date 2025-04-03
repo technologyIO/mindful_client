@@ -7,7 +7,7 @@ const TakeTest = () => {
      <div>
                         <h1 className='text-2xl  text-center font-sans font-semibold'>
                             {/* {allSection?.section2?.para1} */}
-                            Not sure where to begin?
+                            Not sure what you need?
                         </h1>
                         {/* <p className='text-center font-semibold text-lg'>Take our self-assessment</p> */}
                     </div>
@@ -22,7 +22,7 @@ const TakeTest = () => {
     <div className='flex justify-center'>
         <Link href="/assesment">
             <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 font-semibold text-sm text-white'>
-            TAKE OUR FREE TEST
+            Start Self Test
             </button>
         </Link>
     </div>

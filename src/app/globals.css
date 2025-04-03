@@ -66,13 +66,31 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EF6623;
+  background: #ffb590;
   ;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #EF6623;
+  background: #ffa374;
   ;
+}
+
+.thin-scroller::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+  border-radius: 0px;
+}
+
+.thin-scroller::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.thin-scroller::-webkit-scrollbar-thumb {
+  background: #EF6623;
+}
+
+.thin-scroller::-webkit-scrollbar-thumb:hover {
+  background: #EF6623;
 }
 
 /* Other global styles */

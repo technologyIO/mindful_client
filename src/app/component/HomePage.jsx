@@ -220,7 +220,7 @@ const HomePage = ({ allSection }) => {
                                             src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75"
                                             style={{ color: 'transparent', maxWidth: '100%', height: 'auto' }}
                                         />
-                                        <p className="text- font-semibold text-center">Assessment</p>
+                                        <p className="text- font-semibold text-center">Clinical Assessment</p>
                                     </a>
                                     <a className="flex flex-col shadow-lg rounded-lg py-2 hover:shadow-xl cursor-pointer justify-center items-center mb-2" href="/pages/tms">
                                         <img
@@ -488,7 +488,7 @@ const HomePage = ({ allSection }) => {
                                                 src="/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2FiconsNew%2Fassessment.webp%3FupdatedAt%3D1733748342966&w=256&q=75"
                                             />
                                         </div>
-                                        <p className="text-xl text-center font-semibold">Assessments</p>
+                                        <p className="text-xl text-center font-semibold">Clinical Assessments</p>
                                     </a>
                                     <a className="flex cursor-pointer flex-col justify-center items-center text-center" href="/pages/tms">
                                         <div className="w-[150px] h-[150px] flex justify-center">

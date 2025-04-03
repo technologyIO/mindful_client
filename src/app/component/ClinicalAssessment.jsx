@@ -9,9 +9,9 @@ const ClinicalAssessment = () => {
             <>
                 <div className="mx-auto py-8 ">
                     {/* Main Heading */}
-                    <div className="text-center  px-4 mb-8 ">
+                    <div className="text-start  px-4 mb-8 ">
                         <h1 className="text-2xl font-bold text-primary-orange mb-2">Comprehensive Clinical Assessments</h1>
-                        <p className="text-gray-600">Whether for a diagnosis or progress tracking, our therapists and RCI-certified Clinical Psychologists will provide you with evidence-based, effective care that is customized to meet your needs.</p>
+                        <p className="text-gray-600 text-start">Whether for a diagnosis or progress tracking, our therapists and RCI-certified Clinical Psychologists will provide you with evidence-based, effective care that is customized to meet your needs.</p>
                     </div>
 
                     <div className="flex justify-center md:justify-start mb-5">
@@ -70,7 +70,7 @@ const ClinicalAssessment = () => {
                     {/* Main Heading */}
                     <div className="text-center  px-4 mb-8 ">
                         <h1 className="text-4xl font-bold text-primary-orange mb-2">Comprehensive Clinical Assessments</h1>
-                        <p className="text-xl text-gray-600">Whether for a diagnosis or progress tracking, our therapists and RCI-certified Clinical Psychologists will provide you with evidence-based, effective care that is customized to meet your needs.</p>
+                        <p className="text-xl text-start text-gray-600">Whether for a diagnosis or progress tracking, our therapists and RCI-certified Clinical Psychologists will provide you with evidence-based, effective care that is customized to meet your needs.</p>
                     </div>
 
                     <div className="flex justify-center  mb-6">
@@ -86,7 +86,9 @@ const ClinicalAssessment = () => {
                     <div className='text-center mb-6 mt-6 font-semibold'>
                         <p className="text-gray-600 text-xl">We offer over 90 assessments </p>
                     </div>
+                    <div className=''>
                     <AllTestWithSearch />
+                    </div>
 
                     <div className='flex justify-center '>
                         <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />

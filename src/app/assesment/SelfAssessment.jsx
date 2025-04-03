@@ -2,7 +2,7 @@
 
 import { Container } from "@mui/material";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 const tests = [
     {
         title: "PHQ-9 Depression Test",
@@ -84,6 +84,16 @@ const SelfAssesment = () => {
     const router = useRouter();
     const test = tests.find((t) => t.id === slugs);
     const [isChecked, setChecked] = useState(false);
+
+    useEffect(() => {
+        if (slugs === "phq9") {
+          router.replace("/assesment/depression/selfAssesment");
+        } else if (slugs === "gad7") {
+          router.replace("/assesment/anxiety/selfAssesment");
+        } else if (slugs === "pss10") {
+          router.replace("/assesment/stress/selfAssesment");
+        }
+      }, [slugs, router]);
 
     return (
         <Container maxWidth="lg">

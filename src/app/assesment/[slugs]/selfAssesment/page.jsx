@@ -37,7 +37,7 @@ export const generateMetadata = ({params})=>{
 }
 
 const SelfAssesment = ({params}) => {
-    console.log("prams", params)
+    // console.log("prams", params)
     return (
        <SelfAssessment/>
     );

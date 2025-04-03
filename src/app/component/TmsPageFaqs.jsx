@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 import { Container } from '@mui/material';
-
+ 
 const TmsPageFaqs = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [expanded, setExpanded] = useState({});

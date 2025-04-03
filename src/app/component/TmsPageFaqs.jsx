@@ -82,8 +82,8 @@ const TmsPageFaqs = () => {
                                             <div className='flex justify-center '>
                                                 <div onClick={(e)=>e.stopPropagation()}>
                                                 <TestRequestAppointmentGeneral>
-                                                    <div className="flex justify-center items-center gap-4 text-sm text-gray-600 border bg-gray-100 shadow-md hover:shadow-sm px-3 py-1 rounded-lg hover:bg-gray-100">
-                                                        <Image src="/tmsPage/faq/button.png" alt="button" width={100} height={100}  className='h-5 w-5'/>
+                                                    <div className="flex justify-center items-center gap-4 text-sm text-orange-600 border bg-orange-100 shadow-md hover:shadow-sm px-3 py-1 rounded-lg ">
+                                                        {/* <Image src="/tmsPage/faq/button.png" alt="button" width={100} height={100}  className='h-5 w-5'/> */}
                                                         Book an rTMS Consultation
                                                     </div>
                                                 </TestRequestAppointmentGeneral>

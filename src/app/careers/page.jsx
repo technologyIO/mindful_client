@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
+// import { ChevronDownIcon } from '@heroicons'
 import { Container } from '@mui/material'
 
 export default function CareersPage() {
@@ -47,11 +47,12 @@ export default function CareersPage() {
               >
                 <div className="flex justify-between items-center">
                   <h2 className="text-lg md:text-2xl font-semibold text-orange-900">{job.title}</h2>
-                  <ChevronDownIcon
-                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
+                  <svg className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
                       openIndexes.includes(index) ? 'rotate-180' : ''
-                    }`}
-                  />
+                    }`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+
                 </div>
               </button>
               {openIndexes.includes(index) && (

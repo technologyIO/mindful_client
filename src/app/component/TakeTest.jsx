@@ -5,10 +5,12 @@ const TakeTest = () => {
   return (
     <section className='py-5'>
      <div>
-                        <h1 className='text-2xl  text-center font-sans font-semibold'>
+                        <h1 className='text-2xl  text-center font-sans font-semibold mb-3'>
                             {/* {allSection?.section2?.para1} */}
                             Not sure what you need?
                         </h1>
+                        <p className='text-base text-center px-3 '>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
+
                         {/* <p className='text-center font-semibold text-lg'>Take our self-assessment</p> */}
                     </div>
 

@@ -106,7 +106,7 @@ const MobileView = () => {
                         <p className="text-lg md:text-xl text-gray-600 mb-4">
                         Discover a safe space with our experienced therapists and psychologists.</p>
                         <p className="text-lg md:text-xl text-gray-600 mb-8">
-                        We provide a safe space to talk our experts and overcome your challenges with confidence.</p>
+                        We provide a safe space to talk to our experts and overcome your challenges with confidence.</p>
                         <div className="flex justify-center md:justify-start">
                             <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
@@ -176,7 +176,7 @@ const DesktopView = () => {
                         <p className="text-lg md:text-xl text-gray-600 mb-3">
                             Discover a safe space with our experienced therapists and psychologists.</p>
                             <p className='text-lg md:text-xl text-gray-600 mb-8'>
-                                We provide a safe space to talk our experts and overcome your challenges with confidence.
+                                We provide a safe space to talk to our experts and overcome your challenges with confidence.
                             </p>
 
                         <div className="flex justify-center md:justify-start">
@@ -241,7 +241,7 @@ const DesktopView = () => {
                                     Not sure what you need?
                                 </h1>
                                 <br />
-                                <p className='text-xl text-center'>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
+                                <p className='text-xl text-start'>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
                             </div>
                             {/* right section box */}
                             {/* right section box is under that is under underline ant */}

@@ -10,7 +10,7 @@ const locations = [
     name: "Aster CMI",
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc",
     area: "Bangalore North",
-    bgColor: "bg-primary-orange",
+    bgColor: "bg-orange-500",
     location: "Banglore Aster CMI",
     redirect: "Bengaluru-Hebbal",
     whatsapp: +919663095632,
@@ -34,7 +34,7 @@ const locations = [
     name: "Greater Kailash 1",
     iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4",
     area: "Delhi",
-    bgColor: "bg-primary-orange",
+    bgColor: "bg-orange-500",
     redirect: "New-Delhi",
     location: "Delhi",
     whatsapp: +919663095632,
@@ -51,7 +51,7 @@ function Footer() {
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
 
   const LocationCard = ({ location }) => (
-    <div style={{ backgroundColor: location.bgColor }} className={`${location.bgColor} py-3 px-3 rounded-lg shadow-lg select-none min-w-[270px]`}>
+    <div style={{ backgroundColor: location.bgColor }} className={`${location.bgColor} py-3 px-3 rounded-lg shadow-lg select-none min-w-[250px]`}>
       <div className='flex flex-col justify-center items-center text-white mb-2'>
         <h1 className='text-2xl font-semibold'>{location.area}</h1>
         <p className='font-semibold text-sm'>{location.name}</p>
@@ -125,8 +125,8 @@ function Footer() {
           </div>
         )}
       </div>
-      <div className="flex justify-center mb-3">
-        <p className="text-primary-orange text-sm text-center">
+      <div className="flex justify-center mb-3 text-start">
+        <p className="text-primary-orange text-sm  px-2">
           For queries related to careers <Link href="/careers">
             < span className="underline"> Click here </span> to  Explore Career Opportunities
           </Link>
@@ -134,8 +134,8 @@ function Footer() {
         </p>
       </div>
 
-      <div className="flex justify-center mb-3">
-        <p className="text-primary-orange text-sm text-center">
+      <div className="flex justify-center mb-3 text-start">
+        <p className="text-primary-orange text-sm  px-2">
           Copyright © 2024 MindfulTMS | All rights reserved. Developed and Maintained by <Link className="underline" href="https://insideoutconsult.com/">InsideOut</Link>
         </p>
       </div>

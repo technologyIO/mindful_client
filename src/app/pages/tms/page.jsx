@@ -5,8 +5,8 @@ export async function generateMetadata() {
 
 
   return {
-   title: 'Mindful TMS | rTMS Therapy',
-   description:`Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS.`,
+   title: 'rTMS Treatment in Bengaluru & Delhi | Mindful TMS Clinics',
+   description:`Mindful TMS offers safe, medication-free rTMS treatment for depression, anxiety, OCD, chronic pain, trauma, and nicotine addiction in Bengaluru and Delhi.`,
  };
 
 }

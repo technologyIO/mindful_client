@@ -5,8 +5,8 @@ export async function generateMetadata() {
 
 
     return {
-     title: 'Expert Psychiatric Services | Mental Health Care',
-     description:`Our experienced psychiatrists offer personalized treatment plans and medication management to help you navigate your mental health journey.`,
+     title: 'Experienced Psychiatrists in Bengaluru & Delhi | Mindful TMS',
+     description:`Our expert psychiatrists offer confidential, personalized psychiatric care with medication management. We treat anxiety, depression, OCD, ADHD & more in Bengaluru & Delhi`,
    };
   
   }

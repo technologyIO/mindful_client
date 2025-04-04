@@ -5,6 +5,7 @@ import TakeTest from './TakeTest'
 import AllTherapyWithSearch from './AllTherapyWithSearch'
 import Link from 'next/link'
 import Image from 'next/image'
+import OurDoctorSectionTherapyPage from './OurDoctorTherapyPage'
 const conditions = [
     {
         id: 1,
@@ -91,30 +92,38 @@ const conditionBubble = [
 const MobileView = () => {
     return (
         <>
-            <div maxWidth="lg" className="mt-8">
+            <div maxWidth="lg" className="mt-8 px-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
-                    {/* Text Section */}
-                    <div className="text-center md:text-left mx-2">
-                        <h1 className="text-3xl md:text-[38px] font-semibold leading-snug text-primary mb-6">
-                            Personalised Therapy for a Healthier You
-                        </h1>
-                        <p className="text-lg md:text-xl text-gray-600 mb-8">
-                            Discover a safe space with our experienced therapists. We offer tailored support to help you overcome challenges with confidence. </p>
-                        <div className="flex justify-center md:justify-start">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
-                        </div>
-                    </div>
-
                     {/* Image Section */}
                     <div className="flex justify-center">
                         <img className="w-full md:w-[400px] lg:w-[450px] transition-transform duration-300 transform hover:scale-105" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
                     </div>
+                    {/* Text Section */}
+                    <div className="text-start md:text-left mx-2">
+                        <h1 className="text-3xl md:text-[38px] font-bold leading-snug text-primary mb-6">
+                            Personalised Therapy for a Healthier You
+                        </h1>
+                        <p className="text-lg md:text-xl text-gray-600 mb-4">
+                            Discover a safe space with our experienced therapists and psychologists.</p>
+                        <p className="text-lg md:text-xl text-gray-600 mb-8">
+                            We provide a safe space to talk to our experts and overcome your challenges with confidence.</p>
+                        <div className="flex justify-center md:justify-start">
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
+            {/* our experts */}
+            <div className='bg-primary-div'>
+                <Container maxWidth="lg">
+                    <OurDoctorSectionTherapyPage designation={"psychologist"} />
+                </Container>
+            </div>
 
-
-            <div className="max-w-4xl mx-auto px-4 pt-4 pb-[50px]">
+            <div className="max-w-4xl mx-auto px-4 pt-4 pb-4">
 
                 <h2 className="text-xl font-semibold text-gray-900 mb-6 text-center">
                     {`   MindfulTMS's experts specialise in treating a variety of conditions`}
@@ -132,6 +141,11 @@ const MobileView = () => {
                         <span>and more...</span>
                     </div>
                 </div>
+                <div className="flex justify-center md:justify-center mt-6">
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                        </div>
+
+
             </div>
 
             {/* Take Test */}
@@ -156,28 +170,39 @@ const MobileView = () => {
 const DesktopView = () => {
     return (
         <>
-            <Container maxWidth="lg" className="mt-8 mb-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
-                    {/* Text Section */}
-                    <div className="text-center md:text-left mx-2">
-                        <h1 className="text-4xl md:text-[38px] font-bold leading-snug text-primary mb-6">
-                            Personalised Therapy for a Healthier You
-                        </h1>
-                        <p className="text-lg md:text-xl text-gray-600 mb-8">
-                            Discover a safe space with our experienced therapists. We offer tailored support to help you overcome challenges with confidence. </p>
-                        <div className="flex justify-center md:justify-start">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
+            <div className='bg-primary-div p-6'>
+                <Container maxWidth="lg" className="mt-8 mb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
+                        {/* Text Section */}
+                        <div className="text-center md:text-left mx-2">
+                            <h1 className="text-4xl md:text-[38px] font-bold leading-snug text-primary mb-6">
+                                Personalised Therapy for a Healthier You
+                            </h1>
+                            <p className="text-lg md:text-xl text-gray-600 mb-3">
+                                Discover a safe space with our experienced therapists and psychologists.</p>
+                            <p className='text-lg md:text-xl text-gray-600 mb-8'>
+                                We provide a safe space to talk to our experts and overcome your challenges with confidence.
+                            </p>
+
+                            <div className="flex justify-center md:justify-start">
+                                <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
+                            </div>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="flex justify-center">
+                            <img className="w-full md:w-[400px] lg:w-[450px] rounded-xl shadow-lg" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
                         </div>
                     </div>
+                </Container>
+            </div>
 
-                    {/* Image Section */}
-                    <div className="flex justify-center">
-                        <img className="w-full md:w-[400px] lg:w-[450px] rounded-xl shadow-lg" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
-                    </div>
-                </div>
-            </Container>
-
-
+            {/* our experts */}
+            <div className=''>
+                <Container maxWidth="lg">
+                    <OurDoctorSectionTherapyPage designation={"psychologist"} />
+                </Container>
+            </div>
 
             <div className='bg-primary-div'>
                 <Container maxWidth="lg" >
@@ -186,21 +211,24 @@ const DesktopView = () => {
                         <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
                             {`   MindfulTMS's experts specialise in treating a variety of conditions`}
                         </h2>
-                      <div className='flex justify-center'>
-                      <div className="flex flex-wrap w-[80%] items-center justify-center gap-4 ">
-                            {conditionBubble.map((condition) => (
-                                <div
-                                    key={condition.name}
-                                    className="flex items-center bg-green-100 text-base text-gray-700 px-4 py-2 rounded-full"
-                                >
-                                    <span className=''>{condition.name}</span>
-                                </div>
-                            ))}
-                            {/* <div className="flex items-center text-sm bg-green-100 text-gray-700 px-4 py-2 rounded-full">
+                        <div className='flex justify-center'>
+                            <div className="flex flex-wrap w-[80%] items-center justify-center gap-4 ">
+                                {conditionBubble.map((condition) => (
+                                    <div
+                                        key={condition.name}
+                                        className="flex items-center bg-green-100 text-base text-gray-700 px-4 py-2 rounded-full"
+                                    >
+                                        <span className=''>{condition.name}</span>
+                                    </div>
+                                ))}
+                                {/* <div className="flex items-center text-sm bg-green-100 text-gray-700 px-4 py-2 rounded-full">
                      <span>and more...</span>
                  </div> */}
+                            </div>
                         </div>
-                      </div>
+                        <div className="flex justify-center md:justify-center mt-6">
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                        </div>
                     </div>
                 </Container>
             </div>
@@ -218,10 +246,10 @@ const DesktopView = () => {
                         <div className='flex flex-col justify-center items-center  h-full'>
                             <div className='mb-8'>
                                 <h1 className='text-4xl  text-center font-sans mb-4 font-semibold'>
-                                    Want a bit more clarity?
+                                    Not sure what you need?
                                 </h1>
                                 <br />
-                                <p className='text-xl text-center'>These tests can help identify what you may have and need.</p>
+                                <p className='text-xl text-gray-700 text-start ml-[70px]'>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
                             </div>
                             {/* right section box */}
                             {/* right section box is under that is under underline ant */}
@@ -233,7 +261,7 @@ const DesktopView = () => {
                                 <div className='flex justify-center mt-5'>
                                     <Link href={"/assesment"}>
                                         <button className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-12 py-3 font-semibold text-lg text-white'>
-                                            Start Test
+                                            Start Self Test
                                         </button>
                                     </Link>
                                 </div>

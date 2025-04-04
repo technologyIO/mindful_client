@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
+import TestRequestAppointmentGeneral from '../clinicLocation/[city]/RequestAppointmentGeneral';
 
 const AllTherapyWithSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -67,17 +68,7 @@ const AllTherapyWithSearch = () => {
                                     </h3>
                                     {/* Arrow Icon */}
                                    <div>
-                                   {/* <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className={`w-6 h-6 transform transition-transform ${
-                                            expanded[test._id] ? 'rotate-0' : 'rotate-180'
-                                        }`}
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="#26303e"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                                    </svg> */}
+                                 
                                     <svg className={`w-6 h-6 transform transition-transform ${
                                             expanded[test._id] ? 'rotate-180' : 'rotate-0'
                                         }`} fill="#ff0000" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" space="preserve" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M0,0v512h512V0H0z M420.416,207.083L271.083,356.416c-4.16,4.16-9.621,6.251-15.083,6.251 c-5.462,0-10.923-2.091-15.083-6.251L91.584,207.083c-8.341-8.341-8.341-21.824,0-30.165c8.341-8.341,21.824-8.341,30.165,0 L256,311.168l134.251-134.251c8.341-8.341,21.824-8.341,30.165,0C428.757,185.259,428.757,198.741,420.416,207.083z"></path> </g> </g> </g></svg>
@@ -85,9 +76,22 @@ const AllTherapyWithSearch = () => {
                                    </div>
                                 </div>
                                 {expanded[test._id] && (
+                                   <>
                                     <div className='p-2'>
                                         <div dangerouslySetInnerHTML={{ __html: test.detail }} />
                                     </div>
+                                    <div className='flex justify-center pb-2'>
+                                                <div onClick={(e)=>e.stopPropagation()}>
+                                                <TestRequestAppointmentGeneral>
+                                                    <div className="flex justify-center items-center gap-4 text-sm text-orange-600 border bg-orange-100 font-semibold shadow-md hover:shadow-sm px-3 py-1 rounded-lg hover:bg-orange-100">
+                                                        {/* <Image src="/tmsPage/faq/button.png" alt="button" width={100} height={100}  className='h-5 w-5'/> */}
+                                                        Book a Therapy Session
+                                                    </div>
+                                                </TestRequestAppointmentGeneral>
+                                                </div>
+                                               
+                                            </div>
+                                   </>
                                 )}
                             </div>
                         ))

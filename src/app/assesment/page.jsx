@@ -6,6 +6,16 @@ import TakeAssessment from './TakeAssessment'
 import {assesmentPageSection} from '@/example'
 import axios from 'axios'
 
+
+export async function generateMetadata() {
+
+
+    return {
+     title: 'Free Mental Health Self Assessments | Mindful TMS',
+     description:`Evaluate your mental well-being with Mindful TMS's free self-assessment tools for depression, anxiety, and stress. Gain insights and take the first step toward better mental health.`,
+   };
+  
+  }
 const AvailableTest = [
     {
         id: 1,

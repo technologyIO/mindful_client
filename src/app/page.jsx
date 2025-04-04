@@ -12,8 +12,8 @@ export async function generateMetadata() {
 
 
   return {
-   title: 'Mindful TMS: Advanced rTMS Treatment for Depression, Anxiety, and OCD',
-   description:`Experience non-invasive, medication-free rTMS therapy at Mindful TMS. Our experts provide personalized care for depression, anxiety, OCD, and more across multiple locations in India and the USA.`,
+   title: 'Mindful TMS: rTMS | Therapists | Psychiatrists | Holistic Care',
+   description:`Discover safe, medication-free rTMS treatment for depression, anxiety, and OCD in Delhi and Bengaluru. We also offer therapy, assessments and neurofeedback.`,
  };
 
 }

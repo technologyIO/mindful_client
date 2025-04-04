@@ -257,7 +257,7 @@ const AdsPage2 = ({ params }) => {
       </section>
     );
   };
-
+ 
 
   const SymptomsSection = () => {
     const symptoms = [

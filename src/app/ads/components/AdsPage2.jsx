@@ -17,6 +17,7 @@ import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import { adsPageContent } from '@/adsPageContent'
 import DoctorsSection from './DoctorsSection'
 import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
+import axios from 'axios'
 const AdsPage2 = ({ params }) => {
 
   const experts = [
@@ -65,7 +66,7 @@ const AdsPage2 = ({ params }) => {
   const condition = params.condition == "general" ? "" : params.condition || ""
   const current_condition = params.condition
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
-
+  const [doctors, setDoctors] = useState([]);
   const upperCaseCondition = ['ocd']
   // for zoho
   const iframeSrc =
@@ -85,6 +86,34 @@ const AdsPage2 = ({ params }) => {
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
   console.log(expertService)
+
+
+  useEffect(()=>{
+    if(expertService!="general"){
+      let designation;
+      if (expertService === "psychologist") {
+        designation = "Psychologist";
+      } else if (expertService === "psychiatrist") {
+        designation = "Psychiatrist";
+      } else {
+        designation = expertText === "therapist" ? "Psychologist" : expertText;
+      }
+      axios
+        .get(
+          `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
+        )
+        .then((res) => {
+          // const map = res.data.map((i)=>i._id)
+          // console.log(map)
+          setDoctors(res.data);
+          // setLoading(false);
+        })
+        .catch((err) => {
+          console.error("Error fetching doctors:", err);
+          // setLoading(false);
+        });
+    }
+  },[expertService])
 
   const locationContent = {
     "gk": {
@@ -356,7 +385,7 @@ const AdsPage2 = ({ params }) => {
       {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
 
-        <TestimonialComponentSlideV2 smallDevice={true} location={location} />
+        <TestimonialComponentSlideV2 smallDevice={true} location={location} doctorArray={doctors.length>0?doctors:[]} />
 
       </section>
 

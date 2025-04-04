@@ -169,6 +169,7 @@ export default function TestimonialComponentSlideV2({
     mobileView,
     smallDevice,
     doctor,
+    doctorArray,
     // experts
 }) {
     const pathname = usePathname();
@@ -218,16 +219,28 @@ export default function TestimonialComponentSlideV2({
         };
     }, [isQuoteModal]);
     // Fetch testimonials from the API
+    
     const fetchTestimonials = async () => {
         setLoading(true);
         let apiUrl = '';
-        if (doctor) {
+        let requestData = {};
+
+        if (doctorArray && doctorArray.length > 0) {
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/getAllTestimonials/DoctorArray`;
+            requestData = { doctorIds: doctorArray.map(doc => doc._id) };
+        } else if (doctor) {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`;
         } else {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`;
         }
+    
         try {
-            const response = await axios.get(apiUrl);
+             let response;
+        if (doctorArray && doctorArray.length > 0) {
+            response = await axios.post(apiUrl, requestData);
+        } else {
+            response = await axios.get(apiUrl);
+        }
             setLoading(false);
             setTestimonials(response.data || []);
         } catch (error) {
@@ -242,7 +255,7 @@ export default function TestimonialComponentSlideV2({
         } else {
             fetchTestimonials();
         }
-    }, [pathname, condition, location, doctor]);
+    }, [pathname, condition, location, doctor, doctorArray]);
 
     useEffect(() => {
         if (pathname === "/") {

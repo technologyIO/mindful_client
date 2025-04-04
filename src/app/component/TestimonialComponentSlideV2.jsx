@@ -231,7 +231,7 @@ export default function TestimonialComponentSlideV2({
         } else if (doctor) {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`;
         } else {
-            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials?condition=${condition || ""}&location=${location || ""}`;
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials/by-location?location=${location || ""}`;
         }
     
         try {

@@ -1,12 +1,15 @@
 import React from 'react'
 import AdsPage from '../../../components/AdsPage'
 
-export async function generateMetadata({params}) {
+export async function generateMetadata({ params }) {
   return {
-   title: `Mindful TMS | Break Free from ${params.condition}`,
-   description:`Break Free from ${params.condition}. Our compassionate and skilled Psychologists will help you understand your ${params.condition}, learn effective coping mechanisms and achieve positive change.`,
- };
-
+    title: `Mindful TMS | Break Free from ${params.condition}`,
+    description: `Break Free from ${params.condition}. Our compassionate and skilled Psychologists will help you understand your ${params.condition}, learn effective coping mechanisms and achieve positive change.`,
+    robots: {
+      index: false,
+      follow: false,
+    },
+  }
 }
 const page = ({params}) => {
   return (

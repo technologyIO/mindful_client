@@ -9,7 +9,7 @@ const TakeTest = () => {
                             {/* {allSection?.section2?.para1} */}
                             Not sure what you need?
                         </h1>
-                        <p className='text-base text-center px-3 '>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
+                        <p className='text-base text-start px-3 '>These self tests can help you understand you are suffering from depression, anxiety, or stress.</p>
 
                         {/* <p className='text-center font-semibold text-lg'>Take our self-assessment</p> */}
                     </div>

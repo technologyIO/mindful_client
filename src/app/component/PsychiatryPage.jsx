@@ -33,14 +33,14 @@ const PsychiatryPage = () => {
                  <div className='mt-8'>
                 {/* Main Heading */}
                 <Container maxWidth="lg">
-                    <div className='px-3 text-center'>
+                    <div className='px-3 text-start'>
                         <h1 className='text-3xl md:text-5xl text-gray-700 font-bold'>
                             Expert Psychiatric Services
                         </h1>
                         <p className='text-lg md:text-xl text-gray-600 mt-4 mb-5'>
                             {` Our experienced psychiatrists offer personalized treatment plans and medication management to help you navigate your mental health journey.`}
                         </p>
-                        <div className="flex justify-center ">
+                        <div className="flex justify-start ">
                             <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>

@@ -13,7 +13,6 @@ const EditDoctorDetail = () => {
   const [newLanguage, setNewLanguage] = useState("");
   const [newProfessionBackground, setNewProfessionBackground] = useState("");
   const [loading, setLoading] = useState(false);
-  const [location, setLocation] = useState(""); // New location field
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   const doctorId = pathname.split("/").pop();
@@ -39,6 +38,7 @@ const EditDoctorDetail = () => {
       setFormData({
         name: "",
         about: "",
+        designation: "",
         profession_background: [],
         language_spoken: [],
         specialization: [],
@@ -48,6 +48,9 @@ const EditDoctorDetail = () => {
         email: "",
         website: "",
         availability: [],
+        location: "",
+        metaTitle: "",         // New meta title field
+        metaDescription: "",   // New meta description field
       });
     } else {
       // Pre-fill form data with existing doctor details
@@ -275,17 +278,17 @@ const EditDoctorDetail = () => {
         </div>
 
         <div className="px-6 py-4 border-t">
-        <label className="block mt-3 text-gray-600">
-        <h3 className="text-xl font-bold text-primary-orange">About <span className="text-red-500">*</span></h3>
-              <textarea
-                name="about"
-                value={formData?.about}
-                onChange={handleChange}
-                className="w-full mt-2 border-2 border-gray-200 outline-none p-2 rounded"
-                placeholder="Write a short description about the doctor"
-                rows="8"
-              />
-            </label>
+          <label className="block mt-3 text-gray-600">
+            <h3 className="text-xl font-bold text-primary-orange">About <span className="text-red-500">*</span></h3>
+            <textarea
+              name="about"
+              value={formData?.about}
+              onChange={handleChange}
+              className="w-full mt-2 border-2 border-gray-200 outline-none p-2 rounded"
+              placeholder="Write a short description about the doctor"
+              rows="8"
+            />
+          </label>
           <h3 className="text-xl font-bold text-primary-orange">Location <span className="text-red-500">*</span></h3>
           <select
             name="location"
@@ -418,11 +421,35 @@ const EditDoctorDetail = () => {
           </div>
         </div>
 
-        <div className="py-8 px-4">
-          <div>
-            <h1 className="text-2xl text-primary-orange text-center mb-4 font-semibold">Testimonials</h1>
-          </div>
+        <div className="px-6 py-4 border-t">
+          <h1 className="text-2xl text-primary-orange text-center mb-4 font-semibold">Testimonials</h1>
           {/* <TestimonialComponent /> */}
+        </div>
+
+        {/* New Meta Fields */}
+        <div className="px-6 py-4 border-t">
+          <label className="block text-gray-600">
+            Meta Title
+            <input
+              type="text"
+              name="metaTitle"
+              value={formData?.metaTitle}
+              onChange={handleChange}
+              className="w-full mt-2 border p-2 rounded"
+              placeholder="Enter meta title"
+            />
+          </label>
+          <label className="block mt-3 text-gray-600">
+            Meta Description
+            <textarea
+              name="metaDescription"
+              value={formData?.metaDescription}
+              onChange={handleChange}
+              className="w-full mt-2 border p-2 rounded"
+              placeholder="Enter meta description"
+              rows="4"
+            />
+          </label>
         </div>
 
         <div className="px-6 py-4 border-t text-center">

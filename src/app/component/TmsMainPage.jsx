@@ -98,18 +98,18 @@ const TmsMainPage = () => {
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">
-                            <h3 className="text-3xl font-bold text-gray-800 mb-4 text-center">
+                            <h3 className="text-3xl font-bold text-gray-800 mb-4 text-start">
                                 {`Repetitive Transcranial Magnetic Stimulation (rTMS)`}
                             </h3>
-                            <p className='text-gray-600 text-center'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
+                            <p className='text-gray-600 text-start'>Repetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive and safe treatment for depression, OCD, anxiety, chronic pain and various other psychological and neurological conditions at MindfulTMS. We exclusively offer rTMS as our primary modality for treatment, ensuring you receive the most advanced and tailored care available.  </p>
                             <div className="py-5 md:h-[360px]">
                                 <Image alt="img"  width={500} height={500}  src="/tmsPage/mindful_rtms.webp" className="object-cover h-full" />
                             </div>
-                            <p className="text-gray-700 text-md text-center mb-2">
+                            <p className="text-gray-700 text-md text-start mb-2">
                                 {`rTMS uses magnetic pulses to increase or inhibit activity of specific areas of the brain that are not functioning normally.  `}
 
                             </p>
-                            <p className="text-gray-700 text-md text-center mb-4">
+                            <p className="text-gray-700 text-md text-start mb-4">
                                 {`For example, in the case of depression, the brain activity is decreased. With targeted rTMS, the activity in these areas increases.  `}
 
                             </p>
@@ -245,7 +245,7 @@ const TmsMainPage = () => {
 
 
                         <div className='flex pt-10 justify-center '>
-                            <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
+                            <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-xl font-semibold"} />
                         </div>
 
                     </div>
@@ -431,7 +431,7 @@ const TmsMainPage = () => {
 
 
                         <div className='flex pt-10 justify-center '>
-                            <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
+                            <RequestAppointment name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 hover:shadow-lg active:shadow-sm active:bg-orange-600 rounded-lg px-10 py-4 text-white text-xl font-bold"} />
                         </div>
 
                     </div>

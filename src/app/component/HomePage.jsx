@@ -96,7 +96,7 @@ const HomePage = ({ allSection }) => {
 
                                         </div>
 
-                                        <p className='mb-0 mt-5  text-[16px] px-6  text-center text-[#737373]'>With empathy and confidence,
+                                        <p className='mb-0 mt-5  text-[16px] px-6  text-start text-[#737373]'>With empathy and confidence,
                                             our professionals will guide you
                                             through every challenge. </p>
 
@@ -158,10 +158,11 @@ const HomePage = ({ allSection }) => {
                                     <CounterComponent />
                                 </div>
                                 <div>
-                                    <p className='text-center mb-8 text-gray-700 text-lg font-semibold'><strong>Is rTMS for me?</strong> <br />Learn how it works and
+                                    <p className='text-center  text-gray-700 text-lg font-semibold'><strong className='text-center'>Is rTMS for me?</strong> </p>
+                                    <p className='text-start mb-6'>Learn how it works and
                                         if it is the right option for you.</p>
                                 </div>
-                                <div className='flex justify-center'>
+                                <div className='flex justify-center '>
                                     <Link href={"/pages/tms"} className='bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 font-semibold text-sm text-white'>
                                         {/* {allSection?.section3?.button?.text} */}
                                         MORE ABOUT TMS
@@ -172,7 +173,6 @@ const HomePage = ({ allSection }) => {
                     </section>
                     
                     {/* services */}
-
                     <section className="py-5 px-4">
                         <div>
                             <div className="mb-5">
@@ -263,11 +263,7 @@ const HomePage = ({ allSection }) => {
                         </div>
                     </section>
 
-
-                   
-
                     {/* wy tms */}
-
                     <section className="py-8 px-4 mb-3">
                         <div className="mb-8">
                             <h1 className="text-[27px] whitespace-nowrap text-center">

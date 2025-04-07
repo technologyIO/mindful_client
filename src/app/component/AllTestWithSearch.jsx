@@ -8,7 +8,7 @@ import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 const AllTestWithSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expanded, setExpanded] = useState({});
-  const [testsToShow, setTestsToShow] = useState(4);
+  const [testsToShow, setTestsToShow] = useState(6);
 
   // Use media query to determine if it's a mobile device.
   const isMobile = useMediaQuery('(max-width:768px)');
@@ -25,7 +25,7 @@ const AllTestWithSearch = () => {
   };
 
   const loadMoreTests = () => {
-    setTestsToShow((prev) => prev + 4);
+    setTestsToShow((prev) => prev + 6);
   };
 
   // Use the full filtered list on desktop; on mobile, show a limited list.
@@ -45,7 +45,7 @@ const AllTestWithSearch = () => {
           <div className="relative">
             <input
               type="text"
-              className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-4 pr-12 py-3 border-2 border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Search by assessment name..."
               value={searchTerm}
               onChange={handleSearchChange}
@@ -57,7 +57,7 @@ const AllTestWithSearch = () => {
         </div>
 
         {/* Search Results */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-h-[500px] thin-scroller overflow-y-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-h-[600px] thin-scroller overflow-y-auto">
           {testsToDisplay.length > 0 ? (
             testsToDisplay.map((test) => (
               <div
@@ -65,22 +65,22 @@ const AllTestWithSearch = () => {
                 className="bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 capitalize mb-2">
+                  <h3 className="text-lg font-semibold text-gray-800 capitalize ">
                     {test.name}
                   </h3>
                   {/* Small devices */}
-                  <p className="text-gray-600 text-sm md:hidden">
+                  {/* <p className="text-gray-600 text-sm md:hidden">
                     {expanded[test._id]
                       ? test.detail
                       : test.detail.substring(0, 50) + '...'}
-                  </p>
+                  </p> */}
                   {/* Large devices */}
-                  <p className="text-gray-600 text-sm hidden md:block">
+                  <p className="text-gray-600 text-sm ">
                     {test.detail}
                   </p>
                 </div>
-                <div className="mt-4 flex justify-end">
-                  <IconButton
+                <div className="mt-2 flex justify-end">
+                  {/* <IconButton
                     onClick={() => toggleExpand(test._id)}
                     className="text-blue-500"
                   >
@@ -93,7 +93,7 @@ const AllTestWithSearch = () => {
                         <ExpandMoreIcon /> <span className="ml-1 text-xs">Read more</span>
                       </>
                     ):null}
-                  </IconButton>
+                  </IconButton> */}
                 </div>
               </div>
             ))

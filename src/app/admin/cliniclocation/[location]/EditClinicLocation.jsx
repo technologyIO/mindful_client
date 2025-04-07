@@ -11,7 +11,9 @@ const EditClinicLocation = ({ data, saveData }) => {
         address: data?.address || '',
         googleMapLink: data?.googleMapLink || '',
         call: data?.call || '',
-        slug: data?.slug || ''
+        slug: data?.slug || '',
+        metaTitle: data?.metaTitle || '',          // New meta title field
+        metaDescription: data?.metaDescription || '' // New meta description field
     });
 
     const handleTabChange = (event, newValue) => {
@@ -67,9 +69,9 @@ const EditClinicLocation = ({ data, saveData }) => {
 
     return (
         <div className="p-6">
-        <div className='flex justify-end '>
-            <div onClick={()=>saveData(formData)} className='text-xl cursor-pointer hover:bg-green-400 hover:shadow-lg select-none font-semibold bg-green-500 text-white p-2 rounded-xl'>Save</div>
-        </div>
+            <div className='flex justify-end '>
+                <div onClick={() => saveData(formData)} className='text-xl cursor-pointer hover:bg-green-400 hover:shadow-lg select-none font-semibold bg-green-500 text-white p-2 rounded-xl'>Save</div>
+            </div>
             <Tabs
                 value={selectedTab}
                 onChange={handleTabChange}
@@ -133,6 +135,27 @@ const EditClinicLocation = ({ data, saveData }) => {
                                 value={formData.slug}
                                 onChange={handleInputChange}
                                 className="border-2 w-full rounded-xl p-2 text-xl border-gray-400 outline-none"
+                            />
+                        </div>
+                        {/* New Meta Fields */}
+                        <div className="mb-4">
+                            <label className="text-lg font-semibold">Meta Title</label>
+                            <input
+                                name="metaTitle"
+                                value={formData.metaTitle}
+                                onChange={handleInputChange}
+                                className="border-2 w-full rounded-xl p-2 text-xl border-gray-400 outline-none"
+                                placeholder="Enter meta title"
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="text-lg font-semibold">Meta Description</label>
+                            <textarea
+                                name="metaDescription"
+                                value={formData.metaDescription}
+                                onChange={handleInputChange}
+                                className="border-2 w-full rounded-xl p-2 text-xl border-gray-400 outline-none"
+                                placeholder="Enter meta description"
                             />
                         </div>
                     </div>

@@ -55,9 +55,23 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
     }
   }, [expertService, location, expertText]);
 
+  const ExpertStyle = {
+    "mobile":{
+      "image_div":"mb-2 h-[120px] w-[120px] md:h-[230px]  md:w-[230px]",
+      "doctor_name":"font-semibold text-lg text-gray-800 max-w-[150px]",
+      "designation":"text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]",
+    },
+    "desktop":{
+      "image_div":"mb-2 h-[230px] w-[230px]",
+      "doctor_name":"font-semibold text-lg text-gray-800 max-w-[150px]",
+      "designation":"text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]",
+    }
+  }
+
   if (loading) {
     return <p className="text-center">Loading...</p>;
   }
+
 
   return (
       <div className="mx-auto max-w-6xl">
@@ -80,12 +94,11 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   </h2>
                   <div className={`flex flex-wrap gap-4 justify-center `}>
                     {psychologists.map((doctor) => (
-                      <a
+                      <div
                         key={doctor._id}
                         className="flex flex-col items-center"
-                        href={`/doctor/${doctor._id}`}
                       >
-                        <div className="mb-2 h-[75px] w-[75px]">
+                        <div className={`${ExpertStyle["mobile"]["image_div"]}`}>
                           <img
                             className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                             src={doctor.image}
@@ -94,14 +107,14 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                           />
                         </div>
                         <div className="mb-1 text-center">
-                          <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                          <p className="font-semibold text-lg text-start text-gray-800 max-w-[150px]">
                             {doctor.name}
                           </p>
                           <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
-                      {`(${doctor.designation})`}
+                      {`${doctor.designation}`}
                     </label>
                         </div>
-                      </a>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -115,12 +128,11 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   </h2>
                   <div className="flex flex-wrap gap-4 justify-center">
                     {psychiatrists.map((doctor) => (
-                      <a
+                      <div
                         key={doctor._id}
                         className="flex flex-col items-center"
-                        href={`/doctor/${doctor._id}`}
                       >
-                        <div className="mb-2 h-[75px] w-[75px]">
+                        <div className={`${ExpertStyle["mobile"]["image_div"]}`}>
                           <img
                             className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                             src={doctor.image}
@@ -129,14 +141,14 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                           />
                         </div>
                         <div className="mb-1 text-center">
-                          <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                          <p className="font-semibold text-lg text-gray-800 max-w-[150px]">
                             {doctor.name}
                           </p>
                           <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
-                      {`(${doctor.designation})`}
+                      {`${doctor.designation}`}
                     </label>
                         </div>
-                      </a>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -161,12 +173,11 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   );
                 }
                 return allDoctors.map((doctor) => (
-                  <a
+                  <div
                     key={doctor._id}
                     className="flex flex-col items-center"
-                    href={`/doctor/${doctor._id}`}
                   >
-                    <div className="mb-2 h-[100px] w-[100px] lg:h-[110px] lg:w-[110px]">
+                    <div className="mb-2 h-[130px] w-[130px] md:h-[200px]  md:w-[200px]">
                       <img
                         className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                         src={doctor.image}
@@ -175,18 +186,16 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                       />
                     </div>
                     <div className="mb-1 text-center">
-                      <p className="font-semibold text-[16px] lg:text-[18px] text-gray-800 max-w-[200px]">
+                      <p className="font-semibold text-lg text-start lg:text-[18px] text-gray-800 max-w-[200px]">
                         {doctor.name}
                       </p>
                       {/* Designation below name */}
-                      <p className="text-[13px] lg:text-[15px] text-gray-900 max-w-[200px]">
-                        {doctor.title}
-                      </p>
+                    
                       <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
-                      {`(${doctor.designation})`}
+                      {`${doctor.designation}`}
                     </label>
                     </div>
-                  </a>
+                  </div>
                 ));
               })()}
             </div>
@@ -196,14 +205,13 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
           <>
             {/* MOBILE VERSION (< md) remains as grid */}
             <div className="block md:hidden">
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-wrap gap-6 justify-center">
                 {doctors.map((doctor) => (
-                  <a
+                  <div
                     key={doctor._id}
                     className="flex flex-col items-center"
-                    href={`/doctor/${doctor._id}`}
                   >
-                    <div className="mb-2 h-[75px] w-[75px]">
+                    <div className={`${ExpertStyle["mobile"]["image_div"]}`}>
                       <img
                         className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                         src={doctor.image}
@@ -212,14 +220,14 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                       />
                     </div>
                     <div className="mb-1 text-center">
-                      <p className="font-semibold text-sm text-gray-800 max-w-[150px]">
+                      <p className="font-semibold text-lg text-start text-gray-800 max-w-[150px]">
                         {doctor.name}
                       </p>
                       <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
-                      {`(${doctor.designation})`}
+                      {`${doctor.designation}`}
                     </label>
                     </div>
-                  </a>
+                  </div>
                 ))}
                 {doctors.length === 0 && (
                   <p className="text-center w-full mt-6">
@@ -232,12 +240,11 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
             {/* DESKTOP VERSION (≥ md): Use flex-wrap for centering */}
             <div className="hidden md:flex flex-wrap justify-center gap-[90px] ">
               {doctors.map((doctor) => (
-                <a
+                <div
                   key={doctor._id}
                   className="flex flex-col items-center"
-                  href={`/doctor/${doctor._id}`}
                 >
-                  <div className="mb-2 h-[100px] w-[100px] lg:h-[110px] lg:w-[110px]">
+                  <div className="mb-2 h-[130px] w-[130px] md:h-[200px]  md:w-[200px]">
                     <img
                       className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                       src={doctor.image}
@@ -246,17 +253,15 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                     />
                   </div>
                   <div className="mb-1 text-center">
-                    <p className="font-semibold text-[16px] lg:text-[18px] text-gray-800 max-w-[200px]">
+                    <p className="font-semibold text-lg text-start lg:text-[18px] text-gray-800 max-w-[200px]">
                       {doctor.name}
                     </p>
-                    <p className="text-[13px] lg:text-[15px] text-gray-900 max-w-[200px]">
-                      {doctor.title}
-                    </p>
+                    
                     <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
-                      {`(${doctor.designation})`}
+                      {`${doctor.designation}`}
                     </label>
                   </div>
-                </a>
+                </div>
               ))}
               {doctors.length === 0 && (
                 <p className="text-center w-full mt-6">

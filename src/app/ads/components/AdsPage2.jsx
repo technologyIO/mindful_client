@@ -3,15 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Container } from '@mui/material'
 import { useEffect, useState } from 'react'
-// import {
-//   ClipboardCheckIcon, BeakerIcon, UserIcon, ClockIcon,
-//   EmojiSadIcon,
-//   ExclamationIcon,
-//   RefreshIcon,
-//   LightningBoltIcon,
-//   AdjustmentsIcon,
-//   UserGroupIcon,
-// } from '@heroicons/react/outline'
+
 import TestimonialComponentSlideV2 from '@/app/component/TestimonialComponentSlideV2'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import { adsPageContent } from '@/adsPageContent'
@@ -20,33 +12,7 @@ import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
 const AdsPage2 = ({ params }) => {
 
-  const experts = [
 
-    {
-      id: "66ffa28f6a3f2ccdb194b62a",
-      name: "Dr. Sandeep Govil",
-      title: "Psychiatrist",
-      image: "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302040781-sandeep.webp",
-    },
-    {
-      id: "6720e7e38de82da2acfe7a98",
-      name: "Ms. Sonali Das",
-      title: "Clinical Psychologist",
-      image: "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302104083-sonali.webp",
-    },
-    {
-      id: "66fe4d3a6a3f2ccdb194af4b",
-      name: "Ms. Shilpi Sharma",
-      title: "Counselling Psychologist",
-      image: "https://mindfultms1.s3.us-east-1.amazonaws.com/1742884185829-dr.shilpisharma.png",
-    },
-    {
-      id: "66ffa1856a3f2ccdb194b61d",
-      name: "Dr. Shubham Narnoli",
-      title: "Psychiatrist",
-      image: "https://mindfultms1.s3.us-east-1.amazonaws.com/1733302025490-shubham.webp",
-    },
-  ];
 
 
   const WhatWeTreat = [
@@ -88,8 +54,8 @@ const AdsPage2 = ({ params }) => {
   console.log(expertService)
 
 
-  useEffect(()=>{
-    if(expertService!="general"){
+  useEffect(() => {
+    if (expertService != "general") {
       let designation;
       if (expertService === "psychologist") {
         designation = "Psychologist";
@@ -113,7 +79,7 @@ const AdsPage2 = ({ params }) => {
           // setLoading(false);
         });
     }
-  },[expertService])
+  }, [expertService])
 
   const locationContent = {
     "gk": {
@@ -138,89 +104,16 @@ const AdsPage2 = ({ params }) => {
 
   const currentPageContent = adsPageContent[city]?.[expertService]?.[current_condition];
 
-
-  const conditions = [
-    { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
-    { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
-    { name: 'OCD', image: '/ads/what_we_treat/ocd.png' },
-    { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' },
-    { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
-    { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
-    { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
-
-
-  ]
-
-  // const conditions = [
-  //     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
-  //     { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
-  //     { name: 'Obsessive Compulsive Disorder (OCD)', image: '/ads/what_we_treat/ocd.png' },
-  //     { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' }
-  // ]
-
-  const symptomsDynamic = [
-    { id: 1, symptom: "Excessive Worrying", description: "Constant and overwhelming worry about various aspects of life.", category: "Anxiety", icons: "Excessive Worrying.png" },
-    { id: 2, symptom: "Restlessness", description: "Inability to relax and feeling tense.", category: "Anxiety", icons: "Restlessness.png" },
-    { id: 3, symptom: "Fatigue", description: "Persistent tiredness and lack of energy despite adequate rest.", category: "Anxiety", icons: "Fatigue.png" },
-    { id: 4, symptom: "Difficulty Concentrating", description: "Trouble focusing, remembering, or making decisions.", category: "Anxiety", icons: "Difficulty Concentrating.png" },
-    { id: 5, symptom: "Muscle Tension", description: "Persistent muscle tightness or soreness without physical exertion.", category: "Anxiety", icons: "Muscle Tension.png" },
-    { id: 6, symptom: "Sleep Disturbances", description: "Problems falling asleep, staying asleep, or experiencing restful sleep.", category: "Anxiety", icons: "Sleep Disturbances.png" },
-    { id: 7, symptom: "Irritability", description: "Easily annoyed or frustrated.", category: "Anxiety", icons: "Irritability.png" },
-    { id: 8, symptom: "Gastrointestinal Issues", description: "Digestive problems like stomachaches or diarrhea.", category: "Anxiety", icons: "Gastrointestinal Issues.png" },
-    { id: 9, symptom: "Cognitive Impairments", description: "Challenges with memory and concentration.", category: "Anxiety", icons: "Cognitive Impairment.png" },
-    { id: 1, symptom: "Persistent Sadness or Emptiness", description: "Ongoing feelings of sadness, hopelessness, or emptiness.", category: "Depression", icons: "Persistent Sadness or Emptiness.png" },
-    { id: 2, symptom: "Loss of Interest in Activities", description: "No longer enjoying hobbies or activities that were once pleasurable.", category: "Depression", icons: "Loss of Interest in Activities.png" },
-    { id: 3, symptom: "Changes in Appetite or Weight", description: "Significant weight loss or gain, or changes in eating habits.", category: "Depression", icons: "Changes in Appetite or Weight.png" },
-    { id: 4, symptom: "Fatigue or Low Energy", description: "Constantly feeling tired or lacking energy despite adequate rest.", category: "Depression", icons: "Fatigue or Low Energy.png" },
-    { id: 5, symptom: "Difficulty Concentrating", description: "Trouble focusing, remembering, or making decisions.", category: "Depression", icons: "Difficulty Concentrating.png" },
-    { id: 6, symptom: "Feelings of Worthlessness or Guilt", description: "Feeling worthless, excessively guilty, or self-critical.", category: "Depression", icons: "Feelings of Worthlessness or Guilt.png" },
-    { id: 7, symptom: "Sleep Disturbances", description: "Problems falling asleep, staying asleep, or experiencing restful sleep.", category: "Depression", icons: "Sleep Disturbances.png" },
-    { id: 8, symptom: "Psychomotor Agitation or Retardation", description: "Moving or speaking slowly, or feeling restless and unable to sit still.", category: "Depression", icons: "Psychomotor Agitation or Retardation.png" },
-    { id: 9, symptom: "Thoughts of Death or Suicide", description: "Persistent thoughts about death or suicide, planning, or attempting suicide.", category: "Depression", icons: "Thoughts of Death or Suicide.png" },
-    { id: 1, symptom: "Persistent Sadness or Emptiness", description: "Ongoing feelings of sadness, hopelessness, or emptiness.", category: "General", icons: "Persistent Sadness or Emptiness.png" },
-    { id: 2, symptom: "Excessive Worrying", description: "Constant and overwhelming worry about various aspects of life without reason.", category: "General", icons: "Excessive Worrying.png" },
-    { id: 3, symptom: "Loss of Interest in Activities", description: "No longer enjoying hobbies or activities once pleasurable.", category: "General", icons: "Loss of Interest in Activities.png" },
-    { id: 4, symptom: "Intrusive Thoughts", description: "Unwanted, persistent thoughts that are difficult to control.", category: "General", icons: "Intrusive Thoughts.png" },
-    { id: 5, symptom: "Repetitive Behaviors (Compulsions)", description: "Engaging in repetitive actions to reduce anxiety, such as hand-washing or checking locks.", category: "General", icons: "Repetitive Behaviors.png" },
-    { id: 6, symptom: "Panic Attacks", description: "Sudden episodes of intense fear with physical symptoms like heart racing, sweating, shaking.", category: "General", icons: "Panic Attacks.jpg" },
-    { id: 7, symptom: "Restlessness", description: "Inability to relax and feeling tense or keyed up.", category: "General", icons: "Restlessness.png" },
-    { id: 8, symptom: "Sleep Disturbances", description: "Problems falling asleep, staying asleep, or experiencing restful sleep.", category: "General", icons: "Sleep Disturbances.png" },
-    { id: 9, symptom: "Difficulty Concentrating", description: "Trouble focusing, remembering, or making decisions.", category: "General", icons: "Difficulty Concentrating.png" },
-    { id: 1, symptom: "Intrusive Thoughts", description: "Unwanted, persistent thoughts that are difficult to control.", category: "OCD", icons: "Intrusive Thoughts.png" },
-    { id: 2, symptom: "Repetitive Behaviors (Compulsions)", description: "Engaging in actions to reduce anxiety from obsessions, such as hand-washing or checking locks.", category: "OCD", icons: "Repetitive Behaviors.png" },
-    { id: 3, symptom: "Need for Order and Symmetry", description: "Strong desire for things to be arranged in a specific, orderly manner.", category: "OCD", icons: "Need for Order and Symmetry.png" },
-    { id: 4, symptom: "Excessive Cleaning or Washing", description: "Frequent hand-washing or cleaning rituals to remove perceived contaminants.", category: "OCD", icons: "Excessive Cleaning or Washing.png" },
-    { id: 5, symptom: "Checking Rituals", description: "Repeatedly checking things like locks, lights, or appliances to prevent a feared event.", category: "OCD", icons: "Checking Rituals.png" },
-    { id: 6, symptom: "Counting or Repeating", description: "Performing actions a certain number of times to feel better.", category: "OCD", icons: "Counting or Repeating.png" },
-    { id: 7, symptom: "Arranging Items", description: "Organizing items until they feel 'just right.'", category: "OCD", icons: "Arranging Items.png" },
-    { id: 8, symptom: "Mental Compulsions", description: "Engaging in mental acts like praying or counting to neutralize obsessive thoughts.", category: "OCD", icons: "Mental Compulsions.png" },
-    { id: 9, symptom: "Avoidance of Triggers", description: "Avoiding situations that trigger obsessions, leading to limiting behaviors.", category: "OCD", icons: "Avoidance of Triggers.png" },
-    { id: 6, symptom: "Clumsiness or Physical Discomfort", description: "Feeling physically awkward or uncomfortable in certain situations.", category: "Social Anxiety", icons: "Clumsiness or Physical Discomfort.png" },
-    { id: 7, symptom: "Excessive Self-Monitoring", description: "Constantly checking oneself or behavior to ensure it is acceptable.", category: "Social Anxiety", icons: "Excessive Self-Monitoring.png" },
-    { id: 8, symptom: "Difficulty Speaking", description: "Struggling to speak in groups or public settings.", category: "Social Anxiety", icons: "Difficulty Speaking.png" },
-    { id: 1, symptom: "Intense Fear of Social Situations", description: "Extreme anxiety in social interactions or performance settings.", category: "Social Anxiety", icons: "Intense Fear of Social Situations.png" },
-    { id: 9, symptom: "Avoiding Eye Contact", description: "Avoiding eye contact during interactions to reduce anxiety.", category: "Social Anxiety", icons: "Avoiding Eye Contact.png" },
-    { id: 2, symptom: "Avoidance of Social Interactions", description: "Steering clear of social gatherings or interactions to prevent anxiety.", category: "Social Anxiety", icons: "Avoidance of Social Interactions.png" },
-    { id: 3, symptom: "Physical Symptoms in Social Settings", description: "Experiencing blushing, sweating, or trembling when interacting with others.", category: "Social Anxiety", icons: "Physical Symptoms in Social Settings.png" },
-    { id: 4, symptom: "Self-Consciousness", description: "Being overly concerned about how others perceive you.", category: "Social Anxiety", icons: "Self-Consciousness.png" },
-    { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
-  ]
-
-
-
   const Show_what_we_treat = () => {
     return (
       <section className="bg-[#FDE4BB] py-5">
         <Container maxWidth="lg">
           {/* Heading */}
-          <h2 className="mb-7 text-center text-3xl font-bold  text-gray-800">
+          <h2 className="mb-10 mt-4 text-center text-3xl font-bold  text-gray-800">
             What We Treat
           </h2>
           {/* Subheading */}
-          {/* <p className="mb-8 text-center text-gray-600 max-w-xl mx-auto">
-            Our platform is built by psychiatrists, therapists, and mental
-            health experts with immense global experience.
-          </p> */}
+
 
           {/* Grid of conditions */}
           <div className="grid grid-cols-3 gap-8 px-4 sm:grid-cols-2 md:grid-cols-4">
@@ -238,7 +131,7 @@ const AdsPage2 = ({ params }) => {
                   />
                 </div>
                 {/* Title */}
-                <p className="text-base md:text-lg font-semibold text-orange-500">
+                <p className="text-base md:text-lg font-semibold text-gray-700">
                   {condition.name}
                 </p>
               </div>
@@ -246,18 +139,17 @@ const AdsPage2 = ({ params }) => {
           </div>
 
           {/* Button at the bottom */}
-          <div className="mt-6 flex items-center justify-center ">
-            <RequestAppointment
-              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-              name="Book a Consultation"
-            />
+          <div className="mt-12 mb-6 flex items-center justify-center ">
+          <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
           </div>
         </Container>
       </section>
     );
   };
- 
 
   const SymptomsSection = () => {
     const symptoms = [
@@ -279,8 +171,8 @@ const AdsPage2 = ({ params }) => {
       <section className=" py-12 bg-[#FDE4BB]">
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading */}
-          <h2 className="mb-4 text-center text-3xl font-bold ">
-            Are you experiencing any of the following symptoms?
+          <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold ">
+            Are you experiencing the following <span className={`${upperCaseCondition.includes(current_condition) ? "uppercase" : ""}`}>{current_condition}</span> symptoms?
           </h2>
 
 
@@ -303,64 +195,101 @@ const AdsPage2 = ({ params }) => {
             ))}
           </div>
 
-          <p className="mb-4 mt-8 text-center text-base font-semibold text-gray-600">
+          <p className="mb-4 mt-10 text-center text-base font-semibold text-gray-600">
             If you are feeling any of these symptoms, you may benefit from talking to someone.
           </p>
           {/* Call-to-action Button */}
+
+
           <div className="mt-6 flex items-center justify-center ">
-            <RequestAppointment
-              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-              customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-              name="Book a Consultation"
-            />
+          <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
           </div>
         </div>
       </section>
     );
   };
 
-  //   const htmlContent = {
-  //     "lp_hero_subtitle": `<p>
-  //     Experience individualizedddd care from experienced psychiatrists committed to improving your quality of life.<br><br><b>We help with:</b><br/>Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia |\nand more.</p>`,
-  //   }
+  const bannerImage = {
+    "general": {
+      "psychiatrist": "/ads/ads2/LP/General - Psychiatrist.png",
+      "psychologist": "/ads/ads2/LP/General - Therapist and Psychologist.png",
+      "therapist": "/ads/ads2/LP/General - Therapist and Psychologist.png",
+    },
+    "depression": {
+      "psychiatrist": "/ads/ads2/LP/Depression - Psychiatrist.png",
+      "general": "/ads/ads2/LP/Depression - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/Depression - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/Depression - General, Psychologist and Therapist.png",
+    },
+    "anxiety": {
+      "psychiatrist": "/ads/ads2/LP/Anxiety - Psychiatrist.png",
+      "general": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+    },
+    "ocd": {
+      "psychiatrist": "/ads/ads2/LP/OCD - Psychiatrist.png",
+      "general": "/ads/ads2/LP/OCD - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/OCD - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/OCD - General, Psychologist and Therapist.png",
+    },
+  }
+
+  const RequestAppointmentButton = {
+    "general":{
+      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text":"Book a Session"
+    }, 
+    "therapist":{
+      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text":"Book a Therapy Session"
+    }, 
+    "psychiatrist":{
+      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text":"Book a Consultation"
+    }, 
+    "psychologist":{
+      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text":"Book a Session"
+    }, 
+  }
 
   return (
     <>
       <Container maxWidth="lg">
-        <section className="bg-white pb-8 ">
+        <section className="bg-white pb-8 md:h-[500px] md:flex flex-col items-center justify-center">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[500px] overflow-hidden rounded-xl md:rounded-full shadow-lg">
-                <Image
-                  src="https://mindfultms.in/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fmwpcmpi5v%2F1733372630195-illustration_20_281_29.webp%3FupdatedAt%3D1733819155146&w=1200&q=75"
+              <div className="relative w-full   overflow-hidden rounded-xl md:rounded-xl ">
+                <img
+                  src={`${bannerImage[current_condition][expertService]}`}
                   alt="Illustration of a woman looking upwards, symbolizing hope and guidance"
-                  layout="fill"
-                  objectFit="cover"
+                  className='w-full h-full object-contain '
                 />
               </div>
             </div>
 
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-left order-2 md:order-1">
-              <h1 className="text-2xl md:text-4xl font-bold mb-4 tracking-wide">
+              <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
                 {currentPageContent?.lp_hero_title}
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              {/* <p className="text-gray-700 text-base md:text-lg mb-4">
-                Get individualized care from dedicated psychiatrists committed to improving your quality of life.
+
+              <p className='text-sm mt-6 text-gray-500'>
+                {currentPageContent?.hero_description_2}
               </p>
-              <p className="text-gray-700 mb-6">
-                <span className="font-semibold">We help with:</span>
-                <br />
-                Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia | and more.
-              </p> */}
               <div className="mt-6 flex items-center justify-center md:justify-start">
-                <RequestAppointment
+              <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-                  name="Book a Consultation"
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
                 />
               </div>
             </div>
@@ -369,24 +298,21 @@ const AdsPage2 = ({ params }) => {
       </Container>
 
       {/* expert */}
-
       <section className="py-8 px-4 bg-[#FDE4BB]">
         <DoctorsSection expertService={expertService} location={location} expertText={expertText} />
         <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-            name="Book a Consultation"
-          />
+        <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
         </div>
       </section>
 
 
       {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
-
-        <TestimonialComponentSlideV2 smallDevice={true} location={location} doctorArray={doctors.length>0?doctors:[]} />
-
+        <TestimonialComponentSlideV2 smallDevice={true} location={location} doctorArray={doctors.length > 0 ? doctors : []} />
       </section>
 
       {!condition && <div>
@@ -401,7 +327,7 @@ const AdsPage2 = ({ params }) => {
       {/* why mindfultms section */}
       <section className="py-8 ">
         <Container maxWidth="lg">
-          <h2 className="mb-6 text-center text-3xl md:text-3xl font-bold text-orange-500">
+          <h2 className="mb-8 text-center text-3xl md:text-3xl font-bold text-orange-500">
             Why MindfulTMS?
           </h2>
           <div className=" mx-auto px-4">
@@ -411,7 +337,7 @@ const AdsPage2 = ({ params }) => {
                 <img
                   src="/ads/ads2/Delhi3.webp"
                   alt="MindfulTMS clinic"
-                  className="h-[300px] md:h-[350px] w-full object-cover rounded-xl"
+                  className="w-full object-contain rounded-xl"
                 />
               </div>
               {/* Content Section */}
@@ -421,20 +347,20 @@ const AdsPage2 = ({ params }) => {
                     A  safe and supportive space
                   </h3>
                   <p className="text-gray-600 text-base md:text-lg">
-                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                    We offer a safe, welcoming space to discuss your concerns and work towards recovery.
                   </p>
                 </div>
                 <div>
                   <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
-                    Confidential and Supportive Environment:
+                    Confidential
                   </h3>
                   <p className="text-gray-600 text-base md:text-lg">
-                    Your privacy is our priority. We offer a safe, welcoming space to discuss your concerns and work towards recovery.
+                    Our clinicians are committed to maintaining strict confidentiality, ensuring every interaction is private and secure.
                   </p>
                 </div>
                 <div>
                   <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold">
-                    Experienced Clinical Team:
+                    Experienced Clinical Team
                   </h3>
                   <p className="text-gray-600 text-base md:text-lg">
                     Our clinicians are trained to assess, diagnose, and provide the right therapy for you.
@@ -443,17 +369,15 @@ const AdsPage2 = ({ params }) => {
 
               </div>
             </div>
-            <div className="flex items-center justify-center mt-8">
-             
-            </div>
+            
 
-            <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-            name="Book a Consultation"
-          />
-        </div>
+            <div className="mt-8 mb-3 flex items-center justify-center ">
+            <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
+            </div>
           </div>
         </Container>
 
@@ -509,12 +433,12 @@ const AdsPage2 = ({ params }) => {
               </div>
             </div>
             <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 px-8 text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg"
-            name="Book a Consultation"
-          />
-        </div>
+            <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
+            </div>
 
           </div>
         </Container>

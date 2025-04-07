@@ -125,7 +125,9 @@ function Footer() {
           </div>
         )}
       </div>
-      <div className="flex justify-center mb-3 text-start">
+     {
+      !shouldHideFooter && (
+        <div className="flex justify-center mb-3 text-start">
         <p className="text-primary-orange text-sm  px-2">
           For queries related to careers <Link href="/careers">
             < span className="underline"> Click here </span> to  Explore Career Opportunities
@@ -133,12 +135,28 @@ function Footer() {
 
         </p>
       </div>
+      )
+     }
 
-      <div className="flex justify-center mb-3 text-start">
+     {
+      !shouldHideFooter && (
+        <div className="flex justify-center mb-3 text-start">
         <p className="text-primary-orange text-sm  px-2">
           Copyright © 2024 MindfulTMS | All rights reserved. Developed and Maintained by <Link className="underline" href="https://insideoutconsult.com/">InsideOut</Link>
         </p>
       </div>
+      )
+     }
+
+     {
+      shouldHideFooter && (
+        <div className="flex justify-center mb-3 text-start">
+        <p className="text-primary-orange text-sm  px-2">
+          Copyright © 2024 MindfulTMS | All rights reserved. Developed and Maintained by InsideOut
+        </p>
+      </div>
+      )
+     }
     </footer>
   );
 }

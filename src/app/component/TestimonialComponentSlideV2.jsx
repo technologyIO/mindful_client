@@ -342,31 +342,31 @@ export default function TestimonialComponentSlideV2({
         return (
             <>
                 {/* Testimonial Card */}
-                <div className="bg-white shadow-md rounded-lg p-6 ">
-                    <div className="flex items-center mb-4">
+                <div className="bg-white shadow-md rounded-lg p-6 h-[421px] ">
+                    <div className="flex items-center mb-8">
                         <div className="w-1 h-10 bg-orange-500 mr-4"></div>
                         <span className="text-xl font-bold text-gray-800">{patientName}</span>
                     </div>
                     <div className="mb-5">
-                        <p className="text-gray-700 text-base font-medium line-clamp-3">
+                        <p className="text-gray-700 text-lg line-clamp-5">
                             {title}
                         </p>
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center mb-8">
                         <button
                             onClick={() => {
                                 setCurrentTestimonial(testimonial);
                                 setisQuoteModal(true);
                             }}
-                            className="text-sm font-semibold text-orange-500 uppercase hover:underline focus:outline-none"
+                            className="text-base text-orange-500 uppercase hover:underline focus:outline-none"
                         >
                             Read More &#709;
                         </button>
                     </div>
 
-                    <div className="mt-4 bg-white p-6   ">
+                    <div className="mt-4 bg-white p-2   ">
                         <h3 className="text-sm font-semibold text-gray-900 mb-3">Treated By:</h3>
-                        <div className="flex items-center gap-4 mb-6">
+                        <div className="flex items-center gap-4 mb-2">
                             <Image
                                 src={testimonial?.doctor?.image}
                                 height={100}
@@ -378,7 +378,7 @@ export default function TestimonialComponentSlideV2({
                                 {testimonial?.doctor?.name}
                             </span>
                         </div>
-                        {treatment && (
+                        {/* {treatment && (
                             <div className="mb-4">
                                 <h3 className="text-sm font-semibold text-gray-900">Treatment:</h3>
                                 <div className="mt-2 flex flex-wrap gap-2">
@@ -407,7 +407,7 @@ export default function TestimonialComponentSlideV2({
                                     ))}
                                 </div>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
 
@@ -422,18 +422,18 @@ export default function TestimonialComponentSlideV2({
         const { title, fullTestimonial, patientName, condition, treatment } = testimonial;
         return (
             <>
-                <div className="px-6 py-4">
-                    <div className="flex items-center mb-2">
-                        <div className="w-1 h-10 bg-orange-500 mr-4"></div>
-                        <span className="text-xl font-bold text-gray-800">{patientName}</span>
+                <div className="pl-3 py-3">
+                    <div className="flex items-center mb-8">
+                        <div className="w-1 h-10 bg-orange-500 mr-4 mt-5"></div>
+                        <span className="text-xl font-bold mt-5 text-gray-800">{patientName}</span>
                     </div>
-                    <div className="h-[500px] overflow-y-scroll no-scrollbar">
+                    <div className="h-[450px] overflow-y-scroll no-scrollbar ">
                         <div className="mb-5">
-                            <p className="text-gray-700 text-sm font-medium">
+                            <p className="text-gray-700 text-lg ">
                                 {fullTestimonial}
                             </p>
                         </div>
-                        <div className="mt-4 bg-white p-6">
+                        <div className="mt-4 bg-white p-2">
                             <h3 className="text-sm font-semibold text-gray-900 mb-3">
                                 Treated By:
                             </h3>
@@ -501,7 +501,7 @@ export default function TestimonialComponentSlideV2({
                     ))}
                 </Slider>
                 {/* Custom Navigation Controls */}
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center mt-4">
                     <button
                         onClick={() => sliderRef.current.slickPrev()}
                         className="px-4 py-2 transition"
@@ -543,7 +543,7 @@ export default function TestimonialComponentSlideV2({
                             {/* Close Button */}
                             <button
                                 onClick={() => setisQuoteModal(false)}
-                                className="absolute top-6 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                                className="absolute top-9 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -561,7 +561,7 @@ export default function TestimonialComponentSlideV2({
                                 </svg>
                             </button>
                             {/* Modal Content */}
-                            <div className="p-4 md:p-6">
+                            <div className=" md:p-6 md:w-[800px]">
                                 <QuoteComponentModal
                                     modalOpen={true}
                                     index={1}

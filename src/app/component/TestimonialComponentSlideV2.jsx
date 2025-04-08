@@ -219,7 +219,7 @@ export default function TestimonialComponentSlideV2({
         };
     }, [isQuoteModal]);
     // Fetch testimonials from the API
-    
+
     const fetchTestimonials = async () => {
         setLoading(true);
         let apiUrl = '';
@@ -233,14 +233,14 @@ export default function TestimonialComponentSlideV2({
         } else {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials/by-location?location=${location || ""}`;
         }
-    
+
         try {
-             let response;
-        if (doctorArray && doctorArray.length > 0) {
-            response = await axios.post(apiUrl, requestData);
-        } else {
-            response = await axios.get(apiUrl);
-        }
+            let response;
+            if (doctorArray && doctorArray.length > 0) {
+                response = await axios.post(apiUrl, requestData);
+            } else {
+                response = await axios.get(apiUrl);
+            }
             setLoading(false);
             setTestimonials(response.data || []);
         } catch (error) {
@@ -343,42 +343,46 @@ export default function TestimonialComponentSlideV2({
             <>
                 {/* Testimonial Card */}
                 <div className="bg-white shadow-md rounded-lg p-6 h-[421px] ">
-                    <div className="flex items-center mb-8">
-                        <div className="w-1 h-10 bg-orange-500 mr-4"></div>
-                        <span className="text-xl font-bold text-gray-800">{patientName}</span>
-                    </div>
-                    <div className="mb-5">
-                        <p className="text-gray-700 text-lg line-clamp-5">
-                            {title}
-                        </p>
-                    </div>
-                    <div className="flex justify-center mb-8">
-                        <button
-                            onClick={() => {
-                                setCurrentTestimonial(testimonial);
-                                setisQuoteModal(true);
-                            }}
-                            className="text-base text-orange-500 uppercase hover:underline focus:outline-none"
-                        >
-                            Read More &#709;
-                        </button>
-                    </div>
-
-                    <div className="mt-4 bg-white p-2   ">
-                        <h3 className="text-sm font-semibold text-gray-900 mb-3">Treated By:</h3>
-                        <div className="flex items-center gap-4 mb-2">
-                            <Image
-                                src={testimonial?.doctor?.image}
-                                height={100}
-                                width={100}
-                                className="h-12 w-12 rounded-full object-cover"
-                                alt={testimonial?.doctor?.name}
-                            />
-                            <span className="text-sm font-semibold text-blue-700">
-                                {testimonial?.doctor?.name}
-                            </span>
+                    <div className="flex flex-col justify-between h-full">
+                        <div>
+                            <div className="flex items-center mb-8">
+                                <div className="w-1 h-10 bg-orange-500 mr-4"></div>
+                                <span className="text-xl font-bold text-gray-800">{patientName}</span>
+                            </div>
+                            <div className="mb-5">
+                                <p className="text-gray-700 text-lg line-clamp-5">
+                                    {/* {title} */}
+                                    {fullTestimonial}
+                                </p>
+                            </div>
+                            <div className="flex justify-center mb-8">
+                                <button
+                                    onClick={() => {
+                                        setCurrentTestimonial(testimonial);
+                                        setisQuoteModal(true);
+                                    }}
+                                    className="text-base text-orange-500 uppercase hover:underline focus:outline-none"
+                                >
+                                    Read More &#709;
+                                </button>
+                            </div>
                         </div>
-                        {/* {treatment && (
+
+                        <div className="  ">
+                            <h3 className="text-sm font-semibold text-gray-900 mb-3">Treated By:</h3>
+                            <div className="flex items-center gap-4 mb-2">
+                                <Image
+                                    src={testimonial?.doctor?.image}
+                                    height={100}
+                                    width={100}
+                                    className="h-12 w-12 rounded-full object-cover"
+                                    alt={testimonial?.doctor?.name}
+                                />
+                                <span className="text-sm font-semibold text-blue-700">
+                                    {testimonial?.doctor?.name}
+                                </span>
+                            </div>
+                            {/* {treatment && (
                             <div className="mb-4">
                                 <h3 className="text-sm font-semibold text-gray-900">Treatment:</h3>
                                 <div className="mt-2 flex flex-wrap gap-2">
@@ -408,6 +412,7 @@ export default function TestimonialComponentSlideV2({
                                 </div>
                             </div>
                         )} */}
+                        </div>
                     </div>
                 </div>
 
@@ -427,9 +432,9 @@ export default function TestimonialComponentSlideV2({
                         <div className="w-1 h-10 bg-orange-500 mr-4 mt-5"></div>
                         <span className="text-xl font-bold mt-5 text-gray-800">{patientName}</span>
                     </div>
-                    <div className="h-[450px] overflow-y-scroll no-scrollbar ">
+                    <div className="max-h-[450px] overflow-y-scroll no-scrollbar ">
                         <div className="mb-5">
-                            <p className="text-gray-700 text-lg ">
+                            <p className="text-gray-700 text-lg px-4 ">
                                 {fullTestimonial}
                             </p>
                         </div>
@@ -561,7 +566,7 @@ export default function TestimonialComponentSlideV2({
                                 </svg>
                             </button>
                             {/* Modal Content */}
-                            <div className=" md:p-6 md:w-[800px]">
+                            <div className=" md:p-2 md:w-[800px]">
                                 <QuoteComponentModal
                                     modalOpen={true}
                                     index={1}

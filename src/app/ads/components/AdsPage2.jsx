@@ -330,7 +330,7 @@ const AdsPage2 = ({ params }) => {
           <h2 className="mb-8 text-center text-3xl md:text-3xl font-bold text-orange-500">
             Why MindfulTMS?
           </h2>
-          <div className=" mx-auto px-4">
+          <div className=" ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Image Section */}
               <div className="flex justify-center">
@@ -384,67 +384,66 @@ const AdsPage2 = ({ params }) => {
 
       </section>
 
-      {/* Our Location */}
-      <section className="py-8 bg-[#FDE4BB]">
-        <Container maxWidth="lg">
-          <div className=' py-3'>
-            <div className='px-4 mb-6'>
-              <h1 className='text-3xl md:text-4xl text-primary-orange text-center font-[700]'>Our Location</h1>
+    {/* Our Location */}
+<section className="py-8 bg-[#FDE4BB]">
+  <Container maxWidth="lg">
+    <div className="py-3">
+      <div className="px-4 mb-10">
+        <h1 className="text-3xl md:text-4xl text-primary-orange text-center font-bold">
+          Our Location
+        </h1>
+      </div>
+
+      <div className="px-4 mb-11">
+        {/* change grid-cols-1 to grid-cols-1 md:grid-cols-2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left column: address + button */}
+          <div className="flex flex-col justify-center">
+            <div>
+              <p className="font-semibold mb-4 text-xl md:text-2xl ">
+                {locationDataArray[city]?.addressTitle}
+              </p>
+              <span className="text-lg md:text-xl">
+                {locationDataArray[city]?.address}
+              </span>
             </div>
+            <div className="mt-6 flex justify-center md:justify-start">
+              <RequestAppointment
+                iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                customStyle={`${RequestAppointmentButton[expertService].style} w-[90%]`}
+                name={RequestAppointmentButton[expertService].text}
+              />
+            </div>
+          </div>
 
-            {/* <div className='px-4 mb-8'>
-            <ImageCarousel images={locationDataArray[city]?.images} small={true} />
-          </div> */}
-
-
-
-
-            <div className='px-4 mb-11'>
-              <div className="grid grid-cols-1 justify-center">
-                <div className="mb-4">
-
-                  <div className="flex h-full flex-col justify-start items-start">
-                    <p className="font-semibold mb-4 md:text-2xl"> {locationDataArray[city]?.addressTitle}</p>
-                    <span className='md:text-xl'>{locationDataArray[city]?.address}</span>
-                  </div>
-                </div>
-                <div>
-                  <h2 className="text-2xl text-center md:text-3xl font-semibold text-primary-orange mb-4">
-                    Location Map
-                  </h2>
-                  <div className="flex items-center justify-center relative">
-                    <div className="   w-[500px] h-[400px] relative">
-                      <iframe
-                        title="Google Map"
-                        src={locationDataArray[city]?.googleMapLink}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0, pointerEvents: "none" }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      ></iframe>
-                      {/* Transparent Overlay to block interactions */}
-                      <div className="absolute inset-0 bg-transparent"></div>
-                    </div>
-                  </div>
-
-                </div>
+          {/* Right column: map */}
+          <div>
+            
+            <div className="flex items-center justify-center relative">
+              <div className="w-full h-[400px] max-w-[500px] relative">
+                <iframe
+                  title="Google Map"
+                  src={locationDataArray[city]?.googleMapLink}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, pointerEvents: "none" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                {/* Transparent overlay to block interactions */}
+                <div className="absolute inset-0 bg-transparent" />
               </div>
             </div>
-            <div className="mt-6 flex items-center justify-center ">
-            <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
-            </div>
-
           </div>
-        </Container>
+          
+        </div>
+        
+      </div>
+    </div>
+  </Container>
+</section>
 
-
-      </section>
 
     </>
   )

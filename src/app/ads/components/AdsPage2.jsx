@@ -231,7 +231,7 @@ const AdsPage2 = ({ params }) => {
         </h2>
 
         {/* Flex‐wrapped Symptoms */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+        <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
           {list.map((item, idx) => (
             <div
               key={idx}

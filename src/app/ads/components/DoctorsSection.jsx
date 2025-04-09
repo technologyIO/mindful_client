@@ -72,6 +72,8 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
     return <p className="text-center">Loading...</p>;
   }
 
+  
+
 
   return (
       <div className="mx-auto max-w-6xl">

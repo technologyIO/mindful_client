@@ -152,66 +152,121 @@ const AdsPage2 = ({ params }) => {
   };
 
   const SymptomsSection = () => {
-    const symptoms = [
-      { src: "/Symptom Icons/Intrusive Thoughts.png", alt: "Intrusive Thoughts" },
-      {
-        src: "/Symptom Icons/Repetitive Behaviors.png",
-        alt: "Repetitive Behaviors (Compulsions)",
-      },
-      { src: "/Symptom Icons/Need for Order and Symmetry.png", alt: "Need for Order and Symmetry" },
-      { src: "/Symptom Icons/Excessive Cleaning or Washing.png", alt: "Excessive Cleaning or Washing" },
-      { src: "/Symptom Icons/Checking Rituals.png", alt: "Checking Rituals" },
-      { src: "/Symptom Icons/Counting or Repeating.png", alt: "Counting or Repeating" },
-      { src: "/Symptom Icons/Arranging Items.png", alt: "Arranging Items" },
-      { src: "/Symptom Icons/Mental Compulsions.png", alt: "Mental Compulsions" },
-      { src: "/Symptom Icons/Avoidance of Triggers.png", alt: "Avoidance of Triggers" },
-    ];
+   
+
+    const conditionsData = {
+      "anxiety": [
+        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
+        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
+        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
+      ],
+      "depression": [
+        { "symptom": "Persistent Sadness or Emptiness", "imageLink": "/ads/ads2/conditions/Persistent Sadness or Emptiness.png" },
+        { "symptom": "Loss of Interest in Activities", "imageLink": "/ads/ads2/conditions/Loss of Interest in Activities.png" },
+        { "symptom": "Changes in Appetite or Weight", "imageLink": "/ads/ads2/conditions/Changes in Appetite or Weight.png" },
+        { "symptom": "Fatigue or Low Energy", "imageLink": "/ads/ads2/conditions/Fatigue or Low Energy.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of Worthlessness or Guilt.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
+        { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
+      ],
+      "general": [
+        { "symptom": "Persistent Sadness or Emptiness", "imageLink": "/ads/ads2/conditions/Persistent Sadness or Emptiness.png" },
+        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
+        { "symptom": "Loss of Interest in Activities", "imageLink": "/ads/ads2/conditions/Loss of Interest in Activities.png" },
+        { "symptom": "Intrusive Thoughts", "imageLink": "/ads/ads2/conditions/Intrusive Thoughts.png" },
+        { "symptom": "Repetitive Behaviors (Compulsions)", "imageLink": "/ads/ads2/conditions/Repetitive Behaviors.png" },
+        { "symptom": "Panic Attacks", "imageLink": "/ads/ads2/conditions/Panic Attacks.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" }
+      ],
+      "ocd": [
+        { "symptom": "Intrusive Thoughts", "imageLink": "/ads/ads2/conditions/Intrusive Thoughts.png" },
+        { "symptom": "Repetitive Behaviors (Compulsions)", "imageLink": "/ads/ads2/conditions/Repetitive Behaviors.png" },
+        { "symptom": "Need for Order and Symmetry", "imageLink": "/ads/ads2/conditions/Need for Order and Symmetry.png" },
+        { "symptom": "Excessive Cleaning or Washing", "imageLink": "/ads/ads2/conditions/Excessive Cleaning or Washing.png" },
+        { "symptom": "Checking Rituals", "imageLink": "/ads/ads2/conditions/Checking Rituals.png" },
+        { "symptom": "Counting or Repeating", "imageLink": "/ads/ads2/conditions/Counting or Repeating.png" },
+        { "symptom": "Arranging Items", "imageLink": "/ads/ads2/conditions/Arranging Items.png" },
+        { "symptom": "Mental Compulsions", "imageLink": "/ads/ads2/conditions/Mental Compulsions.png" },
+        { "symptom": "Avoidance of Triggers", "imageLink": "/ads/ads2/conditions/Avoidance of Triggers.png" }
+      ],
+      "social anxiety": [
+        { "symptom": "Intense Fear of Social Situations", "imageLink": "/ads/ads2/conditions/Intense Fear of Social Situations.png" },
+        { "symptom": "Avoidance of Social Interactions", "imageLink": "/ads/ads2/conditions/Avoidance of Social Interactions.png" },
+        { "symptom": "Physical Symptoms in Social Settings", "imageLink": "/ads/ads2/conditions/Physical Symptoms in Social Settings.png" },
+        { "symptom": "Self-Consciousness", "imageLink": "/ads/ads2/conditions/Self-Consciousness.png" },
+        { "symptom": "Fear of Being Judged", "imageLink": "/ads/ads2/conditions/Fear of Being Judged.png" },
+        { "symptom": "Clumsiness or Physical Discomfort", "imageLink": "/ads/ads2/conditions/Clumsiness or Physical Discomfort.png" },
+        { "symptom": "Excessive Self-Monitoring", "imageLink": "/ads/ads2/conditions/Excessive Self-Monitoring.png" },
+        { "symptom": "Difficulty Speaking", "imageLink": "/ads/ads2/conditions/Difficulty Speaking.png" },
+        { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
+      ]
+    }
+    
+     // Get the list for this condition, or empty array if not found
+  const conditionKey = current_condition.toLowerCase()
+  const list = conditionsData[conditionKey] || []
+
+
 
     return (
-      <section className=" py-12 bg-[#FDE4BB]">
-        <div className="mx-auto max-w-7xl px-4">
-          {/* Heading */}
-          <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold ">
-            Are you experiencing the following <span className={`${upperCaseCondition.includes(current_condition) ? "uppercase" : ""}`}>{current_condition}</span> symptoms?
-          </h2>
+      <section className="py-12 bg-[#FDE4BB]">
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Heading */}
+        <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
+          Are you experiencing the following{' '}
+          <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
+            {current_condition}
+          </span>{' '}
+          symptoms?
+        </h2>
 
-
-          {/* Grid of Symptoms */}
-          <div className="grid grid-cols-3  md:gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-            {symptoms.map((symptom, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center rounded-lg  p-3 text-center  transition-transform duration-200  "
-              >
-                <Image
-                  src={symptom.src}
-                  alt={symptom.alt}
-                  width={100}
-                  height={100}
-                  className="mb-4 h-[80px] w-auto object-contain"
-                />
-                <span className="text-sm font-medium text-gray-700">{symptom.alt}</span>
-              </div>
-            ))}
-          </div>
-
-          <p className="mb-4 mt-10 text-center text-base font-semibold text-gray-600">
-            If you are feeling any of these symptoms, you may benefit from talking to someone.
-          </p>
-          {/* Call-to-action Button */}
-
-
-          <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
-          </div>
+        {/* Flex‐wrapped Symptoms */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {list.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center rounded-lg  p-4 text-center max-w-[140px] transition-transform duration-200 "
+            >
+              <Image
+                src={item.imageLink || '/images/placeholder.png'}
+                alt={item.symptom}
+                width={80}
+                height={80}
+                className="mb-2 h-[80px] w-auto object-contain"
+              />
+              <span className="text-sm font-medium text-gray-700">{item.symptom}</span>
+            </div>
+          ))}
         </div>
-      </section>
+
+        <p className="mb-4 mt-10 text-center text-base font-semibold text-gray-600">
+          If you are feeling any of these symptoms, you may benefit from talking to someone.
+        </p>
+
+        {/* Call-to-action Button */}
+        <div className="mt-6 flex justify-center">
+          <RequestAppointment
+            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+            customStyle={RequestAppointmentButton[expertService].style}
+            name={RequestAppointmentButton[expertService].text}
+          />
+        </div>
+      </div>
+    </section>
     );
   };
+
+   
 
   const bannerImage = {
     "general": {

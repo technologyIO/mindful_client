@@ -231,7 +231,7 @@ const AdsPage2 = ({ params }) => {
         </h2>
 
         {/* Flex‐wrapped Symptoms */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           {list.map((item, idx) => (
             <div
               key={idx}
@@ -242,9 +242,9 @@ const AdsPage2 = ({ params }) => {
                 alt={item.symptom}
                 width={80}
                 height={80}
-                className="mb-2 h-[80px] w-auto object-contain"
+                className="mb-2 h-[80px] md:h-[100px] w-auto object-contain"
               />
-              <span className="text-sm font-medium text-gray-700">{item.symptom}</span>
+              <span className="text-sm md:text-lg font-medium text-gray-700">{item.symptom}</span>
             </div>
           ))}
         </div>

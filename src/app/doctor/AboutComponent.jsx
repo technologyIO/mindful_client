@@ -12,7 +12,7 @@ const AboutComponent = ({ aboutText }) => {
 
   return (
     <div className="px-6 py-4 border-t">
-      <h3 className="text-xl font-bold text-primary-orange">About</h3>
+      <h3 className="text-2xl md:text-3xl  font-bold text-primary-orange">About</h3>
       <p
         className="mt-2 text-gray-700"
         style={{ whiteSpace: 'pre-line' }} // Preserves new lines and spaces

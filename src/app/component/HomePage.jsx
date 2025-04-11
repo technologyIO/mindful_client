@@ -72,12 +72,12 @@ const HomePage = ({ allSection }) => {
                                         <p className='mb-2   text-[16px]  text-center text-[#545454]'>Get the best care from our experts. </p>
                                         <div className='mb-6'>
                                             <div className='flex gap-5 mb-2 items-center justify-center'>
-                                                    <div className='flex'>
+                                                    <Link href='/services/therapy' className='flex' >
                                                         <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /><span className='text-[16px] text-[#3084ae] whitespace-nowrap font-bold' > Psychologists</span>
-                                                    </div>
-                                                <div className='flex'>
+                                                    </Link>
+                                                <Link className='flex' href={`/services/psychiatry`}>
                                                     <Image  height={100} width={100} alt='MindfulTMS - Advanced rTMS Therapy img' className='w-6' src='https://ik.imagekit.io/mwpcmpi5v/home/mindfulIcon.png?updatedAt=1733818445163' /> <span className='text-[16px]  text-[#3084ae] whitespace-nowrap font-bold'>Psychiatrists</span>
-                                                </div>
+                                                </Link>
 
 
                                             </div>

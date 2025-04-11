@@ -54,6 +54,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized OCD diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "GK - General - Depression&Anxiety",
+        "campaign": "IO_Delhi",
+        "service": "General",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/gk",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "",
+        "hero_image": ""
       }
     },
     "psychiatrist": {
@@ -127,6 +145,24 @@ const adsPageContent = {
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized OCD diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "OCD Symptoms",
+        "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "GK - Psychiatrist - Depression&Anxiety",
+        "campaign": "IO_Delhi",
+        "service": "Psychiatrist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800 / session",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/depression-anxiety/gk",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
+        "block_to_show": "",
         "hero_image": ""
       }
     },
@@ -202,6 +238,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized OCD diagnosis\nClinical Assessments\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "GK - Psychologist - Depression&Anxiety",
+        "campaign": "IO_Delhi",
+        "service": "Psychologist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/gk",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     },
     "therapist": {
@@ -276,6 +330,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized OCD diagnosis\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "GK - Therapist - Depression&Anxiety",
+        "campaign": "IO_Delhi",
+        "service": "Therapist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/gk",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     }
   },
@@ -333,6 +405,24 @@ const adsPageContent = {
         "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized OCD diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "OCD Symptoms",
+        "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Hebbal - General - Depression&Anxiety",
+        "campaign": "IO_Hebbal",
+        "service": "General",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/hb",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "",
         "hero_image": ""
       }
     },
@@ -408,6 +498,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized OCD diagnosis\nClinical Assessments\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Hebbal - Psychologist - Depression&Anxiety",
+        "campaign": "IO_Hebbal",
+        "service": "Psychologist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/hb",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     },
     "therapist": {
@@ -482,6 +590,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized OCD diagnosis\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Hebbal - Therapist - Depression&Anxiety",
+        "campaign": "IO_Hebbal",
+        "service": "Therapist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/hb",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     }
   },
@@ -539,6 +665,24 @@ const adsPageContent = {
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized OCD diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "OCD Symptoms",
+        "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Whitefield - General - Depression&Anxiety",
+        "campaign": "IO_Whitefield",
+        "service": "General",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/wf",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "",
         "hero_image": ""
       }
     },
@@ -614,6 +758,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized OCD diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Whitefield - Psychiatrist - Depression&Anxiety",
+        "campaign": "IO_Whitefield",
+        "service": "Psychiatrist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/depression-anxiety/wf",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
+        "block_to_show": "",
+        "hero_image": ""
       }
     },
     "psychologist": {
@@ -688,6 +850,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized OCD diagnosis\nClinical Assessments\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Whitefield - Psychologist - Depression&Anxiety",
+        "campaign": "IO_Whitefield",
+        "service": "Psychologist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/wf",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     },
     "therapist": {
@@ -754,7 +934,7 @@ const adsPageContent = {
         "headline_2_(pinned)": "Whitefield Clinic | Rs1800/hr",
         "headline_3": "Empower Your OCD Recovery",
         "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |     ",
-        "description_2__(pinned)": "Trust our team to help you with your OCD at our Whitefield Clinic on Old Airport Road",
+        "description_2__(pinned)": "Trust our team to help you with your OCD at our Whitefield Clinic on Old Airport Road.",
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/ocd/wf",
         "lp_hero_title": "Is OCD Controlling Your Life?",
         "lp_hero_subtitle": "Experience personalized care to beat OCD with our dedicated therapists.<br>",
@@ -762,9 +942,27 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized OCD diagnosis\nERP Therapy and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "OCD Symptoms",
         "hero_image": ""
+      },
+      "depression-anxiety": {
+        "adgroup": "Whitefield - Therapist - Depression&Anxiety",
+        "campaign": "IO_Whitefield",
+        "service": "Therapist",
+        "condition": "Depression & Anxiety",
+        "headline_1_(pinned)": "Dealing with Depression & Anxiety?",
+        "headline_2_(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with depression at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/wf",
+        "lp_hero_title": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
+        "lp_hero_subtitle": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_2": "",
+        "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "",
+        "hero_image": ""
       }
     }
   }
 };
 
-export { adsPageContent }
+export { adsPageContent };

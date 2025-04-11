@@ -30,7 +30,9 @@ const AdsPage2 = ({ params }) => {
 
   const [queryString, setQueryString] = useState("");
   const condition = params.condition == "general" ? "" : params.condition || ""
-  const current_condition = params.condition
+  const multiCondition = params.condition  && params.condition .includes('-');
+  console.log("multiCondition", multiCondition);
+  const current_condition = params.condition;
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
   const upperCaseCondition = ['ocd']
@@ -51,7 +53,7 @@ const AdsPage2 = ({ params }) => {
   const expertService = params.service;
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
-  console.log(expertService)
+  console.log("expertService", expertService)
 
 
   useEffect(() => {
@@ -140,11 +142,11 @@ const AdsPage2 = ({ params }) => {
 
           {/* Button at the bottom */}
           <div className="mt-12 mb-6 flex items-center justify-center ">
-          <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
+            <RequestAppointment
+              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+              customStyle={`${RequestAppointmentButton[expertService].style}`}
+              name={RequestAppointmentButton[expertService].text}
+            />
           </div>
         </Container>
       </section>
@@ -152,7 +154,7 @@ const AdsPage2 = ({ params }) => {
   };
 
   const SymptomsSection = () => {
-   
+
 
     const conditionsData = {
       "anxiety": [
@@ -211,62 +213,62 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
       ]
     }
-    
-     // Get the list for this condition, or empty array if not found
-  const conditionKey = current_condition.toLowerCase()
-  const list = conditionsData[conditionKey] || []
+
+    // Get the list for this condition, or empty array if not found
+    const conditionKey = current_condition.toLowerCase()
+    const list = conditionsData[conditionKey] || []
 
 
 
     return (
       <section className="py-12 bg-[#FDE4BB]">
-      <div className="mx-auto max-w-7xl px-4">
-        {/* Heading */}
-        <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
-          Are you experiencing the following{' '}
-          <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
-            {current_condition}
-          </span>{' '}
-          symptoms?
-        </h2>
+        <div className="mx-auto max-w-7xl px-4">
+          {/* Heading */}
+          <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
+            Are you experiencing the following{' '}
+            <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
+              {current_condition}
+            </span>{' '}
+            symptoms?
+          </h2>
 
-        {/* Flex‐wrapped Symptoms */}
-        <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
-          {list.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center rounded-lg  p-4 text-center max-w-[140px] transition-transform duration-200 "
-            >
-              <Image
-                src={item.imageLink || '/images/placeholder.png'}
-                alt={item.symptom}
-                width={80}
-                height={80}
-                className="mb-2 h-[80px] md:h-[100px] w-auto object-contain"
-              />
-              <span className="text-sm md:text-lg font-medium text-gray-700">{item.symptom}</span>
-            </div>
-          ))}
+          {/* Flex‐wrapped Symptoms */}
+          <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
+            {list.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center rounded-lg  p-4 text-center max-w-[140px] transition-transform duration-200 "
+              >
+                <Image
+                  src={item.imageLink || '/images/placeholder.png'}
+                  alt={item.symptom}
+                  width={80}
+                  height={80}
+                  className="mb-2 h-[80px] md:h-[100px] w-auto object-contain"
+                />
+                <span className="text-sm md:text-lg font-medium text-gray-700">{item.symptom}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="mb-4 mt-10 text-center text-base font-semibold text-gray-600">
+            If you are feeling any of these symptoms, you may benefit from talking to someone.
+          </p>
+
+          {/* Call-to-action Button */}
+          <div className="mt-6 flex justify-center">
+            <RequestAppointment
+              iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+              customStyle={RequestAppointmentButton[expertService].style}
+              name={RequestAppointmentButton[expertService].text}
+            />
+          </div>
         </div>
-
-        <p className="mb-4 mt-10 text-center text-base font-semibold text-gray-600">
-          If you are feeling any of these symptoms, you may benefit from talking to someone.
-        </p>
-
-        {/* Call-to-action Button */}
-        <div className="mt-6 flex justify-center">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle={RequestAppointmentButton[expertService].style}
-            name={RequestAppointmentButton[expertService].text}
-          />
-        </div>
-      </div>
-    </section>
+      </section>
     );
   };
 
-   
+
 
   const bannerImage = {
     "general": {
@@ -295,22 +297,22 @@ const AdsPage2 = ({ params }) => {
   }
 
   const RequestAppointmentButton = {
-    "general":{
-      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
-      "text":"Book a Session"
-    }, 
-    "therapist":{
-      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
-      "text":"Book a Therapy Session"
-    }, 
-    "psychiatrist":{
-      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
-      "text":"Book a Consultation"
-    }, 
-    "psychologist":{
-      "style":"flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
-      "text":"Book a Session"
-    }, 
+    "general": {
+      "style": "flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text": "Book a Session"
+    },
+    "therapist": {
+      "style": "flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text": "Book a Therapy Session"
+    },
+    "psychiatrist": {
+      "style": "flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text": "Book a Consultation"
+    },
+    "psychologist": {
+      "style": "flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg",
+      "text": "Book a Session"
+    },
   }
 
   return (
@@ -321,8 +323,8 @@ const AdsPage2 = ({ params }) => {
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
               <div className="relative w-full   overflow-hidden rounded-xl md:rounded-xl ">
-                <img
-                  src={`${bannerImage[current_condition][expertService]}`}
+                <img 
+                  src={`${ bannerImage["anxiety"][expertService]}`}
                   alt="Illustration of a woman looking upwards, symbolizing hope and guidance"
                   className='w-full h-full object-contain '
                 />
@@ -341,7 +343,7 @@ const AdsPage2 = ({ params }) => {
                 {currentPageContent?.hero_description_2}
               </p>
               <div className="mt-6 flex items-center justify-center md:justify-start">
-              <RequestAppointment
+                <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
@@ -356,11 +358,11 @@ const AdsPage2 = ({ params }) => {
       <section className="py-8 px-4 bg-[#FDE4BB]">
         <DoctorsSection expertService={expertService} location={location} expertText={expertText} />
         <div className="mt-6 flex items-center justify-center ">
-        <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
+          <RequestAppointment
+            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+            customStyle={`${RequestAppointmentButton[expertService].style}`}
+            name={RequestAppointmentButton[expertService].text}
+          />
         </div>
       </section>
 
@@ -424,14 +426,14 @@ const AdsPage2 = ({ params }) => {
 
               </div>
             </div>
-            
+
 
             <div className="mt-8 mb-3 flex items-center justify-center ">
-            <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
+              <RequestAppointment
+                iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                customStyle={`${RequestAppointmentButton[expertService].style}`}
+                name={RequestAppointmentButton[expertService].text}
+              />
             </div>
           </div>
         </Container>
@@ -439,65 +441,65 @@ const AdsPage2 = ({ params }) => {
 
       </section>
 
-    {/* Our Location */}
-<section className="py-8 bg-[#FDE4BB]">
-  <Container maxWidth="lg">
-    <div className="py-3">
-      <div className="px-4 mb-10">
-        <h1 className="text-3xl md:text-4xl text-primary-orange text-center font-bold">
-          Our Location
-        </h1>
-      </div>
-
-      <div className="px-4 mb-11">
-        {/* change grid-cols-1 to grid-cols-1 md:grid-cols-2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left column: address + button */}
-          <div className="flex flex-col justify-center">
-            <div>
-              <p className="font-semibold mb-4 text-xl md:text-2xl ">
-                {locationDataArray[city]?.addressTitle}
-              </p>
-              <span className="text-lg md:text-xl">
-                {locationDataArray[city]?.address}
-              </span>
+      {/* Our Location */}
+      <section className="py-8 bg-[#FDE4BB]">
+        <Container maxWidth="lg">
+          <div className="py-3">
+            <div className="px-4 mb-10">
+              <h1 className="text-3xl md:text-4xl text-primary-orange text-center font-bold">
+                Our Location
+              </h1>
             </div>
-            <div className="mt-6 flex justify-center md:justify-start">
-              <RequestAppointment
-                iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                customStyle={`${RequestAppointmentButton[expertService].style} w-[90%]`}
-                name={RequestAppointmentButton[expertService].text}
-              />
-            </div>
-          </div>
 
-          {/* Right column: map */}
-          <div>
-            
-            <div className="flex items-center justify-center relative">
-              <div className="w-full h-[400px] max-w-[500px] relative">
-                <iframe
-                  title="Google Map"
-                  src={locationDataArray[city]?.googleMapLink}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, pointerEvents: "none" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-                {/* Transparent overlay to block interactions */}
-                <div className="absolute inset-0 bg-transparent" />
+            <div className="px-4 mb-11">
+              {/* change grid-cols-1 to grid-cols-1 md:grid-cols-2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Left column: address + button */}
+                <div className="flex flex-col justify-center">
+                  <div>
+                    <p className="font-semibold mb-4 text-xl md:text-2xl ">
+                      {locationDataArray[city]?.addressTitle}
+                    </p>
+                    <span className="text-lg md:text-xl">
+                      {locationDataArray[city]?.address}
+                    </span>
+                  </div>
+                  <div className="mt-6 flex justify-center md:justify-start">
+                    <RequestAppointment
+                      iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                      customStyle={`${RequestAppointmentButton[expertService].style} w-[90%]`}
+                      name={RequestAppointmentButton[expertService].text}
+                    />
+                  </div>
+                </div>
+
+                {/* Right column: map */}
+                <div>
+
+                  <div className="flex items-center justify-center relative">
+                    <div className="w-full h-[400px] max-w-[500px] relative">
+                      <iframe
+                        title="Google Map"
+                        src={locationDataArray[city]?.googleMapLink}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, pointerEvents: "none" }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                      {/* Transparent overlay to block interactions */}
+                      <div className="absolute inset-0 bg-transparent" />
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
             </div>
           </div>
-          
-        </div>
-        
-      </div>
-    </div>
-  </Container>
-</section>
+        </Container>
+      </section>
 
 
     </>

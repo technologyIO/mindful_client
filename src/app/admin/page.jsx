@@ -35,6 +35,11 @@ const Admin = () => {
       disable: role == 0 ? false : true,
     },
     {
+      name: 'adsContent',
+      slug: 'adsContent',
+      disable: role == 0 ? false : true,
+    },
+    {
       name: 'Self Assessment',
       slug: 'selfassessment',
       disable: role == 0 ? false : true,

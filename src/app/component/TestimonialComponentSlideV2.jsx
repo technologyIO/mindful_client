@@ -509,7 +509,7 @@ export default function TestimonialComponentSlideV2({
                 <div className="flex justify-center items-center mt-4">
                     <button
                         onClick={() => sliderRef.current.slickPrev()}
-                        className="px-4 py-2 transition"
+                        className="px-4 py-2 transition  active:scale-110"
                     >
                         <Image
                             height={50}
@@ -524,7 +524,7 @@ export default function TestimonialComponentSlideV2({
                     </span>
                     <button
                         onClick={() => sliderRef.current.slickNext()}
-                        className="px-4 py-2 transition"
+                        className="px-4 py-2 transition active:scale-110"
                     >
                         <Image
                             height={50}

@@ -30,7 +30,7 @@ const AdsPage2 = ({ params }) => {
 
   const [queryString, setQueryString] = useState("");
   const condition = params.condition == "general" ? "" : params.condition || ""
-  const multiCondition = params.condition  && params.condition .includes('-');
+  const multiCondition = params.condition && params.condition.includes('-');
   console.log("multiCondition", multiCondition);
   const current_condition = params.condition;
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
@@ -157,6 +157,26 @@ const AdsPage2 = ({ params }) => {
 
 
     const conditionsData = {
+      "depression-anxiety": [
+        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
+        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
+        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" },
+        { "symptom": "Persistent Sadness or Emptiness", "imageLink": "/ads/ads2/conditions/Persistent Sadness or Emptiness.png" },
+        { "symptom": "Loss of Interest in Activities", "imageLink": "/ads/ads2/conditions/Loss of Interest in Activities.png" },
+        { "symptom": "Changes in Appetite or Weight", "imageLink": "/ads/ads2/conditions/Changes in Appetite or Weight.png" },
+        { "symptom": "Fatigue or Low Energy", "imageLink": "/ads/ads2/conditions/Fatigue or Low Energy.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of Worthlessness or Guilt.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
+        { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
+      ],
       "anxiety": [
         { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
         { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
@@ -225,12 +245,21 @@ const AdsPage2 = ({ params }) => {
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading */}
           <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
-            Are you experiencing the following{' '}
-            <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
-              {current_condition}
-            </span>{' '}
-            symptoms?
-          </h2>
+  Are you experiencing the following{' '}
+  <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
+    {(() => {
+      const parts = current_condition.split('-');
+      if (parts.length === 1) {
+        return parts[0];
+      } else if (parts.length === 2) {
+        return `${parts[0]} and ${parts[1]}`;
+      } else {
+        return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+      }
+    })()}
+  </span>{' '}
+  symptoms?
+</h2>
 
           {/* Flex‐wrapped Symptoms */}
           <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
@@ -266,6 +295,7 @@ const AdsPage2 = ({ params }) => {
         </div>
       </section>
     );
+  
   };
 
 
@@ -283,6 +313,12 @@ const AdsPage2 = ({ params }) => {
       "therapist": "/ads/ads2/LP/Depression - General, Psychologist and Therapist.png",
     },
     "anxiety": {
+      "psychiatrist": "/ads/ads2/LP/Anxiety - Psychiatrist.png",
+      "general": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+    },
+    "depression-anxiety": {
       "psychiatrist": "/ads/ads2/LP/Anxiety - Psychiatrist.png",
       "general": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
       "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
@@ -323,8 +359,8 @@ const AdsPage2 = ({ params }) => {
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
               <div className="relative w-full   overflow-hidden rounded-xl md:rounded-xl ">
-                <img 
-                  src={`${ bannerImage["anxiety"][expertService]}`}
+                <img
+                  src={`${bannerImage[current_condition][expertService] || bannerImage["anxiety"][expertService]}`}
                   alt="Illustration of a woman looking upwards, symbolizing hope and guidance"
                   className='w-full h-full object-contain '
                 />

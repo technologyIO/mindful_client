@@ -125,11 +125,11 @@ const AdsPage2 = ({ params }) => {
                 className="flex flex-col items-center text-center"
               >
                 {/* Icon wrapper */}
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500">
+                <div className="mb-4 flex h-[85px] w-[85px] md:h-[130px] md:w-[130px] items-center justify-center rounded-full bg-orange-500">
                   <img
                     src={condition.image}
                     alt={condition.name}
-                    className="h-8 w-8 object-contain"
+                    className="h-[58px] w-[58px] md:h-[85px] md:w-[85px] object-contain"
                   />
                 </div>
                 {/* Title */}

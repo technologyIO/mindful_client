@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import { adsPageContent } from '@/adsPageContent'
 export default function AdsPage({ params }) {
     const [queryString, setQueryString] = useState("");
+    const [expertCondition, setExpertCondition] = useState("");
     const condition = params.condition == "general" ? "" : params.condition || ""
     const current_condition = params.condition
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
@@ -28,7 +29,17 @@ export default function AdsPage({ params }) {
     }, []);
 
     const city = params.location;
-    const expertCondition = params.service;
+    // const urlParts = window.location.pathname.split('/');
+    // const expertCondition = urlParts[urlParts.indexOf('ads') + 1];
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setQueryString(window.location.search);
+
+            const urlParts = window.location.pathname.split('/');
+            const conditionFromUrl = urlParts[urlParts.indexOf('ads') + 1];
+            setExpertCondition(conditionFromUrl);
+        }
+    }, []);
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
     const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition === 'therapist' ? "therapist" : 'Psychologist';
 
@@ -122,9 +133,6 @@ export default function AdsPage({ params }) {
         { id: 4, symptom: "Self-Consciousness", description: "Being overly concerned about how others perceive you.", category: "Social Anxiety", icons: "Self-Consciousness.png" },
         { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
     ]
-
-
-
 
     const MobileView = () => {
         return (
@@ -220,7 +228,7 @@ export default function AdsPage({ params }) {
 
 
                     {/* What We Treat */}
-                    {!condition && <div className='bg-primary-div'>
+                    {!condition && <div className=''>
                         <Show_what_we_treat /></div>}
 
                     {/* Symptoms */}
@@ -284,7 +292,7 @@ export default function AdsPage({ params }) {
                             <div className="
                              bg-[#fb923ca8] 
                                rounded-lg  px-7 py-7">
-                                {/* <div className=''>
+                                <div className=''>
                                  
                                     {cleanCondition ? <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                         Break Free from <span className={`${upperCaseCondition.includes(cleanCondition) ? "uppercase" : "capitalize"}`}>{cleanCondition}</span>.
@@ -292,13 +300,13 @@ export default function AdsPage({ params }) {
                                         <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                             Are you looking for an experienced {expertText}?
                                         </h1>}
-                                </div> */}
-                                <h1 className="mb-2 text-5xl  text-white  font-bold ">
+                                </div>
+                                {/* <h1 className="mb-2 text-5xl  text-white  font-bold ">
                                     {currentPageContent?.lp_hero_title}
-                                </h1>
+                                </h1> */}
 
                                 {/* sub header */}
-                                {/* {cleanCondition ? <p className="text-xl  text-white font-bold text-start">
+                                {cleanCondition ? <p className="text-xl  text-white font-bold text-start">
                                     Our compassionate and skilled {expertText}s will help you understand your {condition}, learn effective coping mechanisms and achieve positive change.
                                 </p> :
                                     <div className="text-xl  text-white font-bold text-start">
@@ -306,7 +314,7 @@ export default function AdsPage({ params }) {
 
 
                                         {`  Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate `} {expertText}s are here for you.
-                                    </div>} */}
+                                    </div>}
 
                                 <div className="text-xl  text-white  text-start">
                                     <p className='font-bold'>{currentPageContent?.lp_hero_subtitle}</p>
@@ -365,7 +373,7 @@ export default function AdsPage({ params }) {
                     {/* What We Treat */}
                     {!cleanCondition && <Show_what_we_treat />}
 
-                    <div className='bg-primary-div py-5'>
+                    <div className=' py-5'>
                         <AdsCombinePage iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} condition={cleanCondition} expertText={expertText} location={location} />
 
                     </div>
@@ -375,7 +383,7 @@ export default function AdsPage({ params }) {
                     </div> */}
 
                     {/* Why Choose Us */}
-                    <section className="py-8 ">
+                    <section className="py-8 bg-primary-div ">
                         <h2 className="mb-4 text-center text-3xl font-bold text-orange-500">
                             Why Choose Us?
                         </h2>
@@ -420,7 +428,7 @@ export default function AdsPage({ params }) {
         return (
             <>
                 {/* Symptoms */}
-                <section className="bg-gray-100 py-8">
+                <section className="bg-primary-div py-8">
                     <Container maxWidth="lg">
                         <div className="mx-auto">
                             <h2 className="mb-4 text-center text-2xl md:text-3xl font-bold text-orange-500">
@@ -431,7 +439,7 @@ export default function AdsPage({ params }) {
                             </p>
                             <div className="grid grid-cols-2 gap-6 md:grid-cols-3 px-4 lg:grid-cols-5">
                                 {filteredSymptoms.map((symptom) => (
-                                    <div key={symptom.name} className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow">
+                                    <div key={symptom.name} className="flex flex-col items-center rounded-lg p-6 text-center ">
                                         <img
                                             src={`/Symptom Icons/${symptom.icons}`}
                                             alt={symptom.symptom}
@@ -452,47 +460,64 @@ export default function AdsPage({ params }) {
             </>
         )
     }
+    const WhatWeTreat = [
+        { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
+        { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
+        { name: 'OCD', image: '/ads/what_we_treat/ocd.png' },
+        { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' },
+        { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
+        { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
+        // { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
+    
+    
+      ]
 
     const Show_what_we_treat = () => {
         return (
-            <>
-                <section className=" mx-auto py-6 flex justify-center items-center min-h-[250px]">
-                    <Container maxWidth="lg">
-                        <h2 className="mb-12 text-center text-3xl font-bold text-orange-500">What We Treat</h2>
-                        <div className="flex flex-wrap justify-center gap-6 px-4">
-                            {conditions.map((condition) => (
-                                <div
-                                    key={condition.name}
-                                    className="rounded-xl  transition-all duration-300 "
-                                >
-                                    <div className="flex items-center gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-2 rounded-full bg-orange-500">
-                                        {/* <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200"> */}
-                                        <img
-                                            src={condition.image}
-                                            alt={condition.name}
-                                            width={40}
-                                            height={40}
-                                            className=" h-[25px] w-[25px] md:h-[30px] md:w-[30px] object-contain"
-                                        />
-                                        <p className=" text-sm md:text-base  font-semibold text-white">{condition.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className='flex items-center justify-center mt-11'>
-                            {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white hover:bg-orange-600 focus:ring focus:ring-orange-500 mx-10"} name="Book a Consultation" /> */}
-                            {/* new button below */}
-                            <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} customStyle={"flex  items-center justify-center gap-2 rounded bg-orange-500 py-3 px-8 text-white font-bold rounded-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-200 focus:ring focus:ring-orange-500 mx-10 hover:scale-105 hover:shadow-lg"} name="Book a Consultation" />
-
-                            {/* <RequestAppointment iframeSrc={locationContent[city]?.iframeSrc || iframeSrc} icon={`/home/whatsapp2.svg`} iconSize={`w-[40px]`} customStyle={"flex  items-center justify-center gap-2  font-semibold outline-none border-none text-lg  rounded bg-white p-3 text-orange-500 hover:bg-gray-200 "} name="Request an Appointment" /> */}
-
-                        </div>
-                    </Container>
-                </section>
-            </>
-        )
-    }
+          <section className="bg-primary-div py-5">
+            <Container maxWidth="lg">
+              {/* Heading */}
+              <h2 className="mb-10 mt-4 text-center text-3xl font-bold  text-gray-800">
+                What We Treat
+              </h2>
+              {/* Subheading */}
+    
+    
+              {/* Grid of conditions */}
+              <div className="grid grid-cols-3 gap-8 px-4 sm:grid-cols-2 md:grid-cols-4">
+                {WhatWeTreat.map((condition) => (
+                  <div
+                    key={condition.name}
+                    className="flex flex-col items-center text-center"
+                  >
+                    {/* Icon wrapper */}
+                    <div className="mb-4 flex h-[85px] w-[85px] md:h-[130px] md:w-[130px] items-center justify-center rounded-full bg-orange-500">
+                      <img
+                        src={condition.image}
+                        alt={condition.name}
+                        className="h-[58px] w-[58px] md:h-[85px] md:w-[85px] object-contain"
+                      />
+                    </div>
+                    {/* Title */}
+                    <p className="text-base md:text-lg font-semibold text-gray-700">
+                      {condition.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+    
+              {/* Button at the bottom */}
+              {/* <div className="mt-12 mb-6 flex items-center justify-center ">
+                <RequestAppointment
+                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                  customStyle={`${RequestAppointmentButton[expertService].style}`}
+                  name={RequestAppointmentButton[expertService].text}
+                />
+              </div> */}
+            </Container>
+          </section>
+        );
+      };
 
 
     return (

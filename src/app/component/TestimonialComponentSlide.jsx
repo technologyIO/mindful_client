@@ -263,7 +263,8 @@ export default function TestimonialComponentSlide({
    console.log('mobile view ', mobileView)
 
     const settings = {
-        dots: smallDevice ? false : true,
+        // dots: smallDevice ? false : true,
+        dots: false,
         infinite: true,
         speed: 1000,
         slidesToShow: mobileView ? 1 : 3,

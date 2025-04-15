@@ -76,7 +76,7 @@ export default function AdsPage({ params }) {
         { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
         { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
 
-
+ 
     ]
 
     // const conditions = [

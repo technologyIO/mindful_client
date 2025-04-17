@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   // Conditions to hide Navbar, Footer, and CenterNav based on the path
   const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth"];
-  const noNavbarPaths = ["/ads", "/auth"];
+  const noNavbarPaths = ["/ads", "/auth", "/tests/ads"];
   const centerNav = ["/tests"];
   const zeroNav = ["/thankyou"];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
@@ -97,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : hideZeroNavbar ? null : (
           <DynamicNavbar />
         )}
+        
 
         <Toaster position="top-right" />
         {children}

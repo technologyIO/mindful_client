@@ -10,7 +10,7 @@ import { adsPageContent } from '@/adsPageContent'
 import DoctorsSection from './DoctorsSection'
 import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
-const AdsPage2 = ({ params }) => {
+const AdsPage3 = ({ params }) => {
 
 
 
@@ -29,6 +29,7 @@ const AdsPage2 = ({ params }) => {
 
 
   const [queryString, setQueryString] = useState("");
+  const [currentUrl, setcurrentUrl] = useState("");
   const condition = params.condition == "general" ? "" : params.condition || ""
   const multiCondition = params.condition && params.condition.includes('-');
   console.log("multiCondition", multiCondition);
@@ -44,10 +45,14 @@ const AdsPage2 = ({ params }) => {
   useEffect(() => {
     // Check if running in the browser
     if (typeof window !== 'undefined') {
+      const url = typeof window !== "undefined" ? window.location.href : "";
+      setcurrentUrl(url);
       setQueryString(window.location.search); // Get the query string
       console.log(window.location.search)
     }
   }, []);
+
+  console.log('queryString', queryString)
 
   const city = params.location;
   const expertService = params.service;
@@ -83,26 +88,37 @@ const AdsPage2 = ({ params }) => {
     }
   }, [expertService])
 
+  const urlLocation = {
+    "wf":"whitefield", 
+    "gk":"greaterkailash", 
+    "hb":"hebbal",
+  }
+
+
+
+
   const locationContent = {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
+
+  console.log('check paramsss',locationContent["gk"].iframeSrc)
 
   const currentPageContent = adsPageContent[city]?.[expertService]?.[current_condition];
 
@@ -245,21 +261,21 @@ const AdsPage2 = ({ params }) => {
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading */}
           <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
-            Are you experiencing the following{' '}
-            <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
-              {(() => {
-                const parts = current_condition.split('-');
-                if (parts.length === 1) {
-                  return parts[0];
-                } else if (parts.length === 2) {
-                  return `${parts[0]} and ${parts[1]}`;
-                } else {
-                  return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
-                }
-              })()}
-            </span>{' '}
-            symptoms?
-          </h2>
+  Are you experiencing the following{' '}
+  <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
+    {(() => {
+      const parts = current_condition.split('-');
+      if (parts.length === 1) {
+        return parts[0];
+      } else if (parts.length === 2) {
+        return `${parts[0]} and ${parts[1]}`;
+      } else {
+        return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+      }
+    })()}
+  </span>{' '}
+  symptoms?
+</h2>
 
           {/* Flex‐wrapped Symptoms */}
           <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
@@ -295,7 +311,7 @@ const AdsPage2 = ({ params }) => {
         </div>
       </section>
     );
-
+  
   };
 
 
@@ -374,14 +390,7 @@ const AdsPage2 = ({ params }) => {
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              {/* <div className='text-gray-700 text-sm md:text-base mb-4'>
-                <b>Our experts provide:</b><br/>
-                Personalized anxiety diagnosis
-                Safe and compassionate care
-                Confidentiality
 
-                Psychiatrists offer customized treatment plans including medication, if needed
-                            </div> */}
               <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p>
@@ -619,4 +628,4 @@ const locationDataArray = {
   }
 };
 
-export default AdsPage2
+export default AdsPage3

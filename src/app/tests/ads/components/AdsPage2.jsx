@@ -245,21 +245,21 @@ const AdsPage2 = ({ params }) => {
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading */}
           <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
-            Are you experiencing the following{' '}
-            <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
-              {(() => {
-                const parts = current_condition.split('-');
-                if (parts.length === 1) {
-                  return parts[0];
-                } else if (parts.length === 2) {
-                  return `${parts[0]} and ${parts[1]}`;
-                } else {
-                  return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
-                }
-              })()}
-            </span>{' '}
-            symptoms?
-          </h2>
+  Are you experiencing the following{' '}
+  <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
+    {(() => {
+      const parts = current_condition.split('-');
+      if (parts.length === 1) {
+        return parts[0];
+      } else if (parts.length === 2) {
+        return `${parts[0]} and ${parts[1]}`;
+      } else {
+        return parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+      }
+    })()}
+  </span>{' '}
+  symptoms?
+</h2>
 
           {/* Flex‐wrapped Symptoms */}
           <div className=" grid grid-cols-3 md:flex flex-wrap justify-center gap-6 md:gap-10">
@@ -295,7 +295,7 @@ const AdsPage2 = ({ params }) => {
         </div>
       </section>
     );
-
+  
   };
 
 
@@ -374,14 +374,7 @@ const AdsPage2 = ({ params }) => {
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              {/* <div className='text-gray-700 text-sm md:text-base mb-4'>
-                <b>Our experts provide:</b><br/>
-                Personalized anxiety diagnosis
-                Safe and compassionate care
-                Confidentiality
 
-                Psychiatrists offer customized treatment plans including medication, if needed
-                            </div> */}
               <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p>

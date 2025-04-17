@@ -1,9 +1,9 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import AdsExperts from '../../component/AdsExperts'
-import AdsExpertsMobile from '../../component/AdsExpertsMobile'
-import TestimonialComponent from '../../component/TestimonialComponent'
-import TestimonialComponentSlide from '@/app/component/TestimonialComponentSlide'
+import AdsExperts from '../../../component/AdsExperts'
+import AdsExpertsMobile from '../../../component/AdsExpertsMobile'
+// import TestimonialComponent from '../../component/TestimonialComponent'
+// import TestimonialComponentSlide from '@/app/component/TestimonialComponentSlide'
 const AdsCombinePage = ({ condition, expertText, location, iframeSrc }) => {
     const [disableSlide, setDisableSlide] = useState(false)
 

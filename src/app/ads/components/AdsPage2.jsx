@@ -378,7 +378,7 @@ const AdsPage2 = ({ params }) => {
                 <b>Our experts provide:</b><br/>
                 Personalized anxiety diagnosis
                 Safe and compassionate care
-                Confidentiality
+                Confidentiality<br/>
 
                 Psychiatrists offer customized treatment plans including medication, if needed
                             </div>

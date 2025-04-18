@@ -374,14 +374,14 @@ const AdsPage2 = ({ params }) => {
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              {/* <div className='text-gray-700 text-sm md:text-base mb-4'>
+              <div className='text-gray-700 text-sm md:text-base mb-4'>
                 <b>Our experts provide:</b><br/>
                 Personalized anxiety diagnosis
                 Safe and compassionate care
                 Confidentiality
 
                 Psychiatrists offer customized treatment plans including medication, if needed
-                            </div> */}
+                            </div>
               <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p>

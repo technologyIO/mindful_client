@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Load necessary scripts in async or defer mode */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11458426933"></script>
-        <script defer
+        {/* <script defer
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -60,6 +60,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               gtag('js', new Date());
               gtag('config', 'AW-11458426933');
             `,
+          }}
+        /> */}
+
+        <script
+          defer
+          dangerouslySetInnerHTML={{
+            __html: `
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11458426933/r31gCM-D0boaELXw5tcq',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+    `,
           }}
         />
 
@@ -77,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
- 
+
       </head>
       <body>
         <noscript>
@@ -97,7 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : hideZeroNavbar ? null : (
           <DynamicNavbar />
         )}
-        
+
 
         <Toaster position="top-right" />
         {children}

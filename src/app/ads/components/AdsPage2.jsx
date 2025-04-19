@@ -12,8 +12,12 @@ import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
 const AdsPage2 = ({ params }) => {
 
+  // for content of every page refer to adsPageContent.js in root
 
-
+  // for reference 
+  // new condition 
+  // 1. add banner image 
+  // 2. add condition 
 
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
@@ -231,7 +235,18 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Excessive Self-Monitoring", "imageLink": "/ads/ads2/conditions/Excessive Self-Monitoring.png" },
         { "symptom": "Difficulty Speaking", "imageLink": "/ads/ads2/conditions/Difficulty Speaking.png" },
         { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
-      ]
+      ],
+      "adhd": [
+        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
+        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
+        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
+      ],
     }
 
     // Get the list for this condition, or empty array if not found
@@ -324,6 +339,12 @@ const AdsPage2 = ({ params }) => {
       "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
       "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
     },
+    "adhd": {
+      "psychiatrist": "/ads/ads2/LP/Anxiety - Psychiatrist.png",
+      "general": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+    },
     "ocd": {
       "psychiatrist": "/ads/ads2/LP/OCD - Psychiatrist.png",
       "general": "/ads/ads2/LP/OCD - General, Psychologist and Therapist.png",
@@ -374,14 +395,17 @@ const AdsPage2 = ({ params }) => {
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              <div className='text-gray-700 text-sm md:text-base mb-4'>
-                <b>Our experts provide:</b><br/>
-                Personalized anxiety diagnosis
-                Safe and compassionate care
-                Confidentiality<br/>
+              <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
+              {/* <div className='text-gray-700 text-base md:text-lg mb-4'>
+                <b>Our experts provide:</b><br />
+                <ul className="list-disc pl-6 mb-3">
+                  <li>Personalized anxiety diagnosis</li>
+                  <li>Safe and compassionate care</li>
+                  <li>Confidentiality</li>
+                </ul>
 
                 Psychiatrists offer customized treatment plans including medication, if needed
-                            </div>
+              </div> */}
               <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p>

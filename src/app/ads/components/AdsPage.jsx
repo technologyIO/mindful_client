@@ -13,6 +13,7 @@ export default function AdsPage({ params }) {
     const condition = params.condition == "general" ? "" : params.condition || ""
     const current_condition = params.condition
     const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
+    const [currentUrl, setcurrentUrl] = useState("");
 
     const upperCaseCondition = ['ocd']
     // for zoho
@@ -24,7 +25,7 @@ export default function AdsPage({ params }) {
         // Check if running in the browser
         if (typeof window !== 'undefined') {
             setQueryString(window.location.search); // Get the query string
-            console.log(window.location.search)
+            // console.log(window.location.search)
         }
     }, []);
 
@@ -33,37 +34,47 @@ export default function AdsPage({ params }) {
     // const expertCondition = urlParts[urlParts.indexOf('ads') + 1];
     useEffect(() => {
         if (typeof window !== 'undefined') {
+            const url = typeof window !== "undefined" ? window.location.href : "";
             setQueryString(window.location.search);
-
+            setcurrentUrl(url);
             const urlParts = window.location.pathname.split('/');
             const conditionFromUrl = urlParts[urlParts.indexOf('ads') + 1];
-            setExpertCondition(conditionFromUrl);
+            if(conditionFromUrl==='condition'){
+                setExpertCondition('general')
+            }else{
+                // console.log('inside the ifffffffffff', conditionFromUrl)
+                setExpertCondition(urlParts[urlParts.indexOf('ads') + 1]);
+            }
         }
     }, []);
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
     const expertText = expertCondition === 'psychologist' ? 'Psychologist' : expertCondition === 'psychiatrist' ? 'Psychiatrist' : expertCondition === 'therapist' ? "therapist" : 'Psychologist';
 
-    const locationContent = {
+    const urlLocation = {
+        "wf":"whitefield", 
+        "gk":"greaterkailash", 
+        "hb":"hebbal",
+      }
+      const locationContent = {
         "gk": {
-            city: 'New Delhi',
-            area: "Greater Kailash 1",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
-            price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
+          city: 'New Delhi',
+          area: "Greater Kailash 1",
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}`,
+          price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
         },
         "wf": {
-            city: 'Bengaluru',
-            area: "Whitefield (Varthur Road)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
-            price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
+          city: 'Bengaluru',
+          area: "Whitefield (Varthur Road)",
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}`,
+          price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
         },
         "hb": {
-            city: 'Bengaluru',
-            area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
-            price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
+          city: 'Bengaluru',
+          area: "Hebbal (Aster CMI Hospital)",
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}`,
+          price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
         }
-    }
-
+      }
     const currentPageContent = adsPageContent[city]?.[expertCondition]?.[current_condition];
 
 
@@ -133,7 +144,8 @@ export default function AdsPage({ params }) {
         { id: 4, symptom: "Self-Consciousness", description: "Being overly concerned about how others perceive you.", category: "Social Anxiety", icons: "Self-Consciousness.png" },
         { id: 5, symptom: "Fear of Being Judged", description: "Worrying about being judged or embarrassed by others.", category: "Social Anxiety", icons: "Fear of Being Judged.png" },
     ]
-
+    // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}`)
+    // console.log(expertCondition)
     const MobileView = () => {
         return (
             <>

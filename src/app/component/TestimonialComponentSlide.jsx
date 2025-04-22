@@ -259,8 +259,8 @@ export default function TestimonialComponentSlide({
         );
     };
 
-   console.log('small device ', smallDevice)
-   console.log('mobile view ', mobileView)
+//    console.log('small device ', smallDevice)
+//    console.log('mobile view ', mobileView)
 
     const settings = {
         // dots: smallDevice ? false : true,

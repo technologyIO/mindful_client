@@ -42,7 +42,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
            // Check if running in the browser
            if (typeof window !== 'undefined') {
                setQueryString(window.location.search); // Get the query string
-               console.log(window.location.search) 
+            //    console.log(window.location.search) 
            }
        }, []);
     const pathname = usePathname()

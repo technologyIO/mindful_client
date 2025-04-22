@@ -20,7 +20,7 @@ const AdsExperts = ({ expertText, location, condition, disableSlide, setDisableS
         axios
             .get(apiUrl)
             .then((res) => {
-                console.log(location);
+                // console.log(location);
                 setDoctorsData(res.data);
             });
     };

@@ -61,7 +61,7 @@ const AdsPage2 = ({ params }) => {
   const expertService = params.service;
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
-  console.log("expertService", expertService)
+  // console.log("expertService", expertService)
 
   useEffect(() => {
     if (expertService != "general") {

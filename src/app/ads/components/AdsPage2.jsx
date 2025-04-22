@@ -33,6 +33,8 @@ const AdsPage2 = ({ params }) => {
 
 
   const [queryString, setQueryString] = useState("");
+    const [currentUrl, setcurrentUrl] = useState("");
+  
   const condition = params.condition == "general" ? "" : params.condition || ""
   const multiCondition = params.condition && params.condition.includes('-');
   console.log("multiCondition", multiCondition);
@@ -48,6 +50,8 @@ const AdsPage2 = ({ params }) => {
   useEffect(() => {
     // Check if running in the browser
     if (typeof window !== 'undefined') {
+      const url = typeof window !== "undefined" ? window.location.href : "";
+      setcurrentUrl(url);
       setQueryString(window.location.search); // Get the query string
       console.log(window.location.search)
     }
@@ -58,7 +62,6 @@ const AdsPage2 = ({ params }) => {
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
   console.log("expertService", expertService)
-
 
   useEffect(() => {
     if (expertService != "general") {
@@ -87,23 +90,28 @@ const AdsPage2 = ({ params }) => {
     }
   }, [expertService])
 
+  const urlLocation = {
+    "wf":"whitefield", 
+    "gk":"greaterkailash", 
+    "hb":"hebbal",
+  }
   const locationContent = {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
@@ -371,6 +379,9 @@ const AdsPage2 = ({ params }) => {
       "text": "Book a Session"
     },
   }
+
+  console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
+
 
   return (
     <>

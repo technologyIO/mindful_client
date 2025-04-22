@@ -350,11 +350,11 @@ export default function AdsPage({ params }) {
                                         Book a Consultation at our {locationContent[city]?.area} clinic in {locationContent[city]?.city}
                                     </h3>} */}
 
-                                <h3 className=' text-lg text-white text-start '>
+                                {/* <h3 className=' text-lg text-white text-start '>
                                     {
                                         currentPageContent?.hero_description_what_we_offer
                                     }
-                                </h3>
+                                </h3> */}
 
 
                                 <div className='flex items-start justify-start mt-4'>

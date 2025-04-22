@@ -2,6 +2,15 @@ import { Container } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 
+
+export async function generateMetadata({params}) {
+
+
+    return {
+   robots: "noindex, nofollow",
+   };
+  
+  }
 const ThankYouPage = () => {
     return (
         <Container maxWidth="lg bg-primary-div h-screen " >

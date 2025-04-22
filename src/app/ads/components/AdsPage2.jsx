@@ -39,7 +39,7 @@ const AdsPage2 = ({ params }) => {
   const current_condition = params.condition;
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
-  const upperCaseCondition = ['ocd']
+  const upperCaseCondition = ['ocd', 'adhd']
   // for zoho
   const iframeSrc =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
@@ -406,9 +406,9 @@ const AdsPage2 = ({ params }) => {
 
                 Psychiatrists offer customized treatment plans including medication, if needed
               </div> */}
-              <p className='text-sm mt-6 text-gray-500'>
+              {/* <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
-              </p>
+              </p> */}
               <div className="mt-6 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}

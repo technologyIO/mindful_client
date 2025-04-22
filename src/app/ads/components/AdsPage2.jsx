@@ -12,8 +12,12 @@ import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
 const AdsPage2 = ({ params }) => {
 
+  // for content of every page refer to adsPageContent.js in root
 
-
+  // for reference 
+  // new condition 
+  // 1. add banner image 
+  // 2. add condition 
 
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
@@ -29,13 +33,15 @@ const AdsPage2 = ({ params }) => {
 
 
   const [queryString, setQueryString] = useState("");
+    const [currentUrl, setcurrentUrl] = useState("");
+  
   const condition = params.condition == "general" ? "" : params.condition || ""
   const multiCondition = params.condition && params.condition.includes('-');
   console.log("multiCondition", multiCondition);
   const current_condition = params.condition;
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
-  const upperCaseCondition = ['ocd']
+  const upperCaseCondition = ['ocd', 'adhd']
   // for zoho
   const iframeSrc =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
@@ -44,6 +50,8 @@ const AdsPage2 = ({ params }) => {
   useEffect(() => {
     // Check if running in the browser
     if (typeof window !== 'undefined') {
+      const url = typeof window !== "undefined" ? window.location.href : "";
+      setcurrentUrl(url);
       setQueryString(window.location.search); // Get the query string
       console.log(window.location.search)
     }
@@ -54,7 +62,6 @@ const AdsPage2 = ({ params }) => {
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
   console.log("expertService", expertService)
-
 
   useEffect(() => {
     if (expertService != "general") {
@@ -83,23 +90,28 @@ const AdsPage2 = ({ params }) => {
     }
   }, [expertService])
 
+  const urlLocation = {
+    "wf":"whitefield", 
+    "gk":"greaterkailash", 
+    "hb":"hebbal",
+  }
   const locationContent = {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
@@ -231,7 +243,18 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Excessive Self-Monitoring", "imageLink": "/ads/ads2/conditions/Excessive Self-Monitoring.png" },
         { "symptom": "Difficulty Speaking", "imageLink": "/ads/ads2/conditions/Difficulty Speaking.png" },
         { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
-      ]
+      ],
+      "adhd": [
+        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
+        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
+        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
+        { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
+        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
+        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
+      ],
     }
 
     // Get the list for this condition, or empty array if not found
@@ -324,6 +347,12 @@ const AdsPage2 = ({ params }) => {
       "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
       "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
     },
+    "adhd": {
+      "psychiatrist": "/ads/ads2/LP/Anxiety - Psychiatrist.png",
+      "general": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "psychologist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+      "therapist": "/ads/ads2/LP/Anxiety - General, Psychologist and Therapist.png",
+    },
     "ocd": {
       "psychiatrist": "/ads/ads2/LP/OCD - Psychiatrist.png",
       "general": "/ads/ads2/LP/OCD - General, Psychologist and Therapist.png",
@@ -351,6 +380,9 @@ const AdsPage2 = ({ params }) => {
     },
   }
 
+  console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
+
+
   return (
     <>
       <Container maxWidth="lg">
@@ -374,17 +406,20 @@ const AdsPage2 = ({ params }) => {
               </h1>
 
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
-              {/* <div className='text-gray-700 text-sm md:text-base mb-4'>
-                <b>Our experts provide:</b><br/>
-                Personalized anxiety diagnosis
-                Safe and compassionate care
-                Confidentiality
+              <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
+              {/* <div className='text-gray-700 text-base md:text-lg mb-4'>
+                <b>Our experts provide:</b><br />
+                <ul className="list-disc pl-6 mb-3">
+                  <li>Personalized anxiety diagnosis</li>
+                  <li>Safe and compassionate care</li>
+                  <li>Confidentiality</li>
+                </ul>
 
                 Psychiatrists offer customized treatment plans including medication, if needed
-                            </div> */}
-              <p className='text-sm mt-6 text-gray-500'>
+              </div> */}
+              {/* <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
-              </p>
+              </p> */}
               <div className="mt-6 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}

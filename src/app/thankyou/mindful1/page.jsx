@@ -2,6 +2,14 @@ import { Container } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import Head from 'next/head'
+export async function generateMetadata({params}) {
+
+
+  return {
+ robots: "noindex, nofollow",
+ };
+
+}
 const ThankYouPage = () => {
     return (
       <>

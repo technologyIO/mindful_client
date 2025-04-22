@@ -72,6 +72,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "GK - General - ADHD",
+        "campaign": "IO_Delhi",
+        "service": "General",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/ADHD/gk",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized ADHD Diagnosis\nSafe and compassionate care\nNeurofeedback\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
     },
     "psychiatrist": {
@@ -163,6 +181,24 @@ const adsPageContent = {
         "hero_description_2": "",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "",
+        "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "GK - Psychiatrist - ADHD",
+        "campaign": "IO_Delhi",
+        "service": "Psychiatrist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800 / session",
+        "headline_3": "ADHD Treatment Experts",
+        "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/ADHD/gk",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized ADHD Diagnosis\nCustomized treatment plans, including medication management\nNeurofeedback\nSafe and confidential consultations",
+        "block_to_show": "ADHD Symptoms",
         "hero_image": ""
       }
     },
@@ -256,6 +292,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "GK - Psychologist - ADHD",
+        "campaign": "IO_Delhi",
+        "service": "Psychologist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/ADHD/gk",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
     },
     "therapist": {
@@ -348,6 +402,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "GK - Therapist - ADHD",
+        "campaign": "IO_Delhi",
+        "service": "Therapist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2_(pinned)": "GK1, Delhi | Rs.1800-2500 / hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Greater Kailash Clinic in South Delhi.",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/ADHD/gk",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
+        "hero_description_what_we_offer": "Our therapists (clinical psychologists) provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
     }
   },
@@ -424,7 +496,26 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Hebbal - General - ADHD",
+        "campaign": "IO_Hebbal",
+        "service": "General",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2_(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/ADHD/hb",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized ADHD Diagnosis\nSafe and compassionate care\nNeurofeedback\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
+
     },
     "psychologist": {
       "anxiety": {
@@ -515,6 +606,24 @@ const adsPageContent = {
         "hero_description_2": "",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
+        "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Hebbal - Psychologist - ADHD",
+        "campaign": "IO_Hebbal",
+        "service": "Psychologist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/ADHD/hb",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
         "hero_image": ""
       }
     },
@@ -608,8 +717,27 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Hebbal - Therapist - ADHD",
+        "campaign": "IO_Hebbal",
+        "service": "Therapist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "In Hebbal AsterCMI | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Hebbal Clinic inside Aster CMI Hospital",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/ADHD/hb",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
+        "hero_description_what_we_offer": "Our therapists (clinical psychologists) provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
-    }
+    },
+
   },
   "wf": {
     "general": {
@@ -683,6 +811,24 @@ const adsPageContent = {
         "hero_description_2": "",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
+        "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Whitefield - General - ADHD",
+        "campaign": "IO_Whitefield",
+        "service": "General",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "30 min sessions with Psychiatrists | 1 hr sessions with Psychologists  | In‑Clinic Only |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/general/ADHD/wf",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_what_we_offer": "Our experts provide:\nPersonalized ADHD Diagnosis\nSafe and compassionate care\nNeurofeedback\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
+        "block_to_show": "ADHD Symptoms",
         "hero_image": ""
       }
     },
@@ -776,6 +922,24 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Whitefield - Psychiatrist - ADHD",
+        "campaign": "IO_Whitefield",
+        "service": "Psychiatrist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "ADHD Treatment Experts",
+        "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/ADHD/wf",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized ADHD Diagnosis\nCustomized treatment plans, including medication management\nNeurofeedback\nSafe and confidential consultations",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
     },
     "psychologist": {
@@ -868,7 +1032,26 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Whitefield - Psychologist - ADHD",
+        "campaign": "IO_Whitefield",
+        "service": "Psychologist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/psychologist/ADHD/wf",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
+
     },
     "therapist": {
       "anxiety": {
@@ -960,9 +1143,76 @@ const adsPageContent = {
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
+      },
+      "adhd": {
+        "adgroup": "Whitefield - Therapist - ADHD",
+        "campaign": "IO_Whitefield",
+        "service": "Therapist",
+        "condition": "ADHD",
+        "headline_1_(pinned)": "Expert ADHD Support",
+        "headline_2__(pinned)": "Whitefield Clinic | Rs1800/hr",
+        "headline_3": "ADHD Care Specialists",
+        "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |",
+        "description_2__(pinned)": "Trust our team to help you with your ADHD at our Whitefield Clinic on Old Airport Road.",
+        "new_landing_page_url": "https://mindfultms.in/ads/therapist/ADHD/wf",
+        "lp_hero_title": "Need help with ADHD?",
+        "lp_hero_subtitle": "Overcome distractions, rediscover your strengths. Recieve ADHD care tailored for you.",
+        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        "hero_description_what_we_offer": "Our therapists (clinical psychologists) provide:\nPersonalized ADHD Diagnosis\nClinical Assessments\nCBT and various forms of therapy\nNeurofeedback\nSafe and compassionate care\nConfidentiality",
+        "block_to_show": "ADHD Symptoms",
+        "hero_image": ""
       }
     }
   }
 };
 
-export { adsPageContent };
+
+
+function formatDescription(desc) {
+  // split header, list items, and trailing text
+  const [headerAndItems, ...rest] = desc.split('\n\n');
+  const lines = headerAndItems.split('\n');
+  const header = lines[0].replace(/:$/, ''); // remove trailing colon
+  const items = lines.slice(1);
+
+  const listHtml = items.map(item => `                  <li>${item}</li>`).join('\n');
+
+  const trailing = rest.join('\n\n'); // everything after the blank line
+
+  return (
+    `<b>${header}:</b><br />
+                <ul class="list-disc text-base pl-6 mb-4">
+${listHtml}
+                </ul>
+
+               <p class="text-base">${trailing}</p>`
+  );
+}
+
+//
+// Deep‑walk through the entire adsPageContent object and
+// replace only the hero_description_what_we_offer values.
+// The rest of the data remains byte‑for‑byte the same.
+//
+function applyHtmlFormatting(obj) {
+  if (Array.isArray(obj)) {
+    return obj.map(applyHtmlFormatting);
+  } else if (obj && typeof obj === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(obj)) {
+      if (k === 'hero_description_what_we_offer' && typeof v === 'string') {
+        out[k] = formatDescription(v);
+      } else {
+        out[k] = applyHtmlFormatting(v);
+      }
+    }
+    return out;
+  } else {
+    return obj;
+  }
+}
+
+const adsPageContentFormatted = applyHtmlFormatting(adsPageContent);
+
+export { adsPageContentFormatted as adsPageContent };
+// export { adsPageContent };

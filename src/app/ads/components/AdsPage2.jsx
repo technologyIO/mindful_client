@@ -123,7 +123,7 @@ const AdsPage2 = ({ params }) => {
       <section className="bg-[#FDE4BB] py-5">
         <Container maxWidth="lg">
           {/* Heading */}
-          <h2 className="mb-10 mt-4 text-center text-3xl font-bold  text-gray-800">
+          <h2 className="mb-10 mt-4 text-center text-3xl md:text-4xl font-bold  text-gray-800">
             What We Treat
           </h2>
           {/* Subheading */}
@@ -267,7 +267,7 @@ const AdsPage2 = ({ params }) => {
       <section className="py-12 bg-[#FDE4BB]">
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading */}
-          <h2 className="mb-10 text-center text-2xl md:text-3xl font-bold">
+          <h2 className="mb-10 text-center text-3xl md:text-4xl font-bold">
             Are you experiencing the following{' '}
             <span className={`${upperCaseCondition.includes(current_condition) ? 'uppercase' : ''}`}>
               {(() => {
@@ -380,14 +380,14 @@ const AdsPage2 = ({ params }) => {
     },
   }
 
-  console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
+  // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
 
 
   return (
     <>
       <Container maxWidth="lg">
-        <section className="bg-white pb-8 md:h-[500px] md:flex flex-col items-center justify-center">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "my-10" : ""}`}>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 ">
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
               <div className="relative w-full   overflow-hidden rounded-xl md:rounded-xl ">
@@ -462,7 +462,7 @@ const AdsPage2 = ({ params }) => {
       {/* why mindfultms section */}
       <section className="py-8 ">
         <Container maxWidth="lg">
-          <h2 className="mb-8 text-center text-3xl md:text-3xl font-bold text-orange-500">
+          <h2 className="mb-8 text-center text-3xl md:text-4xl font-bold text-orange-500">
             Why MindfulTMS?
           </h2>
           <div className=" ">

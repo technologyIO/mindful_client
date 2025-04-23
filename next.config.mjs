@@ -26,6 +26,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/pages/tmspage',
+        destination: '/pages/tms',
+        permanent: false,  // or true, depending on SEO needs
+      },
+    ];
+  },
 };
 
 export default nextConfig;

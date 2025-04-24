@@ -12,14 +12,18 @@ const TestRequestAppointmentGeneral = ({ children, iframeSrc }) => {
 
 
      const [queryString, setQueryString] = useState("");
-        useEffect(() => {
-               // Check if running in the browser
-               if (typeof window !== 'undefined') {
-                   setQueryString(window.location.search); // Get the query string
-                   console.log(window.location.search) 
-               }
-           }, []);
-     const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
+     const [currentUrl, setcurrentUrl] = useState("");
+     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const url = typeof window !== "undefined" ? window.location.href : "";
+            setQueryString(window.location.search);
+            setcurrentUrl(url);
+        
+        }
+    }, []);
+    const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=website&from=website`
+
+    //  const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
     // const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
 
     // console.log(city, pathname)

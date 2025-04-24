@@ -97,17 +97,13 @@ const City2Component = async({ city }) => {
 
     const data = res.data;
 
-
-
-
-
     return (
         <>
             <div className='md:hidden'>
-                <MobileComponent data={data} images={data?.images} city={city} />
+                <MobileComponent data={data}  images={data?.images} city={city} />
             </div>
             <div className='md:block hidden'>
-                <DesktopComponent data={data} images={data?.images} city={city} />
+                <DesktopComponent data={data}  images={data?.images} city={city} />
             </div>
         </>
     );

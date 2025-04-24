@@ -1,55 +1,70 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import RequestAppointmentGeneral from '@/app/clinicLocation/[city]/RequestAppointmentGeneral';
 
-const locations = [
-  {
-    name: "Aster CMI",
-    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc",
-    area: "Bangalore North",
-    bgColor: "bg-orange-500",
-    location: "Banglore Aster CMI",
-    redirect: "Bengaluru-Hebbal",
-    whatsapp: +919663095632,
-    call: +919663095632,
-    officeOpen: 10,
-    officeClose: 18,
-  },
-  {
-    name: "Whitefield",
-    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ",
-    area: "Bangalore East ",
-    bgColor: "bg-[#F8A51C]",
-    location: "Banglore Whitefield",
-    redirect: "Bengaluru-Whitefield",
-    whatsapp: +919663095632,
-    call: +919663095632,
-    officeOpen: 10,
-    officeClose: 18,
-  },
-  {
-    name: "Greater Kailash 1",
-    iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4",
-    area: "Delhi",
-    bgColor: "bg-orange-500",
-    redirect: "New-Delhi",
-    location: "Delhi",
-    whatsapp: +919663095632,
-    call: +919663095632,
-    officeOpen: 10,
-    officeClose: 18,
-  }
-];
+
 
 function Footer() {
   const router = useRouter();
   const pathname = usePathname();
   const noFooterPaths = ["/ads", '/tests'];
   const shouldHideFooter = noFooterPaths.some((path) => pathname.startsWith(path));
+     const [queryString, setQueryString] = useState("");
+      const [currentUrl, setcurrentUrl] = useState("");
+  
+      useEffect(() => {
+          if (typeof window !== 'undefined') {
+              const url = typeof window !== "undefined" ? window.location.href : "";
+              setQueryString(window.location.search);
+              setcurrentUrl(url);
+          }
+      }, []);
 
+// console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=hebbal&from=website`)
+  const locations = [
+    {
+      name: "Aster CMI",
+      // iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationHebbalBangalore/formperma/RqE9YNKl1bYNAryFgvxELvCqhXm8xkK0jJYOcjk0Htc",
+      iframeSrc:`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=hebbal&from=website`,
+      area: "Bangalore North",
+      bgColor: "bg-orange-500",
+      location: "Banglore Aster CMI",
+      redirect: "Bengaluru-Hebbal",
+      whatsapp: +919663095632,
+      call: +919663095632,
+      officeOpen: 10,
+      officeClose: 18,
+    },
+    {
+      name: "Whitefield",
+      // iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationWhitefieldBangalore/formperma/n7UqoYroFADQJ-HqsYjiuY41_3pJKGRkwARxLp1vVDQ",
+      iframeSrc:`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=whitefield&from=website`,
+      area: "Bangalore East ",
+      bgColor: "bg-[#F8A51C]",
+      location: "Banglore Whitefield",
+      redirect: "Bengaluru-Whitefield",
+      whatsapp: +919663095632,
+      call: +919663095632,
+      officeOpen: 10,
+      officeClose: 18,
+    },
+    {
+      name: "Greater Kailash 1",
+      // iframeSrc: "https://forms.zohopublic.in/nikhilmindf1/form/ScheduleaConsultationLPGK/formperma/ZSzbxKx_hXcJlDGEB0w3ryiWi8oK-NfameMJkXw7mi4",
+      iframeSrc:`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=greaterkailash&from=website`,
+      area: "Delhi",
+      bgColor: "bg-orange-500",
+      redirect: "New-Delhi",
+      location: "Delhi",
+      whatsapp: +919663095632,
+      call: +919663095632,
+      officeOpen: 10,
+      officeClose: 18,
+    }
+  ];
   const LocationCard = ({ location }) => (
     <div style={{ backgroundColor: location.bgColor }} className={`${location.bgColor} py-3 px-3 rounded-lg shadow-lg select-none min-w-[250px]`}>
       <div className='flex flex-col justify-center items-center text-white mb-2'>

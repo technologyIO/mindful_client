@@ -38,22 +38,32 @@ const locations = [
 ];
 const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon }) => {
     const [queryString, setQueryString] = useState("");
+    const [currentUrl, setcurrentUrl] = useState("");
+
     useEffect(() => {
-           // Check if running in the browser
-           if (typeof window !== 'undefined') {
-               setQueryString(window.location.search); // Get the query string
-            //    console.log(window.location.search) 
-           }
-       }, []);
+        if (typeof window !== 'undefined') {
+            const url = typeof window !== "undefined" ? window.location.href : "";
+            setQueryString(window.location.search);
+            setcurrentUrl(url);
+        }
+    }, []);
+    // useEffect(() => {
+    //        // Check if running in the browser
+    //        if (typeof window !== 'undefined') {
+    //            setQueryString(window.location.search); // Get the query string
+    //         //    console.log(window.location.search) 
+    //        }
+    //    }, []);
     const pathname = usePathname()
     // console.log("city", city)
-    const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
+       const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=website&from=website`
+    // const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
         // "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
         
        //last used // "https://forms.zohopublic.in/nikhilmindf1/form/SelectyourClinic/formperma/Byg-b2YLIH7SjrLKNMIaghP6fUKY1JxPihr6O1YvkXk" 
     
     const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
-
+    // console.log("zohoform url ",iframeSrc|| iframeSrcStatic)
     // console.log(city, pathname)
     const [requestModal, setRequestModal] = useState(false);
     const [formData, setFormData] = useState({

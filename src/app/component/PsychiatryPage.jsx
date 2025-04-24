@@ -2,6 +2,11 @@ import { Container } from '@mui/material'
 import React from 'react'
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment'
 import Link from 'next/link'
+
+const currentUrl = "https://mindfultms.in/services/psychiatry"
+const  iframeSrc= `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${`website`}&solution=${`psychiatrist`}&from=website`;
+
+
 const PsychiatryPage = () => {
     const psychiatryData = [
         {
@@ -22,7 +27,7 @@ const PsychiatryPage = () => {
             id: 3,
             name: "Dr. Abhishek",
             img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029376714-Dr%20Abhishek%20.jpg",
-            location: "Bengaluru - whitefield", 
+            location: "Bengaluru - Whitefield", 
             link:"/doctor/66ffa2e86a3f2ccdb194b632"
         },
     ]
@@ -41,7 +46,7 @@ const PsychiatryPage = () => {
                             {` Our experienced psychiatrists offer personalized treatment plans and medication management to help you navigate your mental health journey.`}
                         </p>
                         <div className="flex justify-start ">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment iframeSrc={iframeSrc}  name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>
 
@@ -139,7 +144,7 @@ const PsychiatryPage = () => {
                     </div>
                 </div>
                 <div className="flex justify-center ">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment iframeSrc={iframeSrc}  name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
             </div>
             </>
@@ -160,7 +165,7 @@ const PsychiatryPage = () => {
                             {` Our experienced psychiatrists offer personalized treatment plans and medication management to help you navigate your mental health journey.`}
                         </p>
                         <div className="flex justify-center ">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment iframeSrc={iframeSrc}  name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>
 
@@ -261,7 +266,7 @@ const PsychiatryPage = () => {
                     </div>
                 </div>
                 <div className="flex justify-center ">
-                            <RequestAppointment name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment iframeSrc={iframeSrc}  name="Book a Consultation" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
              </Container>
             </div>

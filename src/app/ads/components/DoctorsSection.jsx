@@ -179,7 +179,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                     key={doctor._id}
                     className="flex flex-col items-center"
                   >
-                    <div className="mb-2 h-[130px] w-[130px] md:h-[200px]  md:w-[200px]">
+                    <div className="mb-2 h-[130px] w-[130px] md:h-[150px]  md:w-[150px]">
                       <img
                         className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                         src={doctor.image}
@@ -246,7 +246,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
                   key={doctor._id}
                   className="flex flex-col items-center"
                 >
-                  <div className="mb-2 h-[130px] w-[130px] md:h-[200px]  md:w-[200px]">
+                  <div className="mb-2 h-[130px] w-[130px] md:h-[150px]  md:w-[150px]">
                     <img
                       className="h-full w-full object-cover border-[3px] border-orange-400 rounded-full"
                       src={doctor.image}

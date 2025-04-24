@@ -224,7 +224,7 @@ export default function TestimonialComponentSlideV2({
         setLoading(true);
         let apiUrl = '';
         let requestData = {};
-        console.log("doctorArray", doctorArray);
+        // console.log("doctorArray", doctorArray);
         if (doctorArray && doctorArray.length > 0) {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/getAllTestimonials/DoctorArray`;
             requestData = { doctorIds: doctorArray.map(doc => doc._id) };

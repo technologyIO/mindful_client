@@ -68,7 +68,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/gk",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
         "hero_image": ""
@@ -178,7 +178,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/depression-anxiety/gk",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "",
         "hero_image": ""
@@ -288,7 +288,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/gk",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
@@ -398,7 +398,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/gk",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
@@ -492,7 +492,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/hb",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
         "hero_image": ""
@@ -603,7 +603,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/hb",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
@@ -713,7 +713,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/hb",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar)",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
@@ -808,7 +808,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/general/depression-anxiety/wf",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our experts provide:\nPersonalized depression and anxiety diagnosis\nSafe and compassionate care\nConfidentiality\n\nPsychiatrists offer customized treatment plans including medication, if needed",
         "block_to_show": "",
         "hero_image": ""
@@ -918,7 +918,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/depression-anxiety/wf",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized depression and anxiety diagnosis\nCustomized treatment plans, including medication management\nSafe and confidential consultations",
         "block_to_show": "",
         "hero_image": ""
@@ -1028,7 +1028,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/depression-anxiety/wf",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized depression and anxiety diagnosis\nClinical Assessments\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""
@@ -1139,7 +1139,7 @@ const adsPageContent = {
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/depression-anxiety/wf",
         "lp_hero_subtitle": "Rediscover hope and reclaim your life. Fight depression and anxiety with our expert clinical team.",
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_2": "",
+        "hero_description_12": "",
         "hero_description_what_we_offer": "Our therapists provide:\nPersonalized depression and anxiety diagnosis\nCBT and various forms of therapy\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "",
         "hero_image": ""

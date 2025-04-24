@@ -33,11 +33,11 @@ const AdsPage2 = ({ params }) => {
 
 
   const [queryString, setQueryString] = useState("");
-    const [currentUrl, setcurrentUrl] = useState("");
-  
+  const [currentUrl, setcurrentUrl] = useState("");
+
   const condition = params.condition == "general" ? "" : params.condition || ""
   const multiCondition = params.condition && params.condition.includes('-');
-  console.log("multiCondition", multiCondition);
+  // console.log("multiCondition", multiCondition);
   const current_condition = params.condition;
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
@@ -53,7 +53,7 @@ const AdsPage2 = ({ params }) => {
       const url = typeof window !== "undefined" ? window.location.href : "";
       setcurrentUrl(url);
       setQueryString(window.location.search); // Get the query string
-      console.log(window.location.search)
+      // console.log(window.location.search)
     }
   }, []);
 
@@ -91,9 +91,9 @@ const AdsPage2 = ({ params }) => {
   }, [expertService])
 
   const urlLocation = {
-    "wf":"whitefield", 
-    "gk":"greaterkailash", 
-    "hb":"hebbal",
+    "wf": "whitefield",
+    "gk": "greaterkailash",
+    "hb": "hebbal",
   }
   const locationContent = {
     "gk": {
@@ -172,22 +172,22 @@ const AdsPage2 = ({ params }) => {
       "depression-anxiety": [
         { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
         { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
-        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
+        // { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
         { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
-        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
+        // { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
         { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
         { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
-        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
-        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" },
+        // { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
+        // { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" },
         { "symptom": "Persistent Sadness or Emptiness", "imageLink": "/ads/ads2/conditions/Persistent Sadness or Emptiness.png" },
         { "symptom": "Loss of Interest in Activities", "imageLink": "/ads/ads2/conditions/Loss of Interest in Activities.png" },
         { "symptom": "Changes in Appetite or Weight", "imageLink": "/ads/ads2/conditions/Changes in Appetite or Weight.png" },
         { "symptom": "Fatigue or Low Energy", "imageLink": "/ads/ads2/conditions/Fatigue or Low Energy.png" },
-        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
+        // { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
         { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of Worthlessness or Guilt.png" },
         { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
-        { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
-        { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
+        // { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
+        // { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
       ],
       "anxiety": [
         { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
@@ -386,10 +386,10 @@ const AdsPage2 = ({ params }) => {
   return (
     <>
       <Container maxWidth="lg">
-        <section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "my-10" : ""}`}>
+        <section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "" : ""}`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 ">
             {/* Image Section */}
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
+            <div className="w-full md:w-[40%] flex justify-center md:justify-end order-1 md:order-2">
               <div className="relative w-full   overflow-hidden rounded-xl md:rounded-xl ">
                 <img
                   src={`${bannerImage[current_condition][expertService] || bannerImage["anxiety"][expertService]}`}
@@ -400,12 +400,12 @@ const AdsPage2 = ({ params }) => {
             </div>
 
             {/* Text Section */}
-            <div className="w-full md:w-1/2 text-left order-2 md:order-1">
+            <div className="w-full md:w-[60%] text-left order-2 md:order-1">
               <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
                 {currentPageContent?.lp_hero_title}
               </h1>
 
-              <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
+              <div className="text-gray-700 text-lg md:text-2xl mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
               {/* <div className='text-gray-700 text-base md:text-lg mb-4'>
                 <b>Our experts provide:</b><br />
@@ -426,7 +426,13 @@ const AdsPage2 = ({ params }) => {
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
                 />
+
               </div>
+              <div className='flex justify-center'>
+                <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
+              </div>
+
+
             </div>
           </div>
         </section>
@@ -441,7 +447,10 @@ const AdsPage2 = ({ params }) => {
             customStyle={`${RequestAppointmentButton[expertService].style}`}
             name={RequestAppointmentButton[expertService].text}
           />
+
+
         </div>
+
       </section>
 
 

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
 // import TestimonialComponent from '../component/TestimonialComponent';
@@ -18,7 +19,8 @@ const DoctorDetailComponent = async ({ doctorId }) => {
     `${process.env.NEXT_PUBLIC_API_URL}doctors/${doctorId}`
   );
   doctorDetail = res.data;
-
+  const currentUrl = `https://mindfultms.in/doctor/${doctorDetail?._id}?doctor=${doctorDetail?.name}`;
+  const iframeSrc=`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`
   // Pull in the new fields, with sensible defaults
   const {
     specialization = [],
@@ -40,6 +42,7 @@ const DoctorDetailComponent = async ({ doctorId }) => {
         <BackButton />
         <div className="bg-white shadow-md rounded-lg overflow-hidden">
           {/* Doctor's Basic Info */}
+          {/* <span>{iframeSrc}</span> */}
           <div className="p-6 flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
             <img
               src={image}

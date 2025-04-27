@@ -38,7 +38,7 @@ const AdsPage2 = ({ params }) => {
   const condition = params.condition == "general" ? "" : params.condition || ""
   const multiCondition = params.condition && params.condition.includes('-');
   // console.log("multiCondition", multiCondition);
-  const current_condition = params.condition;
+  const current_condition = params.condition?.toLowerCase();
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
   const upperCaseCondition = ['ocd', 'adhd']

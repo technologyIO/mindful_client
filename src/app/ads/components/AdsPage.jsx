@@ -149,6 +149,7 @@ export default function AdsPage({ params }) {
     const MobileView = () => {
         return (
             <>
+            
                 <div className=" bg-gray-50">
                     {/* Hero Section */}
                     <section

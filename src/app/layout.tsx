@@ -11,6 +11,7 @@ import DynamicNavbar from "@/components/Navbar";
 import DynamicFooter from "@/components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Script from 'next/script';
 // import { metadata } from "./layoutWithMetadata";
 
 // Dynamically load components that are not required on every page
@@ -117,7 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Conditionally render Footer based on the pathname */}
         {!shouldHideFooter && <DynamicFooter />}
+      
       </body>
+
     </html>
   );
 }

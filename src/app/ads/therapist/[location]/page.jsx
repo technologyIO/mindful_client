@@ -1,5 +1,6 @@
 import React from 'react'
 import AdsPage from '../../components/AdsPage'
+import Script from 'next/script'
 
 export async function generateMetadata({ params }) {
   return {
@@ -13,9 +14,8 @@ const page = ({params}) => {
   return (
 
     <>
-       <Script id="zfadvlead" strategy="afterInteractive">
-{
-  `
+        <Script id="zf-adv-lead" strategy="beforeInteractive">
+{`
 function ZFAdvLead(){
 }
 ZFAdvLead.utmPValObj = ZFAdvLead.utmPValObj || {};
@@ -289,8 +289,8 @@ if( document.readyState == "complete" ){
         zfutm_zfAdvLead.zfautm_DHtmlSprt();
   }, false);
 }
-`
-}
+
+`}
         </Script>
     <AdsPage params={params} />
     </>

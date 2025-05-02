@@ -245,16 +245,18 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
       ],
       "adhd": [
-        { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
-        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
-        { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
-        { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
-        { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
-        { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
-        { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
-        { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
-        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
-      ],
+  { "symptom": "Losing Track of Time", "imageLink": "/ads/ads2/conditions/Losing Track of Time.png" },
+  { "symptom": "Feeling Disorganized", "imageLink": "/ads/ads2/conditions/Feeling Disorganized.png" },
+  { "symptom": "Putting Things Off", "imageLink": "/ads/ads2/conditions/Putting Things Off.png" },
+  { "symptom": "Forgetting Stuff", "imageLink": "/ads/ads2/conditions/Forgetting Stuff.png" },
+  { "symptom": "Mood Swings", "imageLink": "/ads/ads2/conditions/Mood Swings-2.png" },
+  { "symptom": "Acting on Impulse / Impulsive", "imageLink": "/ads/ads2/conditions/Impulsive.png" },
+  { "symptom": "Losing Interest", "imageLink": "/ads/ads2/conditions/Losing Interest.png" },
+  { "symptom": "Trouble Switching Tasks", "imageLink": "/ads/ads2/conditions/Trouble Switching Tasks.png" },
+  { "symptom": "Interrupting Conversations", "imageLink": "/ads/ads2/conditions/Interrupting Conversations.png" },
+  { "symptom": "Feeling Overwhelmed", "imageLink": "/ads/ads2/conditions/Feeling Overwhelmed.png" }
+]
+
     }
 
     // Get the list for this condition, or empty array if not found

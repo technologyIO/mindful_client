@@ -48,17 +48,20 @@ const AdsPage2 = ({ params }) => {
   const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
   // console.log('location', params.location)
   useEffect(() => {
-    // Check if running in the browser
     if (typeof window !== 'undefined') {
-      const url = typeof window !== "undefined" ? window.location.href : "";
+      const url = window.location.href;
       setcurrentUrl(url);
-      setQueryString(window.location.search); // Get the query string
-      // console.log(window.location.search)
-      console.log("queryString", queryString)
-      console.log(window.location.search)
-
+  
+      const rawQueryString = window.location.search;
+      const cleanQueryString = rawQueryString.startsWith('?')
+        ? rawQueryString.substring(1)
+        : rawQueryString;
+  
+      setQueryString(cleanQueryString);
+  
+      // console.log("queryString", cleanQueryString);
+      // console.log("window.location.search", rawQueryString);
     }
-
   }, []);
 
   const city = params.location;
@@ -103,19 +106,19 @@ const AdsPage2 = ({ params }) => {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
@@ -388,7 +391,7 @@ const AdsPage2 = ({ params }) => {
 
   // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
 
-
+// console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`)
   return (
     <>
       <Container maxWidth="lg">

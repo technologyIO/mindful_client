@@ -54,7 +54,11 @@ const AdsPage2 = ({ params }) => {
       setcurrentUrl(url);
       setQueryString(window.location.search); // Get the query string
       // console.log(window.location.search)
+      console.log("queryString", queryString)
+      console.log(window.location.search)
+
     }
+
   }, []);
 
   const city = params.location;
@@ -99,19 +103,19 @@ const AdsPage2 = ({ params }) => {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }

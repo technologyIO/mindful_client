@@ -36,6 +36,7 @@ export default function AdsPage({ params }) {
         if (typeof window !== 'undefined') {
             const url = typeof window !== "undefined" ? window.location.href : "";
             setQueryString(window.location.search);
+            console.log(window.location.search)
             setcurrentUrl(url);
             const urlParts = window.location.pathname.split('/');
             const conditionFromUrl = urlParts[urlParts.indexOf('ads') + 1];
@@ -59,19 +60,19 @@ export default function AdsPage({ params }) {
         "gk": {
           city: 'New Delhi',
           area: "Greater Kailash 1",
-          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
           price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
         },
         "wf": {
           city: 'Bengaluru',
           area: "Whitefield (Varthur Road)",
-          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
           price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
         },
         "hb": {
           city: 'Bengaluru',
           area: "Hebbal (Aster CMI Hospital)",
-          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
+          iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y${queryString}&zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertCondition}&from=landingpage`,
           price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
         }
       }

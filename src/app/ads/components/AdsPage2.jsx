@@ -41,6 +41,7 @@ const AdsPage2 = ({ params }) => {
   const current_condition = params.condition?.toLowerCase();
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
+  const [singleDoctor, setSingleDoctor] = useState(null);
   const upperCaseCondition = ['ocd', 'adhd']
   // for zoho
   const iframeSrc =
@@ -71,14 +72,14 @@ const AdsPage2 = ({ params }) => {
   // console.log("expertService", expertService)
 
   useEffect(() => {
-    if (expertService != "general") {
-      let designation;
+    // if (expertService != "general") {
+      let designation="";
       if (expertService === "psychologist") {
         designation = "Psychologist";
-      } else if (expertService === "psychiatrist") {
+      } else if (expertService === "psychiatrist" || expertService === "therapist") {
         designation = "Psychiatrist";
       } else {
-        designation = expertText === "therapist" ? "Psychologist" : expertText;
+        designation ="";
       }
       axios
         .get(
@@ -88,13 +89,14 @@ const AdsPage2 = ({ params }) => {
           // const map = res.data.map((i)=>i._id)
           // console.log(map)
           setDoctors(res.data);
+          console.log("doctors", res.data);
           // setLoading(false);
         })
         .catch((err) => {
           console.error("Error fetching doctors:", err);
           // setLoading(false);
         });
-    }
+    // }
   }, [expertService])
 
   const urlLocation = {
@@ -173,8 +175,6 @@ const AdsPage2 = ({ params }) => {
   };
 
   const SymptomsSection = () => {
-
-
     const conditionsData = {
       "depression-anxiety": [
         { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
@@ -191,7 +191,7 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Changes in Appetite or Weight", "imageLink": "/ads/ads2/conditions/Changes in Appetite or Weight.png" },
         { "symptom": "Fatigue or Low Energy", "imageLink": "/ads/ads2/conditions/Fatigue or Low Energy.png" },
         // { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
-        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of Worthlessness or Guilt.png" },
+        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of worthlessness or guilt (1).png" },
         // { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
         // { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
         // { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
@@ -205,7 +205,7 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
         { "symptom": "Irritability", "imageLink": "/ads/ads2/conditions/Irritability.png" },
         { "symptom": "Gastrointestinal Issues", "imageLink": "/ads/ads2/conditions/Gastrointestinal Issues.png" },
-        { "symptom": "Cognitive Impairments", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
+        { "symptom": "Trouble thinking and Memory issues", "imageLink": "/ads/ads2/conditions/Cognitive Impairment.png" }
       ],
       "depression": [
         { "symptom": "Persistent Sadness or Emptiness", "imageLink": "/ads/ads2/conditions/Persistent Sadness or Emptiness.png" },
@@ -213,7 +213,7 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Changes in Appetite or Weight", "imageLink": "/ads/ads2/conditions/Changes in Appetite or Weight.png" },
         { "symptom": "Fatigue or Low Energy", "imageLink": "/ads/ads2/conditions/Fatigue or Low Energy.png" },
         { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
-        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of Worthlessness or Guilt.png" },
+        { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of worthlessness or guilt (1).png" },
         { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
         { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
         { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
@@ -263,15 +263,10 @@ const AdsPage2 = ({ params }) => {
   { "symptom": "Interrupting Conversations", "imageLink": "/ads/ads2/conditions/Interrupting Conversations.png" },
   { "symptom": "Feeling Overwhelmed", "imageLink": "/ads/ads2/conditions/Feeling Overwhelmed.png" }
 ]
-
     }
-
     // Get the list for this condition, or empty array if not found
     const conditionKey = current_condition.toLowerCase()
     const list = conditionsData[conditionKey] || []
-
-
-
     return (
       <section className="py-12 bg-[#FDE4BB]">
         <div className="mx-auto max-w-7xl px-4">
@@ -329,8 +324,6 @@ const AdsPage2 = ({ params }) => {
     );
 
   };
-
-
 
   const bannerImage = {
     "general": {
@@ -437,9 +430,9 @@ const AdsPage2 = ({ params }) => {
                 />
 
               </div>
-              <div className='flex justify-center'>
+              {/* <div className='flex justify-center'>
                 <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
-              </div>
+              </div> */}
 
 
             </div>
@@ -462,10 +455,58 @@ const AdsPage2 = ({ params }) => {
 
       </section>
 
-
+{/* testimonials */}
       {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
-        <TestimonialComponentSlideV2 smallDevice={true} location={location} doctorArray={doctors.length > 0 ? doctors : []} />
+      {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
+      <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>
+          <div className={` hidden md:flex items-center justify-center space-x-4 py-8 `}>
+                        
+                        {doctors?.map((current_doctor, idx) => (
+                            <div key={current_doctor?.name} onClick={() => setSingleDoctor(current_doctor)} className={`flex flex-row  justify-center items-center cursor-pointer space-x-4  py-1 px-3 rounded-lg shadow-md transition  ${current_doctor?.name === singleDoctor?.name ? "bg-orange-200 scale-110" : "bg-white"}`}>
+                                <Image
+                                    src={current_doctor?.image}
+                                    height={50}
+                                    width={50}
+                                    className="h-12 w-12 rounded-full object-cover"
+                                    alt={current_doctor?.name}
+                                />
+                                <p className={` text-sm hidden md:block font-medium  ${current_doctor?.name === singleDoctor?.name ? "text-orange-600" : "text-gray-800"}`}>{current_doctor?.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex md:hidden overflow-x-auto space-x-4 py-4 px-2">
+  {doctors?.map((current_doctor, idx) => (
+    <div
+      key={current_doctor?.name}
+      onClick={() => setSingleDoctor(current_doctor)}
+      className={`flex flex-col items-center cursor-pointer flex-shrink-0 px-3 py-2 rounded-lg shadow-md transition ${
+        current_doctor?.name === singleDoctor?.name
+          ? "bg-orange-200 scale-105"
+          : "bg-white"
+      }`}
+    >
+      <Image
+        src={current_doctor?.image}
+        height={50}
+        width={50}
+        className="h-12 w-12 rounded-full object-cover"
+        alt={current_doctor?.name}
+      />
+      <p
+        className={`mt-1 text-xs font-medium text-center ${
+          current_doctor?.name === singleDoctor?.name
+            ? "text-orange-600"
+            : "text-gray-800"
+        }`}
+      >
+        {current_doctor?.name}
+      </p>
+    </div>
+  ))}
+</div>
+
+        <TestimonialComponentSlideV2 doctor={singleDoctor} setSingleDoctor={setSingleDoctor} smallDevice={true} location={location} doctorArray={doctors.length > 0 ? doctors : []} />
       </section>
 
       {!condition && <div>
@@ -567,6 +608,9 @@ const AdsPage2 = ({ params }) => {
                       name={RequestAppointmentButton[expertService].text}
                     />
                   </div>
+                  <div className='flex justify-center'>
+                <p className='text-sm mr-6 mt-3 text-gray-700'>{currentPageContent?.hero_description_2}.</p>
+              </div>
                 </div>
 
                 {/* Right column: map */}
@@ -596,7 +640,6 @@ const AdsPage2 = ({ params }) => {
           </div>
         </Container>
       </section>
-
 
     </>
   )

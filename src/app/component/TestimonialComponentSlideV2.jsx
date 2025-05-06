@@ -224,19 +224,22 @@ export default function TestimonialComponentSlideV2({
         setLoading(true);
         let apiUrl = '';
         let requestData = {};
-        // console.log("doctorArray", doctorArray);
-        if (doctorArray && doctorArray.length > 0) {
+
+        if (doctor) {
+            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`;
+        } else if (doctorArray && doctorArray.length > 0) {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/getAllTestimonials/DoctorArray`;
             requestData = { doctorIds: doctorArray.map(doc => doc._id) };
-        } else if (doctor) {
-            apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/doctor/${doctor?._id}`;
         } else {
             apiUrl = `${process.env.NEXT_PUBLIC_API_URL}testimonials/search/testimonials/by-location?location=${location || ""}`;
         }
 
         try {
             let response;
-            if (doctorArray && doctorArray.length > 0) {
+            if(doctor) {
+                response = await axios.get(apiUrl);
+            }
+            else if (doctorArray && doctorArray.length > 0) {
                 response = await axios.post(apiUrl, requestData);
             } else {
                 response = await axios.get(apiUrl);
@@ -493,7 +496,7 @@ export default function TestimonialComponentSlideV2({
 
     return (
         <div className={`${mobileView ? "flex justify-center " : ""}`}>
-            {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>}
+            {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
             {/* Added "overflow-hidden" here to prevent slider overflow */}
             <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"}  overflow-hidden`}>
                 <Slider ref={sliderRef} {...settings}>

@@ -52,14 +52,14 @@ const AdsPage2 = ({ params }) => {
     if (typeof window !== 'undefined') {
       const url = window.location.href;
       setcurrentUrl(url);
-  
+
       const rawQueryString = window.location.search;
       const cleanQueryString = rawQueryString.startsWith('?')
         ? rawQueryString.substring(1)
         : rawQueryString;
-  
+
       setQueryString(cleanQueryString);
-  
+
       // console.log("queryString", cleanQueryString);
       // console.log("window.location.search", rawQueryString);
     }
@@ -73,29 +73,29 @@ const AdsPage2 = ({ params }) => {
 
   useEffect(() => {
     // if (expertService != "general") {
-      let designation="";
-      if (expertService === "psychologist") {
-        designation = "Psychologist";
-      } else if (expertService === "psychiatrist" || expertService === "therapist") {
-        designation = "Psychiatrist";
-      } else {
-        designation ="";
-      }
-      axios
-        .get(
-          `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
-        )
-        .then((res) => {
-          // const map = res.data.map((i)=>i._id)
-          // console.log(map)
-          setDoctors(res.data);
-          console.log("doctors", res.data);
-          // setLoading(false);
-        })
-        .catch((err) => {
-          console.error("Error fetching doctors:", err);
-          // setLoading(false);
-        });
+    let designation = "";
+    if (expertService === "psychologist") {
+      designation = "Psychologist";
+    } else if (expertService === "psychiatrist" || expertService === "therapist") {
+      designation = "Psychiatrist";
+    } else {
+      designation = "";
+    }
+    axios
+      .get(
+        `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
+      )
+      .then((res) => {
+        // const map = res.data.map((i)=>i._id)
+        // console.log(map)
+        setDoctors(res.data);
+        console.log("doctors", res.data);
+        // setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching doctors:", err);
+        // setLoading(false);
+      });
     // }
   }, [expertService])
 
@@ -252,17 +252,17 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Avoiding Eye Contact", "imageLink": "/ads/ads2/conditions/Avoiding Eye Contact.png" }
       ],
       "adhd": [
-  { "symptom": "Losing Track of Time", "imageLink": "/ads/ads2/conditions/Losing Track of Time.png" },
-  { "symptom": "Feeling Disorganized", "imageLink": "/ads/ads2/conditions/Feeling Disorganized.png" },
-  { "symptom": "Putting Things Off", "imageLink": "/ads/ads2/conditions/Putting Things Off.png" },
-  { "symptom": "Forgetting Stuff", "imageLink": "/ads/ads2/conditions/Forgetting Stuff.png" },
-  { "symptom": "Mood Swings", "imageLink": "/ads/ads2/conditions/Mood Swings-2.png" },
-  { "symptom": "Acting on Impulse / Impulsive", "imageLink": "/ads/ads2/conditions/Impulsive.png" },
-  { "symptom": "Losing Interest", "imageLink": "/ads/ads2/conditions/Losing Interest.png" },
-  { "symptom": "Trouble Switching Tasks", "imageLink": "/ads/ads2/conditions/Trouble Switching Tasks.png" },
-  { "symptom": "Interrupting Conversations", "imageLink": "/ads/ads2/conditions/Interrupting Conversations.png" },
-  { "symptom": "Feeling Overwhelmed", "imageLink": "/ads/ads2/conditions/Feeling Overwhelmed.png" }
-]
+        { "symptom": "Losing Track of Time", "imageLink": "/ads/ads2/conditions/Losing Track of Time.png" },
+        { "symptom": "Feeling Disorganized", "imageLink": "/ads/ads2/conditions/Feeling Disorganized.png" },
+        { "symptom": "Putting Things Off", "imageLink": "/ads/ads2/conditions/Putting Things Off.png" },
+        { "symptom": "Forgetting Stuff", "imageLink": "/ads/ads2/conditions/Forgetting Stuff.png" },
+        { "symptom": "Mood Swings", "imageLink": "/ads/ads2/conditions/Mood Swings-2.png" },
+        { "symptom": "Acting on Impulse / Impulsive", "imageLink": "/ads/ads2/conditions/Impulsive.png" },
+        { "symptom": "Losing Interest", "imageLink": "/ads/ads2/conditions/Losing Interest.png" },
+        { "symptom": "Trouble Switching Tasks", "imageLink": "/ads/ads2/conditions/Trouble Switching Tasks.png" },
+        { "symptom": "Interrupting Conversations", "imageLink": "/ads/ads2/conditions/Interrupting Conversations.png" },
+        { "symptom": "Feeling Overwhelmed", "imageLink": "/ads/ads2/conditions/Feeling Overwhelmed.png" }
+      ]
     }
     // Get the list for this condition, or empty array if not found
     const conditionKey = current_condition.toLowerCase()
@@ -384,7 +384,7 @@ const AdsPage2 = ({ params }) => {
 
   // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
 
-// console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`)
+  // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`)
   return (
     <>
       <Container maxWidth="lg">
@@ -455,27 +455,27 @@ const AdsPage2 = ({ params }) => {
 
       </section>
 
-{/* testimonials */}
+      {/* testimonials */}
       {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
-      {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
-      <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>
-          <div className={` hidden md:flex items-center justify-center space-x-4 py-8 `}>
-                        
-                        {doctors?.map((current_doctor, idx) => (
-                            <div key={current_doctor?.name} onClick={() => setSingleDoctor(current_doctor)} className={`flex flex-row  justify-center items-center cursor-pointer space-x-4  py-1 px-3 rounded-lg shadow-md transition  ${current_doctor?.name === singleDoctor?.name ? "bg-orange-200 scale-110" : "bg-white"}`}>
-                                <Image
-                                    src={current_doctor?.image}
-                                    height={50}
-                                    width={50}
-                                    className="h-12 w-12 rounded-full object-cover"
-                                    alt={current_doctor?.name}
-                                />
-                                <p className={` text-sm hidden md:block font-medium  ${current_doctor?.name === singleDoctor?.name ? "text-orange-600" : "text-gray-800"}`}>{current_doctor?.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex md:hidden overflow-x-auto space-x-4 py-4 px-2">
+        {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
+        <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>
+        <div className={` hidden md:flex items-center justify-center space-x-4 py-8 `}>
+
+          {doctors?.map((current_doctor, idx) => (
+            <div key={current_doctor?.name} onClick={() => setSingleDoctor(current_doctor)} className={`flex flex-row  justify-center items-center cursor-pointer space-x-4  py-1 px-3 rounded-lg shadow-md transition  ${current_doctor?.name === singleDoctor?.name ? "bg-orange-200 scale-110" : "bg-white"}`}>
+              <Image
+                src={current_doctor?.image}
+                height={50}
+                width={50}
+                className="h-12 w-12 rounded-full object-cover"
+                alt={current_doctor?.name}
+              />
+              <p className={` text-sm hidden md:block font-medium  ${current_doctor?.name === singleDoctor?.name ? "text-orange-600" : "text-gray-800"}`}>{current_doctor?.name}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex md:hidden overflow-x-auto space-x-4 my-4 py-4 px-2 show-scrollbar">
   {doctors?.map((current_doctor, idx) => (
     <div
       key={current_doctor?.name}
@@ -505,6 +505,7 @@ const AdsPage2 = ({ params }) => {
     </div>
   ))}
 </div>
+
 
         <TestimonialComponentSlideV2 doctor={singleDoctor} setSingleDoctor={setSingleDoctor} smallDevice={true} location={location} doctorArray={doctors.length > 0 ? doctors : []} />
       </section>
@@ -609,8 +610,8 @@ const AdsPage2 = ({ params }) => {
                     />
                   </div>
                   <div className='flex justify-center'>
-                <p className='text-sm mr-6 mt-3 text-gray-700'>{currentPageContent?.hero_description_2}.</p>
-              </div>
+                    <p className='text-sm mr-6 mt-3 text-gray-700'>{currentPageContent?.hero_description_2}.</p>
+                  </div>
                 </div>
 
                 {/* Right column: map */}

@@ -255,5 +255,29 @@ body {
   background: #ff5722 !important; /* active dot color */
   padding:8px;
 }
+/* Always show a 6px-high horizontal scrollbar */
+.show-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: thin;               /* Firefox */
+  scrollbar-color: #c0c0c0 transparent;/* Firefox thumb & track */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.show-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.show-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+  border: 1px solid transparent; /* optional inset border for contrast */
+}
+
+
+
 
 /* Define the 'thin-scroll' class */

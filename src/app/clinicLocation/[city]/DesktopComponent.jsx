@@ -52,7 +52,8 @@ const DesktopComponent = ({ images, data, city }) => {
                     <div id='clinic-location' className="mb-10 col-span-2">
                         {/* clinic location here */}
                         <div className='mb-8'>
-                            <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} />
+                            {/* <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} /> */}
+                            <RequestAppointment  city={city} />
                         </div>
                         <div>
                             <ClinicAddress images={images} data={data} />

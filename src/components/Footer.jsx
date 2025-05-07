@@ -73,7 +73,8 @@ function Footer() {
       </div>
       <div className='flex justify-center gap-6 mb-2'>
         <div className='cursor-pointer'>
-          <RequestAppointmentGeneral iframeSrc={location.iframeSrc}>
+          {/* <RequestAppointmentGeneral iframeSrc={location.iframeSrc}> */}
+          <RequestAppointmentGeneral >
             <img
               src="https://ik.imagekit.io/mwpcmpi5v/wassup.jpeg?updatedAt=1734072263762"
               className="w-[60px] h-[60px] object-contain"

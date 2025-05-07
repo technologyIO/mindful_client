@@ -96,7 +96,8 @@ const MobileComponent = ({ data, images, city }) => {
            </div>
 
             <div className='px-4 mb-11'>
-            <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} />
+            {/* <RequestAppointment iframeSrc={content[city]?.iframeSrc} city={city} /> */}
+            <RequestAppointment  city={city} />
 
             </div>
             <div className='px-4 mb-11'>

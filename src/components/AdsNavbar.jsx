@@ -1,6 +1,6 @@
 import { useParams } from 'next/navigation'
 import React from 'react'
-
+import {adsPageContent} from '../adsPageContent'
 const AdsNavbar = () => {
   // const city = params.location;
   const params = useParams()
@@ -26,18 +26,34 @@ const AdsNavbar = () => {
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
+  const expertService = params.service;
+  const current_condition = params.condition?.toLowerCase();
+
+   const currentPageContent = adsPageContent[city]?.[expertService]?.[current_condition];
+
+  //  console.log("adsPageContent[city]?.[expertService]?.[current_condition]", adsPageContent[city]?.[expertService]?.[current_condition].headline_2_pinned)
   return (
     <header className="flex items-center justify-between px-6 md:px-16 py-0">
-
-      <div className="cursor-pointer w-[100px] h-[70px] md:w-[120px] md:h-[100px] ">
-        <img className="cursor-pointer w-full h-full" src="/home/logoMainCropped.svg" />
-      </div>
-      {
+{/* Logo on the left */}
+  <div className="cursor-pointer w-[100px] h-[70px] md:w-[120px] md:h-[100px]">
+    <img className="cursor-pointer w-full h-full" src="/home/logoMainCropped.svg" />
+  </div>
+      {/* {
         locationContent[city]?.price &&
         <div className="text-xs md:text-lg hidden md:block  text-orange-500 font-semibold mt-1 text-start whitespace-nowrap">
           {locationContent[city]?.price}
         </div>
-      }
+      } */}
+
+{/* put price at top */}
+      {/* Headline on the right */}
+  {currentPageContent?.headline_2_pinned && (
+    <div className="text-xs md:text-base text-orange-500 font-semibold mt-1 text-end whitespace-nowrap">
+      {currentPageContent.headline_2_pinned}
+    </div>
+  )}
+
+
 
     </header>
   )

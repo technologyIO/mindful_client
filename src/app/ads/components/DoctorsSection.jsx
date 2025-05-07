@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const DoctorsSection = ({ expertService, location, expertText }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   // For the "general" case, store separate arrays
   const [psychiatrists, setPsychiatrists] = useState([]);
   const [psychologists, setPsychologists] = useState([]);
@@ -68,12 +68,74 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
     }
   }
 
-  if (loading) {
-    return <p className="text-center">Loading...</p>;
-  }
+  // if (loading) {
+  //   return <p className="text-center">Loading...</p>;
+  // }
 
   
+  const DoctorGridSkeleton = () => {
+    return (
+      <div className="hidden md:flex flex-wrap justify-center gap-[90px] animate-pulse">
+        {[...Array(5)].map((_, idx) => (
+          <div key={idx} className="flex flex-col items-center">
+            {/* Circular image skeleton */}
+            <div className="mb-2 h-[130px] w-[130px] md:h-[150px] md:w-[150px] bg-gray-300 rounded-full border-[3px] border-orange-200" />
+  
+            {/* Name skeleton */}
+            <div className="mb-1 mt-2 text-center">
+              <div className="h-4 w-32 bg-gray-300 rounded mb-2" />
+              {/* Designation skeleton */}
+              <div className="h-3 w-28 bg-gray-200 rounded" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
+  const MobileDoctorGridSkeleton = () => {
+    return (
+      <div className="block md:hidden">
+        <div className="flex flex-wrap gap-6 justify-center animate-pulse">
+          {[...Array(3)].map((_, idx) => (
+            <div key={idx} className="flex flex-col items-center">
+              {/* Circle skeleton for image */}
+              <div className="h-[120px] w-[120px] bg-gray-300 rounded-full border-[3px] border-orange-200 mb-2" />
+  
+              {/* Name skeleton */}
+              <div className="mb-1 text-center">
+                <div className="h-4 w-24 bg-gray-300 rounded mb-2" />
+                {/* Designation skeleton */}
+                <div className="h-3 w-20 bg-gray-200 rounded" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const ShowSkeleton = ()=>{
+    return (
+      <>
+      <MobileDoctorGridSkeleton />
+      <DoctorGridSkeleton />
+      </>
+    )
+  }
+  
+  if(loading){
+    return (
+    <>
+     <div className="mb-6 flex flex-col justify-center items-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+            Our Experts
+          </h1>
+        </div>
+      <ShowSkeleton/>
+    </>
+    )
+  }
 
   return (
       <div className="mx-auto max-w-6xl">

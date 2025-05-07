@@ -176,7 +176,7 @@ export default function TestimonialComponentSlideV2({
     const [testimonials, setTestimonials] = useState([]);
     const [currentTestimonial, setCurrentTestimonial] = useState({});
     const [isQuoteModal, setisQuoteModal] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef(null);
 
@@ -236,7 +236,7 @@ export default function TestimonialComponentSlideV2({
 
         try {
             let response;
-            if(doctor) {
+            if (doctor) {
                 response = await axios.get(apiUrl);
             }
             else if (doctorArray && doctorArray.length > 0) {
@@ -258,6 +258,7 @@ export default function TestimonialComponentSlideV2({
         } else {
             fetchTestimonials();
         }
+        setCurrentSlide(0);
     }, [pathname, condition, location, doctor, doctorArray]);
 
     useEffect(() => {
@@ -266,19 +267,19 @@ export default function TestimonialComponentSlideV2({
         }
     }, []);
 
-    if (loading) {
-        return (
-            <div className="flex justify-center items-center min-h-[440px]">
-                <CircularProgress />
-            </div>
-        );
-    } else if (testimonials.length === 0) {
-        return (
-            <div className="flex justify-center items-center">
-                {/* <p>No testimonial found</p> */}
-            </div>
-        );
-    }
+    // if (loading) {
+    //     return (
+    //         <div className="flex justify-center items-center min-h-[440px]">
+    //             <CircularProgress />
+    //         </div>
+    //     );
+    // } else if (testimonials.length === 0) {
+    //     return (
+    //         <div className="flex justify-center items-center">
+    //             {/* <p>No testimonial found</p> */}
+    //         </div>
+    //     );
+    // }
 
     // Updated slider settings without autoplay and dots
     const settings = {
@@ -494,20 +495,87 @@ export default function TestimonialComponentSlideV2({
         );
     };
 
+    const SkeletonCard = () => (
+        <div className="bg-white shadow-md rounded-lg p-6 h-[421px] mx-5 animate-pulse">
+          <div className="flex flex-col justify-between h-full">
+            {/* Header */}
+            <div>
+              <div className="flex items-center mb-8">
+                <div className="w-1 h-10 bg-orange-500 mr-4 rounded"></div>
+                <div className="h-5 w-24 bg-gray-300 rounded"></div>
+              </div>
+      
+              {/* Testimonial Text */}
+              <div className="mb-5 space-y-2">
+                <div className="h-4 bg-gray-300 rounded w-full"></div>
+                <div className="h-4 bg-gray-300 rounded w-11/12"></div>
+                <div className="h-4 bg-gray-300 rounded w-10/12"></div>
+                <div className="h-4 bg-gray-300 rounded w-9/12"></div>
+                <div className="h-4 bg-gray-300 rounded w-8/12"></div>
+              </div>
+      
+              {/* Read More Button */}
+              <div className="flex justify-center mb-8">
+                <div className="h-4 w-28 bg-orange-300 rounded"></div>
+              </div>
+            </div>
+      
+            {/* Footer - Treated By */}
+            <div>
+              <div className="h-4 w-24 bg-gray-300 rounded mb-3"></div>
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div className="h-4 w-32 bg-gray-300 rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    const MobileSkeleton =()=>{
+       return (
+        <div className="md:hidden">
+        <SkeletonCard/>
+</div>
+       )
+    }
+    const DesktopSkeleton = ()=>{
+      return (
+        <div className="hidden md:grid grid-cols-3 gap-4 h-[421px]">
+        {[1,2,3].map(i=>(
+            <SkeletonCard key={i} />
+        ))}
+    </div>
+      )
+    }
+
+      
+      
+      
+
     return (
         <div className={`${mobileView ? "flex justify-center " : ""}`}>
             {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
             {/* Added "overflow-hidden" here to prevent slider overflow */}
             <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"}  overflow-hidden`}>
-                <Slider ref={sliderRef} {...settings}>
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="px-2">
-                            <div className="rounded-lg md:min-h-[440px] px-4">
-                                <QuoteComponent key={index} testimonial={testimonial} modalOpen={false} index={index} />
+                {
+                    loading ? <>
+                        <MobileSkeleton />
+                        <DesktopSkeleton />
+                    </> :   <Slider ref={sliderRef} {...settings}>
+                    { testimonials.map((testimonial, index) => (
+                            <div key={index} className="px-2">
+                                <div className="rounded-lg md:min-h-[440px] px-4">
+                                    <QuoteComponent
+                                        testimonial={testimonial}
+                                        modalOpen={false}
+                                        index={index}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </Slider>
+                }
+              
                 {/* Custom Navigation Controls */}
                 <div className="flex justify-center items-center mt-4">
                     <button

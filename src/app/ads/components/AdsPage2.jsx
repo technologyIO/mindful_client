@@ -41,6 +41,7 @@ const AdsPage2 = ({ params }) => {
   const current_condition = params.condition?.toLowerCase();
   const cleanCondition = condition ? condition?.replace(/%20/g, ' ').replace(/,/g, '') : ""
   const [doctors, setDoctors] = useState([]);
+  const [loadingDoctor, setLoadingDoctor] = useState(true);
   const [singleDoctor, setSingleDoctor] = useState(null);
   const upperCaseCondition = ['ocd', 'adhd']
   // for zoho
@@ -74,9 +75,10 @@ const AdsPage2 = ({ params }) => {
   useEffect(() => {
     // if (expertService != "general") {
     let designation = "";
-    if (expertService === "psychologist") {
+    setLoadingDoctor(true)
+    if (expertService === "psychologist"  || expertService === "therapist") {
       designation = "Psychologist";
-    } else if (expertService === "psychiatrist" || expertService === "therapist") {
+    } else if (expertService === "psychiatrist") {
       designation = "Psychiatrist";
     } else {
       designation = "";
@@ -90,11 +92,13 @@ const AdsPage2 = ({ params }) => {
         // console.log(map)
         setDoctors(res.data);
         console.log("doctors", res.data);
+        setLoadingDoctor(false);
         // setLoading(false);
       })
       .catch((err) => {
         console.error("Error fetching doctors:", err);
         // setLoading(false);
+        setLoadingDoctor(false);
       });
     // }
   }, [expertService])
@@ -385,6 +389,44 @@ const AdsPage2 = ({ params }) => {
   // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
 
   // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`)
+
+  const DoctorSelectorSkeleton = () => {
+    return (
+      <div className="hidden md:flex items-center justify-center space-x-4 py-2 animate-pulse">
+        {[...Array(4)].map((_, idx) => (
+          <div
+            key={idx}
+            className="flex flex-row justify-center items-center space-x-4 py-1 px-3 rounded-lg shadow-md bg-white"
+          >
+            {/* Circular skeleton for image */}
+            <div className="h-12 w-12 bg-gray-300 rounded-full" />
+  
+            {/* Name skeleton */}
+            <div className="h-4 w-20 bg-gray-300 rounded hidden md:block" />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const DoctorSelectorMobileSkeleton = () => {
+    return (
+      <div className="flex md:hidden overflow-x-auto space-x-4 my-4 py-4 px-2 show-scrollbar animate-pulse">
+        {[...Array(5)].map((_, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col items-center flex-shrink-0 px-3 py-2 rounded-lg shadow-md bg-white"
+          >
+            {/* Image circle skeleton */}
+            <div className="h-12 w-12 bg-gray-300 rounded-full mb-2" />
+  
+            {/* Name skeleton */}
+            <div className="h-3 w-16 bg-gray-300 rounded" />
+          </div>
+        ))}
+      </div>
+    );
+  };
   return (
     <>
       <Container maxWidth="lg">
@@ -428,11 +470,12 @@ const AdsPage2 = ({ params }) => {
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
                 />
+                
 
               </div>
-              {/* <div className='flex justify-center'>
+              <div className='flex justify-center'>
                 <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
-              </div> */}
+              </div>
 
 
             </div>
@@ -456,11 +499,16 @@ const AdsPage2 = ({ params }) => {
       </section>
 
       {/* testimonials */}
-      {/* client speaks */}
       <section className='py-5 px-1 bg-gray-100 '>
         {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
         <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>
-        <div className={` hidden md:flex items-center justify-center space-x-4 py-8 `}>
+        {loadingDoctor && (
+         <>
+           <DoctorSelectorSkeleton/>
+           <DoctorSelectorMobileSkeleton/>
+         </>
+        )}
+        <div className={` hidden md:flex items-center justify-center space-x-4 py-8 select-none `}>
 
           {doctors?.map((current_doctor, idx) => (
             <div key={current_doctor?.name} onClick={() => setSingleDoctor(current_doctor)} className={`flex flex-row  justify-center items-center cursor-pointer space-x-4  py-1 px-3 rounded-lg shadow-md transition  ${current_doctor?.name === singleDoctor?.name ? "bg-orange-200 scale-110" : "bg-white"}`}>
@@ -475,39 +523,38 @@ const AdsPage2 = ({ params }) => {
             </div>
           ))}
         </div>
-        <div className="flex md:hidden overflow-x-auto space-x-4 my-4 py-4 px-2 show-scrollbar">
-  {doctors?.map((current_doctor, idx) => (
-    <div
-      key={current_doctor?.name}
-      onClick={() => setSingleDoctor(current_doctor)}
-      className={`flex flex-col items-center cursor-pointer flex-shrink-0 px-3 py-2 rounded-lg shadow-md transition ${
-        current_doctor?.name === singleDoctor?.name
-          ? "bg-orange-200 scale-105"
-          : "bg-white"
-      }`}
-    >
-      <Image
-        src={current_doctor?.image}
-        height={50}
-        width={50}
-        className="h-12 w-12 rounded-full object-cover"
-        alt={current_doctor?.name}
-      />
-      <p
-        className={`mt-1 text-xs font-medium text-center ${
-          current_doctor?.name === singleDoctor?.name
-            ? "text-orange-600"
-            : "text-gray-800"
-        }`}
-      >
-        {current_doctor?.name}
-      </p>
-    </div>
-  ))}
-</div>
+        <div className="flex md:hidden overflow-x-auto space-x-4 my-4 py-4 px-2 show-scrollbar select-none">
+          {doctors?.map((current_doctor, idx) => (
+            <div
+              key={current_doctor?.name}
+              onClick={() => setSingleDoctor(current_doctor)}
+              className={`flex flex-col items-center cursor-pointer flex-shrink-0 px-3 py-2 rounded-lg shadow-md transition ${current_doctor?.name === singleDoctor?.name
+                  ? "bg-orange-200 scale-105"
+                  : "bg-white"
+                }`}
+            >
+              <Image
+                src={current_doctor?.image}
+                height={50}
+                width={50}
+                className="h-12 w-12 rounded-full object-cover"
+                alt={current_doctor?.name}
+              />
+              <p
+                className={`mt-1 text-xs font-medium text-center ${current_doctor?.name === singleDoctor?.name
+                    ? "text-orange-600"
+                    : "text-gray-800"
+                  }`}
+              >
+                {current_doctor?.name}
+              </p>
+            </div>
+          ))}
+        </div>
 
 
         <TestimonialComponentSlideV2 doctor={singleDoctor} setSingleDoctor={setSingleDoctor} smallDevice={true} location={location} doctorArray={doctors.length > 0 ? doctors : []} />
+        {/* <TestimonialComponentSlideV2  location={location}/> */}
       </section>
 
       {!condition && <div>

@@ -464,7 +464,12 @@ const AdsPage2 = ({ params }) => {
               {/* <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p> */}
-              <div className="mt-6 flex items-center justify-center md:justify-start">
+               {currentPageContent?.headline_2_pinned && (
+    <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
+      {currentPageContent.headline_2_pinned}
+    </div>
+  )}
+              <div className="mt-3 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
@@ -473,9 +478,9 @@ const AdsPage2 = ({ params }) => {
                 
 
               </div>
-              <div className='flex justify-center'>
+              {/* <div className='flex justify-center'>
                 <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
-              </div>
+              </div> */}
 
 
             </div>

@@ -47,11 +47,11 @@ const AdsNavbar = () => {
 
 {/* put price at top */}
       {/* Headline on the right */}
-  {currentPageContent?.headline_2_pinned && (
+  {/* {currentPageContent?.headline_2_pinned && (
     <div className="text-xs md:text-base text-orange-500 font-semibold mt-1 text-end whitespace-nowrap">
       {currentPageContent.headline_2_pinned}
     </div>
-  )}
+  )} */}
 
 
 

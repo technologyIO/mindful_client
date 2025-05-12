@@ -182,7 +182,8 @@ const AdsPage2 = ({ params }) => {
     const conditionsData = {
       "depression-anxiety": [
         { "symptom": "Excessive Worrying", "imageLink": "/ads/ads2/conditions/Excessive Worrying.png" },
-        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness2.png" },
+        { "symptom": "Slowed movement", "imageLink": "/ads/ads2/conditions/Slowed movement.png" },
         // { "symptom": "Fatigue", "imageLink": "/ads/ads2/conditions/Fatigue.png" },
         { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
         // { "symptom": "Muscle Tension", "imageLink": "/ads/ads2/conditions/Muscle Tension.png" },
@@ -219,7 +220,9 @@ const AdsPage2 = ({ params }) => {
         { "symptom": "Difficulty Concentrating", "imageLink": "/ads/ads2/conditions/Difficulty Concentrating.png" },
         { "symptom": "Feelings of Worthlessness or Guilt", "imageLink": "/ads/ads2/conditions/Feelings of worthlessness or guilt (1).png" },
         { "symptom": "Sleep Disturbances", "imageLink": "/ads/ads2/conditions/Sleep Disturbances.png" },
-        { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
+        // { "symptom": "Psychomotor Agitation or Retardation", "imageLink": "/ads/ads2/conditions/Psychomotor Agitation or Retardation.png" },
+        { "symptom": "Restlessness", "imageLink": "/ads/ads2/conditions/Restlessness2.png" },
+        { "symptom": "Slowed movement", "imageLink": "/ads/ads2/conditions/Slowed movement.png" },
         { "symptom": "Thoughts of Death or Suicide", "imageLink": "/ads/ads2/conditions/Thoughts of Death or Suicide.png" }
       ],
       "general": [

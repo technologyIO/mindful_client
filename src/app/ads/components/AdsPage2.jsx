@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Container } from '@mui/material'
 import { useEffect, useState } from 'react'
-
+import { usePathname, useSearchParams } from 'next/navigation';
 import TestimonialComponentSlideV2 from '@/app/component/TestimonialComponentSlideV2'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import { adsPageContent } from '@/adsPageContent'
@@ -11,13 +11,11 @@ import DoctorsSection from './DoctorsSection'
 import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
 const AdsPage2 = ({ params }) => {
-
+const pathname = usePathname(); // '/clinicLocation/gk'
+const searchParams = useSearchParams(); // instance of URLSearchParams
   // for content of every page refer to adsPageContent.js in root
 
-  // for reference 
-  // new condition 
-  // 1. add banner image 
-  // 2. add condition 
+
 
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
@@ -49,16 +47,20 @@ const AdsPage2 = ({ params }) => {
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
   const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
   // console.log('location', params.location)
+      const fullUrl = `${window.location.origin}${pathname}?${searchParams.toString()}`;
+      const tempQueryString = searchParams.toString();
+      console.log('tempQueryString', tempQueryString)
+    console.log('fullUrl', fullUrl)
   useEffect(() => {
+    setcurrentUrl(fullUrl);
     if (typeof window !== 'undefined') {
       const url = window.location.href;
-      setcurrentUrl(url);
 
       const rawQueryString = window.location.search;
       const cleanQueryString = rawQueryString.startsWith('?')
         ? rawQueryString.substring(1)
         : rawQueryString;
-
+      // setQueryString(searchParams.toString());
       setQueryString(cleanQueryString);
 
       // console.log("queryString", cleanQueryString);
@@ -112,22 +114,24 @@ const AdsPage2 = ({ params }) => {
     "gk": {
       city: 'New Delhi',
       area: "Greater Kailash 1",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${tempQueryString}`,
       price: expertText === "therapist" ? "Therapy from Rs. 1800 to Rs. 2500 per session" : "",
     },
     "wf": {
       city: 'Bengaluru',
       area: "Whitefield (Varthur Road)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${tempQueryString}`,
       price: expertText === "therapist" ? "Therapy at Rs. 1750 per session" : "",
     },
     "hb": {
       city: 'Bengaluru',
       area: "Hebbal (Aster CMI Hospital)",
-      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`,
+      iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${tempQueryString}`,
       price: expertText === "therapist" ? "First therapy session at Rs. 1500!" : "",
     }
   }
+
+  console.log("locationContent", locationContent)
 
   const currentPageContent = adsPageContent[city]?.[expertService]?.[current_condition];
 

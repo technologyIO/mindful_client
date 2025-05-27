@@ -21,7 +21,7 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
     { name: 'Anxiety', image: '/ads/what_we_treat/anxiety (1).png' },
     { name: 'OCD', image: '/ads/what_we_treat/ocd.png' },
-    { name: 'Adult ADHD', image: '/ads/what_we_treat/adhd.png' },
+    { name: 'ADHD', image: '/ads/what_we_treat/adhd.png' },
     { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
     { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
     // { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },

@@ -24,6 +24,7 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
     { name: 'ADHD', image: '/ads/what_we_treat/adhd.png' },
     { name: 'Stress concerns', image: '/ads/what_we_treat/marks.png' },
     { name: 'Personality disorders', image: '/ads/what_we_treat/personality-disorder.png' },
+    { name: 'PTSD', image: '/ads/what_we_treat/PTSD.png' },
     // { name: 'Adjustment disorders', image: '/ads/what_we_treat/dissociative-identity-disorder.png' },
 
 

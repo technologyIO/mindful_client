@@ -11,8 +11,8 @@ import DoctorsSection from './DoctorsSection'
 import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
 const AdsPage2 = ({ params }) => {
-const pathname = usePathname(); // '/clinicLocation/gk'
-const searchParams = useSearchParams(); // instance of URLSearchParams
+  const pathname = usePathname(); // '/clinicLocation/gk'
+  const searchParams = useSearchParams(); // instance of URLSearchParams
   // for content of every page refer to adsPageContent.js in root
 
 
@@ -48,11 +48,21 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
   const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
   // console.log('location', params.location)
-      const fullUrl = `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`;
-      console.log("fullURL", fullUrl);
-      const tempQueryString = searchParams.toString();
-      // console.log('tempQueryString', tempQueryString)
-    // console.log('fullUrl', fullUrl)
+  let fullUrl = ``;
+  // console.log("fullURL", fullUrl);
+  let tempQueryString = "";
+
+
+  useEffect(() => {
+    fullUrl = `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`;
+    setcurrentUrl(fullUrl);
+    // console.log("fullUrl", fullUrl);
+    tempQueryString = searchParams.toString();
+    // setQueryString(tempQueryString);
+  }, [pathname, searchParams]);
+
+  // console.log('tempQueryString', tempQueryString)
+  // console.log('fullUrl', fullUrl)
   useEffect(() => {
     // setcurrentUrl(fullUrl);
     // if (typeof window !== 'undefined') {
@@ -80,7 +90,7 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
     // if (expertService != "general") {
     let designation = "";
     setLoadingDoctor(true)
-    if (expertService === "psychologist"  || expertService === "therapist") {
+    if (expertService === "psychologist" || expertService === "therapist") {
       designation = "Psychologist";
     } else if (expertService === "psychiatrist") {
       designation = "Psychiatrist";
@@ -409,7 +419,7 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
           >
             {/* Circular skeleton for image */}
             <div className="h-12 w-12 bg-gray-300 rounded-full" />
-  
+
             {/* Name skeleton */}
             <div className="h-4 w-20 bg-gray-300 rounded hidden md:block" />
           </div>
@@ -428,7 +438,7 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
           >
             {/* Image circle skeleton */}
             <div className="h-12 w-12 bg-gray-300 rounded-full mb-2" />
-  
+
             {/* Name skeleton */}
             <div className="h-3 w-16 bg-gray-300 rounded" />
           </div>
@@ -473,18 +483,18 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
               {/* <p className='text-sm mt-6 text-gray-500'>
                 {currentPageContent?.hero_description_2}
               </p> */}
-               {currentPageContent?.headline_2_pinned && (
-    <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
-      {currentPageContent.headline_2_pinned}
-    </div>
-  )}
+              {currentPageContent?.headline_2_pinned && (
+                <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
+                  {currentPageContent.headline_2_pinned}
+                </div>
+              )}
               <div className="mt-3 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
                 />
-                
+
 
               </div>
               {/* <div className='flex justify-center'>
@@ -517,10 +527,10 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
         {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
         <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>
         {loadingDoctor && (
-         <>
-           <DoctorSelectorSkeleton/>
-           <DoctorSelectorMobileSkeleton/>
-         </>
+          <>
+            <DoctorSelectorSkeleton />
+            <DoctorSelectorMobileSkeleton />
+          </>
         )}
         <div className={` hidden md:flex items-center justify-center space-x-4 py-8 select-none `}>
 
@@ -543,8 +553,8 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
               key={current_doctor?.name}
               onClick={() => setSingleDoctor(current_doctor)}
               className={`flex flex-col items-center cursor-pointer flex-shrink-0 px-3 py-2 rounded-lg shadow-md transition ${current_doctor?.name === singleDoctor?.name
-                  ? "bg-orange-200 scale-105"
-                  : "bg-white"
+                ? "bg-orange-200 scale-105"
+                : "bg-white"
                 }`}
             >
               <Image
@@ -556,8 +566,8 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
               />
               <p
                 className={`mt-1 text-xs font-medium text-center ${current_doctor?.name === singleDoctor?.name
-                    ? "text-orange-600"
-                    : "text-gray-800"
+                  ? "text-orange-600"
+                  : "text-gray-800"
                   }`}
               >
                 {current_doctor?.name}

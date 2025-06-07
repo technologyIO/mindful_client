@@ -15,7 +15,7 @@ const AdsPage2 = ({ params }) => {
   const searchParams = useSearchParams(); // instance of URLSearchParams
   // for content of every page refer to adsPageContent.js in root
 
-
+  console.log("searchParams", searchParams.toString());
 
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
@@ -42,22 +42,25 @@ const AdsPage2 = ({ params }) => {
   const [doctors, setDoctors] = useState([]);
   const [loadingDoctor, setLoadingDoctor] = useState(true);
   const [singleDoctor, setSingleDoctor] = useState(null);
+  const [fullUrl, setfullUrl] = useState("");
+  const [tempQueryString, setTempQueryString] = useState("");
   const upperCaseCondition = ['ocd', 'adhd']
   // for zoho
   const iframeSrc =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
   const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
   // console.log('location', params.location)
-  let fullUrl = ``;
   // console.log("fullURL", fullUrl);
-  let tempQueryString = "";
+  // let tempQueryString = "";
 
 
   useEffect(() => {
-    fullUrl = `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`;
-    setcurrentUrl(fullUrl);
+    const url = `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`;
+    setfullUrl(url);
+    setcurrentUrl(url);
     // console.log("fullUrl", fullUrl);
-    tempQueryString = searchParams.toString();
+    const tQuery = searchParams.toString();
+    setTempQueryString(tQuery);
     // setQueryString(tempQueryString);
   }, [pathname, searchParams]);
 

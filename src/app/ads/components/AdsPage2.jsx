@@ -48,25 +48,26 @@ const searchParams = useSearchParams(); // instance of URLSearchParams
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
   const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
   // console.log('location', params.location)
-      const fullUrl = `${window.location.origin}${pathname}?${searchParams.toString()}`;
+      const fullUrl = `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`;
+      console.log("fullURL", fullUrl);
       const tempQueryString = searchParams.toString();
-      console.log('tempQueryString', tempQueryString)
-    console.log('fullUrl', fullUrl)
+      // console.log('tempQueryString', tempQueryString)
+    // console.log('fullUrl', fullUrl)
   useEffect(() => {
-    setcurrentUrl(fullUrl);
-    if (typeof window !== 'undefined') {
-      const url = window.location.href;
+    // setcurrentUrl(fullUrl);
+    // if (typeof window !== 'undefined') {
+    //   const url = window.location.href;
 
-      const rawQueryString = window.location.search;
-      const cleanQueryString = rawQueryString.startsWith('?')
-        ? rawQueryString.substring(1)
-        : rawQueryString;
-      // setQueryString(searchParams.toString());
-      setQueryString(cleanQueryString);
+    //   const rawQueryString = window.location.search;
+    //   const cleanQueryString = rawQueryString.startsWith('?')
+    //     ? rawQueryString.substring(1)
+    //     : rawQueryString;
+    //   // setQueryString(searchParams.toString());
+    //   setQueryString(cleanQueryString);
 
-      // console.log("queryString", cleanQueryString);
-      // console.log("window.location.search", rawQueryString);
-    }
+    //   // console.log("queryString", cleanQueryString);
+    //   // console.log("window.location.search", rawQueryString);
+    // }
   }, []);
 
   const city = params.location;

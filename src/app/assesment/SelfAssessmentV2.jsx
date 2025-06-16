@@ -117,20 +117,20 @@ const SelfAssessmentV2 = () => {
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                 <span className="text-gray-700">
-                                    We'll ask for your name and phone number to show you personalized results
+                                  {`  We'll ask for your name and phone number to show you personalized results`}
                                 </span>
                             </li>
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <span className="text-gray-700">Your answers are saved so we can improve our services</span>
+                                <span className="text-gray-700">{`Your answers are saved so we can improve our services`}</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <span className="text-gray-700">We may contact you about mental health services that could help you</span>
+                                <span className="text-gray-700">{`We may contact you about mental health services that could help you`}</span>
                             </li>
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <span className="text-gray-700">We keep your information private and secure</span>
+                                <span className="text-gray-700">{`We keep your information private and secure`}</span>
                             </li>
                         </ul>
                     </div>
@@ -142,13 +142,13 @@ const SelfAssessmentV2 = () => {
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                 <span className="text-gray-700">
-                                    You must be 18+ to take this test (or have parent's permission if younger)
+                                   {` You must be 18+ to take this test (or have parent's permission if younger)`}
                                 </span>
                             </li>
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                 <span className="text-gray-700">
-                                    For a proper diagnosis, you need to see an RCI certified clinical psychologist
+                                    {`For a proper diagnosis, you need to see an RCI certified clinical psychologist`}
                                 </span>
                             </li>
                             <li className="flex items-start">

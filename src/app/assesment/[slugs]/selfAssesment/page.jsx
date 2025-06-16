@@ -1,4 +1,4 @@
-import SelfAssessment from "../../SelfAssessment"
+import SelfAssessmentV2 from "../../SelfAssessmentV2"
 
 
 const metaContent = {
@@ -39,7 +39,7 @@ export const generateMetadata = ({params})=>{
 const SelfAssesment = ({params}) => {
     // console.log("prams", params)
     return (
-       <SelfAssessment/>
+       <SelfAssessmentV2/>
     );
 };
 

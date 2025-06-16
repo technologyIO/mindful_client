@@ -176,7 +176,7 @@ const SelfAssessmentV2 = () => {
                                 onChange={e => setIsAdultChecked(e.target.checked)}
                             />
                             <span className="text-gray-700 group-hover:text-gray-900">
-                                I'm 18+ years old (or have parental consent)
+                                {`I'm 18+ years old (or have parental consent)`}
                             </span>
                         </label>
 
@@ -188,7 +188,7 @@ const SelfAssessmentV2 = () => {
                                 onChange={e => setIsConsentChecked(e.target.checked)}
                             />
                             <span className="text-gray-700 group-hover:text-gray-900">
-                                I understand this is a self-assessment tool and agree to the above
+                            {`    I understand this is a self-assessment tool and agree to the above`}
                             </span>
                         </label>
                     </div>

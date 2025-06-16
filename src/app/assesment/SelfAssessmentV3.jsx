@@ -52,9 +52,9 @@ const SelfAssessmentV3 = () => {
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">About MindfulTMS Self-Assessments</h3>
               <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-500">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  This is a self-assessment tool to help you understand your stress/anxiety/depression levels using
+                {`  This is a self-assessment tool to help you understand your stress/anxiety/depression levels using
                   standard mental health scales. It gives you an idea of where you stand, but it's not a medical
-                  diagnosis.
+                  diagnosis.`}
                 </p>
               </div>
             </div>

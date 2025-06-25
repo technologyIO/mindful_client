@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import '../../public/css/form.css'
 import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
 import AdsNavbar from "@/components/AdsNavbar";
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
 
   // Conditions to hide Navbar, Footer, and CenterNav based on the path
-  const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth"];
+  const noFooterPaths = ["/admin", "/assesment", "/thankyou", "/auth", "/testingpage"];
   const noNavbarPaths = ["/ads", "/auth", "/tests/ads"];
   const centerNav = ["/tests"];
   const zeroNav = ["/thankyou"];

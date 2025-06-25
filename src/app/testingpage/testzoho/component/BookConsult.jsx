@@ -40,7 +40,7 @@ export default function BookConsult({ children, name, customStyle }) {
             {/* Backdrop */}
             <div onClick={closeModal} className="absolute inset-0 bg-black opacity-50" />
             {/* Modal */}
-            <div className="relative bg-transparent rounded-lg shadow-lg w-full max-w-xl p-2 z-10 mx-3">
+            <div className="relative bg-transparent rounded-lg  w-full max-w-xl p-2 z-10 mx-3">
                 <button onClick={closeModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
                     ✕
                 </button>

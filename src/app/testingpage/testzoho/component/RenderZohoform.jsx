@@ -178,7 +178,7 @@ export default function RenderZohoform({prefilledData, closeModal}) {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-800">Request Callback</div>
-                        <div className="text-sm text-gray-600">We'll contact you</div>
+                        <div className="text-sm text-gray-600">{`We'll contact you`}</div>
                       </div>
                     </div>
                   </div>
@@ -227,8 +227,7 @@ export default function RenderZohoform({prefilledData, closeModal}) {
               </div>
               <div className="text-sm text-blue-800 leading-relaxed">
                 Select <strong className="font-semibold">Request Callback</strong> to submit the form and our team will
-                reach out to you, or choose <strong className="font-semibold">Book Immediately</strong> to be redirected
-                to our booking partner's page to schedule your appointment.
+                reach out to you, or choose <strong className="font-semibold">Book Immediately</strong> {`to be redirected to our booking partner's page to schedule your appointment.`}
               </div>
             </div>
           </div>

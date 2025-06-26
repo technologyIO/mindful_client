@@ -15,6 +15,7 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
     Name_Last: '',
     PhoneNumber_countrycodeVal: '' || prefilledData.code,
     PhoneNumber_countrycode: '' || prefilledData.phone,
+    PhoneNumber: '' || prefilledData.phone,
     url:'' || `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`,
     from:'website' || searchParams.get('from'),
     Radio: '', 
@@ -26,6 +27,21 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
     utm_campaign:'',
     utm_term:'',
     utm_content:'',
+
+    // location
+    SingleLine:'greaterkailash',
+
+    // condition
+    SingleLine1:'OCD',
+
+    // solution
+    SingleLine2:'Psychiatrist',
+
+    // url
+    SingleLine3:'' || `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`,
+
+    // lead From 
+    SingleLine4:'website',
   })
 
   
@@ -116,7 +132,13 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
 
         <input type="hidden" name="url" value={formData.url}  />
         <input type="hidden" name="from" value={formData.from}  />
-       
+        <input type="hidden" name="PhoneNumber_countrycode" value={formData.PhoneNumber_countrycode}  />
+
+        <input type="hidden" name="SingleLine" value={formData.SingleLine}  />
+        <input type="hidden" name="SingleLine1" value={formData.SingleLine1}  />
+        <input type="hidden" name="SingleLine2" value={formData.SingleLine2}  />
+        <input type="hidden" name="SingleLine3" value={formData.SingleLine3}  />
+        <input type="hidden" name="SingleLine4" value={formData.SingleLine4}  />
 
 
         <div className="px-8 py-10 space-y-4 max-h-[60vh] overflow-y-auto ">
@@ -192,12 +214,12 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
                 </select>
                 <div className="relative col-span-3">
                   <input
-                    id="PhoneNumber_countrycode"
-                    name="PhoneNumber_countrycode"
+                    id="PhoneNumber"
+                    name="PhoneNumber"
                     disabled={prefilledData.phone}
                     type="text"
                     maxLength={255}
-                    value={formData.PhoneNumber_countrycode}
+                    value={formData.PhoneNumber}
                     onChange={handleChange}
                     required
                     placeholder="Enter your phone number"

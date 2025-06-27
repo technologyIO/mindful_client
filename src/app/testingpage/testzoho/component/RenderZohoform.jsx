@@ -102,6 +102,7 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
         onSubmit={handleSubmit}
         className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 "
       >
+        <button type="submit" className="hidden" aria-hidden="true"></button>
         {/* Header */}
         <div className="bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-4 text-center relative overflow-hidden ">
           <div className=""></div>

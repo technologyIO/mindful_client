@@ -121,32 +121,33 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
                 {step === 1 && (
                     <div className="space-y-6">
                         <div className="grid grid-cols-4 gap-4 items-center">
-
                             <select
-                            name="countryCode"
-                            value={countryCode}
-                            onChange={e => setCountryCode(e.target.value)}
-                            className="col-span-1 py-3  border-2 border-gray-200 rounded-2xl bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 text-gray-800"
-                        >
-                            <option value="+91">(+91) Ind </option>
-                            <option value="+1">(+1) USA </option>
-                            <option value="+44">(+44) UK </option>
-                            <option value="+61">(+61) Aus </option>
-                            <option value="+49">(+49) Ger </option>
-                            {/* …add more as needed */}
-                        </select>
-                        <div className="relative col-span-3">
-                            <div className="absolute hidden inset-y-0 left-0 pl-4 md:flex items-center pointer-events-none">
-                                <Phone className="h-5 w-5 text-gray-400" />
+                                name="countryCode"
+                                value={countryCode}
+                                onChange={e => setCountryCode(e.target.value)}
+                                className="col-span-1 py-3  border-2 border-gray-200 rounded-2xl bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 text-gray-800"
+                            >
+                                <option value="+91">(+91) Ind </option>
+                                <option value="+1">(+1) USA </option>
+                                <option value="+44">(+44) UK </option>
+                                <option value="+61">(+61) Aus </option>
+                                <option value="+49">(+49) Ger </option>
+                                {/* …add more as needed */}
+                            </select>
+                            <div className="relative col-span-3">
+                                <div className="absolute hidden inset-y-0 left-0 pl-4 md:flex items-center pointer-events-none">
+                                    <Phone className="h-5 w-5 text-gray-400" />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Enter phone number"
+                                    value={phone}
+                                    autoFocus
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    onKeyDown={(e) => e.key === 'Enter' && handleSendOtp()}
+                                    className="w-full pl-12 pr-4 py-4 border-2 text-center border-gray-200 rounded-2xl text-lg font-medium placeholder-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none"
+                                />
                             </div>
-                            <input
-                                type="text"
-                                placeholder="Enter phone number"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                className="w-full pl-12 pr-4 py-4 border-2 text-center border-gray-200 rounded-2xl text-lg font-medium placeholder-gray-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none"
-                            />
-                        </div>
                         </div>
                         <button
                             onClick={handleSendOtp}
@@ -180,8 +181,10 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
                                 placeholder="Enter 4-digit OTP"
                                 value={otp}
                                 onChange={(e) => setOtp(e.target.value)}
+                                 onKeyDown={(e) => e.key === 'Enter' && handleVerifyOtp()}
                                 className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-2xl text-lg font-medium placeholder-gray-400 focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-200 outline-none text-center tracking-widest"
                                 maxLength="6"
+                                autoFocus
                             />
                         </div>
                         <button
@@ -206,7 +209,7 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
 
                 {/* Step 3: Verification Success */}
                 {step === 3 && (
-                    <div className="space-y-6">
+                    <div className="space-y-6" onKeyDown={(e) => e.key === 'Enter' && handleNext()}>
                         {/* Success Animation */}
                         <div className="text-center">
                             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6 animate-pulse">

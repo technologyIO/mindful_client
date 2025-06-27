@@ -25,7 +25,7 @@ export default function BookConsult({ children, name, customStyle }) {
 
     const openModal = () => {
         setIsOpen(true);
-        setStep("form");
+        setStep("otp");
         setOtpValue("");
     };
     const closeModal = () => setIsOpen(false);

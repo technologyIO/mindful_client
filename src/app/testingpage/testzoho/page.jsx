@@ -1,5 +1,6 @@
 import React from 'react'
-import BookConsult from './component/BookConsult'
+// import BookConsult from './component/BookConsult'
+import BookConsult from '@/zohoFormv2/component/BookConsult'
 const page = () => {
   return (
     <div>

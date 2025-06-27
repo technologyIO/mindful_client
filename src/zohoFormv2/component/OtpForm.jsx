@@ -178,7 +178,7 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
                             </div>
                             <input
                                 type="text"
-                                placeholder="Enter 6-digit OTP"
+                                placeholder="Enter 4-digit OTP"
                                 value={otp}
                                 onChange={(e) => setOtp(e.target.value)}
                                  onKeyDown={(e) => e.key === 'Enter' && handleVerifyOtp()}

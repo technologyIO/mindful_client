@@ -4,12 +4,18 @@ import { useState, useRef, useEffect  } from 'react'
 import { User, Phone, CheckCircle, Calendar, ArrowRight, X } from "lucide-react"
 import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function RenderZohoform({ prefilledData, closeModal }) {
+export default function RenderZohoform({ prefilledData, closeModal, params }) {
   const searchParams = useSearchParams();
+  console.log("params", params);
   const pathname = usePathname();
-  // console.log("searchParams", searchParams);
+  console.log("searchParams", searchParams);
   const formRef = useRef(null)
 
+    const urlLocation = {
+    "wf": "whitefield",
+    "gk": "greaterkailash",
+    "hb": "hebbal",
+  }
   const [formData, setFormData] = useState({
     Name_First: '',
     Name_Last: '',
@@ -17,7 +23,7 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
     PhoneNumber_countrycode: '' || prefilledData.phone,
     PhoneNumber: '' || prefilledData.phone,
     url:'' || `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`,
-    from:'website' || searchParams.get('from'),
+    from: searchParams.get('from') || params?"landingpages":'website',
     Radio: '', 
     zf_referrer_name: '' ,
     zf_redirect_url :`${process.env.NEXT_PUBLIC_CLIENT_URL2}//thankyou/mindful2`,
@@ -29,19 +35,19 @@ export default function RenderZohoform({ prefilledData, closeModal }) {
     utm_content:'',
 
     // location
-    SingleLine:'greaterkailash',
+    SingleLine:`${urlLocation[params.location]}` || 'greaterkailash',
 
     // condition
-    SingleLine1:'OCD',
+    SingleLine1:`${params.condition}` || 'general',
 
     // solution
-    SingleLine2:'Psychiatrist',
+    SingleLine2:`${params.service}` || 'general',
 
     // url
     SingleLine3:'' || `${process.env.NEXT_PUBLIC_CLIENT_URL2}${pathname}?${searchParams.toString()}`,
 
     // lead From 
-    SingleLine4:'website',
+    SingleLine4:params?"landingpages":'website',
   })
 
   

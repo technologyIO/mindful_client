@@ -10,6 +10,7 @@ import { adsPageContent } from '@/adsPageContent'
 import DoctorsSection from './DoctorsSection'
 import ImageCarousel from "@/app/clinicLocation/[city]/ImageCarousel";
 import axios from 'axios'
+import BookConsult from '@/zohoFormv2/component/BookConsult'
 const AdsPage2 = ({ params }) => {
   const pathname = usePathname(); // '/clinicLocation/gk'
   const searchParams = useSearchParams(); // instance of URLSearchParams
@@ -48,10 +49,6 @@ const AdsPage2 = ({ params }) => {
   // for zoho
   const iframeSrc =
     "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
-  const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
-  // console.log('location', params.location)
-  // console.log("fullURL", fullUrl);
-  // let tempQueryString = "";
 
 
   useEffect(() => {
@@ -64,24 +61,7 @@ const AdsPage2 = ({ params }) => {
     // setQueryString(tempQueryString);
   }, [pathname, searchParams]);
 
-  // console.log('tempQueryString', tempQueryString)
-  // console.log('fullUrl', fullUrl)
-  useEffect(() => {
-    // setcurrentUrl(fullUrl);
-    // if (typeof window !== 'undefined') {
-    //   const url = window.location.href;
 
-    //   const rawQueryString = window.location.search;
-    //   const cleanQueryString = rawQueryString.startsWith('?')
-    //     ? rawQueryString.substring(1)
-    //     : rawQueryString;
-    //   // setQueryString(searchParams.toString());
-    //   setQueryString(cleanQueryString);
-
-    //   // console.log("queryString", cleanQueryString);
-    //   // console.log("window.location.search", rawQueryString);
-    // }
-  }, []);
 
   const city = params.location;
   const expertService = params.service;
@@ -146,7 +126,7 @@ const AdsPage2 = ({ params }) => {
     }
   }
 
-  console.log("locationContent", locationContent)
+
 
   const currentPageContent = adsPageContent[city]?.[expertService]?.[current_condition];
 
@@ -408,9 +388,6 @@ const AdsPage2 = ({ params }) => {
     },
   }
 
-  // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}`)
-
-  // console.log(`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${expertService}&from=landingpage&${queryString}`)
 
   const DoctorSelectorSkeleton = () => {
     return (
@@ -473,38 +450,27 @@ const AdsPage2 = ({ params }) => {
 
               <div className="text-gray-700 text-lg md:text-2xl mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
-              {/* <div className='text-gray-700 text-base md:text-lg mb-4'>
-                <b>Our experts provide:</b><br />
-                <ul className="list-disc pl-6 mb-3">
-                  <li>Personalized anxiety diagnosis</li>
-                  <li>Safe and compassionate care</li>
-                  <li>Confidentiality</li>
-                </ul>
-
-                Psychiatrists offer customized treatment plans including medication, if needed
-              </div> */}
-              {/* <p className='text-sm mt-6 text-gray-500'>
-                {currentPageContent?.hero_description_2}
-              </p> */}
+           
               {currentPageContent?.headline_2_pinned && (
                 <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
                   {currentPageContent.headline_2_pinned}
                 </div>
               )}
-              <div className="mt-3 flex items-center justify-center md:justify-start">
+              {/* <div className="mt-3 flex items-center justify-center md:justify-start">
                 <RequestAppointment
                   iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
                 />
-
-
-              </div>
-              {/* <div className='flex justify-center'>
-                <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
               </div> */}
-
-
+              <div className='mt-3 flex items-center justify-center md:justify-start'>
+                          <BookConsult params={params}>
+                              <button  className="flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg ">
+              
+                              Book Consult
+                              </button>
+                          </BookConsult>
+                      </div>
             </div>
           </div>
         </section>
@@ -519,10 +485,7 @@ const AdsPage2 = ({ params }) => {
             customStyle={`${RequestAppointmentButton[expertService].style}`}
             name={RequestAppointmentButton[expertService].text}
           />
-
-
         </div>
-
       </section>
 
       {/* testimonials */}
@@ -715,7 +678,6 @@ const AdsPage2 = ({ params }) => {
           </div>
         </Container>
       </section>
-
     </>
   )
 }

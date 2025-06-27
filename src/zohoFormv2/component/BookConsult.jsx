@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import RenderZohoform from "./RenderZohoform";
 import OtpForm from "./OtpForm";
-export default function BookConsult({ children, name, customStyle }) {
+export default function BookConsult({ children,params, name, customStyle }) {
     const [isOpen, setIsOpen] = useState(false);
     const [step, setStep] = useState("otp"); // otp, form
     const [otpValue, setOtpValue] = useState("");
@@ -25,7 +25,7 @@ export default function BookConsult({ children, name, customStyle }) {
 
     const openModal = () => {
         setIsOpen(true);
-        setStep("otp");
+        setStep("form"); // change this to "form" to open the form(for testing only after that change it to "otp")
         setOtpValue("");
     };
     const closeModal = () => setIsOpen(false);
@@ -50,7 +50,7 @@ export default function BookConsult({ children, name, customStyle }) {
                 {step === "otp" ? 
                 <OtpForm otpSucceed={otpSucceed} prefilledData={prefilledData} setPrefilledData={setPrefilledData} closeModal={closeModal}/> 
                 :
-                 <RenderZohoform   prefilledData={prefilledData} setPrefilledData={setPrefilledData} closeModal={closeModal}/>}
+                 <RenderZohoform params={params}  prefilledData={prefilledData} setPrefilledData={setPrefilledData} closeModal={closeModal}/>}
                 {/* {step === "form" && (
                     <button onClick={() => setStep("otp")} className="mt-2 text-sm text-blue-600 hover:underline">
                         Back to OTP

@@ -25,7 +25,7 @@ export default function BookConsult({ children,params, name, customStyle }) {
 
     const openModal = () => {
         setIsOpen(true);
-        setStep("form"); // change this to "form" to open the form(for testing only after that change it to "otp")
+        setStep("otp"); // change this to "form" to open the form(for testing only after that change it to "otp")
         setOtpValue("");
     };
     const closeModal = () => setIsOpen(false);
@@ -62,7 +62,8 @@ export default function BookConsult({ children,params, name, customStyle }) {
 
     return (
         <>
-            <div onClick={openModal}>{children}</div>
+            <div className="w-full" onClick={openModal}>{children}</div>
+            
             {mounted && isOpen && createPortal(modalContent, document.body)}
         </>
     );

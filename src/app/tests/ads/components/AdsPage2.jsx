@@ -450,7 +450,7 @@ const AdsPage2 = ({ params }) => {
 
               <div className="text-gray-700 text-lg md:text-2xl mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
-           
+
               {currentPageContent?.headline_2_pinned && (
                 <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
                   {currentPageContent.headline_2_pinned}
@@ -462,15 +462,15 @@ const AdsPage2 = ({ params }) => {
                   customStyle={`${RequestAppointmentButton[expertService].style}`}
                   name={RequestAppointmentButton[expertService].text}
                 />
-              </div> */}
-              <div className='mt-3 flex items-center justify-center md:justify-start'>
-                          <BookConsult params={params}>
-                              <button  className="flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg ">
-              
-                              Book Consult
-                              </button>
-                          </BookConsult>
-                      </div>
+              </div>  */}
+              <div className='mt-3 flex items-center justify-center md:justify-start '>
+                <BookConsult params={params}>
+                  <button className="flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg ">
+
+                    {RequestAppointmentButton[expertService].text}
+                  </button>
+                </BookConsult>
+              </div>
             </div>
           </div>
         </section>
@@ -479,12 +479,13 @@ const AdsPage2 = ({ params }) => {
       {/* expert */}
       <section className="py-8 px-4 bg-[#FDE4BB]">
         <DoctorsSection expertService={expertService} location={location} expertText={expertText} />
-        <div className="mt-6 flex items-center justify-center ">
-          <RequestAppointment
-            iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-            customStyle={`${RequestAppointmentButton[expertService].style}`}
-            name={RequestAppointmentButton[expertService].text}
-          />
+        <div className='mt-3 flex items-center justify-center md:justify-start '>
+          <BookConsult params={params}>
+            <button className="flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg ">
+
+              {RequestAppointmentButton[expertService].text}
+            </button>
+          </BookConsult>
         </div>
       </section>
 

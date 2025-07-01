@@ -73,7 +73,7 @@ export default function RenderZohoform({ prefilledData, closeModal, params }) {
     setFormData(prev => ({
       ...prev,
       zf_referrer_name: searchParams.get('zf_referrer_name') || '',
-      zf_redirect_url: searchParams.get('zf_redirect_url') || formData.zf_redirect_url || '',
+      // zf_redirect_url: searchParams.get('zf_redirect_url') || formData.zf_redirect_url || '',
       zc_gad: searchParams.get('zc_gad') || '',
       utm_source: searchParams.get('utm_source') || '',
       utm_medium: searchParams.get('utm_medium') || '',
@@ -108,7 +108,7 @@ export default function RenderZohoform({ prefilledData, closeModal, params }) {
         zf_redirect_url: `${process.env.NEXT_PUBLIC_CLIENT_URL2}/thankyou/mindful2`,
       }))
     }
-  }, [formData.Radio])
+  }, [formData.Radio, params?.location, urlLocationContent])
 
   const handleChange = e => {
     const { name, value } = e.target

@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
-import '../../public/css/form.css'
+// import '../../public/css/form.css'
 import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
 import AdsNavbar from "@/components/AdsNavbar";

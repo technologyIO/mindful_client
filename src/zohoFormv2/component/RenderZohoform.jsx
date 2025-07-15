@@ -107,7 +107,7 @@ export default function RenderZohoform({ prefilledData, closeModal, params }) {
         zf_redirect_url: `${process.env.NEXT_PUBLIC_CLIENT_URL2}/thankyou/mindful2`,
       }))
     }
-  }, [formData.Radio, params?.location, urlLocationContent])
+  }, [formData.Radio])
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -150,23 +150,15 @@ export default function RenderZohoform({ prefilledData, closeModal, params }) {
       >
         <button type="submit" className="hidden" aria-hidden="true"></button>
         {/* Header */}
-        <div className="bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-4 text-center relative overflow-hidden ">
-          <div className=""></div>
-          <div className=" ">
-            <div className="inline-flex items-center justify-center w-8 h-8 bg-white/20 rounded-full mb-4 backdrop-blur-sm">
-              <User className="w-4 h-4 text-white" />
-            </div>
-            <h2 className="text-2xl font-bold text-white mb-2">New LP Form 2025</h2>
-            <p className="text-teal-100 text-sm">Fill out the form below to get started</p>
-          </div>
-          <div className="absolute top-4 right-4">
+        <div className='w-full text-end px-2 py-2 '>
+
+           
             <button onClick={closeModal}>
-              <X className="w-4 h-4 text-white" />
+              <X className="w-6 h-6 text-black" />
             </button>
-          </div>
+        </div>
           {/* Decorative elements */}
 
-        </div>
 
         <input type="hidden" name="zf_referrer_name" value={formData.zf_referrer_name} />
         <input type="hidden" name="zf_redirect_url" value={formData.zf_redirect_url} />
@@ -188,7 +180,7 @@ export default function RenderZohoform({ prefilledData, closeModal, params }) {
         <input type="hidden" name="SingleLine4" value={formData.SingleLine4} />
 
 
-        <div className="px-8 py-10 space-y-4 max-h-[60vh] overflow-y-auto ">
+        <div className="px-8  space-y-4 max-h-[60vh] md:max-h-[80vh] overflow-y-auto ">
           {/* Name Fields */}
           <div className="space-y-6 mb-3 ">
             <div className="flex items-center gap-3 mb-6">

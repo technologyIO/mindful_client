@@ -152,7 +152,7 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
                         <button
                             onClick={handleSendOtp}
                             disabled={loading || !phone.trim()}
-                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-300 disabled:to-gray-400 text-white font-semibold text-lg py-4 rounded-2xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-300 disabled:to-gray-400 text-white font-semibold text-lg py-2 rounded-2xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                         >
                             {loading ? (
                                 <>
@@ -178,7 +178,7 @@ export default function OtpForm({ otpSucceed, setPrefilledData, prefilledData, c
                             </div>
                             <input
                                 type="text"
-                                placeholder="Enter 4-digit OTP"
+                                placeholder="Enter 6-digit OTP"
                                 value={otp}
                                 onChange={(e) => setOtp(e.target.value)}
                                  onKeyDown={(e) => e.key === 'Enter' && handleVerifyOtp()}

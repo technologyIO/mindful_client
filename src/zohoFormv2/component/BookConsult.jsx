@@ -40,10 +40,8 @@ export default function BookConsult({ children,params, name, customStyle }) {
             {/* Backdrop */}
             <div onClick={closeModal} className="absolute inset-0 bg-black opacity-50" />
             {/* Modal */}
-            <div className="relative bg-transparent rounded-lg  w-full max-w-xl p-2 z-10 mx-3">
-                <button onClick={closeModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-                    ✕
-                </button>
+            <div className="relative bg-transparent rounded-lg  w-full max-w-xl z-10 mx-3">
+               
                 {/* <h2 className="text-xl font-bold mb-4 text-center">
                     {step === "otp" ? "Verify OTP" : ""}
                 </h2> */}

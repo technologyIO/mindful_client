@@ -111,7 +111,7 @@ const MobileView = () => {
                         <p className="text-lg md:text-xl text-gray-600 mb-8">
                             We provide a safe space to talk to our experts and overcome your challenges with confidence.</p>
                         <div className="flex justify-center md:justify-start">
-                            <RequestAppointment iframeSrc={iframeSrc} name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>
 
@@ -145,7 +145,7 @@ const MobileView = () => {
                     </div>
                 </div>
                 <div className="flex justify-center md:justify-center mt-6">
-                            <RequestAppointment iframeSrc={iframeSrc} name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment  name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
 
 
@@ -162,7 +162,7 @@ const MobileView = () => {
 
 
             <div className='flex justify-center pt-9'>
-                <RequestAppointment iframeSrc={iframeSrc} name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
+                <RequestAppointment  name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
             </div>
 
  
@@ -188,7 +188,7 @@ const DesktopView = () => {
                             </p>
 
                             <div className="flex justify-center md:justify-start">
-                                <RequestAppointment iframeSrc={iframeSrc} name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
+                                <RequestAppointment  name="Book a Therapy Session" customStyle="px-6 py-3 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 hover:shadow-lg hover:scale-105 active:bg-orange-600" />
                             </div>
                         </div>
 
@@ -230,7 +230,7 @@ const DesktopView = () => {
                             </div>
                         </div>
                         <div className="flex justify-center md:justify-center mt-6">
-                            <RequestAppointment iframeSrc={iframeSrc} name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
+                            <RequestAppointment  name="Book a Therapy Session" customStyle="px-4 py-2 rounded-full text-lg transition bg-primary-orange text-white font-semibold hover:bg-orange-500 active:bg-orange-600" />
                         </div>
                     </div>
                 </Container>
@@ -282,7 +282,7 @@ const DesktopView = () => {
 
 
             <div className='flex justify-center pt-10'>
-                <RequestAppointment iframeSrc={iframeSrc} name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
+                <RequestAppointment  name={"Book Consultation"} customStyle={"bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-700 rounded-lg px-10 py-3 text-white text-sm font-semibold"} />
             </div>
 
         </>

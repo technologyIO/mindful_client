@@ -13,6 +13,15 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'avatar.iran.liara.run',
+      },
+      
+       {
+        protocol: 'https',
+        hostname: 'mindfultms2.s3.us-east-1.amazonaws.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'ik.imagekit.io',
       },
       {

@@ -157,18 +157,26 @@ const EditDoctorDetail = () => {
       return { ...prev, specializationCategories: sc };
     });
   };
-  const addCategorySpec = (cat) => {
-    if (newCategorySpec.trim() !== "") {
+const addCategorySpec = (cat) => {
+  if (newCategorySpec.trim() !== "") {
+    // Split by newlines and filter out empty strings
+    const specs = newCategorySpec
+      .split('\n')
+      .map(spec => spec.trim())
+      .filter(spec => spec !== "");
+    
+    if (specs.length > 0) {
       setFormData((prev) => ({
         ...prev,
         specializationCategories: {
           ...prev.specializationCategories,
-          [cat]: [...prev.specializationCategories[cat], newCategorySpec.trim()],
+          [cat]: [...prev.specializationCategories[cat], ...specs],
         },
       }));
       setNewCategorySpec("");
     }
-  };
+  }
+};
   const removeCategorySpec = (cat, idx) => {
     setFormData((prev) => ({
       ...prev,
@@ -411,73 +419,73 @@ const EditDoctorDetail = () => {
         )}
 
         {/* === Categorized Specializations === */}
-        {formData.toggleSpecialization && (
-          <div className="px-6 py-4 border-t">
-            <h3 className="text-xl font-bold text-primary-orange">Specialization Categories</h3>
-            {/* Add Category */}
-            <div className="flex space-x-2 mt-2 mb-4">
-              <input
-                type="text"
-                value={newCategoryName}
-                onChange={(e) => setNewCategoryName(e.target.value)}
-                placeholder="Category name"
-                className="w-full border p-2 rounded"
-              />
+    {formData.toggleSpecialization && (
+  <div className="px-6 py-4 border-t">
+    <h3 className="text-xl font-bold text-primary-orange">Specialization Categories</h3>
+    {/* Add Category */}
+    <div className="flex space-x-2 mt-2 mb-4">
+      <input
+        type="text"
+        value={newCategoryName}
+        onChange={(e) => setNewCategoryName(e.target.value)}
+        placeholder="Category name"
+        className="w-full border p-2 rounded"
+      />
+      <button
+        type="button"
+        onClick={addCategory}
+        className="bg-primary-orange text-white px-4 py-2 rounded"
+      >
+        Add Category
+      </button>
+    </div>
+    {/* List Categories */}
+    {Object.entries(formData.specializationCategories).map(([cat, specs]) => (
+      <div key={cat} className="mb-6">
+        <div className="flex justify-between items-center mb-2">
+          <h4 className="text-lg font-semibold">{cat}</h4>
+          <button
+            type="button"
+            onClick={() => removeCategory(cat)}
+            className="text-red-500"
+          >
+            Remove Category
+          </button>
+        </div>
+        <ul className="list-disc pl-5">
+          {specs.map((s, i) => (
+            <li key={i} className="flex justify-between">
+              {s}
               <button
                 type="button"
-                onClick={addCategory}
-                className="bg-primary-orange text-white px-4 py-2 rounded"
+                onClick={() => removeCategorySpec(cat, i)}
+                className="text-red-500"
               >
-                Add Category
+                Remove
               </button>
-            </div>
-            {/* List Categories */}
-            {Object.entries(formData.specializationCategories).map(([cat, specs]) => (
-              <div key={cat} className="mb-6">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="text-lg font-semibold">{cat}</h4>
-                  <button
-                    type="button"
-                    onClick={() => removeCategory(cat)}
-                    className="text-red-500"
-                  >
-                    Remove Category
-                  </button>
-                </div>
-                <ul className="list-disc pl-5">
-                  {specs.map((s, i) => (
-                    <li key={i} className="flex justify-between">
-                      {s}
-                      <button
-                        type="button"
-                        onClick={() => removeCategorySpec(cat, i)}
-                        className="text-red-500"
-                      >
-                        Remove
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex space-x-2 mt-2">
-                  <input
-                    type="text"
-                    value={newCategorySpec}
-                    onChange={(e) => setNewCategorySpec(e.target.value)}
-                    placeholder={`Add to ${cat}`}
-                    className="w-full border p-2 rounded"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => addCategorySpec(cat)}
-                    className="bg-primary-orange text-white px-4 py-2 rounded"
-                  >
-                    Add
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+            </li>
+          ))}
+        </ul>
+        <div className="flex space-x-2 mt-2">
+          <textarea
+            value={newCategorySpec}
+            onChange={(e) => setNewCategorySpec(e.target.value)}
+            placeholder={`Add to ${cat} (paste multiple items, one per line)`}
+            className="w-full border p-2 rounded"
+            rows="3"
+          />
+          <button
+            type="button"
+            onClick={() => addCategorySpec(cat)}
+            className="bg-primary-orange text-white px-4 py-2 rounded"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
 
         {/* === Professional Background === */}
         <div className="px-6 py-4 border-t">

@@ -194,7 +194,7 @@ const DesktopView = () => {
 
                         {/* Image Section */}
                         <div className="flex justify-center">
-                            <img className="w-full md:w-[400px] lg:w-[450px] rounded-xl shadow-lg" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
+                            <img className="w-full md:w-[400px] lg:w-[450px] rounded-xl shadow-lg" alt="Therapy Banner" src="https://mindfultms.in/_next/image?url=%2FclinicImages%2FDelhi3.webp&w=1920&q=75" />
                         </div>
                     </div>
                 </Container>

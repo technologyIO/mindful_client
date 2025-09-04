@@ -1,12 +1,12 @@
-"use client"
+// Remove "use client" directive - this is now a server component
 import React from 'react';
 import dynamic from 'next/dynamic';
-// import TestimonialComponent from '../component/TestimonialComponent';
 import axios from 'axios';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
 import AboutComponent from './AboutComponent';
 import BackButton from '@/app/component/BackButton';
 import { Container } from '@mui/material';
+
 const TestimonialComponentSlide = dynamic(
   () => import('@/app/component/TestimonialComponentSlide'),
   { ssr: false }
@@ -15,12 +15,33 @@ const TestimonialComponentSlide = dynamic(
 const DoctorDetailComponent = async ({ doctorId }) => {
   const doctorStatic = { _id: doctorId };
   let doctorDetail = {};
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}doctors/${doctorId}`
-  );
-  doctorDetail = res.data;
+  
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}doctors/${doctorId}`
+    );
+    doctorDetail = res.data;
+  } catch (error) {
+    console.error('Error fetching doctor details:', error);
+    // Handle error appropriately - could redirect or show error page
+    return (
+      <div className="p-5 md:p-10">
+        <Container maxWidth="lg">
+          <BackButton />
+          <div className="bg-white shadow-md rounded-lg overflow-hidden p-6">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-red-600 mb-4">Error Loading Doctor Details</h2>
+              <p className="text-gray-600">Unable to load doctor information. Please try again later.</p>
+            </div>
+          </div>
+        </Container>
+      </div>
+    );
+  }
+
   const currentUrl = `https://mindfultms.in/doctor/${doctorDetail?._id}?doctor=${doctorDetail?.name}`;
-  const iframeSrc=`https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`
+  const iframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
+
   // Pull in the new fields, with sensible defaults
   const {
     specialization = [],
@@ -42,7 +63,6 @@ const DoctorDetailComponent = async ({ doctorId }) => {
         <BackButton />
         <div className="bg-white shadow-md rounded-lg overflow-hidden">
           {/* Doctor's Basic Info */}
-          {/* <span>{iframeSrc}</span> */}
           <div className="p-6 flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
             <img
               src={image}
@@ -114,7 +134,7 @@ const DoctorDetailComponent = async ({ doctorId }) => {
           {/* Languages Spoken */}
           {language_spoken.length > 0 && (
             <div className="px-6 py-4 border-t">
-              <h3 className="text-2xl md:text-3xl  font-bold text-primary-orange">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary-orange">
                 Languages Spoken
               </h3>
               <ul className="mt-2 space-y-1 text-gray-700 list-disc pl-5">
@@ -127,7 +147,7 @@ const DoctorDetailComponent = async ({ doctorId }) => {
 
           {/* Testimonials */}
           <div className="py-8 px-8">
-            <h1 className="text-3xl  text-primary-orange text-center mb-4 font-bold">
+            <h1 className="text-3xl text-primary-orange text-center mb-4 font-bold">
               Testimonials
             </h1>
             <TestimonialComponentSlide doctor={doctorStatic} />
@@ -141,7 +161,7 @@ const DoctorDetailComponent = async ({ doctorId }) => {
           {/* Professional Background */}
           {profession_background.length > 0 && (
             <div className="px-6 py-4 border-t">
-              <h3 className="text-2xl md:text-3xl  font-bold text-primary-orange">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary-orange">
                 Professional Background
               </h3>
               <ul className="mt-2 space-y-1 text-gray-700 list-disc pl-5">
@@ -155,7 +175,7 @@ const DoctorDetailComponent = async ({ doctorId }) => {
           {/* Availability */}
           <div className="px-6 py-4 border-t flex flex-col lg:flex-row lg:justify-between">
             <div className="mt-6 lg:mt-0">
-              <h3 className="text-2xl md:text-3xl  font-bold text-primary-orange">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary-orange">
                 Availability
               </h3>
 

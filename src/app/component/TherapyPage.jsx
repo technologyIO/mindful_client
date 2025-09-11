@@ -99,7 +99,7 @@ const MobileView = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-8 gap-8">
                     {/* Image Section */}
                     <div className="flex justify-center">
-                        <img className="w-full md:w-[400px] lg:w-[450px] transition-transform duration-300 transform hover:scale-105" alt="Therapy Banner" src="https://mindfultms1.s3.amazonaws.com/GK-1VIP+COUNSELING+ROOM+(2).jpg" />
+                        <img className="w-full md:w-[400px] lg:w-[450px] transition-transform duration-300 transform hover:scale-105" alt="Therapy Banner" src="https://mindfultms.in/_next/image?url=%2FclinicImages%2FDelhi3.webp&w=1920&q=75" />
                     </div>
                     {/* Text Section */}
                     <div className="text-start md:text-left mx-2">

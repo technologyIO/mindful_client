@@ -17,7 +17,7 @@ const TakeTest = () => {
                     <div className='flex flex-col justify-center  bg-[rgba(239, 102, 35, 0.3)]'>
                         {/* <div dangerouslySetInnerHTML={{ __html: allSection?.section2?.html1 }} /> */}
                         <div>
-                            <img className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/take_assessment_image_4__1_-removebg-preview.png' />
+                            <img className='w-full' src='https://ik.imagekit.io/mwpcmpi5v/1733289803168-take_assessment.webp?updatedAt=1733748287527' />
                         </div>
 
                     </div>

@@ -12,21 +12,21 @@ const PsychiatryPage = () => {
         {
             id: 1,
             name: "Dr Shubham",
-            img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029237361-Dr%20Subham%20%281%29.jpg",
+            img: "https://mindfultms2.s3.us-east-1.amazonaws.com/1756967000604-Dr%20Subham%20%281%29.webp",
             location: "New Delhi - Greater Kailash 1",
             link:'/doctor/66ffa1856a3f2ccdb194b61d'
         },
         {
             id: 2,
             name: "Dr Sandeep Govil",
-            img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029275117-Dr%20Sandeep%20Govil%20Pictures.jpg",
+            img: "https://mindfultms2.s3.us-east-1.amazonaws.com/1756967022829-Dr%20Sandeep%20Govil%20Pictures%20%281%29%20%281%29.webp",
             location: "New Delhi - Greater Kailash 1",
             link:"/doctor/66ffa28f6a3f2ccdb194b62a"
         },
         {
             id: 3,
             name: "Dr. Abhishek",
-            img: "https://mindfultms1.s3.us-east-1.amazonaws.com/1728029376714-Dr%20Abhishek%20.jpg",
+            img: "https://mindfultms2.s3.us-east-1.amazonaws.com/1756967041780-Dr%20Abhishek%20%20%281%29%20%281%29.webp",
             location: "Bengaluru - Whitefield", 
             link:"/doctor/66ffa2e86a3f2ccdb194b632"
         },

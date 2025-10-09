@@ -246,7 +246,7 @@ export default function MagazineArticle() {
                   support long‑term resilience.
                 </p>
                 <div className="relative bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white my-8">
-                  <div className="absolute top-4 left-4 text-6xl opacity-20">"</div>
+                  <div className="absolute top-4 left-4 text-6xl opacity-20">{`"`}</div>
                   <p className="text-lg italic relative z-10 pl-8">
                     The integration of mindfulness with rTMS opens new possibilities for treating
                     treatment-resistant mental health conditions.
@@ -309,9 +309,9 @@ export default function MagazineArticle() {
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
+                {`  Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
                   attention to present‑moment experiences. Extensive research highlights mindfulness's efficacy for
-                  reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.
+                  reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.`}
                 </p>
                 <div className="relative h-64 rounded-xl overflow-hidden">
                   <Image

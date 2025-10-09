@@ -337,8 +337,8 @@ export default function SexyArticle() {
                     <Sparkles size={48} />
                   </div>
                   <p className="text-2xl text-gray-800 italic leading-relaxed relative z-10 pl-12">
-                    "The integration of mindfulness with rTMS opens new possibilities for treating
-                    treatment-resistant mental health conditions."
+                  {`"The integration of mindfulness with rTMS opens new possibilities for treating
+                    treatment-resistant mental health conditions."`}
                   </p>
                 </div>
               </div>
@@ -411,9 +411,9 @@ export default function SexyArticle() {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
+           {`   Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
               attention to present‑moment experiences. Extensive research highlights mindfulness's efficacy for
-              reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.
+              reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.`}
             </p>
 
             <div className="relative h-80 rounded-2xl overflow-hidden">

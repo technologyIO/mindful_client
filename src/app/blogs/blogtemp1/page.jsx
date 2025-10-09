@@ -257,8 +257,8 @@ export default function ArticlePage() {
                     </p>
                     <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-6 my-8 rounded-r-xl">
                       <p className="text-gray-800 italic text-base sm:text-lg leading-relaxed">
-                        "The integration of mindfulness with rTMS opens new possibilities for treating
-                        treatment-resistant mental health conditions."
+                      {`  "The integration of mindfulness with rTMS opens new possibilities for treating
+                        treatment-resistant mental health conditions."`}
                       </p>
                     </div>
                   </div>
@@ -309,9 +309,9 @@ export default function ArticlePage() {
                     The Role of Mindfulness in Mental Health
                   </h2>
                   <p className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
-                    Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
+                   {` Mindfulness practices—rooted in Buddhist contemplative traditions—cultivate sustained, nonjudgmental
                     attention to present‑moment experiences. Extensive research highlights mindfulness's efficacy for
-                    reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.
+                    reducing stress, improving mood regulation, and enhancing attention and cognitive flexibility.`}
                   </p>
                   <div className="relative aspect-video rounded-xl overflow-hidden">
                     <Image
@@ -344,9 +344,9 @@ export default function ArticlePage() {
                       <div className="bg-gradient-to-r from-orange-50 to-transparent p-6 rounded-xl border-l-4 border-orange-500">
                         <h3 className="text-xl font-semibold text-gray-900 mb-4">Neural Plasticity</h3>
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                          Magnetic pulses induce synaptic changes in targeted networks. Mindful attention during stimulation
+                     {`     Magnetic pulses induce synaptic changes in targeted networks. Mindful attention during stimulation
                           may further reinforce Hebbian learning ("cells that fire together, wire together"), strengthening
-                          adaptive circuits.
+                          adaptive circuits.`}
                         </p>
                       </div>
                     </div>

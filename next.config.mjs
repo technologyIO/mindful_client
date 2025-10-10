@@ -39,7 +39,12 @@ const nextConfig = {
     return [
       {
         source: '/pages/tmspage',
-        destination: '/pages/tms',
+        destination: '/pages/rtms',
+        permanent: false,  // or true, depending on SEO needs
+      },
+      {
+        source: '/pages/tms',
+        destination: '/pages/rtms',
         permanent: false,  // or true, depending on SEO needs
       },
     ];

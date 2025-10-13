@@ -188,7 +188,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             }
 
             <Dialog open={requestModal} onClose={toggleRequestModal} className=''>
-                <DialogContent className='w-[310px] md:w-[500px] p-0 m-0 '>
+                <DialogContent className=' md:w-[500px] p-0 m-0 '>
                     
                     <div className='flex justify-end pt-3 px-3'>
                         <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028' /></p>

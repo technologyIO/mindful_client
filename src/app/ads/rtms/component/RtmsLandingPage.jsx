@@ -5,48 +5,14 @@ import { Container } from '@mui/material'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import TestimonialComponentV2 from './TestimonialComponentV2'
 
-const RtmsLandingPage = ({ city }) => {
-    const params = new URLSearchParams(window.location.search);
+const RtmsLandingPage = ({ city , data}) => {
     //   const city = params.location || "gk";
-    const [currentUrl, setcurrentUrl] = useState("");
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const url = typeof window !== "undefined" ? window.location.href : "";
-            setcurrentUrl(url);
-        }
-    }, []);
-    const current_condition = params.condition?.toLowerCase();
+
     const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
-    const iframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`
-
-    const [fullUrl, setfullUrl] = useState("");
 
 
-    const urlLocation = {
-        "wf": "whitefield",
-        "gk": "greaterkailash",
-        "hb": "hebbal",
-    }
-    const locationContent = {
-        "gk": {
-            city: 'New Delhi',
-            area: "Greater Kailash 1",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${`expertService`}&from=landingpage&${`tempQueryString`}`,
-            price: "Therapy from Rs. 1800 to Rs. 2500 per session"
-        },
-        "wf": {
-            city: 'Bengaluru',
-            area: "Whitefield (Varthur Road)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${`expertService`}&from=landingpage&${`tempQueryString`}`,
-            price: "Therapy at Rs. 1750 per session"
-        },
-        "hb": {
-            city: 'Bengaluru',
-            area: "Hebbal (Aster CMI Hospital)",
-            iframeSrc: `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(fullUrl)}&location=${urlLocation[city]}&condition=${current_condition}&solution=${`expertService`}&from=landingpage&${`tempQueryString`}`,
-            price: "First therapy session at Rs. 1500!"
-        }
-    }
+
+
 
 
     return (
@@ -249,7 +215,7 @@ const RtmsLandingPage = ({ city }) => {
                     
                     <div className="bg-orange-50 rounded-lg p-4 mb-4">
                         <p className="text-gray-700 text-base text-center mb-2">
-                            Call <a href="tel:+919606067372" className="text-orange-600 font-bold text-xl hover:text-orange-700 transition-colors">+91 9606067372</a> to speak with our care team.
+                            Call <a href={`tel:+91${data?.phone}`} className="text-orange-600 font-bold text-xl hover:text-orange-700 transition-colors">+91 {data?.phone}</a> to speak with our care team.
                         </p>
                     </div>
                     

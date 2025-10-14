@@ -15,6 +15,9 @@ Whether you're facing stress, seeking personal growth, or need someone to talk t
 }
 
 const page = ({ params }) => {
+  const data = {
+    phone:`9606067372`
+  }
   return (
     <>
          <Script id="zfadvlead" strategy="afterInteractive">
@@ -86,7 +89,7 @@ const page = ({ params }) => {
 })();
 `}
         </Script>
-        <RtmsLandingPage city={"gk"} params={params} />
+        <RtmsLandingPage city={"gk"} params={params} data={data}/>
     </>
   )
 }

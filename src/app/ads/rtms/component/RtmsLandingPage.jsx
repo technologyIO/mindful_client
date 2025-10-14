@@ -30,11 +30,11 @@ const RtmsLandingPage = ({ city , data}) => {
                             </h1>
 
                             <h2 className="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
-                                Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics
+                               {` Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics`}
                             </h2>
 
                             <p className="text-gray-700 text-base md:text-lg mb-4">
-                                If you're already considering rTMS, you don't need more theory — you need the <strong>right provider</strong>.
+                                {`If you're already considering rTMS, you don't need more theory — you need the`} <strong>right provider</strong>.
                             </p>
 
                             <p className="text-gray-700 text-base md:text-lg mb-6">
@@ -95,7 +95,7 @@ const RtmsLandingPage = ({ city , data}) => {
                                     <span>Clinical Expertise — Not Trial & Error</span>
                                 </h3>
                                 <p className="text-gray-600 text-base md:text-lg ml-8">
-                                    Your protocol isn't handled by technicians. A psychiatrist personally maps your treatment path and monitors your progress.
+                                    {`Your protocol isn't handled by technicians. A psychiatrist personally maps your treatment path and monitors your progress.`}
                                 </p>
                             </div>
 
@@ -125,7 +125,7 @@ const RtmsLandingPage = ({ city , data}) => {
                                     <span>Medication-Free Option — or Add-On Therapy</span>
                                 </h3>
                                 <p className="text-gray-600 text-base md:text-lg ml-8">
-                                    Whether you're looking to avoid medication or enhance its effect, we personalize your plan accordingly, by working with your psychiatrist.
+                                   {` Whether you're looking to avoid medication or enhance its effect, we personalize your plan accordingly, by working with your psychiatrist.`}
                                 </p>
                             </div>
                         </div>

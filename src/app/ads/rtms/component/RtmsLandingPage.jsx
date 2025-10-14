@@ -92,7 +92,7 @@ const RtmsLandingPage = ({ city }) => {
                                     alt="rTMS Illustration"
                                     width={600}
                                     height={400}
-                                    className="w-full h-96 object-cover"
+                                    className="w-full md:h-96 object-cover"
                                 />
                             </div>
                         </div>
@@ -113,11 +113,11 @@ const RtmsLandingPage = ({ city }) => {
                         {/* Image Section */}
                         <div className="flex justify-center">
                             <Image
-                                src="/ads/rtms/rtms_treatment.webp"
+                                src="/ads/ads2/Delhi3.webp"
                                 alt="Clinic rTMS Chair"
                                 width={600}
                                 height={400}
-                                className="w-full h-96 object-cover rounded-xl"
+                                className="w-full md:h-96 object-cover rounded-xl"
                             />
                         </div>
 
@@ -221,13 +221,13 @@ const RtmsLandingPage = ({ city }) => {
                         </div>
                     </div>
                     
-                    <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-800  text-center">
                         You can reach out to us online here:
                     </h3>
 
-                    <div className="flex items-center justify-center mt-auto">
+                    <div className="flex items-center justify-center mt-5">
                         <RequestAppointment
-                            customStyle={`flex items-center md:text-lg justify-center gap-2 w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:py-4 text-white font-bold transition-all duration-200 focus:ring-4 focus:ring-orange-300 hover:scale-105 hover:shadow-xl`}
+                            customStyle={`flex items-center md:text-lg justify-center gap-2 w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-2 md:py-4 text-white font-bold transition-all duration-200 focus:ring-4 focus:ring-orange-300 hover:scale-105 hover:shadow-xl`}
                             name={`Schedule an rTMS Consultation`}
                         />
                     </div>
@@ -249,7 +249,7 @@ const RtmsLandingPage = ({ city }) => {
                     
                     <div className="bg-orange-50 rounded-lg p-4 mb-4">
                         <p className="text-gray-700 text-base text-center mb-2">
-                            Call <a href="tel:+911234567890" className="text-orange-600 font-bold text-xl hover:text-orange-700 transition-colors">+91 1234567890</a> to speak with our care team.
+                            Call <a href="tel:+919606067372" className="text-orange-600 font-bold text-xl hover:text-orange-700 transition-colors">+91 9606067372</a> to speak with our care team.
                         </p>
                     </div>
                     

@@ -89,7 +89,7 @@ const page = ({ params }) => {
 })();
 `}
         </Script>
-        <RtmsLandingPage city={"gk"} params={params}  data={data}/>
+        <RtmsLandingPage city={"wf"} params={params}  data={data}/>
     </>
   )
 }

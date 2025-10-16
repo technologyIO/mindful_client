@@ -24,7 +24,7 @@ const RtmsLandingPage = ({ city, data }) => {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
                         {/* Text Section */}
-                        <div className="w-full md:w-3/5 text-left order-2 md:order-1">
+                        <div className="w-full md:w-1/2 text-left order-2 md:order-1">
                             <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide text-gray-800">
                                 Stop Researching. Start Healing.
                             </h1>
@@ -51,14 +51,14 @@ const RtmsLandingPage = ({ city, data }) => {
                         </div>
 
                         {/* Image Section */}
-                        <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2">
-                            <div className="relative w-full overflow-hidden rounded-xl">
+                        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2">
+                            <div className="relative w-full ">
                                 <Image
                                     src="/ads/rtms/rtms_treatment.webp"
                                     alt="rTMS Illustration"
                                     width={600}
                                     height={400}
-                                    className="w-full md:h-96 object-cover"
+                                    className="w-full md:h-96 object-contain overflow-hidden rounded-xl"
                                 />
                             </div>
                         </div>
@@ -189,7 +189,7 @@ const RtmsLandingPage = ({ city, data }) => {
 
                                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800  text-center">
                                     You can reach out to us online here:
-                                </h3>
+                                </h3> 
 
                                 <div className="flex items-center justify-center mt-5">
                                     <RequestAppointment

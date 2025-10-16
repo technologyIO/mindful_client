@@ -449,7 +449,7 @@ export default function TestimonialComponentV2({
                             </p>
                         </div>
                         <div className="mt-4 bg-white p-2">
-                            <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                            {/* <h3 className="text-sm font-semibold text-gray-900 mb-3">
                                 Treated By:
                             </h3>
                             <div className="flex items-center gap-4 mb-6">
@@ -463,7 +463,7 @@ export default function TestimonialComponentV2({
                                 <span className="text-sm whitespace-nowrap font-semibold text-blue-700">
                                     {testimonial?.doctor?.name}
                                 </span>
-                            </div>
+                            </div> */}
                             {treatment && (
                                 <div className="mb-4">
                                     <h3 className="text-sm font-semibold text-gray-900">Treatment:</h3>

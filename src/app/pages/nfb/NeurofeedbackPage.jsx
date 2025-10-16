@@ -210,7 +210,7 @@ const NeurofeedbackPage = () => {
                      {`   NFB is an evidence-based brain exercise. It's a supplementary aid that helps your brain learn to self-regulate better. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes without medications or invasive procedures.`}
                     </p>
                     <ol className="list-decimal list-inside text-gray-700 text-sm md:text-base space-y-2 md:space-y-3">
-                        <li>{`  `}</li>
+                        <li>{`During an NFB session, we place small sensors on your scalp that detect your brain's electrical activity (called brainwaves). These sensors are completely safe and painless. They only listen to your brain.`}</li>
                         <li>You play games that are controlled by your brain without touching the screen.</li>
                         <li>The games reward you when your brain produces desired patterns.</li>
                         <li>By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own.</li>

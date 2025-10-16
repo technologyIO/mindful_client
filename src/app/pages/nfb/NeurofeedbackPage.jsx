@@ -155,68 +155,86 @@ const NeurofeedbackPage = () => {
                 </div>
             </div>
 
-            {/* Section 1: What is NFB */}
-            <div className="px-4 py-8 md:py-12 bg-white">
-                <Container maxWidth="lg">
-                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center md:text-left">
-                        What is Neurofeedback Training (NFB)?
-                    </h2>
-                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-                        <div className="w-full md:w-2/3">
-                            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                                Think of neurofeedback training as a gym workout for your brain. Just like you train your muscles to become stronger, neurofeedback training strengthens your brain to work more efficiently and effectively, relieving clinical symptoms of various neuropsychological challenges.
-                            </p>
-                        </div>
-                        <div className="w-full md:w-1/3">
-                            <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
-                                <span className="text-gray-500 text-xs text-center px-2">Brain Training Image</span>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
+{/* Section 1: What is NFB - Unified */}
+<div className="px-4 py-8 md:py-12 bg-white">
+    <Container maxWidth="lg">
+        {/* Main Heading */}
+        <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">
+            What is Neurofeedback Training (NFB)?
+        </h2>
+        
+        {/* Text and Image Row */}
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-8 md:mb-12">
+            <div className="w-full md:w-2/3">
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                    Think of neurofeedback training as a gym workout for your brain. Just like you train your muscles to become stronger, neurofeedback training strengthens your brain to work more efficiently and effectively, relieving clinical symptoms of various neuropsychological challenges.
+                </p>
             </div>
+            <div className="w-full md:w-1/3">
+                <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center shadow-sm">
+                    <span className="text-gray-500 text-xs text-center px-2">Brain Training Image</span>
+                </div>
+            </div>
+        </div>
 
-            {/* Benefits Buttons */}
-            <div className="bg-primary-div px-4 py-8 md:py-[60px]">
-                <Container maxWidth="lg">
-                    <div className="flex flex-wrap justify-center gap-2 mb-4">
-                        {benefits.map((benefit, index) => (
-                            <div
-                                key={index}
-                                className="bg-green-100 text-green-700 px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-xs md:text-sm"
-                            >
-                                {benefit}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex justify-center">
-                        <button className="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-6 py-2.5 md:px-8 md:py-3 text-white text-sm md:text-base font-semibold uppercase shadow-md transition-all w-full md:w-auto">
-                            Learn the Science Behind It
-                        </button>
-                    </div>
-                </Container>
-            </div>
+      
 
-            {/* Section 2: How does NFB work */}
-            <div className="px-4 py-8 md:py-12 bg-white">
-                <Container maxWidth="lg">
-                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center">
-                        How does Neurofeedback Training work?
-                    </h2>
-                    <div className="w-full h-[200px] md:h-[300px] bg-gradient-to-br from-blue-100 to-green-100 rounded-lg mb-4 flex items-center justify-center">
-                        <span className="text-gray-500 text-xs text-center px-2">NFB Process Diagram</span>
+        {/* Benefits Subsection */}
+        <div className="text-center">
+            {/* Benefits Badges */}
+            <div className="flex flex-wrap justify-center gap-2.5 md:gap-3 mb-6 md:mb-8">
+                {benefits.map((benefit, index) => (
+                    <div
+                        key={index}
+                        className="bg-green-100 text-green-700 px-4 py-2 md:px-5 md:py-2.5 rounded-full font-semibold text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow border border-green-200"
+                    >
+                        {benefit}
                     </div>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
-                     {`   NFB is an evidence-based brain exercise. It's a supplementary aid that helps your brain learn to self-regulate better. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes without medications or invasive procedures.`}
-                    </p>
-                    <ol className="list-decimal list-inside text-gray-700 text-sm md:text-base space-y-2 md:space-y-3">
-                        <li>{`During an NFB session, we place small sensors on your scalp that detect your brain's electrical activity (called brainwaves). These sensors are completely safe and painless. They only listen to your brain.`}</li>
-                        <li>You play games that are controlled by your brain without touching the screen.</li>
-                        <li>The games reward you when your brain produces desired patterns.</li>
-                        <li>By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own.</li>
-                    </ol>
-                </Container>
+                ))}
             </div>
+            
+            {/* CTA Button */}
+            <div className="flex justify-center">
+                <button className="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md">
+                    Learn the Science Behind It
+                </button>
+            </div>
+        </div>
+    </Container>
+</div>
+
+  {/* Divider */}
+        <div className="border-t border-gray-200 mb-8 md:mb-10"></div>
+{/* Section 2: How does NFB work */}
+<div className="px-4 py-8 md:py-12 bg-white">
+    <Container maxWidth="lg">
+        <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center ">
+            How does Neurofeedback Training work?
+        </h2>
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            {/* Image on Left */}
+            <div className="w-full md:w-1/3 order-1 md:order-1">
+                <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 text-xs text-center px-2">NFB Process Diagram</span>
+                </div>
+            </div>
+            
+            {/* Text on Right */}
+            <div className="w-full md:w-2/3 order-2 md:order-2">
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                    {`NFB is an evidence-based brain exercise. It's a supplementary aid that helps your brain learn to self-regulate better. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes without medications or invasive procedures.`}
+                </p>
+                <ol className="list-decimal list-inside text-gray-700 text-sm md:text-base space-y-2 md:space-y-3">
+                    <li>{`During an NFB session, we place small sensors on your scalp that detect your brain's electrical activity (called brainwaves). These sensors are completely safe and painless. They only listen to your brain.`}</li>
+                    <li>You play games that are controlled by your brain without touching the screen.</li>
+                    <li>The games reward you when your brain produces desired patterns.</li>
+                    <li>By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own.</li>
+                </ol>
+            </div>
+        </div>
+    </Container>
+</div>
+
 
             {/* Section 3: Who is it for */}
             <div className="px-4 py-8 md:py-12 bg-primary-div">

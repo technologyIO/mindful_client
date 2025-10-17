@@ -19,7 +19,7 @@ const RtmsLandingPage = ({ city, data }) => {
         <div className="bg-white">
 
             {/* Hero Section */}
-            <section className="bg-white pb-8 pt-12">
+            <section className="bg-white pb-8 pt-4">
                 <Container maxWidth="lg">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -39,7 +39,7 @@ const RtmsLandingPage = ({ city, data }) => {
                             <p className="text-gray-700 text-base md:text-lg mb-6">
                                 At MindfulTMS Neurocare, every <strong>rTMS (repetitive transcranial magnetic stimulation)</strong> session is led by a specialist with  evidence-based targeting specifically focused on  <strong>Depression, Anxiety, OCD, PTSD and more</strong>.
                             </p>
-                            <p className="text-base md:text-lg mb-2  text-gray-700">
+                            <p className="text-base md:text-lg mb-6  text-gray-700">
                                 {` Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics`}
                             </p>
                             <div className=" flex items-center justify-center md:justify-start">

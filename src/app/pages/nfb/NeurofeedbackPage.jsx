@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment';
 import NfbPageFaqs from './NfbPageFaqs';
 
-import { 
-    Brain, 
-    Shield, 
-    Target, 
-    TrendingUp, 
+import {
+    Brain,
+    Shield,
+    Target,
+    TrendingUp,
     UserCheck,
     ChevronDown,
     ChevronUp,
@@ -144,96 +144,94 @@ const NeurofeedbackPage = () => {
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    
+
     return (
         <div className="min-h-screen">
             {/* Banner */}
             <div className="w-full h-[35vh] md:h-[60vh] bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 flex items-center justify-center px-4">
-                <div className="text-center">
-                    <h1 className="text-2xl md:text-5xl font-bold text-gray-800 mb-2">Neurofeedback Training</h1>
-                    <p className="text-sm md:text-xl text-gray-600">Train Your Brain, Transform Your Life</p>
-                </div>
+                                             <img src="/page/nfb/HeroImage.webp" alt="Neurofeedback Training" className="w-full h-full object-cover"/>
+
             </div>
 
-{/* Section 1: What is NFB - Unified */}
-<div className="px-4 py-8 md:py-12 bg-white">
-    <Container maxWidth="lg">
-        {/* Main Heading */}
-        <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">
-            What is Neurofeedback Training (NFB)?
-        </h2>
-        
-        {/* Text and Image Row */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-8 md:mb-12">
-            <div className="w-full md:w-2/3">
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                    Think of neurofeedback training as a gym workout for your brain. Just like you train your muscles to become stronger, neurofeedback training strengthens your brain to work more efficiently and effectively, relieving clinical symptoms of various neuropsychological challenges.
-                </p>
-            </div>
-            <div className="w-full md:w-1/3">
-                <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center shadow-sm">
-                    <span className="text-gray-500 text-xs text-center px-2">Brain Training Image</span>
-                </div>
-            </div>
-        </div>
+            {/* Section 1: What is NFB - Unified */}
+            <div className="px-4 py-8 md:py-12 bg-white">
+                <Container maxWidth="lg">
+                    {/* Main Heading */}
+                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">
+                        What is Neurofeedback Training (NFB)?
+                    </h2>
 
-      
-
-        {/* Benefits Subsection */}
-        <div className="text-center">
-            {/* Benefits Badges */}
-            <div className="flex flex-wrap justify-center gap-2.5 md:gap-3 mb-6 md:mb-8">
-                {benefits.map((benefit, index) => (
-                    <div
-                        key={index}
-                        className="bg-green-100 text-green-700 px-4 py-2 md:px-5 md:py-2.5 rounded-full font-semibold text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow border border-green-200"
-                    >
-                        {benefit}
+                    {/* Text and Image Row */}
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-8 md:mb-12">
+                        <div className="w-full md:w-2/3">
+                            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                Think of neurofeedback training as a gym workout for your brain. Just like you train your muscles to become stronger, neurofeedback training strengthens your brain to work more efficiently and effectively, relieving clinical symptoms of various neuropsychological challenges.
+                            </p>
+                        </div>
+                        <div className="w-full md:w-1/3">
+                            <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center shadow-sm">
+                                <span className="text-gray-500 text-xs text-center px-2">Brain Training Image</span>
+                            </div>
+                        </div>
                     </div>
-                ))}
-            </div>
-            
-            {/* CTA Button */}
-            <div className="flex justify-center">
-                <button className="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md">
-                    Learn the Science Behind It
-                </button>
-            </div>
-        </div>
-    </Container>
-</div>
 
-  {/* Divider */}
-        <div className="border-t border-gray-200 mb-8 md:mb-10"></div>
-{/* Section 2: How does NFB work */}
-<div className="px-4 py-8 md:py-12 bg-white">
-    <Container maxWidth="lg">
-        <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center ">
-            How does Neurofeedback Training work?
-        </h2>
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            {/* Image on Left */}
-            <div className="w-full md:w-1/3 order-1 md:order-1">
-                <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 text-xs text-center px-2">NFB Process Diagram</span>
-                </div>
+
+
+                    {/* Benefits Subsection */}
+                    <div className="text-center">
+                        {/* Benefits Badges */}
+                        <div className="flex flex-wrap justify-center gap-2.5 md:gap-3 mb-6 md:mb-8">
+                            {benefits.map((benefit, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-green-100 text-green-700 px-4 py-2 md:px-5 md:py-2.5 rounded-full font-semibold text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow border border-green-200"
+                                >
+                                    {benefit}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* CTA Button */}
+                        <div className="flex justify-center">
+                            <button className="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md">
+                                Learn the Science Behind It
+                            </button>
+                        </div>
+                    </div>
+                </Container>
             </div>
-            
-            {/* Text on Right */}
-            <div className="w-full md:w-2/3 order-2 md:order-2">
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
-                    {`NFB is an evidence-based brain exercise. It's a supplementary aid that helps your brain learn to self-regulate better. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes without medications or invasive procedures.`}
-                </p>
-                <ol className="list-decimal list-inside text-gray-700 text-sm md:text-base space-y-2 md:space-y-3">
-                    <li>{`During an NFB session, we place small sensors on your scalp that detect your brain's electrical activity (called brainwaves). These sensors are completely safe and painless. They only listen to your brain.`}</li>
-                    <li>You play games that are controlled by your brain without touching the screen.</li>
-                    <li>The games reward you when your brain produces desired patterns.</li>
-                    <li>By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own.</li>
-                </ol>
+
+            {/* Divider */}
+            <div className="border-t border-gray-200 mb-8 md:mb-10"></div>
+            {/* Section 2: How does NFB work */}
+            <div className="px-4 py-8 md:py-12 bg-white">
+                <Container maxWidth="lg">
+                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center ">
+                        How does Neurofeedback Training work?
+                    </h2>
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                        {/* Image on Left */}
+                        <div className="w-full md:w-1/3 order-1 md:order-1">
+                            <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center">
+                                <span className="text-gray-500 text-xs text-center px-2">NFB Process Diagram</span>
+                            </div>
+                        </div>
+
+                        {/* Text on Right */}
+                        <div className="w-full md:w-2/3 order-2 md:order-2">
+                            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                                {`NFB is an evidence-based brain exercise. It's a supplementary aid that helps your brain learn to self-regulate better. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes without medications or invasive procedures.`}
+                            </p>
+                            <ol className="list-decimal list-inside text-gray-700 text-sm md:text-base space-y-2 md:space-y-3">
+                                <li>{`During an NFB session, we place small sensors on your scalp that detect your brain's electrical activity (called brainwaves). These sensors are completely safe and painless. They only listen to your brain.`}</li>
+                                <li>You play games that are controlled by your brain without touching the screen.</li>
+                                <li>The games reward you when your brain produces desired patterns.</li>
+                                <li>By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </Container>
             </div>
-        </div>
-    </Container>
-</div>
 
 
             {/* Section 3: Who is it for */}
@@ -262,26 +260,24 @@ const NeurofeedbackPage = () => {
                     <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6 text-center">
                         Where can you train?
                     </h2>
-                    
+
                     {/* Tabs */}
                     <div className="flex gap-2 mb-5 md:mb-6">
                         <button
                             onClick={() => setActiveTab('clinic')}
-                            className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-lg font-semibold text-sm md:text-base transition-all ${
-                                activeTab === 'clinic'
+                            className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-lg font-semibold text-sm md:text-base transition-all ${activeTab === 'clinic'
                                     ? 'bg-[#EF6623] text-white shadow-md'
                                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
+                                }`}
                         >
                             In-Clinic NFB
                         </button>
                         <button
                             onClick={() => setActiveTab('home')}
-                            className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-lg font-semibold text-sm md:text-base transition-all ${
-                                activeTab === 'home'
+                            className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-lg font-semibold text-sm md:text-base transition-all ${activeTab === 'home'
                                     ? 'bg-[#EF6623] text-white shadow-md'
                                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
+                                }`}
                         >
                             At-Home NFB
                         </button>
@@ -370,8 +366,8 @@ const NeurofeedbackPage = () => {
                     <p className="text-gray-700 text-sm md:text-base mb-4 md:mb-6">
                         Take the first step toward a calmer, sharper, and more balanced mind—book your NFB consultation today!
                     </p>
-                    <RequestAppointment 
-                        name="Book Consultation" 
+                    <RequestAppointment
+                        name="Book Consultation"
                         customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-6 py-2.5 md:px-8 md:py-3 text-white text-sm md:text-base font-semibold w-full md:w-auto"
                     />
                 </Container>
@@ -384,8 +380,8 @@ const NeurofeedbackPage = () => {
 
             {/* Final CTA */}
             <div className="px-4 py-10 md:py-14 bg-white text-center">
-                <RequestAppointment 
-                    name="Book Consultation" 
+                <RequestAppointment
+                    name="Book Consultation"
                     customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-8 py-3 md:px-10 md:py-4 text-white text-base md:text-lg font-bold w-full md:w-auto"
                 />
             </div>

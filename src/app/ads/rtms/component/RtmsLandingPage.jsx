@@ -26,22 +26,23 @@ const RtmsLandingPage = ({ city, data }) => {
                         {/* Text Section */}
                         <div className="w-full md:w-1/2 text-left order-2 md:order-1">
                             <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide text-gray-800">
-                                Stop Researching. Start Healing.
+                                Stop Researching.
+                                <br />Start Healing.
                             </h1>
 
-                            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
-                                {` Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics`}
-                            </h2>
 
-                            <p className="text-gray-700 text-base md:text-lg mb-4">
+
+                            <p className="text-gray-700 text-base md:text-lg mb-6 ">
                                 {`If you're already considering rTMS, you don't need more theory — you need the`} <strong>right provider</strong>.
                             </p>
 
                             <p className="text-gray-700 text-base md:text-lg mb-6">
-                                At <strong>MindfulTMS Neurocare</strong>, every rTMS (repetitive transcranial magnetic stimulation) session is <strong>led by a specialist</strong>, using <strong>FDA-approved protocols</strong> and <strong>evidence-based targeting</strong> for <strong>Depression, Anxiety, OCD, PTSD and more</strong>.
+                                At MindfulTMS Neurocare, every <strong>rTMS (repetitive transcranial magnetic stimulation)</strong> session is led by a specialist,  evidence-based targeting specifically focused on  <strong>Depression, Anxiety, OCD, PTSD and more</strong>.
                             </p>
-
-                            <div className="mt-8 flex items-center justify-center md:justify-start">
+                            <p className="text-base md:text-lg mb-2  text-gray-700">
+                                {` Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics`}
+                            </p>
+                            <div className=" flex items-center justify-center md:justify-start">
                                 <RequestAppointment
                                     customStyle={`flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg`}
                                     name={`Schedule an rTMS Consultation`}
@@ -92,10 +93,10 @@ const RtmsLandingPage = ({ city, data }) => {
                             <div>
                                 <h3 className="mb-2 text-xl md:text-2xl text-orange-500 font-semibold flex items-start gap-2">
                                     <span>✅</span>
-                                    <span>Clinical Expertise — Not Trial & Error</span>
+                                    <span>Clinical Expertise</span>
                                 </h3>
                                 <p className="text-gray-600 text-base md:text-lg ml-8">
-                                    {`Your protocol isn't handled by technicians. A psychiatrist personally maps your treatment path and monitors your progress.`}
+                                    {`A psychiatrist personally maps your treatment path and monitors your progress.`}
                                 </p>
                             </div>
 
@@ -189,7 +190,7 @@ const RtmsLandingPage = ({ city, data }) => {
 
                                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800  text-center">
                                     You can reach out to us online here:
-                                </h3> 
+                                </h3>
 
                                 <div className="flex items-center justify-center mt-5">
                                     <RequestAppointment
@@ -319,7 +320,7 @@ const locationDataArray = {
             { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
             { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
         ],
-        hero_description_2:`Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations.`
+        hero_description_2: `Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations.`
     },
     "wf": {
         addressTitle: 'MindfulTMS @ Whitefield, Bengaluru ',
@@ -342,7 +343,7 @@ const locationDataArray = {
             { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
             { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
         ],
-        hero_description_2:`Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.`
+        hero_description_2: `Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.`
     },
     "hb": {
         addressTitle: 'MindfulTMS @ Hebbal, Bengaluru ',
@@ -365,7 +366,7 @@ const locationDataArray = {
             { src: '/home/clinicImg3.jpg', alt: 'Company Image 2' },
             { src: '/home/clinicImg4.jpg', alt: 'Company Image 2' },
         ],
-        hero_description_2:`Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar).`
+        hero_description_2: `Our Clinic is located inside Aster CMI Hospital in Hebbal (Sahakar Nagar).`
     }
 };
 export default RtmsLandingPage

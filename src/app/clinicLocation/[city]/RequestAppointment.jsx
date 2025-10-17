@@ -36,7 +36,7 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon }) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header}) => {
     const [queryString, setQueryString] = useState("");
     const [currentUrl, setcurrentUrl] = useState("");
 
@@ -56,13 +56,13 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
     //    }, []);
     const pathname = usePathname()
     // console.log("city", city)
-        const iframeSrcStatic=`https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`
+    const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`
     //    const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&location=website&from=website`
     // const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
-        // "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
-        
-       //last used // "https://forms.zohopublic.in/nikhilmindf1/form/SelectyourClinic/formperma/Byg-b2YLIH7SjrLKNMIaghP6fUKY1JxPihr6O1YvkXk" 
-    
+    // "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
+
+    //last used // "https://forms.zohopublic.in/nikhilmindf1/form/SelectyourClinic/formperma/Byg-b2YLIH7SjrLKNMIaghP6fUKY1JxPihr6O1YvkXk" 
+
     const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
     // console.log("zohoform url ",iframeSrc|| iframeSrcStatic)
     // console.log(city, pathname)
@@ -189,10 +189,31 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
 
             <Dialog open={requestModal} onClose={toggleRequestModal} className=''>
                 <DialogContent className=' md:w-[500px] p-0 m-0 '>
-                    
-                    <div className='flex justify-end pt-3 px-3'>
-                        <p className='' onClick={toggleRequestModal}><img className='w-[30px] cursor-pointer' src='https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028' /></p>
+
+                  <div className={`flex  items-start border-b border-gray-200 ${header? "justify-between  p-4":"justify-end pt-2"}`}>
+                      {
+                        header &&   <div className="flex flex-col">
+                            <h2 className="text-base font-semibold text-gray-900">  
+                                Book Now or Request a Callback
+                            </h2>
+                            <span className="text-sm text-gray-800 italic">
+                                Share your name and number - we'll reach out shortly
+                            </span>
+                        </div>
+                      }
+                        <button
+                            onClick={toggleRequestModal}
+                            className="p-1 rounded hover:bg-gray-100 transition"
+                            aria-label="Close modal"
+                        >
+                            <img
+                                className="w-6 h-6"
+                                src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028"
+                                alt="Close"
+                            />
+                        </button>
                     </div>
+
                     <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
                         iframeSrc={iframeSrc || iframeSrcStatic}
                     />

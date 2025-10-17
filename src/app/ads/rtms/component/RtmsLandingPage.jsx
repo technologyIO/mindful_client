@@ -44,6 +44,7 @@ const RtmsLandingPage = ({ city, data }) => {
                             </p>
                             <div className=" flex items-center justify-center md:justify-start">
                                 <RequestAppointment
+                                    header = {true}
                                     customStyle={`flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg`}
                                     name={`Schedule an rTMS Consultation`}
                                     city={"delhi"}
@@ -135,6 +136,7 @@ const RtmsLandingPage = ({ city, data }) => {
 
                     <div className="mt-12 flex items-center justify-center">
                         <RequestAppointment
+                          header = {true}
                             customStyle={`flex items-center md:text-lg justify-center gap-2 w-[80%] rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 md:w-[400px] text-white font-bold transition-all duration-200 focus:ring focus:ring-orange-500 hover:scale-105 hover:shadow-lg`}
                             name={`Schedule an rTMS Consultation`}
                         />
@@ -194,6 +196,7 @@ const RtmsLandingPage = ({ city, data }) => {
 
                                 <div className="flex items-center justify-center mt-5">
                                     <RequestAppointment
+                                      header = {true}
                                         customStyle={`flex items-center text-sm md:text-lg justify-center gap-2 w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-2 md:py-4 text-white font-bold transition-all duration-200 focus:ring-4 focus:ring-orange-300 hover:scale-105 hover:shadow-xl`}
                                         name={`Schedule an rTMS Consultation`}
                                     />
@@ -255,6 +258,7 @@ const RtmsLandingPage = ({ city, data }) => {
                                     </div>
                                     <div className="mt-6 flex justify-center md:justify-start">
                                         <RequestAppointment
+                                          header = {true}
                                             customStyle={`flex items-center  md:text-lg justify-center gap-2 w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-2 md:py-4 text-white font-bold transition-all duration-200 focus:ring-4 focus:ring-orange-300 hover:scale-105 hover:shadow-xl`}
                                             name={`Schedule an rTMS Consultation`}
                                         />

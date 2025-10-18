@@ -194,10 +194,10 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                       {
                         header &&   <div className="flex flex-col">
                             <h2 className="text-base font-semibold text-gray-900">  
-                                Book Now or Request a Callback
+                                rTMS Consultation
                             </h2>
                             <span className="text-sm text-gray-800 italic">
-                            {`    Share your name and number - we'll reach out shortly`}
+                            {`   Book Now or Request a Callback`}
                             </span>
                         </div>
                       }

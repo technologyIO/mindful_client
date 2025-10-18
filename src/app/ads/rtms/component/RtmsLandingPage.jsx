@@ -27,7 +27,7 @@ const RtmsLandingPage = ({ city, data }) => {
                         <div className="w-full md:w-1/2 text-left order-2 md:order-1">
                             <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide text-gray-800">
                                 Stop Researching.
-                                <br />Start Healing.
+                                <br />Start Healing with rTMS.
                             </h1>
 
 
@@ -37,10 +37,10 @@ const RtmsLandingPage = ({ city, data }) => {
                             </p>
 
                             <p className="text-gray-700 text-base md:text-lg mb-6">
-                                At MindfulTMS Neurocare, every <strong>rTMS (repetitive transcranial magnetic stimulation)</strong> session is led by a specialist with  evidence-based targeting specifically focused on  <strong>Depression, Anxiety, OCD, PTSD and more</strong>.
+                                At MindfulTMS Neurocare, every <strong>rTMS </strong>(repetitive transcranial magnetic stimulation) session is led by a specialist with  evidence-based targeting specifically focused on  <strong>Depression, Anxiety, OCD, PTSD </strong>and more.
                             </p>
                             <p className="text-base md:text-lg mb-6  text-gray-700">
-                                {` Begin rTMS with One of India's Most Experienced Speciality Neurocare Clinics`}
+                                {` Begin rTMS with one of India's most experienced speciality neurocare clinics`}
                             </p>
                             <div className=" flex items-center justify-center md:justify-start">
                                 <RequestAppointment
@@ -81,11 +81,11 @@ const RtmsLandingPage = ({ city, data }) => {
                         {/* Image Section */}
                         <div className="flex justify-center">
                             <Image
-                                src="/ads/ads2/Delhi3.webp"
+                                src={data?.section2Img}
                                 alt="Clinic rTMS Chair"
                                 width={600}
                                 height={400}
-                                className="w-full md:h-96 object-cover rounded-xl"
+                                className="w-full md:max-h-[500px] object-cover rounded-xl"
                             />
                         </div>
 

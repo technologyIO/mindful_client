@@ -16,7 +16,8 @@ Whether you're facing stress, seeking personal growth, or need someone to talk t
 
 const page = ({ params }) => {
     const data = {
-    phone:`8197341114`
+    phone:`8197341114`, 
+    section2Img:'/ads/rtms/chairImg2.png'
   }
   return (
     <>

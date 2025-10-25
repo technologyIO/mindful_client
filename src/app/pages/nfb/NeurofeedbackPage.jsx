@@ -148,8 +148,9 @@ const NeurofeedbackPage = () => {
     return (
         <div className="min-h-screen">
             {/* Banner */}
-            <div className="w-full h-[35vh] md:h-[60vh] bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 flex items-center justify-center px-4">
-                                             <img src="/page/nfb/HeroImage.webp" alt="Neurofeedback Training" className="w-full h-full object-cover"/>
+            <div className="w-full h-[35vh] md:h-[60vh] bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 flex items-center justify-center ">
+                                             <img src="/page/nfb/HeroImage.webp" alt="Neurofeedback Training" className="w-full h-full object-cover hidden md:block"/>
+                                             <img src="/page/nfb/HeroImageMobile.webp" alt="Neurofeedback Training" className="w-full h-full object-cover md:hidden"/>
 
             </div>
 
@@ -169,8 +170,9 @@ const NeurofeedbackPage = () => {
                             </p>
                         </div>
                         <div className="w-full md:w-1/3">
-                            <div className="w-full h-[180px] md:h-[240px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center shadow-sm">
-                                <span className="text-gray-500 text-xs text-center px-2">Brain Training Image</span>
+                            <div className="w-full  bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center shadow-sm">
+                                                                             <img src="/page/nfb/trainingNFB.webp" alt="Neurofeedback Training" className=" "/>
+
                             </div>
                         </div>
                     </div>

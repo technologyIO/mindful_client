@@ -39,7 +39,7 @@ const NeurofeedbackPage = () => {
             id: '3B',
             text: 'Individuals with low or fluctuating moods',
             link: '#mood-issues',
-            image: '/page/nfb/whoIsItFor/Individuals with low or fluctating  moods.png'
+            image: '/page/nfb/whoIsItFor/Individuals with low or fluctating  moods.PNG'
         },
         {
             id: '3C',
@@ -57,7 +57,7 @@ const NeurofeedbackPage = () => {
             id: '3E',
             text: 'Adults with excessive worrying and anxiety problems',
             link: '#anxiety',
-            image: '/page/nfb/whoIsItFor/Adults with Excessive Worrying and anxiety problem.png'
+            image: '/page/nfb/whoIsItFor/Adults with Excessive Worrying and anxiety problem.PNG'
         },
         {
             id: '3F',
@@ -70,31 +70,44 @@ const NeurofeedbackPage = () => {
 
     const whyChooseNfb = [
         {
-            icon: <Brain size={32} />,
-            title: "Additive effects",
-            description: "to ongoing therapy and medication"
+            icon: "/page/nfb/icons/5.1 - Additive effects to ongoing therapy.svg", // or .svg, depending on your file type
+            title: "Additive effects to ongoing therapy",
+            description: ""
         },
         {
-            icon: <Shield size={32} />,
-            title: "Natural and safe",
-            description: "training method"
+            icon: "/page/nfb/icons/5.2 - Compliments ongoing medication  .svg",
+            title: "Compliments ongoing medication",
+            description: ""
         },
         {
-            icon: <Target size={32} />,
-            title: "Non-invasive",
-            description: "and simple to setup"
+            icon: "/page/nfb/icons/5.3 - Natural way to relieve symptoms.svg",
+            title: "Natural way to relieve symptoms",
+            description: ""
         },
         {
-            icon: <TrendingUp size={32} />,
-            title: "Permanent results",
-            description: "with regular training"
+            icon: "/page/nfb/icons/5.4 -Non-invasive and safe training method.svg",
+            title: "Non-invasive and safe training method",
+            description: ""
         },
         {
-            icon: <UserCheck size={32} />,
-            title: "Expert guidance",
-            description: "and training protocol development"
+            icon: "/page/nfb/icons/5.5 - Simple to set up .svg",
+            title: "Simple to set up",
+            description: ""
+        },
+        {
+            icon: "/page/nfb/icons/5.6 - Permanent results with regular training.svg",
+            title: "Permanent results with regular training",
+            description: ""
+        },
+        {
+            icon: "/page/nfb/icons/5.7 - Expert clinician guidance.svg",
+            title: "Expert clinician guidance",
+            description: ""
         }
     ];
+
+
+
 
     const faqs = [
         {
@@ -179,10 +192,41 @@ const NeurofeedbackPage = () => {
     return (
         <div className="min-h-screen">
             {/* Banner */}
-            <div className="w-full h-[35vh] md:h-[60vh] bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 flex items-center justify-center ">
-                <img src="/page/nfb/HeroImage.webp" alt="Neurofeedback Training" className="w-full h-full object-cover hidden md:block" />
-                <img src="/page/nfb/HeroImageMobile.webp" alt="Neurofeedback Training" className="w-full h-full object-cover md:hidden" />
+            <div className="relative w-full h-[35vh] md:h-[60vh] bg-gradient-to-r from-green-100 via-blue-100 to-purple-100">
+                {/* Background Images */}
+                <img
+                    src="/page/nfb/HeroImage.webp"
+                    alt="Neurofeedback Training"
+                    className="w-full h-full object-cover hidden md:block"
+                />
+                <img
+                    src="/page/nfb/HeroImageMobile.webp"
+                    alt="Neurofeedback Training"
+                    className="w-full h-full object-cover md:hidden"
+                />
 
+                {/* Text Overlay - Left Side */}
+                <div className="absolute inset-0 flex items-center">
+                    <Container maxWidth="xl" className="w-full">
+                        <div className="max-w-xl md:max-w-2xl hidden md:block">
+                            <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+                                MindfulTMS Neurofeedback
+                            </h1>
+                            <p className="text-base md:text-xl lg:text-2xl text-gray-800 font-medium">
+                                Train your brain. Improve focus, calm, and clarity — naturally.
+                            </p>
+                        </div>
+
+                        <div className="   md:hidden">
+                            <h1 className="text-xl  font-bold text-gray-900 mb-3 md:mb-4">
+                                MindfulTMS <br/> Neurofeedback
+                            </h1>
+                            <p className="text-sm text-gray-800 font-medium">
+                                Train your brain. Improve focus, calm, and clarity — naturally.
+                            </p>
+                        </div>
+                    </Container>
+                </div>
             </div>
 
             {/* Section 1: What is NFB - Unified */}
@@ -235,14 +279,13 @@ const NeurofeedbackPage = () => {
             </div>
 
             {/* Divider */}
-            <div className="border-t border-gray-200 mb-8 md:mb-10"></div>
-            {/* Section 2: How does NFB work */}
+            <div className="border-t border-gray-200 "></div>
             <div className="px-4 py-8 md:py-12 bg-white">
                 <Container maxWidth="lg">
-                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 text-center">
+                    <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5 md:text-center">
                         How does Neurofeedback Training work?
                     </h2>
-                    <p className="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12 max-w-3xl mx-auto">
+                    <p className="text-gray-600 text-sm md:text-base mb-8 md:mb-12 max-w-3xl mx-auto">
                         NFB is an evidence-based brain exercise that helps your brain learn better self-control. It trains your brain to improve on its own, creating lasting changes without medicines or surgery.
                     </p>
 
@@ -255,7 +298,7 @@ const NeurofeedbackPage = () => {
                                     <img
                                         src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-1.webp"
                                         alt="Person with neurofeedback headband"
-                                        className="w-full  object-cover rounded-xl"
+                                        className="w-full object-cover rounded-xl"
                                     />
                                 </div>
                                 {/* Text */}
@@ -271,41 +314,40 @@ const NeurofeedbackPage = () => {
                             </div>
                         </div>
 
-                        {/* Step 2: Mind-Controlled Games - with sub-sections a) and b) */}
+                        {/* Step 2: Mind-Controlled Games - Improved Layout */}
                         <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 md:p-6 rounded-2xl shadow-lg">
-                            <div className="flex items-start gap-3 mb-4">
+                            <div className="flex items-start gap-3 mb-6">
                                 <span className="flex-shrink-0 w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg">2</span>
                                 <h3 className="text-lg md:text-xl font-bold text-gray-800 mt-1">Mind-Controlled Reward Games</h3>
                             </div>
 
-                            {/* Sub-section a) */}
-                            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-6">
-                                <div className="w-full md:w-1/3">
-                                    <img
-                                        src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-2a.webp"
-                                        alt="Interactive brain games"
-                                        className="w-full  object-cover rounded-xl"
-                                    />
-                                </div>
-                                <div className="w-full md:w-2/3">
+                            {/* Improved Grid Layout for sub-sections */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                                {/* Sub-section a) */}
+                                <div className="flex flex-col">
+                                    <div className="mb-3   overflow-hidden rounded-xl">
+                                        <img
+                                            src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-2a.webp"
+                                            alt="Interactive brain games"
+                                            className="h-[300px] w-[300px] "
+                                        />
+                                    </div>
                                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                                        <span className="font-semibold">{`a)`}</span> {`You play fun, interactive games (9 types) and activities (3 types) that respond to your brain activity.`}
+                                        <span className="font-semibold text-purple-600">{`a)`}</span> {`You play fun, interactive games (9 types) and activities (3 types) that respond to your brain activity.`}
                                     </p>
                                 </div>
-                            </div>
 
-                            {/* Sub-section b) */}
-                            <div className="flex flex-col md:flex-row-reverse items-center gap-4 md:gap-6">
-                                <div className="w-full md:w-1/3">
-                                    <img
-                                        src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-2b.webp"
-                                        alt="Brain-controlled game with rockets"
-                                        className="w-full object-cover rounded-xl"
-                                    />
-                                </div>
-                                <div className="w-full md:w-2/3">
+                                {/* Sub-section b) */}
+                                <div className="flex flex-col">
+                                    <div className="mb-3   overflow-hidden rounded-xl">
+                                        <img
+                                            src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-2b.webp"
+                                            alt="Brain-controlled game with rockets"
+                                            className="h-[300px] w-[300px] "
+                                        />
+                                    </div>
                                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                                        <span className="font-semibold">{`b)`}</span> {`You play games controlled entirely by your brain — no hands needed! Your brain earns points each time it produces the right patterns.`}
+                                        <span className="font-semibold text-purple-600">{`b)`}</span> {`You play games controlled entirely by your brain — no hands needed! Your brain earns points each time it produces the right patterns.`}
                                     </p>
                                 </div>
                             </div>
@@ -317,7 +359,7 @@ const NeurofeedbackPage = () => {
                                 {/* Image */}
                                 <div className="w-full md:w-1/3">
                                     <img
-                                       src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-3.webp"
+                                        src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-3.webp"
                                         alt="Regular practice and progress"
                                         className="w-full object-cover rounded-xl"
                                     />
@@ -329,7 +371,7 @@ const NeurofeedbackPage = () => {
                                         <h3 className="text-lg md:text-xl font-bold text-gray-800 mt-1">Regular Practice</h3>
                                     </div>
                                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                                      {`  By repeating 3-4 sessions a week, after about`} <strong>25-40 sessions</strong>{`, your brain learns to maintain optimal activity on its own. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes.`}
+                                        {`  By repeating 3-4 sessions a week, after about`} <strong>25-40 sessions</strong>{`, your brain learns to maintain optimal activity on its own. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes.`}
                                     </p>
                                 </div>
                             </div>
@@ -337,9 +379,6 @@ const NeurofeedbackPage = () => {
                     </div>
                 </Container>
             </div>
-
-
-
 
             {/* Section 3: Who is it for */}
             <div className="px-4 py-8 md:py-12 bg-primary-div">
@@ -359,7 +398,8 @@ const NeurofeedbackPage = () => {
                                         <img
                                             src={item.image}
                                             alt={item.text}
-                                            className=" h-[300px] w-[300px] rounded-lg object-cover"
+                                            // className=" h-[300px] w-[300px] rounded-lg object-cover"
+                                            className="md:h-[300px] md:w-[300px] rounded-lg md:object-cover"
                                         />
                                     </div>
                                     <p className="text-[#EF6623] font-semibold text-sm md:text-base">
@@ -372,14 +412,13 @@ const NeurofeedbackPage = () => {
                 </Container>
             </div>
 
-
             {/* Section 4: Where can you train - WITH TABS */}
             <div className="px-4 py-8 md:py-12 bg-white">
                 <Container maxWidth="lg">
                     <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-3 text-center">
                         Where can you train?
                     </h2>
-                    <p className="text-center text-red-600 text-sm md:text-base mb-4 md:mb-6">
+                    <p className="md:text-center text-red-600 text-sm md:text-base mb-4 md:mb-6">
                         You can train at a MindfulTMS Clinic or right at home with our easy-to-use home training program.
                     </p>
 
@@ -388,12 +427,11 @@ const NeurofeedbackPage = () => {
                         <button
                             onClick={() => setActiveTab('clinic')}
                             className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-t-lg font-semibold text-sm md:text-base transition-all ${activeTab === 'clinic'
-                                    ? 'bg-green-500 text-white shadow-md relative z-10'
-                                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                ? 'bg-green-500 text-white shadow-md relative z-10'
+                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
                         >
                             In-Clinic NFB
-                            {/* Arrow pointing down */}
                             {activeTab === 'clinic' && (
                                 <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-green-500 z-20"></div>
                             )}
@@ -401,12 +439,11 @@ const NeurofeedbackPage = () => {
                         <button
                             onClick={() => setActiveTab('home')}
                             className={`flex-1 py-2.5 md:py-3 px-3 md:px-4 rounded-t-lg font-semibold text-sm md:text-base transition-all ${activeTab === 'home'
-                                    ? 'bg-blue-500 text-white shadow-md relative z-10'
-                                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                ? 'bg-blue-500 text-white shadow-md relative z-10'
+                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
                         >
                             At-Home NFB
-                            {/* Arrow pointing down */}
                             {activeTab === 'home' && (
                                 <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-blue-500 z-20"></div>
                             )}
@@ -416,27 +453,26 @@ const NeurofeedbackPage = () => {
                     {/* Tab Content - In-Clinic */}
                     {activeTab === 'clinic' && (
                         <div className="border-3 border-green-500 rounded-lg rounded-tl-none p-4 md:p-6 bg-green-50/30 animate-fadeIn shadow-lg mt-3 relative">
-                            {/* Connecting line from tab */}
                             <div className="absolute -top-3 left-0 right-0 h-3 bg-green-500/20"></div>
 
                             <div className="space-y-3 md:space-y-4">
-                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-green-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Brain Mapping (QEEG)</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">You visit the clinic where we begin with comprehensive brain mapping to identify specific patterns and areas for improvement.</p>
                                 </div>
-                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-green-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Clinical Assessment</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">Our specialists evaluate your results alongside your goals and medical history to develop a training program for you.</p>
                                 </div>
-                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-green-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Protocol Development</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">Based on your brain map and assessment, we create a personalized training protocol.</p>
                                 </div>
-                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-green-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Regular Training Schedule</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">You come to the clinic and do your training sessions as scheduled.</p>
                                 </div>
-                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-green-500 pl-3 md:pl-4 bg-green-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Progress Monitoring</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">To evaluate progress, our expert clinicians will monitor your progress and keep you updated on your scores.</p>
                                 </div>
@@ -447,27 +483,26 @@ const NeurofeedbackPage = () => {
                     {/* Tab Content - At-Home */}
                     {activeTab === 'home' && (
                         <div className="border-3 border-blue-500 rounded-lg rounded-tr-none p-4 md:p-6 bg-blue-50/30 animate-fadeIn shadow-lg mt-3 relative">
-                            {/* Connecting line from tab */}
                             <div className="absolute -top-3 left-0 right-0 h-3 bg-blue-500/20"></div>
 
                             <div className="space-y-3 md:space-y-4">
-                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-blue-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Brain Mapping (QEEG)</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">You visit the clinic initially where we begin with comprehensive brain mapping to identify specific patterns and areas for improvement. It is recommended that you bring a relative or close one with you to observe the process of setting it up.</p>
                                 </div>
-                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-blue-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Clinical Assessment</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">On the same day, our specialists evaluate your results alongside your training goals and medical history.</p>
                                 </div>
-                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-blue-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Protocol Development</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">Based on your brain map and assessment, we create a personalized training protocol.</p>
                                 </div>
-                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-blue-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Regular Training Schedule</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">Once we have thoroughly explained the implementation steps, you can take the home-neurofeedback kit with you and conduct your training sessions at your convenience, as per the schedule aligned by your clinician.</p>
                                 </div>
-                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-white py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
+                                <div className="border-l-4 border-blue-500 pl-3 md:pl-4 bg-blue-50 py-3 pr-3 md:py-4 md:pr-4 rounded-r-lg shadow-sm">
                                     <h5 className="font-bold text-gray-800 text-sm md:text-base mb-1">Progress Monitoring</h5>
                                     <p className="text-gray-700 text-xs md:text-sm">To evaluate progress, our expert clinicians will regularly monitor your progress and keep you updated on your scores.</p>
                                 </div>
@@ -476,8 +511,6 @@ const NeurofeedbackPage = () => {
                     )}
                 </Container>
             </div>
-
-
 
             {/* Section 5: Why Choose NFB */}
             <div className="px-4 py-8 md:py-12 bg-primary-div">
@@ -489,9 +522,13 @@ const NeurofeedbackPage = () => {
                         {whyChooseNfb.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-white rounded-lg p-3 md:p-4 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center"
+                                className="bg-white rounded-lg  p-3 md:p-4 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center"
                             >
-                                <div className="text-[#EF6623] mb-2">{item.icon}</div>
+                                <img
+                                    src={item.icon}
+                                    alt={item.title}
+                                    className="w-[80px] h-[80px] mb-2 object-cover"
+                                />
                                 <h5 className="font-bold text-gray-800 text-xs md:text-sm mb-1">{item.title}</h5>
                                 <p className="text-gray-600 text-xs">{item.description}</p>
                             </div>
@@ -510,6 +547,7 @@ const NeurofeedbackPage = () => {
                         Take the first step toward a calmer, sharper, and more balanced mind—book your NFB consultation today!
                     </p>
                     <RequestAppointment
+                        nfb={true}
                         name="Book Consultation"
                         customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-6 py-2.5 md:px-8 md:py-3 text-white text-sm md:text-base font-semibold w-full md:w-auto"
                     />
@@ -524,6 +562,7 @@ const NeurofeedbackPage = () => {
             {/* Final CTA */}
             <div className="px-4 py-10 md:py-14 bg-white text-center">
                 <RequestAppointment
+                    nfb={true}
                     name="Book Consultation"
                     customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-8 py-3 md:px-10 md:py-4 text-white text-base md:text-lg font-bold w-full md:w-auto"
                 />

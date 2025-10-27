@@ -36,7 +36,7 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header}) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header,nfb}) => {
     const [queryString, setQueryString] = useState("");
     const [currentUrl, setcurrentUrl] = useState("");
 
@@ -190,7 +190,17 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             <Dialog open={requestModal} onClose={toggleRequestModal} className=''>
                 <DialogContent className=' md:w-[500px] p-0 m-0 '>
 
-                  <div className={`flex  items-start border-b border-gray-200 ${header? "justify-between  p-4":"justify-end pt-2"}`}>
+                  <div className={`flex  items-start border-b border-gray-200 ${header || nfb? "justify-between  p-4":"justify-end pt-2"}`}>
+                     {
+                        nfb &&   <div className="flex flex-col">
+                            <h2 className="text-base font-semibold text-gray-900">  
+                                Neurofeedback Consultation
+                            </h2>
+                            <span className="text-sm text-gray-800 italic">
+                            {`   Book Now or Request a Callback`}
+                            </span>
+                        </div>
+                      }
                       {
                         header &&   <div className="flex flex-col">
                             <h2 className="text-base font-semibold text-gray-900">  

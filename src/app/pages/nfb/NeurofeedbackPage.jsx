@@ -329,7 +329,7 @@ const NeurofeedbackPage = () => {
                                         <h3 className="text-lg md:text-xl font-bold text-gray-800 mt-1">Regular Practice</h3>
                                     </div>
                                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                                        By repeating 3-4 sessions a week, after about <strong>25-40 sessions</strong>, your brain learns to maintain optimal activity on its own. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes.
+                                      {`  By repeating 3-4 sessions a week, after about`} <strong>25-40 sessions</strong>{`, your brain learns to maintain optimal activity on its own. The beauty of this approach is that you're teaching your brain to help itself, creating lasting changes.`}
                                     </p>
                                 </div>
                             </div>

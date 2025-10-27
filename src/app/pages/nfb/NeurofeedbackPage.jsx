@@ -359,7 +359,7 @@ const NeurofeedbackPage = () => {
                                 {/* Image */}
                                 <div className="w-full md:w-1/3">
                                     <img
-                                        src="/page/nfb/howTrainingWorks/How does Neurofeedback Training work-PT-3.webp"
+                                        src="/page/nfb/howTrainingWorks/Neurofeedback-05.webp"
                                         alt="Regular practice and progress"
                                         className="w-full object-cover rounded-xl"
                                     />

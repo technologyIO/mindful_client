@@ -206,7 +206,7 @@ const NeurofeedbackPage = () => {
                 />
 
                 {/* Text Overlay - Left Side */}
-                <div className="absolute inset-0 flex items-center">
+                <div className="absolute inset-0 flex md:items-center">
                     <Container maxWidth="xl" className="w-full">
                         <div className="max-w-xl md:max-w-2xl hidden md:block">
                             <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
@@ -222,7 +222,7 @@ const NeurofeedbackPage = () => {
                                 MindfulTMS <br/> Neurofeedback
                             </h1>
                             <p className="text-sm text-gray-800 font-medium">
-                                Train your brain. Improve focus, calm, and clarity — naturally.
+                                Train your brain. <br/>Improve focus, calm, and  <br/>clarity  — naturally.
                             </p>
                         </div>
                     </Container>

@@ -208,8 +208,8 @@ const NeurofeedbackPage = () => {
                 {/* Text Overlay - Left Side */}
                 <div style={{ fontFamily: "'Nunito', sans-serif" }} className="absolute inset-0 flex md:items-center">
                     <Container maxWidth="xl" className="w-full">
-                        <div  className="max-w-xl md:max-w-2xl hidden md:block">
-                            <h1  className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+                        <div className="max-w-xl md:max-w-2xl hidden md:block">
+                            <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
                                 MindfulTMS Neurofeedback
                             </h1>
                             <p className="text-base md:text-xl lg:text-2xl text-gray-800 font-medium">
@@ -219,10 +219,10 @@ const NeurofeedbackPage = () => {
 
                         <div className="   md:hidden">
                             <h1 className="text-xl  font-bold text-gray-900 mb-3 md:mb-4">
-                                MindfulTMS <br/> Neurofeedback
+                                MindfulTMS <br /> Neurofeedback
                             </h1>
                             <p className="text-sm text-gray-800 font-medium">
-                                Train your brain. <br/>Improve focus, calm, and  <br/>clarity  — naturally.
+                                Train your brain. <br />Improve focus, calm, and  <br />clarity  — naturally.
                             </p>
                         </div>
                     </Container>
@@ -269,10 +269,18 @@ const NeurofeedbackPage = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <div className="flex justify-center">
+                        {/* <div className="flex justify-center">
                             <button className="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md">
                                 Learn the Science Behind It
                             </button>
+                        </div> */}
+                        {/* Final CTA */}
+                        <div className="flex justify-center">
+                            <RequestAppointment
+                                nfb={true}
+                                name=" Learn the Science Behind It"
+                                customStyle="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md"
+                            />
                         </div>
                     </div>
                 </Container>

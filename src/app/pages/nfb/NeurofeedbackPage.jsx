@@ -206,10 +206,10 @@ const NeurofeedbackPage = () => {
                 />
 
                 {/* Text Overlay - Left Side */}
-                <div className="absolute inset-0 flex md:items-center">
+                <div style={{ fontFamily: "'Nunito', sans-serif" }} className="absolute inset-0 flex md:items-center">
                     <Container maxWidth="xl" className="w-full">
-                        <div className="max-w-xl md:max-w-2xl hidden md:block">
-                            <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+                        <div  className="max-w-xl md:max-w-2xl hidden md:block">
+                            <h1  className="text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
                                 MindfulTMS Neurofeedback
                             </h1>
                             <p className="text-base md:text-xl lg:text-2xl text-gray-800 font-medium">

@@ -1,16 +1,14 @@
 import React from 'react'
 import Script from 'next/script';
 import NeuroFeedbackPage from './NeurofeedbackPage'
+
 export async function generateMetadata() {
-
-
   return {
-   title: 'rTMS Treatment in Bengaluru & Delhi | Mindful TMS Clinics',
-   description:`Mindful TMS offers safe, medication-free rTMS treatment for depression, anxiety, OCD, chronic pain, trauma, and nicotine addiction in Bengaluru and Delhi.`,
-     robots: "noindex, nofollow",
- };
-
+    title: 'Neurofeedback Therapy in Bengaluru & Delhi | Mindful TMS Clinics',
+    description: `Mindful TMS offers advanced, non-invasive Neurofeedback therapy to improve focus, emotional regulation, sleep, and mental performance for conditions like ADHD, anxiety, and depression in Bengaluru & Delhi.`,
+  };
 }
+
 
 const Page = () => {
   return (

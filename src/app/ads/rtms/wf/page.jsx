@@ -18,7 +18,7 @@ const page = ({ params }) => {
     const data = {
     phone:`8197341114`, 
     section2Img:'/ads/rtms/chairImg2.png',
-    zohoForm:`https://forms.zohopublic.in/nikhilmindf1/form/Form2025WhitefieldBangalore/formperma/MCQDm70m0i_L44OTsxM5WJ4mDJ4CEFPE4yAsjdtGinQ`
+    zohoForm:`https://forms.zohopublic.in/nikhilmindf1/form/Form2025WhitefieldBangalore/formperma/MCQDm70m0i_L44OTsxM5WJ4mDJ4CEFPE4yAsjdtGinQ?from=landingpage`
 
   }
   return (

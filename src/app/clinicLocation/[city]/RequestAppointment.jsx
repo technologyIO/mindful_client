@@ -39,11 +39,12 @@ const locations = [
 const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header,nfb}) => {
     const [queryString, setQueryString] = useState("");
     const [currentUrl, setcurrentUrl] = useState("");
-
+  const [finalIframeSrc, setFinalIframeSrc] = useState("");
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const url = typeof window !== "undefined" ? window.location.href : "";
             setQueryString(window.location.search);
+            console.log(url)
             setcurrentUrl(url);
         }
     }, []);
@@ -172,6 +173,27 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }))
         // console.log(newWhatsappNumber)
     }, [formData?.location])
+
+
+        // New useEffect to append query parameters to iframe URL
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const baseUrl = iframeSrc || iframeSrcStatic;
+            const currentQueryString = window.location.search;
+            
+            if (currentQueryString) {
+                // Check if iframe URL already has query parameters
+                const separator = baseUrl.includes('?') ? '&' : '?';
+                // Remove the leading '?' from currentQueryString before appending
+                const cleanQueryString = currentQueryString.startsWith('?') 
+                    ? currentQueryString.substring(1) 
+                    : currentQueryString;
+                setFinalIframeSrc(baseUrl + separator + cleanQueryString);
+            } else {
+                setFinalIframeSrc(baseUrl);
+            }
+        }
+    }, [iframeSrc, currentUrl, queryString]);
     return (
         <>
             {
@@ -225,7 +247,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                     </div>
 
                     <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
-                        iframeSrc={iframeSrc || iframeSrcStatic}
+                         iframeSrc={finalIframeSrc || (iframeSrc || iframeSrcStatic)}
                     />
                     {/* <CustomRequestForm/> */}
                 </DialogContent>

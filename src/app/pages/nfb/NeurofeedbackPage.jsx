@@ -213,7 +213,7 @@ const NeurofeedbackPage = () => {
                                 MindfulTMS Neurofeedback
                             </h1>
                             <p className="text-base md:text-xl lg:text-2xl text-gray-800 font-medium">
-                                Train your brain. Improve focus, calm, and clarity — naturally.
+                               Train your brain naturally.<br/> Improve focus, calm, and clarity.
                             </p>
                         </div>
 
@@ -222,7 +222,7 @@ const NeurofeedbackPage = () => {
                                 MindfulTMS <br /> Neurofeedback
                             </h1>
                             <p className="text-sm text-gray-800 font-medium">
-                                Train your brain. <br />Improve focus, calm, and  <br />clarity  — naturally.
+                               Train your brain naturally. <br />Improve focus, calm, and  <br />clarity.
                             </p>
                         </div>
                     </Container>

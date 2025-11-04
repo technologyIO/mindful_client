@@ -170,6 +170,7 @@ export default function TestimonialComponentV2({
     smallDevice,
     doctor,
     doctorArray,
+    initialTestimonials = []
     // experts
 }) {
     const pathname = usePathname();
@@ -179,6 +180,50 @@ export default function TestimonialComponentV2({
     const [loading, setLoading] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef(null);
+
+    
+    // Generate Review Schema for SEO
+    const generateReviewSchema = () => {
+        if (testimonials.length === 0) return null;
+
+        const reviews = testimonials.map(testimonial => ({
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": testimonial.patientName
+            },
+            "reviewBody": testimonial.fullTestimonial,
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": testimonial.rating || 5,
+                "bestRating": "5"
+            },
+            "itemReviewed": {
+                "@type": "MedicalBusiness",
+                "name": "MindfulTMS",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": testimonial.location
+                }
+            },
+            "datePublished": testimonial.createdAt
+        }));
+
+        const aggregateRating = {
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "MindfulTMS",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": testimonials.length,
+                "bestRating": "5"
+            },
+            "review": reviews
+        };
+
+        return aggregateRating;
+    };
 
     // Handle Escape key and mobile back button
     useEffect(() => {
@@ -200,6 +245,14 @@ export default function TestimonialComponentV2({
             window.removeEventListener("popstate", handlePopState);
         };
     }, []);
+
+        useEffect(() => {
+        // Only use static testimonials for specific routes if no initial data
+        if (["/", "/testingpage/temppage"].includes(pathname) && testimonials.length === 0) {
+            setTestimonials(staticTestimonials);
+        }
+        setCurrentSlide(0);
+    }, [pathname]);
 
     useEffect(() => {
         if (isQuoteModal) {
@@ -559,7 +612,15 @@ export default function TestimonialComponentV2({
       
 
     return (
-        <div className={`${mobileView ? "flex justify-center " : ""}`}>
+      <>
+         {/* Add Review Schema Markup for SEO */}
+            {testimonials.length > 0 && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(generateReviewSchema()) }}
+                />
+            )}
+       <div className={`${mobileView ? "flex justify-center " : ""}`}>
             {/* {smallDevice && <div className="mb-5 text-center text-3xl md:text-4xl font-bold">Testimonials</div>} */}
             {/* Added "overflow-hidden" here to prevent slider overflow */}
             <div className={`rounded-lg ${mobileView ? "w-[80%]" : "w-full"}  overflow-hidden`}>
@@ -655,5 +716,7 @@ export default function TestimonialComponentV2({
                 )}
             </div>
         </div>
+      </> 
+
     );
 }

@@ -1,9 +1,9 @@
-"use client"
-import React, { useEffect, useState } from 'react'
+// "use client"
+import React from 'react'
 import Image from 'next/image'
 import { Container } from '@mui/material'
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
-import TestimonialComponentV2 from './TestimonialComponentV2'
+import TestimonialServerWrapper from './TestimonialServerWrapper'
 
 const RtmsLandingPage = ({ city, data }) => {
     //   const city = params.location || "gk";
@@ -155,7 +155,7 @@ const RtmsLandingPage = ({ city, data }) => {
 
                     <div className="">
 
-                        <TestimonialComponentV2 smallDevice={true} location={location} />
+                        <TestimonialServerWrapper smallDevice={true} location={location} />
 
 
                     </div>

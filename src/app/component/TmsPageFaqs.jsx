@@ -956,7 +956,7 @@ const TmsPageFaqs = () => {
                                 <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4 md:p-6">
                                     <h3 className="text-base md:text-lg font-semibold text-gray-800">No Question found</h3>
                                     <p className="text-gray-600 text-center mb-4 text-sm md:text-base">
-                                        We couldn't find any Question matching your search.
+                                        {`We couldn't find any Question matching your search.`}
                                     </p>
                                     <RequestAppointment
                                         name="Contact Us"

@@ -1,6 +1,7 @@
 import React from 'react'
 import Script from 'next/script';
 import RtmsLandingPage from  '../component/RtmsLandingPage'
+import { headers } from 'next/headers';
 export async function generateMetadata({ params }) {
 
 
@@ -15,11 +16,16 @@ Whether you're facing stress, seeking personal growth, or need someone to talk t
 }
 
 const page = ({ params }) => {
+
+  const headersList = headers();
+  const currentUrl = headersList.get('x-full-url') || '';
+  const baseZohoForm = 'https://forms.zohopublic.in/nikhilmindf1/form/Form2025WhitefieldBangalore/formperma/MCQDm70m0i_L44OTsxM5WJ4mDJ4CEFPE4yAsjdtGinQ';
+  const zohoFormWithUrl = `${baseZohoForm}?from=landingpage&url=${encodeURIComponent(currentUrl)}&solution=rtms`;
+
     const data = {
     phone:`8197341114`, 
     section2Img:'/ads/rtms/chairImg2.png',
-    zohoForm:`https://forms.zohopublic.in/nikhilmindf1/form/Form2025WhitefieldBangalore/formperma/MCQDm70m0i_L44OTsxM5WJ4mDJ4CEFPE4yAsjdtGinQ?from=landingpage`
-
+    zohoForm: zohoFormWithUrl
   }
   return (
     <>

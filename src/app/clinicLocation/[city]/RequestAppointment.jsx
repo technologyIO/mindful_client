@@ -1,11 +1,12 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 // import ImageGallary from './ImageGallary';
-import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, MenuItem, Select, FormControl, InputLabel, Button, RadioGroup, FormControlLabel, Radio } from '@mui/material';
+import { TextField, MenuItem, Select, FormControl, InputLabel, Button, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 // import PractoWidget from './PractoWidget';
 import { usePathname } from 'next/navigation';
 import ZohoForm from '@/app/component/ZohoForm'
 import CustomRequestForm from '@/components/CustomRequestForm'
+
 
 const locations = [
     {
@@ -62,7 +63,9 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
     // const iframeSrcStatic = `https://forms.zohopublic.in/nikhilmindf1/form/ContactUsGeneralEnquiries/formperma/BJAkc91gOqeQ4juDOHD3z-AgKu6XGc7Wg0qdBd7_axc${queryString}`
     // "https://forms.zohopublic.in/nikhilmindf1/form/RequestanAppointment/formperma/GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk?zf_rszfm=1";
 
+
     //last used // "https://forms.zohopublic.in/nikhilmindf1/form/SelectyourClinic/formperma/Byg-b2YLIH7SjrLKNMIaghP6fUKY1JxPihr6O1YvkXk" 
+
 
     const containerId = "zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQk"
     // console.log("zohoform url ",iframeSrc|| iframeSrcStatic)
@@ -90,15 +93,18 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             }
         };
 
+
         if (requestModal) {
             window.history.pushState(null, '');
             window.addEventListener('popstate', handlePopState);
         }
 
+
         return () => {
             window.removeEventListener('popstate', handlePopState);
         };
     }, [requestModal]);
+
 
     useEffect(() => {
         const checkBusinessHours = () => {
@@ -113,8 +119,10 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         checkBusinessHours();
     }, []);
 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
+
 
         // Validate phone number when the "phone" field changes
         if (name === "phone") {
@@ -126,11 +134,13 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             }
         }
 
+
         setFormData(prev => ({
             ...prev,
             [name]: value
         }));
     };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -151,6 +161,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         });
     }
 
+
     const isFormValid = () => {
         return formData.name && formData.phone && formData.location;
     }
@@ -163,6 +174,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }
     }, [formData])
 
+
     useEffect(() => {
         const newWhatsappNumber = locations?.find((location) => {
             return location.location === formData?.location
@@ -173,6 +185,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }))
         // console.log(newWhatsappNumber)
     }, [formData?.location])
+
 
 
         // New useEffect to append query parameters to iframe URL
@@ -209,50 +222,65 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                         Request an Appointment</button>
             }
 
-            <Dialog open={requestModal} onClose={toggleRequestModal} className=''>
-                <DialogContent className=' md:w-[500px] p-0 m-0 '>
 
-                  <div className={`flex  items-start border-b border-gray-200 ${header || nfb? "justify-between  p-4":"justify-end pt-2"}`}>
-                     {
-                        nfb &&   <div className="flex flex-col">
-                            <h2 className="text-base font-semibold text-gray-900">  
-                                Neurofeedback Consultation
-                            </h2>
-                            <span className="text-sm text-gray-800 italic">
-                            {`   Book Now or Request a Callback`}
-                            </span>
+            {requestModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                    {/* Backdrop */}
+                    <div 
+                        className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"
+                        onClick={toggleRequestModal}
+                    ></div>
+                    
+                    {/* Modal */}
+                    <div className="relative bg-white rounded-lg shadow-xl w-full max-w-[500px] mx-4 md:mx-0 max-h-[90vh] overflow-hidden z-50">
+                        {/* Modal Content */}
+                        <div className="flex flex-col h-full">
+                            <div className={`flex items-start border-b border-gray-200 ${header || nfb? "justify-between p-4":"justify-end pt-2"}`}>
+                                {
+                                    nfb && <div className="flex flex-col">
+                                        <h2 className="text-base font-semibold text-gray-900">  
+                                            Neurofeedback Consultation
+                                        </h2>
+                                        <span className="text-sm text-gray-800 italic">
+                                            {`   Book Now or Request a Callback`}
+                                        </span>
+                                    </div>
+                                }
+                                {
+                                    header && <div className="flex flex-col">
+                                        <h2 className="text-base font-semibold text-gray-900">  
+                                            rTMS Consultation
+                                        </h2>
+                                        <span className="text-sm text-gray-800 italic">
+                                            {`   Book Now or Request a Callback`}
+                                        </span>
+                                    </div>
+                                }
+                                <button
+                                    onClick={toggleRequestModal}
+                                    className="p-1 rounded hover:bg-gray-100 transition"
+                                    aria-label="Close modal"
+                                >
+                                    <img
+                                        className="w-6 h-6"
+                                        src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028"
+                                        alt="Close"
+                                    />
+                                </button>
+                            </div>
+
+                            <div className="overflow-y-auto">
+                                <ZohoForm 
+                                    containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
+                                    iframeSrc={finalIframeSrc || (iframeSrc || iframeSrcStatic)}
+                                />
+                                {/* <CustomRequestForm/> */}
+                            </div>
                         </div>
-                      }
-                      {
-                        header &&   <div className="flex flex-col">
-                            <h2 className="text-base font-semibold text-gray-900">  
-                                rTMS Consultation
-                            </h2>
-                            <span className="text-sm text-gray-800 italic">
-                            {`   Book Now or Request a Callback`}
-                            </span>
-                        </div>
-                      }
-                        <button
-                            onClick={toggleRequestModal}
-                            className="p-1 rounded hover:bg-gray-100 transition"
-                            aria-label="Close modal"
-                        >
-                            <img
-                                className="w-6 h-6"
-                                src="https://ik.imagekit.io/mwpcmpi5v/iconsNew/closee.svg?updatedAt=1733748343028"
-                                alt="Close"
-                            />
-                        </button>
                     </div>
+                </div>
+            )}
 
-                    <ZohoForm containerId="zf_div_GIA-DDTpKkpkN-kh9Kxyt6j0Imrq1AmKX_cUSYhHZQkq_"
-                         iframeSrc={finalIframeSrc || (iframeSrc || iframeSrcStatic)}
-                    />
-                    {/* <CustomRequestForm/> */}
-                </DialogContent>
-
-            </Dialog>
 
 
 
@@ -260,6 +288,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         </>
     )
 }
+
 
 
 

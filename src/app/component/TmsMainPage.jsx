@@ -94,7 +94,8 @@ const TmsMainPage = () => {
                 <div className="min-h-screen">
                     <div className="">
                         <div>
-                            <Image alt="img"  width={500} height={500}  className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' />
+                            {/* <Image alt="img"  width={500} height={500}  className='w-full' src='https://mindfultms1.s3.us-east-1.amazonaws.com/1733381466442-mindfultms1.webp' /> */}
+                            <Image alt="img"  width={500} height={500}  className='w-full' src='/tmsPage/BannerTms.webp' />
                         </div>
                         {/* TMS Introduction Section */}
                         <div className=" p-6 lg:p-10 ">

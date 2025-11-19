@@ -13,13 +13,15 @@ import {
     ChevronDown,
     ChevronUp,
     Search
-} from 'lucide-react';
+} from 'lucide-react'; 
 
 const NeurofeedbackPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaqIndex, setOpenFaqIndex] = useState(null);
     const [activeTab, setActiveTab] = useState('clinic');
-
+  // Get current URL
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+  
     const benefits = [
         "Improved mood",
         "Better sleep quality",
@@ -107,7 +109,9 @@ const NeurofeedbackPage = () => {
     ];
 
 
-
+    const pageContent = {
+        iframeSrc:`https://forms.zohopublic.in/nikhilmindf1/form/NFBForm/formperma/tr-mCc4A-_A8XVQ5iKrjRzsoXWLORJj2nw-5JjmHdW8?url=${encodeURIComponent(currentUrl)}&from=website`
+    }
 
     const faqs = [
         {
@@ -277,6 +281,7 @@ const NeurofeedbackPage = () => {
                         {/* Final CTA */}
                         <div className="flex justify-center">
                             <RequestAppointment
+                            iframeSrc={pageContent?.iframeSrc}
                                 nfb={true}
                                 name=" Learn the Science Behind It"
                                 customStyle="bg-[#EF6623] hover:bg-orange-500 active:bg-orange-700 rounded-lg px-8 py-3 md:px-10 md:py-3.5 text-white text-sm md:text-base font-bold uppercase shadow-lg hover:shadow-xl transition-all w-full md:w-auto max-w-md"
@@ -555,6 +560,7 @@ const NeurofeedbackPage = () => {
                         Take the first step toward a calmer, sharper, and more balanced mind—book your NFB consultation today!
                     </p>
                     <RequestAppointment
+                      iframeSrc={pageContent?.iframeSrc}
                         nfb={true}
                         name="Book Consultation"
                         customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-6 py-2.5 md:px-8 md:py-3 text-white text-sm md:text-base font-semibold w-full md:w-auto"
@@ -570,6 +576,7 @@ const NeurofeedbackPage = () => {
             {/* Final CTA */}
             <div className="px-4 py-10 md:py-14 bg-white text-center">
                 <RequestAppointment
+                  iframeSrc={pageContent?.iframeSrc}
                     nfb={true}
                     name="Book Consultation"
                     customStyle="bg-[#EF6623] uppercase hover:bg-orange-500 active:bg-orange-600 rounded-lg px-8 py-3 md:px-10 md:py-4 text-white text-base md:text-lg font-bold w-full md:w-auto"

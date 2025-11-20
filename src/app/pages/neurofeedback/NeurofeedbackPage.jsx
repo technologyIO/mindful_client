@@ -47,7 +47,7 @@ const NeurofeedbackPage = () => {
             id: '3C',
             text: 'Individuals with poor sleep',
             link: '#sleep-issues',
-            image: '/page/nfb/whoIsItFor/Individuals with poor sleep.png'
+            image: '/page/nfb/whoIsItFor/Individuals with poor sleep Rev-1.png'
         },
         {
             id: '3D',

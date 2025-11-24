@@ -10,6 +10,13 @@ const OurDoctorSection = ({ designation }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const slugify = (name) => 
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+
   const apiUrl = designation 
     ? `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?designation=${designation === 'therapist' ? 'Psychologist' : designation}`
     : `${process.env.NEXT_PUBLIC_API_URL}doctors`;
@@ -139,8 +146,8 @@ const OurDoctorSection = ({ designation }) => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 place-items-center">
               {experts.map((expert, idx) => (
                 <Link 
-                  href={`/doctor/${expert?._id}`} 
-                  key={`${expert?._id}-${idx}`} // Better key using ID
+                  href={`/doctor/${expert?._id}/${slugify(expert?.name)}`}
+                  key={`${expert?._id}-${idx}`}
                   className="flex flex-col items-center mb-2 cursor-pointer hover:opacity-80 transition-opacity duration-200 w-full group"
                   prefetch={false}
                 >

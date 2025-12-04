@@ -37,7 +37,7 @@ const locations = [
         params: "New-Delhi"
     }
 ];
-const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header,nfb}) => {
+const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon , header,nfb,externalTrigger, onClose}) => {
     const [queryString, setQueryString] = useState("");
     const [currentUrl, setcurrentUrl] = useState("");
   const [finalIframeSrc, setFinalIframeSrc] = useState("");
@@ -86,6 +86,14 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             return location
         }
     })
+
+     // NEW: Listen to external trigger
+    useEffect(() => {
+        console.log("externalTrigger", externalTrigger)
+      if (externalTrigger !== undefined) {
+        setRequestModal(externalTrigger);
+      }
+    }, [externalTrigger]);
     useEffect(() => {
         const handlePopState = () => {
             if (requestModal) {
@@ -149,6 +157,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
     }
     const [phoneError, setPhoneError] = useState("");
     const toggleRequestModal = () => {
+        const newState = !requestModal; 
         setRequestModal(prev => !prev);
         setFormData({
             name: '',
@@ -159,6 +168,10 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             message: '',
             preferredTime: ''
         });
+            // NEW: Call external close handler if provided
+      if (onClose && !newState) {
+        onClose();
+      }
     }
 
 
@@ -224,7 +237,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
 
 
             {requestModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                <div className="fixed inset-0 z-[99999] flex items-center justify-center">
                     {/* Backdrop */}
                     <div 
                         className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300"

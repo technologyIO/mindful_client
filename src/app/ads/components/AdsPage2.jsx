@@ -1,10 +1,12 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import { Container } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation';
 import TestimonialComponentSlideV2 from '@/app/component/TestimonialComponentSlideV2'
+import TestimonialCarouselCompact from '@/app/component/TestimonialCarouselCompact'
+
 import RequestAppointment from '@/app/clinicLocation/[city]/RequestAppointment'
 import { adsPageContent } from '@/adsPageContent'
 import DoctorsSection from './DoctorsSection'
@@ -430,6 +432,28 @@ const AdsPage2 = ({ params }) => {
       </div>
     );
   };
+  const requestAppointmentRef = useRef(null);
+const [isSticky, setIsSticky] = useState(false);
+ const [triggerAppointment, setTriggerAppointment] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+   const [showStickyModal, setShowStickyModal] = useState(false);
+  // Add scroll listener
+ useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector('[data-hero-section]');
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setIsSticky(window.scrollY > heroBottom);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+
+
 
   const DoctorSelectorMobileSkeleton = () => {
     return (
@@ -451,8 +475,50 @@ const AdsPage2 = ({ params }) => {
   };
   return (
     <>
+
+ <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isSticky ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        } bg-white shadow-md`}
+      >
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center">
+            <img className='w-full h-[50px] object-contain ' src='/home/logoMainCropped.svg' />
+            {/* <span className="text-xl md:text-2xl font-bold text-orange-500">
+              MindfulTMS
+            </span> */}
+          </div>
+
+          {/* Regular button that triggers external modal */}
+          <button
+            onClick={() => setShowStickyModal(true)}
+            className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-4 md:px-6 py-2 md:py-3 text-sm md:text-base text-white font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          >
+            {RequestAppointmentButton[expertService].text}
+          </button>
+        </div>
+      </nav>
+
+      
+      {/* Modal controlled externally - rendered OUTSIDE navbar */}
+      <RequestAppointment
+        iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+        customStyle="hidden"
+        name="hidden-trigger"
+        externalTrigger={showStickyModal}
+        onClose={() => setShowStickyModal(false)}
+      />
+       <div className="hidden">
+        <RequestAppointment
+          iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+          customStyle="hidden"
+          name="trigger"
+          externalTrigger={showModal}
+          onClose={() => setShowModal(false)}
+        />
+      </div>
       <Container maxWidth="lg">
-        <section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "" : ""}`}>
+        <section data-hero-section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "" : ""}`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 ">
             {/* Image Section */}
             <div className="w-full md:w-[40%] flex justify-center md:justify-end order-1 md:order-2">
@@ -473,36 +539,20 @@ const AdsPage2 = ({ params }) => {
 
               <div className="text-gray-700 text-lg md:text-2xl mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
-              {/* <div className='text-gray-700 text-base md:text-lg mb-4'>
-                <b>Our experts provide:</b><br />
-                <ul className="list-disc pl-6 mb-3">
-                  <li>Personalized anxiety diagnosis</li>
-                  <li>Safe and compassionate care</li>
-                  <li>Confidentiality</li>
-                </ul>
-
-                Psychiatrists offer customized treatment plans including medication, if needed
-              </div> */}
-              {/* <p className='text-sm mt-6 text-gray-500'>
-                {currentPageContent?.hero_description_2}
-              </p> */}
+             
               {currentPageContent?.headline_2_pinned && (
                 <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
                   {currentPageContent.headline_2_pinned}
                 </div>
               )}
               <div className="mt-3 flex items-center justify-center md:justify-start">
-                <RequestAppointment
-                  iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
-                  customStyle={`${RequestAppointmentButton[expertService].style}`}
-                  name={RequestAppointmentButton[expertService].text}
-                />
-
-
+                  <RequestAppointment
+                    iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}
+                    customStyle={`${RequestAppointmentButton[expertService].style}`}
+                    name={RequestAppointmentButton[expertService].text}
+                  />
               </div>
-              {/* <div className='flex justify-center'>
-                <p className='text-sm mr-6 mt-3 text-gray-500'>{currentPageContent?.hero_description_2}.</p>
-              </div> */}
+          
 
 
             </div>
@@ -510,6 +560,15 @@ const AdsPage2 = ({ params }) => {
         </section>
       </Container>
 
+            <Container maxWidth="lg" className='pb-6'>
+               <TestimonialCarouselCompact 
+    location={location}
+    doctor={singleDoctor}
+    doctorArray={doctors.length > 0 ? doctors : []} 
+/>
+
+      </Container>
+      
       {/* expert */}
       <section className="py-8 px-4 bg-[#FDE4BB]">
         <DoctorsSection expertService={expertService} location={location} expertText={expertText} />

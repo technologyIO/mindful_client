@@ -17,7 +17,7 @@ const AdsPage2 = ({ params }) => {
   const searchParams = useSearchParams(); // instance of URLSearchParams
   // for content of every page refer to adsPageContent.js in root
 
-  console.log("searchParams", searchParams.toString());
+  // console.log("searchParams", searchParams.toString());
 
   const WhatWeTreat = [
     { name: 'Depression', image: '/ads/what_we_treat/psychology.png' },
@@ -90,37 +90,36 @@ const AdsPage2 = ({ params }) => {
   const location = city === 'gk' ? 'New Delhi - Greater Kailash 1' : city === 'wf' ? 'Bengaluru - Whitefield' : city === 'hb' ? 'Bengaluru - Hebbal' : '';
   const expertText = expertService === 'psychologist' ? 'Psychologist' : expertService === 'psychiatrist' ? 'Psychiatrist' : expertService === 'therapist' ? "therapist" : 'Psychologist';
   // console.log("expertService", expertService)
+const excludedDoctors = ["Ms Yamini K.V"];
 
-  useEffect(() => {
-    // if (expertService != "general") {
-    let designation = "";
-    setLoadingDoctor(true)
-    if (expertService === "psychologist" || expertService === "therapist") {
-      designation = "Psychologist";
-    } else if (expertService === "psychiatrist") {
-      designation = "Psychiatrist";
-    } else {
-      designation = "";
-    }
-    axios
-      .get(
-        `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
-      )
-      .then((res) => {
-        // const map = res.data.map((i)=>i._id)
-        // console.log(map)
-        setDoctors(res.data);
-        console.log("doctors", res.data);
-        setLoadingDoctor(false);
-        // setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching doctors:", err);
-        // setLoading(false);
-        setLoadingDoctor(false);
-      });
-    // }
-  }, [expertService])
+useEffect(() => {
+  let designation = "";
+  setLoadingDoctor(true)
+  if (expertService === "psychologist" || expertService === "therapist") {
+    designation = "Psychologist";
+  } else if (expertService === "psychiatrist") {
+    designation = "Psychiatrist";
+  } else {
+    designation = "";
+  }
+  axios
+    .get(
+      `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
+    )
+    .then((res) => {
+      // Filter out excluded doctors before setting state
+      const filteredDoctors = res.data.filter(
+        doctor => !excludedDoctors.includes(doctor.name)
+      );
+      setDoctors(filteredDoctors);
+      console.log("doctors", filteredDoctors);
+      setLoadingDoctor(false);
+    })
+    .catch((err) => {
+      console.error("Error fetching doctors:", err);
+      setLoadingDoctor(false);
+    });
+}, [expertService])
 
   const urlLocation = {
     "wf": "whitefield",
@@ -571,7 +570,7 @@ const [isSticky, setIsSticky] = useState(false);
       
       {/* expert */}
       <section className="py-8 px-4 bg-[#FDE4BB]">
-        <DoctorsSection expertService={expertService} location={location} expertText={expertText} />
+        <DoctorsSection expertService={expertService} location={location} expertText={expertText} excludedDoctors={excludedDoctors}/>
         <div className="mt-6 flex items-center justify-center ">
           <RequestAppointment
             iframeSrc={locationContent[city]?.iframeSrc || iframeSrc}

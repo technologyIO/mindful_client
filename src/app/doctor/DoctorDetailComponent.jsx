@@ -13,6 +13,9 @@ const TestimonialComponentSlide = dynamic(
 );
 
 const DoctorDetailComponent = async ({ doctorId }) => {
+  // Define excluded doctors array
+  const excludedDoctors = ["Ms Yamini K.V"];
+  
   const doctorStatic = { _id: doctorId };
   let doctorDetail = {};
   
@@ -23,7 +26,6 @@ const DoctorDetailComponent = async ({ doctorId }) => {
     doctorDetail = res.data;
   } catch (error) {
     console.error('Error fetching doctor details:', error);
-    // Handle error appropriately - could redirect or show error page
     return (
       <div className="p-5 md:p-10">
         <Container maxWidth="lg">
@@ -39,10 +41,12 @@ const DoctorDetailComponent = async ({ doctorId }) => {
     );
   }
 
+  // Check if current doctor is in excluded list
+  const shouldShowAppointmentButton = !excludedDoctors.includes(doctorDetail?.name);
+
   const currentUrl = `https://mindfultms.in/doctor/${doctorDetail?._id}?doctor=${doctorDetail?.name}`;
   const iframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/OTPVerifiticationtest/formperma/uqvupaDUHDlIs1hLYWsCUIgydIk4e9EzI3T6ubRgt7Y?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
 
-  // Pull in the new fields, with sensible defaults
   const {
     specialization = [],
     specialization_categories = {},
@@ -91,10 +95,12 @@ const DoctorDetailComponent = async ({ doctorId }) => {
             </div>
           </div>
 
-          {/* Book Appointment */}
-          <div className="flex justify-center mb-6">
-            <RequestAppointment name={'BOOK APPOINTMENT'} />
-          </div>
+          {/* Book Appointment - Conditionally rendered */}
+          {shouldShowAppointmentButton && (
+            <div className="flex justify-center mb-6">
+              <RequestAppointment name={'BOOK APPOINTMENT'} />
+            </div>
+          )}
 
           {/* About Section */}
           {about && <AboutComponent aboutText={about} />}
@@ -105,7 +111,6 @@ const DoctorDetailComponent = async ({ doctorId }) => {
               Specializations
             </h3>
 
-            {/* Categorized view */}
             {toggle_specialization ? (
               <div className="mt-4 space-y-6 text-gray-700">
                 {Object.entries(specialization_categories).map(
@@ -122,7 +127,6 @@ const DoctorDetailComponent = async ({ doctorId }) => {
                 )}
               </div>
             ) : (
-              /* Flat list view */
               <ul className="mt-2 space-y-1 text-gray-700 list-disc pl-5">
                 {specialization.map((spec, index) => (
                   <li key={index}>{spec}</li>
@@ -145,18 +149,22 @@ const DoctorDetailComponent = async ({ doctorId }) => {
             </div>
           )}
 
-          {/* Testimonials */}
-          <div className="py-8 px-8">
-            <h1 className="text-3xl text-primary-orange text-center mb-4 font-bold">
-              Testimonials
-            </h1>
-            <TestimonialComponentSlide doctor={doctorStatic} />
-          </div>
+         {/* Testimonials - Conditionally rendered */}
+{shouldShowAppointmentButton && (
+  <div className="py-8 px-8">
+    <h1 className="text-3xl text-primary-orange text-center mb-4 font-bold">
+      Testimonials
+    </h1>
+    <TestimonialComponentSlide doctor={doctorStatic} />
+  </div>
+)}
 
-          {/* Second Book Appointment */}
-          <div className="flex justify-center mb-6">
-            <RequestAppointment name={'BOOK APPOINTMENT'} />
-          </div>
+          {/* Second Book Appointment - Conditionally rendered */}
+          {shouldShowAppointmentButton && (
+            <div className="flex justify-center mb-6">
+              <RequestAppointment name={'BOOK APPOINTMENT'} />
+            </div>
+          )}
 
           {/* Professional Background */}
           {profession_background.length > 0 && (

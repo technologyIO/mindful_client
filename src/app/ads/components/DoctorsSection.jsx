@@ -1,60 +1,73 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const DoctorsSection = ({ expertService, location, expertText }) => {
+const DoctorsSection = ({ expertService, location, expertText,excludedDoctors }) => {
   const [loading, setLoading] = useState(true);
   // For the "general" case, store separate arrays
   const [psychiatrists, setPsychiatrists] = useState([]);
   const [psychologists, setPsychologists] = useState([]);
   // For a specific expertService, store doctors here
   const [doctors, setDoctors] = useState([]);
-
-  useEffect(() => {
-    if (expertService === "general") {
-      setLoading(true);
-      Promise.all([
-        axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=Psychiatrist`
-        ),
-        axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=Psychologist`
-        )
-      ])
-        .then(([resPsychiatrist, resPsychologist]) => {
-          setPsychiatrists(resPsychiatrist.data);
-          setPsychologists(resPsychologist.data);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.error("Error fetching doctors:", err);
-          setLoading(false);
-        });
+ 
+useEffect(() => {
+  if (expertService === "general") {
+    setLoading(true);
+    Promise.all([
+      axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=Psychiatrist`
+      ),
+      axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=Psychologist`
+      )
+    ])
+      .then(([resPsychiatrist, resPsychologist]) => {
+        // Filter out excluded doctors
+        setPsychiatrists(
+          resPsychiatrist.data.filter(
+            doctor => !excludedDoctors.includes(doctor.name)
+          )
+        );
+        setPsychologists(
+          resPsychologist.data.filter(
+            doctor => !excludedDoctors.includes(doctor.name)
+          )
+        );
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching doctors:", err);
+        setLoading(false);
+      });
+  } else {
+    // For specific service
+    let designation;
+    if (expertService === "psychologist") {
+      designation = "Psychologist";
+    } else if (expertService === "psychiatrist") {
+      designation = "Psychiatrist";
     } else {
-      // For a specific service, determine the designation
-      let designation;
-      if (expertService === "psychologist") {
-        designation = "Psychologist";
-      } else if (expertService === "psychiatrist") {
-        designation = "Psychiatrist";
-      } else {
-        designation = expertText === "therapist" ? "Psychologist" : expertText;
-      }
-      setLoading(true);
-      axios
-        .get(
-          `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
-        )
-        .then((res) => {
-          setDoctors(res.data);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.error("Error fetching doctors:", err);
-          setLoading(false);
-        });
+      designation = expertText === "therapist" ? "Psychologist" : expertText;
     }
-  }, [expertService, location, expertText]);
-
+    setLoading(true);
+    axios
+      .get(
+        `${process.env.NEXT_PUBLIC_API_URL}doctors/search/doctors?location=${location}&designation=${designation}`
+      )
+      .then((res) => {
+        // Filter out excluded doctors
+        setDoctors(
+          res.data.filter(
+            doctor => !excludedDoctors.includes(doctor.name)
+          )
+        );
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching doctors:", err);
+        setLoading(false);
+      });
+  }
+}, [expertService, location, expertText]);
   const ExpertStyle = {
     "mobile":{
       "image_div":"mb-2 h-[120px] w-[120px] md:h-[230px]  md:w-[230px]",

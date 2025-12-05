@@ -1,6 +1,7 @@
 import React from 'react'
 import Script from 'next/script';
-import RtmsDynamicLandingPage from  '../component/RtmsDynamicLandingPage'
+// import RtmsDynamicLandingPage from  '../component/RtmsDynamicLandingPage'
+import RtmsDynamicLandingPage from  '../../rtmsComponents/RtmsDynamicLandingPage'
 
 import { headers } from 'next/headers';
 export async function generateMetadata({ params }) {

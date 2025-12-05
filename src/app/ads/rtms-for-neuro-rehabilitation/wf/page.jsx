@@ -1,81 +1,44 @@
 import React from 'react'
 import Script from 'next/script';
 // import RtmsDynamicLandingPage from  '../component/RtmsDynamicLandingPage'
-import RtmsDynamicLandingPage from '../../rtmsComponents/RtmsDynamicLandingPage'
+import RtmsDynamicLandingPage from  '../../rtmsComponents/RtmsDynamicLandingPage'
+
 import { headers } from 'next/headers';
+import { conditionsSection, heroSection, whatToExpectSection, whyMindfulSection } from '../adsData';
 export async function generateMetadata({ params }) {
-
-
   return {
     title: `Mindful TMS  `,
     description: `We help people with anxiety, depression, OCD, grief, trauma, and more in a safe space.
-
 Whether you're facing stress, seeking personal growth, or need someone to talk to, our compassionate Psychologists are here for you.`,
     robots: "noindex, nofollow",
   };
-
 }
 
 const page = ({ params }) => {
+
   const headersList = headers();
   const currentUrl = headersList.get('x-full-url') || '';
-  // console.log("currentUrl", currentUrl);
-  const baseZohoForm = 'https://forms.zohopublic.in/nikhilmindf1/form/Form2025Delhi/formperma/gRVhhLpekwvSGqqK7AR5CbUIQRmCj0NeSZX862VPGwo';
+  const baseZohoForm = 'https://forms.zohopublic.in/nikhilmindf1/form/Form2025WhitefieldBangalore/formperma/MCQDm70m0i_L44OTsxM5WJ4mDJ4CEFPE4yAsjdtGinQ';
   const zohoFormWithUrl = `${baseZohoForm}?from=landingpage&url=${encodeURIComponent(currentUrl)}&solution=rtms`;
 
-  // console.log("zohoFormWithUrl", zohoFormWithUrl);
-  const data = {
-    phone: `9606067372`,
-    section2Img: '/ads/rtms/chairImg.jpg',
+    const data = {
+    phone:`8197341114`, 
+    section2Img:'/ads/rtms/chairImg2.png',
     zohoForm: zohoFormWithUrl,
+    heroSection: heroSection,
+       
+       // Why Mindful TMS Section
+       whyMindfulSection: whyMindfulSection,
+       
+       // What to Expect Section
+       whatToExpectSection: whatToExpectSection,
+    conditionsSection:conditionsSection
 
-    heroSection: {
-      h1: "rTMS for Depression",
-      mainDescription: "rTMS works to give you better results faster. Whether you're already working with a psychiatrist or psychologist and want to enhance your treatment, or you're exploring options for the first time, rTMS helps your brain respond better to therapy and medication.",
-      subPoints: [
-        // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
-        // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",
-        // "Begin rTMS with one of India's most experienced speciality neurocare clinics"
-      ]
-    },
-    whyMindfulSection: {
-      title: "Why Mindful TMS",
-      points: [
-        {
-          title: "400,000+ rTMS sessions delivered since 2015",
-          description: ""
-        },
-        {
-          title: "India's longest-running specialized TMS clinic chain",
-          description: ""
-        },
-        {
-          title: "MD Psychiatrists and Clinical Psychologists",
-          description: ""
-        },
-        {
-          title: "Bangalore and Delhi locations",
-          description: ""
-        }
-      ]
-    },
-    // What to Expect Section
-    whatToExpectSection: {
-      title: "What to Expect",
-      points: [
-        "20-30 sessions over 4-6 weeks",
-        "20-30 minutes per session",
-        "Those taking rTMS can go back to normal activities right after",
-        "Most patients feel better within 2-3 weeks"
-      ],
-      nextStep: "Next Step: First visit includes complete check-up, treatment plan, and clear talk about results and cost.",
-      cta: "Schedule Your rTMS Consultation"
-    }
-  };
+  }
   return (
     <>
-      <Script id="zfadvlead" strategy="afterInteractive">
-        {`(function(){
+         <Script id="zfadvlead" strategy="afterInteractive">
+{`(function(){
   function ZFAdvLead(){}
   ZFAdvLead.utmPValObj = ZFAdvLead.utmPValObj || {};
   ZFAdvLead.utmPNameArr = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
@@ -142,8 +105,8 @@ const page = ({ params }) => {
   });
 })();
 `}
-      </Script>
-      <RtmsDynamicLandingPage city={"gk"} params={params} data={data} />
+        </Script>
+        <RtmsDynamicLandingPage city={"wf"} params={params}  data={data}/>
     </>
   )
 }

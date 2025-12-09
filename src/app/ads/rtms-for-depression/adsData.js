@@ -1,12 +1,10 @@
 
 export const heroSection ={
       h1: `rTMS 
-      for Anxiety: 
-Calm Your Mind, Reclaim Your Life`,
-      mainDescription: `Constantly on edge, avoiding situations, unable to relax? You don't have to live this way. 
-rTMS is a safe, non-medication option that helps your brain find calm again
-rTMS can be used alone or with therapy for best results. 
-Many feel more in control within 2-3 weeks.
+      for Depression:
+      Get Relief and Feel Like Yourself Again`,
+      mainDescription: `If you're exhausted from feeling low, losing interest in life, or struggling despite treatment, rTMS can help. rTMS helps fight depression whether you're starting fresh or your current treatment needs support. 
+Most people begin feeling better within 2-3 weeks after rTMS therapy.
 
 Start now by requesting an rTMS consultation at MindfulTMS today.`,
       subPoints: [
@@ -17,19 +15,18 @@ Start now by requesting an rTMS consultation at MindfulTMS today.`,
     }
 
 export const whyMindfulSection = {
-    
-      title: "Why Mindful TMS",
+      title: "Why MindfulTMS for rTMS",
       points: [
         {
-          title: "Proven protocols for GAD, panic attacks, and social anxiety",
+          title: "400,000+ rTMS sessions delivered since 2015",
           description: ""
         },
         {
-          title: "Enhances therapy and counselling outcomes",
+          title: "India's longest-running specialized TMS clinic chain",
           description: ""
         },
         {
-          title: "We have expertise in delivering over 4 lakh rTMS sessions across 9+ years",
+          title: "MD Psychiatrists and Clinical Psychologists",
           description: ""
         },
         {
@@ -37,16 +34,16 @@ export const whyMindfulSection = {
           description: ""
         }
       ]
-}
-
+    }
 
 export const whatToExpectSection = {
       title: "What to Expect",
       points: [
         "20-30 sessions over 4-6 weeks",
         "20-30 minutes per session",
-        "Many patients feel calmer within 2-3 weeks",
+        "Those taking rTMS can go back to normal activities right after",
+        "Most patients feel better within 2-3 weeks"
       ],
-      nextStep: "Check-up to find your anxiety type, make your personal plan with clear goals and see if rTMS can help you.",
+      nextStep: "Next Step: First visit includes complete check-up, treatment plan, and clear talk about results and cost.",
       cta: "Schedule Your rTMS Consultation"
-}
+    }

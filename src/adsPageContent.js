@@ -140,10 +140,15 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |    ",
         "description_2__(pinned)": "Whatever your needs, our team supports you at our Greater Kailash Clinic in Delhi NCR",
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/general/gk",
-        "lp_hero_title": "We have the best Psychiatrist located near you at Greater Kailash, New Delhi.",
-        "lp_hero_subtitle": " Book an appointment now to start your therapy.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia |<br>and more. ",
+        "lp_hero_title": `Psychiatrists
+        in Greater Kailash, Delhi`,
+        "lp_hero_subtitle": `Struggling with depression, anxiety, or other mental health concerns? 
+
+Our psychiatrists are located in Greater Kailash 1, South Delhi, conveniently accessible from Hauz Khas, Saket, and surrounding areas near you. 
+
+Get started by booking a consultation today`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
+        // "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },
@@ -250,10 +255,16 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |     ",
         "description_2__(pinned)": "Whatever your needs, our team supports you at our Greater Kailash Clinic in Delhi NCR",
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/general/gk",
-        "lp_hero_title": "Are you looking for an experienced psychologist?",
-        "lp_hero_subtitle": "Experience personalized care from our expert psychologists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more. ",
+        "lp_hero_title": `Psychologists
+ in Greater Kailash, Delhi`,
+        "lp_hero_subtitle": `Need someone to talk to about life's challenges?
+Our experienced psychologists are in Greater Kailash 1(South Delhi), a short distance from Hauz Khas, Defence Colony, and Saket.
+With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in GK1.
+Support for anxiety, depression, stress, relationships, trauma and life transitions.
+
+Get started by booking a consultation today`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
+        // "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },
@@ -360,10 +371,16 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |     ",
         "description_2__(pinned)": "Whatever your needs, our team supports you at our Greater Kailash Clinic in Delhi NCR",
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/general/gk",
-        "lp_hero_title": "Are you looking for an experienced counselling therapist?",
-        "lp_hero_subtitle": "Receive personalized care from our compassionate counselling therapists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more.",
+        "lp_hero_title": `Therapists
+ in Greater Kailash, Delhi`,
+        "lp_hero_subtitle": `Need someone to talk to about life's challenges?
+Our experienced therapists are in Greater Kailash 1(South Delhi), a short distance from Hauz Khas, Defence Colony, and Saket. 
+With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in GK1.
+Support for anxiety, depression, stress, relationships, trauma and life transitions.
+
+Get started by booking a consultation today`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
-        "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
+        // "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },
@@ -880,10 +897,14 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 30‑min session now.    | In‑Clinic Only |    Safe and confidential space   |    ",
         "description_2__(pinned)": "Whatever your needs, our team is there for you at our Whitefield Clinic on Old Airport Rd.",
         "new_landing_page_url": "https://mindfultms.in/ads/psychiatrist/general/wf",
-        "lp_hero_title": "We have the best Psychiatrist located near you at Whitefield, Bangalore.",
-        "lp_hero_subtitle": " Book an appointment now to start your therapy.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Bipolar Disorder | PTSD | Schizophrenia |<br>and more. ",
+        "lp_hero_title":`Psychiatrists
+ in Whitefield, Bangalore`,
+        "lp_hero_subtitle": `Struggling with depression, anxiety, or other concerns? Get professional psychiatric assistance close to your location.
+Our experienced psychiatrists are located in Whitefield, easily accessible from Marathahalli, Brookefield, and Varthur.
+
+Get started by booking a consultation today`,
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
+        // "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },
@@ -990,10 +1011,16 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |     ",
         "description_2__(pinned)": "Whatever your needs, our team is there for you at our Whitefield Clinic on Old Airport Rd.",
         "new_landing_page_url": "https://mindfultms.in/ads/psychologist/general/wf",
-        "lp_hero_title": "Are you looking for an experienced psychologist?",
-        "lp_hero_subtitle": "Experience personalized care from our expert psychologists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more. ",
-        "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
+        "lp_hero_title": `	
+Psychologists
+ in Whitefield, Bangalore`,
+        "lp_hero_subtitle": `Need someone to talk to about life's challenges?
+Our experienced therapists are located in Whitefield, conveniently located for residents of Marathahalli, Old Airport Road, Brookefield, and Varthur.
+With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in Whitefield.
+Support for anxiety, depression, stress, relationships, trauma and life transitions.
+
+Get started by booking a consultation today`,"hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+        // "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },
@@ -1101,10 +1128,17 @@ const adsPageContent = {
         "description_1__(pinned)": "Book your 1 hour session now.    | In‑Clinic Only |    Safe and confidential space  |     ",
         "description_2__(pinned)": "Whatever your needs, our team is there for you at our Whitefield Clinic on Old Airport Rd.",
         "new_landing_page_url": "https://mindfultms.in/ads/therapist/general/wf",
-        "lp_hero_title": "Are you looking for an experienced counselling therapist?",
-        "lp_hero_subtitle": "Receive personalized care from our compassionate counselling therapists for various mental health challenges.<br><br><b>We help with:</b><br>Anxiety | Depression | OCD | Sleep Disorders | Trauma | PTSD | ADHD<br>and more.",
+        "lp_hero_title": `Therapists 
+        in Whitefield, Bangalore`,
+        "lp_hero_subtitle": `Need someone to talk to about life's challenges?
+Our experienced therapists are located in Whitefield, conveniently located for residents of Marathahalli, Old Airport Road, Brookefield, and Varthur.
+
+With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in Whitefield. 
+Support for anxiety, depression, stress, relationships, trauma and life transitions.
+
+Get started by booking a consultation today`,
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
-        "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
+        // "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
       },

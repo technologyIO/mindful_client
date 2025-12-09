@@ -517,7 +517,7 @@ const [isSticky, setIsSticky] = useState(false);
         />
       </div>
       <Container maxWidth="lg">
-        <section data-hero-section className={`bg-white pb-8 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "" : ""}`}>
+        <section data-hero-section className={`bg-white pb-4 md:min-h-[500px] md:flex flex-col items-center justify-center ${["general", "depression-anxiety"].includes(current_condition) ? "" : ""}`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 ">
             {/* Image Section */}
             <div className="w-full md:w-[40%] flex justify-center md:justify-end order-1 md:order-2">
@@ -532,11 +532,11 @@ const [isSticky, setIsSticky] = useState(false);
 
             {/* Text Section */}
             <div className="w-full md:w-[60%] text-left order-2 md:order-1">
-              <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide">
+              <h1 className="text-2xl md:text-4xl font-bold mb-6 tracking-wide whitespace-pre-line">
                 {currentPageContent?.lp_hero_title}
               </h1>
 
-              <div className="text-gray-700 text-lg md:text-2xl mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
+              <div className="text-gray-700 text-lg md:text-lg mb-4 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: currentPageContent?.lp_hero_subtitle }} />
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
              
               {currentPageContent?.headline_2_pinned && (

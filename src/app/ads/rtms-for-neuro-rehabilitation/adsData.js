@@ -1,7 +1,14 @@
 
 export const heroSection ={
-      h1: "rTMS for Neuro Rehabilitation",
-      mainDescription: "rTMS makes your physiotherapy work better. By waking up the brain areas that control movement and speech, rTMS helps you get more progress from each physio session. Whether you're already working with a neurologist or physiotherapist, or exploring recovery options, rTMS enhances your rehabilitation.",
+      h1: `rTMS 
+      for Neuro Rehabilitation: 
+Accelerate Stroke and Brain Injury Recovery`,
+      mainDescription: `Recovering movement, speech, or memory after stroke or injury takes time and effort. 
+rTMS activates healing in the exact brain areas you're working to rebuild. 
+If you are taking physiotherapy, rTMS enhances it. 
+Most families see noticable progress within 2 weeks.
+
+Start now by requesting an rTMS consultation at MindfulTMS today.`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",

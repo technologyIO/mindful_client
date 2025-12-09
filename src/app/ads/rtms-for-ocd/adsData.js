@@ -1,7 +1,14 @@
 
 export const heroSection ={
-      h1: "rTMS for OCD",
-      mainDescription: "rTMS makes therapy easier and helps medication work better. By calming the brain areas that drive compulsions, rTMS gives you better control during therapy sessions. Best results come when rTMS works alongside your psychologist or psychiatrist's treatment plan.",
+      h1:`rTMS 
+      for OCD: 
+      Reduce Intrusive Thoughts and Compulsions`,
+      mainDescription: `Living with unwanted thoughts and rituals you can't control is exhausting. 
+rTMS calms the parts of the brain causing OCD, giving you your mental space and freedom back. 
+Works on its own or makes therapy and medication more effective. 
+Relief usually begins within 2-3 weeks.
+
+Start now by requesting an rTMS consultation at MindfulTMS today.`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",
@@ -11,7 +18,7 @@ export const heroSection ={
 
 export const whyMindfulSection = {
     
-      title: "Why Mindful TMS",
+      title: "Why MindfulTMS for rTMS",
       points: [
         {
           title: "Specialized OCD protocols refined over 9 years",

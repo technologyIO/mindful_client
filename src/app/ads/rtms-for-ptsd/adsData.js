@@ -1,7 +1,12 @@
 
 export const heroSection ={
-      h1: "rTMS for PTSD",
-      mainDescription: "rTMS prepares your brain for trauma therapy. Whether you're already working with a psychologist or psychiatrist on trauma, or considering where to start, rTMS helps you stay calm during sessions and process memories more safely. Use it alongside therapy or as a first step before starting.",
+      h1:`rTMS 
+      for PTSD: 
+Reduce Flashbacks and Find Peace`,
+      mainDescription: `When the past keeps invading your present through flashbacks, nightmares, or feeling constantly unsafe, rTMS can help. 
+It reduces PTSD symptoms and prepares your brain for healing. Combine with therapy for best results.
+
+Start now by requesting an rTMS consultation at MindfulTMS today.`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",

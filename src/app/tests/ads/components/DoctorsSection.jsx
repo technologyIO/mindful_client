@@ -23,6 +23,7 @@ const DoctorsSection = ({ expertService, location, expertText }) => {
         .then(([resPsychiatrist, resPsychologist]) => {
           setPsychiatrists(resPsychiatrist.data);
           setPsychologists(resPsychologist.data);
+          console.log("resPsychologist", resPsychologist.data)
           setLoading(false);
         })
         .catch((err) => {

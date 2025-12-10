@@ -146,7 +146,7 @@ const adsPageContent = {
 
 Our psychiatrists are located in Greater Kailash 1, South Delhi, conveniently accessible from Hauz Khas, Saket, and surrounding areas near you. 
 
-Get started by booking a consultation today`,
+<b>Get started by booking a consultation today</b>`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
         // "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
         "block_to_show": "What We Treat",
@@ -262,7 +262,7 @@ Our experienced psychologists are in Greater Kailash 1(South Delhi), a short dis
 With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in GK1.
 Support for anxiety, depression, stress, relationships, trauma and life transitions.
 
-Get started by booking a consultation today`,
+<b>Get started by booking a consultation today</b>`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
         // "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
@@ -378,7 +378,7 @@ Our experienced therapists are in Greater Kailash 1(South Delhi), a short distan
 With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in GK1.
 Support for anxiety, depression, stress, relationships, trauma and life transitions.
 
-Get started by booking a consultation today`,
+<b>Get started by booking a consultation today</b>`,
         "hero_description_2": "Our Clinic is located in Greater Kailash 1, South Delhi—just a 10–15 minute ride from nearby Hauz Khas and Saket Metro Stations",
         // "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
@@ -902,7 +902,7 @@ Get started by booking a consultation today`,
         "lp_hero_subtitle": `Struggling with depression, anxiety, or other concerns? Get professional psychiatric assistance close to your location.
 Our experienced psychiatrists are located in Whitefield, easily accessible from Marathahalli, Brookefield, and Varthur.
 
-Get started by booking a consultation today`,
+<b>Get started by booking a consultation today</b>`,
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         // "hero_description_what_we_offer": "Our psychiatrists provide:\nPersonalized condition diagnosis\nCustomized treatment plans, including medication if needed\nSafe and confidential consultations",
         "block_to_show": "What We Treat",
@@ -1019,7 +1019,7 @@ Our experienced therapists are located in Whitefield, conveniently located for r
 With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in Whitefield.
 Support for anxiety, depression, stress, relationships, trauma and life transitions.
 
-Get started by booking a consultation today`,"hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
+<b>Get started by booking a consultation today</b>`,"hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         // "hero_description_what_we_offer": "Our clinical psychologists provide:\nPersonalized condition diagnosis\nClinical Assessments\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",
         "hero_image": ""
@@ -1136,7 +1136,7 @@ Our experienced therapists are located in Whitefield, conveniently located for r
 With MindfulTMS you recieve professional therapy in a safe, non-judgmental space right in Whitefield. 
 Support for anxiety, depression, stress, relationships, trauma and life transitions.
 
-Get started by booking a consultation today`,
+<b>Get started by booking a consultation today</b>`,
         "hero_description_2": "Our Clinic is located on Old Airport Road in Whitefield, conveniently accessible from nearby areas of Marthahalli, Brookefield and Varthur.",
         // "hero_description_what_we_offer": "Our counselling therapists provide:\nPersonalized condition diagnosis\nCBT, DBT, ACT and a range of therapies\nSafe and compassionate care\nConfidentiality",
         "block_to_show": "What We Treat",

@@ -540,7 +540,7 @@ const [isSticky, setIsSticky] = useState(false);
               <div className="text-gray-700 text-base md:text-lg mb-4" dangerouslySetInnerHTML={{ __html: currentPageContent?.hero_description_what_we_offer }} />
              
               {currentPageContent?.headline_2_pinned && (
-                <div className="text-base md:text-lg text-orange-500 md:ml-[100px] font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
+                <div className="text-base md:text-lg text-orange-500  font-semibold mt-1 text-center md:text-start  whitespace-nowrap">
                   {currentPageContent.headline_2_pinned}
                 </div>
               )}

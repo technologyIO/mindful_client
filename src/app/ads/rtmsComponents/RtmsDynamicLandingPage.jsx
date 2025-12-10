@@ -24,11 +24,8 @@ const excludedDoctors = ["Ms Yamini K.V"];
               <h1 className="text-2xl whitespace-pre-line md:text-4xl font-bold mb-6 tracking-wide text-gray-800">
                 {data?.heroSection?.h1}
               </h1>
-              <p
-                className="text-gray-700 text-base md:text-lg mb-6 whitespace-pre-line"
-              >
-                {data?.heroSection?.mainDescription}
-              </p>
+             
+              <div className="text-gray-700 text-base md:text-lg mb-6 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: data?.heroSection?.mainDescription }} />
 
               {data?.heroSection?.subPoints?.map((point, index) => (
                 <p key={index} className="text-gray-700 text-base md:text-lg mb-6">

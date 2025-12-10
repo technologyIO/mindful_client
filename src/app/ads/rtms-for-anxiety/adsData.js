@@ -8,7 +8,7 @@ rTMS is a safe, non-medication option that helps your brain find calm again
 rTMS can be used alone or with therapy for best results. 
 Many feel more in control within 2-3 weeks.
 
-Start now by requesting an rTMS consultation at MindfulTMS today.`,
+<b>Start now by requesting an rTMS consultation at MindfulTMS today.<b/>`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",

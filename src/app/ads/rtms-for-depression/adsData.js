@@ -4,10 +4,10 @@ export const heroSection ={
       for Depression:
       Get Relief and Feel Like Yourself Again`,
       mainDescription: `If you're exhausted from feeling low, losing interest in life, or struggling despite treatment, rTMS can help. rTMS helps fight depression whether you're starting fresh or your current treatment needs support. 
-      
+
 Most people begin feeling better within 2-3 weeks after rTMS therapy.
 
-Start now by requesting an rTMS consultation at MindfulTMS today.`,
+<b>Start now by requesting an rTMS consultation at MindfulTMS today.<b/>`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",

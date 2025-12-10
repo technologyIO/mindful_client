@@ -8,7 +8,7 @@ rTMS calms the parts of the brain causing OCD, giving you your mental space and 
 Works on its own or makes therapy and medication more effective. 
 Relief usually begins within 2-3 weeks.
 
-Start now by requesting an rTMS consultation at MindfulTMS today.`,
+<b>Start now by requesting an rTMS consultation at MindfulTMS today.<b/>`,
       subPoints: [
         // "If you're already considering rTMS, you don't need more theory — you need the right provider.",
         // "At MindfulTMS Neurocare, every rTMS (repetitive transcranial magnetic stimulation) session is led by a specialist with evidence-based targeting specifically focused on Depression, Anxiety, OCD, PTSD and more.",

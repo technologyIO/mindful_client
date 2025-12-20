@@ -5,7 +5,7 @@ export const heroSection ={
       Reduce Intrusive Thoughts and Compulsions`,
       mainDescription: `Living with unwanted thoughts and rituals you can't control is exhausting. 
 rTMS calms the parts of the brain causing OCD, giving you your mental space and freedom back. 
-Works on its own or makes therapy and medication more effective. 
+Makes therapy and medication more effective. 
 Relief usually begins within 2-3 weeks.
 
 <b>Start now by requesting an rTMS consultation at MindfulTMS today.<b/>`,

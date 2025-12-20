@@ -185,7 +185,7 @@ useEffect(() => {
                           />
                         </div>
                         <div className="mb-1 text-center">
-                          <p className="font-semibold text-lg text-start text-gray-800 max-w-[150px]">
+                          <p className="font-semibold text-lg text-center  text-gray-800 max-w-[150px]">
                             {doctor.name}
                           </p>
                           <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">
@@ -298,7 +298,7 @@ useEffect(() => {
                       />
                     </div>
                     <div className="mb-1 text-center">
-                      <p className="font-semibold text-lg text-start text-gray-800 max-w-[150px]">
+                      <p className="font-semibold text-lg text-center text-gray-800 max-w-[150px]">
                         {doctor.name}
                       </p>
                       <label className="text-[13px] lg:text-[15px] text-gray-700 max-w-[200px]">

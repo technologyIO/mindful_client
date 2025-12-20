@@ -66,26 +66,36 @@ const excludedDoctors = ["Ms Yamini K.V"];
        
       </section>
 
-      {data?.conditionsSection?.title && <section className="py-12 bg-gray-100 border border-t-gray-300">
-        <Container maxWidth="lg">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center text-orange-500">
-            {data?.conditionsSection?.title}
-          </h2>
+     {data?.conditionsSection?.title && (
+  <section className="py-12 bg-gray-100 border border-t-gray-300">
+    <Container maxWidth="lg">
+      <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center text-orange-500">
+        {data?.conditionsSection?.title}
+      </h2>
 
-          <div className="max-w-5xl">
-            {/* Two column grid for conditions */}
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-              {data?.conditionsSection?.conditions?.map((condition, index) => (
-                <li key={index} className="flex items-start gap-3 text-base md:text-lg text-gray-700">
-                  <span className="text-orange-500 text-xl font-bold mt-1">•</span>
-                  <span className="leading-relaxed">{condition}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="max-w-5xl">
+        {/* Two column grid for conditions */}
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+          {data?.conditionsSection?.conditions?.map((condition, index) => {
+            const [conditionName, ...descriptionParts] = condition.split(' — ');
+            const description = descriptionParts.join(' — ');
+            
+            return (
+              <li key={index} className="flex items-start gap-3 text-base md:text-lg text-gray-700">
+                <span className="text-orange-500 text-xl font-bold mt-1">•</span>
+                <span className="leading-relaxed">
+                  <strong>{conditionName}</strong>
+                  {description && ` — ${description}`}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </Container>
+  </section>
+)}
 
-        </Container>
-      </section>}
 
       {/* Why Mindful TMS Section - Using the "Why Patients Choose Us" design */}
       <section className="py-12 bg-orange-50">

@@ -36,7 +36,7 @@ const locations = [
     }
 ];
 
-// Pages that should be excluded from showing the booking iframe
+// Pages that should be excluded from showing the booking interface
 const EXCLUDED_PATH_PREFIXES = [
     '/pages/rtms',
     '/pages/neurofeedback',
@@ -60,8 +60,8 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }
     }, []);
 
-    // Check if current path should show booking iframe
-    const shouldShowBookingIframe = () => {
+    // Check if current path should show booking interface
+    const shouldShowBookingInterface = () => {
         if (EXCLUDED_FULL_PATHS.includes(pathname)) {
             return false;
         }
@@ -73,9 +73,9 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         return !matchesPrefix;
     };
 
-    const showBooking = shouldShowBookingIframe();
+    const showBooking = shouldShowBookingInterface();
 
-    const bookingIframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/BookaConsultation/formperma/bDcJatau7izILCUWrNcMLS5ywSZNGsJIcBdk4UbzNHE?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
+    const bookingUrl = `https://forms.zohopublic.in/nikhilmindf1/form/BookaConsultation/formperma/bDcJatau7izILCUWrNcMLS5ywSZNGsJIcBdk4UbzNHE?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
     
     const callbackIframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
 
@@ -220,6 +220,26 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }
     }, [iframeSrc, currentUrl, queryString, callbackIframeSrc]);
 
+    // Function to open booking in new window
+    const openBookingInNewWindow = () => {
+        const width = 700;
+        const height = 800;
+        const left = (window.innerWidth - width) / 2;
+        const top = (window.innerHeight - height) / 2;
+        
+        const newWindow = window.open(
+            bookingUrl,
+            'BookingWindow',
+            `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+        );
+
+        // Check if popup was blocked
+        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+            // Popup was blocked, open in new tab instead
+            window.open(bookingUrl, '_blank');
+        }
+    };
+
     return (
         <>
             {
@@ -243,7 +263,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                         onClick={toggleRequestModal}
                     ></div>
                     
-                    {/* Modal - Fixed structure for proper mobile scrolling */}
+                    {/* Modal */}
                     <div className="relative bg-white rounded-lg shadow-xl w-full max-w-[500px] mx-4 md:mx-0 max-h-[90vh] overflow-hidden z-50 flex flex-col">
                         {/* Header - Fixed at top */}
                         <div className={`flex-shrink-0 flex items-start border-b border-gray-200 ${header || nfb ? "justify-between p-4" : "justify-end pt-2"}`}>
@@ -282,18 +302,52 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
 
                         {/* Scrollable Content Area */}
                         <div className="flex-1 overflow-y-auto">
-                            {/* Show booking iframe if not excluded AND callback form is not shown */}
+                            {/* Show booking interface if not excluded AND callback form is not shown */}
                             {showBooking && !showCallbackForm && (
                                 <>
-                                    {/* Booking iframe with limited height on mobile - scrollable */}
-                                    <div className="booking-iframe-container max-h-[65vh] md:max-h-[60vh] overflow-auto">
-                                        <ZohoForm 
-                                            containerId="zf_div_booking_consultation"
-                                            iframeSrc={bookingIframeSrc}
-                                        />
+                                    {/* Booking interface - opens in new window */}
+                                    <div className="booking-section p-8">
+                                        <div className="text-center space-y-6">
+                                            {/* Icon */}
+                                            <div className="flex justify-center">
+                                                <div className="bg-teal-100 p-4 rounded-full">
+                                                    <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            {/* Title */}
+                                            <div>
+                                                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                                                    Book Your Consultation
+                                                </h3>
+                                                <p className="text-gray-600 text-sm">
+                                                    Select a convenient date and time for your appointment
+                                                </p>
+                                            </div>
+
+                                          
+
+                                            {/* CTA Button */}
+                                            <button
+                                                onClick={openBookingInNewWindow}
+                                                className="w-full bg-teal-600 hover:bg-teal-700 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                                            >
+                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                </svg>
+                                                <span>Book Your Consultation</span>
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                </svg>
+                                            </button>
+
+                                           
+                                        </div>
                                     </div>
                                     
-                                    {/* Fallback section - Always visible when scrolling */}
+                                    {/* Fallback section */}
                                     <div className="border-t border-gray-200 bg-gray-50 p-6">
                                         <p className="text-center text-gray-700 mb-3 text-sm">
                                             {`Couldn't find a time slot that works for you?`}

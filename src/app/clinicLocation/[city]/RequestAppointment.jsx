@@ -296,7 +296,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                                     {/* Fallback section - Always visible when scrolling */}
                                     <div className="border-t border-gray-200 bg-gray-50 p-6">
                                         <p className="text-center text-gray-700 mb-3 text-sm">
-                                            Couldn't find a time slot that works for you?
+                                            {`Couldn't find a time slot that works for you?`}
                                         </p>
                                         <button
                                             onClick={() => setShowCallbackForm(true)}

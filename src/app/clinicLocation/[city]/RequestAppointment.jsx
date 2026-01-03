@@ -220,24 +220,18 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
         }
     }, [iframeSrc, currentUrl, queryString, callbackIframeSrc]);
 
-    // Function to open booking in new window
+    // FIXED: Function to open booking - works on iOS and Android
     const openBookingInNewWindow = () => {
-        const width = 700;
-        const height = 800;
-        const left = (window.innerWidth - width) / 2;
-        const top = (window.innerHeight - height) / 2;
+        // Create anchor tag and click it (works better on iOS)
+        const link = document.createElement('a');
+        link.href = bookingUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
         
-        const newWindow = window.open(
-            bookingUrl,
-            'BookingWindow',
-            `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-        );
-
-        // Check if popup was blocked
-        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-            // Popup was blocked, open in new tab instead
-            window.open(bookingUrl, '_blank');
-        }
+        // Append to body, click, and remove (required for iOS)
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (

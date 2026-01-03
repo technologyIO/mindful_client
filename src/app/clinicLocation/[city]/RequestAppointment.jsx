@@ -75,9 +75,14 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
 
     const showBooking = shouldShowBookingInterface();
 
-    const bookingUrl = `https://forms.zohopublic.in/nikhilmindf1/form/BookaConsultation/formperma/bDcJatau7izILCUWrNcMLS5ywSZNGsJIcBdk4UbzNHE?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
+    // FIXED: Build URLs with current URL parameters
+    const bookingUrl = currentUrl 
+        ? `https://forms.zohopublic.in/nikhilmindf1/form/BookaConsultation/formperma/bDcJatau7izILCUWrNcMLS5ywSZNGsJIcBdk4UbzNHE?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website${queryString ? `&${queryString.substring(1)}` : ''}`
+        : `https://forms.zohopublic.in/nikhilmindf1/form/BookaConsultation/formperma/bDcJatau7izILCUWrNcMLS5ywSZNGsJIcBdk4UbzNHE?zf_rszfm=1&from=website`;
     
-    const callbackIframeSrc = `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website`;
+    const callbackIframeSrc = currentUrl
+        ? `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&url=${encodeURIComponent(currentUrl)}&from=website${queryString ? `&${queryString.substring(1)}` : ''}`
+        : `https://forms.zohopublic.in/nikhilmindf1/form/NewWebsiteForm2025/formperma/c_0ekKg-MlfFH_W45sMaGGhHWxwaUHYKun261OA_QS4?zf_rszfm=1&from=website`;
 
     const [requestModal, setRequestModal] = useState(false);
     const [formData, setFormData] = useState({

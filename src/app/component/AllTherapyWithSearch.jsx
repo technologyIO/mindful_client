@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import RequestAppointment from '../clinicLocation/[city]/RequestAppointment';
-import TestRequestAppointmentGeneral from '../clinicLocation/[city]/RequestAppointmentGeneral';
+// import TestRequestAppointmentGeneral from '../clinicLocation/[city]/RequestAppointmentGeneral';
 
 const AllTherapyWithSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -82,12 +82,15 @@ const AllTherapyWithSearch = () => {
                                     </div>
                                     <div className='flex justify-center pb-2'>
                                                 <div onClick={(e)=>e.stopPropagation()}>
-                                                <TestRequestAppointmentGeneral>
+                                                {/* <TestRequestAppointmentGeneral>
                                                     <div className="flex justify-center items-center gap-4 text-sm text-orange-600 border bg-orange-100 font-semibold shadow-md hover:shadow-sm px-3 py-1 rounded-lg hover:bg-orange-100">
-                                                        {/* <Image src="/tmsPage/faq/button.png" alt="button" width={100} height={100}  className='h-5 w-5'/> */}
-                                                        Book a Therapy Session
+                                                      Book a Therapy Session
                                                     </div>
-                                                </TestRequestAppointmentGeneral>
+                                                </TestRequestAppointmentGeneral> */}
+                                                  <RequestAppointment
+                                                name="Book a Therapy Session"
+                                                customStyle="flex justify-center items-center gap-4 text-sm text-orange-600 border bg-orange-100 font-semibold shadow-md hover:shadow-sm px-3 py-1 rounded-lg hover:bg-orange-100"
+                                            />
                                                 </div>
                                                
                                             </div>

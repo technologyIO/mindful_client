@@ -190,6 +190,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
             console.log('storedata', formData);
             console.log('isFormValid', isFormValidBool);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [formData]);
 
     useEffect(() => {
@@ -217,7 +218,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                 setFinalIframeSrc(baseUrl);
             }
         }
-    }, [iframeSrc, currentUrl, queryString]);
+    }, [iframeSrc, currentUrl, queryString, callbackIframeSrc]);
 
     return (
         <>
@@ -284,7 +285,7 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                             {/* Show booking iframe if not excluded AND callback form is not shown */}
                             {showBooking && !showCallbackForm && (
                                 <>
-                                    {/* Booking iframe with limited height on mobile */}
+                                    {/* Booking iframe with limited height on mobile - scrollable */}
                                     <div className="booking-iframe-container max-h-[65vh] md:max-h-[60vh] overflow-auto">
                                         <ZohoForm 
                                             containerId="zf_div_booking_consultation"

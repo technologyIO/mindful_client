@@ -267,8 +267,8 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                     {/* Modal */}
                     <div className="relative bg-white rounded-lg shadow-xl w-full max-w-[500px] mx-4 md:mx-0 max-h-[90vh] overflow-hidden z-50 flex flex-col">
                         {/* Header - Fixed at top */}
-                        <div className={`flex-shrink-0 flex items-start border-b border-gray-200 ${header || nfb ? "justify-between p-4" : "justify-end pt-2"}`}>
-                            {nfb && (
+                        <div className={`flex-shrink-0 flex items-start border-b border-gray-200 ${header || nfb ? "justify-between p-4" : "justify-between p-4"}`}>
+                             {nfb ? (
                                 <div className="flex flex-col">
                                     <h2 className="text-base font-semibold text-gray-900">  
                                         Neurofeedback Consultation
@@ -277,14 +277,22 @@ const RequestAppointment = ({ city, name, customStyle, iframeSrc, iconSize, icon
                                         Book Now or Request a Callback
                                     </span>
                                 </div>
-                            )}
-                            {header && (
+                            ) : header ? (
                                 <div className="flex flex-col">
                                     <h2 className="text-base font-semibold text-gray-900">  
                                         rTMS Consultation
                                     </h2>
                                     <span className="text-sm text-gray-800 italic">
                                         Book Now or Request a Callback
+                                    </span>
+                                </div>
+                            ) : (
+                                <div className="flex flex-col">
+                                    <h2 className="text-base font-semibold text-gray-900">  
+                                        Request a Callback
+                                    </h2>
+                                    <span className="text-sm text-gray-800 italic">
+                                         Request a callback and speak with us soon
                                     </span>
                                 </div>
                             )}

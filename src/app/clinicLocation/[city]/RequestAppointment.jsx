@@ -39,6 +39,7 @@ const locations = [
 // Pages that should be excluded from showing the booking interface
 const EXCLUDED_PATH_PREFIXES = [
     '/pages/rtms',
+    '/ads/rtms',
     '/pages/neurofeedback',
 ];
 
